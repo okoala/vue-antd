@@ -1,0 +1,531 @@
+/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+ @font-face {
+   font-family: 'icon';
+   src: url('font/icon.eot?70502573');
+   src: url('font/icon.eot?70502573#iefix') format('embedded-opentype'),
+        url('font/icon.woff?70502573') format('woff'),
+        url('font/icon.ttf?70502573') format('truetype'),
+        url('font/icon.svg?70502573#icon') format('svg');
+   font-weight: normal;
+   font-style: normal;
+ }
+ /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+ /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+ /*
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+   @font-face {
+     font-family: 'icon';
+     src: url('../font/icon.svg?70502573#icon') format('svg');
+   }
+ }
+ */
+
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+   font-family: "icon";
+   font-style: normal;
+   font-weight: normal;
+   speak: none;
+
+   display: inline-block;
+   text-decoration: inherit;
+   width: 1em;
+   margin-right: .2em;
+   text-align: center;
+   /* opacity: .8; */
+
+   /* For safety - reset parent styles, that can break glyph codes*/
+   font-variant: normal;
+   text-transform: none;
+
+   /* fix buttons height, for twitter bootstrap */
+   line-height: 1em;
+
+   /* Animation center compensation - margins should be symmetric */
+   /* remove if not needed */
+   margin-left: .2em;
+
+   /* you can be more comfortable with increased icons size */
+   /* font-size: 120%; */
+
+   /* Font smoothing. That was taken from TWBS */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+
+   /* Uncomment for 3D effect */
+   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+ }
+
+ .icon-ok-circled:before { content: '\e800'; } /* '' */
+ .icon-ok-circled2:before { content: '\e801'; } /* '' */
+ .icon-info-circled:before { content: '\e802'; } /* '' */
+ .icon-help-circled:before { content: '\e803'; } /* '' */
+ .icon-github-circled:before { content: '\e804'; } /* '' */
+ .icon-git:before { content: '\e805'; } /* '' */
+ .icon-ellipsis:before { content: '\e806'; } /* '' */
+ .icon-ellipsis-vert:before { content: '\e807'; } /* '' */
+ .icon-cancel-circled:before { content: '\e808'; } /* '' */
+ .icon-cancel-circled2:before { content: '\e809'; } /* '' */
+ .icon-cancel:before { content: '\e80a'; } /* '' */
+ .icon-ok:before { content: '\e80b'; } /* '' */
+ .icon-attention-circled:before { content: '\e80c'; } /* '' */
+ .icon-star-empty:before { content: '\e80d'; } /* '' */
+ .icon-star:before { content: '\e80e'; } /* '' */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    font-family: 'Source Code Pro',Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    position: relative;
+    margin: .5em 0;
+    -webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+    -moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+    box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+    border-left: 5px solid #358ccb;
+    background-color: #fdfdfd;
+    background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    background-size: 3em 3em;
+    background-origin: content-box;
+    overflow: visible;
+    max-height: 30em;
+}
+
+code[class*="language"] {
+    max-height: inherit;
+    height: 100%;
+    padding: 0 1em;
+    display: block;
+    overflow: auto;
+}
+
+
+
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #7D8B99;
+}
+
+.token.punctuation {
+    color: #5F6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #c92c2c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+    color: #2f9c0a;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+    color: #a67f59;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+    color: #1990b8;
+}
+
+.token.regex,
+.token.important {
+    color: #e90;
+}
+
+.language-css .token.string,
+.style .token.string {
+    color: #a67f59;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.token.important {
+    font-weight: normal;
+}
+
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+@media screen and (max-width: 767px) {
+    pre[class*="language-"]:before,
+    pre[class*="language-"]:after {
+        bottom: 14px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+}
+
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+    color: #e0d7d1;
+}
+
+/* Plugin styles: Line Numbers */
+pre[class*="language-"].line-numbers {
+    padding-left: 0;
+}
+
+pre[class*="language-"].line-numbers code {
+    padding-left: 3.8em;
+}
+
+pre[class*="language-"].line-numbers .line-numbers-rows {
+    left: 0;
+}
+
+/* Plugin styles: Line Highlight */
+pre[class*="language-"][data-line] {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+pre[data-line] code {
+    position: relative;
+    padding-left: 4em;
+}
+pre .line-highlight {
+    margin-top: 0;
+}
+
+
+.hll {
+    background-color: #ffc
+}
+
+.c {
+    color: #999
+}
+
+.err {
+    color: #A00;
+    background-color: #FAA
+}
+
+.k {
+    color: #069
+}
+
+.o {
+    color: #555
+}
+
+.cm {
+    color: #999
+}
+
+.cp {
+    color: #099
+}
+
+.c1 {
+    color: #999
+}
+
+.cs {
+    color: #999
+}
+
+.gd {
+    background-color: #FCC;
+    border: 1px solid #C00
+}
+
+.ge {
+    font-style: italic
+}
+
+.gr {
+    color: red
+}
+
+.gh {
+    color: #030
+}
+
+.gi {
+    background-color: #CFC;
+    border: 1px solid #0C0
+}
+
+.go {
+    color: #AAA
+}
+
+.gp {
+    color: #009
+}
+
+.gu {
+    color: #030
+}
+
+.gt {
+    color: #9C6
+}
+
+.kc {
+    color: #069
+}
+
+.kd {
+    color: #069
+}
+
+.kn {
+    color: #069
+}
+
+.kp {
+    color: #069
+}
+
+.kr {
+    color: #069
+}
+
+.kt {
+    color: #078
+}
+
+.m {
+    color: #F60
+}
+
+.s {
+    color: #d44950
+}
+
+.na {
+    color: #4f9fcf
+}
+
+.nb {
+    color: #366
+}
+
+.nc {
+    color: #0A8
+}
+
+.no {
+    color: #360
+}
+
+.nd {
+    color: #99F
+}
+
+.ni {
+    color: #999
+}
+
+.ne {
+    color: #C00
+}
+
+.nf {
+    color: #C0F
+}
+
+.nl {
+    color: #99F
+}
+
+.nn {
+    color: #0CF
+}
+
+.nt {
+    color: #2f6f9f
+}
+
+.nv {
+    color: #033
+}
+
+.ow {
+    color: #000
+}
+
+.w {
+    color: #bbb
+}
+
+.mf {
+    color: #F60
+}
+
+.mh {
+    color: #F60
+}
+
+.mi {
+    color: #F60
+}
+
+.mo {
+    color: #F60
+}
+
+.sb {
+    color: #C30
+}
+
+.sc {
+    color: #C30
+}
+
+.sd {
+    color: #C30;
+    font-style: italic
+}
+
+.s2 {
+    color: #C30
+}
+
+.se {
+    color: #C30
+}
+
+.sh {
+    color: #C30
+}
+
+.si {
+    color: #A00
+}
+
+.sx {
+    color: #C30
+}
+
+.sr {
+    color: #3AA
+}
+
+.s1 {
+    color: #C30
+}
+
+.ss {
+    color: #FC3
+}
+
+.bp {
+    color: #366
+}
+
+.vc {
+    color: #033
+}
+
+.vg {
+    color: #033
+}
+
+.vi {
+    color: #033
+}
+
+.il {
+    color: #F60
+}
+
+.css .nt+.nt,.css .o,.css .o+.nt {
+    color: #999
+}
+pre[class*='language-'] {
+	position: relative;
+}
+pre[class*='language-'][data-language]::before {
+	content: attr(data-language);
+	color: black;
+	background-color: #CFCFCF;
+	display: inline-block;
+	position: absolute;
+	bottom: auto;
+	left: auto;
+	top: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	font-size: 0.9em;
+	border-radius: 0 0 0 5px;
+	padding: 0 0.5em;
+	text-shadow: none;
+	z-index: 1;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
