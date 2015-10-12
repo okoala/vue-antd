@@ -11,18 +11,19 @@
     "type": "git",
     "url": "https://github.com/okoala/vue-antd.git"
   },
-  "homepage": "https://github.com/okoala/vue-antd",
-  "directories": {
-    "src": "src/"
-  },
-  "dependencies": {
-    "vue": "^1.0.0-beta.4"
-  },
   "keywords": [
     "vue",
     "vue-antd",
     "antd"
   ],
+  "homepage": "https://github.com/okoala/vue-antd",
+  "directories": {
+    "src": "src/"
+  },
+  "dependencies": {
+    "rc-util": "^2.0.3",
+    "vue": "^1.0.0-beta.4"
+  },
   "devDependencies": {
     "babel-core": "^5.5.8",
     "babel-eslint": "^4.1.3",
