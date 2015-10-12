@@ -1,0 +1,33 @@
+@breadcrumb-prefix-cls: ant-breadcrumb;
+
+.@{breadcrumb-prefix-cls} {
+  color: #999;
+  font-size: 12px;
+
+  a {
+    color: #666;
+  }
+
+  & > span:last-child {
+    font-weight: bold;
+    color: #666;
+  }
+
+  & > span:last-child &-slash {
+    display: none;
+  }
+
+  &-slash {
+    margin: 0 8px;
+    color: #d9d9d9;
+  }
+
+  .anticon {
+    position: relative;
+    top: -1px;
+  }
+
+  .anticon + span {
+    margin-left: 6px;
+  }
+}

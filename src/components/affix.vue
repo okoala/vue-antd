@@ -94,9 +94,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  .ant-affix {
-    position: fixed;
-  }
-</style>

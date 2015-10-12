@@ -1,0 +1,90 @@
+@collapse-prefix-cls: ant-collapse;
+
+#arrow {
+  .close() {
+    .iconfont-size-under-12px(7px, 270deg);
+  }
+  .open() {
+    .iconfont-size-under-12px(7px, 360deg);
+  }
+}
+
+.@{collapse-prefix-cls} {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+
+  & > &-item {
+    border-top: 1px solid #d9d9d9;
+    &:first-child {
+      border-top: none;
+    }
+
+    > .@{collapse-prefix-cls}-header {
+      height: 38px;
+      line-height: 38px;
+      padding-left: 32px;
+      color: #666;
+      cursor: pointer;
+      position: relative;
+
+      .arrow {
+        #arrow > .close();
+        .iconfont-mixin();
+        position: absolute;
+        color: #666;
+        display: inline-block;
+        margin-right: 8px;
+        content: "\e60f";
+        vertical-align: middle;
+        transition: transform 0.24s ease;
+        top: -1px;
+        left: 16px;
+        top: ~"16px \9";
+        left: ~"0 \9";
+        &:before {
+          content:"\e60f";
+        }
+      }
+    }
+  }
+
+  &-content {
+    display: none;
+    overflow: hidden;
+    color: @text-color;
+    padding: 0 16px;
+    background-color: #fff;
+
+    & > &-box {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &-active {
+      display: block;
+    }
+  }
+
+  &-collapsing {
+    transition-duration: .24s;
+    transition-timing-function: @ease-out-circ;
+  }
+
+  &-item:last-child {
+    > .@{collapse-prefix-cls}-content {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+
+  & > &-item-active {
+    > .@{collapse-prefix-cls}-header {
+
+      .arrow {
+        top: -1px;
+        left: 16px;
+        #arrow > .open();
+      }
+    }
+  }
+}
