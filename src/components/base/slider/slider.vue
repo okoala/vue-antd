@@ -1,15 +1,15 @@
 <template>
-<div v-bind:class="className">
-  <Slider {...props}></Slider>
+<div>
+
 </div>
 </template>
 
 <script>
-import Slider from './base/slider/slider.vue'
+import enquire from 'enquire.js'
+import json2mp from 'json2mp'
 
 export default {
   props: {
-    effect: String,
     adaptiveHeight: {
       type: Boolean,
       default: false
@@ -138,19 +138,73 @@ export default {
 
   data () {
     return {
-      className: 'ant-carousel'
+      className: 'ant-carousel',
+      breakpoint: null
     }
-  }
+  },
 
   methods: {
     compiled () {
       if (this.effect === 'fade') {
-        this.fade = true
+        this.fade = true,
         this.draggable = false
       }
 
       if (this.vertical) {
         this.className += ' ant-carousel-vertical'
+      }
+    },
+
+    _media (query, handler) {
+      query = json2mq(query);
+
+      if (typeof handler === 'function') {
+        handler = {
+          match: handler
+        }
+      }
+
+      enquire.register(query, handler)
+
+      // Queue the handlers to unregister them at unmount
+      if (! this._responsiveMediaHandlers) {
+        this._responsiveMediaHandlers = []
+      }
+
+      this._responsiveMediaHandlers.push({query: query, handler: handler})
+    },
+
+    ready () {
+      if (this.responsive) {
+        var breakpoints = this.responsive.map(breakpt => breakpt.breakpoint);
+        breakpoints.sort((x, y) => x - y)
+
+        breakpoints.forEach((breakpoint, index) => {
+          var bQuery;
+          if (index === 0) {
+            bQuery = json2mq({minWidth: 0, maxWidth: breakpoint})
+          } else {
+            bQuery = json2mq({minWidth: breakpoints[index-1], maxWidth: breakpoint})
+          }
+          this.media(bQuery, () => {
+            this.breakpoint = breakpoint
+          })
+        })
+
+        // Register media query for full screen. Need to support resize from small to large
+        var query = json2mq({minWidth: breakpoints.slice(-1)[0]});
+
+        this.media(query, () => {
+          this.breakpoint = null
+        });
+      }
+    }
+
+    beforeDestroy () {
+      if (this._responsiveMediaHandlers) {
+        this._responsiveMediaHandlers.forEach(obj => {
+          enquire.unregister(obj.query, obj.handler)
+        })
       }
     }
   }
