@@ -8,8 +8,8 @@
     <div v-if='closable'>
       <div
         data-show={{closeing}}
-        v-bind:class="'ant-alert-with-description ant-alert-with-description-' + type + closeName">
-        <i v-bind:class="['anticon', iconClass]"></i>
+        :class="'ant-alert-with-description ant-alert-with-description-' + type + closeName">
+        <i :class="['anticon', iconClass]"></i>
         <p class='ant-alert-with-description-message'>
           {{message}}
         </p>
@@ -28,8 +28,8 @@
       <div v-if='closeText'>
         <div
           data-show={{closing}}
-          v-bind:class="'ant-alert ant-alert-' + type + closeName">
-          <i v-bind:class="'anticon ' + iconClass"></i>
+          :class="'ant-alert ant-alert-' + type + closeName">
+          <i :class="'anticon ' + iconClass"></i>
           <span class='ant-alert-description'>{{message}}</span>
           <span
             @click='handleClose'
@@ -39,8 +39,8 @@
       <div v-else>
         <div
           data-show={{closing}}
-          v-bind:class="'ant-alert ant-alert-' + type + closeName">
-          <i v-bind:class="'anticon ' + iconClass"></i>
+          :class="'ant-alert ant-alert-' + type + closeName">
+          <i :class="'anticon ' + iconClass"></i>
           <span class='ant-alert-description'>{{message}}</span>
           <a
             v-if='closable'

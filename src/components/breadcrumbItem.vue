@@ -1,12 +1,12 @@
 <template>
 <span>
-  <a v-if='href' v-bind:class="prefixCls + '-link'">
+  <a v-if='href' :class="prefixCls + '-link'">
     <slot></slot>
   </a>
-  <span v-else v-bind:class="prefixCls + '-link'">
+  <span v-else :class="prefixCls + '-link'">
     <slot></slot>
   </span>
-  <span v-bind:class="prefixCls + '-slash'">/</span>
+  <span :class="prefixCls + '-slash'">/</span>
 </span>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
 <div>
 	<div
-    v-bind:class="[className, {ant-affix: affix}]"
-	  v-bind:style="affixStyle">
+    :class="[className, {ant-affix: affix}]"
+	  :style="affixStyle">
 	  <slot></slot>
 	</div>
 </div>

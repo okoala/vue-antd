@@ -1,5 +1,5 @@
 <template>
-<div v-bind:class="className">
+<div :class="className">
   <Slider {...props}></Slider>
 </div>
 </template>

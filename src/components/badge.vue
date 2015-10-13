@@ -1,12 +1,12 @@
 <template>
 <span>
-<span v-if='dot' v-bind:class="'prefixCls'">
+<span v-if='dot' :class="'prefixCls'">
   <slot></slot>
-  <sup v-bind:class="prefixCls + '-dot'"></sup>
+  <sup :class="prefixCls + '-dot'"></sup>
 </span>
 <span v-else>
   <slot></slot>
-  <sup v-if='count' v-bind:class="prefixCls + '-count'">{{count | short}}</sup>
+  <sup v-if='count' :class="prefixCls + '-count'">{{count | short}}</sup>
 </span>
 </span>
 </template>
