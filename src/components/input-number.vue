@@ -21,7 +21,8 @@
     </a>
   </div>
   <div :class="prefixCls + '-input-wrap'">
-    <input ref="input"
+    <input v-el:input
+           ref="input"
            autoComplete="off"
            @focus="_onFocus"
            @blur="_onBlur"
@@ -65,7 +66,8 @@ export default {
     autoFocus: false,
     onChange: noop,
     readOnly: false,
-    disabled: false
+    disabled: false,
+    step: 1
   }),
 
   data () {
@@ -136,7 +138,29 @@ export default {
     },
 
     _step (type, e) {
+      if (this.disabled) return
 
+      const value = this.value
+      const stepNum = this.step
+
+      if (isNaN(value)) return
+
+      if (type == 'down') value -= stepNum
+      else if (type === 'up') value += stepNum
+
+      if (value > this.max || value < this.min) return
+
+      this._setValue(value, () => {
+        this.$els.input.focus()
+      })
+    },
+
+    _down (e) {
+      this._step('down', e)
+    },
+
+    _up (e) {
+      this._step('up', e)
     }
   }
 }
