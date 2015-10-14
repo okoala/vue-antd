@@ -57,6 +57,7 @@ function preventDefault (e) {
 export default {
   props: defaultProps({
     prefixCls: 'ant-input-number',
+    className: String,
     max: Infinity,
     min: -Infinity,
     style: {},
@@ -74,7 +75,39 @@ export default {
     return {
       sizeClass: '',
       noop: noop,
-      preventDefault: preventDefault
+      preventDefault: preventDefault,
+      upDisabledClass: '',
+      downDisabledClass: ''
+    }
+  },
+
+  computed: {
+    classes () {
+      return classSet({
+        [this.prefixCls]: true,
+        [this.className]: !!this.className,
+        [`${this.prefixCls}-disabled`]: this.disabled,
+        [`${this.prefixCls}-focused`]: this.focused
+      })
+    }
+  },
+
+  watch: {
+    value (val) {
+      if (isValueNumber(val)) {
+        val = Number(val)
+
+        if (val >= this.max) {
+          this.upDisabledClass = `${this.prefixCls}-handler-up-disabled`
+        }
+
+        if (val <= this.min) {
+          this.downDisabledClass = `${prefixCls}-handler-up-disabled`
+        }
+      } else {
+        this.upDisabledClass = `${this.prefixCls}-handler-up-disabled`
+        this.downDisabledClass = `${this.prefixCls}-handler-up-disabled`
+      }
     }
   }
 
