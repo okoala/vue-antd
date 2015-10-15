@@ -136,7 +136,49 @@ export default {
     },
 
     _handleChange (page) {
+      let _page = page
 
+      if (this._isValid(_page)) {
+        if (_page > this._calcPage()) {
+          _page = this._calcPage()
+        }
+
+        this.current = page
+        this._current = page
+        this.onChange(_page)
+
+        return _page
+      }
+
+      return this.current
+    },
+
+    _prev() {
+      if (this._hasPrev()) {
+        this._handleChange(this.current - 1)
+      }
+    },
+
+    _next() {
+      if (this._hasNext()) {
+        this._handleChange(this.current + 1)
+      }
+    },
+
+    _jumpPrev() {
+      this._handleChange(Math.max(1, this.current - 5));
+    },
+
+    _jumpNext() {
+      this._handleChange(Math.min(this._calcPage(), this.current + 5));
+    },
+
+    _hasPrev() {
+      return this.current > 1;
+    },
+
+    _hasNext() {
+      return this.current < this._calcPage();
     }
   }
 }
