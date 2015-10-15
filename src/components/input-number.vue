@@ -6,7 +6,7 @@
        @click="upDisabledClass ? noop : up"
        @mouse.down="preventDefault"
        :class="prefixCls + '-handler ' + prefixCls + '-handler-up ' + upDisabledClass">
-      <span unselectable="unselectable"
+        <span unselectable="unselectable"
             :class="prefixCls + '-handler-up-inner'"
             @click="preventDefault"/>
     </a>
