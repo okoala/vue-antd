@@ -66,8 +66,16 @@ export function defaultProps (props) {
   return props
 }
 
-export function oneOfType (...args) {
-  return {
+export function oneOfType (...args, options) {
+  let _options
+
+  if (isPlainObject(options)) {
+    _options = options
+  } else {
+    args.push(options)
+  }
+
+  let result = {
     validator (value) {
       for (let i = 0; i < args.length; i++) {
         if (toString.call(value).indexOf(args[i].name) > -1) return true
@@ -76,4 +84,10 @@ export function oneOfType (...args) {
       return false
     }
   }
+
+  if (_options) {
+    result = Object.assign({}, _options, result)
+  }
+
+  return result
 }
