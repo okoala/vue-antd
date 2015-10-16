@@ -14,7 +14,6 @@ import Select from './components/select'
 import Breadcrumb from './components/breadcrumb'
 import Popconfirm from './components/popconfirm.vue'
 import Pagination from './components/pagination.vue'
-import confirm from './components/confirm'
 import Steps from './components/steps.vue'
 import InputNumber from './components/input-number.vue'
 import Switch from './components/switch.vue'
@@ -46,7 +45,7 @@ window.matchMedia = window.matchMedia || function () {
 const antd = {
   Affix, Datepicker, Tooltip, Carousel, Tabs, Modal, Dropdown,
   Progress, Popover, Select, Breadcrumb, Popconfirm, Pagination,
-  confirm, Steps, InputNumber, Switch, Checkbox, Table, Tag,
+  Steps, InputNumber, Switch, Checkbox, Table, Tag,
   Collapse, message, Slider, EnterAnimation, Radio, Notification,
   Alert, Validation, Tree, Upload, Badge, Menu, Timeline
 }
