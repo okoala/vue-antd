@@ -1,5 +1,8 @@
 <template>
-<Checkbox ref="checkbox"></Checkbox>
+<label>
+  <Checkbox ref="checkbox"></Checkbox>
+  <slot></slot>
+</label>
 </template>
 
 <script>
@@ -9,10 +12,24 @@ import defaultProps from '../../../utils'
 export default {
   props: defaultProps({
     prefixCls: 'ant-radio',
-    type: 'radio'
+    type: 'radio',
+    checked: Boolean,
+    className: 'ant-radio-button'
   }),
 
-  components: { Checkbox }
+  components: { Checkbox },
+
+  computed: {
+    wrapClassName () {
+      let classString = this.className
+
+      if (classString) {
+        classString += this.checked ? (' ' + classString + '-checked') : ''
+      }
+
+      return classString
+    }
+  }
 }
 
 </script>
