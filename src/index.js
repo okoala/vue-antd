@@ -42,7 +42,7 @@ window.matchMedia = window.matchMedia || function () {
   }
 }
 
-const antd = {
+let antd = {
   Affix, Datepicker, Tooltip, Carousel, Tabs, Modal, Dropdown,
   Progress, Popover, Select, Breadcrumb, Popconfirm, Pagination,
   Steps, InputNumber, Switch, Checkbox, Table, Tag,

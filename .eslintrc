@@ -26,146 +26,158 @@
     "jsx": false
   },
   "rules": {
-/**
- * Strict mode
- */
-    // babel inserts "use strict"; for us
-    "strict": [2, "never"],          // http://eslint.org/docs/rules/strict
-
-/**
- * ES6
- */
-    "no-var": 1,                     // http://eslint.org/docs/rules/no-var
-    "prefer-const": 1,               // http://eslint.org/docs/rules/prefer-const
-
-/**
- * Variables
- */
-    "no-shadow": 2,                  // http://eslint.org/docs/rules/no-shadow
-    "no-shadow-restricted-names": 2, // http://eslint.org/docs/rules/no-shadow-restricted-names
-    "no-unused-vars": [2, {          // http://eslint.org/docs/rules/no-unused-vars
-      "vars": "local",
-      "args": "after-used"
-    }],
-    "no-use-before-define": 2,       // http://eslint.org/docs/rules/no-use-before-define
-
-/**
- * Possible errors
- */
-    "comma-dangle": 0,
-    "no-cond-assign": [2, "always"], // http://eslint.org/docs/rules/no-cond-assign
-    "no-console": 1,                 // http://eslint.org/docs/rules/no-console
-    "no-debugger": 1,                // http://eslint.org/docs/rules/no-debugger
-    "no-alert": 1,                   // http://eslint.org/docs/rules/no-alert
-    "no-constant-condition": 1,      // http://eslint.org/docs/rules/no-constant-condition
-    "no-dupe-keys": 2,               // http://eslint.org/docs/rules/no-dupe-keys
-    "no-duplicate-case": 2,          // http://eslint.org/docs/rules/no-duplicate-case
-    "no-empty": 2,                   // http://eslint.org/docs/rules/no-empty
-    "no-ex-assign": 2,               // http://eslint.org/docs/rules/no-ex-assign
-    "no-extra-boolean-cast": 0,      // http://eslint.org/docs/rules/no-extra-boolean-cast
-    "no-extra-semi": 2,              // http://eslint.org/docs/rules/no-extra-semi
-    "no-func-assign": 2,             // http://eslint.org/docs/rules/no-func-assign
-    "no-inner-declarations": 2,      // http://eslint.org/docs/rules/no-inner-declarations
-    "no-invalid-regexp": 2,          // http://eslint.org/docs/rules/no-invalid-regexp
-    "no-irregular-whitespace": 2,    // http://eslint.org/docs/rules/no-irregular-whitespace
-    "no-obj-calls": 2,               // http://eslint.org/docs/rules/no-obj-calls
-    "no-sparse-arrays": 2,           // http://eslint.org/docs/rules/no-sparse-arrays
-    "no-unreachable": 2,             // http://eslint.org/docs/rules/no-unreachable
-    "use-isnan": 2,                  // http://eslint.org/docs/rules/use-isnan
-    "block-scoped-var": 2,           // http://eslint.org/docs/rules/block-scoped-var
-
-/**
- * Best practices
- */
-    "consistent-return": 2,          // http://eslint.org/docs/rules/consistent-return
-    "curly": [2, "multi-line"],      // http://eslint.org/docs/rules/curly
-    "default-case": 2,               // http://eslint.org/docs/rules/default-case
-    "dot-notation": [2, {            // http://eslint.org/docs/rules/dot-notation
-      "allowKeywords": true
-    }],
-    "eqeqeq": 2,                     // http://eslint.org/docs/rules/eqeqeq
-    "guard-for-in": 2,               // http://eslint.org/docs/rules/guard-for-in
-    "no-caller": 2,                  // http://eslint.org/docs/rules/no-caller
-    "no-else-return": 2,             // http://eslint.org/docs/rules/no-else-return
-    "no-eq-null": 2,                 // http://eslint.org/docs/rules/no-eq-null
-    "no-eval": 2,                    // http://eslint.org/docs/rules/no-eval
-    "no-extend-native": 2,           // http://eslint.org/docs/rules/no-extend-native
-    "no-extra-bind": 2,              // http://eslint.org/docs/rules/no-extra-bind
-    "no-fallthrough": 2,             // http://eslint.org/docs/rules/no-fallthrough
-    "no-floating-decimal": 2,        // http://eslint.org/docs/rules/no-floating-decimal
-    "no-implied-eval": 2,            // http://eslint.org/docs/rules/no-implied-eval
-    "no-lone-blocks": 2,             // http://eslint.org/docs/rules/no-lone-blocks
-    "no-loop-func": 2,               // http://eslint.org/docs/rules/no-loop-func
-    "no-multi-str": 2,               // http://eslint.org/docs/rules/no-multi-str
-    "no-native-reassign": 2,         // http://eslint.org/docs/rules/no-native-reassign
-    "no-new": 0,
-    "no-new-func": 2,                // http://eslint.org/docs/rules/no-new-func
-    "no-new-wrappers": 2,            // http://eslint.org/docs/rules/no-new-wrappers
-    "no-octal": 2,                   // http://eslint.org/docs/rules/no-octal
-    "no-octal-escape": 2,            // http://eslint.org/docs/rules/no-octal-escape
-    "no-param-reassign": 2,          // http://eslint.org/docs/rules/no-param-reassign
-    "no-proto": 2,                   // http://eslint.org/docs/rules/no-proto
-    "no-redeclare": 2,               // http://eslint.org/docs/rules/no-redeclare
-    "no-return-assign": 2,           // http://eslint.org/docs/rules/no-return-assign
-    "no-script-url": 2,              // http://eslint.org/docs/rules/no-script-url
-    "no-self-compare": 2,            // http://eslint.org/docs/rules/no-self-compare
-    "no-sequences": 2,               // http://eslint.org/docs/rules/no-sequences
-    "no-throw-literal": 2,           // http://eslint.org/docs/rules/no-throw-literal
-    "no-with": 2,                    // http://eslint.org/docs/rules/no-with
-    "radix": 2,                      // http://eslint.org/docs/rules/radix
-    "vars-on-top": 2,                // http://eslint.org/docs/rules/vars-on-top
-    "wrap-iife": [2, "any"],         // http://eslint.org/docs/rules/wrap-iife
-    "yoda": 2,                       // http://eslint.org/docs/rules/yoda
-
-/**
- * Style
- */
-    "brace-style": [2,               // http://eslint.org/docs/rules/brace-style
-      "1tbs", {
-      "allowSingleLine": true
-    }],
-    "quotes": [
-      2, "single", "avoid-escape"    // http://eslint.org/docs/rules/quotes
-    ],
-    "camelcase": [2, {               // http://eslint.org/docs/rules/camelcase
-      "properties": "never"
-    }],
-    "comma-spacing": [2, {           // http://eslint.org/docs/rules/comma-spacing
-      "before": false,
-      "after": true
-    }],
-    "comma-style": [2, "last"],      // http://eslint.org/docs/rules/comma-style
-    "eol-last": 2,                   // http://eslint.org/docs/rules/eol-last
-    "func-names": 1,                 // http://eslint.org/docs/rules/func-names
-    "key-spacing": [2, {             // http://eslint.org/docs/rules/key-spacing
-        "beforeColon": false,
-        "afterColon": true
-    }],
-    "new-cap": [2, {                 // http://eslint.org/docs/rules/new-cap
-      "newIsCap": true
-    }],
-    "no-multiple-empty-lines": 0,
-    "no-nested-ternary": 2,          // http://eslint.org/docs/rules/no-nested-ternary
-    "no-new-object": 2,              // http://eslint.org/docs/rules/no-new-object
-    "no-spaced-func": 2,             // http://eslint.org/docs/rules/no-spaced-func
-    "no-trailing-spaces": 2,         // http://eslint.org/docs/rules/no-trailing-spaces
-    "no-extra-parens": [2, "functions"], // http://eslint.org/docs/rules/no-extra-parens
-    "no-underscore-dangle": 0,       // http://eslint.org/docs/rules/no-underscore-dangle
-    "one-var": [2, "never"],         // http://eslint.org/docs/rules/one-var
-    "padded-blocks": [2, "never"],   // http://eslint.org/docs/rules/padded-blocks
-    "semi": [2, "never"],           // http://eslint.org/docs/rules/semi
-    "semi-spacing": [2, {            // http://eslint.org/docs/rules/semi-spacing
-      "before": false,
-      "after": true
-    }],
-    "space-after-keywords": 2,       // http://eslint.org/docs/rules/space-after-keywords
-    "space-before-blocks": 2,        // http://eslint.org/docs/rules/space-before-blocks
-    "space-before-function-paren": [2, "never"], // http://eslint.org/docs/rules/space-before-function-paren
-    "space-infix-ops": 2,            // http://eslint.org/docs/rules/space-infix-ops
-    "space-return-throw-case": 2,    // http://eslint.org/docs/rules/space-return-throw-case
-    "spaced-comment": [2, "always",  {// http://eslint.org/docs/rules/spaced-comment
-      "exceptions": ["-", "+"],
-      "markers": ["=", "!"]           // space here to support sprockets directives
-    }]
+    "accessor-pairs": 2,
+    "array-bracket-spacing": 0,
+    "block-scoped-var": 0,
+    "brace-style": [2, "1tbs", { "allowSingleLine": true }],
+    "camelcase": 0,
+    "comma-dangle": [2, "never"],
+    "comma-spacing": [2, { "before": false, "after": true }],
+    "comma-style": [2, "last"],
+    "complexity": 0,
+    "computed-property-spacing": 0,
+    "consistent-return": 0,
+    "consistent-this": 0,
+    "constructor-super": 2,
+    "curly": [2, "multi-line"],
+    "default-case": 0,
+    "dot-location": [2, "property"],
+    "dot-notation": 0,
+    "eol-last": 2,
+    "eqeqeq": [2, "allow-null"],
+    "func-names": 0,
+    "func-style": 0,
+    "generator-star-spacing": [2, { "before": true, "after": true }],
+    "guard-for-in": 0,
+    "handle-callback-err": [2, "^(err|error)$" ],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+    "linebreak-style": 0,
+    "lines-around-comment": 0,
+    "max-nested-callbacks": 0,
+    "new-cap": [2, { "newIsCap": true, "capIsNew": false }],
+    "new-parens": 2,
+    "newline-after-var": 0,
+    "no-alert": 0,
+    "no-array-constructor": 2,
+    "no-caller": 2,
+    "no-catch-shadow": 0,
+    "no-cond-assign": 2,
+    "no-console": 0,
+    "no-constant-condition": 0,
+    "no-continue": 0,
+    "no-control-regex": 2,
+    "no-debugger": 2,
+    "no-delete-var": 2,
+    "no-div-regex": 0,
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-else-return": 0,
+    "no-empty": 0,
+    "no-empty-character-class": 2,
+    "no-empty-label": 2,
+    "no-eq-null": 0,
+    "no-eval": 2,
+    "no-ex-assign": 2,
+    "no-extend-native": 2,
+    "no-extra-bind": 2,
+    "no-extra-boolean-cast": 2,
+    "no-extra-parens": 0,
+    "no-extra-semi": 0,
+    "no-fallthrough": 2,
+    "no-floating-decimal": 2,
+    "no-func-assign": 2,
+    "no-implied-eval": 2,
+    "no-inline-comments": 0,
+    "no-inner-declarations": [2, "functions"],
+    "no-invalid-regexp": 2,
+    "no-irregular-whitespace": 2,
+    "no-iterator": 2,
+    "no-label-var": 2,
+    "no-labels": 2,
+    "no-lone-blocks": 2,
+    "no-lonely-if": 0,
+    "no-loop-func": 0,
+    "no-mixed-requires": 0,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multi-spaces": 2,
+    "no-multi-str": 2,
+    "no-multiple-empty-lines": [2, { "max": 1 }],
+    "no-native-reassign": 2,
+    "no-negated-in-lhs": 2,
+    "no-nested-ternary": 0,
+    "no-new": 2,
+    "no-new-func": 0,
+    "no-new-object": 2,
+    "no-new-require": 2,
+    "no-new-wrappers": 2,
+    "no-obj-calls": 2,
+    "no-octal": 2,
+    "no-octal-escape": 2,
+    "no-param-reassign": 0,
+    "no-path-concat": 0,
+    "no-process-env": 0,
+    "no-process-exit": 0,
+    "no-proto": 0,
+    "no-redeclare": 2,
+    "no-regex-spaces": 2,
+    "no-restricted-modules": 0,
+    "no-return-assign": 2,
+    "no-script-url": 0,
+    "no-self-compare": 2,
+    "no-sequences": 2,
+    "no-shadow": 0,
+    "no-shadow-restricted-names": 2,
+    "no-spaced-func": 2,
+    "no-sparse-arrays": 2,
+    "no-sync": 0,
+    "no-ternary": 0,
+    "no-this-before-super": 2,
+    "no-throw-literal": 2,
+    "no-trailing-spaces": 2,
+    "no-undef": 2,
+    "no-undef-init": 2,
+    "no-undefined": 0,
+    "no-underscore-dangle": 0,
+    "no-unexpected-multiline": 2,
+    "no-unneeded-ternary": 2,
+    "no-unreachable": 2,
+    "no-unused-expressions": 0,
+    "no-unused-vars": [2, { "vars": "all", "args": "none" }],
+    "no-use-before-define": 0,
+    "no-var": 0,
+    "no-void": 0,
+    "no-warning-comments": 0,
+    "no-with": 2,
+    "object-curly-spacing": 0,
+    "object-shorthand": 0,
+    "one-var": [2, { "initialized": "never" }],
+    "operator-assignment": 0,
+    "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
+    "padded-blocks": 0,
+    "prefer-const": 0,
+    "quote-props": 0,
+    "quotes": [2, "single", "avoid-escape"],
+    "radix": 2,
+    "semi": [2, "never"],
+    "semi-spacing": 0,
+    "sort-vars": 0,
+    "space-after-keywords": [2, "always"],
+    "space-before-blocks": [2, "always"],
+    "space-before-function-paren": [2, "always"],
+    "space-in-parens": [2, "never"],
+    "space-infix-ops": 2,
+    "space-return-throw-case": 2,
+    "space-unary-ops": [2, { "words": true, "nonwords": false }],
+    "spaced-comment": [2, "always", { "markers": ["global", "globals", "eslint", "eslint-disable", "*package", "!"] }],
+    "strict": 0,
+    "use-isnan": 2,
+    "valid-jsdoc": 0,
+    "valid-typeof": 2,
+    "vars-on-top": 0,
+    "wrap-iife": [2, "any"],
+    "wrap-regex": 0,
+    "yoda": [2, "never"]
   }
 }
