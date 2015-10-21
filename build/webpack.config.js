@@ -7,7 +7,7 @@ var path = require('path')
 
 module.exports = {
   entry: {
-    entry: './docs/index.js',
+    app: './docs/index.js',
   },
   output: {
     path: './.temp',

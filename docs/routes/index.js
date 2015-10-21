@@ -3,7 +3,6 @@ import NotFoundView from '../views/not-found.vue'
 
 export function configRouter (router) {
   router.map({
-    // nested example
     'components': {
       component: ComponentsView
       // subRoutes: {

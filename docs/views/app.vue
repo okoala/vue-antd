@@ -6,11 +6,11 @@
   </a>
   <nav class="nav">
     <ul>
-      <li class="">
-        <a href=".." data-no-instant="">首页</a>
+      <li :class="{current: isHomePage}">
+        <a href=".." data-no-instant="" >首页</a>
       </li>
-      <li class="current">
-        <a href="./introduce" class="hover">Components</a>
+      <li :class="{current: isComponentsPage}">
+        <a v-link="{path: '/components'}">Components</a>
       </li>
       <li>
         <a target="_blank" title="Please star me and fork me!" alt="star and fork" href="https://github.com/okoala/vue-antd">Github</a>
@@ -20,6 +20,25 @@
   <div class="nav-phone-icon"></div>
 </header>
 </template>
+
+<script>
+export default {
+  computed: {
+    isHomePage () {
+      if (this.$route.path === '/' || this.$route.path.indexOf('/?') === 0) return true
+
+      return false
+    },
+
+    isComponentsPage () {
+      if (this.$route.path.indexOf('/components') === 0) return true
+
+      return false
+    }
+  }
+}
+</script>
+
 <style lang="less">
 header {
   width: 100%;
@@ -72,8 +91,6 @@ a.logo {
 
 .nav ul li.current a {
   border-bottom: 3px solid #71b5de;
-  // color: #71B5DE;
-  font-weight: 600;
 }
 
 .nav ul li a:hover{
