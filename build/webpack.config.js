@@ -44,6 +44,7 @@ module.exports = {
         loader: vue.withLoaders({
           // apply babel transform to all javascript
           // inside *.vue files.
+          md: 'html!markdown',
           js: 'babel?optional[]=runtime',
           less: ExtractTextPlugin.extract(
             'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'

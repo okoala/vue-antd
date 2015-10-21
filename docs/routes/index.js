@@ -1,4 +1,5 @@
 import ComponentsView from '../views/components.vue'
+import IntroduceView from '../views/docs/introduce.vue'
 import NotFoundView from '../views/not-found.vue'
 
 export function configRouter (router) {
@@ -6,16 +7,24 @@ export function configRouter (router) {
     'components': {
       component: ComponentsView
       // subRoutes: {
-      //   'profile': {
-      //     component: UserProfileView
+      //   'introduce': {
+      //     component: IntroduceView
       //   }
       // }
+    },
+
+    'components/introduce': {
+      component: IntroduceView
     },
 
     '*': {
       component: NotFoundView
     }
   })
+
+  // router.alias({
+  //   '/components': '/components/introduce'
+  // })
 
   // global before
   // 3 options:

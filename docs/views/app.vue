@@ -17,8 +17,8 @@
       </li>
     </ul>
   </nav>
-  <div class="nav-phone-icon"></div>
 </header>
+<router-view class="view" keep-alive></router-view>
 </template>
 
 <script>

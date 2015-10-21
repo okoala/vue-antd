@@ -63,6 +63,7 @@
     "karma-sauce-launcher": "^0.3.0",
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
+    "markdown-loader": "^0.1.7",
     "phantomjs": "^1.9.18",
     "semver": "^5.0.3",
     "shell-task": "^1.0.0",
