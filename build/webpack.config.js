@@ -1,0 +1,74 @@
+var vue = require('vue-loader')
+var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var path = require('path')
+
+module.exports = {
+  entry: {
+    entry: './docs/index.js',
+  },
+  output: {
+    path: './.temp',
+    filename: '[name].js'
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"'
+      }
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(),
+    new ExtractTextPlugin('[name].css'),
+    new HtmlWebpackPlugin({
+      template : './docs/index.html',
+      hash     : true,
+      filename : 'index.html',
+      minify   : false,
+      inject   : 'body'
+    }),
+    new BrowserSyncPlugin({
+      proxy: 'localhost:8002'
+    }),
+  ],
+  resolve: {
+    root: path.resolve('./'),
+    extensions: ['', '.js', '.vue']
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.vue$/,
+        loader: vue.withLoaders({
+          // apply babel transform to all javascript
+          // inside *.vue files.
+          js: 'babel?optional[]=runtime',
+          less: ExtractTextPlugin.extract(
+            'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
+          )
+        })
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel!eslint'
+      },
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract(
+          'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
+        )
+      },
+      { test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      }
+    ]
+  },
+  eslint : {
+    configFile : './.eslintrc',
+    emitWarning : true
+  },
+  devtool: 'source-map'
+}
