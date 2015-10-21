@@ -4,32 +4,29 @@
     <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
     Vue Antd
   </a>
-  <nav class="nav" style="display: none;">
-    <span class="bar barAnim" style="left: 60px; display: inline;"></span>
+  <nav class="nav">
     <ul>
       <li class="">
         <a href=".." data-no-instant="">首页</a>
-      </li>
-      <li>
-        <a class="nav-link-disabled" href="">案例</a>
       </li>
       <li class="current">
         <a href="./introduce" class="hover">Components</a>
       </li>
       <li>
-        <a target="_blank" href="https://github.com/okoala/vue-antd">Github</a>
+        <a target="_blank" title="Please star me and fork me!" alt="star and fork" href="https://github.com/okoala/vue-antd">Github</a>
       </li>
     </ul>
   </nav>
   <div class="nav-phone-icon"></div>
 </header>
 </template>
-<style>
+<style lang="less">
 header {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #eee;
   font-size: 16px;
+  position: relative;
 }
 
 a.logo {
@@ -52,42 +49,35 @@ a.logo {
 }
 
 .nav {
-  width: 30%;
-  height: 80px;
-  line-height: 80px;
-  float: right;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 60px;
+  top: 25px;
+  height: 40px;
+  line-height: 40px;
   font-size: 0.875em;
-  position: relative;
-  margin-right: 25px;
 }
 
 .nav ul li {
-  float: left;
-  width: 20%;
+  display: inline-block;
+  margin: 0 0.6em;
   text-align: center;
 }
 
 .nav ul li a {
   color: #728AA3;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-a.nav-link-disabled {
-  cursor: not-allowed;
-  color: #ccc !important;
-  pointer-events: none;
+  padding-bottom: 3px
 }
 
 .nav ul li.current a {
-  color: #71B5DE;
+  border-bottom: 3px solid #71b5de;
+  // color: #71B5DE;
   font-weight: 600;
 }
 
-.nav ul li a:hover,
-.nav ul li .hover {
-  color: #6EB4E0;
+.nav ul li a:hover{
+  border-bottom: 3px solid #71b5de;
 }
 
 .nav .bar {
@@ -98,10 +88,6 @@ a.nav-link-disabled {
   left: 0;
   background: #6EB4E0;
   display: none;
-}
-
-.barAnim {
-  transition: left .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 </style>
