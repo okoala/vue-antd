@@ -20,7 +20,7 @@ export function configRouter (router) {
 
   router.alias({
     '/components': '/components/introduce',
-    '/docs/introduce': '/components/introduce',
+    '/docs/introduce': '/components/introduce'
   })
 
   // global before

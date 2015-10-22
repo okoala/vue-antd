@@ -2,282 +2,60 @@
 <div class="main-wrapper">
   <aside class="aside-container">
     <ul>
-      <li class="">
+      <li>
         <a v-link="{path: '/docs/introduce'}" class="">
           Ant Design of Vue
           <span class="chinese"></span>
         </a>
       </li>
-      <li class="">
-        <a href="../../docs/getting-started" class="">
+      <li>
+        <a v-link="{path: '/docs/getting-started'}" class="">
           快速上手
           <span class="chinese"></span>
         </a>
       </li>
-      <li class="">
-        <a href="../../docs/download" class="">
+      <li>
+        <a v-link="{path: '/docs/download'}" class="">
           下载
           <span class="chinese"></span>
         </a>
       </li>
-      <li open="open">
+      <li>
         <h4>Components</h4>
-        <ul class="">
+        <ul>
           <li class="type-divider">基本</li>
-          <li class="">
-            <a href="../button/"
-               class="">
-              Button
-              <span class="chinese">按钮</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../iconfont/"
-               class=""data-no-instant>
-              Iconfont
-              <span class="chinese">字体图标</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../layout/"
-               class="">
-              Layout
-              <span class="chinese">布局</span>
+          <li v-for="component in componentsMenu.base">
+            <a v-link="{path: component.name, append: true}">
+              {{component.name | Upper}}
+              <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
           <li class="type-divider">表单</li>
-          <li class="current">
-            <a href="./"
-               class="">
-              Checkbox
-              <span class="chinese">多选框</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../datepicker/"
-               class="">
-              Datepicker
-              <span class="chinese">日期选择框</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../form/"
-               class="">
-              Form
-              <span class="chinese">表单</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../input-number/"
-               class="">
-              InputNumber
-              <span class="chinese">数字输入框</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../radio/"
-               class="">
-              Radio
-              <span class="chinese">单选框</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../select/"
-               class="">
-              Select
-              <span class="chinese">选择器</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../slider/"
-               class="">
-              Slider
-              <span class="chinese">滑动输入条</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../switch/"
-               class="">
-              Switch
-              <span class="chinese">开关</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../upload/"
-               class="">
-              Upload
-              <span class="chinese">文件上传</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../validation/"
-               class="">
-              Validation
-              <span class="chinese">表单校验</span>
+          <li v-for="component in componentsMenu.form">
+            <a v-link="{path: component.name, append: true}">
+              {{component.name | Upper}}
+              <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
-          <li class="">
-            <a href="../alert/"
-               class="">
-              Alert
-              <span class="chinese">警告提示</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../badge/"
-               class="">
-              Badge
-              <span class="chinese">徽标数</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../carousel/"
-               class="">
-              Carousel
-              <span class="chinese">走马灯</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../collapse/"
-               class="">
-              Collapse
-              <span class="chinese">折叠面板</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../dropdown/"
-               class="">
-              Dropdown
-              <span class="chinese">下拉菜单</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../message/"
-               class="">
-              Message
-              <span class="chinese">全局提示</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../modal/"
-               class="">
-              Modal
-              <span class="chinese">对话框</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../notification/"
-               class="">
-              Notification
-              <span class="chinese">通知提醒框</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../popconfirm/"
-               class="">
-              Popconfirm
-              <span class="chinese">气泡确认框</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../popover/"
-               class="">
-              Popover
-              <span class="chinese">气泡卡片</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../progress/"
-               class="">
-              Progress
-              <span class="chinese">进度条</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../table/"
-               class="">
-              Table
-              <span class="chinese">表格</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../tag/"
-               class="">
-              Tag
-              <span class="chinese">标签</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../timeline/"
-               class="">
-              Timeline
-              <span class="chinese">时间轴</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../tooltip/"
-               class="">
-              Tooltip
-              <span class="chinese">文字提示</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../tree/"
-               class="">
-              Tree
-              <span class="chinese">树形控件</span>
+          <li v-for="component in componentsMenu.show">
+            <a v-link="{path: component.name, append: true}">
+              {{component.name | Upper}}
+              <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
           <li class="type-divider">导航</li>
-          <li class="">
-            <a href="../breadcrumb/"
-               class="">
-              Breadcrumb
-              <span class="chinese">面包屑</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../menu/"
-               class="">
-              Menu
-              <span class="chinese">导航菜单</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../pagination/"
-               class="">
-              Pagination
-              <span class="chinese">分页</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../steps/"
-               class="">
-              Steps
-              <span class="chinese">步骤条</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../tabs/"
-               class="">
-              Tabs
-              <span class="chinese">标签页</span>
+          <li v-for="component in componentsMenu.pagination">
+            <a v-link="{path: component.name, append: true}">
+              {{component.name | Upper}}
+              <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
           <li class="type-divider">其他</li>
-          <li class="">
-            <a href="../affix/"
-               class="">
-              Affix
-              <span class="chinese">固钉</span>
-            </a>
-          </li>
-          <li class="">
-            <a href="../enter-animation/"
-               class="">
-              EnterAnimation
-              <span class="chinese">进场动画</span>
+          <li v-for="component in componentsMenu.other">
+            <a v-link="{path: component.name, append: true}">
+              {{component.name | Upper}}
+              <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
         </ul>
@@ -289,6 +67,142 @@
   </section>
 </div>
 </template>
+
+<script>
+
+export default {
+  data () {
+    return {
+      componentsMenu: {
+        base: [{
+          name: 'button',
+          desc: '按钮'
+        }, {
+          name: 'iconfont',
+          desc: '字体图标'
+        }, {
+          name: 'layout',
+          desc: '布局'
+        }],
+        form: [{
+          name: 'checkbox',
+          desc: '多选框'
+        }, {
+          name: 'datepicker',
+          desc: '日期选择框'
+        }, {
+          name: 'form',
+          desc: '表单'
+        }, {
+          name: 'input-number',
+          desc: '数字输入框'
+        }, {
+          name: 'radio',
+          desc: '单选框'
+        }, {
+          name: 'select',
+          desc: '选择器'
+        }, {
+          name: 'slider',
+          desc: '滑动输入条'
+        }, {
+          name: 'switch',
+          desc: '开关'
+        }, {
+          name: 'upload',
+          desc: '文件上传'
+        }, {
+          name: 'validation',
+          desc: '表单验证'
+        }],
+        show: [{
+          name: 'alert',
+          desc: '警告提示'
+        }, {
+          name: 'badge',
+          desc: '徽标数'
+        }, {
+          name: 'carousel',
+          desc: '走马灯'
+        }, {
+          name: 'collapse',
+          desc: '折叠面板'
+        }, {
+          name: 'dropdown',
+          desc: '下拉菜单'
+        }, {
+          name: 'message',
+          desc: '全局提示'
+        }, {
+          name: 'modal',
+          desc: '对话框'
+        }, {
+          name: 'notification',
+          desc: '通知提醒框'
+        }, {
+          name: 'popconfirm',
+          desc: '气泡确认框'
+        }, {
+          name: 'popover',
+          desc: '气泡卡片'
+        }, {
+          name: 'progress',
+          desc: '进度条'
+        }, {
+          name: 'table',
+          desc: '表格'
+        }, {
+          name: 'tag',
+          desc: '标签'
+        }, {
+          name: 'timeline',
+          desc: '时间轴'
+        }, {
+          name: 'tooltip',
+          desc: '文字提示'
+        }, {
+          name: 'tree',
+          desc: '树形控件'
+        }],
+        pagination: [{
+          name: 'breadcrumb',
+          desc: '面包屑'
+        }, {
+          name: 'menu',
+          desc: '导航菜单'
+        }, {
+          name: 'pagination',
+          desc: '分页'
+        }, {
+          name: 'steps',
+          desc: '步骤条'
+        }, {
+          name: 'tabs',
+          desc: '标签页'
+        }],
+        other: [{
+          name: 'affix',
+          desc: '固钉'
+        }, {
+          name: 'enter-animation',
+          desc: '进场动画'
+        }]
+      }
+    }
+  },
+
+  filters: {
+    Upper (str) {
+      let arr = str.split('-')
+
+      return arr.map(item => {
+        return item.substring(0, 1).toUpperCase() + item.substring(1)
+      }).join('')
+    }
+  }
+}
+
+</script>
 
 <style>
 .main-container {
