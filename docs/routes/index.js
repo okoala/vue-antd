@@ -5,16 +5,12 @@ import NotFoundView from '../views/not-found.vue'
 export function configRouter (router) {
   router.map({
     'components': {
-      component: ComponentsView
-      // subRoutes: {
-      //   'introduce': {
-      //     component: IntroduceView
-      //   }
-      // }
-    },
-
-    'components/introduce': {
-      component: IntroduceView
+      component: ComponentsView,
+      subRoutes: {
+        'introduce': {
+          component: IntroduceView
+        }
+      }
     },
 
     '*': {
@@ -22,9 +18,9 @@ export function configRouter (router) {
     }
   })
 
-  // router.alias({
-  //   '/components': '/components/introduce'
-  // })
+  router.alias({
+    '/components': '/components/introduce'
+  })
 
   // global before
   // 3 options:

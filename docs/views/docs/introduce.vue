@@ -1,9 +1,6 @@
 <template lang="md">
 # Ant Design of React
 
-- category: 0
-- order: 0
-
 ---
 
 这里是 Ant Design 的 React 实现，开发和服务于企业级后台产品。
