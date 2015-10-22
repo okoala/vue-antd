@@ -1,9 +1,5 @@
+<template lang="md">
 # Table
-
-- category: Components
-- chinese: 表格
-- cols: 1
-- type: 展示
 
 ---
 
@@ -22,38 +18,12 @@ Table 有两种模式，本地数据和远程数据模式。
 
 通过指定表格的数据源 `dataSource` 为一个数据数组。
 
-```jsx
-var dataSource = [{
-  key: '1',
-  name: '胡彦斌',
-  age: 32,
-  address: '西湖区湖底公园1号'
-}, {
-  key: '2',
-  name: '胡彦祖',
-  age: 42,
-  address: '西湖区湖底公园1号'
-}];
 
-<Table dataSource={dataSource} />
-```
 
 **远程数据模式**是更常见的业务场景，是一次只从服务端读取一页的数据放在前端，执行筛选、排序、切换页码等操作时均向后台发送请求，后台返回当页的数据和相关分页信息。
 
 通过指定表格的数据源 `dataSource` 为一个 DataSource 的实例如下。
 
-```jsx
-var dataSource = new Table.DataSource({
-  url: '/api/users',
-  resolve: function(result) {
-    return result.data;
-  },
-  getPagination: function(result) {},
-  getParams: function(pagination, filters, sorter) {}
-});
-
-<Table dataSource={dataSource} />
-```
 
 ## API
 
@@ -95,3 +65,15 @@ var dataSource = new Table.DataSource({
 | resolve       | 获得数据的解析函数，接收参数为远程数据返回的 result  | Function  |    |    |
 | getPagination | 和后台接口返回的分页数据进行适配的函数，返回值会传给表格中的分页器 | Function |  |  |
 | getParams     | 和后台接口接收的参数进行适配，返回值会作为请求的参数发送 | Function |  | 无 |
+</template>
+
+<script>
+import Table from '../../../src/components/table'
+
+export default {
+  data () {
+    return {}
+  }
+}
+
+</script>

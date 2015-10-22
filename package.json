@@ -25,6 +25,7 @@
     "gregorian-calendar": "^3.1.0",
     "json2mq": "^0.2.0",
     "lodash": "^3.10.1",
+    "object-assign": "^4.0.1",
     "rc-util": "^2.0.3",
     "velocity-animate": "^1.2.3",
     "vue": "^1.0.0-rc.1"

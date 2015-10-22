@@ -25,35 +25,35 @@
         <ul>
           <li class="type-divider">基本</li>
           <li v-for="component in componentsMenu.base">
-            <a v-link="{path: component.name, append: true}">
+            <a v-link="{path: '/components/' + component.name}">
               {{component.name | Upper}}
               <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
           <li class="type-divider">表单</li>
           <li v-for="component in componentsMenu.form">
-            <a v-link="{path: component.name, append: true}">
+            <a v-link="{path: '/components/' + component.name}">
               {{component.name | Upper}}
               <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
           <li class="type-divider">展示</li>
           <li v-for="component in componentsMenu.show">
-            <a v-link="{path: component.name, append: true}">
+            <a v-link="{path: '/components/' + component.name}">
               {{component.name | Upper}}
               <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
           <li class="type-divider">导航</li>
           <li v-for="component in componentsMenu.pagination">
-            <a v-link="{path: component.name, append: true}">
+            <a v-link="{path: '/components/' + component.name}">
               {{component.name | Upper}}
               <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
           <li class="type-divider">其他</li>
           <li v-for="component in componentsMenu.other">
-            <a v-link="{path: component.name, append: true}">
+            <a v-link="{path: '/components/' + component.name}">
               {{component.name | Upper}}
               <span class="chinese">{{component.desc}}</span>
             </a>

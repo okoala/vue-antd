@@ -1,7 +1,5 @@
+<template lang="md">
 # Affix
-
-- category: Components
-- chinese: 固钉
 
 ---
 
@@ -19,3 +17,5 @@
 | 成员        | 说明           | 类型               | 默认值       |
 |-------------|----------------|--------------------|--------------|
 | offset      | 达到指定偏移量后触发   | Number | 0        |
+
+</template>

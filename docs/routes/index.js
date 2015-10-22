@@ -1,26 +1,35 @@
-import ComponentsView from '../views/components.vue'
-import IntroduceView from '../views/docs/introduce.vue'
-import NotFoundView from '../views/not-found.vue'
 
 export function configRouter (router) {
   router.map({
     'components': {
-      component: ComponentsView,
+      component: require('../views/components.vue'),
       subRoutes: {
         'introduce': {
-          component: IntroduceView
+          component: require('../views/docs/introduce.vue')
+        },
+        'getting-started': {
+          component: require('../views/docs/getting-started.vue')
+        },
+        'download': {
+          component: require('../views/docs/download.vue')
+        },
+
+        'table': {
+          component: require('../components/table/index.vue')
         }
       }
     },
 
     '*': {
-      component: NotFoundView
+      component: require('../views/not-found.vue')
     }
   })
 
   router.alias({
     '/components': '/components/introduce',
-    '/docs/introduce': '/components/introduce'
+    '/docs/introduce': '/components/introduce',
+    '/docs/getting-started': '/components/getting-started',
+    '/docs/download': '/components/download'
   })
 
   // global before
