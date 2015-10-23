@@ -26,8 +26,8 @@
           </tr>
         </thead>
         <tbody :class="prefixCls + '-tbody'">
-          <tr v-for="rst in data" :class="prefixCls + classString">
-            <td v-for="col in columns" :class=""></td>
+          <tr v-for="data in dataSource" :class="prefixCls + classString">
+            <td v-for="col in columns" :class="">{{data[col.dataIndex]}}</td>
           </tr>
         </tbody>
       </table>
@@ -60,7 +60,6 @@ export default {
   data () {
     return {
       selectedRowKeys: [],
-      data: [],
       filters: {},
       loading: false,
       sortColumn: '',
@@ -69,9 +68,13 @@ export default {
     }
   },
 
+  ready () {
+    console.log(this.dataSource)
+  },
+
   computed: {
     isEmpty () {
-      return !!this.data.length
+      return this.dataSource && !!this.dataSource.length
     },
 
     tableClass () {
@@ -93,9 +96,7 @@ export default {
     }
   },
 
-  ready () {
-    console.log('true')
-  },
+
 
   methods: {
 

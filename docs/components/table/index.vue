@@ -27,7 +27,7 @@ Table 有两种模式，本地数据和远程数据模式。
 
 ## DEMO
 <div>
-  <v-table :columns="columns" :dataSource="data"></v-table>
+  <v-table :columns="columns" :data-source="dataSource"></v-table>
 </div>
 
 
@@ -92,7 +92,7 @@ export default {
         title: '操作',
         dataIndex: ''
       }],
-      data: [{
+      dataSource: [{
         key: '1',
         name: '胡彦斌',
         age: 32,
@@ -111,7 +111,7 @@ export default {
     }
   },
 
-  components: { vTable },
+  components: { vTable }
 }
 
 </script>
