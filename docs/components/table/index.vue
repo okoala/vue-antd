@@ -25,6 +25,12 @@ Table 有两种模式，本地数据和远程数据模式。
 通过指定表格的数据源 `dataSource` 为一个 DataSource 的实例如下。
 
 
+## DEMO
+<div>
+  <v-table></v-table>
+</div>
+
+
 ## API
 
 ### Table
@@ -68,12 +74,10 @@ Table 有两种模式，本地数据和远程数据模式。
 </template>
 
 <script>
-import Table from '../../../src/components/table'
+import vTable from '../../../src/components/table'
 
 export default {
-  data () {
-    return {}
-  }
+  components: { vTable },
 }
 
 </script>

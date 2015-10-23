@@ -29,7 +29,7 @@ function animate (node, show, transitionName, done) {
   }
 }
 
-const openAnimation = {
+export const openAnimation = {
   enter (node, done) {
     return animate(node, false, 'slideDown', done)
   },
@@ -42,8 +42,6 @@ const openAnimation = {
     return animate(node, false, 'slideDown', done)
   }
 }
-
-export var openAnimation
 
 // 返回vue匹配的props的对象
 export function defaultProps (props) {
@@ -70,7 +68,7 @@ export function oneOfType (...args) {
   let _options = args[args.length - 1]
   let options
 
-  if (isPlainObject(_options) {
+  if (isPlainObject(_options)) {
     options = _options
     args.length = args.length - 1
   }
