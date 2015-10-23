@@ -30,17 +30,17 @@ export default {
     }
   },
 
+  compiled () {
+    if (!this.infinite && (this.currentSlide === 0 || this.slideCount <= this.slidesToShow)) {
+      this.prevClasses['slick-disabled'] = true;
+      this.clickHandler = function(){}
+    }
+  },
+
   methods: {
     _clickHandler (e) {
       e.preventDefault()
       this.clickHandler({message: 'previous'}, e)
-    },
-
-    compiled () {
-      if (!this.infinite && (this.currentSlide === 0 || this.slideCount <= this.slidesToShow)) {
-        this.prevClasses['slick-disabled'] = true;
-        this.clickHandler = function(){}
-      }
     }
   }
 }

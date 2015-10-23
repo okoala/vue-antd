@@ -66,13 +66,13 @@ export function defaultProps (props) {
   return props
 }
 
-export function oneOfType (...args, options) {
-  let _options
+export function oneOfType (...args) {
+  let _options = args[args.length - 1]
+  let options
 
-  if (isPlainObject(options)) {
-    _options = options
-  } else {
-    args.push(options)
+  if (isPlainObject(_options) {
+    options = _options
+    args.length = args.length - 1
   }
 
   let result = {
@@ -85,8 +85,8 @@ export function oneOfType (...args, options) {
     }
   }
 
-  if (_options) {
-    result = Object.assign({}, _options, result)
+  if (options) {
+    result = Object.assign({}, options, result)
   }
 
   return result

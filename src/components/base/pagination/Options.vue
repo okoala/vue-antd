@@ -50,13 +50,13 @@ export default {
     }
   },
 
-  methods: {
-    compiled () {
-      this._current = this.current
-      this.Select = this.selectComponentClass
-      this.Option
-    },
+  compiled () {
+    this._current = this.current
+    this.Select = this.selectComponentClass
+    this.Option
+  },
 
+  methods: {
     _changeSize (value) {
       this.changeSize(Number(value))
     },

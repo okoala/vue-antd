@@ -54,17 +54,17 @@ const Notice = {
     }
   }
 
+  compiled () {
+    this._clearCloseTimer()
+
+    if (this.duration) {
+      this.closeTimer = setTimeout(() => {
+        this._close()
+      }, this.duration * 1000)
+    }
+  },
+
   methods: {
-    compiled () {
-      this._clearCloseTimer()
-
-      if (this.duration) {
-        this.closeTimer = setTimeout(() => {
-          this._close()
-        }, this.duration * 1000)
-      }
-    },
-
     beforeDestory () {
       this._clearCloseTimer()
     },

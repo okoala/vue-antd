@@ -30,11 +30,11 @@ export default {
 
   components: { Radio },
 
-  methods: {
-    compiled () {
-      this.value = this.value || this.defaultValue || getCheckedValue(this.$children)
-    },
+  compiled () {
+    this.value = this.value || this.defaultValue || getCheckedValue(this.$children)
+  },
 
+  methods: {
     _onRadioChange (e) {
       this.value = e.target.value
       this.onChange(e)

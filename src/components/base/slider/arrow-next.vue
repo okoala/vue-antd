@@ -30,29 +30,29 @@ export default {
     }
   },
 
-  methods: {
-    _clickHandler (e) {
-      e.preventDefault()
-      this.clickHandler({message: 'next'}, e)
-    },
-
-    compiled () {
-      if (!this.infinite) {
-        if (this.centerMode && this.currentSlide >= (this.slideCount - 1)) {
-          this.nextClasses['slick-disabled'] = true
-          this.clickHandler = function(){}
-        } else {
-          if (this.currentSlide >= (this.slideCount - this.slidesToShow)) {
-            this.nextClasses['slick-disabled'] = true
-            this.clickHandler = function(){}
-          }
-        }
-
-        if (this.slideCount <= this.slidesToShow) {
+  compiled () {
+    if (!this.infinite) {
+      if (this.centerMode && this.currentSlide >= (this.slideCount - 1)) {
+        this.nextClasses['slick-disabled'] = true
+        this.clickHandler = function(){}
+      } else {
+        if (this.currentSlide >= (this.slideCount - this.slidesToShow)) {
           this.nextClasses['slick-disabled'] = true
           this.clickHandler = function(){}
         }
       }
+
+      if (this.slideCount <= this.slidesToShow) {
+        this.nextClasses['slick-disabled'] = true
+        this.clickHandler = function(){}
+      }
+    }
+  },
+
+  methods: {
+    _clickHandler (e) {
+      e.preventDefault()
+      this.clickHandler({message: 'next'}, e)
     }
   }
 }

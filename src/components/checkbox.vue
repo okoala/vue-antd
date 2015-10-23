@@ -37,11 +37,11 @@ export default {
     }
   }
 
-  methods: {
-    compiled () {
-      this.checked = this.defaultChecked
-    },
+  compiled () {
+    this.checked = this.defaultChecked
+  },
 
+  methods: {
     _handleChange (e) {
       this.checked = e.target.checked
       this.onChange(e, this.checked)

@@ -33,13 +33,13 @@ export default {
     }
   },
 
-  methods: {
-    compiled () {
-      if (this.visible == null) {
-        this.visible = this.defaultVisible
-      }
-    },
+  compiled () {
+    if (this.visible == null) {
+      this.visible = this.defaultVisible
+    }
+  },
 
+  methods: {
     _onClick (e) {
 
     },

@@ -38,13 +38,13 @@ export default {
     }
   },
 
-  methods: {
-    compiled () {
-      if (this.checked == null) {
-        this.checked = this.defaultChecked
-      }
-    },
+  compiled () {
+    if (this.checked == null) {
+      this.checked = this.defaultChecked
+    }
+  },
 
+  methods: {
     _handleChange (e) {
       const checked = e.target.checked
 

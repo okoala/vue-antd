@@ -111,21 +111,21 @@ export default {
     }
   }
 
+  compiled () {
+    if (this.size === 'large') {
+      this.sizeClass = 'ant-input-number-lg'
+    } else if (this.size === 'small') {
+      this.sizeClass = 'ant-input-number-sm'
+    }
+
+    if (this.value == null) {
+      this.value = this.defaultValue
+    }
+
+    this.focused = this.autoFocus
+  },
+
   methods: {
-    compiled () {
-      if (this.size === 'large') {
-        this.sizeClass = 'ant-input-number-lg'
-      } else if (this.size === 'small') {
-        this.sizeClass = 'ant-input-number-sm'
-      }
-
-      if (this.value == null) {
-        this.value = this.defaultValue
-      }
-
-      this.focused = this.autoFocus
-    },
-
     _setValue (value, callback) {
       this.value = value
       this.onChange(value)

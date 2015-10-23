@@ -42,17 +42,17 @@ export default {
     }
   },
 
+  compiled () {
+    if (this.visible == null) {
+      this.visible = this.defaultVisible
+    }
+
+    if (this.visible) {
+      this.popupRendered = true
+    }
+  },
+
   methods: {
-    compiled () {
-      if (this.visible == null) {
-        this.visible = this.defaultVisible
-      }
-
-      if (this.visible) {
-        this.popupRendered = true
-      }
-    },
-
     _setVisible (visible) {
       this.visible = visible
       this.onVisibleChange(visible)

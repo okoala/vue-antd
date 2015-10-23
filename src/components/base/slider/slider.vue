@@ -143,18 +143,18 @@ export default {
     }
   },
 
+  compiled () {
+    if (this.effect === 'fade') {
+      this.fade = true,
+      this.draggable = false
+    }
+
+    if (this.vertical) {
+      this.className += ' ant-carousel-vertical'
+    }
+  },
+
   methods: {
-    compiled () {
-      if (this.effect === 'fade') {
-        this.fade = true,
-        this.draggable = false
-      }
-
-      if (this.vertical) {
-        this.className += ' ant-carousel-vertical'
-      }
-    },
-
     _media (query, handler) {
       query = json2mq(query);
 

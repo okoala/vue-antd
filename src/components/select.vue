@@ -49,12 +49,14 @@ export default {
     }
   },
 
-  methods: {
-    compiled () {
-      if (this.combobox) {
-        this.notFoundContent = null
-      }
+  compiled () {
+    if (this.combobox) {
+      this.notFoundContent = null
     }
+  },
+
+  methods: {
+
   }
 }
 

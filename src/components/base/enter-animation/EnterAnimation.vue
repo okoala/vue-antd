@@ -27,19 +27,19 @@ export default {
     }
   }
 
+  compiled () {
+    let elementArr = toArrayChildren(this.$el)
+
+    elementArr.map(m => {
+      if (!m || !m.key) return
+
+      this.keysToEnter.push(m.key)
+    })
+
+    this.childWapArr = deleteRepeatKeyArr(elementArr)
+  },
+
   methods: {
-    compiled () {
-      let elementArr = toArrayChildren(this.$el)
-
-      elementArr.map(m => {
-        if (!m || !m.key) return
-
-        this.keysToEnter.push(m.key)
-      })
-
-      this.childWapArr = deleteRepeatKeyArr(elementArr)
-    },
-
     _callChildrenDataEnter (el, arr, i) {
       let enter
       let leave

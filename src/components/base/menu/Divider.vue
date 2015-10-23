@@ -12,10 +12,12 @@ export default {
     disabled: true
   }),
 
+  compiled () {
+    this.className += ' ' + `${this.rootPrefixCls}-item-divider`
+  },
+
   methods: {
-    compiled () {
-      this.className += ' ' + `${this.rootPrefixCls}-item-divider`
-    }
+
   }
 }
 

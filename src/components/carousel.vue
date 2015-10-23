@@ -142,17 +142,19 @@ export default {
     }
   }
 
-  methods: {
-    compiled () {
-      if (this.effect === 'fade') {
-        this.fade = true
-        this.draggable = false
-      }
-
-      if (this.vertical) {
-        this.className += ' ant-carousel-vertical'
-      }
+  compiled () {
+    if (this.effect === 'fade') {
+      this.fade = true
+      this.draggable = false
     }
+
+    if (this.vertical) {
+      this.className += ' ant-carousel-vertical'
+    }
+  },
+
+  methods: {
+
   }
 }
 </script>

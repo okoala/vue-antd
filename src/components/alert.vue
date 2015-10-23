@@ -86,35 +86,34 @@ export default {
     'closing': '_setCloseName'
   },
 
+  compiled () {
+    this.iconClass = this.description ? 'ant-alert-with-description-icon anticon-' : 'ant-alert-icon anticon-'
+
+    switch (this.type) {
+      case 'success':
+        this.iconClass += 'check-circle'
+        break
+
+      case 'info':
+        this.iconClass += 'info-circle'
+        break
+
+      case 'error':
+        this.iconClass += 'exclamation-circle'
+        break
+
+      case 'warn':
+        this.iconClass += 'question-circle'
+        break
+
+      default:
+        this.iconClass += 'default'
+    }
+
+    this._setCloseName()
+  },
+
   methods: {
-
-    compiled () {
-      this.iconClass = this.description ? 'ant-alert-with-description-icon anticon-' : 'ant-alert-icon anticon-'
-
-      switch (this.type) {
-        case 'success':
-          this.iconClass += 'check-circle'
-          break
-
-        case 'info':
-          this.iconClass += 'info-circle'
-          break
-
-        case 'error':
-          this.iconClass += 'exclamation-circle'
-          break
-
-        case 'warn':
-          this.iconClass += 'question-circle'
-          break
-
-        default:
-          this.iconClass += 'default'
-      }
-
-      this._setCloseName()
-    },
-
     _setCloseName () {
       this.closeName = !this.closing ? ' ' + this.prefixCls + '-close' : ''
     },
