@@ -49,8 +49,8 @@ export function defaultProps (props) {
     if (props.hasOwnProperty(i)) {
       let defaultValue = props[i]
 
-      if (defaultValue.name && window[defaultValue.name] === defaultValue) return
-      if (isPlainObject(defaultValue)) return
+      if (defaultValue.name && window[defaultValue.name] === defaultValue) continue
+      if (isPlainObject(defaultValue)) continue
 
       let type = toString.call(defaultValue).replace('[object ', '').replace(']', '')
 

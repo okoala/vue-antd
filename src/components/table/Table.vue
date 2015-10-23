@@ -75,7 +75,7 @@ export default {
     },
 
     tableClass () {
-      let classString = ''
+      let classString = this.prefixCls
 
       if (this.loading) {
         classString += ' ant-table-loading'
