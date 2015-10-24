@@ -90,7 +90,14 @@ export default {
         dataIndex: 'address'
       }, {
         title: '操作',
-        dataIndex: ''
+        dataIndex: '',
+        render: (text, record) => {
+          return `<span :class="{'item', true}">
+            <a href="javascript:;" @click="edit">编辑</a>
+            <span class="ant-divider"></span>
+            <a href="javascript:;" @click="del">删除</a>
+          </span>`
+        }
       }],
       dataSource: [{
         key: '1',
@@ -111,7 +118,22 @@ export default {
     }
   },
 
-  components: { vTable }
+  components: { vTable },
+
+  compiled () {
+    // debugger
+  },
+
+  methods: {
+    edit () {
+      alert('edit');
+    },
+
+    del () {
+      alert('del');
+    }
+  }
+
 }
 
 </script>

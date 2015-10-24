@@ -9,6 +9,8 @@ require('es6-promise').polyfill()
 
 import '../src/style/index.less'
 
+Vue.config.debug = true
+
 // install router
 Vue.use(VueRouter)
 
