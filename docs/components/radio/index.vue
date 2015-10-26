@@ -35,6 +35,23 @@
       </div>
     </div>
   </div>
+  <div class="code-boxes-col-2-1">
+    <div class="code-box">
+      <div class="code-box-demo">
+        <v-radio-group
+          :on-change="_onGroupChange"
+          :value="groupValue"
+          :radios="[{value: 'a', name: 'A'},
+                    {value: 'b', name: 'B'},
+                    {value: 'c', name: 'C'},
+                    {value: 'd', name: 'D'}]"
+        ></v-radio-group>
+        <div style="margin-top: 20px">
+          <span>你选中的是： </span><span>{{groupValue}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## API
@@ -60,15 +77,17 @@
 
 <script>
 import vRadio from '../../../src/components/radio'
+const vRadioGroup = vRadio.RadioGroup
 
 export default {
   data () {
     return {
-      disabled: true
+      disabled: true,
+      groupValue: 'a'
     }
   },
 
-  components: { vRadio },
+  components: { vRadio, vRadioGroup },
 
   methods: {
     _change () {
@@ -77,6 +96,11 @@ export default {
 
     _toggleDisabled () {
       this.disabled = !this.disabled
+    },
+
+    _onGroupChange (e) {
+      console.log('radio checked:' + e.target.value)
+      this.groupValue = e.target.value
     }
   }
 }

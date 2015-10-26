@@ -5,6 +5,7 @@
     <input
       type="radio"
       :disabled="disabled"
+      :value="value"
       :checked="!!checked"
       :class="prefixCls + '-input'"
       @change="_handleChange">
@@ -64,7 +65,7 @@ export default {
     _handleChange (e) {
       const checked = e.target.checked
       this.checked = checked ? 1 : 0
-      this.onChange(this.checked)
+      this.onChange(e)
     }
   }
 }
