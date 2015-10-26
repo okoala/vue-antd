@@ -333,10 +333,10 @@ export default {
 }
 
 .markdown {
-  color: #777;
+  /*color: #777;*/
   font-size: 14px;
-  line-height: 1.8;
-  width: 80%;
+  /*line-height: 1.8;
+  width: 80%;*/
 }
 
 .markdown img {

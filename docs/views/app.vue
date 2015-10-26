@@ -40,6 +40,21 @@ export default {
 </script>
 
 <style lang="less">
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",SimSun,sans-serif;
+  line-height: 1.5;
+  color: #777;
+  font-size: 14px;
+  background: #fff;
+  transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 header {
   width: 100%;
   background: #fff;

@@ -1,6 +1,6 @@
 <template>
 <label :class="wrapClassName">
-  <span :class="radioClassName" style="style">
+  <span :class="radioClassName">
     <span :class="prefixCls + '-inner'"></span>
     <input
       type="radio"
@@ -10,7 +10,7 @@
       :class="prefixCls + '-input'"
       @change="_handleChange">
   </span>
-  <slot><span>Radio</span></slot>
+  <slot>Radio</slot>
 </label>
 </template>
 
@@ -35,13 +35,10 @@ export default {
 
   computed: {
     wrapClassName () {
-      let classString = this.className
-
-      if (classString) {
-        classString += this.checked ? (' ' + classString + '-checked') : ''
-      }
-
-      return classString
+      return classnames({
+        [this.className]: !!this.className,
+        [`${this.className}-checked`]: this.checked
+      })
     },
 
     radioClassName () {
@@ -49,7 +46,7 @@ export default {
         [this.className]: !!this.className,
         [this.prefixCls]: true,
         [`${this.prefixCls}-checked`]: this.checked,
-        [`${this.prefixCls}-checked-${this.checked}`]: !!this.checked,
+        [`${this.prefixCls}-checked-${this.checked ? 1 : 0}`]: !!this.checked,
         [`${this.prefixCls}-disabled`]: this.disabled
       })
     }
@@ -64,10 +61,16 @@ export default {
   methods: {
     _handleChange (e) {
       const checked = e.target.checked
-      this.checked = checked ? 1 : 0
       this.onChange(e)
     }
   }
 }
 
 </script>
+
+<style>
+label.ant-radio-button > .ant-radio {
+  display: none
+}
+
+</style>
