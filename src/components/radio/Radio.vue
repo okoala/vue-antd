@@ -60,7 +60,7 @@ export default {
 
   methods: {
     _handleChange (e) {
-      const checked = e.target.checked
+      this.checked = e.target.checked
       this.onChange(e)
     }
   }

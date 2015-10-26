@@ -24,6 +24,10 @@ export function configRouter (router) {
           component: require('../components/radio/index.vue')
         },
 
+        'checkbox': {
+          component: require('../components/checkbox/index.vue')
+        },
+
         'switch': {
           component: require('../components/switch/index.vue')
         },

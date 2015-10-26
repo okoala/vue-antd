@@ -1,16 +1,22 @@
 <template>
-<span v-bind:class="ckClassName" v-bind:style="style">
-  <span v-bind:class="prefixCls + '-input'"></span>
-  <input
-    :defaultChecked="!!defaultChecked"
-    :class="prefixCls + '-input'"
-    :checked="!!checked"
-    @change="_handleChange"/>
-</span>
+<label :class="wrapClassName">
+  <span :class="ckClassName" :style="style">
+    <span :class="prefixCls + '-inner'"></span>
+    <input
+      type="checkbox"
+      :disabled="disabled"
+      :defaultChecked="!!defaultChecked"
+      :value="value"
+      :class="prefixCls + '-input'"
+      :checked="!!checked"
+      @change="_handleChange"/>
+  </span>
+  <slot></slot>
+</label>
 </template>
 
 <script>
-import { defaultProps } from '../utils'
+import { defaultProps } from '../../utils'
 import classnames from 'classnames'
 
 export default {
@@ -19,32 +25,41 @@ export default {
     style: {},
     type: 'checkbox',
     className: '',
-    checked: 0,
     disabled: false,
-    defaultChecked: 0,
+    checked: Boolean,
+    defaultChecked: false,
     onChange: () => {}
   }),
 
   computed: {
+    wrapClassName () {
+      return classnames({
+        [this.className]: !!this.className,
+        [`${this.className}-checked`]: this.checked
+      })
+    },
+
     ckClassName () {
       return classnames({
         [this.className]: !!this.className,
         [this.prefixCls]: 1,
-        [`${this.prefixCls}-checked`]: checked,
-        [`${this.prefixCls}-checked-${this.checked}`]: !!this.checked,
+        [`${this.prefixCls}-checked`]: this.checked,
+        [`${this.prefixCls}-checked-${this.checked ? 1 : 0}`]: !!this.checked,
         [`${this.prefixCls}-disabled`]: this.disabled
       })
     }
-  }
+  },
 
   compiled () {
-    this.checked = this.defaultChecked
+    if (this.checked == null) {
+      this.checked = this.defaultChecked
+    }
   },
 
   methods: {
     _handleChange (e) {
       this.checked = e.target.checked
-      this.onChange(e, this.checked)
+      this.onChange(e)
     }
   }
 }
