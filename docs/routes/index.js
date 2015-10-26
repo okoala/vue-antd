@@ -20,6 +20,10 @@ export function configRouter (router) {
           component: require('../components/alert/index.vue')
         },
 
+        'radio': {
+          component: require('../components/radio/index.vue')
+        },
+
         'switch': {
           component: require('../components/switch/index.vue')
         },
