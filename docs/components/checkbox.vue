@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import vCheckbox from '../../../src/components/checkbox'
+import vCheckbox from '../../src/components/checkbox'
 
 export default {
   data () {

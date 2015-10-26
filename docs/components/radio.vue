@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import vRadio from '../../../src/components/radio'
+import vRadio from '../../src/components/radio'
 const vRadioGroup = vRadio.RadioGroup
 
 export default {

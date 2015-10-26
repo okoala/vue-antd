@@ -17,31 +17,31 @@ export function configRouter (router) {
         },
 
         'badge': {
-          component: require('../components/badge/index.vue')
+          component: require('../components/badge.vue')
         },
 
         'breadcrumb': {
-          component: require('../components/breadcrumb')
+          component: require('../components/breadcrumb.vue')
         },
 
         'alert': {
-          component: require('../components/alert/index.vue')
+          component: require('../components/alert.vue')
         },
 
         'radio': {
-          component: require('../components/radio/index.vue')
+          component: require('../components/radio.vue')
         },
 
         'checkbox': {
-          component: require('../components/checkbox/index.vue')
+          component: require('../components/checkbox.vue')
         },
 
         'switch': {
-          component: require('../components/switch/index.vue')
+          component: require('../components/switch.vue')
         },
 
         'table': {
-          component: require('../components/table/index.vue')
+          component: require('../components/table.vue')
         }
       }
     },

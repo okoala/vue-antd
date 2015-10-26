@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import vSwitch from '../../../src/components/switch'
-import { defaultProps } from '../../../src/utils'
+import vSwitch from '../../src/components/switch'
+import { defaultProps } from '../../src/utils'
 
 export default {
   props: defaultProps({
