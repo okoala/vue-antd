@@ -1,8 +1,5 @@
+<template>
 # Modal
-
-- type: 展示
-- category: Components
-- chinese: 对话框
 
 ---
 
@@ -14,19 +11,38 @@
 
 另外当需要一个简洁的确认框询问用户时，可以使用精心封装好的 `ant.Modal.confirm()` 等方法。
 
+## DEMO
+
+<div class="code-boxes">
+  <div class="code-boxes-col-2-1">
+    <div class="code-box">
+      <div class="code-box-demo">
+        <v-button :type="'primary'" @click="_showModal"></v-button>
+        <v-modal
+          :visible="visible"
+          :confirm-loading="confirmLoading"
+          :on-ok="_handleOk"
+          :on-cancel="_handleCancel">
+          <p>对话框的内容</p>
+          <p>对话框的内容</p>
+          <p>对话框的内容</p>
+        </v-modal>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## API
-
 
 | 参数       | 说明           | 类型             | 默认值       |
 |------------|----------------|------------------|--------------|
 | visible    | 对话框是否可见 | Boolean          | 无           |
-| confirmLoading | 确定按钮 loading | Boolean    | 无           |
-| title      | 标题           | React.Element    | 无           |
-| onOk       | 点击确定回调       | function     | 无           |
-| onCancel   | 点击遮罩层或右上角叉或取消按钮的回调  | function  | 无           |
+| confirm-loading | 确定按钮 loading | Boolean    | 无           |
+| title      | 标题           | slot node    | 无           |
+| on-ok       | 点击确定回调       | function     | 无           |
+| on-cancel   | 点击遮罩层或右上角叉或取消按钮的回调  | function  | 无           |
 | width      | 宽度           | String or Number | 520           |
-| footer     | 底部内容       | React.Element    | 确定取消按钮 |
+| footer     | 底部内容       | slot node    | 确定取消按钮 |
 
 
 ### Modal.xxx()
@@ -43,10 +59,44 @@
 | 参数       | 说明           | 类型             | 默认值       |
 |------------|----------------|------------------|--------------|
 | title      | 标题           | React.Element or String    | 无           |
-| onOk       | 点击确定回调，参数为关闭函数，返回 promise 时 resolve 后自动关闭      | function         | 无           |
-| onCancel | 取消回调，参数为关闭函数，返回 promise 时 resolve 后自动关闭       | function         | 无           |
+| on-ok       | 点击确定回调，参数为关闭函数，返回 promise 时 resolve 后自动关闭      | function         | 无           |
+| on-cancel | 取消回调，参数为关闭函数，返回 promise 时 resolve 后自动关闭       | function         | 无           |
 | width      | 宽度           | String or Number | 416           |
 | iconClassName | 图标 Icon 类型 | String | question-circle |
+</template>
+
+<script>
+import vButton from '../../src/components/button'
+import vModal from '../../src/components/modal'
+
+export default {
+  data () {
+    return {
+      confirmLoading: true,
+      visible: false
+    }
+  },
+
+  components: { vModal, vButton },
+
+  methods: {
+    _showModal () {
+      this.visible = true
+    },
+
+    _handleOk () {
+      console.log('点击了确定')
+      this.confirmLoading = false
+      this.visible = false
+    },
+
+    _handleCancel () {
+      this.visible = true
+    }
+  }
+}
+
+</script>
 
 <style>
 .code-box-demo .ant-btn {

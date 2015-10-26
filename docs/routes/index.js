@@ -16,6 +16,10 @@ export function configRouter (router) {
           component: require('../views/docs/download.vue')
         },
 
+        'alert': {
+          component: require('../components/alert.vue')
+        },
+
         'button': {
           component: require('../components/button.vue')
         },
@@ -28,16 +32,16 @@ export function configRouter (router) {
           component: require('../components/breadcrumb.vue')
         },
 
-        'alert': {
-          component: require('../components/alert.vue')
+        'checkbox': {
+          component: require('../components/checkbox.vue')
+        },
+
+        'modal': {
+          component: require('../components/modal.vue')
         },
 
         'radio': {
           component: require('../components/radio.vue')
-        },
-
-        'checkbox': {
-          component: require('../components/checkbox.vue')
         },
 
         'switch': {
