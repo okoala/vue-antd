@@ -467,4 +467,148 @@ export default {
   border: none;
   margin-left: 0.5em;
 }
+
+.code-boxes-col-1-1 {
+  width: 80%;
+}
+
+.code-boxes-col-2-1 {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 15px;
+}
+
+.code-boxes-col-2-1:last-child {
+  padding-right: 0;
+}
+
+.code-box {
+  border: 1px solid #E9E9E9;
+  border-radius: 6px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin: 0px 15px 15px 0px;
+  transition: all 0.5s ease;
+}
+
+.code-box:hover {
+  border-color: #ccc;
+}
+
+.code-box:target {
+  border: 1px solid rgba(45, 183, 245, 0.7);
+  box-shadow: 0 0 4px rgba(45, 183, 245, 0.5);
+}
+
+.code-box:hover .code-box-meta,
+.code-box:target .code-box-meta {
+  background: #fbfbfb;
+}
+
+.code-box:hover .code-box-title,
+.code-box:target .code-box-title {
+  background: #fbfbfb;
+  box-shadow: 0 -1.2px 0 #e9e9e9;
+}
+
+.code-box .code-box-title a,
+.code-box .code-box-title a:hover {
+  color: #666;
+}
+
+.code-box .code-box-demo {
+  border-bottom: 1px solid #E9E9E9;
+  padding: 42px 20px 50px;
+}
+
+.code-box-meta {
+  position: relative;
+  padding: 10px 15px;
+  border-radius: 0 0 6px 6px;
+  transition: background-color 0.4s ease;
+  width: 100%;
+}
+
+.code-box-meta h4,
+.code-box-meta p {
+  margin: 0;
+}
+
+.code-box-title {
+  position: absolute;
+  top: -14px;
+  padding: 1px 1.1em;
+  color: #777;
+  border-radius: 6px;
+  background: #fff;
+  transition: all 0.4s ease;
+}
+
+.code-box-title:before {
+  font-family: anticon;
+  content: "\e665";
+  font-size: 16px;
+  vertical-align: middle;
+  line-height: 22px;
+  position: relative;
+  margin-right: 8px;
+  top: -2px;
+  color: #ccc;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+.code-box-meta > p {
+  font-size: 12px;
+  margin: 0.5em 0;
+  padding-right: 25px;
+}
+
+.code-box .collapse {
+  position: absolute;
+  right: 16px;
+  bottom: 18px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  line-height: 18px;
+  opacity: 0.5;
+  text-align: center;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+  color: #999;
+  background: #fff;
+}
+
+.code-box.expand .collapse {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.code-box .collapse:hover {
+  opacity: 1;
+}
+
+.code-box .highlight {
+  overflow: hidden;
+  display: none;
+  padding: 5px;
+  border-top: 1px dashed #e9e9e9;
+}
+
+.code-box pre {
+  margin: 0;
+  width: auto;
+}
+
+.code-box pre code {
+  border: none;
+  background: #fff;
+}
+
 </style>
