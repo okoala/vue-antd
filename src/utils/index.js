@@ -97,3 +97,22 @@ export function oneOfType (...args) {
 
   return result
 }
+
+export function oneOf (...args) {
+  const _validList = args.length === 1 && Array.isArray(args[0]) ? args[0] : args
+
+  return {
+    validator (value) {
+      let isValid = false
+
+      for (let i = 0; i < _validList.length; i++) {
+        if (value === _validList[i]) {
+          isValid = true
+          break
+        }
+      }
+
+      return isValid
+    }
+  }
+}
