@@ -19,9 +19,20 @@
       <div class="code-box-demo">
         <v-breadcrumb>
           <v-breadcrumb-item>首页</v-breadcrumb-item>
-          <v-breadcrumb-item :href="">应用中心</v-breadcrumb-item>
-          <v-breadcrumb-item :href="">应用列表</v-breadcrumb-item>
+          <v-breadcrumb-item :href="'#'">应用中心</v-breadcrumb-item>
+          <v-breadcrumb-item :href="'#'">应用列表</v-breadcrumb-item>
           <v-breadcrumb-item>某应用</v-breadcrumb-item>
+        </v-breadcrumb>
+      </div>
+    </div>
+  </div>
+  <div class="code-boxes-col-2-1">
+    <div class="code-box">
+      <div class="code-box-demo">
+        <v-breadcrumb>
+          <v-breadcrumb-item><v-icon :type="'home'"></v-icon>首页</v-breadcrumb-item>
+          <v-breadcrumb-item><v-icon :type="'user'"></v-icon>应用列表</v-breadcrumb-item>
+          <v-breadcrumb-item>应用</v-breadcrumb-item>
         </v-breadcrumb>
       </div>
     </div>
@@ -47,13 +58,14 @@
 
 <script>
 import vBreadcrumb, { BreadcrumbItem as vBreadcrumbItem } from '../../src/components/breadcrumb'
+import vIcon from '../../src/components/iconfont'
 
 export default {
   data () {
 
   },
 
-  components: { vBreadcrumb, vBreadcrumbItem },
+  components: { vBreadcrumb, vBreadcrumbItem, vIcon },
 
   methods: {
 

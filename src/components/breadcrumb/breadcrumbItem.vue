@@ -1,6 +1,6 @@
 <template>
 <span>
-  <a v-if='href' :class="prefixCls + '-link'">
+  <a v-if='href' :href="href" :class="prefixCls + '-link'">
     <slot></slot>
   </a>
   <span v-else :class="prefixCls + '-link'">
