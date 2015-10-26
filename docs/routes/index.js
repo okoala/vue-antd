@@ -20,6 +20,10 @@ export function configRouter (router) {
           component: require('../components/badge/index.vue')
         },
 
+        'breadcrumb': {
+          component: require('../components/breadcrumb')
+        },
+
         'alert': {
           component: require('../components/alert/index.vue')
         },
