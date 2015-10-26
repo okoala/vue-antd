@@ -1,10 +1,10 @@
 <template>
 <div>
-	<div
+  <div
     :class="[className, {ant-affix: affix}]"
-	  :style="affixStyle">
-	  <slot></slot>
-	</div>
+    :style="affixStyle">
+    <slot></slot>
+  </div>
 </div>
 </template>
 

@@ -7,11 +7,17 @@ export function configRouter (router) {
         'introduce': {
           component: require('../views/docs/introduce.vue')
         },
+
         'getting-started': {
           component: require('../views/docs/getting-started.vue')
         },
+
         'download': {
           component: require('../views/docs/download.vue')
+        },
+
+        'switch': {
+          component: require('../components/switch/index.vue')
         },
 
         'table': {
