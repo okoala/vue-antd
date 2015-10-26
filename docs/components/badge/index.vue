@@ -37,6 +37,9 @@
     <div class="code-box">
       <div class="code-box-demo">
         <v-badge :dot="true">
+          <v-icon :type="'notification'"></v-icon>
+        </v-badge>
+        <v-badge :dot="true">
           <a href="javascript:;">一个链接</a>
         </v-badge>
       </div>
@@ -66,13 +69,14 @@
 
 <script>
 import vBadge from '../../../src/components/badge'
+import vIcon from '../../../src/components/iconfont'
 
 export default {
   data () {
 
   },
 
-  components: { vBadge },
+  components: { vBadge, vIcon },
 
   methods: {
 
