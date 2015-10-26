@@ -16,6 +16,10 @@ export function configRouter (router) {
           component: require('../views/docs/download.vue')
         },
 
+        'button': {
+          component: require('../components/button.vue')
+        },
+
         'badge': {
           component: require('../components/badge.vue')
         },
