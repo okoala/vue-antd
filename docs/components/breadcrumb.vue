@@ -1,8 +1,5 @@
+<template lang="md">
 # Breadcrumb
-
-- category: Components
-- chinese: 面包屑
-- type: 导航
 
 ---
 
@@ -14,16 +11,24 @@
 - 当需要告知用户“你在哪里”时；
 - 当需要向上导航的功能时。
 
-## API
+## DEMO
 
-```html
-<Breadcrumb>
-  <Breadcrumb.Item>首页</Breadcrumb.Item>
-  <Breadcrumb.Item href="">应用中心</Breadcrumb.Item>
-  <Breadcrumb.Item href="">应用列表</Breadcrumb.Item>
-  <Breadcrumb.Item>某应用</Breadcrumb.Item>
-</Breadcrumb>
-```
+<div class="code-boxes">
+  <div class="code-boxes-col-2-1">
+    <div class="code-box">
+      <div class="code-box-demo">
+        <v-breadcrumb>
+          <v-breadcrumb-item>首页</v-breadcrumb-item>
+          <v-breadcrumb-item :href="">应用中心</v-breadcrumb-item>
+          <v-breadcrumb-item :href="">应用列表</v-breadcrumb-item>
+          <v-breadcrumb-item>某应用</v-breadcrumb-item>
+        </v-breadcrumb>
+      </div>
+    </div>
+  </div>
+</div>
+
+## API
 
 ### Breadcrumb
 
@@ -38,3 +43,21 @@
 | 参数      | 说明                                     | 类型       |  可选值 | 默认值 |
 |-----------|------------------------------------------|------------|---------|--------|
 | href      | 链接，如不传则不可点击                   | string     |         | -      |
+</template>
+
+<script>
+import vBreadcrumb, { BreadcrumbItem as vBreadcrumbItem } from '../../src/components/breadcrumb'
+
+export default {
+  data () {
+
+  },
+
+  components: { vBreadcrumb, vBreadcrumbItem },
+
+  methods: {
+
+  }
+}
+
+</script>

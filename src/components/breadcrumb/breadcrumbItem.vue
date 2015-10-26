@@ -11,10 +11,12 @@
 </template>
 
 <script>
+import { defaultProps } from '../../utils'
+
 export default {
-  props: {
-    prefixCls: String,
+  props: defaultProps({
+    prefixCls: 'ant-breadcrumb',
     href: String
-  }
+  })
 }
 </script>
