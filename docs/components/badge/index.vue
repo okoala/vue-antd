@@ -1,0 +1,92 @@
+<template lang="md">
+# Badge
+
+---
+
+图标右上角的圆形徽标数字。
+
+## 何时使用
+
+一般出现在通知图标或头像的右上角，用于显示需要处理的消息条数，通过醒目视觉形式吸引用户处理。
+
+## DEMO
+
+<div class="code-boxes">
+  <div class="code-boxes-col-2-1">
+    <div class="code-box">
+      <div class="code-box-demo">
+        <v-badge :count="5">
+          <a href="javascript:;" class="head-example"></a>
+        </v-badge>
+      </div>
+    </div>
+  </div>
+  <div class="code-boxes-col-2-1">
+    <div class="code-box">
+      <div class="code-box-demo">
+        <v-badge :count="99">
+          <a href="javascript:;" class="head-example"></a>
+        </v-badge>
+        <v-badge :count="200">
+          <a href="javascript:;" class="head-example"></a>
+        </v-badge>
+      </div>
+    </div>
+  </div>
+  <div class="code-boxes-col-2-1">
+    <div class="code-box">
+      <div class="code-box-demo">
+        <v-badge :dot="true">
+          <a href="javascript:;">一个链接</a>
+        </v-badge>
+      </div>
+    </div>
+  </div>
+  <div class="code-boxes-col-2-1">
+    <div class="code-box">
+      <div class="code-box-demo">
+        <a href="#">
+          <v-badge :dot="true">
+            <span class="head-example"></span>
+          </v-badge>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+## API
+
+
+| 参数           | 说明                             | 类型       |  可选值 | 默认值 |
+|----------------|----------------------------------|------------|---------|--------|
+| count          | 展示的数字，大于 99 时显示为 99+ | Number     |         |        |
+| dot            | 不展示数字，只有一个小红点       | boolean    |         | false  |
+</template>
+
+<script>
+import vBadge from '../../../src/components/badge'
+
+export default {
+  data () {
+
+  },
+
+  components: { vBadge },
+
+  methods: {
+
+  }
+}
+
+</script>
+
+<style>
+.head-example {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  background: #eee;
+  display: inline-block;
+}
+</style>

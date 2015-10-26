@@ -16,6 +16,10 @@ export function configRouter (router) {
           component: require('../views/docs/download.vue')
         },
 
+        'badge': {
+          component: require('../components/badge/index.vue')
+        },
+
         'alert': {
           component: require('../components/alert/index.vue')
         },

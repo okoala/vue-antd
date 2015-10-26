@@ -1,34 +1,39 @@
 <template>
-<span>
-<span v-if='dot' :class="'prefixCls'">
+<span v-if='dot' :class="prefixCls">
   <slot></slot>
   <sup :class="prefixCls + '-dot'"></sup>
 </span>
-<span v-else>
+<span v-else :class="prefixCls">
   <slot></slot>
   <sup v-if='count' :class="prefixCls + '-count'">{{count | short}}</sup>
-</span>
 </span>
 </template>
 
 <script>
-export default {
-  props: {
-    prefixCls: {
-      type: String,
-      default: 'ant-badge'
-    },
-    count: Number,
-    dot: {
-      type: Boolean,
-      default: false
-    }
-  },
+import { defaultProps } from '../../utils'
 
-  filter: {
+export default {
+  props: defaultProps({
+    prefixCls: 'ant-badge',
+    count: Number,
+    dot: false
+  }),
+
+  filters: {
     short: (value) => {
       return value >= 100 ? '99+' : value
     }
   }
 }
 </script>
+
+<style>
+.ant-badge {
+    margin-right: 16px;
+}
+
+.ant-badge-count {
+  right: 0;
+  transform: translateX(50%);
+}
+</style>
