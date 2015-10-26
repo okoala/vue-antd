@@ -1,15 +1,10 @@
 <template>
 <div v-show='!closed'>
-  <Animate
-    component=''
-    show-prop='data-show'
-    transition-name='slide-up'
-    on-end={{_animationEnd}}>
-    <div v-if='closable'>
+    <div v-if='description'>
       <div
         data-show={{closeing}}
         :class="'ant-alert-with-description ant-alert-with-description-' + type + closeName">
-        <i :class="['anticon', iconClass]"></i>
+        <i :class="'anticon ' + iconClass"></i>
         <p class='ant-alert-with-description-message'>
           {{message}}
         </p>
@@ -18,7 +13,7 @@
         </span>
         <a
           v-if='closable'
-          @click='handleClose'
+          @click='_handleClose'
           class='ant-alert-with-description-close-icon'>
           <span class='ant-alert-with-description-close-icon-x'></span>
         </a>
@@ -32,7 +27,7 @@
           <i :class="'anticon ' + iconClass"></i>
           <span class='ant-alert-description'>{{message}}</span>
           <span
-            @click='handleClose'
+            @click='_handleClose'
             class='ant-alert-close-text'>{{closeText}}</span>
         </div>
       </div>
@@ -44,33 +39,30 @@
           <span class='ant-alert-description'>{{message}}</span>
           <a
             v-if='closable'
-            @click='handleClose'
+            @click='_handleClose'
             class='ant-alert-close-icon'>
             <span class='ant-alert-close-icon-x'></span>
           </a>
         </div>
       </div>
     </div>
-  </Animate>
 </div>
 </template>
 
 <script>
-import Animate from './base/animate.vue'
+import { defaultProps } from '../../utils'
+// import Animate from './base/animate.vue'
 
 export default {
-  props: {
-    prefixCls: {
-      type: String,
-      default: 'ant-alert'
-    },
+  props: defaultProps({
+    prefixCls: 'ant-alert',
     type: String,
     closable: Boolean,
     message: String,
     description: String,
     closeText: String,
-    onClose: Function
-  },
+    onClose: () => {}
+  }),
 
   data () {
     return {
@@ -82,42 +74,40 @@ export default {
     }
   },
 
-  watch: {
-    'closing': '_setCloseName'
-  },
+  computed: {
+    iconClass () {
+      let iconClass = this.description ? 'ant-alert-with-description-icon anticon-' : 'ant-alert-icon anticon-'
 
-  compiled () {
-    this.iconClass = this.description ? 'ant-alert-with-description-icon anticon-' : 'ant-alert-icon anticon-'
+      switch (this.type) {
+        case 'success':
+          iconClass += 'check-circle'
+          break
 
-    switch (this.type) {
-      case 'success':
-        this.iconClass += 'check-circle'
-        break
+        case 'info':
+          iconClass += 'info-circle'
+          break
 
-      case 'info':
-        this.iconClass += 'info-circle'
-        break
+        case 'error':
+          iconClass += 'exclamation-circle'
+          break
 
-      case 'error':
-        this.iconClass += 'exclamation-circle'
-        break
+        case 'warn':
+          iconClass += 'question-circle'
+          break
 
-      case 'warn':
-        this.iconClass += 'question-circle'
-        break
+        default:
+          iconClass += 'default'
+      }
 
-      default:
-        this.iconClass += 'default'
+      return iconClass
+    },
+
+    closeName () {
+      return !this.closing ? ' ' + this.prefixCls + '-close' : ''
     }
-
-    this._setCloseName()
   },
 
   methods: {
-    _setCloseName () {
-      this.closeName = !this.closing ? ' ' + this.prefixCls + '-close' : ''
-    },
-
     _handleClose (e) {
       let dom = this.$el
       dom.style.height = dom.offsetHeight + 'px'
