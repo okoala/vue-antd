@@ -13,7 +13,7 @@ let fragmentNode = {
   },
 
   remove () {
-    fragmentNode.el.parentNode.remvoeChild(fragmentNode.el)
+    fragmentNode.el && fragmentNode.el.parentNode.remvoeChild(fragmentNode.el)
   }
 }
 
@@ -48,11 +48,11 @@ export default function (props) {
             <div class="ant-confirm-content">{{content}}</div>
           </div>
           <div slot="footer" class="ant-confirm-btns" v-if="!okCancel">
-            <v-button :type="'primary'" :size="'large'" :on-click="onOk">知道了</v-button>
+            <v-button :type="'primary'" :size="'large'" :on-click="_handleOk">知道了</v-button>
           </div>
           <div slot="footer" className="ant-confirm-btns" v-else>
-            <v-button :type="'ghost'" :size="'large'" :on-click="onCancel">取 消</v-button>
-            <v-button :type="'primary'" :size="'large'" :on-click="onOk">确 定</v-button>
+            <v-button :type="'ghost'" :size="'large'" :on-click="_handleCancel">取 消</v-button>
+            <v-button :type="'primary'" :size="'large'" :on-click="_handleOk">确 定</v-button>
           </div>
         </div>
       </v-modal>
@@ -61,6 +61,45 @@ export default function (props) {
     components: { vModal, vIcon, vButton }
   })
 
-  new Dialog({el: container, data: props})
+  new Dialog({
+    el: container,
+    data: props,
+    methods: {
+      _close () {
+        this.visible = false
+        fragmentNode.remove()
+      },
+
+      _handleOk () {
+        let okFn = this.onOk
+
+        if (okFn) {
+          let ret = okFn()
+          if (ret && ret.then) {
+            ret.then(this._close)
+          } else {
+            this._close()
+          }
+        } else {
+          this._close()
+        }
+      },
+
+      _handleCancel () {
+        let cancelFn = this.onCancel
+
+        if (cancelFn) {
+          let ret = cancelFn()
+          if (ret && ret.then) {
+            ret.then(this._close)
+          } else {
+            this._close()
+          }
+        } else {
+          this._close()
+        }
+      }
+    }
+  })
 }
 

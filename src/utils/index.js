@@ -1,5 +1,6 @@
 import velocity from 'velocity-animate'
 import isPlainObject from 'lodash/lang/isPlainObject'
+import KeyCode from './KeyCode'
 
 const toString = Object.prototype.toString
 
@@ -116,3 +117,5 @@ export function oneOf (...args) {
     }
   }
 }
+
+export const KeyCode
