@@ -24,7 +24,7 @@ export default function (props) {
 
   // 默认为 true，保持向下兼容
   if (!('okCancel' in props)) {
-    props.okCancel = true;
+    props.okCancel = true
   }
 
   const container = fragmentNode.create()

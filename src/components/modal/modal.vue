@@ -73,7 +73,7 @@ export default {
     wrapClasses () {
       return classnames({
         [`${this.prefixCls}-wrap`]: 1,
-        [`${this.prefixCls}-wrap-hidden`]: !this.visible,
+        [`${this.prefixCls}-wrap-hidden`]: !this.visible
       })
     }
   },
@@ -115,33 +115,32 @@ export default {
       }
 
       this.$els.dialog.focus()
-    },
-
-    _onKeyDown (e) {
-      if (this.closeable) {
-        if (e.KeyCode === KeyCode.ESC) {
-          this._close()
-        }
-      }
-
-      // keep focus inside dialog
-      if (this.visible) {
-        if (e.keyCode === KeyCode.TAB) {
-          const activeElement = document.activeElement
-          const dialogRoot = this.$els.dialog
-          const sentinel = this.refs.sentinel
-
-          if (e.shiftKey) {
-            if (activeElement === dialogRoot) {
-              sentinel.focus()
-            }
-          } else if (activeElement === this.refs.sentinel) {
-            dialogRoot.focus()
-          }
-        }
-      }
     }
+
+    // _onKeyDown (e) {
+    //   if (this.closeable) {
+    //     if (e.KeyCode === KeyCode.ESC) {
+    //       this._close()
+    //     }
+    //   }
+
+    //   // keep focus inside dialog
+    //   if (this.visible) {
+    //     if (e.keyCode === KeyCode.TAB) {
+    //       const activeElement = document.activeElement
+    //       const dialogRoot = this.$els.dialog
+    //       const sentinel = this.refs.sentinel
+
+    //       if (e.shiftKey) {
+    //         if (activeElement === dialogRoot) {
+    //           sentinel.focus()
+    //         }
+    //       } else if (activeElement === this.refs.sentinel) {
+    //         dialogRoot.focus()
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
-
 <script>

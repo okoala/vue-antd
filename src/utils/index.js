@@ -1,6 +1,6 @@
 import velocity from 'velocity-animate'
 import isPlainObject from 'lodash/lang/isPlainObject'
-import KeyCode from './KeyCode'
+import _KeyCode from './KeyCode'
 
 const toString = Object.prototype.toString
 
@@ -30,6 +30,7 @@ function animate (node, show, transitionName, done) {
   }
 }
 
+export const KeyCode = _KeyCode
 export const openAnimation = {
   enter (node, done) {
     return animate(node, false, 'slideDown', done)
@@ -118,4 +119,3 @@ export function oneOf (...args) {
   }
 }
 
-export const KeyCode
