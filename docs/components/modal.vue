@@ -1,4 +1,4 @@
-<template>
+<template lang="md">
 # Modal
 
 ---
@@ -17,7 +17,7 @@
   <div class="code-boxes-col-2-1">
     <div class="code-box">
       <div class="code-box-demo">
-        <v-button :type="'primary'" @click="_showModal"></v-button>
+        <v-button :type="'primary'" @click="_showModal">显示对话框</v-button>
         <v-modal
           :visible="visible"
           :confirm-loading="confirmLoading"
@@ -42,7 +42,8 @@
 | on-ok       | 点击确定回调       | function     | 无           |
 | on-cancel   | 点击遮罩层或右上角叉或取消按钮的回调  | function  | 无           |
 | width      | 宽度           | String or Number | 520           |
-| footer     | 底部内容       | slot node    | 确定取消按钮 |
+| ok-text          | 确定文本     | String | 确定           |
+| cancel-text      | 取消文本     | String | 取消           |
 
 
 ### Modal.xxx()
