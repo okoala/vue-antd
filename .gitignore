@@ -2,3 +2,4 @@
 node_modules
 .temp
 npm-debug.log
+_src/
