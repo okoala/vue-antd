@@ -21,6 +21,7 @@
   "homepage": "https://github.com/okoala/vue-antd",
   "dependencies": {
     "classnames": "^2.1.5",
+    "dom-align": "^1.1.0",
     "enquire.js": "^2.1.1",
     "gregorian-calendar": "^3.1.0",
     "json2mq": "^0.2.0",
