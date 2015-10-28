@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { defaultProps } from '../../utils'
+import { defaultProps, oneOfType } from '../../utils'
 import classnames from 'classnames'
 
 export default {
@@ -24,7 +24,7 @@ export default {
 
     checked: Boolean,
     defaultChecked: false,
-    value: String,
+    value: oneOfType(String, Number),
     onChange: () => {},
 
     disabled: Boolean,

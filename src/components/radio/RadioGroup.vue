@@ -5,15 +5,15 @@
 </template>
 
 <script>
-import { defaultProps } from '../../utils'
+import { defaultProps, oneOfType } from '../../utils'
 import vRadio from './Radio.vue'
 
 export default {
   props: defaultProps({
     prefixCls: 'ant-radio-group',
     type: 'radio', // or button
-    value: String,
-    defaultValue: String,
+    value: oneOfType(String, Number),
+    defaultValue: oneOfType(String, Number),
     radios: [],
     onChange: () => {}
   }),
