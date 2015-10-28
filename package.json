@@ -1,6 +1,6 @@
 {
   "name": "vue-antd",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Ant Design components built with Vue.js ",
   "main": "src/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "object-assign": "^4.0.1",
     "rc-util": "^2.0.3",
     "velocity-animate": "^1.2.3",
-    "vue": "^1.0.0-rc.2"
+    "vue": "^1.0.1"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
