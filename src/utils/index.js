@@ -119,3 +119,6 @@ export function oneOf (...args) {
   }
 }
 
+export function getPlainObject (vueObject) {
+  return JSON.parse(JSON.stringify(vueObject))
+}

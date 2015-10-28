@@ -1,5 +1,6 @@
 import './style/index.less'
 import meta from '../package.json'
+import { * as utils } from './utils'
 
 window.matchMedia = window.matchMedia || function () {
   return {
@@ -15,6 +16,7 @@ const antd = {
   radio
 }
 
+antd.utils = utils
 antd.version = meta.version
 
 export default antd
