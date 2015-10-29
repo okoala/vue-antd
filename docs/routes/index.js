@@ -36,6 +36,10 @@ export function configRouter (router) {
           component: require('../components/checkbox.vue')
         },
 
+        'iconfont': {
+          component: require('../components/iconfont.vue')
+        },
+
         // 'modal': {
         //   component: require('../components/modal.vue')
         // },
