@@ -74,119 +74,160 @@ export default {
   data () {
     return {
       componentsMenu: {
-        base: [{
-          name: 'button',
-          desc: '按钮'
-        }, {
-          name: 'iconfont',
-          desc: '字体图标'
-        }, {
-          name: 'layout',
-          desc: '布局'
-        }],
-        form: [{
-          name: 'checkbox',
-          desc: '多选框'
-        }, {
-          name: 'datepicker',
-          desc: '日期选择框'
-        }, {
-          name: 'form',
-          desc: '表单'
-        }, {
-          name: 'input-number',
-          desc: '数字输入框'
-        }, {
-          name: 'radio',
-          desc: '单选框'
-        }, {
-          name: 'select',
-          desc: '选择器'
-        }, {
-          name: 'slider',
-          desc: '滑动输入条'
-        }, {
-          name: 'switch',
-          desc: '开关'
-        }, {
-          name: 'upload',
-          desc: '文件上传'
-        }, {
-          name: 'validation',
-          desc: '表单验证'
-        }],
-        show: [{
-          name: 'alert',
-          desc: '警告提示'
-        }, {
-          name: 'badge',
-          desc: '徽标数'
-        }, {
-          name: 'carousel',
-          desc: '走马灯'
-        }, {
-          name: 'collapse',
-          desc: '折叠面板'
-        }, {
-          name: 'dropdown',
-          desc: '下拉菜单'
-        }, {
-          name: 'message',
-          desc: '全局提示'
-        }, {
-          name: 'modal',
-          desc: '对话框'
-        }, {
-          name: 'notification',
-          desc: '通知提醒框'
-        }, {
-          name: 'popconfirm',
-          desc: '气泡确认框'
-        }, {
-          name: 'popover',
-          desc: '气泡卡片'
-        }, {
-          name: 'progress',
-          desc: '进度条'
-        }, {
-          name: 'table',
-          desc: '表格'
-        }, {
-          name: 'tag',
-          desc: '标签'
-        }, {
-          name: 'timeline',
-          desc: '时间轴'
-        }, {
-          name: 'tooltip',
-          desc: '文字提示'
-        }, {
-          name: 'tree',
-          desc: '树形控件'
-        }],
-        pagination: [{
-          name: 'breadcrumb',
-          desc: '面包屑'
-        }, {
-          name: 'menu',
-          desc: '导航菜单'
-        }, {
-          name: 'pagination',
-          desc: '分页'
-        }, {
-          name: 'steps',
-          desc: '步骤条'
-        }, {
-          name: 'tabs',
-          desc: '标签页'
-        }],
-        other: [{
-          name: 'affix',
-          desc: '固钉'
-        }, {
-          name: 'enter-animation',
-          desc: '进场动画'
-        }]
+        base: [
+          {
+            name: 'button',
+            desc: '按钮'
+          },
+          {
+            name: 'iconfont',
+            desc: '字体图标'
+          }
+          // {
+          //   name: 'layout',
+          //   desc: '布局'
+          // }
+        ],
+        form: [
+          {
+            name: 'checkbox',
+            desc: '多选框'
+          },
+          // {
+          //   name: 'datepicker',
+          //   desc: '日期选择框'
+          // },
+          // {
+          //   name: 'form',
+          //   desc: '表单'
+          // },
+          // {
+          //   name: 'input-number',
+          //   desc: '数字输入框'
+          // },
+          {
+            name: 'radio',
+            desc: '单选框'
+          },
+          // {
+          //   name: 'select',
+          //   desc: '选择器'
+          // },
+          // {
+          //   name: 'slider',
+          //   desc: '滑动输入条'
+          // },
+          {
+            name: 'switch',
+            desc: '开关'
+          }
+          // {
+          //   name: 'upload',
+          //   desc: '文件上传'
+          // },
+          // {
+          //   name: 'validation',
+          //   desc: '表单验证'
+          // }
+        ],
+        show: [
+          // {
+          //   name: 'alert',
+          //   desc: '警告提示'
+          // },
+          {
+            name: 'badge',
+            desc: '徽标数'
+          }
+          // {
+          //   name: 'carousel',
+          //   desc: '走马灯'
+          // },
+          // {
+          //   name: 'collapse',
+          //   desc: '折叠面板'
+          // },
+          // {
+          //   name: 'dropdown',
+          //   desc: '下拉菜单'
+          // },
+          // {
+          //   name: 'message',
+          //   desc: '全局提示'
+          // },
+          // {
+          //   name: 'modal',
+          //   desc: '对话框'
+          // },
+          // {
+          //   name: 'notification',
+          //   desc: '通知提醒框'
+          // },
+          // {
+          //   name: 'popconfirm',
+          //   desc: '气泡确认框'
+          // },
+          // {
+          //   name: 'popover',
+          //   desc: '气泡卡片'
+          // },
+          // {
+          //   name: 'progress',
+          //   desc: '进度条'
+          // },
+          // {
+          //   name: 'table',
+          //   desc: '表格'
+          // },
+          // {
+          //   name: 'tag',
+          //   desc: '标签'
+          // },
+          // {
+          //   name: 'timeline',
+          //   desc: '时间轴'
+          // },
+          // {
+          //   name: 'tooltip',
+          //   desc: '文字提示'
+          // },
+          // {
+          //   name: 'tree',
+          //   desc: '树形控件'
+          // }
+        ],
+        pagination: [
+          {
+            name: 'breadcrumb',
+            desc: '面包屑'
+          }
+          // {
+          //   name: 'menu',
+          //   desc: '导航菜单'
+          // },
+          // {
+          //   name: 'pagination',
+          //   desc: '分页'
+          // },
+          // {
+          //   name: 'steps',
+          //   desc: '步骤条'
+          // },
+          // {
+          //   name: 'tabs',
+          //   desc: '标签页'
+          // }
+        ],
+        other: [
+          // {
+          //   name: 'affix',
+          //   desc: '固钉'
+          // },
+          // {
+          //   name: 'enter-animation',
+          //   desc: '进场动画'
+          // }
+        ]
       }
     }
   },
@@ -376,6 +417,7 @@ export default {
 .markdown p,
 .markdown pre {
   margin: 1.2em 0;
+  padding: 0 1em;
 }
 
 .markdown > ul li {
@@ -399,12 +441,12 @@ export default {
   border-radius: 6px;
 }
 
-.markdown pre code {
+/*.markdown pre code {
   background: #F7F7F7;
   border: none;
   padding: 12px 20px;
   margin: 0;
-}
+}*/
 
 .markdown strong,
 .markdown b {
@@ -468,6 +510,10 @@ export default {
   margin-left: 0.5em;
 }
 
+.code-boxes-col {
+  width: 100%;
+}
+
 .code-boxes-col-1-1 {
   width: 80%;
 }
@@ -513,13 +559,17 @@ export default {
   box-shadow: 0 -1.2px 0 #e9e9e9;
 }
 
+.code-box h3 {
+  margin: 1em;
+  font-size: 14px;
+}
+
 .code-box .code-box-title a,
 .code-box .code-box-title a:hover {
   color: #666;
 }
 
 .code-box .code-box-demo {
-  border-bottom: 1px solid #E9E9E9;
   padding: 42px 20px 50px;
 }
 
@@ -599,16 +649,6 @@ export default {
   display: none;
   padding: 5px;
   border-top: 1px dashed #e9e9e9;
-}
-
-.code-box pre {
-  margin: 0;
-  width: auto;
-}
-
-.code-box pre code {
-  border: none;
-  background: #fff;
 }
 
 </style>
