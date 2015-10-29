@@ -1,6 +1,17 @@
 <template>
-<span @click="_onClick" @key>
-
+<span role="button"
+      tabIndex="0"
+      @click="_onClick"
+      @keydown="_onKeyDown"
+      @drop="_onFileDrop"
+      @dropover="_onFileDrop">
+  <input type="file"
+         ref="file"
+         style="display: none"
+         :accept="accept"
+         :multiple="multiple"
+         :on-change="_onChange">
+  <slot></slot>
 </span>
 </template>
 

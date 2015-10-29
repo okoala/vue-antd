@@ -1,11 +1,19 @@
 <template>
 <div>
   <div v-if="type === 'select'" :class="prefixCls + ' ' + prefixCls + '-select'">
-    <Upload {...props}>
+    <AjaxUpload :action="action"
+                :name="name"
+                :multiple="multiple"
+                :data="data"
+                :on-start="_onStart"
+                :on-progress="_onProgress"
+                :on-success="_onSuccess"
+                :on-error="_onError"
+                :before-upload="beforeUpload">
       <div :class="{`${prefixCls} + '-drag-container'`: isDrag}">
         <slot></slot>
       </div>
-    </Upload>
+    </AjaxUpload>
   </div>
   <upload-list :items="fileList" :on-remove="_handleManualRemove" ></upload-list>
 </div>
@@ -14,6 +22,7 @@
 <script>
 import { defaultProps } from '../../utils'
 import classnames from 'classnames'
+import AjaxUpload from './AjaxUploader.vue'
 import UploadList from './UploadList.vue'
 import assign from 'object-assign'
 import getFileItem from './getFileItem'
@@ -45,7 +54,7 @@ export default {
     data: {},
     accept: '',
     multiple: false,
-    beforeUpload: null,
+    beforeUpload: () => {},
     onChange: () => {}
   }),
 
