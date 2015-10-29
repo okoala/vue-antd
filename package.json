@@ -29,7 +29,7 @@
     "object-assign": "^4.0.1",
     "rc-util": "^2.0.3",
     "velocity-animate": "^1.2.3",
-    "vue": "^1.0.1"
+    "vue": "^1.0.3"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
