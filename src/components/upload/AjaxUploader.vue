@@ -5,12 +5,12 @@
       @keydown="_onKeyDown"
       @drop="_onFileDrop"
       @dropover="_onFileDrop">
-  <input type="file"
-         ref="file"
+  <input v-el:file
+         type="file"
          style="display: none"
          :accept="accept"
          :multiple="multiple"
-         :on-change="_onChange">
+         @change="_onChange">
   <slot></slot>
 </span>
 </template>
@@ -36,7 +36,7 @@ export default {
   methods: {
     _onChange (e) {
       const files = e.target.files
-      this.uploadFiles(files)
+      this._uploadFiles(files)
     },
 
     _onClick () {
@@ -74,9 +74,9 @@ export default {
         }
 
         if (this.multiple) {
-          this._onStart(Array.prototype.slice.call(files))
+          this.onStart(Array.prototype.slice.call(files))
         } else {
-          this._onStart(Array.prototype.slice.call(files)[0])
+          this.onStart(Array.prototype.slice.call(files)[0])
         }
       }
     },

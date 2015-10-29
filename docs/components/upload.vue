@@ -87,15 +87,15 @@ export default {
   data () {
     return {
       name: 'file',
-      action: '/upload.do',
+      action: '/upload',
       onChange (info) {
         if (info.file.status !== 'uploading') {
           console.log(info.file, info.fileList)
         }
         if (info.file.status === 'done') {
-          console.log(info.file.name + '上传成功.')
+          console.log(info.file.name + ' 上传成功.')
         } else if (info.file.status === 'error') {
-          console.log(info.file.name + '上传失败.')
+          console.log(info.file.name + ' 上传失败.')
         }
       }
     }

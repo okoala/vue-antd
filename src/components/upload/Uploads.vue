@@ -1,21 +1,19 @@
 <template>
-<div>
-  <div :class="wrapClasses">
-    <ajax-upload :action="action"
-                :name="name"
-                :multiple="multiple"
-                :on-start="_onStart"
-                :on-progress="_onProgress"
-                :on-success="_onSuccess"
-                :on-error="_onError"
-                :before-upload="beforeUpload">
-      <div :class="containerClasses">
-        <slot></slot>
-      </div>
-    </ajax-upload>
-  </div>
-  <upload-list :items="fileList" :on-remove="_handleManualRemove" ></upload-list>
+<div :class="wrapClasses">
+  <ajax-upload :action="action"
+              :name="name"
+              :multiple="multiple"
+              :on-start="_onStart"
+              :on-progress="_onProgress"
+              :on-success="_onSuccess"
+              :on-error="_onError"
+              :before-upload="beforeUpload">
+    <div :class="containerClasses">
+      <slot></slot>
+    </div>
+  </ajax-upload>
 </div>
+<upload-list :items="fileList" :on-remove="_handleManualRemove" ></upload-list>
 </template>
 
 <script>
@@ -88,7 +86,7 @@ export default {
   methods: {
     _onStart (file) {
       let targetItem;
-      let nextFileList = this.state.fileList.concat()
+      let nextFileList = this.fileList.concat()
       if (file.length > 0) {
         targetItem = file.map(function(f) {
           f = fileToObject(f);
@@ -109,14 +107,14 @@ export default {
     },
 
     _onProgress (e, file) {
-      let fileList = this.state.fileList
+      let fileList = this.fileList
       let targetItem = getFileItem(file, fileList)
 
       if (targetItem) {
         this._onChange({
           event: e,
           file: file,
-          fileList: this.state.fileList
+          fileList: this.fileList
         })
       }
     },
@@ -133,7 +131,7 @@ export default {
         return
       }
 
-      let fileList = this.state.fileList
+      let fileList = this.fileList
       let targetItem = getFileItem(file, fileList)
 
       // 之前已经删除
@@ -149,7 +147,7 @@ export default {
     },
 
     _onError (error, response, file) {
-      let fileList = this.state.fileList
+      let fileList = this.fileList
       let targetItem = getFileItem(file, fileList)
       targetItem.error = error
       targetItem.response = response
@@ -159,7 +157,7 @@ export default {
     },
 
     _removeFile (file) {
-      let fileList = this.state.fileList
+      let fileList = this.fileList
       let targetItem = getFileItem(file, fileList)
       let index = fileList.indexOf(targetItem)
 
@@ -190,12 +188,9 @@ export default {
     _onChange (info) {
       // 1. 有设置外部属性时不改变 fileList
       // 2. 上传中状态（info.event）不改变 fileList
-      if (!('fileList' in this.props) && !info.event) {
-        this.setState({
-          fileList: info.fileList
-        })
+      if (!this.fileList.length && !info.event) {
+        this.fileList = info.fileList
       }
-
       this.onChange(info)
     },
   }
