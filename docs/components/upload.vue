@@ -30,8 +30,14 @@
       </v-button>
     </v-upload>
   </example>
-  <example title="完全控制的上传列表"></example>
-  <example title="拖拽上传1"></example>
+  <example title="拖拽上传1">
+    <v-upload :name="name" :action="action" type="drag" :on-change="onChange">
+      <p class="ant-upload-drag-icon">
+        <v-icon type="inbox"></v-icon>
+      </p>
+      <p class="ant-upload-text">点击或将文件拖拽到此区域上传</p>
+      <p class="ant-upload-hint">支持单个或批量上传，严禁上传公司内部资料及其他违禁文件</p>
+  </example>
   <example title="拖拽上传2"></example>
   <example title="多文件选择"></example>
 </demo>

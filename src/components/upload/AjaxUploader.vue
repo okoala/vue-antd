@@ -4,7 +4,7 @@
       @click="_onClick"
       @keydown="_onKeyDown"
       @drop="_onFileDrop"
-      @dropover="_onFileDrop">
+      @dragover="_onFileDrop">
   <input v-el:file
          type="file"
          style="display: none"
