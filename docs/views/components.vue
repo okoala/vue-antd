@@ -570,7 +570,7 @@ export default {
 }
 
 .code-box .code-box-demo {
-  padding: 42px 20px 50px;
+  padding: 1.2em 1em;
 }
 
 .code-box-meta {
