@@ -80,7 +80,7 @@ export default {
   },
 
   beforeCompile () {
-    this.fileList = this.fileList || this.defaultFileList || []
+    this.$set('fileList', this.fileList || this.defaultFileList || [])
   },
 
   methods: {
@@ -185,11 +185,30 @@ export default {
       this._handleRemove(file)
     },
 
+    _getFilePlainObject (fileList) {
+      let arr = []
+      fileList.forEach(item => {
+        arr.push({
+          name: item.name,
+          size: item.size,
+          status: item.status,
+          type: item.type,
+          uid: item.uid,
+          response: item.response
+        })
+      })
+      return arr
+    },
+
     _onChange (info) {
       // 1. 有设置外部属性时不改变 fileList
       // 2. 上传中状态（info.event）不改变 fileList
-      if (!this.fileList.length && !info.event) {
-        this.fileList = info.fileList
+      if (info.fileList) {
+        let fileList = info.fileList
+        // todo
+        // 用纯对象的方式来触发vue的更新，好吧，之后看看有没有好的方式
+        fileList = this._getFilePlainObject(fileList)
+        this.$set('fileList', fileList)
       }
       this.onChange(info)
     },
