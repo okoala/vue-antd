@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div v-if="type === 'select'" :class="prefixCls + ' ' + prefixCls + '-select'">
+  <div :class="wrapClasses">
     <ajax-upload :action="action"
                 :name="name"
                 :multiple="multiple"
@@ -9,7 +9,7 @@
                 :on-success="_onSuccess"
                 :on-error="_onError"
                 :before-upload="beforeUpload">
-      <div :class="{`${prefixCls} + '-drag-container'`: isDrag}">
+      <div :class="containerClasses">
         <slot></slot>
       </div>
     </ajax-upload>
@@ -69,12 +69,19 @@ export default {
     wrapClasses () {
       return classnames({
         [this.prefixCls]: 1,
-        [`${prefixCls} + '-drag'`]: this.isDrag
+        [`${this.prefixCls}-drag`]: this.isDrag,
+        [`${this.prefixCls}-select`]: !this.isDrag
+      })
+    },
+
+    containerClasses () {
+      return classnames({
+        [`${this.prefixCls}-drag-container`]: this.isDrag
       })
     }
   },
 
-  compiled () {
+  beforeCompile () {
     this.fileList = this.fileList || this.defaultFileList || []
   },
 
@@ -175,7 +182,7 @@ export default {
       }
     },
 
-    handleManualRemove (file) {
+    _handleManualRemove (file) {
       file.status = 'removed'
       this._handleRemove(file)
     },
