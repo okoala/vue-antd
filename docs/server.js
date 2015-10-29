@@ -6,8 +6,9 @@ var path = require('path')
 
 var app = express()
 var temp = path.join(__dirname, '..', '.temp')
-console.log(temp)
-app.get('/', express.static(temp))
+
+app.use(express.static(temp))
+
 app.post('/upload', function(req, res) {
   var form = new formidable.IncomingForm();
   form.parse(req, function(err, fields, files) {
