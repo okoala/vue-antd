@@ -37,9 +37,22 @@
       </p>
       <p class="ant-upload-text">点击或将文件拖拽到此区域上传</p>
       <p class="ant-upload-hint">支持单个或批量上传，严禁上传公司内部资料及其他违禁文件</p>
+    </v-upload>
   </example>
-  <example title="拖拽上传2"></example>
-  <example title="多文件选择"></example>
+  <example title="拖拽上传2">
+    <div style="width: 246px; height: 146px">
+      <v-upload :name="name" :action="action" type="drag" :on-change="onChange">
+        <v-icon type="plus"></v-icon>
+      </v-upload>
+    </div>
+  </example>
+  <example title="多文件选择">
+    <v-upload :name="name" :action="action" :multiple="true" :on-change="onChange">
+      <v-button type="ghost">
+        <v-icon type="upload"></v-icon> 点击上传
+      </v-button>
+    </v-upload>
+  </example>
 </demo>
 
 ## API
