@@ -585,22 +585,22 @@ ul.anticons-list li.copied:after {
 export default {
   ready () {
     [...document.querySelectorAll('.anticons-list li')].forEach((item, i) => {
-      var client = new ZeroClipboard(item)
+      const client = new ZeroClipboard(item)
 
-      client.on("copy", function (event) {
+      client.on("copy", event => {
         client.setText('<v-icon type="' + item.querySelectorAll('.anticon-class')[0].innerHTML + '">')
       })
 
-      client.on("ready", function(readyEvent) {
-        client.on("aftercopy", function(event) {
+      client.on("ready", readyEvent => {
+        client.on("aftercopy", event => {
           // `this` === `client`
           // `event.target` === the element that was clicked
           event.target.classList.add('copied')
           setTimeout(() => {
             event.target.classList.remove('copied')
           }, 2000)
-        });
-      });
+        })
+      })
     })
   }
 }

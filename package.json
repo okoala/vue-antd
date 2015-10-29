@@ -29,7 +29,10 @@
     "object-assign": "^4.0.1",
     "rc-util": "^2.0.3",
     "velocity-animate": "^1.2.3",
-    "vue": "^1.0.3"
+    "vue": "^1.0.3",
+    "vue-async-data": "^1.0.2",
+    "vue-resource": "^0.1.16",
+    "vue-router": "^0.7.4"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
@@ -76,10 +79,8 @@
     "style-loader": "^0.12.3",
     "template-html-loader": "0.0.3",
     "uglify-js": "^2.5.0",
-    "vue-async-data": "^1.0.2",
+    "vue-antd-docs-loader": "okoala/vue-antd-docs-loader",
     "vue-loader": "^3.0.3",
-    "vue-resource": "^0.1.16",
-    "vue-router": "^0.7.4",
     "webpack": "^1.9.11"
   },
   "author": "KoalaHuang",
