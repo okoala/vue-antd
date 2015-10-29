@@ -18,7 +18,7 @@
     </ul>
   </nav>
 </header>
-<router-view class="view" keep-alive></router-view>
+<router-view class="view"></router-view>
 </template>
 
 <script>

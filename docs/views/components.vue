@@ -63,7 +63,7 @@
     </ul>
   </aside>
   <section class="main-container">
-    <router-view class="view" keep-alive></router-view>
+    <router-view class="view xRightMatrix"></router-view>
   </section>
 </div>
 </template>
@@ -651,4 +651,19 @@ export default {
   border-top: 1px dashed #e9e9e9;
 }
 
+.xRightMatrix {
+  animation: xRightMatrix .5s ease-out;
+}
+
+@keyframes xRightMatrix {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 </style>
