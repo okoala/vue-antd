@@ -7,7 +7,7 @@
     <a v-if="file.url" :class="prefixCls + '-item-name'" :href="file.url" target="_blank">{{file.name}}</a>
     <b v-if="!file.url" :class="prefixCls + '-item-name'">{{file.name}}</b>
 
-    <v-icon type="cross" @click="_handleClose.bind(this, file)"></v-icon>
+    <v-icon type="cross" @click="_handleClose(file)"></v-icon>
   </div>
 </div>
 </template>

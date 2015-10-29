@@ -23,7 +23,13 @@
       </v-button>
     </v-upload>
   </example>
-  <example title="传入已上传的文件"></example>
+  <example title="传入已上传的文件">
+    <v-upload :name="name" :action="action" :default-file-list="defaultFileList" :on-change="onChange">
+      <v-button type="ghost">
+        <v-icon type="upload"></v-icon> 点击上传
+      </v-button>
+    </v-upload>
+  </example>
   <example title="完全控制的上传列表"></example>
   <example title="拖拽上传1"></example>
   <example title="拖拽上传2"></example>
@@ -97,7 +103,18 @@ export default {
         } else if (info.file.status === 'error') {
           console.log(info.file.name + ' 上传失败.')
         }
-      }
+      },
+      defaultFileList: [{
+        uid: -1,
+        name: 'xxx.png',
+        status: 'done',
+        url: 'http://www.baidu.com/xxx.png'
+      }, {
+        uid: -2,
+        name: 'yyy.png',
+        status: 'done',
+        url: 'http://www.baidu.com/yyy.png'
+      }]
     }
   },
 
