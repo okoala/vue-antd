@@ -1,6 +1,6 @@
 <template>
-<label :class="wrapClassName">
-  <span :class="radioClassName">
+<label :class="wrapClasses">
+  <span :class="radioClasses">
     <span :class="prefixCls + '-inner'"></span>
     <input
       type="radio"
@@ -34,14 +34,14 @@ export default {
   }),
 
   computed: {
-    wrapClassName () {
+    wrapClasses () {
       return classnames({
         [this.className]: !!this.className,
         [`${this.className}-checked`]: this.checked
       })
     },
 
-    radioClassName () {
+    radioClasses () {
       return classnames({
         [this.className]: !!this.className,
         [this.prefixCls]: true,

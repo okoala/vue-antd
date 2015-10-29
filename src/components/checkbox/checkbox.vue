@@ -1,6 +1,6 @@
 <template>
-<label :class="wrapClassName">
-  <span :class="ckClassName" :style="style">
+<label :class="wrapClasses">
+  <span :class="ckClasses" :style="style">
     <span :class="prefixCls + '-inner'"></span>
     <input
       type="checkbox"
@@ -32,14 +32,14 @@ export default {
   }),
 
   computed: {
-    wrapClassName () {
+    wrapClasses () {
       return classnames({
         [this.className]: !!this.className,
         [`${this.className}-checked`]: this.checked
       })
     },
 
-    ckClassName () {
+    ckClasses () {
       return classnames({
         [this.className]: !!this.className,
         [this.prefixCls]: 1,

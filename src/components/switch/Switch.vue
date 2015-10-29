@@ -1,5 +1,5 @@
 <template>
-<span :class="wrapClassName" @click="_toggle">
+<span :class="wrapClasses" @click="_toggle">
   <span :class="prefixCls + '-inner'">
     <slot v-if="checked" name="checkedChildren"></slot>
     <slot v-if="!checked" name="unCheckedChildren"></slot>
@@ -29,7 +29,7 @@ export default {
   },
 
   computed: {
-    wrapClassName () {
+    wrapClasses () {
       return classnames({
         [this.className]: !!this.className,
         [this.prefixCls]: true,

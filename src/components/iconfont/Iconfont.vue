@@ -1,5 +1,5 @@
 <template>
-<i :class="iconClassName">
+<i :class="iconClasses">
   <slot></slot>
 </i>
 </template>
@@ -18,7 +18,7 @@ export default {
   }),
 
   computed: {
-    iconClassName () {
+    iconClasses () {
       return classnames({
         [this.className]: !!this.className,
         [`anticon`]: 1,

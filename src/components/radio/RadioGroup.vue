@@ -1,6 +1,6 @@
 <template>
 <div :class="prefixCls">
-  <v-radio v-for="radio in radios" :class-name="radioClassName" :value="radio.value" :on-change="_onRadioChange.bind(radio, $index)" :checked="value === radio.value"><span>{{radio.name}}</span></v-radio>
+  <v-radio v-for="radio in radios" :class-name="radioClasses" :value="radio.value" :on-change="_onRadioChange.bind(radio, $index)" :checked="value === radio.value"><span>{{radio.name}}</span></v-radio>
 </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
   components: { vRadio },
 
   computed: {
-    radioClassName () {
+    radioClasses () {
       if (this.type === 'button') {
         return 'ant-radio-button'
       }
