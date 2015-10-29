@@ -25,7 +25,7 @@ Table 有两种模式，本地数据和远程数据模式。
 通过指定表格的数据源 `dataSource` 为一个 DataSource 的实例如下。
 
 
-## DEMO
+## 组件演示
 <div>
   <v-table :columns="columns" :data-source="dataSource"></v-table>
 </div>

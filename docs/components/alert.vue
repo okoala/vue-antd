@@ -10,7 +10,7 @@
 - 当某个页面需要向用户显示警告的信息时。
 - 非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。
 
-## DEMO
+## 组件演示
 <div class="code-boxes">
   <div class="code-boxes-col-2-1">
     <div class="code-box">

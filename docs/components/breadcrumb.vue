@@ -11,33 +11,25 @@
 - 当需要告知用户“你在哪里”时；
 - 当需要向上导航的功能时。
 
-## DEMO
+## 组件演示
 
-<div class="code-boxes">
-  <div class="code-boxes-col-2-1">
-    <div class="code-box">
-      <div class="code-box-demo">
-        <v-breadcrumb>
-          <v-breadcrumb-item>首页</v-breadcrumb-item>
-          <v-breadcrumb-item :href="'#'">应用中心</v-breadcrumb-item>
-          <v-breadcrumb-item :href="'#'">应用列表</v-breadcrumb-item>
-          <v-breadcrumb-item>某应用</v-breadcrumb-item>
-        </v-breadcrumb>
-      </div>
-    </div>
-  </div>
-  <div class="code-boxes-col-2-1">
-    <div class="code-box">
-      <div class="code-box-demo">
-        <v-breadcrumb>
-          <v-breadcrumb-item><v-icon :type="'home'"></v-icon>首页</v-breadcrumb-item>
-          <v-breadcrumb-item><v-icon :type="'user'"></v-icon>应用列表</v-breadcrumb-item>
-          <v-breadcrumb-item>应用</v-breadcrumb-item>
-        </v-breadcrumb>
-      </div>
-    </div>
-  </div>
-</div>
+<demo>
+  <example title="基本">
+    <v-breadcrumb>
+      <v-breadcrumb-item>首页</v-breadcrumb-item>
+      <v-breadcrumb-item :href="'#'">应用中心</v-breadcrumb-item>
+      <v-breadcrumb-item :href="'#'">应用列表</v-breadcrumb-item>
+      <v-breadcrumb-item>某应用</v-breadcrumb-item>
+    </v-breadcrumb>
+  </example>
+  <example title="带图标">
+    <v-breadcrumb>
+      <v-breadcrumb-item><v-icon :type="'home'"></v-icon>首页</v-breadcrumb-item>
+      <v-breadcrumb-item><v-icon :type="'user'"></v-icon>应用列表</v-breadcrumb-item>
+      <v-breadcrumb-item>应用</v-breadcrumb-item>
+    </v-breadcrumb>
+  </example>
+</demo>
 
 ## API
 
@@ -61,15 +53,9 @@ import vBreadcrumb, { BreadcrumbItem as vBreadcrumbItem } from '../../src/compon
 import vIcon from '../../src/components/iconfont'
 
 export default {
-  data () {
 
-  },
+  components: { vBreadcrumb, vBreadcrumbItem, vIcon }
 
-  components: { vBreadcrumb, vBreadcrumbItem, vIcon },
-
-  methods: {
-
-  }
 }
 
 </script>

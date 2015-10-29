@@ -11,7 +11,7 @@
 
 另外当需要一个简洁的确认框询问用户时，可以使用精心封装好的 `ant.Modal.confirm()` 等方法。
 
-## DEMO
+## 组件演示
 
 <div class="code-boxes">
   <div class="code-boxes-col-2-1">

@@ -10,42 +10,25 @@
 - 需要表示开关状态/两种状态之间的切换时；
 - 和 `switch`的区别是，切换 `switch` 会直接触发状态改变，而 `checkbox` 一般用于状态标记，需要和提交操作配合。
 
-## DEMO
+## 组件演示
 
-<div class="code-boxes">
-  <div class="code-boxes-col-2-1">
-    <div class="code-box">
-      <div class="code-box-demo">
-        <v-checkbox :default-checked="false" :on-change="_change"><span>Checkbox</span></v-checkbox>
-      </div>
-    </div>
-  </div>
-  <div class="code-boxes-col-2-1">
-    <div class="code-box">
-      <div class="code-box-demo">
-        <v-checkbox :default-checked="false" :disabled="true"><span>不可用</span></v-checkbox>
-        <br>
-        <v-checkbox :default-checked="true" :disabled="true"><span>不可用</span></v-checkbox>
-      </div>
-    </div>
-  </div>
-  <div class="code-boxes-col-2-1">
-    <div class="code-box">
-      <div class="code-box-demo">
-        <v-checkbox :checked="checked" :disabled="disabled"><span>{{checkedStatus}}-{{disabledStatus}}</span></v-checkbox>
-        <br>
-        <p style="margin-top: 20px">
-          <button type="button" class="ant-btn ant-btn-primary ant-btn-sm" @click="_toggleChecked">
-            <span>{{checkedStatus}}</span>
-          </button>
-          <button type="button" class="ant-btn ant-btn-primary ant-btn-sm" @click="_toggleDisable">
-            <span>{{disabledStatus}}</span>
-          </button>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+<demo>
+  <example title="基本用法">
+    <v-checkbox :default-checked="false" :on-change="_change"><span>Checkbox</span></v-checkbox>
+  </example>
+  <example title="不可用">
+    <v-checkbox :default-checked="false" :disabled="true"><span>不可用</span></v-checkbox>
+    <br>
+    <v-checkbox :default-checked="true" :disabled="true"><span>不可用</span></v-checkbox>
+  </example>
+  <example title="和外部组件通信">
+    <v-checkbox :checked="checked" :disabled="disabled"><span>{{checkedStatus}}-{{disabledStatus}}</span></v-checkbox>
+    <br>
+    <br>
+    <v-button type="primary" size="small" @click="_toggleChecked">{{checkedStatus}}</v-button>
+    <v-button type="primary" size="small" @click="_toggleDisable">{{disabledStatus}}</v-button>
+  </example>
+</demo>
 
 ## API
 
@@ -60,6 +43,7 @@
 
 <script>
 import vCheckbox from '../../src/components/checkbox'
+import vButton from '../../src/components/button'
 
 export default {
   data () {
@@ -69,7 +53,7 @@ export default {
     }
   },
 
-  components: { vCheckbox },
+  components: { vCheckbox, vButton },
 
   computed: {
     checkedStatus () {
