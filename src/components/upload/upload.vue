@@ -1,0 +1,189 @@
+<template>
+<div>
+  <div v-if="type === 'select'" :class="prefixCls + ' ' + prefixCls + '-select'">
+    <Upload {...props}>
+      <div :class="{`${prefixCls} + '-drag-container'`: isDrag}">
+        <slot></slot>
+      </div>
+    </Upload>
+  </div>
+  <upload-list :items="fileList" :on-remove="_handleManualRemove" ></upload-list>
+</div>
+</template>
+
+<script>
+import { defaultProps } from '../../utils'
+import classnames from 'classnames'
+import UploadList from './UploadList.vue'
+import assign from 'object-assign'
+import getFileItem from './getFileItem'
+
+// Fix IE file.status problem
+// via coping a new Object
+function fileToObject (file) {
+  return {
+    lastModified: file.lastModified,
+    lastModifiedDate: file.lastModifiedDate,
+    name: file.filename || file.name,
+    size: file.size,
+    type: file.type,
+    uid: file.uid,
+    response: file.response,
+    error: file.error
+  }
+}
+
+export default {
+  props: defaultProps({
+    prefixCls: 'ant-upload',
+
+    type: 'select',
+    name: '',
+    forceAjax: false,
+    multipart: false,
+    action: '',
+    data: {},
+    accept: '',
+    multiple: false,
+    beforeUpload: null,
+    onChange: () => {}
+  }),
+
+  components: { UploadList },
+
+  data () {
+    return {
+      fileList: this.props.fileList || this.props.defaultFileList || []
+    }
+  },
+
+  computed: {
+    isDrag () {
+      return this.type === 'drag'
+    },
+
+    wrapClasses () {
+      return classnames({
+        [this.prefixCls]: 1,
+        [`${prefixCls} + '-drag'`]: this.isDrag
+      })
+    }
+  },
+
+  methods: {
+    _onStart (file) {
+      let targetItem;
+      let nextFileList = this.state.fileList.concat()
+      if (file.length > 0) {
+        targetItem = file.map(function(f) {
+          f = fileToObject(f);
+          f.status = 'uploading';
+          return f
+        })
+        nextFileList = nextFileList.concat(file)
+      } else {
+        targetItem = fileToObject(file)
+        targetItem.status = 'uploading'
+        nextFileList.push(targetItem)
+      }
+
+      this._onChange({
+        file: targetItem,
+        fileList: nextFileList
+      })
+    },
+
+    _onProgress (e, file) {
+      let fileList = this.state.fileList
+      let targetItem = getFileItem(file, fileList)
+
+      if (targetItem) {
+        this._onChange({
+          event: e,
+          file: file,
+          fileList: this.state.fileList
+        })
+      }
+    },
+
+    _onSuccess (response, file) {
+      // 服务器端需要返回标准 json 字符串
+      // 否则视为失败
+      try {
+        if (typeof response === 'string') {
+          JSON.parse(response)
+        }
+      } catch (e) {
+        this._onError(new Error('No response'), response, file)
+        return
+      }
+
+      let fileList = this.state.fileList
+      let targetItem = getFileItem(file, fileList)
+
+      // 之前已经删除
+      if (targetItem) {
+        targetItem.status = 'done'
+        targetItem.response = response
+
+        this._onChange({
+          file: targetItem,
+          fileList: fileList
+        })
+      }
+    },
+
+    _onError (error, response, file) {
+      let fileList = this.state.fileList
+      let targetItem = getFileItem(file, fileList)
+      targetItem.error = error
+      targetItem.response = response
+      targetItem.status = 'error'
+
+      this._handleRemove(targetItem)
+    },
+
+    _removeFile (file) {
+      let fileList = this.state.fileList
+      let targetItem = getFileItem(file, fileList)
+      let index = fileList.indexOf(targetItem)
+
+      if (index !== -1) {
+        fileList.splice(index, 1)
+        return fileList
+      }
+
+      return null
+    },
+
+    _handleRemove (file) {
+      let fileList = this._removeFile(file)
+
+      if (fileList) {
+        this._onChange({
+          file: file,
+          fileList: fileList
+        })
+      }
+    },
+
+    handleManualRemove (file) {
+      file.status = 'removed'
+      this._handleRemove(file)
+    },
+
+    _onChange (info) {
+      // 1. 有设置外部属性时不改变 fileList
+      // 2. 上传中状态（info.event）不改变 fileList
+      if (!('fileList' in this.props) && !info.event) {
+        this.setState({
+          fileList: info.fileList
+        })
+      }
+
+      this.onChange(info)
+    },
+  }
+}
+
+</script>

@@ -1,8 +1,5 @@
+<template lang="md">
 # Upload
-
-- category: Components
-- chinese: 文件上传
-- type: 表单
 
 ---
 
@@ -15,6 +12,23 @@
 - 当需要上传一个或一些文件时。
 - 当需要展现上传的进度时。
 - 当需要使用拖拽交互时。
+
+## 组件演示
+
+<demo>
+  <example title="点击上传">
+    <v-upload :name="name" :action="action" :on-change="onChange">
+      <v-button type="ghost">
+        <v-icon type="upload"></v-icon> 点击上传
+      </v-button>
+    </v-upload>
+  </example>
+  <example title="传入已上传的文件"></example>
+  <example title="完全控制的上传列表"></example>
+  <example title="拖拽上传1"></example>
+  <example title="拖拽上传2"></example>
+  <example title="多文件选择"></example>
+</demo>
 
 ## API
 
@@ -62,3 +76,32 @@
 ## IE note
 
 - [https://github.com/react-component/upload#ie89-note](https://github.com/react-component/upload#ie89-note)
+</template>
+
+<script>
+import vUpload from '../../src/components/upload'
+import vIcon from '../../src/components/iconfont'
+import vButton from '../../src/components/button'
+
+export default {
+  data () {
+    return {
+      name: 'file',
+      action: '/upload.do',
+      onChange (info) {
+        if (info.file.status !== 'uploading') {
+          console.log(info.file, info.fileList)
+        }
+        if (info.file.status === 'done') {
+          console.log(info.file.name + '上传成功.')
+        } else if (info.file.status === 'error') {
+          console.log(info.file.name + '上传失败.')
+        }
+      }
+    }
+  },
+
+  components: { vUpload, vIcon, vButton }
+}
+
+</script>

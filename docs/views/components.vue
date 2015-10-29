@@ -120,11 +120,11 @@ export default {
           {
             name: 'switch',
             desc: '开关'
+          },
+          {
+            name: 'upload',
+            desc: '文件上传'
           }
-          // {
-          //   name: 'upload',
-          //   desc: '文件上传'
-          // },
           // {
           //   name: 'validation',
           //   desc: '表单验证'
