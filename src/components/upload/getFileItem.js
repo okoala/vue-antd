@@ -1,4 +1,4 @@
-export default function getFileItem(file, fileList) {
+export default function getFileItem (file, fileList) {
   const matchWay = (!file.uid) ? 'byName' : 'byUid'
 
   let target = fileList.filter(item => {

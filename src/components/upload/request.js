@@ -1,4 +1,4 @@
-function getError(option, xhr) {
+function getError (option, xhr) {
   const msg = `cannot post ${option.action} ${xhr.status}'`
   const err = new Error(msg)
   err.status = xhr.status
@@ -7,7 +7,7 @@ function getError(option, xhr) {
   return err
 }
 
-function getBody(xhr) {
+function getBody (xhr) {
   const text = xhr.responseText || xhr.response
   if (!text) {
     return text
@@ -22,17 +22,17 @@ function getBody(xhr) {
 
 export default function upload (option) {
   if (typeof XMLHttpRequest === 'undefined') {
-    return;
+    return
   }
 
   const xhr = new XMLHttpRequest()
   if (xhr.upload) {
-    xhr.upload.onprogress = function progress(e) {
+    xhr.upload.onprogress = (e) => {
       if (e.total > 0) {
         e.percent = e.loaded / e.total * 100
       }
       option.onProgress(e)
-    };
+    }
   }
 
   const formData = new FormData()
@@ -43,17 +43,17 @@ export default function upload (option) {
     })
   }
 
-  xhr.onerror = function error(e) {
+  xhr.onerror = (e) => {
     option.onError(e)
-  };
+  }
 
-  xhr.onload = function onload() {
+  xhr.onload = () => {
     if (xhr.status !== 200) {
       return option.onError(getError(option, xhr), getBody(xhr))
     }
 
     option.onSuccess(getBody(xhr))
-  };
+  }
 
   xhr.open('post', option.action, true)
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')

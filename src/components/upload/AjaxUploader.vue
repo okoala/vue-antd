@@ -18,7 +18,7 @@
 <script>
 import { defaultProps } from '../../utils'
 import request from './request'
-import uid from 'uid'
+import uid from './uid'
 
 export default {
   props: defaultProps({
