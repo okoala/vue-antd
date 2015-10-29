@@ -2,7 +2,7 @@
 <span :class="wrapClassName" @click="_toggle">
   <span :class="prefixCls + '-inner'">
     <slot v-if="checked" name="checkedChildren"></slot>
-    <slot v-else name="unCheckedChildren"></slot>
+    <slot v-if="!checked" name="unCheckedChildren"></slot>
   </span>
 </span>
 </template>
