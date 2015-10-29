@@ -1,10 +1,9 @@
 <template>
 <div>
   <div v-if="type === 'select'" :class="prefixCls + ' ' + prefixCls + '-select'">
-    <AjaxUpload :action="action"
+    <ajax-upload :action="action"
                 :name="name"
                 :multiple="multiple"
-                :data="data"
                 :on-start="_onStart"
                 :on-progress="_onProgress"
                 :on-success="_onSuccess"
@@ -13,7 +12,7 @@
       <div :class="{`${prefixCls} + '-drag-container'`: isDrag}">
         <slot></slot>
       </div>
-    </AjaxUpload>
+    </ajax-upload>
   </div>
   <upload-list :items="fileList" :on-remove="_handleManualRemove" ></upload-list>
 </div>
@@ -54,17 +53,13 @@ export default {
     data: {},
     accept: '',
     multiple: false,
+    fileList: Array,
+    defaultFileList: Array,
     beforeUpload: () => {},
     onChange: () => {}
   }),
 
-  components: { UploadList },
-
-  data () {
-    return {
-      fileList: this.props.fileList || this.props.defaultFileList || []
-    }
-  },
+  components: { AjaxUpload, UploadList },
 
   computed: {
     isDrag () {
@@ -77,6 +72,10 @@ export default {
         [`${prefixCls} + '-drag'`]: this.isDrag
       })
     }
+  },
+
+  compiled () {
+    this.fileList = this.fileList || this.defaultFileList || []
   },
 
   methods: {

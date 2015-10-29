@@ -417,7 +417,7 @@ export default {
 .markdown p,
 .markdown pre {
   margin: 1.2em 0;
-  padding: 0 1em;
+  padding: 1em;
 }
 
 .markdown > ul li {

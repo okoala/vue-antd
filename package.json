@@ -6,7 +6,8 @@
   "scripts": {
     "test": "grunt ci",
     "server": "node docs/server.js",
-    "docs": "npm run server & webpack --config build/webpack.config.js --progress --colors --watch",
+    "harp": "harp server ./.temp --port 8002",
+    "docs": "node docs/server.js & webpack --config build/webpack.config.js --progress --colors --display-chunks --display-error-details --watch",
     "build": "webpack --config build/webpack.build.js && webpack --config build/webpack.build.min.js"
   },
   "repository": {
