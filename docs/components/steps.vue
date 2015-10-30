@@ -20,7 +20,14 @@
       <v-step title="待运行" description="这里是多信息的描述啊"></v-step>
     </v-steps>
   </example>
-  <example title="迷你版"></example>
+  <example title="迷你版">
+    <v-steps size="small" :current="1">
+      <v-step title="已完成" status="finish"></v-step>
+      <v-step title="进行中" status="process"></v-step>
+      <v-step title="待运行" status="wait"></v-step>
+      <v-step title="待运行" status="wait"></v-step>
+    </v-steps>
+  </example>
   <example title="带ICON图标的步骤条"></example>
   <example title="切换到下一步"></example>
   <example title="竖直方向的小型步骤条"></example>

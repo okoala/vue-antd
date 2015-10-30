@@ -52,7 +52,7 @@ export default {
 
     // 延迟执行，一边子组件可能更新完props的状态。
     setTimeout(() => {
-      this._handleTailWidth
+      this._handleTailWidth()
     }, 30)
   },
 
@@ -93,6 +93,7 @@ export default {
     },
 
     _handleTailWidth () {
+      const self = this
       const dom = this.$el
       const len = this.$el.children.length - 1
       this.itemsWidth = new Array(len + 1)
