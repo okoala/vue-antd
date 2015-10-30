@@ -36,7 +36,7 @@
     </v-steps>
   </example>
   <example title="切换到下一步">
-    <div>当前正在执行第 {{currentStep}} 步</div>
+    <div>当前正在执行第 {{currentStep + 1}} 步</div>
     <br>
     <v-steps :current="currentStep">
       <v-step title="步骤1"></v-step>
@@ -92,7 +92,7 @@ import vButton from '../../src/components/button'
 export default {
   data () {
     return {
-      steps: 4,
+      steps: 3,
       currentStep: 0
     }
   },
