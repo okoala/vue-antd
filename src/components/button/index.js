@@ -1,6 +1,6 @@
-import Button from './Button.vue'
-import ButtonGroup from './ButtonGroup.vue'
+import vButton from './Button.vue'
+import vButtonGroup from './ButtonGroup.vue'
 
-Button.ButtonGroup = ButtonGroup
+vButton.vButtonGroup = vButtonGroup
 
-export default Button
+export default vButton

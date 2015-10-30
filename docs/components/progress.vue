@@ -33,9 +33,33 @@
     <v-progress-circle :percent="70" status="exception"></v-progress-circle>
     <v-progress-circle :percent="100"></v-progress-circle>
   </example>
-  <example title="小型进度圈"></example>
-  <example title="进度圈动态展示"></example>
-  <example title="动态展示"></example>
+  <example title="小型进度圈">
+    <v-progress-circle :percent="30"  :width="80"></v-progress-circle>
+    <v-progress-circle :percent="70"  :width="80" status="exception"></v-progress-circle>
+    <v-progress-circle :percent="100" :width="80"></v-progress-circle>
+  </example>
+  <example title="进度圈动态展示">
+    <v-progress-circle :percent="percent"></v-progress-circle>
+    <v-button-group>
+      <v-button type="ghost" @click="_decline">
+        <v-icon type="minus"></v-icon>
+      </v-button>
+      <v-button type="ghost" @click="_increase">
+        <v-icon type="plus"></v-icon>
+      </v-button>
+    </v-button-group>
+  </example>
+  <example title="动态展示">
+    <v-progress-line :percent="percent"></v-progress-line>
+    <v-button-group>
+      <v-button type="ghost" @click="_decline">
+        <v-icon type="minus"></v-icon>
+      </v-button>
+      <v-button type="ghost" @click="_increase">
+        <v-icon type="plus"></v-icon>
+      </v-button>
+    </v-button-group>
+  </example>
 </demo>
 
 ## API
@@ -65,8 +89,31 @@ import vButton, { vButtonGroup } from '../../src/components/button'
 import vIcon from '../../src/components/iconfont'
 
 export default {
+  data () {
+    return {
+      percent: 0
+    }
+  },
 
-  components: { vProgressLine, vProgressCircle, vButton, vIcon }
+  components: { vProgressLine, vProgressCircle, vButtonGroup, vButton, vIcon },
+
+  methods: {
+    _decline () {
+      let percent = this.percent - 10;
+      if (percent < 0) {
+        percent = 0;
+      }
+      this.percent = percent
+    },
+
+    _increase () {
+      let percent = this.percent + 10;
+      if (percent > 100) {
+        percent = 100;
+      }
+      this.percent = percent
+    }
+  }
 
 }
 
