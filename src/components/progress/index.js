@@ -1,4 +1,4 @@
 import vProgressLine from './ProgressLine.vue'
-// improt vProgressCircle from './ProgressCircle.vue'
+import vProgressCircle from './ProgressCircle.vue'
 
-export default { vProgressLine }
+export default { vProgressLine, vProgressCircle }

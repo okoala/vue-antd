@@ -22,8 +22,17 @@
     <v-progress-line :percent="100"></v-progress-line>
     <v-progress-line :percent="50" :show-info="false"></v-progress-line>
   </example>
-  <example title="进度圈"></example>
-  <example title="小型进度条"></example>
+  <example title="小型进度条">
+    <v-progress-line :percent="30"  :stroke-width="5"></v-progress-line>
+    <v-progress-line :percent="50"  :stroke-width="5" status="active"></v-progress-line>
+    <v-progress-line :percent="70"  :stroke-width="5" status="exception"></v-progress-line>
+    <v-progress-line :percent="100" :stroke-width="5"></v-progress-line>
+  </example>
+  <example title="进度圈">
+    <v-progress-circle :percent="30"></v-progress-circle>
+    <v-progress-circle :percent="70" status="exception"></v-progress-circle>
+    <v-progress-circle :percent="100"></v-progress-circle>
+  </example>
   <example title="小型进度圈"></example>
   <example title="进度圈动态展示"></example>
   <example title="动态展示"></example>
@@ -51,13 +60,13 @@
 </template>
 
 <script>
-import { vProgressLine } from '../../src/components/progress'
+import { vProgressLine, vProgressCircle } from '../../src/components/progress'
 import vButton, { vButtonGroup } from '../../src/components/button'
 import vIcon from '../../src/components/iconfont'
 
 export default {
 
-  components: { vProgressLine, vButton, vIcon }
+  components: { vProgressLine, vProgressCircle, vButton, vIcon }
 
 }
 
