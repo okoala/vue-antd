@@ -40,6 +40,10 @@ export function configRouter (router) {
           component: require('../components/iconfont.vue')
         },
 
+        'progress': {
+          component: require('../components/progress.vue')
+        },
+
         'upload': {
           component: require('../components/upload.vue')
         },

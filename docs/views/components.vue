@@ -171,10 +171,10 @@ export default {
           //   name: 'popover',
           //   desc: '气泡卡片'
           // },
-          // {
-          //   name: 'progress',
-          //   desc: '进度条'
-          // },
+          {
+            name: 'progress',
+            desc: '进度条'
+          },
           // {
           //   name: 'table',
           //   desc: '表格'
