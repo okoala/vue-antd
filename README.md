@@ -1,8 +1,8 @@
-<p align="center">
+<p align="center" style="display: inline-block; vertical-align: middle;">
   <a href="http://ant.design" target="_blank">
     <img width="100" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
   </a>
-  +
+  <span style="font-size: 30px;color: #aaa;margin: 0 15px;">+</span>
   <a href="http://vuejs.org" target="_blank">
     <img width="100"src="http://vuejs.org/images/logo.png">
   </a>
