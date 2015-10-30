@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "grunt ci",
+    "deploy": "gh-pages -d .temp",
     "server": "node docs/server.js",
-    "harp": "harp server ./.temp --port 8002",
     "docs": "node docs/server.js & webpack --config build/webpack.config.js --progress --colors --display-chunks --display-error-details --watch",
     "build": "webpack --config build/webpack.build.js && webpack --config build/webpack.build.min.js"
   },
