@@ -110,14 +110,14 @@ export function oneOf (validList, defaultValue) {
   validaObj.validator = function (value) {
     let isValid = false
 
-      for (let i = 0; i < validList.length; i++) {
-        if (value === validList[i]) {
-          isValid = true
-          break
-        }
+    for (let i = 0; i < validList.length; i++) {
+      if (value === validList[i]) {
+        isValid = true
+        break
       }
+    }
 
-      return isValid
+    return isValid
   }
 
   return validaObj

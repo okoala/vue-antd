@@ -57,6 +57,8 @@ import vIcon from '../../src/components/iconfont'
 
 export default {
 
+  components: { vProgressLine, vButton, vIcon }
+
 }
 
 </script>
