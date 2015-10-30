@@ -37,6 +37,10 @@ export default {
     }
   },
 
+  compiled () {
+    console.log(this.$children)
+  },
+
   ready () {
     if (this.direction === 'vertical') {
       this.maxDescriptionWidth = 'auto'
@@ -67,6 +71,8 @@ export default {
     } else {
       window.addEventListener('resize', this._resize)
     }
+
+    this._mapPropsToChildComponent()
   },
 
   beforeDestroy () {
@@ -82,6 +88,28 @@ export default {
   },
 
   methods: {
+    _mapPropsToChildComponent () {
+      const len = this.$children.length
+      this.$children.forEach((child, index) => {
+        child.stepNumber = (index + 1).toString()
+        child.stepLast = index === len
+        child.tailWidth = (this.itemsWidth.length === 0 || index === len) ? 'auto' : this.itemsWidth[index] + this.tailWidth
+        child.prefixCls = this.prefixCls
+        child.maxDescriptionWidth = this.maxDescriptionWidth
+        child.iconPrefix = this.iconPrefix
+
+        if (!child.status) {
+          if (index === this.current) {
+            child.status = 'process'
+          } else if (index < this.current) {
+            child.status = 'finish'
+          } else {
+            child.status = 'wait'
+          }
+        }
+      })
+    },
+
     _resize () {
       const w = Math.floor(this.$el.offsetWidth)
       if (this.previousStepsWidth === w) {

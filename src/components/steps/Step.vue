@@ -9,7 +9,7 @@
   </div>
   <div :class="prefixCls + '-main'" style="{maxWidth: maxDescriptionWidth}">
     <div :class="prefixCls + '-title'">{{title}}</div>
-    <div v-if="description" :class="prefixCls + 'description'">{{description}}</div>
+    <div v-if="description" :class="prefixCls + '-description'">{{description}}</div>
   </div>
 </div>
 </template>
@@ -20,7 +20,7 @@ import classnames from 'classnames'
 
 export default {
   props: defaultProps({
-    status: 'wait',
+    status: String,
     title: '',
     description: '',
     prefixCls: '',
