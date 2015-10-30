@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import vProgress, { vProgressLine, vProgressCircle } from '../../src/components/progress'
+import { vProgressLine } from '../../src/components/progress'
 import vButton, { vButtonGroup } from '../../src/components/button'
 import vIcon from '../../src/components/iconfont'
 
