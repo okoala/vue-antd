@@ -56,6 +56,10 @@ export function configRouter (router) {
           component: require('../components/switch.vue')
         },
 
+        'steps': {
+          component: require('../components/steps.vue')
+        },
+
         'table': {
           component: require('../components/table.vue')
         },

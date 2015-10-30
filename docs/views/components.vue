@@ -200,7 +200,7 @@ export default {
           {
             name: 'breadcrumb',
             desc: '面包屑'
-          }
+          },
           // {
           //   name: 'menu',
           //   desc: '导航菜单'
@@ -209,10 +209,10 @@ export default {
           //   name: 'pagination',
           //   desc: '分页'
           // },
-          // {
-          //   name: 'steps',
-          //   desc: '步骤条'
-          // },
+          {
+            name: 'steps',
+            desc: '步骤条'
+          }
           // {
           //   name: 'tabs',
           //   desc: '标签页'

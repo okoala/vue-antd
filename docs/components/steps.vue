@@ -1,9 +1,5 @@
+<template>
 # Steps
-
-- category: Components
-- chinese: 步骤条
-- type: 导航
-- cols: 1
 
 ---
 
@@ -13,14 +9,25 @@
 
 当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。
 
+## 组件演示
+
+<demo>
+  <example title="简单的步骤条"></example>
+  <example title="迷你版"></example>
+  <example title="带ICON图标的步骤条"></example>
+  <example title="切换到下一步"></example>
+  <example title="竖直方向的小型步骤条"></example>
+  <example title="自定义状态"></example>
+</demo>
+
 ## API
 
-```jsx
-<Steps>
-  <Steps.Step title="第一步"></Steps.Step>
-  <Steps.Step title="第二步"></Steps.Step>
-  <Steps.Step title="第三步"></Steps.Step>
-</Steps>
+```js
+<v-steps>
+  <v-step title="第一步"></v-step>
+  <v-step title="第二步"></v-step>
+  <v-step title="第三步"></v-step>
+</v-steps>
 ```
 
 ### Steps
@@ -44,3 +51,15 @@
 |  title   | 必要参数，标题。 | string/jsx | 无 | 无     |
 |  description | 可选参数，步骤的详情描述。 | string/jsx | 无 | 空  |
 |  icon    | 可选参数，步骤的Icon。如果不指定，则使用默认的样式。 | string/jsx | 无  | 空 |
+</template>
+
+<script>
+import vSteps, { vStep } from '../../src/components/steps'
+
+export default {
+
+  components: { vSteps, vStep }
+
+}
+
+</script>
