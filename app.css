@@ -9555,5 +9555,91 @@ a .ant-badge-count:active {
 .ant-timeline-item-last .ant-timeline-item-content {
   min-height: 48px;
 }
+.ant-spin {
+  color: #2db7f5;
+  display: inline-block;
+  font-size: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.ant-spin-nested-loading {
+  position: relative;
+}
+.ant-spin-wrapper {
+  font-size: 8px;
+}
+.ant-spin-nested-loading .ant-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.75em;
+  margin-left: -2.5em;
+  z-index: 4;
+}
+.ant-spin-nested-loading > .ant-spin-container {
+  -webkit-filter: blur(10px);
+  /* Chrome, Opera */
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+  /* IE6~IE9 */
+  z-index: 19;
+}
+.ant-spin-dot {
+  -webkit-animation: antSpinPulse 1s infinite ease-in-out;
+  animation: antSpinPulse 1s infinite ease-in-out;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #2db7f5;
+}
+.ant-spin-dot-second {
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+  margin-left: 1em;
+}
+.ant-spin-dot-third {
+  -webkit-animation-delay: 400ms;
+  animation-delay: 400ms;
+  margin-left: 1em;
+}
+.ant-spin-nested-loading > .ant-spin-sm,
+.ant-spin-not-nested-loading > .ant-spin-sm {
+  font-size: 4px;
+}
+.ant-spin-nested-loading > .ant-spin-lg,
+.ant-spin-not-nested-loading > .ant-spin-lg {
+  font-size: 16px;
+}
+@-webkit-keyframes antSpinPulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@keyframes antSpinPulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+*/
+  .ant-spin-nested-loading > .ant-spin-container {
+    background: #fff;
+    opacity: 0.5;
+  }
+}
 
 /*# sourceMappingURL=app.css.map*/

@@ -5655,6 +5655,10 @@
 	          component: __webpack_require__(254)
 	        },
 	
+	        'spin': {
+	          component: __webpack_require__(435)
+	        },
+	
 	        'table': {
 	          component: __webpack_require__(256)
 	        },
@@ -7357,6 +7361,9 @@
 	        {
 	          name: 'tag',
 	          desc: '标签'
+	        }, {
+	          name: 'spin',
+	          desc: '加载动画'
 	        }
 	        // {
 	        //   name: 'timeline',
@@ -25192,6 +25199,156 @@
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"prefixCls + '-circle-wrap status-' + status\" >\n  <div\n    :class=\"prefixCls + '-circle-inner'\"\n    :style=\"{\n      'width': width + 'px',\n      'height': width + 'px',\n      'fontSize': width * 0.16 + 6 + 'px'\n    }\">\n\n    <svg viewBox='0 0 100 100'>\n      <path :d=\"pathString\" :stroke=\"trailColor\"\n        :stroke-width=\"trailWidth\" fill-opacity='0'/>\n      <path :d=\"pathString\" stroke-linecap='round'\n        :stroke=\"strokeColor\" :stroke-width=\"strokeWidth\" fill-opacity='0' :style=\"pathStyle\" />\n    </svg>\n\n    <span v-if=\"status === 'exception'\" :class=\"prefixCls + '-circle-text'\"><v-icon type=\"exclamation\"></v-icon></span>\n    <span v-if=\"status === 'success'\" :class=\"prefixCls + '-circle-text'\"><v-icon type=\"check\"></v-icon></span>\n    <span v-if=\"status !== 'exception' && status !== 'success'\" :class=\"prefixCls + '-circle-text'\">{{ percent }}%</span>\n  </div>\n</div>";
+
+/***/ },
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _SpinVue = __webpack_require__(436);
+	
+	var _SpinVue2 = _interopRequireDefault(_SpinVue);
+
+	exports['default'] = _SpinVue2['default'];
+	module.exports = exports['default'];
+
+/***/ },
+/* 431 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _srcComponentsSpin = __webpack_require__(430);
+	
+	var _srcComponentsSpin2 = _interopRequireDefault(_srcComponentsSpin);
+	
+	var _srcComponentsButton = __webpack_require__(9);
+	
+	var _srcComponentsButton2 = _interopRequireDefault(_srcComponentsButton);
+	
+	exports['default'] = {
+	  data: function data() {
+	    return {
+	      loading: true
+	    };
+	  },
+	
+	  components: { vSpin: _srcComponentsSpin2['default'], vButton: _srcComponentsButton2['default'] },
+	
+	  methods: {
+	    _enterLoading: function _enterLoading() {
+	      this.loading = !this.loading;
+	    }
+	  }
+	
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 432 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _defineProperty = __webpack_require__(4)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _utils = __webpack_require__(3);
+	
+	var _classnames3 = __webpack_require__(5);
+	
+	var _classnames4 = _interopRequireDefault(_classnames3);
+	
+	exports['default'] = {
+	  props: (0, _utils.defaultProps)({
+	    prefixCls: 'ant-spin',
+	
+	    size: (0, _utils.oneOf)(['small', 'default', 'large'], 'default'),
+	    hide: false,
+	    className: String
+	  }),
+	
+	  computed: {
+	    nestedStatus: function nestedStatus() {
+	      return this.$children ? true : false;
+	    },
+	
+	    loadingClasses: function loadingClasses() {
+	      return (0, _classnames4['default'])({
+	        'ant-spin-nested-loading': !this.hide && this.nestedStatus
+	      });
+	    },
+	
+	    spinWrapClasses: function spinWrapClasses() {
+	      var _classnames;
+	
+	      var sizeCls = ({
+	        'large': 'lg',
+	        'small': 'sm'
+	      })[this.size] || '';
+	
+	      return (0, _classnames4['default'])((_classnames = {}, _defineProperty(_classnames, this.prefixCls + '-wrapper', 1), _defineProperty(_classnames, this.prefixCls + '-' + sizeCls, !!sizeCls), _classnames));
+	    },
+	
+	    spinClasses: function spinClasses() {
+	      var _classnames2;
+	
+	      return (0, _classnames4['default'])((_classnames2 = {}, _defineProperty(_classnames2, this.prefixCls, 1), _defineProperty(_classnames2, this.className, !!this.className), _classnames2));
+	    }
+	  },
+	
+	  methods: {}
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 433 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"markdown\"><h1 id=\"spin\">Spin</h1>\n<hr>\n<p>用于页面和区块的loading状态。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>页面局部处于等待数据渲染时。</p>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>通过添加loading属性，可以进入加载状态</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-spin size=\"large\" :hide=\"!loading\">\n      <div style=\"text-align: center;\">\n        <img src=\"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg\" width=\"200px\" height=\"200px\" />\n        <div>我是一张图片</div>\n      </div>\n    </v-spin>\n    <br>\n    <div style=\"text-align: center\">\n      <v-button type=\"primary\" @click=\"_enterLoading\">点击切换</v-button>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-spin</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>large<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:hide</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>!loading<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>img</span> <span class=\"token attr-name\" >src</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >width</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>200px<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >height</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>200px<span class=\"token punctuation\" >\"</span></span> <span class=\"token punctuation\" >/></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>我是一张图片<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-spin</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_enterLoading<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>点击切换<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>作为页面元素使用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div>\n      <v-spin></v-spin>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-spin</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-spin</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>类型</th>\n<th>默认值</th>\n<th>说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>size</td>\n<td>enum</td>\n<td>default</td>\n<td>spin组件中点的大小，可选值为small default large</td>\n</tr>\n</tbody>\n</table>\n</div>";
+
+/***/ },
+/* 434 */
+/***/ function(module, exports) {
+
+	module.exports = "<div :class=\"loadingClasses\">\n  <div v-if=\"!hide\" :class=\"spinWrapClasses\">\n    <div :class=\"spinClasses\">\n      <span :class=\"prefixCls + '-dot ' + prefixCls + '-dot-first'\"></span>\n      <span :class=\"prefixCls + '-dot ' + prefixCls + '-dot-second'\"></span>\n      <span :class=\"prefixCls + '-dot ' + prefixCls + '-dot-third'\"></span>\n    </div>\n  </div>\n  <div :class=\"prefixCls + '-container'\">\n    <slot></slot>\n  </div>\n</div>";
+
+/***/ },
+/* 435 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(431)
+	module.exports.template = __webpack_require__(433)
+
+
+/***/ },
+/* 436 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(432)
+	module.exports.template = __webpack_require__(434)
+
 
 /***/ }
 /******/ ])));
