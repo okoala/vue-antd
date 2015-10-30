@@ -100,23 +100,27 @@ export function oneOfType (...args) {
   return result
 }
 
-export function oneOf (...args) {
-  const _validList = args.length === 1 && Array.isArray(args[0]) ? args[0] : args
+export function oneOf (validList, defaultValue) {
+  let validaObj = {}
 
-  return {
-    validator (value) {
-      let isValid = false
+  if (defaultValue) {
+    validaObj.default = defaultValue
+  }
 
-      for (let i = 0; i < _validList.length; i++) {
-        if (value === _validList[i]) {
+  validaObj.validator = function (value) {
+    let isValid = false
+
+      for (let i = 0; i < validList.length; i++) {
+        if (value === validList[i]) {
           isValid = true
           break
         }
       }
 
       return isValid
-    }
   }
+
+  return validaObj
 }
 
 export function getPlainObject (vueObject) {
