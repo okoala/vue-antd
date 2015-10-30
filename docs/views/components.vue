@@ -138,7 +138,7 @@ export default {
           {
             name: 'badge',
             desc: '徽标数'
-          }
+          },
           // {
           //   name: 'carousel',
           //   desc: '走马灯'

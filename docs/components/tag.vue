@@ -14,7 +14,10 @@
 
 <demo>
   <example title="基本">
-    <v-tag></v-tag>
+    <v-tag>标签一</v-tag>
+    <v-tag>标签二</v-tag>
+    <v-tag closable :on-close="_onClose">标签三</v-tag>
+    <v-tag href="http://www.baidu.com">标签四 (链接)</v-tag>
   </example>
   <example title="四种颜色的类型"></example>
 </demo>
@@ -34,7 +37,13 @@ import vTag from '../../src/components/tag'
 
 export default {
 
-  components: { vTag }
+  components: { vTag },
+
+  methods: {
+    _onClose () {
+      console.log('tag 关闭')
+    }
+  }
 
 }
 
