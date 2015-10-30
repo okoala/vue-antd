@@ -1,4 +1,4 @@
-<template>
+<template lang="md">
 # Steps
 
 ---
@@ -12,7 +12,14 @@
 ## 组件演示
 
 <demo>
-  <example title="简单的步骤条"></example>
+  <example title="简单的步骤条">
+    <v-steps :current="1">
+      <v-step title="已完成" description="这里是多信息的描述啊"></v-step>
+      <v-step title="进行中" description="这里是多信息的耶哦耶哦哦耶哦耶"></v-step>
+      <v-step title="有一个待运行" description="描述啊描述啊"></v-step>
+      <v-step title="待运行" description="这里是多信息的描述啊"></v-step>
+    </v-steps>
+  </example>
   <example title="迷你版"></example>
   <example title="带ICON图标的步骤条"></example>
   <example title="切换到下一步"></example>

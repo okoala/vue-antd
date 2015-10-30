@@ -1,10 +1,12 @@
 <template>
-
-
+<div :class="wrapClasses">
+  <slot></slot>
+</div>
 </template>
 
 <script>
 import { defaultProps } from '../../utils'
+import classnames from 'classnames'
 
 export default {
   props: defaultProps({
@@ -25,7 +27,17 @@ export default {
     }
   },
 
-  compiled () {
+  computed: {
+    wrapClasses () {
+      return classnames({
+        [this.prefixCls]: 1,
+        [`${this.prefixCls}-small`]: this.size === 'small',
+        [`${this.prefixCls}-vertical`]: this.direction === 'vertical'
+      })
+    }
+  },
+
+  ready () {
     if (this.direction === 'vertical') {
       this.maxDescriptionWidth = 'auto'
     }
@@ -34,7 +46,8 @@ export default {
     const len = this.$el.children.length - 1
     this.itemsWidth = new Array(len + 1)
 
-    for (let i = 0; i <= len - 1; i++) {
+    let i = 0
+    for (; i <= len - 1; i++) {
       const _item = this.$el.children[i].children
       this.itemsWidth[i] = Math.ceil(_item[0].offsetWidth + _item[1].children[0].offsetWidth)
     }
@@ -48,6 +61,12 @@ export default {
     setTimeout(() => {
       this._resize()
     })
+
+    if (window.attachEvent) {
+      window.attachEvent('onresize', this._resize)
+    } else {
+      window.addEventListener('resize', this._resize)
+    }
   },
 
   beforeDestroy () {
