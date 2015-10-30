@@ -75,11 +75,11 @@
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
-	var _vueRouter = __webpack_require__(286);
+	var _vueRouter = __webpack_require__(288);
 	
 	var _vueRouter2 = _interopRequireDefault(_vueRouter);
 	
-	var _vueResource = __webpack_require__(275);
+	var _vueResource = __webpack_require__(277);
 	
 	var _vueResource2 = _interopRequireDefault(_vueResource);
 	
@@ -89,7 +89,7 @@
 	
 	var _routes = __webpack_require__(90);
 	
-	var _viewsAppVue = __webpack_require__(248);
+	var _viewsAppVue = __webpack_require__(249);
 	
 	var _viewsAppVue2 = _interopRequireDefault(_viewsAppVue);
 	
@@ -127,15 +127,15 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var lang = __webpack_require__(335)
+	var lang = __webpack_require__(337)
 	var extend = lang.extend
 	
 	extend(exports, lang)
-	extend(exports, __webpack_require__(334))
-	extend(exports, __webpack_require__(333))
 	extend(exports, __webpack_require__(336))
-	extend(exports, __webpack_require__(331))
-	extend(exports, __webpack_require__(332))
+	extend(exports, __webpack_require__(335))
+	extend(exports, __webpack_require__(338))
+	extend(exports, __webpack_require__(333))
+	extend(exports, __webpack_require__(334))
 
 
 /***/ },
@@ -316,6 +316,85 @@
 /* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+	
+	var _Object$defineProperty = __webpack_require__(140)["default"];
+	
+	exports["default"] = function (obj, key, value) {
+	  if (key in obj) {
+	    _Object$defineProperty(obj, key, {
+	      value: value,
+	      enumerable: true,
+	      configurable: true,
+	      writable: true
+	    });
+	  } else {
+	    obj[key] = value;
+	  }
+	
+	  return obj;
+	};
+	
+	exports.__esModule = true;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2015 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
+	
+	(function () {
+		'use strict';
+	
+		var hasOwn = {}.hasOwnProperty;
+	
+		function classNames () {
+			var classes = '';
+	
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+	
+				var argType = typeof arg;
+	
+				if (argType === 'string' || argType === 'number') {
+					classes += ' ' + arg;
+				} else if (Array.isArray(arg)) {
+					classes += ' ' + classNames.apply(null, arg);
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes += ' ' + key;
+						}
+					}
+				}
+			}
+	
+			return classes.substr(1);
+		}
+	
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	}());
+
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
 	module.exports = {
 	
 	  /**
@@ -420,85 +499,6 @@
 	    textParser.compileRegex()
 	  }
 	})
-
-
-/***/ },
-/* 5 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var _Object$defineProperty = __webpack_require__(140)["default"];
-	
-	exports["default"] = function (obj, key, value) {
-	  if (key in obj) {
-	    _Object$defineProperty(obj, key, {
-	      value: value,
-	      enumerable: true,
-	      configurable: true,
-	      writable: true
-	    });
-	  } else {
-	    obj[key] = value;
-	  }
-	
-	  return obj;
-	};
-	
-	exports.__esModule = true;
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2015 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	/* global define */
-	
-	(function () {
-		'use strict';
-	
-		var hasOwn = {}.hasOwnProperty;
-	
-		function classNames () {
-			var classes = '';
-	
-			for (var i = 0; i < arguments.length; i++) {
-				var arg = arguments[i];
-				if (!arg) continue;
-	
-				var argType = typeof arg;
-	
-				if (argType === 'string' || argType === 'number') {
-					classes += ' ' + arg;
-				} else if (Array.isArray(arg)) {
-					classes += ' ' + classNames.apply(null, arg);
-				} else if (argType === 'object') {
-					for (var key in arg) {
-						if (hasOwn.call(arg, key) && arg[key]) {
-							classes += ' ' + key;
-						}
-					}
-				}
-			}
-	
-			return classes.substr(1);
-		}
-	
-		if (typeof module !== 'undefined' && module.exports) {
-			module.exports = classNames;
-		} else if (true) {
-			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
-				return classNames;
-			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else {
-			window.classNames = classNames;
-		}
-	}());
 
 
 /***/ },
@@ -985,7 +985,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _IconfontVue = __webpack_require__(261);
+	var _IconfontVue = __webpack_require__(262);
 	
 	var _IconfontVue2 = _interopRequireDefault(_IconfontVue);
 
@@ -1143,11 +1143,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _ButtonVue = __webpack_require__(258);
+	var _ButtonVue = __webpack_require__(259);
 	
 	var _ButtonVue2 = _interopRequireDefault(_ButtonVue);
 	
-	var _ButtonGroupVue = __webpack_require__(259);
+	var _ButtonGroupVue = __webpack_require__(260);
 	
 	var _ButtonGroupVue2 = _interopRequireDefault(_ButtonGroupVue);
 	
@@ -1461,8 +1461,8 @@
 
 	var _ = __webpack_require__(1)
 	
-	_.extend(exports, __webpack_require__(297))
-	_.extend(exports, __webpack_require__(298))
+	_.extend(exports, __webpack_require__(299))
+	_.extend(exports, __webpack_require__(300))
 
 
 /***/ },
@@ -2007,7 +2007,7 @@
 	var _ = __webpack_require__(1)
 	var compiler = __webpack_require__(18)
 	var templateParser = __webpack_require__(9)
-	var Fragment = __webpack_require__(321)
+	var Fragment = __webpack_require__(323)
 	var Cache = __webpack_require__(13)
 	var linkerCache = new Cache(5000)
 	
@@ -2337,7 +2337,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var Cache = __webpack_require__(13)
-	var config = __webpack_require__(4)
+	var config = __webpack_require__(6)
 	var dirParser = __webpack_require__(19)
 	var regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g
 	var cache, tagRE, htmlRE
@@ -2588,10 +2588,10 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
-	var config = __webpack_require__(4)
+	var config = __webpack_require__(6)
 	var Dep = __webpack_require__(41)
 	var expParser = __webpack_require__(24)
-	var batcher = __webpack_require__(295)
+	var batcher = __webpack_require__(297)
 	var uid = 0
 	
 	/**
@@ -4555,10 +4555,10 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	exports.style = __webpack_require__(83)
-	exports['class'] = __webpack_require__(303)
-	exports.component = __webpack_require__(304)
+	exports['class'] = __webpack_require__(305)
+	exports.component = __webpack_require__(306)
 	exports.prop = __webpack_require__(82)
-	exports.transition = __webpack_require__(305)
+	exports.transition = __webpack_require__(307)
 
 
 /***/ },
@@ -4572,7 +4572,7 @@
 	
 	var _ = __webpack_require__(1)
 	var Watcher = __webpack_require__(27)
-	var bindingModes = __webpack_require__(4)._propBindingModes
+	var bindingModes = __webpack_require__(6)._propBindingModes
 	
 	module.exports = {
 	
@@ -5426,29 +5426,29 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	// text & html
-	exports.text = __webpack_require__(318)
-	exports.html = __webpack_require__(309)
+	exports.text = __webpack_require__(320)
+	exports.html = __webpack_require__(311)
 	
 	// logic control
 	exports['for'] = __webpack_require__(84)
 	exports['if'] = __webpack_require__(85)
-	exports.show = __webpack_require__(317)
+	exports.show = __webpack_require__(319)
 	
 	// two-way binding
-	exports.model = __webpack_require__(311)
+	exports.model = __webpack_require__(313)
 	
 	// event handling
-	exports.on = __webpack_require__(315)
+	exports.on = __webpack_require__(317)
 	
 	// attributes
-	exports.bind = __webpack_require__(306)
+	exports.bind = __webpack_require__(308)
 	
 	// ref & el
-	exports.el = __webpack_require__(308)
-	exports.ref = __webpack_require__(316)
+	exports.el = __webpack_require__(310)
+	exports.ref = __webpack_require__(318)
 	
 	// cloak
-	exports.cloak = __webpack_require__(307)
+	exports.cloak = __webpack_require__(309)
 
 
 /***/ },
@@ -5480,7 +5480,7 @@
 	 * Mixin global API
 	 */
 	
-	extend(Vue, __webpack_require__(293))
+	extend(Vue, __webpack_require__(295))
 	
 	/**
 	 * Vue and every constructor that extends Vue has an
@@ -5494,8 +5494,8 @@
 	Vue.options = {
 	  replace: true,
 	  directives: __webpack_require__(86),
-	  elementDirectives: __webpack_require__(300),
-	  filters: __webpack_require__(320),
+	  elementDirectives: __webpack_require__(302),
+	  filters: __webpack_require__(322),
 	  transitions: {},
 	  components: {},
 	  partials: {}
@@ -5527,20 +5527,20 @@
 	 * Mixin internal instance methods
 	 */
 	
-	extend(p, __webpack_require__(323))
-	extend(p, __webpack_require__(322))
-	extend(p, __webpack_require__(326))
-	extend(p, __webpack_require__(324))
 	extend(p, __webpack_require__(325))
+	extend(p, __webpack_require__(324))
+	extend(p, __webpack_require__(328))
+	extend(p, __webpack_require__(326))
+	extend(p, __webpack_require__(327))
 	
 	/**
 	 * Mixin public API methods
 	 */
 	
-	extend(p, __webpack_require__(290))
-	extend(p, __webpack_require__(291))
 	extend(p, __webpack_require__(292))
+	extend(p, __webpack_require__(293))
 	extend(p, __webpack_require__(294))
+	extend(p, __webpack_require__(296))
 	
 	Vue.version = '1.0.3'
 	module.exports = _.Vue = Vue
@@ -5590,46 +5590,46 @@
 	function configRouter(router) {
 	  router.map({
 	    'components': {
-	      component: __webpack_require__(249),
+	      component: __webpack_require__(250),
 	      subRoutes: {
 	        'introduce': {
-	          component: __webpack_require__(252)
+	          component: __webpack_require__(253)
 	        },
 	
 	        'getting-started': {
-	          component: __webpack_require__(251)
+	          component: __webpack_require__(252)
 	        },
 	
 	        'download': {
-	          component: __webpack_require__(250)
+	          component: __webpack_require__(251)
 	        },
 	
 	        'alert': {
-	          component: __webpack_require__(236)
-	        },
-	
-	        'button': {
-	          component: __webpack_require__(239)
-	        },
-	
-	        'badge': {
 	          component: __webpack_require__(237)
 	        },
 	
-	        'breadcrumb': {
-	          component: __webpack_require__(238)
-	        },
-	
-	        'checkbox': {
+	        'button': {
 	          component: __webpack_require__(240)
 	        },
 	
-	        'iconfont': {
+	        'badge': {
+	          component: __webpack_require__(238)
+	        },
+	
+	        'breadcrumb': {
+	          component: __webpack_require__(239)
+	        },
+	
+	        'checkbox': {
 	          component: __webpack_require__(241)
 	        },
 	
+	        'iconfont': {
+	          component: __webpack_require__(242)
+	        },
+	
 	        'upload': {
-	          component: __webpack_require__(247)
+	          component: __webpack_require__(248)
 	        },
 	
 	        // 'modal': {
@@ -5637,29 +5637,29 @@
 	        // },
 	
 	        'radio': {
-	          component: __webpack_require__(242)
-	        },
-	
-	        'switch': {
-	          component: __webpack_require__(244)
-	        },
-	
-	        'steps': {
 	          component: __webpack_require__(243)
 	        },
 	
-	        'table': {
+	        'switch': {
 	          component: __webpack_require__(245)
 	        },
 	
-	        'tag': {
+	        'steps': {
+	          component: __webpack_require__(244)
+	        },
+	
+	        'table': {
 	          component: __webpack_require__(246)
+	        },
+	
+	        'tag': {
+	          component: __webpack_require__(247)
 	        }
 	      }
 	    },
 	
 	    '*': {
-	      component: __webpack_require__(253)
+	      component: __webpack_require__(254)
 	    }
 	  });
 	
@@ -5701,7 +5701,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _AlertVue = __webpack_require__(254);
+	var _AlertVue = __webpack_require__(255);
 	
 	var _AlertVue2 = _interopRequireDefault(_AlertVue);
 
@@ -5720,7 +5720,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _BadgeVue = __webpack_require__(255);
+	var _BadgeVue = __webpack_require__(256);
 	
 	var _BadgeVue2 = _interopRequireDefault(_BadgeVue);
 
@@ -5739,11 +5739,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _BreadcrumbVue = __webpack_require__(256);
+	var _BreadcrumbVue = __webpack_require__(257);
 	
 	var _BreadcrumbVue2 = _interopRequireDefault(_BreadcrumbVue);
 	
-	var _BreadcrumbItemVue = __webpack_require__(257);
+	var _BreadcrumbItemVue = __webpack_require__(258);
 	
 	var _BreadcrumbItemVue2 = _interopRequireDefault(_BreadcrumbItemVue);
 	
@@ -5764,7 +5764,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _CheckboxVue = __webpack_require__(260);
+	var _CheckboxVue = __webpack_require__(261);
 	
 	var _CheckboxVue2 = _interopRequireDefault(_CheckboxVue);
 
@@ -5787,7 +5787,7 @@
 	
 	var _RadioVue2 = _interopRequireDefault(_RadioVue);
 	
-	var _RadioGroupVue = __webpack_require__(262);
+	var _RadioGroupVue = __webpack_require__(263);
 	
 	var _RadioGroupVue2 = _interopRequireDefault(_RadioGroupVue);
 	
@@ -5808,11 +5808,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _StepsVue = __webpack_require__(264);
+	var _StepsVue = __webpack_require__(265);
 	
 	var _StepsVue2 = _interopRequireDefault(_StepsVue);
 	
-	var _StepVue = __webpack_require__(263);
+	var _StepVue = __webpack_require__(264);
 	
 	var _StepVue2 = _interopRequireDefault(_StepVue);
 	
@@ -5833,7 +5833,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _SwitchVue = __webpack_require__(265);
+	var _SwitchVue = __webpack_require__(266);
 	
 	var _SwitchVue2 = _interopRequireDefault(_SwitchVue);
 
@@ -5917,7 +5917,7 @@
 	
 	var _DataSource2 = _interopRequireDefault(_DataSource);
 	
-	var _TableVue = __webpack_require__(266);
+	var _TableVue = __webpack_require__(267);
 	
 	var _TableVue2 = _interopRequireDefault(_TableVue);
 	
@@ -5938,7 +5938,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _TagVue = __webpack_require__(267);
+	var _TagVue = __webpack_require__(268);
 	
 	var _TagVue2 = _interopRequireDefault(_TagVue);
 
@@ -5984,7 +5984,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _UploadsVue = __webpack_require__(270);
+	var _UploadsVue = __webpack_require__(271);
 	
 	var _UploadsVue2 = _interopRequireDefault(_UploadsVue);
 
@@ -7485,7 +7485,7 @@
 
 	'use strict';
 	
-	var _defineProperty = __webpack_require__(5)['default'];
+	var _defineProperty = __webpack_require__(4)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 	
@@ -7495,7 +7495,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _classnames2 = __webpack_require__(6);
+	var _classnames2 = __webpack_require__(5);
 	
 	var _classnames3 = _interopRequireDefault(_classnames2);
 	
@@ -7533,7 +7533,7 @@
 
 	'use strict';
 	
-	var _defineProperty = __webpack_require__(5)['default'];
+	var _defineProperty = __webpack_require__(4)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 	
@@ -7543,7 +7543,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _classnames2 = __webpack_require__(6);
+	var _classnames2 = __webpack_require__(5);
 	
 	var _classnames3 = _interopRequireDefault(_classnames2);
 	
@@ -7576,7 +7576,7 @@
 
 	'use strict';
 	
-	var _defineProperty = __webpack_require__(5)['default'];
+	var _defineProperty = __webpack_require__(4)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 	
@@ -7586,7 +7586,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _classnames3 = __webpack_require__(6);
+	var _classnames3 = __webpack_require__(5);
 	
 	var _classnames4 = _interopRequireDefault(_classnames3);
 	
@@ -7637,7 +7637,7 @@
 
 	'use strict';
 	
-	var _defineProperty = __webpack_require__(5)['default'];
+	var _defineProperty = __webpack_require__(4)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 	
@@ -7647,7 +7647,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _classnames2 = __webpack_require__(6);
+	var _classnames2 = __webpack_require__(5);
 	
 	var _classnames3 = _interopRequireDefault(_classnames2);
 	
@@ -7676,7 +7676,7 @@
 
 	'use strict';
 	
-	var _defineProperty = __webpack_require__(5)['default'];
+	var _defineProperty = __webpack_require__(4)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 	
@@ -7686,7 +7686,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _classnames3 = __webpack_require__(6);
+	var _classnames3 = __webpack_require__(5);
 	
 	var _classnames4 = _interopRequireDefault(_classnames3);
 	
@@ -7796,11 +7796,19 @@
 
 	'use strict';
 	
+	var _defineProperty = __webpack_require__(4)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
 	
 	var _utils = __webpack_require__(3);
+	
+	var _classnames2 = __webpack_require__(5);
+	
+	var _classnames3 = _interopRequireDefault(_classnames2);
 	
 	exports['default'] = {
 	  props: (0, _utils.defaultProps)({
@@ -7821,31 +7829,33 @@
 	    };
 	  },
 	
+	  computed: {
+	    wrapClasses: function wrapClasses() {
+	      var _classnames;
+	
+	      return (0, _classnames3['default'])((_classnames = {}, _defineProperty(_classnames, this.prefixCls, 1), _defineProperty(_classnames, this.prefixCls + '-small', this.size === 'small'), _defineProperty(_classnames, this.prefixCls + '-vertical', this.direction === 'vertical'), _classnames));
+	    }
+	  },
+	
 	  compiled: function compiled() {
+	    console.log(this.$children);
+	  },
+	
+	  ready: function ready() {
 	    var _this = this;
+	
+	    var self = this;
 	
 	    if (this.direction === 'vertical') {
 	      this.maxDescriptionWidth = 'auto';
 	    }
 	
-	    var dom = this.$el;
-	    var len = this.$el.children.length - 1;
-	    this.itemsWidth = new Array(len + 1);
+	    this._mapPropsToChildComponent();
 	
-	    for (var _i = 0; _i <= len - 1; _i++) {
-	      var _item = this.$el.children[_i].children;
-	      this.itemsWidth[_i] = Math.ceil(_item[0].offsetWidth + _item[1].children[0].offsetWidth);
-	    }
-	
-	    this.itemsWidth[i] = Math.ceil(this.$el.children[len].offsetWidth);
-	    this.previousStepsWidth = Math.floor(this.$el.offsetWidth);
-	    this._update();
-	
-	    this.$el.children[len].style.position = 'absolute';
-	
+	    // 延迟执行，一边子组件可能更新完props的状态。
 	    setTimeout(function () {
-	      _this._resize();
-	    });
+	      _this._handleTailWidth;
+	    }, 30);
 	  },
 	
 	  beforeDestroy: function beforeDestroy() {
@@ -7861,6 +7871,66 @@
 	  },
 	
 	  methods: {
+	    _mapPropsToChildComponent: function _mapPropsToChildComponent() {
+	      var self = this;
+	      var len = this.$children.length - 1;
+	      this.$children.forEach(function (child, index) {
+	        child.stepNumber = (index + 1).toString();
+	        child.stepLast = index === len;
+	        // child.tailWidth = (self.itemsWidth.length === 0 || index === len) ? 'auto' : self.itemsWidth[index] + self.tailWidth + 'px'
+	        child.prefixCls = self.prefixCls;
+	        child.maxDescriptionWidth = self.maxDescriptionWidth;
+	        child.iconPrefix = self.iconPrefix;
+	
+	        if (!child.status) {
+	          if (index === self.current) {
+	            child.status = 'process';
+	          } else if (index < self.current) {
+	            child.status = 'finish';
+	          } else {
+	            child.status = 'wait';
+	          }
+	        }
+	      });
+	    },
+	
+	    _handleTailWidth: function _handleTailWidth() {
+	      var dom = this.$el;
+	      var len = this.$el.children.length - 1;
+	      this.itemsWidth = new Array(len + 1);
+	
+	      var i = 0;
+	      for (; i <= len - 1; i++) {
+	        var _item = this.$el.children[i].children;
+	        this.itemsWidth[i] = Math.ceil(_item[0].offsetWidth + _item[1].children[0].offsetWidth);
+	      }
+	
+	      this.itemsWidth[i] = Math.ceil(this.$el.children[len].offsetWidth);
+	      this.previousStepsWidth = Math.floor(this.$el.offsetWidth);
+	      this._update();
+	
+	      this.$el.children[len].style.position = 'absolute';
+	
+	      // 算出tailWidth, 动态更新子组件
+	      this.$children.forEach(function (child, index) {
+	        child.tailWidth = self.itemsWidth.length === 0 || index === len ? 'auto' : self.itemsWidth[index] + self.tailWidth + 'px';
+	      });
+	    },
+	
+	    _bindResize: function _bindResize() {
+	      var _this2 = this;
+	
+	      setTimeout(function () {
+	        _this2._resize();
+	      });
+	
+	      if (window.attachEvent) {
+	        window.attachEvent('onresize', this._resize);
+	      } else {
+	        window.addEventListener('resize', this._resize);
+	      }
+	    },
+	
 	    _resize: function _resize() {
 	      var w = Math.floor(this.$el.offsetWidth);
 	      if (this.previousStepsWidth === w) {
@@ -7883,7 +7953,7 @@
 	      }
 	
 	      this.init = true;
-	      this.tailWidth = ew;
+	      this.tailWidth = dw;
 	    }
 	  }
 	};
@@ -7895,7 +7965,7 @@
 
 	'use strict';
 	
-	var _defineProperty = __webpack_require__(5)['default'];
+	var _defineProperty = __webpack_require__(4)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 	
@@ -7905,7 +7975,7 @@
 	
 	var _srcUtils = __webpack_require__(3);
 	
-	var _classnames2 = __webpack_require__(6);
+	var _classnames2 = __webpack_require__(5);
 	
 	var _classnames3 = _interopRequireDefault(_classnames2);
 	
@@ -8059,7 +8129,7 @@
 
 	'use strict';
 	
-	var _defineProperty = __webpack_require__(5)['default'];
+	var _defineProperty = __webpack_require__(4)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 	
@@ -8067,7 +8137,7 @@
 	  value: true
 	});
 	
-	var _classnames2 = __webpack_require__(6);
+	var _classnames2 = __webpack_require__(5);
 	
 	var _classnames3 = _interopRequireDefault(_classnames2);
 	
@@ -8286,7 +8356,7 @@
 
 	'use strict';
 	
-	var _defineProperty = __webpack_require__(5)['default'];
+	var _defineProperty = __webpack_require__(4)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(2)['default'];
 	
@@ -8296,15 +8366,15 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _classnames3 = __webpack_require__(6);
+	var _classnames3 = __webpack_require__(5);
 	
 	var _classnames4 = _interopRequireDefault(_classnames3);
 	
-	var _AjaxUploaderVue = __webpack_require__(268);
+	var _AjaxUploaderVue = __webpack_require__(269);
 	
 	var _AjaxUploaderVue2 = _interopRequireDefault(_AjaxUploaderVue);
 	
-	var _UploadListVue = __webpack_require__(269);
+	var _UploadListVue = __webpack_require__(270);
 	
 	var _UploadListVue2 = _interopRequireDefault(_UploadListVue);
 	
@@ -9172,7 +9242,7 @@
 	    function lib$es6$promise$asap$$attemptVertx() {
 	      try {
 	        var r = require;
-	        var vertx = __webpack_require__(338);
+	        var vertx = __webpack_require__(340);
 	        lib$es6$promise$asap$$vertxNext = vertx.runOnLoop || vertx.runOnContext;
 	        return lib$es6$promise$asap$$useVertxTimer();
 	      } catch(e) {
@@ -10009,7 +10079,7 @@
 	}).call(this);
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(337), (function() { return this; }()), __webpack_require__(89)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(339), (function() { return this; }()), __webpack_require__(89)(module)))
 
 /***/ },
 /* 177 */
@@ -14712,12 +14782,7 @@
 
 
 /***/ },
-/* 215 */
-/***/ function(module, exports) {
-
-	module.exports = "# Steps\n\n---\n\n引导用户按照流程完成任务的导航条。\n\n## 何时使用\n\n当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。\n\n## 组件演示\n\n<demo>\n  <example title=\"简单的步骤条\"></example>\n  <example title=\"迷你版\"></example>\n  <example title=\"带ICON图标的步骤条\"></example>\n  <example title=\"切换到下一步\"></example>\n  <example title=\"竖直方向的小型步骤条\"></example>\n  <example title=\"自定义状态\"></example>\n</demo>\n\n## API\n\n```js\n<v-steps>\n  <v-step title=\"第一步\"></v-step>\n  <v-step title=\"第二步\"></v-step>\n  <v-step title=\"第三步\"></v-step>\n</v-steps>\n```\n\n### Steps\n\n整体步骤条。\n\n| 参数      | 说明                                     | 类型       |  可选值 |默认值 |\n|-----------|------------------------------------------|------------|-------|--------|\n|  current | 可选参数，指定当前处理正在执行状态的步骤，从0开始记数。在子Step元素中，可以通过status属性覆盖状态。  | number | 无  | 0 |\n|  size | 可选参数，指定大小（目前只支持普通和迷你两种大小）。 | string    |  small, default | default    |\n|  direction | 可选参数，指定步骤条方向（目前支持水平和竖直两种方向，默认水平方向）。 | string    |  vertical |  无   |\n|  maxDescriptionWidth | 可选参数，指定步骤的详细描述文字的最大宽度。 | number | 无 | 100 |\n\n### Steps.Step\n\n步骤条内的每一个步。\n\n| 参数      | 说明                                     | 类型       |  可选值 |默认值 |\n|-----------|------------------------------------------|------------|-------|--------|\n|  status | 可选参数，指定状态。当不配置该属性时，会使用父Steps元素的current来自动指定状态。 | string    |  wait, process, finish | wait |\n|  title   | 必要参数，标题。 | string/jsx | 无 | 无     |\n|  description | 可选参数，步骤的详情描述。 | string/jsx | 无 | 空  |\n|  icon    | 可选参数，步骤的Icon。如果不指定，则使用默认的样式。 | string/jsx | 无  | 空 |";
-
-/***/ },
+/* 215 */,
 /* 216 */
 /***/ function(module, exports) {
 
@@ -14799,46 +14864,52 @@
 /* 229 */
 /***/ function(module, exports) {
 
-	module.exports = "";
+	module.exports = "<div :class=\"wrapClasses\" :style=\"{'width': tailWidth}\">\n  <div v-if=\"!stepLast\" :class=\"prefixCls + '-tail'\"><i></i></div>\n  <div :class=\"prefixCls + '-head'\">\n    <div :class=\"prefixCls + '-head-inner'\">\n      <span v-if=\"!icon && status !== 'finish'\" :class=\"prefixCls + '-icon'\">{{stepNumber}}</span>\n      <span v-else :class=\"prefixCls + '-icon ' + iconPrefix + 'icon ' + iconPrefix + 'icon-' + iconName\"></span>\n    </div>\n  </div>\n  <div :class=\"prefixCls + '-main'\" :style=\"{'maxWidth': maxDescriptionWidth}\">\n    <div :class=\"prefixCls + '-title'\">{{title}}</div>\n    <div v-if=\"description\" :class=\"prefixCls + '-description'\">{{description}}</div>\n  </div>\n</div>";
 
 /***/ },
 /* 230 */
 /***/ function(module, exports) {
 
-	module.exports = "<span :class=\"wrapClasses\" @click=\"_toggle\">\n  <span :class=\"prefixCls + '-inner'\">\n    <slot v-if=\"checked\" name=\"checkedChildren\"></slot>\n    <slot v-if=\"!checked\" name=\"unCheckedChildren\"></slot>\n  </span>\n</span>";
+	module.exports = "<div :class=\"wrapClasses\">\n  <slot></slot>\n</div>";
 
 /***/ },
 /* 231 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"clearfix\" :class=\"{'ant-table-empty': isEmpty}\">\n  <div :class=\"tableClass\" :style=\"style\">\n    <div v-if=\"useFixedHeader\" :class=\"prefixCls + '-header'\">\n      <table>\n        <colgroup>\n          <col v-if=\"expandIconAsCell\" :class=\"prefixCls + '-expand-icon-col'\" key=\"rc-table-expand-icon-col\"></col>\n          <col v-for=\"col in columns\" :style=\"{'width': col.width}\"></col>\n        </colgroup>\n        <thead :class=\"prefixCls + '-thead'\">\n          <tr>\n            <th v-for=\"col in columns\">{{col.title}}</th>\n          </tr>\n        </thead>\n      </table>\n    </div>\n    <div :class=\"prefixCls + '-body'\" :style=\"bodyStyle\">\n      <table>\n        <colgroup>\n          <col v-if=\"expandIconAsCell\" :class=\"prefixCls + '-expand-icon-col'\" key=\"rc-table-expand-icon-col\"></col>\n          <col v-for=\"col in columns\" :style=\"{'width': col.width}\"></col>\n        </colgroup>\n        <thead :class=\"prefixCls + '-thead'\">\n          <tr>\n            <th v-for=\"col in columns\">{{col.title}}</th>\n          </tr>\n        </thead>\n        <tbody :class=\"prefixCls + '-tbody'\" v-el:render>\n          <tr v-for=\"data in dataSource\" :class=\"prefixCls + classString\">\n            <td v-for=\"col in columns\">{{{col.dataIndex ? data[col.dataIndex] : ''}}}</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>";
+	module.exports = "<span :class=\"wrapClasses\" @click=\"_toggle\">\n  <span :class=\"prefixCls + '-inner'\">\n    <slot v-if=\"checked\" name=\"checkedChildren\"></slot>\n    <slot v-if=\"!checked\" name=\"unCheckedChildren\"></slot>\n  </span>\n</span>";
 
 /***/ },
 /* 232 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-if=\"!closed\" :class=\"wrapClasses\">\n  <a :class=\"prefixCls + '-text'\" :href=\"href\"><slot></slot></a>\n  <v-icon v-if=\"closable\" type=\"cross\" @click=\"_close\"></v-icon>\n</div>";
+	module.exports = "<div class=\"clearfix\" :class=\"{'ant-table-empty': isEmpty}\">\n  <div :class=\"tableClass\" :style=\"style\">\n    <div v-if=\"useFixedHeader\" :class=\"prefixCls + '-header'\">\n      <table>\n        <colgroup>\n          <col v-if=\"expandIconAsCell\" :class=\"prefixCls + '-expand-icon-col'\" key=\"rc-table-expand-icon-col\"></col>\n          <col v-for=\"col in columns\" :style=\"{'width': col.width}\"></col>\n        </colgroup>\n        <thead :class=\"prefixCls + '-thead'\">\n          <tr>\n            <th v-for=\"col in columns\">{{col.title}}</th>\n          </tr>\n        </thead>\n      </table>\n    </div>\n    <div :class=\"prefixCls + '-body'\" :style=\"bodyStyle\">\n      <table>\n        <colgroup>\n          <col v-if=\"expandIconAsCell\" :class=\"prefixCls + '-expand-icon-col'\" key=\"rc-table-expand-icon-col\"></col>\n          <col v-for=\"col in columns\" :style=\"{'width': col.width}\"></col>\n        </colgroup>\n        <thead :class=\"prefixCls + '-thead'\">\n          <tr>\n            <th v-for=\"col in columns\">{{col.title}}</th>\n          </tr>\n        </thead>\n        <tbody :class=\"prefixCls + '-tbody'\" v-el:render>\n          <tr v-for=\"data in dataSource\" :class=\"prefixCls + classString\">\n            <td v-for=\"col in columns\">{{{col.dataIndex ? data[col.dataIndex] : ''}}}</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>";
 
 /***/ },
 /* 233 */
 /***/ function(module, exports) {
 
-	module.exports = "<span role=\"button\"\n      tabIndex=\"0\"\n      @click=\"_onClick\"\n      @keydown=\"_onKeyDown\"\n      @drop=\"_onFileDrop\"\n      @dragover=\"_onFileDrop\">\n  <input v-el:file\n         type=\"file\"\n         style=\"display: none\"\n         :accept=\"accept\"\n         :multiple=\"multiple\"\n         @change=\"_onChange\">\n  <slot></slot>\n</span>";
+	module.exports = "<div v-if=\"!closed\" :class=\"wrapClasses\">\n  <a :class=\"prefixCls + '-text'\" :href=\"href\"><slot></slot></a>\n  <v-icon v-if=\"closable\" type=\"cross\" @click=\"_close\"></v-icon>\n</div>";
 
 /***/ },
 /* 234 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"prefixCls + '-list'\">\n  <div v-for=\"file in items\" :class=\"prefixCls + '-list-item'\" :key=\"file.uid\">\n    <v-icon v-if=\"file.status === 'done'\" type=\"check\" :class=\"prefixCls + '-success-icon'\"></v-icon>\n    <v-icon v-if=\"file.status !== 'done'\" type=\"loading\"></v-icon>\n\n    <a v-if=\"file.url\" :class=\"prefixCls + '-item-name'\" :href=\"file.url\" target=\"_blank\">{{file.name}}</a>\n    <b v-if=\"!file.url\" :class=\"prefixCls + '-item-name'\">{{file.name}}</b>\n\n    <v-icon type=\"cross\" @click=\"_handleClose(file)\"></v-icon>\n  </div>\n</div>";
+	module.exports = "<span role=\"button\"\n      tabIndex=\"0\"\n      @click=\"_onClick\"\n      @keydown=\"_onKeyDown\"\n      @drop=\"_onFileDrop\"\n      @dragover=\"_onFileDrop\">\n  <input v-el:file\n         type=\"file\"\n         style=\"display: none\"\n         :accept=\"accept\"\n         :multiple=\"multiple\"\n         @change=\"_onChange\">\n  <slot></slot>\n</span>";
 
 /***/ },
 /* 235 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"wrapClasses\">\n  <ajax-upload :action=\"action\"\n              :name=\"name\"\n              :multiple=\"multiple\"\n              :on-start=\"_onStart\"\n              :on-progress=\"_onProgress\"\n              :on-success=\"_onSuccess\"\n              :on-error=\"_onError\"\n              :before-upload=\"beforeUpload\">\n    <div :class=\"containerClasses\">\n      <slot></slot>\n    </div>\n  </ajax-upload>\n</div>\n<upload-list :items=\"fileList\" :on-remove=\"_handleManualRemove\" ></upload-list>";
+	module.exports = "<div :class=\"prefixCls + '-list'\">\n  <div v-for=\"file in items\" :class=\"prefixCls + '-list-item'\" :key=\"file.uid\">\n    <v-icon v-if=\"file.status === 'done'\" type=\"check\" :class=\"prefixCls + '-success-icon'\"></v-icon>\n    <v-icon v-if=\"file.status !== 'done'\" type=\"loading\"></v-icon>\n\n    <a v-if=\"file.url\" :class=\"prefixCls + '-item-name'\" :href=\"file.url\" target=\"_blank\">{{file.name}}</a>\n    <b v-if=\"!file.url\" :class=\"prefixCls + '-item-name'\">{{file.name}}</b>\n\n    <v-icon type=\"cross\" @click=\"_handleClose(file)\"></v-icon>\n  </div>\n</div>";
 
 /***/ },
 /* 236 */
+/***/ function(module, exports) {
+
+	module.exports = "<div :class=\"wrapClasses\">\n  <ajax-upload :action=\"action\"\n              :name=\"name\"\n              :multiple=\"multiple\"\n              :on-start=\"_onStart\"\n              :on-progress=\"_onProgress\"\n              :on-success=\"_onSuccess\"\n              :on-error=\"_onError\"\n              :before-upload=\"beforeUpload\">\n    <div :class=\"containerClasses\">\n      <slot></slot>\n    </div>\n  </ajax-upload>\n</div>\n<upload-list :items=\"fileList\" :on-remove=\"_handleManualRemove\" ></upload-list>";
+
+/***/ },
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(106)
@@ -14846,7 +14917,7 @@
 
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(208)
@@ -14855,7 +14926,7 @@
 
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(108)
@@ -14863,7 +14934,7 @@
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(209)
@@ -14872,7 +14943,7 @@
 
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(110)
@@ -14880,7 +14951,7 @@
 
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(111)
@@ -14888,7 +14959,7 @@
 
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(112)
@@ -14896,15 +14967,15 @@
 
 
 /***/ },
-/* 243 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(113)
-	module.exports.template = __webpack_require__(215)
+	module.exports.template = __webpack_require__(414)
 
 
 /***/ },
-/* 244 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(114)
@@ -14912,7 +14983,7 @@
 
 
 /***/ },
-/* 245 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(115)
@@ -14920,7 +14991,7 @@
 
 
 /***/ },
-/* 246 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(116)
@@ -14928,7 +14999,7 @@
 
 
 /***/ },
-/* 247 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(117)
@@ -14936,7 +15007,7 @@
 
 
 /***/ },
-/* 248 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(177)
@@ -14945,7 +15016,7 @@
 
 
 /***/ },
-/* 249 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(210)
@@ -14954,28 +15025,28 @@
 
 
 /***/ },
-/* 250 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports.template = __webpack_require__(191)
 
 
 /***/ },
-/* 251 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports.template = __webpack_require__(192)
 
 
 /***/ },
-/* 252 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports.template = __webpack_require__(193)
 
 
 /***/ },
-/* 253 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(120)
@@ -14983,7 +15054,7 @@
 
 
 /***/ },
-/* 254 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(121)
@@ -14991,7 +15062,7 @@
 
 
 /***/ },
-/* 255 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(211)
@@ -15000,7 +15071,7 @@
 
 
 /***/ },
-/* 256 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(123)
@@ -15008,7 +15079,7 @@
 
 
 /***/ },
-/* 257 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(124)
@@ -15016,7 +15087,7 @@
 
 
 /***/ },
-/* 258 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(125)
@@ -15024,7 +15095,7 @@
 
 
 /***/ },
-/* 259 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(126)
@@ -15032,7 +15103,7 @@
 
 
 /***/ },
-/* 260 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(127)
@@ -15040,7 +15111,7 @@
 
 
 /***/ },
-/* 261 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(128)
@@ -15048,7 +15119,7 @@
 
 
 /***/ },
-/* 262 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(130)
@@ -15056,16 +15127,10 @@
 
 
 /***/ },
-/* 263 */
-/***/ function(module, exports) {
-
-
-
-/***/ },
 /* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(131)
+	module.exports = __webpack_require__(341)
 	module.exports.template = __webpack_require__(229)
 
 
@@ -15073,7 +15138,7 @@
 /* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(132)
+	module.exports = __webpack_require__(131)
 	module.exports.template = __webpack_require__(230)
 
 
@@ -15081,7 +15146,7 @@
 /* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(133)
+	module.exports = __webpack_require__(132)
 	module.exports.template = __webpack_require__(231)
 
 
@@ -15089,7 +15154,7 @@
 /* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(134)
+	module.exports = __webpack_require__(133)
 	module.exports.template = __webpack_require__(232)
 
 
@@ -15097,7 +15162,7 @@
 /* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(135)
+	module.exports = __webpack_require__(134)
 	module.exports.template = __webpack_require__(233)
 
 
@@ -15105,7 +15170,7 @@
 /* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(136)
+	module.exports = __webpack_require__(135)
 	module.exports.template = __webpack_require__(234)
 
 
@@ -15113,23 +15178,32 @@
 /* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(137)
+	module.exports = __webpack_require__(136)
 	module.exports.template = __webpack_require__(235)
 
 
 /***/ },
-/* 271 */,
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(137)
+	module.exports.template = __webpack_require__(236)
+
+
+/***/ },
 /* 272 */,
 /* 273 */,
-/* 274 */
+/* 274 */,
+/* 275 */,
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Service for sending network requests.
 	 */
 	
-	var xhr = __webpack_require__(278);
-	var jsonp = __webpack_require__(276);
+	var xhr = __webpack_require__(280);
+	var jsonp = __webpack_require__(278);
 	var Promise = __webpack_require__(40);
 	
 	module.exports = function (_) {
@@ -15287,7 +15361,7 @@
 
 
 /***/ },
-/* 275 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15296,11 +15370,11 @@
 	
 	function install(Vue) {
 	
-	    var _ = __webpack_require__(277)(Vue);
+	    var _ = __webpack_require__(279)(Vue);
 	
-	    Vue.url = __webpack_require__(280)(_);
-	    Vue.http = __webpack_require__(274)(_);
-	    Vue.resource = __webpack_require__(279)(_);
+	    Vue.url = __webpack_require__(282)(_);
+	    Vue.http = __webpack_require__(276)(_);
+	    Vue.resource = __webpack_require__(281)(_);
 	
 	    Object.defineProperties(Vue.prototype, {
 	
@@ -15332,7 +15406,7 @@
 	module.exports = install;
 
 /***/ },
-/* 276 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15388,7 +15462,7 @@
 
 
 /***/ },
-/* 277 */
+/* 279 */
 /***/ function(module, exports) {
 
 	/**
@@ -15474,7 +15548,7 @@
 
 
 /***/ },
-/* 278 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15531,7 +15605,7 @@
 
 
 /***/ },
-/* 279 */
+/* 281 */
 /***/ function(module, exports) {
 
 	/**
@@ -15648,7 +15722,7 @@
 
 
 /***/ },
-/* 280 */
+/* 282 */
 /***/ function(module, exports) {
 
 	/**
@@ -15811,7 +15885,7 @@
 
 
 /***/ },
-/* 281 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15945,7 +16019,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 282 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16026,7 +16100,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 283 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16071,7 +16145,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 284 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16140,7 +16214,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 285 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16233,7 +16307,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 286 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16248,7 +16322,7 @@
 	
 	var _util2 = _interopRequireDefault(_util);
 	
-	var _override = __webpack_require__(287);
+	var _override = __webpack_require__(289);
 	
 	var _override2 = _interopRequireDefault(_override);
 	
@@ -16256,31 +16330,31 @@
 	
 	var _routeRecognizer2 = _interopRequireDefault(_routeRecognizer);
 	
-	var _route = __webpack_require__(288);
+	var _route = __webpack_require__(290);
 	
 	var _route2 = _interopRequireDefault(_route);
 	
-	var _transition = __webpack_require__(289);
+	var _transition = __webpack_require__(291);
 	
 	var _transition2 = _interopRequireDefault(_transition);
 	
-	var _directivesView = __webpack_require__(282);
+	var _directivesView = __webpack_require__(284);
 	
 	var _directivesView2 = _interopRequireDefault(_directivesView);
 	
-	var _directivesLink = __webpack_require__(281);
+	var _directivesLink = __webpack_require__(283);
 	
 	var _directivesLink2 = _interopRequireDefault(_directivesLink);
 	
-	var _historyAbstract = __webpack_require__(283);
+	var _historyAbstract = __webpack_require__(285);
 	
 	var _historyAbstract2 = _interopRequireDefault(_historyAbstract);
 	
-	var _historyHash = __webpack_require__(284);
+	var _historyHash = __webpack_require__(286);
 	
 	var _historyHash2 = _interopRequireDefault(_historyHash);
 	
-	var _historyHtml5 = __webpack_require__(285);
+	var _historyHtml5 = __webpack_require__(287);
 	
 	var _historyHtml52 = _interopRequireDefault(_historyHtml5);
 	
@@ -16868,7 +16942,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 287 */
+/* 289 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16940,7 +17014,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 288 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -16998,7 +17072,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 289 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17331,7 +17405,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 290 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -17511,7 +17585,7 @@
 
 
 /***/ },
-/* 291 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -17721,7 +17795,7 @@
 
 
 /***/ },
-/* 292 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -17896,11 +17970,11 @@
 
 
 /***/ },
-/* 293 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
-	var config = __webpack_require__(4)
+	var config = __webpack_require__(6)
 	
 	/**
 	 * Expose useful internals
@@ -18054,7 +18128,7 @@
 
 
 /***/ },
-/* 294 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -18128,11 +18202,11 @@
 
 
 /***/ },
-/* 295 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
-	var config = __webpack_require__(4)
+	var config = __webpack_require__(6)
 	
 	// we have two separate queues: one for directive updates
 	// and one for user watcher registered via $watch().
@@ -18239,13 +18313,13 @@
 
 
 /***/ },
-/* 296 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
 	var dirParser = __webpack_require__(19)
 	var propDef = __webpack_require__(82)
-	var propBindingModes = __webpack_require__(4)._propBindingModes
+	var propBindingModes = __webpack_require__(6)._propBindingModes
 	var empty = {}
 	
 	// regexes
@@ -18457,13 +18531,13 @@
 
 
 /***/ },
-/* 297 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
 	var publicDirectives = __webpack_require__(86)
 	var internalDirectives = __webpack_require__(81)
-	var compileProps = __webpack_require__(296)
+	var compileProps = __webpack_require__(298)
 	var textParser = __webpack_require__(25)
 	var dirParser = __webpack_require__(19)
 	var templateParser = __webpack_require__(9)
@@ -19172,7 +19246,7 @@
 
 
 /***/ },
-/* 298 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -19326,7 +19400,7 @@
 
 
 /***/ },
-/* 299 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -19652,15 +19726,15 @@
 
 
 /***/ },
-/* 300 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.slot = __webpack_require__(302)
-	exports.partial = __webpack_require__(301)
+	exports.slot = __webpack_require__(304)
+	exports.partial = __webpack_require__(303)
 
 
 /***/ },
-/* 301 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -19709,7 +19783,7 @@
 
 
 /***/ },
-/* 302 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -19839,7 +19913,7 @@
 
 
 /***/ },
-/* 303 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -19914,7 +19988,7 @@
 
 
 /***/ },
-/* 304 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -20258,11 +20332,11 @@
 
 
 /***/ },
-/* 305 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
-	var Transition = __webpack_require__(330)
+	var Transition = __webpack_require__(332)
 	
 	module.exports = {
 	
@@ -20284,7 +20358,7 @@
 
 
 /***/ },
-/* 306 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -20409,7 +20483,7 @@
 
 
 /***/ },
-/* 307 */
+/* 309 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -20423,7 +20497,7 @@
 
 
 /***/ },
-/* 308 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -20456,7 +20530,7 @@
 
 
 /***/ },
-/* 309 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -20502,7 +20576,7 @@
 
 
 /***/ },
-/* 310 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -20570,16 +20644,16 @@
 
 
 /***/ },
-/* 311 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
 	
 	var handlers = {
-	  text: __webpack_require__(314),
-	  radio: __webpack_require__(312),
-	  select: __webpack_require__(313),
-	  checkbox: __webpack_require__(310)
+	  text: __webpack_require__(316),
+	  radio: __webpack_require__(314),
+	  select: __webpack_require__(315),
+	  checkbox: __webpack_require__(312)
 	}
 	
 	module.exports = {
@@ -20658,7 +20732,7 @@
 
 
 /***/ },
-/* 312 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -20698,7 +20772,7 @@
 
 
 /***/ },
-/* 313 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -20822,7 +20896,7 @@
 
 
 /***/ },
-/* 314 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -20955,7 +21029,7 @@
 
 
 /***/ },
-/* 315 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -21084,7 +21158,7 @@
 
 
 /***/ },
-/* 316 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	if (true) {
@@ -21100,7 +21174,7 @@
 
 
 /***/ },
-/* 317 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -21132,7 +21206,7 @@
 
 
 /***/ },
-/* 318 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -21152,7 +21226,7 @@
 
 
 /***/ },
-/* 319 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -21274,7 +21348,7 @@
 
 
 /***/ },
-/* 320 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -21394,11 +21468,11 @@
 	 * Install special array filters
 	 */
 	
-	_.extend(exports, __webpack_require__(319))
+	_.extend(exports, __webpack_require__(321))
 
 
 /***/ },
-/* 321 */
+/* 323 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -21579,7 +21653,7 @@
 
 
 /***/ },
-/* 322 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -21748,7 +21822,7 @@
 
 
 /***/ },
-/* 323 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var mergeOptions = __webpack_require__(1).mergeOptions
@@ -21868,11 +21942,11 @@
 
 
 /***/ },
-/* 324 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
-	var Directive = __webpack_require__(299)
+	var Directive = __webpack_require__(301)
 	var compiler = __webpack_require__(18)
 	
 	/**
@@ -22089,7 +22163,7 @@
 
 
 /***/ },
-/* 325 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -22188,12 +22262,12 @@
 
 
 /***/ },
-/* 326 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
 	var compiler = __webpack_require__(18)
-	var Observer = __webpack_require__(328)
+	var Observer = __webpack_require__(330)
 	var Dep = __webpack_require__(41)
 	var Watcher = __webpack_require__(27)
 	
@@ -22435,7 +22509,7 @@
 
 
 /***/ },
-/* 327 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -22531,12 +22605,12 @@
 
 
 /***/ },
-/* 328 */
+/* 330 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
 	var Dep = __webpack_require__(41)
-	var arrayMethods = __webpack_require__(327)
+	var arrayMethods = __webpack_require__(329)
 	var arrayKeys = Object.getOwnPropertyNames(arrayMethods)
 	
 	/**
@@ -22743,7 +22817,7 @@
 
 
 /***/ },
-/* 329 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -22784,11 +22858,11 @@
 
 
 /***/ },
-/* 330 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
-	var queue = __webpack_require__(329)
+	var queue = __webpack_require__(331)
 	var addClass = _.addClass
 	var removeClass = _.removeClass
 	var transitionEndEvent = _.transitionEndEvent
@@ -23157,7 +23231,7 @@
 
 
 /***/ },
-/* 331 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
@@ -23313,7 +23387,7 @@
 
 
 /***/ },
-/* 332 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -23322,7 +23396,7 @@
 	
 	if (true) {
 	
-	  var config = __webpack_require__(4)
+	  var config = __webpack_require__(6)
 	  var hasConsole = typeof console !== 'undefined'
 	
 	  /**
@@ -23366,11 +23440,11 @@
 
 
 /***/ },
-/* 333 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
-	var config = __webpack_require__(4)
+	var config = __webpack_require__(6)
 	var transition = __webpack_require__(26)
 	
 	/**
@@ -23734,7 +23808,7 @@
 
 
 /***/ },
-/* 334 */
+/* 336 */
 /***/ function(module, exports) {
 
 	// can we use __proto__?
@@ -23825,7 +23899,7 @@
 
 
 /***/ },
-/* 335 */
+/* 337 */
 /***/ function(module, exports) {
 
 	/**
@@ -24221,11 +24295,11 @@
 
 
 /***/ },
-/* 336 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(1)
-	var config = __webpack_require__(4)
+	var config = __webpack_require__(6)
 	var extend = _.extend
 	
 	/**
@@ -24581,7 +24655,7 @@
 
 
 /***/ },
-/* 337 */
+/* 339 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -24678,10 +24752,136 @@
 
 
 /***/ },
-/* 338 */
+/* 340 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
+
+/***/ },
+/* 341 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _defineProperty = __webpack_require__(4)['default'];
+	
+	var _interopRequireDefault = __webpack_require__(2)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _utils = __webpack_require__(3);
+	
+	var _classnames2 = __webpack_require__(5);
+	
+	var _classnames3 = _interopRequireDefault(_classnames2);
+	
+	exports['default'] = {
+	  props: (0, _utils.defaultProps)({
+	    status: String,
+	    title: '',
+	    description: '',
+	    prefixCls: '',
+	    iconPrefix: '',
+	    maxDescriptionWidth: '',
+	    tailWidth: String,
+	    icon: String,
+	    stepNumber: Number,
+	    stepLast: Boolean
+	  }),
+	
+	  computed: {
+	    iconName: function iconName() {
+	      return this.icon ? this.icon : 'check';
+	    },
+	
+	    wrapClasses: function wrapClasses() {
+	      var _classnames;
+	
+	      return (0, _classnames3['default'])((_classnames = {}, _defineProperty(_classnames, this.prefixCls + '-item', 1), _defineProperty(_classnames, this.prefixCls + '-item-last', this.stepLast), _defineProperty(_classnames, this.prefixCls + '-status-' + this.status, 1), _defineProperty(_classnames, this.prefixCls + '-custom', this.icon), _classnames));
+	    }
+	  }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"markdown\"><h1 id=\"steps\">Steps</h1>\n<hr>\n<p>引导用户按照流程完成任务的导航条。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。</p>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>简单的步骤条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-steps :current=\"1\">\n      <v-step title=\"已完成\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"进行中\" description=\"这里是多信息的耶哦耶哦哦耶哦耶\"></v-step>\n      <v-step title=\"有一个待运行\" description=\"描述啊描述啊\"></v-step>\n      <v-step title=\"待运行\" description=\"这里是多信息的描述啊\"></v-step>\n    </v-steps>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-steps</span> <span class=\"token attr-name\" >:current</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>已完成<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>进行中<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的耶哦耶哦哦耶哦耶<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>有一个待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>描述啊描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>迷你版</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\"></div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre></pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>带ICON图标的步骤条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\"></div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre></pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>切换到下一步</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\"></div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre></pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>竖直方向的小型步骤条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\"></div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre></pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>自定义状态</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\"></div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre></pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<pre><code class=\"lang-js\">&lt;v-steps&gt;\n  &lt;v-step title=&quot;第一步&quot;&gt;&lt;/v-step&gt;\n  &lt;v-step title=&quot;第二步&quot;&gt;&lt;/v-step&gt;\n  &lt;v-step title=&quot;第三步&quot;&gt;&lt;/v-step&gt;\n&lt;/v-steps&gt;\n</code></pre>\n<h3 id=\"steps\">Steps</h3>\n<p>整体步骤条。</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>current</td>\n<td>可选参数，指定当前处理正在执行状态的步骤，从0开始记数。在子Step元素中，可以通过status属性覆盖状态。</td>\n<td>number</td>\n<td>无</td>\n<td>0</td>\n</tr>\n<tr>\n<td>size</td>\n<td>可选参数，指定大小（目前只支持普通和迷你两种大小）。</td>\n<td>string</td>\n<td>small, default</td>\n<td>default</td>\n</tr>\n<tr>\n<td>direction</td>\n<td>可选参数，指定步骤条方向（目前支持水平和竖直两种方向，默认水平方向）。</td>\n<td>string</td>\n<td>vertical</td>\n<td>无</td>\n</tr>\n<tr>\n<td>maxDescriptionWidth</td>\n<td>可选参数，指定步骤的详细描述文字的最大宽度。</td>\n<td>number</td>\n<td>无</td>\n<td>100</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"steps-step\">Steps.Step</h3>\n<p>步骤条内的每一个步。</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>status</td>\n<td>可选参数，指定状态。当不配置该属性时，会使用父Steps元素的current来自动指定状态。</td>\n<td>string</td>\n<td>wait, process, finish</td>\n<td>wait</td>\n</tr>\n<tr>\n<td>title</td>\n<td>必要参数，标题。</td>\n<td>string/jsx</td>\n<td>无</td>\n<td>无</td>\n</tr>\n<tr>\n<td>description</td>\n<td>可选参数，步骤的详情描述。</td>\n<td>string/jsx</td>\n<td>无</td>\n<td>空</td>\n</tr>\n<tr>\n<td>icon</td>\n<td>可选参数，步骤的Icon。如果不指定，则使用默认的样式。</td>\n<td>string/jsx</td>\n<td>无</td>\n<td>空</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ }
 /******/ ])));
