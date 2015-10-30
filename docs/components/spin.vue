@@ -12,7 +12,15 @@
 ## 组件演示
 
 <demo>
-  <example title="通过添加loading属性，可以进入加载状态">
+  <example title="基本用法">
+    <v-spin></v-spin>
+  </example>
+  <example title="容器">
+    <div class="spin-demo2-container">
+      <v-spin></v-spin>
+    </div>
+  </example>
+  <example title="卡片加载中">
     <v-spin size="large" :hide="!loading">
       <div style="text-align: center;">
         <img src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" width="200px" height="200px" />
@@ -24,10 +32,12 @@
       <v-button type="primary" @click="_enterLoading">点击切换</v-button>
     </div>
   </example>
-  <example title="作为页面元素使用">
-    <div>
-      <v-spin></v-spin>
-    </div>
+  <example title="各种大小">
+    <v-spin size="small"></v-spin>
+    <br>
+    <v-spin></v-spin>
+    <br>
+    <v-spin size="large"></v-spin>
   </example>
 </demo>
 
@@ -60,3 +70,14 @@ export default {
 }
 
 </script>
+
+<style>
+.spin-demo2-container {
+  text-align: center;
+  background: rgba(0,0,0,0.05);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
+</style>
