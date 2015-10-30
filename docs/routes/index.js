@@ -58,6 +58,10 @@ export function configRouter (router) {
 
         'table': {
           component: require('../components/table.vue')
+        },
+
+        'tag': {
+          component: require('../components/tag.vue')
         }
       }
     },

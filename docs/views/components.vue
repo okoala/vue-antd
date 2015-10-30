@@ -179,10 +179,10 @@ export default {
           //   name: 'table',
           //   desc: '表格'
           // },
-          // {
-          //   name: 'tag',
-          //   desc: '标签'
-          // },
+          {
+            name: 'tag',
+            desc: '标签'
+          }
           // {
           //   name: 'timeline',
           //   desc: '时间轴'
