@@ -48,15 +48,29 @@
       <v-button @click="_next">下一步</v-button>
     </div>
   </example>
-  <example title="竖直方向的小型步骤条">
+  <example title="竖直方向的步骤条">
     <v-steps direction="vertical" :current="1">
       <v-step title="已完成" description="这里是多信息的描述啊"></v-step>
       <v-step title="进行中" description="这里是多信息的描述啊"></v-step>
       <v-step title="待运行" description="这里是多信息的描述啊"></v-step>
-      <v-step title="有一个待运行" description="这里是多信息的描述啊"></v-step>
+      <v-step title="又一个待运行" description="这里是多信息的描述啊"></v-step>
     </v-steps>
   </example>
-  <example title="自定义状态"></example>
+  <example title="竖直方向的小型步骤条">
+    <v-steps size='small' direction="vertical" :current="1">
+      <v-step title="已完成" description="这里是多信息的描述啊"></v-step>
+      <v-step title="进行中" description="这里是多信息的描述啊"></v-step>
+      <v-step title="待运行" description="这里是多信息的描述啊"></v-step>
+    </v-steps>
+  </example>
+  <example title="自定义状态">
+    <v-steps>
+      <v-step title="已完成" status="finish" description="这里是多信息的描述啊"></v-step>
+      <v-step title="进行中" status="process" description="这里是多信息的描述啊"></v-step>
+      <v-step title="待运行" status="wait" description="这里是多信息的描述啊"></v-step>
+      <v-step title="又一个待运行" status="wait" description="这里是多信息的描述啊"></v-step>
+    </v-steps>
+  </example>
 </demo>
 
 ## API

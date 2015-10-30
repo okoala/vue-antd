@@ -48,7 +48,7 @@ export default {
       this.maxDescriptionWidth = 'auto'
     }
 
-    this._mapPropsToChildComponent()
+    this._mapPropsToChildComponent(true)
 
     // 延迟执行，一边子组件可能更新完props的状态。
     setTimeout(() => {
@@ -75,7 +75,7 @@ export default {
   },
 
   methods: {
-    _mapPropsToChildComponent () {
+    _mapPropsToChildComponent (isInit) {
       const self = this
       const len = this.$children.length - 1
       this.$children.forEach((child, index) => {
@@ -86,7 +86,11 @@ export default {
         child.maxDescriptionWidth = self.maxDescriptionWidth
         child.iconPrefix = self.iconPrefix
 
-        // if (!child.status) {
+        // 如果是初始化状态且已经存在了status，这样就不需要根据current来设置status了
+        if (isInit && child.status) {
+          return
+        }
+
         if (index === self.current) {
           child.status = 'process'
         } else if (index < self.current) {
@@ -94,7 +98,6 @@ export default {
         } else {
           child.status = 'wait'
         }
-        // }
       })
     },
 
