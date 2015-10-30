@@ -99,6 +99,10 @@ export default {
     },
 
     _handleTailWidth () {
+      if (this.direction === 'vertical') {
+        return
+      }
+
       const self = this
       const dom = this.$el
       const len = this.$el.children.length - 1
