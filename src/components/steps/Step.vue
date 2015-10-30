@@ -1,5 +1,5 @@
 <template>
-<div :class="wrapClasses" :style="{width: tailWidth}">
+<div :class="wrapClasses" :style="{'width': tailWidth}">
   <div v-if="!stepLast" :class="prefixCls + '-tail'"><i></i></div>
   <div :class="prefixCls + '-head'">
     <div :class="prefixCls + '-head-inner'">
@@ -7,7 +7,7 @@
       <span v-else :class="prefixCls + '-icon ' + iconPrefix + 'icon ' + iconPrefix + 'icon-' + iconName"></span>
     </div>
   </div>
-  <div :class="prefixCls + '-main'" style="{maxWidth: maxDescriptionWidth}">
+  <div :class="prefixCls + '-main'" :style="{'maxWidth': maxDescriptionWidth}">
     <div :class="prefixCls + '-title'">{{title}}</div>
     <div v-if="description" :class="prefixCls + '-description'">{{description}}</div>
   </div>

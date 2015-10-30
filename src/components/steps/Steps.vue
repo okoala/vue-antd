@@ -42,37 +42,18 @@ export default {
   },
 
   ready () {
+    const self = this
+
     if (this.direction === 'vertical') {
       this.maxDescriptionWidth = 'auto'
     }
 
-    const dom = this.$el
-    const len = this.$el.children.length - 1
-    this.itemsWidth = new Array(len + 1)
-
-    let i = 0
-    for (; i <= len - 1; i++) {
-      const _item = this.$el.children[i].children
-      this.itemsWidth[i] = Math.ceil(_item[0].offsetWidth + _item[1].children[0].offsetWidth)
-    }
-
-    this.itemsWidth[i] = Math.ceil(this.$el.children[len].offsetWidth)
-    this.previousStepsWidth = Math.floor(this.$el.offsetWidth)
-    this._update()
-
-    this.$el.children[len].style.position = 'absolute'
-
-    setTimeout(() => {
-      this._resize()
-    })
-
-    if (window.attachEvent) {
-      window.attachEvent('onresize', this._resize)
-    } else {
-      window.addEventListener('resize', this._resize)
-    }
-
     this._mapPropsToChildComponent()
+
+    // 延迟执行，一边子组件可能更新完props的状态。
+    setTimeout(() => {
+      this._handleTailWidth
+    }, 30)
   },
 
   beforeDestroy () {
@@ -89,25 +70,61 @@ export default {
 
   methods: {
     _mapPropsToChildComponent () {
-      const len = this.$children.length
+      const self = this
+      const len = this.$children.length - 1
       this.$children.forEach((child, index) => {
         child.stepNumber = (index + 1).toString()
         child.stepLast = index === len
-        child.tailWidth = (this.itemsWidth.length === 0 || index === len) ? 'auto' : this.itemsWidth[index] + this.tailWidth
-        child.prefixCls = this.prefixCls
-        child.maxDescriptionWidth = this.maxDescriptionWidth
-        child.iconPrefix = this.iconPrefix
+        // child.tailWidth = (self.itemsWidth.length === 0 || index === len) ? 'auto' : self.itemsWidth[index] + self.tailWidth + 'px'
+        child.prefixCls = self.prefixCls
+        child.maxDescriptionWidth = self.maxDescriptionWidth
+        child.iconPrefix = self.iconPrefix
 
         if (!child.status) {
-          if (index === this.current) {
+          if (index === self.current) {
             child.status = 'process'
-          } else if (index < this.current) {
+          } else if (index < self.current) {
             child.status = 'finish'
           } else {
             child.status = 'wait'
           }
         }
       })
+    },
+
+    _handleTailWidth () {
+      const dom = this.$el
+      const len = this.$el.children.length - 1
+      this.itemsWidth = new Array(len + 1)
+
+      let i = 0
+      for (; i <= len - 1; i++) {
+        const _item = this.$el.children[i].children
+        this.itemsWidth[i] = Math.ceil(_item[0].offsetWidth + _item[1].children[0].offsetWidth)
+      }
+
+      this.itemsWidth[i] = Math.ceil(this.$el.children[len].offsetWidth)
+      this.previousStepsWidth = Math.floor(this.$el.offsetWidth)
+      this._update()
+
+      this.$el.children[len].style.position = 'absolute'
+
+      // 算出tailWidth, 动态更新子组件
+      this.$children.forEach((child, index) => {
+        child.tailWidth = (self.itemsWidth.length === 0 || index === len) ? 'auto' : self.itemsWidth[index] + self.tailWidth + 'px'
+      })
+    },
+
+    _bindResize () {
+      setTimeout(() => {
+        this._resize()
+      })
+
+      if (window.attachEvent) {
+        window.attachEvent('onresize', this._resize)
+      } else {
+        window.addEventListener('resize', this._resize)
+      }
     },
 
     _resize () {
@@ -132,7 +149,7 @@ export default {
       }
 
       this.init = true
-      this.tailWidth = ew
+      this.tailWidth = dw
     }
   }
 }
