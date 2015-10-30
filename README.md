@@ -1,12 +1,24 @@
-# vue-antd
+<p align="center">
+  <a href="http://ant.design" target="_blank">
+    <img width="100" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
+  </a>
+  +
+  <a href="http://vuejs.org" target="_blank">
+    <img width="100"src="http://vuejs.org/images/logo.png">
+  </a>
+</p>
 
-[![Join the chat at https://gitter.im/okoala/vue-antd](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/okoala/vue-antd?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+<p align="center">
+  <a href="https://gitter.im/okoala/vue-antd?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" title="Join the chat at https://gitter.im/okoala/vue-antd"><img src="https://badges.gitter.im/Join Chat.svg"></a>
+</p>
 
-* [vue](https://github.com/yyx990803/vue)
-* [antd](https://github.com/ant-design/ant-design)
+## Intro
 
+这是个结合Vue 和 Antd的项目。个人维护，欢迎PR~~
 
-####先占坑
+- [vue](https://github.com/yyx990803/vue)
+- [antd](https://github.com/ant-design/ant-design)
 
+## Docs
 
-
+[Go to Docs](http://okoala.github.io/vue-antd/#!/components)
