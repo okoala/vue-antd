@@ -64,6 +64,10 @@ export function configRouter (router) {
           component: require('../components/steps.vue')
         },
 
+        'spin': {
+          component: require('../components/spin.vue')
+        },
+
         'table': {
           component: require('../components/table.vue')
         },

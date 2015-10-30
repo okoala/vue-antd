@@ -182,6 +182,10 @@ export default {
           {
             name: 'tag',
             desc: '标签'
+          },
+          {
+            name: 'spin',
+            desc: '加载动画'
           }
           // {
           //   name: 'timeline',
