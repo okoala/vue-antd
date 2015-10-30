@@ -28,8 +28,26 @@
       <v-step title="待运行" status="wait"></v-step>
     </v-steps>
   </example>
-  <example title="带ICON图标的步骤条"></example>
-  <example title="切换到下一步"></example>
+  <example title="带ICON图标的步骤条">
+    <v-steps>
+      <v-step title="步骤1" status="finish" icon="cloud"></v-step>
+      <v-step title="步骤2" status="process" icon="apple"></v-step>
+      <v-step title="步骤3" status="wait" icon="github"></v-step>
+    </v-steps>
+  </example>
+  <example title="切换到下一步">
+    <div>当前正在执行第 {{currentStep}} 步</div>
+    <br>
+    <v-steps :current="currentStep">
+      <v-step title="步骤1"></v-step>
+      <v-step title="步骤2"></v-step>
+      <v-step title="步骤3"></v-step>
+    </v-steps>
+    <br>
+    <div>
+      <v-button @click="_next">下一步</v-button>
+    </div>
+  </example>
   <example title="竖直方向的小型步骤条"></example>
   <example title="自定义状态"></example>
 </demo>
@@ -69,10 +87,31 @@
 
 <script>
 import vSteps, { vStep } from '../../src/components/steps'
+import vButton from '../../src/components/button'
 
 export default {
+  data () {
+    return {
+      steps: 4,
+      currentStep: 0
+    }
+  },
 
-  components: { vSteps, vStep }
+  components: { vSteps, vStep, vButton },
+
+  beforeCompile () {
+    this.currentStep = Math.floor(Math.random() * this.steps)
+  },
+
+  methods: {
+    _next () {
+      let s = this.currentStep + 1
+      if (s === this.steps) {
+        s = 0
+      }
+      this.currentStep = s
+    }
+  }
 
 }
 

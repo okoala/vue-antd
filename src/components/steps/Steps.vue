@@ -38,7 +38,7 @@ export default {
   },
 
   compiled () {
-    console.log(this.$children)
+    // console.log(this.$children)
   },
 
   ready () {
@@ -54,6 +54,12 @@ export default {
     setTimeout(() => {
       this._handleTailWidth()
     }, 30)
+  },
+
+  watch: {
+    current () {
+      this._mapPropsToChildComponent()
+    }
   },
 
   beforeDestroy () {
@@ -80,15 +86,15 @@ export default {
         child.maxDescriptionWidth = self.maxDescriptionWidth
         child.iconPrefix = self.iconPrefix
 
-        if (!child.status) {
-          if (index === self.current) {
-            child.status = 'process'
-          } else if (index < self.current) {
-            child.status = 'finish'
-          } else {
-            child.status = 'wait'
-          }
+        // if (!child.status) {
+        if (index === self.current) {
+          child.status = 'process'
+        } else if (index < self.current) {
+          child.status = 'finish'
+        } else {
+          child.status = 'wait'
         }
+        // }
       })
     },
 
