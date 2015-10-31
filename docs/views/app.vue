@@ -1,7 +1,7 @@
 <template>
 <header id="header" class="clearfix">
   <a class="logo" href="..">
-    <img width="60" src="http://s2.upload.tf/Gbv.png">
+    <img width="50" src="http://s2.upload.tf/Gbv.png">
     Vue Antd
   </a>
   <nav class="nav">
@@ -76,7 +76,7 @@ a.logo {
 
 .logo img {
   float: left;
-  margin-top: -7px;
+  margin-right: 15px;
   -webkit-animation: rotateCircleBack 0.6s 1 ease-in-out;
   animation: rotateCircleBack 0.6s 1 ease-in-out;
 }
