@@ -6,9 +6,11 @@
 这里是 Ant Design 的 Vue 实现，开发和服务于企业级后台产品。
 
 <div class="pic-plus">
-  <img width="150" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
-  <span>+</span>
   <img width="150" src="../../styles/images/vue.png">
+  <span>+</span>
+  <img width="150" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
+  <span>=</span>
+  <img width="150" src="http://s2.upload.tf/Gbv.png">
 </div>
 <style>
 .pic-plus > * {
