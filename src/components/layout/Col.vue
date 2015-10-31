@@ -3,16 +3,16 @@
 </template>
 
 <script>
-import { defaultProps } from '../../utils'
+import { defaultProps, oneOfType } from '../../utils'
 import classnames from 'classnames'
 
 export default {
   props: defaultProps({
-    span: String,
-    order: String,
-    offset: String,
-    push: String,
-    pull: String,
+    span: oneOfType([String, Number]),
+    order: oneOfType([String, Number]),
+    offset: oneOfType([String, Number]),
+    push: oneOfType([String, Number]),
+    pull: oneOfType([String, Number]),
     className: String
   }),
 
