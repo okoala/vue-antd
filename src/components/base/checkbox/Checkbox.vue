@@ -19,10 +19,8 @@ export default {
     style: {},
     type: 'checkbox',
     className: '',
-    checked: oneOfType(Number, Boolean),
-    defaultChecked: oneOfType(Number, Boolean, {
-      default: 0
-    }),
+    checked: oneOfType([Number, Boolean]),
+    defaultChecked: oneOfType([Number, Boolean], 0),
     onChange: () => {}
   }),
 

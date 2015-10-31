@@ -12,8 +12,8 @@ import { openAnimation, oneOfType } from '../utils'
 export default {
   props: defaultProps({
     prefixCls: 'ant-collapse',
-    activeKey: oneOfType(String, Array),
-    defaultActiveKey: oneOfType(String, Array),
+    activeKey: oneOfType([String, Array]),
+    defaultActiveKey: oneOfType([String, Array]),
     openAnimation: openAnimation,
     onChange: () => {},
     accordion: false

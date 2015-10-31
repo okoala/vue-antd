@@ -74,30 +74,24 @@ export function defaultProps (props) {
   return props
 }
 
-export function oneOfType (...args) {
-  let _options = args[args.length - 1]
-  let options
+export function oneOfType (validList, defaultValue) {
+  let validaObj = {}
 
-  if (isPlainObject(_options)) {
-    options = _options
-    args.length = args.length - 1
+  if (defaultValue) {
+    validaObj.default = defaultValue
   }
 
-  let result = {
-    validator (value) {
+  validaObj.validator = function (value) {
       for (let i = 0; i < args.length; i++) {
-        if (toString.call(value).indexOf(args[i].name) > -1) return true
+        if (toString.call(value).indexOf(args[i].name) > -1) {
+          return true
+        }
       }
-
       return false
     }
   }
 
-  if (options) {
-    result = Object.assign({}, options, result)
-  }
-
-  return result
+  return validaObj
 }
 
 export function oneOf (validList, defaultValue) {
@@ -108,16 +102,12 @@ export function oneOf (validList, defaultValue) {
   }
 
   validaObj.validator = function (value) {
-    let isValid = false
-
     for (let i = 0; i < validList.length; i++) {
       if (value === validList[i]) {
-        isValid = true
-        break
+        return true
       }
     }
-
-    return isValid
+    return false
   }
 
   return validaObj

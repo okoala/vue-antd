@@ -17,8 +17,8 @@ export default {
     showSearch: false,
     className: ' ',
 
-    value: oneOfType(String, Array),
-    defaultValue: oneOfType(String, Array),
+    value: oneOfType([String, Array]),
+    defaultValue: oneOfType([String, Array]),
     multiple: false,
     filterOption: true,
     tags: false,

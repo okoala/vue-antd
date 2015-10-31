@@ -46,7 +46,7 @@ export default {
     rowSelection: Object,
     pagination: Object,
     size: 'normal',
-    dataSource: oneOfType(Array, Object),
+    dataSource: oneOfType([Array, Object]),
     columns: Array,
     expandIconAsCell: true,
     onChange: () => {},

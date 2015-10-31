@@ -22,7 +22,7 @@ import Popup from './Popup.vue'
 export default {
   props: defaultProps({
     prefixCls: 'ant-tooltip',
-    trigger: oneOfType(String, Array),
+    trigger: oneOfType([String, Array]),
     placement: 'right',
     onVisibleChange: () => {},
     afterVisibleChange: () => {},

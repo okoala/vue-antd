@@ -33,7 +33,7 @@ export default {
   props: defaultProps({
     openAnimation: Object,
     prefixCls: String,
-    header: oneOfType(String, Number),
+    header: oneOfType([String, Number]),
     isActive: false,
     onItemClick: () => {}
   }),
