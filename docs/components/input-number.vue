@@ -26,6 +26,9 @@
       <v-button @click="_toggle" type="primary">Toggle disabled</v-button>
     </div>
   </example>
+  <example title="大步数">
+    <v-input-number default-value="1" step="10"></v-input-number>
+  </example>
 </demo>
 
 ## API

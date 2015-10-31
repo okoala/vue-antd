@@ -59,12 +59,12 @@ export default {
     min: oneOfType([Number, String], -Infinity),
     size: oneOfType([Number, String]),
     value: oneOfType([Number, String]),
+    step: oneOfType([Number, String], 1),
     defaultValue: oneOfType([Number, String], ''),
     autoFocus: false,
     onChange: () => {},
     readOnly: false,
     disabled: false,
-    step: 1
   }),
 
   data () {
@@ -168,7 +168,7 @@ export default {
       if (this.disabled) return
 
       let value = Number(this.value)
-      const stepNum = this.step
+      const stepNum = Number(this.step)
 
       if (isNaN(value)) return
       if (type == 'down') value -= stepNum
