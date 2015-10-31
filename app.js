@@ -7363,7 +7363,7 @@
 	        title: '操作',
 	        dataIndex: '',
 	        render: function render(text, record) {
-	          return '<span :class="{\'item\', true}">\n            <a href="javascript:;" @click="edit">编辑</a>\n            <span class="ant-divider"></span>\n            <a href="javascript:;" @click="del">删除</a>\n          </span>';
+	          return '<span class="item">\n            <a href="javascript:;" @click="edit">编辑</a>\n            <span class="ant-divider"></span>\n            <a href="javascript:;" @click="del">删除</a>\n          </span>';
 	        }
 	      }],
 	      dataSource: [{
@@ -7621,12 +7621,10 @@
 	        {
 	          name: 'progress',
 	          desc: '进度条'
-	        },
-	        // {
-	        //   name: 'table',
-	        //   desc: '表格'
-	        // },
-	        {
+	        }, {
+	          name: 'table',
+	          desc: '表格'
+	        }, {
 	          name: 'tag',
 	          desc: '标签'
 	        }, {
@@ -8958,10 +8956,6 @@
 	    };
 	  },
 	
-	  ready: function ready() {
-	    console.log(this.dataSource);
-	  },
-	
 	  computed: {
 	
 	    isEmpty: function isEmpty() {
@@ -8988,7 +8982,6 @@
 	  },
 	
 	  ready: function ready() {
-	    console.log('true');
 	    this.compileRender();
 	  },
 	
@@ -9000,15 +8993,12 @@
 	        if (this.columns[i].render) {
 	          for (var j = 0; j < this.dataSource.length; j++) {
 	            var template = this.columns[i].render();
-	            var CustomRender = _vue2['default'].extend({
-	              template: template
-	            });
-	
+	            var cell = document.createElement('DIV');
+	            cell.innerHTML = template;
+	            this.$parent.$compile(cell);
 	            var _el = $el.children[j].children[i];
-	
-	            // new CustomRender().$mount(_el)
+	            _el.appendChild(cell);
 	          }
-	          // $el
 	        }
 	      }
 	    }
