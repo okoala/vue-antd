@@ -77,7 +77,7 @@ export function defaultProps (props) {
 export function oneOfType (validList, defaultValue) {
   let validaObj = {}
 
-  if (defaultValue) {
+  if (defaultValue != null) {
     validaObj.default = defaultValue
   }
 
@@ -96,7 +96,7 @@ export function oneOfType (validList, defaultValue) {
 export function oneOf (validList, defaultValue) {
   let validaObj = {}
 
-  if (defaultValue) {
+  if (defaultValue != null) {
     validaObj.default = defaultValue
   }
 
