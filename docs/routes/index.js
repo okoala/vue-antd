@@ -16,6 +16,10 @@ export function configRouter (router) {
           component: require('../views/docs/download.vue')
         },
 
+        'affix': {
+          component: require('../components/affix.vue')
+        },
+
         'alert': {
           component: require('../components/alert.vue')
         },

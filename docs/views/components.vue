@@ -223,10 +223,10 @@ export default {
           // }
         ],
         other: [
-          // {
-          //   name: 'affix',
-          //   desc: '固钉'
-          // },
+          {
+            name: 'affix',
+            desc: '固钉'
+          }
           // {
           //   name: 'enter-animation',
           //   desc: '进场动画'
