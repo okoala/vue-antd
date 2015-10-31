@@ -1,7 +1,7 @@
 <template>
 <header id="header" class="clearfix">
   <a class="logo" href="..">
-    <img width="60" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg">
+    <img width="60" src="http://s2.upload.tf/Gbv.png">
     Vue Antd
   </a>
   <nav class="nav">
@@ -69,7 +69,6 @@ a.logo {
   line-height: 46px;
   margin: 17px 48px 17px 40px;
   transition: margin 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s, width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s, height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
-  text-transform: uppercase;
   font-size: 18px;
   font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",sans-serif;
   color: #6EB4E0;
