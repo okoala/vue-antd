@@ -38,14 +38,9 @@ export default {
     },
 
     spinWrapClasses () {
-      const sizeCls = ({
-        'large': 'lg',
-        'small': 'sm'
-      })[this.size] || ''
-
       return classnames({
         [`${this.prefixCls}-wrapper`]: 1,
-        [`${this.prefixCls}-${sizeCls}`]: !!sizeCls
+        [`${this.prefixCls}-${this.size}`]: !!this.size
       })
     },
 
