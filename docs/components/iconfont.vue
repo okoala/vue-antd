@@ -7,7 +7,7 @@
 
 ## 图标的命名规范
 
-我们为每个图标赋予了语义化的命名。只需在 ```<v-icon>``` 标签内，制定对应的 type 属性即可。
+我们为每个图标赋予了语义化的命名。只需在 ```<v-icon></v-icon>``` 标签内，制定对应的 type 属性即可。
 
 不同 type 命名规则如下:
 
@@ -28,7 +28,7 @@
 使用 ```<v-icon>``` 标签申明组件，设置对应的 type 设置需要渲染的图标，示例代码如下:
 
 ```html
-<v-icon type="link" >
+<v-icon type="link" ></v-icon>
 ```
 
 > 点击图标复制代码。
@@ -572,8 +572,6 @@ ul.anticons-list li.copied:after {
   display: block;
   text-align: center;
   word-wrap: break-word;
-  transform: scale(0.83);
-  font-family: Consolas;
 }
 </style>
 
@@ -588,7 +586,7 @@ export default {
       const client = new ZeroClipboard(item)
 
       client.on("copy", event => {
-        client.setText('<v-icon type="' + item.querySelectorAll('.anticon-class')[0].innerHTML + '">')
+        client.setText('<v-icon type="' + item.querySelectorAll('.anticon-class')[0].innerHTML + '"></v-icon>')
       })
 
       client.on("ready", readyEvent => {
