@@ -82,11 +82,11 @@ export default {
           {
             name: 'iconfont',
             desc: '字体图标'
+          },
+          {
+            name: 'layout',
+            desc: '布局'
           }
-          // {
-          //   name: 'layout',
-          //   desc: '布局'
-          // }
         ],
         form: [
           {
