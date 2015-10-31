@@ -1,5 +1,5 @@
 <template>
-<div :class="classes" :style="style">
+<div :class="wrapClasses" style="width: 90px">
   <div :class="prefixCls + '-handler-wrap'">
     <a unselectable="unselectable"
        ref="up"
@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { defaultProps } from '../../utils'
+import { defaultProps, oneOfType } from '../../utils'
 import classnames from 'classnames'
 
 function isValueNumber (value) {
@@ -55,14 +55,11 @@ function preventDefault (e) {
 export default {
   props: defaultProps({
     prefixCls: 'ant-input-number',
-
-    className: String,
-    max: Infinity,
-    min: -Infinity,
-    style: {},
-    size: String,
-    value: String,
-    defaultValue: '',
+    max: oneOfType([Number, String], Infinity),
+    min: oneOfType([Number, String], -Infinity),
+    size: oneOfType([Number, String]),
+    value: oneOfType([Number, String]),
+    defaultValue: oneOfType([Number, String], ''),
     autoFocus: false,
     onChange: () => {},
     readOnly: false,
@@ -81,10 +78,18 @@ export default {
   },
 
   computed: {
-    classes () {
+    sizeClass () {
+      if (this.size === 'large') {
+        return 'ant-input-number-lg'
+      } else if (this.size === 'small') {
+        return 'ant-input-number-sm'
+      }
+    },
+
+    wrapClasses () {
       return classnames({
         [this.prefixCls]: 1,
-        [this.className]: !!this.className,
+        [this.sizeClass]: !!this.sizeClass,
         [`${this.prefixCls}-disabled`]: this.disabled,
         [`${this.prefixCls}-focused`]: this.focused
       })
@@ -109,11 +114,7 @@ export default {
   },
 
   compiled () {
-    if (this.size === 'large') {
-      this.sizeClass = 'ant-input-number-lg'
-    } else if (this.size === 'small') {
-      this.sizeClass = 'ant-input-number-sm'
-    }
+
     if (this.value == null) {
       this.value = this.defaultValue
     }
@@ -165,7 +166,7 @@ export default {
     _step (type, e) {
       if (this.disabled) return
 
-      const value = this.value
+      let value = this.value
       const stepNum = this.step
 
       if (isNaN(value)) return
