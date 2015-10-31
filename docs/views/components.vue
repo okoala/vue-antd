@@ -109,10 +109,10 @@ export default {
             name: 'radio',
             desc: '单选框'
           },
-          // {
-          //   name: 'select',
-          //   desc: '选择器'
-          // },
+          {
+            name: 'select',
+            desc: '选择器'
+          },
           // {
           //   name: 'slider',
           //   desc: '滑动输入条'

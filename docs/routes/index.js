@@ -60,6 +60,10 @@ export function configRouter (router) {
           component: require('../components/radio.vue')
         },
 
+        'select': {
+          component: require('../components/select.vue')
+        },
+
         'switch': {
           component: require('../components/switch.vue')
         },
