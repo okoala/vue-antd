@@ -86,6 +86,9 @@
   .user-select(none);
   .transition(all .3s @ease-in-out);
   transform: translate3d(0, 0, 0);
+  // Fix for ie8 border-radius
+  // http://css3pie.com/documentation/known-issues/#z-index
+  position: relative\0;
 
   > .@{iconfont-css-prefix} {
     line-height: 1;
@@ -253,15 +256,15 @@
     padding-left: 8px;
   }
 
-  > & {
+ & > & {
     float: left;
   }
 
-  > &:not(:first-child):not(:last-child) > .@{btnClassName} {
+ & > &:not(:first-child):not(:last-child) > .@{btnClassName} {
     border-radius: 0;
   }
 
-  > &:first-child:not(:last-child) {
+ & > &:first-child:not(:last-child) {
     > .@{btnClassName}:last-child {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
@@ -269,7 +272,7 @@
     }
   }
 
-  > &:last-child:not(:first-child) > .@{btnClassName}:first-child {
+ & > &:last-child:not(:first-child) > .@{btnClassName}:first-child {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     padding-left: 8px;
