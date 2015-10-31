@@ -1,12 +1,10 @@
 <template>
-<Select
-  :class="wrapClassName"
-  :notFoundContent="notFoundContent"></Select>
+
 </template>
 
 <script>
-import { defaultProps, oneOfType } from '../utils'
-import Select from './base/select'
+import { defaultProps, oneOfType } from '../../utils'
+// import Select from './base/select'
 
 export default {
   props: defaultProps({
@@ -32,8 +30,6 @@ export default {
     onDeselect: () => {},
     onChange: () => {}
   }),
-
-  components: { Select },
 
   computed: {
     wrapClassName () {

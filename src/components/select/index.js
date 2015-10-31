@@ -1,7 +1,6 @@
-import Select from './base/select'
-import AntSelect from './select.vue'
+import vSelect from './Select.vue'
+import vOption from './Option.vue'
 
-AntSelect.Option = Select.Option
-AntSelect.OptGroup = Select.OptGroup
+vSelect.vOption = vOption
 
-export default AntSelect
+export default vSelect
