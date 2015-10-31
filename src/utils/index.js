@@ -82,13 +82,12 @@ export function oneOfType (validList, defaultValue) {
   }
 
   validaObj.validator = function (value) {
-      for (let i = 0; i < args.length; i++) {
-        if (toString.call(value).indexOf(args[i].name) > -1) {
-          return true
-        }
+    for (let i = 0; i < validList.length; i++) {
+      if (toString.call(value).indexOf(validList[i].name) > -1) {
+        return true
       }
-      return false
     }
+    return false
   }
 
   return validaObj
