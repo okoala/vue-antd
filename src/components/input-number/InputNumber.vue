@@ -3,7 +3,7 @@
   <div :class="prefixCls + '-handler-wrap'">
     <a unselectable="unselectable"
        ref="up"
-       @click="upDisabledClass ? noop : up"
+       @click="_up"
        @mouse.down="preventDefault"
        :class="prefixCls + '-handler ' + prefixCls + '-handler-up ' + upDisabledClass">
         <span unselectable="unselectable"
@@ -13,7 +13,7 @@
     <a unselectable="unselectable"
        ref="down"
        @mouse.down="preventDefault"
-       @click="downDisabledClass ? noop : down"
+       @click="_down"
        :class="prefixCls + '-handler ' + prefixCls + '-handler-down ' + downDisabledClass">
       <span unselectable="unselectable"
             :class="prefixCls + '-handler-down-inner'"
@@ -102,13 +102,15 @@ export default {
         val = Number(val)
         if (val >= this.max) {
           this.upDisabledClass = `${this.prefixCls}-handler-up-disabled`
-        }
-        if (val <= this.min) {
-          this.downDisabledClass = `${prefixCls}-handler-up-disabled`
+        } else if (val <= this.min) {
+          this.downDisabledClass = `${this.prefixCls}-handler-down-disabled`
+        } else {
+          this.upDisabledClass = ''
+          this.downDisabledClass = ''
         }
       } else {
         this.upDisabledClass = `${this.prefixCls}-handler-up-disabled`
-        this.downDisabledClass = `${this.prefixCls}-handler-up-disabled`
+        this.downDisabledClass = `${this.prefixCls}-handler-down-disabled`
       }
     }
   },
@@ -122,10 +124,9 @@ export default {
   },
 
   methods: {
-    _setValue (value, callback) {
+    _setValue (value) {
       this.value = value
       this.onChange(value)
-      callback()
     },
 
     _onChange (event) {
@@ -166,7 +167,7 @@ export default {
     _step (type, e) {
       if (this.disabled) return
 
-      let value = this.value
+      let value = Number(this.value)
       const stepNum = this.step
 
       if (isNaN(value)) return
@@ -181,10 +182,16 @@ export default {
     },
 
     _down (e) {
+      if (this.downDisabledClass) {
+        return
+      }
       this._step('down', e)
     },
 
     _up (e) {
+      if (this.upDisabledClass) {
+        return
+      }
       this._step('up', e)
     }
   }
