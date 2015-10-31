@@ -1,8 +1,8 @@
 <template>
 <header id="header" class="clearfix">
   <a class="logo" href="..">
-    <img width="50" src="http://s2.upload.tf/Gbv.png">
-    Vue Antd
+    <img width="50" src="http://s2.upload.tf/Hbv.png">
+    <span>Vue Antd<span>
   </a>
   <nav class="nav">
     <ul>
@@ -77,7 +77,6 @@ a.logo {
 .logo img {
   float: left;
   margin-right: 15px;
-  -webkit-animation: rotateCircleBack 0.6s 1 ease-in-out;
   animation: rotateCircleBack 0.6s 1 ease-in-out;
 }
 
@@ -120,5 +119,31 @@ a.logo {
   background: #6EB4E0;
   display: none;
 }
+
+@-webkit-keyframes rotateCircleBack {
+  0% {
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: rotate(360deg);
+  }
+
+  100% {
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+
+@keyframes rotateCircleBack {
+  0% {
+    transform-origin: 50% 50%;
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+}
+
 
 </style>
