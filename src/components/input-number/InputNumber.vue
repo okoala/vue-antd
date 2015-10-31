@@ -41,10 +41,8 @@
 </template>
 
 <script>
-import { defaultProps } from '../utils'
-import { classSet } from 'rc-util'
-
-function noop () {}
+import { defaultProps } from '../../utils'
+import classnames from 'classnames'
 
 function isValueNumber (value) {
   return (/^-?\d+?$/).test(value + '')
@@ -57,6 +55,7 @@ function preventDefault (e) {
 export default {
   props: defaultProps({
     prefixCls: 'ant-input-number',
+
     className: String,
     max: Infinity,
     min: -Infinity,
@@ -65,7 +64,7 @@ export default {
     value: String,
     defaultValue: '',
     autoFocus: false,
-    onChange: noop,
+    onChange: () => {},
     readOnly: false,
     disabled: false,
     step: 1
@@ -74,7 +73,7 @@ export default {
   data () {
     return {
       sizeClass: '',
-      noop: noop,
+      noop: () => {},
       preventDefault: preventDefault,
       upDisabledClass: '',
       downDisabledClass: ''
@@ -83,8 +82,8 @@ export default {
 
   computed: {
     classes () {
-      return classSet({
-        [this.prefixCls]: true,
+      return classnames({
+        [this.prefixCls]: 1,
         [this.className]: !!this.className,
         [`${this.prefixCls}-disabled`]: this.disabled,
         [`${this.prefixCls}-focused`]: this.focused
@@ -96,11 +95,9 @@ export default {
     value (val) {
       if (isValueNumber(val)) {
         val = Number(val)
-
         if (val >= this.max) {
           this.upDisabledClass = `${this.prefixCls}-handler-up-disabled`
         }
-
         if (val <= this.min) {
           this.downDisabledClass = `${prefixCls}-handler-up-disabled`
         }
@@ -109,7 +106,7 @@ export default {
         this.downDisabledClass = `${this.prefixCls}-handler-up-disabled`
       }
     }
-  }
+  },
 
   compiled () {
     if (this.size === 'large') {
@@ -117,11 +114,9 @@ export default {
     } else if (this.size === 'small') {
       this.sizeClass = 'ant-input-number-sm'
     }
-
     if (this.value == null) {
       this.value = this.defaultValue
     }
-
     this.focused = this.autoFocus
   },
 
@@ -139,10 +134,8 @@ export default {
         this._setValue(val)
       } else if (isValueNumber(val)) {
         val = Number(val)
-
         if (val < this.min) return
         if (val > this.max) return
-
         this._setValue(val)
       } else if (val === '-') {
         if (this.min >= 0) return
@@ -164,7 +157,6 @@ export default {
 
     _onBlur () {
       this.focused = false
-
       if (this.value === '-') {
         this._setValue('')
       }
@@ -177,7 +169,6 @@ export default {
       const stepNum = this.step
 
       if (isNaN(value)) return
-
       if (type == 'down') value -= stepNum
       else if (type === 'up') value += stepNum
 

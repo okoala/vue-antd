@@ -101,10 +101,10 @@ export default {
           //   name: 'form',
           //   desc: '表单'
           // },
-          // {
-          //   name: 'input-number',
-          //   desc: '数字输入框'
-          // },
+          {
+            name: 'input-number',
+            desc: '数字输入框'
+          },
           {
             name: 'radio',
             desc: '单选框'

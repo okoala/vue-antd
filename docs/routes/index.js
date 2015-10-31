@@ -44,6 +44,10 @@ export function configRouter (router) {
           component: require('../components/iconfont.vue')
         },
 
+        'input-number': {
+          component: require('../components/input-number.vue')
+        },
+
         'layout': {
           component: require('../components/layout.vue')
         },
