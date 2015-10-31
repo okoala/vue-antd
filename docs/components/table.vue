@@ -92,7 +92,7 @@ export default {
         title: '操作',
         dataIndex: '',
         render: (text, record) => {
-          return `<span :class="{'item', true}">
+          return `<span class="item">
             <a href="javascript:;" @click="edit">编辑</a>
             <span class="ant-divider"></span>
             <a href="javascript:;" @click="del">删除</a>

@@ -69,10 +69,6 @@ export default {
     }
   },
 
-  ready () {
-    console.log(this.dataSource)
-  },
-
   computed: {
 
     isEmpty () {
@@ -99,7 +95,6 @@ export default {
   },
 
   ready () {
-    console.log('true')
     this.compileRender()
   },
 
@@ -111,15 +106,12 @@ export default {
         if (this.columns[i].render) {
           for (let j = 0; j < this.dataSource.length; j++) {
             const template = this.columns[i].render()
-            const CustomRender = Vue.extend({
-              template: template
-            })
-
+            const cell = document.createElement('DIV')
+            cell.innerHTML = template
+            this.$parent.$compile(cell)
             const _el = $el.children[j].children[i]
-
-            // new CustomRender().$mount(_el)
+            _el.appendChild(cell)
           }
-          // $el
         }
       }
     }

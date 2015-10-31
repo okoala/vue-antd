@@ -175,10 +175,10 @@ export default {
             name: 'progress',
             desc: '进度条'
           },
-          // {
-          //   name: 'table',
-          //   desc: '表格'
-          // },
+          {
+            name: 'table',
+            desc: '表格'
+          },
           {
             name: 'tag',
             desc: '标签'

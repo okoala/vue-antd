@@ -1,7 +1,7 @@
 import DataSource from './DataSource'
-import AntTable from './Table.vue'
+import vTable from './Table.vue'
 
-AntTable.DataSource = DataSource
+vTable.DataSource = DataSource
 
-export default AntTable
+export default vTable
 
