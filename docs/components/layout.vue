@@ -72,7 +72,55 @@
 我们的栅格化系统支持 Flex 布局，允许子元素在父节点内的水平对齐方式 - 居左、居中、居右、等宽排列、分散排列。子元素与子元素之间，支持顶部对齐、垂直居中对齐、底部对齐的方式。同时，支持使用 order 来定义元素的排列顺序。
 
 Flex 布局是基于 24 栅格来定义每一个“盒子”的宽度，但排版则不拘泥于栅格。
+
+## 组件演示
+
+<demo>
+  <example title="基础布局">
+    <v-row>
+      <v-col span="12">.col-12</v-col>
+      <v-col span="12">.col-12</v-col>
+    </v-row>
+    <v-row class="testRowClassName">
+      <v-col span="8">.col-8</v-col>
+      <v-col span="8">.col-8</v-col>
+      <v-col span="8" class="testColClassName">.col-8</v-col>
+    </v-row>
+    <v-row>
+      <v-col span="6">.col-6</v-col>
+      <v-col span="6">.col-6</v-col>
+      <v-col span="6">.col-6</v-col>
+      <v-col span="6">.col-6</v-col>
+    </v-row>
+  </example>
+  <example title="左右偏移">
+
+  </example>
+  <example title="布局排序">
+
+  </example>
+  <example title="Flex布局">
+
+  </example>
+  <example title="Flex对齐">
+
+  </example>
+  <example title="Flex排序">
+
+  </example>
+</demo>
 </template>
+
+<script>
+import { vRow, vCol } from '../../src/components/layout'
+
+export default {
+
+  components: { vRow, vCol }
+
+}
+
+</script>
 
 <style>
 .demo-row {
@@ -133,5 +181,11 @@ Flex 布局是基于 24 栅格来定义每一个“盒子”的宽度，但排�
 }
 .hight-80 {
   height: 80px;
+}
+.testRowClassName {
+    background: #f0f0f0;
+}
+div.testColClassName {
+    background: rgba(24, 115, 216, 0.9);
 }
 </style>
