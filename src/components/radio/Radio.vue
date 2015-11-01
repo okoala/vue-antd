@@ -24,7 +24,7 @@ export default {
 
     checked: Boolean,
     defaultChecked: false,
-    value: oneOfType([String, Number]),
+    value: oneOfType([String, Number, Boolean]),
     onChange: () => {},
 
     disabled: Boolean,

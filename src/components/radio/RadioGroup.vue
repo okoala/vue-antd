@@ -12,8 +12,8 @@ export default {
   props: defaultProps({
     prefixCls: 'ant-radio-group',
     type: 'radio', // or button
-    value: oneOfType([String, Number]),
-    defaultValue: oneOfType([String, Number]),
+    value: oneOfType([String, Number, Boolean]),
+    defaultValue: oneOfType([String, Number, Boolean]),
     radios: [],
     onChange: () => {}
   }),
