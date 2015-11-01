@@ -26,9 +26,11 @@ Table 有两种模式，本地数据和远程数据模式。
 
 
 ## 组件演示
-<div>
-  <v-table :columns="columns" :data-source="dataSource"></v-table>
-</div>
+<demo>
+  <example title="简单实用">
+    <v-table :columns="columns" :data-source="dataSource"></v-table>
+  </example>
+</demo>
 
 
 ## API

@@ -72,7 +72,7 @@ export default {
   computed: {
 
     isEmpty () {
-      return this.dataSource && !!this.dataSource.length
+      return this.dataSource && !this.dataSource.length
     },
 
     tableClass () {
