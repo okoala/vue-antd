@@ -96,11 +96,11 @@ export default {
       }, {
         title: '操作',
         dataIndex: '',
-        render: (text, record) => {
+        render: (text, record, index) => {
           return `<span class="item">
-                    <a href="javascript:;" @click="edit(record)">编辑</a>
+                    <a href="javascript:;" @click="edit('${record.name}')">编辑</a>
                     <span class="ant-divider"></span>
-                    <a href="javascript:;" @click="del(record)">删除</a>
+                    <a href="javascript:;" @click="del('${record.name}')">删除</a>
                   </span>`
         }
       }],
@@ -130,12 +130,12 @@ export default {
   },
 
   methods: {
-    edit (item) {
-      alert('编辑#名字#' + item.name)
+    edit (name) {
+      alert('编辑#名字#' + name)
     },
 
-    del (item) {
-       alert('删除#名字#' + item.name)
+    del (name) {
+       alert('删除#名字#' + name)
     }
   }
 

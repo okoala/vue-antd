@@ -117,12 +117,13 @@ export default {
           if (renderFn) {
             for (let j = 0; j < this.dataSource.length; j++) {
               const value = this.dataSource[j]
-              const template = renderFn(value[dataIndex], value)
+              const template = renderFn(value[dataIndex], value, j)
               const cell = document.createElement('DIV')
               cell.innerHTML = template
               // TODO
               // 这一部分的写法还是需要商榷下
               this.$parent.$compile(cell)
+
               const _el = $el.children[j].children[i]
               _el.appendChild(cell)
             }
