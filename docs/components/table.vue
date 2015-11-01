@@ -88,7 +88,6 @@ export default {
         title: '年龄',
         dataIndex: 'age',
         render: (text, record) => {
-          console.log(text)
           return `<a href="javascript:;">${text}</a>`
         }
       }, {
@@ -99,27 +98,27 @@ export default {
         dataIndex: '',
         render: (text, record) => {
           return `<span class="item">
-            <a href="javascript:;" @click="edit">编辑</a>
-            <span class="ant-divider"></span>
-            <a href="javascript:;" @click="del">删除</a>
-          </span>`
+                    <a href="javascript:;" @click="edit(record)">编辑</a>
+                    <span class="ant-divider"></span>
+                    <a href="javascript:;" @click="del(record)">删除</a>
+                  </span>`
         }
       }],
       dataSource: [{
         key: '1',
-        name: '胡彦斌',
-        age: 32,
+        name: 'LISAN',
+        age: 31,
         address: '西湖区湖底公园1号'
       }, {
         key: '2',
         name: '胡彦祖',
         age: 42,
-        address: '西湖区湖底公园1号'
+        address: '西湖区湖底公园2号'
       }, {
         key: '3',
         name: '李大嘴',
-        age: 32,
-        address: '西湖区湖底公园1号'
+        age: 54,
+        address: '西湖区湖底公园3号'
       }]
     }
   },
@@ -131,12 +130,12 @@ export default {
   },
 
   methods: {
-    edit () {
-      alert('edit');
+    edit (item) {
+      alert('编辑#名字#' + item.name)
     },
 
-    del () {
-      alert('del');
+    del (item) {
+       alert('删除#名字#' + item.name)
     }
   }
 

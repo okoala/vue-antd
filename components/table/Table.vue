@@ -4,7 +4,7 @@
     <div v-if="useFixedHeader" :class="prefixCls + '-header'">
       <table>
         <colgroup>
-          <col v-if="expandIconAsCell" :class="prefixCls + '-expand-icon-col'" key="rc-table-expand-icon-col"></col>
+          <col v-if="expandIconAsCell" :class="prefixCls + '-expand-icon-col'"></col>
           <col v-for="col in columns" :style="{'width': col.width}"></col>
         </colgroup>
         <thead :class="prefixCls + '-thead'">
@@ -17,7 +17,7 @@
     <div :class="prefixCls + '-body'" :style="bodyStyle">
       <table>
         <colgroup>
-          <col v-if="expandIconAsCell" :class="prefixCls + '-expand-icon-col'" key="rc-table-expand-icon-col"></col>
+          <col v-if="expandIconAsCell" :class="prefixCls + '-expand-icon-col'"></col>
           <col v-for="col in columns" :style="{'width': col.width}"></col>
         </colgroup>
         <thead :class="prefixCls + '-thead'">
@@ -122,7 +122,7 @@ export default {
               cell.innerHTML = template
               // TODO
               // 这一部分的写法还是需要商榷下
-              this.$parent.$compile(cell, null, extend({}, this.$parent, {text: value[dataIndex]}, {record: value}))
+              this.$parent.$compile(cell)
               const _el = $el.children[j].children[i]
               _el.appendChild(cell)
             }
