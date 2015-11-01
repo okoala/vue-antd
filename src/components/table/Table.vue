@@ -94,6 +94,12 @@ export default {
     }
   },
 
+  watch: {
+    dataSource (value) {
+      this.compileRender()
+    }
+  },
+
   ready () {
     this.compileRender()
   },
