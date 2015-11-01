@@ -6,7 +6,7 @@
 
 <script>
 import { defaultProps, oneOf } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -28,7 +28,7 @@ export default {
         'small': 'sm'
       })[this.size] || ''
 
-      return classnames({
+      return cx({
         [this.prefixCls]: 1,
         [`${this.prefixCls}-${this.type}`]: !!this.type,
         [`${this.prefixCls}-${this.shape}`]: !!this.shape,

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import classnames from 'classnames'
+import cx from 'classnames'
 import { defaultProps, oneOf } from '../../utils'
 import vIcon from '../iconfont'
 
@@ -30,7 +30,7 @@ export default {
 
   computed: {
     wrapClasses () {
-      return classnames({
+      return cx({
         [this.prefixCls]: 1,
         [`${this.prefixCls}-${this.color}`]: this.color,
         [`${this.prefixCls}-close`]: this.closing

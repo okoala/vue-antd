@@ -22,7 +22,7 @@
 <script>
 import { defaultProps, oneOf } from '../../utils'
 import vIcon from '../iconfont'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -38,7 +38,7 @@ export default {
 
   computed: {
     wrapClasses () {
-      return classnames({
+      return cx({
         [`${this.prefixCls}-line-wrap`]: 1,
         [`clearfix`]: 1,
         [`status-${this.status}`]: this.status,

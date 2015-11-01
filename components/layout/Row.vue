@@ -4,7 +4,7 @@
 
 <script>
 import { defaultProps } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -16,7 +16,7 @@ export default {
 
   computed: {
     wrapClasses () {
-      return classnames({
+      return cx({
         [`row`]: 1,
         [`row-${this.type}`]: this.type,
         [`row-${this.type}-${this.align}`]: this.align,

@@ -8,7 +8,7 @@
 
 <script>
 import { defaultProps, oneOfType } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 function getScroll (w, top) {
   let ret = w['page' + (top ? 'Y' : 'X') + 'Offset']
@@ -56,7 +56,7 @@ export default {
 
   computed: {
     wrapClasses () {
-      return classnames({
+      return cx({
         [this.className]: !!this.className,
         [this.prefixCls]: this.affix
       })

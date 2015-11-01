@@ -17,7 +17,7 @@
 
 <script>
 import { defaultProps } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -33,14 +33,14 @@ export default {
 
   computed: {
     wrapClasses () {
-      return classnames({
+      return cx({
         [this.className]: !!this.className,
         [`${this.className}-checked`]: this.checked
       })
     },
 
     ckClasses () {
-      return classnames({
+      return cx({
         [this.className]: !!this.className,
         [this.prefixCls]: 1,
         [`${this.prefixCls}-checked`]: this.checked,

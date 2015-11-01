@@ -25,7 +25,7 @@
 <script>
 import { defaultProps, oneOf } from '../../utils'
 import vIcon from '../iconfont'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 
 const statusColorMap = {

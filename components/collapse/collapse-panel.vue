@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import classnames from 'classnames'
+import cx from 'classnames'
 import Animate from './base/animate'
 import { defaultProps, oneOfType } from '../utils'
 
@@ -40,7 +40,7 @@ export default {
   components: { Animate },
   computed: {
     contentCls () {
-      return classnames({
+      return cx({
         [`${prefixCls}-content`]: true,
         [`${prefixCls}-content-active`]: this.isActive
       })

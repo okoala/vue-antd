@@ -18,7 +18,7 @@
 
 <script>
 import { defaultProps } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 import AjaxUpload from './AjaxUploader.vue'
 import UploadList from './UploadList.vue'
 import assign from 'object-assign'
@@ -65,7 +65,7 @@ export default {
     },
 
     wrapClasses () {
-      return classnames({
+      return cx({
         [this.prefixCls]: 1,
         [`${this.prefixCls}-drag`]: this.isDrag,
         [`${this.prefixCls}-select`]: !this.isDrag
@@ -73,7 +73,7 @@ export default {
     },
 
     containerClasses () {
-      return classnames({
+      return cx({
         [`${this.prefixCls}-drag-container`]: this.isDrag
       })
     }

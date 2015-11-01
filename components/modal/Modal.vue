@@ -6,7 +6,7 @@
 
 <script>
 import { defaultProps, KeyCode } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 let mousePosition
 let mousePositionEventBinded
@@ -71,7 +71,7 @@ export default {
 
   computed: {
     wrapClasses () {
-      return classnames({
+      return cx({
         [`${this.prefixCls}-wrap`]: 1,
         [`${this.prefixCls}-wrap-hidden`]: !this.visible
       })

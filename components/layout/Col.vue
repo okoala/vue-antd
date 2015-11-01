@@ -4,7 +4,7 @@
 
 <script>
 import { defaultProps, oneOfType } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -18,7 +18,7 @@ export default {
 
   computed: {
     wrapClasses () {
-      return classnames({
+      return cx({
         [`col-${this.span}`]: this.span,
         [`col-order-${this.order}`]: this.order,
         [`col-offset-${this.offset}`]: this.offset,

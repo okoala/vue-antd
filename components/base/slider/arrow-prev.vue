@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: {

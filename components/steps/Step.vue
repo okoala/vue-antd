@@ -16,7 +16,7 @@
 
 <script>
 import { defaultProps } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -38,7 +38,7 @@ export default {
     },
 
     wrapClasses () {
-      return classnames({
+      return cx({
         [`${this.prefixCls}-item`]: 1,
         [`${this.prefixCls}-item-last`]: this.stepLast,
         [`${this.prefixCls}-status-${this.status}`]: 1,

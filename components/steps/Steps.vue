@@ -6,7 +6,7 @@
 
 <script>
 import { defaultProps } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -29,7 +29,7 @@ export default {
 
   computed: {
     wrapClasses () {
-      return classnames({
+      return cx({
         [this.prefixCls]: 1,
         [`${this.prefixCls}-small`]: this.size === 'small',
         [`${this.prefixCls}-vertical`]: this.direction === 'vertical'

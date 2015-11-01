@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import classnames from 'classnames'
+import cx from 'classnames'
 
 const getDotCount = (spec) => {
   let dots

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import classnames from 'classnames'
+import cx from 'classnames'
 import { defaultProps, oneOfType } from '../../../utils'
 
 export default {
@@ -26,7 +26,7 @@ export default {
 
   computed: {
     wrapClassName () {
-      return classnames({
+      return cx({
         [this.className]: !!this.className,
         [this.prefixCls]: 1,
         [`${this.prefixCls}-checked`]: this.checked,

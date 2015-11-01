@@ -42,7 +42,7 @@
 
 <script>
 import { defaultProps, oneOfType } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 function isValueNumber (value) {
   return (/^-?\d+?$/).test(value + '')
@@ -87,7 +87,7 @@ export default {
     },
 
     wrapClasses () {
-      return classnames({
+      return cx({
         [this.prefixCls]: 1,
         [this.sizeClass]: !!this.sizeClass,
         [`${this.prefixCls}-disabled`]: this.disabled,

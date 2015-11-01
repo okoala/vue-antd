@@ -15,7 +15,7 @@
 
 <script>
 import { defaultProps, oneOf } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -32,20 +32,20 @@ export default {
     },
 
     loadingClasses () {
-      return classnames({
+      return cx({
         'ant-spin-nested-loading': !this.hide && this.nestedStatus
       })
     },
 
     spinWrapClasses () {
-      return classnames({
+      return cx({
         [`${this.prefixCls}-wrapper`]: 1,
         [`${this.prefixCls}-${this.size}`]: !!this.size
       })
     },
 
     spinClasses () {
-      return classnames({
+      return cx({
         [this.prefixCls]: 1,
         [this.className]: !!this.className
       })

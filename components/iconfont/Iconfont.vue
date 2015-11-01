@@ -6,7 +6,7 @@
 
 <script>
 import { defaultProps } from '../../utils'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export default {
   props: defaultProps({
@@ -19,7 +19,7 @@ export default {
 
   computed: {
     iconClasses () {
-      return classnames({
+      return cx({
         [this.className]: !!this.className,
         [`anticon`]: 1,
         [`anticon-${this.type}`]: this.type
