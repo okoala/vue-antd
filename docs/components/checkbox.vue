@@ -42,8 +42,8 @@
 </template>
 
 <script>
-import vCheckbox from '../../src/components/checkbox'
-import vButton from '../../src/components/button'
+import vCheckbox from '../../components/checkbox'
+import vButton from '../../components/button'
 
 export default {
   data () {

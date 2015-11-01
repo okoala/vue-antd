@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import vSelect, { vOption } from '../../src/components/select'
+import vSelect, { vOption } from '../../components/select'
 
 export default {
 

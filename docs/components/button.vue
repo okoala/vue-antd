@@ -190,8 +190,8 @@ onClick | `click` 事件的 handler | Function | `function() {}`
 </template>
 
 <script>
-import vButton, { vButtonGroup } from '../../src/components/button'
-import vIcon from '../../src/components/iconfont'
+import vButton, { vButtonGroup } from '../../components/button'
+import vIcon from '../../components/iconfont'
 
 export default {
   data () {

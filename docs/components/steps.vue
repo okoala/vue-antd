@@ -107,8 +107,8 @@
 </template>
 
 <script>
-import vSteps, { vStep } from '../../src/components/steps'
-import vButton from '../../src/components/button'
+import vSteps, { vStep } from '../../components/steps'
+import vButton from '../../components/button'
 
 export default {
   data () {

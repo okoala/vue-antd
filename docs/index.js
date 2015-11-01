@@ -7,7 +7,7 @@ import App from './views/app.vue'
 
 require('es6-promise').polyfill()
 
-import '../src/style/index.less'
+import '../style/index.less'
 
 Vue.config.debug = true
 

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { defaultProps } from '../../../src/utils'
+import { defaultProps } from '../../utils'
 import classnames from 'classnames'
 
 export default {

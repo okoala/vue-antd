@@ -1,5 +1,5 @@
 import './style/index.less'
-import meta from '../package.json'
+import meta from './package.json'
 import * as utils from './utils'
 
 window.matchMedia = window.matchMedia || function () {

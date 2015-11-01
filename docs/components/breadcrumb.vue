@@ -49,8 +49,8 @@
 </template>
 
 <script>
-import vBreadcrumb, { BreadcrumbItem as vBreadcrumbItem } from '../../src/components/breadcrumb'
-import vIcon from '../../src/components/iconfont'
+import vBreadcrumb, { BreadcrumbItem as vBreadcrumbItem } from '../../components/breadcrumb'
+import vIcon from '../../components/iconfont'
 
 export default {
 

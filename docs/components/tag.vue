@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import vTag from '../../src/components/tag'
+import vTag from '../../components/tag'
 
 export default {
 

@@ -104,9 +104,9 @@
 </template>
 
 <script>
-import vUpload from '../../src/components/upload'
-import vIcon from '../../src/components/iconfont'
-import vButton from '../../src/components/button'
+import vUpload from '../../components/upload'
+import vIcon from '../../components/iconfont'
+import vButton from '../../components/button'
 
 export default {
   data () {

@@ -36,8 +36,8 @@
 </template>
 
 <script>
-import vAffix from '../../src/components/affix'
-import vButton from '../../src/components/button'
+import vAffix from '../../components/affix'
+import vButton from '../../components/button'
 
 export default {
 

@@ -190,7 +190,7 @@ Flex 布局是基于 24 栅格来定义每一个“盒子”的宽度，但排�
 </template>
 
 <script>
-import { vRow, vCol } from '../../src/components/layout'
+import { vRow, vCol } from '../../components/layout'
 
 export default {
 

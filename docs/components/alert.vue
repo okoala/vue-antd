@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import vAlert from '../../src/components/alert'
+import vAlert from '../../components/alert'
 
 export default {
   data () {

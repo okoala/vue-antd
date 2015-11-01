@@ -49,8 +49,8 @@
 </template>
 
 <script>
-import vSpin from '../../src/components/spin'
-import vButton from '../../src/components/button'
+import vSpin from '../../components/spin'
+import vButton from '../../components/button'
 
 export default {
   data () {

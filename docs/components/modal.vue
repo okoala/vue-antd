@@ -67,8 +67,8 @@
 </template>
 
 <script>
-import vButton from '../../src/components/button'
-import vModal from '../../src/components/modal'
+import vButton from '../../components/button'
+import vModal from '../../components/modal'
 
 export default {
   data () {

@@ -76,7 +76,7 @@ Table 有两种模式，本地数据和远程数据模式。
 </template>
 
 <script>
-import vTable from '../../src/components/table'
+import vTable from '../../components/table'
 
 export default {
   data () {

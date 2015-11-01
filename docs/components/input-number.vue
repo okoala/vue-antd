@@ -48,8 +48,8 @@
 </template>
 
 <script>
-import vInputNumber from '../../src/components/input-number'
-import vButton from '../../src/components/button'
+import vInputNumber from '../../components/input-number'
+import vButton from '../../components/button'
 
 export default {
   data () {

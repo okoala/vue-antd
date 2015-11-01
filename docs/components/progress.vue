@@ -84,9 +84,9 @@
 </template>
 
 <script>
-import { vProgressLine, vProgressCircle } from '../../src/components/progress'
-import vButton, { vButtonGroup } from '../../src/components/button'
-import vIcon from '../../src/components/iconfont'
+import { vProgressLine, vProgressCircle } from '../../components/progress'
+import vButton, { vButtonGroup } from '../../components/button'
+import vIcon from '../../components/iconfont'
 
 export default {
   data () {

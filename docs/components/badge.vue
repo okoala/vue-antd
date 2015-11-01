@@ -52,8 +52,8 @@
 </template>
 
 <script>
-import vBadge from '../../src/components/badge'
-import vIcon from '../../src/components/iconfont'
+import vBadge from '../../components/badge'
+import vIcon from '../../components/iconfont'
 
 export default {
 

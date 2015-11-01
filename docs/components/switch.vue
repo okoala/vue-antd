@@ -53,9 +53,9 @@
 </template>
 
 <script>
-import vSwitch from '../../src/components/switch'
-import vButton from '../../src/components/button'
-import { defaultProps } from '../../src/utils'
+import vSwitch from '../../components/switch'
+import vButton from '../../components/button'
+import { defaultProps } from '../../utils'
 
 export default {
   props: defaultProps({
