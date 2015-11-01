@@ -27,7 +27,7 @@
         </thead>
         <tbody :class="prefixCls + '-tbody'" v-el:render>
           <tr v-for="data in dataSource" :class="prefixCls + classString">
-            <td v-for="col in columns">{{{col.dataIndex ? data[col.dataIndex] : ''}}}</td>
+            <td v-for="col in columns">{{{!col.render && col.dataIndex ? data[col.dataIndex] : ''}}}</td>
           </tr>
         </tbody>
       </table>
@@ -38,6 +38,7 @@
 
 <script>
 import Vue from 'vue'
+import { extend } from 'vue/src/util'
 import objectAssign from 'object-assign'
 import { defaultProps, oneOfType } from '../../utils'
 
@@ -110,12 +111,18 @@ export default {
         const $el = this.$els.render
 
         for (let i = 0; i < this.columns.length; i++) {
-          if (this.columns[i].render) {
+          const curCol = this.columns[i]
+          const dataIndex = curCol.dataIndex
+          const renderFn = curCol.render
+          if (renderFn) {
             for (let j = 0; j < this.dataSource.length; j++) {
-              const template = this.columns[i].render()
+              const value = this.dataSource[j]
+              const template = renderFn(value[dataIndex], value)
               const cell = document.createElement('DIV')
               cell.innerHTML = template
-              this.$parent.$compile(cell)
+              // TODO
+              // 这一部分的写法还是需要商榷下
+              this.$parent.$compile(cell, null, extend({}, this.$parent, {text: value[dataIndex]}, {record: value}))
               const _el = $el.children[j].children[i]
               _el.appendChild(cell)
             }

@@ -86,7 +86,11 @@ export default {
         dataIndex: 'name'
       }, {
         title: '年龄',
-        dataIndex: 'age'
+        dataIndex: 'age',
+        render: (text, record) => {
+          console.log(text)
+          return `<a href="javascript:;">${text}</a>`
+        }
       }, {
         title: '住址',
         dataIndex: 'address'
