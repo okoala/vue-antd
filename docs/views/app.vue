@@ -1,4 +1,5 @@
 <template>
+<div>
 <header class="clearfix">
   <a class="logo" href="..">
     <img width="50" src="http://s2.upload.tf/Hbv.png">
@@ -19,6 +20,7 @@
   </nav>
 </header>
 <router-view class="view"></router-view>
+</div>
 </template>
 
 <script>
