@@ -1,5 +1,5 @@
 import velocity from 'velocity-animate'
-import isPlainObject from 'lodash/lang/isPlainObject'
+import isPlainObject from 'lodash.isplainobject'
 import _KeyCode from './KeyCode'
 
 const toString = Object.prototype.toString
