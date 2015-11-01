@@ -70,9 +70,8 @@
 </template>
 
 <script>
-import vRadio from '../../src/components/radio'
+import vRadio, { vRadioGroup } from '../../src/components/radio'
 import vButton from '../../src/components/button'
-const vRadioGroup = vRadio.RadioGroup
 
 export default {
   data () {

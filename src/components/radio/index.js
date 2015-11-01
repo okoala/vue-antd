@@ -1,6 +1,6 @@
-import Radio from './Radio.vue'
-import RadioGroup from './RadioGroup.vue'
+import vRadio from './Radio.vue'
+import vRadioGroup from './RadioGroup.vue'
 
-Radio.RadioGroup = RadioGroup
+vRadio.vRadioGroup = vRadioGroup
 
-export default Radio
+export default vRadio
