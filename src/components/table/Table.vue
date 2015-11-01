@@ -106,20 +106,22 @@ export default {
 
   methods: {
     compileRender () {
-      const $el = this.$els.render
+      this.$nextTick(() => {
+        const $el = this.$els.render
 
-      for (let i = 0; i < this.columns.length; i++) {
-        if (this.columns[i].render) {
-          for (let j = 0; j < this.dataSource.length; j++) {
-            const template = this.columns[i].render()
-            const cell = document.createElement('DIV')
-            cell.innerHTML = template
-            this.$parent.$compile(cell)
-            const _el = $el.children[j].children[i]
-            _el.appendChild(cell)
+        for (let i = 0; i < this.columns.length; i++) {
+          if (this.columns[i].render) {
+            for (let j = 0; j < this.dataSource.length; j++) {
+              const template = this.columns[i].render()
+              const cell = document.createElement('DIV')
+              cell.innerHTML = template
+              this.$parent.$compile(cell)
+              const _el = $el.children[j].children[i]
+              _el.appendChild(cell)
+            }
           }
         }
-      }
+      })
     }
   }
 }
