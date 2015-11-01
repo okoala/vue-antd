@@ -45,7 +45,7 @@ module.exports = {
           // apply babel transform to all javascript
           // inside *.vue files.
           md: 'html!vue-antd-docs',
-          js: 'babel?optional[]=runtime',
+          js: 'babel?optional[]=runtime!eslint',
           less: ExtractTextPlugin.extract(
             'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
           )

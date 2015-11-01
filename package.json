@@ -7,7 +7,7 @@
     "test": "grunt ci",
     "deploy": "gh-pages -d .temp",
     "server": "node docs/server.js",
-    "docs": "node docs/server.js & webpack --config build/webpack.config.js --progress --colors --display-chunks --display-error-details --watch",
+    "dev": "node docs/server.js & webpack --config build/webpack.config.js --progress --colors --display-chunks --display-error-details --watch",
     "build": "webpack --config build/webpack.build.js && webpack --config build/webpack.build.min.js"
   },
   "repository": {
