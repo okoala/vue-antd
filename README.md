@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://david-dm.org/okoala/vue-antd" title="Dependencies Status"><img src="https://david-dm.org/okoala/vue-antd.svg"></a>
   <a href="https://gitter.im/okoala/vue-antd?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" title="Join the chat at https://gitter.im/okoala/vue-antd"><img src="https://badges.gitter.im/Join Chat.svg"></a>
 </p>
 
