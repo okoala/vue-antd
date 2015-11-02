@@ -6,7 +6,7 @@
   "scripts": {
     "test": "grunt ci",
     "deploy": "gh-pages -d .temp",
-    "server": "node docs/server.js",
+    "start": "node docs/server.js",
     "dev": "node docs/server.js & webpack --config build/webpack.config.js --progress --colors --display-chunks --display-error-details --watch",
     "build": "webpack --config build/webpack.build.js && webpack --config build/webpack.build.min.js"
   },
@@ -85,7 +85,7 @@
     "template-html-loader": "0.0.3",
     "uglify-js": "^2.5.0",
     "vue-antd-docs-loader": "okoala/vue-antd-docs-loader",
-    "vue-loader": "^3.0.3",
+    "vue-loader": "^6.0.3",
     "webpack": "^1.9.11"
   },
   "author": "KoalaHuang",

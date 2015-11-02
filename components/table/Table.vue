@@ -39,7 +39,6 @@
 <script>
 import Vue from 'vue'
 import { extend } from 'vue/src/util'
-import objectAssign from 'object-assign'
 import { defaultProps, oneOfType } from '../../utils'
 
 export default {

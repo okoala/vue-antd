@@ -1,5 +1,3 @@
-import objectAssign from 'object-assign'
-
 function noop () {}
 
 function defaultResolve (data) {
@@ -24,6 +22,6 @@ export default class DataSource {
   }
 
   clone (config = {}) {
-    return new DataSource(objectAssign({}, this.config, config))
+    return new DataSource(Object.assign({}, this.config, config))
   }
 }

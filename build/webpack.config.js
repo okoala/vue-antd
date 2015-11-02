@@ -41,15 +41,7 @@ module.exports = {
     loaders: [
       {
         test: /\.vue$/,
-        loader: vue.withLoaders({
-          // apply babel transform to all javascript
-          // inside *.vue files.
-          md: 'html!vue-antd-docs',
-          js: 'babel?optional[]=runtime!eslint',
-          less: ExtractTextPlugin.extract(
-            'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
-          )
-        })
+        loader: 'vue'
       },
       {
         test: /.*\.(gif|png|jpe?g|svg)$/i,
@@ -73,6 +65,17 @@ module.exports = {
         loader: 'style-loader!css-loader'
       }
     ]
+  },
+  vue: {
+    loaders: {
+      // apply babel transform to all javascript
+      // inside *.vue files.
+      md: 'html!vue-antd-docs',
+      js: 'babel!eslint',
+      less: ExtractTextPlugin.extract(
+        'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
+      )
+    }
   },
   eslint : {
     configFile : './.eslintrc',
