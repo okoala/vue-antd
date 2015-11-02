@@ -77,13 +77,11 @@ export function defaultProps (props) {
 export function oneOfType (validList, defaultValue) {
   let validaObj = {}
 
-  if (defaultValue != null) {
-    validaObj.default = defaultValue
-  }
-
+  validaObj.default = defaultValue
   validaObj.validator = function (value) {
-    for (let i = 0; i < validList.length; i++) {
-      if (toString.call(value).indexOf(validList[i].name) > -1) {
+    for (let j = 0; j < validList.length; j++) {
+      const validName = validList[j].name
+      if (toString.call(value).indexOf(validName) > -1) {
         return true
       }
     }
@@ -96,13 +94,10 @@ export function oneOfType (validList, defaultValue) {
 export function oneOf (validList, defaultValue) {
   let validaObj = {}
 
-  if (defaultValue != null) {
-    validaObj.default = defaultValue
-  }
-
+  validaObj.default = defaultValue
   validaObj.validator = function (value) {
-    for (let i = 0; i < validList.length; i++) {
-      if (value === validList[i]) {
+    for (let j = 0; j < validList.length; j++) {
+      if (value === validList[j]) {
         return true
       }
     }

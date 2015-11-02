@@ -41,7 +41,7 @@ export default {
     animConfig: oneOfType([String, Array]),
     ease: oneOfType([String, Array], 'easeOutQuart'),
     leaveReverse: false,
-    animatingClassName: ['queue-anim-entering', 'queue-anim-leaving']
+    animatingClassName: () => ['queue-anim-entering', 'queue-anim-leaving']
   }),
 
   data () {
