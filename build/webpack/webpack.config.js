@@ -53,7 +53,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel!eslint'
+        loader: 'babel?optional[]=runtime&stage=2!eslint'
       },
       {
         test: /\.less$/,
@@ -71,7 +71,7 @@ module.exports = {
       // apply babel transform to all javascript
       // inside *.vue files.
       md: 'html!vue-antd-docs',
-      js: 'babel!eslint',
+      js: 'babel?optional[]=runtime&stage=2!eslint',
       less: ExtractTextPlugin.extract(
         'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
       )
