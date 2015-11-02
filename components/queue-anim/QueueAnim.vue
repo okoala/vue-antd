@@ -59,16 +59,32 @@ export default {
     this.keysToLeave = []
     this.keysAnimating = []
 
-    this.$children.forEach(child => {
-      if (!child || !child.key) {
+    const keyNodes = Array.prototype.slice.call(this.$el.querySelectorAll('[key]'))
+
+    keyNodes.forEach(child => {
+      if (!child) {
         return
       }
-      this.keysToEnter.push(child.key)
-      this.children.push(child)
-      this.originChildren.push(child)
-    })
 
-    this.keysToEnter.forEach(this._performEnter)
+      const key = child.getAttribute('key')
+      if (!key) {
+        return
+      }
+
+      this.keysToEnter.push(key)
+      this.children.push({
+        el: child,
+        key: key
+      })
+      this.originChildren.push({
+        el: child,
+        key: key
+      })
+    })
+    this.keysToEnter.forEach((item, i) => {
+      console.log(i)
+      this._performEnter(item, i)
+    })
   },
 
   beforeDestory () {
@@ -81,18 +97,18 @@ export default {
 
   methods: {
     _getNodeByKey (key) {
-      const node = this.children.map(item => {
-        item.key === key
+      const node = this.children.filter(item => {
+        return item.key === key
       })
 
-      return node && node.length ? node[0] : null
+      return node && node.length ? node[0].el : null
     },
 
     _getVelocityConfig (index) {
       if (this.animConfig) {
         return transformArguments(this.animConfig)[index]
       }
-      return ANIM_TYPES[transformArguments(this.animConfig)[index]]
+      return ANIM_TYPES[transformArguments(this.type)[index]]
     },
 
     _getVelocityEnterConfig () {
@@ -138,9 +154,9 @@ export default {
         begin: this._enterBegin.bind(this, key),
         complete: this._enterComplete.bind(this, key)
       })
-      if (this.keysToEnter.indexOf(key) >= 0) {
-        this.keysToEnter.splice(this.keysToEnter.indexOf(key), 1)
-      }
+      // if (this.keysToEnter.indexOf(key) >= 0) {
+      //   this.keysToEnter.splice(this.keysToEnter.indexOf(key), 1)
+      // }
     },
 
     _performLeave (key, i) {
