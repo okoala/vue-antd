@@ -43,8 +43,8 @@ export default {
     type: oneOfType([String, Array], 'right'),
     animConfig: oneOfType([String, Array]),
     ease: oneOfType([String, Array], 'easeOutQuart'),
-    leaveReverse: false,
-    animatingClassName: () => ['queue-anim-entering', 'queue-anim-leaving']
+    animatingClassName: Array,
+    leaveReverse: false
   }),
 
   data () {
@@ -53,6 +53,10 @@ export default {
       children: [],
       childrenShow: {}
     }
+  },
+
+  compiled () {
+    this.animatingClassName = this.animatingClassName || ['queue-anim-entering', 'queue-anim-leaving']
   },
 
   ready () {
@@ -74,6 +78,7 @@ export default {
 
       this.keysToEnter.push(key)
       this.keysToLeave.push(key)
+      this.keysAnimating.push(key)
       this.children.push({
         el: child,
         key: key
@@ -168,10 +173,6 @@ export default {
           complete: this._enterComplete.bind(this, key)
         })
       })
-
-      // if (this.keysToEnter.indexOf(key) >= 0) {
-      //   this.keysToEnter.splice(this.keysToEnter.indexOf(key), 1)
-      // }
     },
 
     _performLeave () {
@@ -196,46 +197,42 @@ export default {
     },
 
     _enterBegin (key, elements) {
-      const childrenShow = this.childrenShow
-      childrenShow[key] = true
-      this.childrenShow = childrenShow
+      const self = this
+      if (this.keysAnimating.indexOf(key) >= 0) {
+        this.keysAnimating.splice(this.keysAnimating.indexOf(key), 1)
+      }
       elements.forEach(elem => {
-        elem.className += (' ' + this.animatingClassName[0])
+        elem.className = elem.className.replace(self.animatingClassName[1], '').trim()
+        elem.className += (' ' + self.animatingClassName[0])
       })
     },
 
     _enterComplete (key, elements) {
+      const self = this
       if (this.keysAnimating.indexOf(key) >= 0) {
         this.keysAnimating.splice(this.keysAnimating.indexOf(key), 1)
       }
-      elements.forEach((elem) => {
-        elem.className = elem.className.replace(this.animatingClassName[0], '').trim()
+      elements.forEach(elem => {
+        elem.className = elem.className.replace(self.animatingClassName[0], '').trim()
       })
     },
 
     _leaveBegin (elements) {
-      elements.forEach((elem) => {
-        elem.className += (' ' + this.animatingClassName[1])
+      const self = this
+      elements.forEach(elem => {
+        elem.className = elem.className.replace(self.animatingClassName[0], '').trim()
+        elem.className += (' ' + self.animatingClassName[1])
       })
     },
 
     _leaveComplete (key, elements) {
+      const self = this
       if (this.keysAnimating.indexOf(key) < 0) {
         return
       }
       this.keysAnimating.splice(this.keysAnimating.indexOf(key), 1)
-      const childrenShow = this.childrenShow
-      childrenShow[key] = false
-      if (this.keysToLeave.indexOf(key) >= 0) {
-        this.keysToLeave.splice(this.keysToLeave.indexOf(key), 1)
-      }
-      if (this.keysToLeave.length === 0) {
-        const currentChildren = toArrayChildren(getChildrenFromProps(this.props))
-        this.children = currentChildren
-        this.childrenShow = childrenShow
-      }
-      elements.forEach((elem) => {
-        elem.className = elem.className.replace(this.props.animatingClassName[1], '').trim()
+      elements.forEach(elem => {
+        elem.className = elem.className.replace(self.animatingClassName[1], '').trim()
       })
     }
   }

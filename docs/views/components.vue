@@ -418,7 +418,6 @@ export default {
   font-family: Consolas, monospace;
 }
 
-.markdown p,
 .markdown pre {
   margin: 1.2em 0;
   padding: 1em;
