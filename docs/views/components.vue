@@ -226,7 +226,7 @@ export default {
           {
             name: 'affix',
             desc: '固钉'
-          }
+          },
           {
             name: 'queue-anim',
             desc: '进场动画'
