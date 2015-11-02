@@ -43,12 +43,9 @@ export default {
 
   data () {
     return {
+      originChildren: [],
       children: [],
-      childrenShow: {},
-      performEnter: () => {},
-      performLeave: () => {},
-      enterBegin: () => {},
-      leaveComplete: () => {}
+      childrenShow: {}
     }
   },
 
@@ -63,12 +60,13 @@ export default {
       }
       this.keysToEnter.push(child.key)
       this.children.push(child)
+      this.originChildren.push(child)
     })
   },
 
   beforeDestory () {
-    if (this.children && this.children.length > 0) {
-      this.children.forEach(child => {
+    if (this.originChildren && this.originChildren.length > 0) {
+      this.originChildren.forEach(child => {
         velocity(child, 'stop')
       })
     }
@@ -178,6 +176,26 @@ export default {
     _leaveBegin (elements) {
       elements.forEach((elem) => {
         elem.className += (' ' + this.animatingClassName[1])
+      })
+    },
+
+    _leaveComplete (key, elements) {
+      if (this.keysAnimating.indexOf(key) < 0) {
+        return
+      }
+      this.keysAnimating.splice(this.keysAnimating.indexOf(key), 1)
+      const childrenShow = this.childrenShow
+      childrenShow[key] = false
+      if (this.keysToLeave.indexOf(key) >= 0) {
+        this.keysToLeave.splice(this.keysToLeave.indexOf(key), 1)
+      }
+      if (this.keysToLeave.length === 0) {
+        const currentChildren = toArrayChildren(getChildrenFromProps(this.props))
+        this.children = currentChildren
+        this.childrenShow = childrenShow
+      }
+      elements.forEach((elem) => {
+        elem.className = elem.className.replace(this.props.animatingClassName[1], '').trim()
       })
     }
   }
