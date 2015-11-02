@@ -35,6 +35,7 @@ function transformArguments (arg) {
 
 export default {
   props: defaultProps({
+    show: true,
     component: oneOf(['div', 'form', 'ul', 'ol'], 'div'),
     interval: oneOfType([Number, Array], 100),
     duration: oneOfType([Number, Array], 500),
@@ -72,6 +73,7 @@ export default {
       }
 
       this.keysToEnter.push(key)
+      this.keysToLeave.push(key)
       this.children.push({
         el: child,
         key: key
@@ -81,10 +83,10 @@ export default {
         key: key
       })
     })
-    this.keysToEnter.forEach((item, i) => {
-      console.log(i)
-      this._performEnter(item, i)
-    })
+
+    if (this.show) {
+      this._performEnter()
+    }
   },
 
   beforeDestory () {
@@ -92,6 +94,16 @@ export default {
       this.originChildren.forEach(child => {
         velocity(child, 'stop')
       })
+    }
+  },
+
+  watch: {
+    show (value) {
+      if (value) {
+        this._performEnter()
+      } else {
+        this._performLeave()
+      }
     }
   },
 
@@ -136,45 +148,50 @@ export default {
       })
     },
 
-    _performEnter (key, i) {
-      const node = this._getNodeByKey(key)
-      if (!node) {
-        return
-      }
-      const interval = transformArguments(this.interval)[0]
-      const delay = transformArguments(this.delay)[0];
-      const duration = transformArguments(this.duration)[0]
-      node.style.visibility = 'hidden'
-      velocity(node, 'stop')
-      velocity(node, this._getVelocityEnterConfig('enter'), {
-        delay: interval * i + delay,
-        duration: duration,
-        easing: this._getVelocityEasing()[0],
-        visibility: 'visible',
-        begin: this._enterBegin.bind(this, key),
-        complete: this._enterComplete.bind(this, key)
+    _performEnter () {
+      this.keysToEnter.forEach((key, i) => {
+        const node = this._getNodeByKey(key)
+        if (!node) {
+          return
+        }
+        const interval = transformArguments(this.interval)[0]
+        const delay = transformArguments(this.delay)[0];
+        const duration = transformArguments(this.duration)[0]
+        node.style.visibility = 'hidden'
+        velocity(node, 'stop')
+        velocity(node, this._getVelocityEnterConfig('enter'), {
+          delay: interval * i + delay,
+          duration: duration,
+          easing: this._getVelocityEasing()[0],
+          visibility: 'visible',
+          begin: this._enterBegin.bind(this, key),
+          complete: this._enterComplete.bind(this, key)
+        })
       })
+
       // if (this.keysToEnter.indexOf(key) >= 0) {
       //   this.keysToEnter.splice(this.keysToEnter.indexOf(key), 1)
       // }
     },
 
-    _performLeave (key, i) {
-      const node = this._getNodeByKey(key)
-      if (!node) {
-        return
-      }
-      const interval = transformArguments(this.interval)[1]
-      const delay = transformArguments(this.delay)[1]
-      const duration = transformArguments(this.duration)[1]
-      const order = this.leaveReverse ? (this.keysToLeave.length - i - 1) : i
-      velocity(node, 'stop')
-      velocity(node, this._getVelocityLeaveConfig('leave'), {
-        delay: interval * order + delay,
-        duration: duration,
-        easing: this._getVelocityEasing()[1],
-        begin: this._leaveBegin.bind(this),
-        complete: this._leaveComplete.bind(this, key)
+    _performLeave () {
+      this.keysToLeave.forEach((key, i) => {
+        const node = this._getNodeByKey(key)
+        if (!node) {
+          return
+        }
+        const interval = transformArguments(this.interval)[1]
+        const delay = transformArguments(this.delay)[1]
+        const duration = transformArguments(this.duration)[1]
+        const order = this.leaveReverse ? (this.keysToLeave.length - i - 1) : i
+        velocity(node, 'stop')
+        velocity(node, this._getVelocityLeaveConfig('leave'), {
+          delay: interval * order + delay,
+          duration: duration,
+          easing: this._getVelocityEasing()[1],
+          begin: this._leaveBegin.bind(this),
+          complete: this._leaveComplete.bind(this, key)
+        })
       })
     },
 

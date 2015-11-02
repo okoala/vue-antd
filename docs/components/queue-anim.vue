@@ -17,7 +17,7 @@
 
 <demo>
   <example title="默认">
-    <v-queue-anim :delay="2000">
+    <v-queue-anim :delay="1000">
       <div key="a">依次进场</div>
       <div key="b">依次进场</div>
       <div key="c">依次进场</div>
@@ -25,6 +25,30 @@
       <div key="e">依次进场</div>
       <div key="f">依次进场</div>
     </v-queue-anim>
+  </example>
+  <example title="进场和离场">
+    <v-queue-anim :show="show" class="demo-content">
+      <div class="demo-kp" key="a">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="demo-listBox" key="b">
+        <div class="demo-list">
+          <div class="title"></div>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </v-queue-anim>
+    <p class="buttons">
+      <v-button type="primary" @click="_handleClick">切换</v-button>
+    </p>
   </example>
 </demo>
 
