@@ -56,6 +56,10 @@ export function configRouter (router) {
           component: require('../components/progress.vue')
         },
 
+        'queue-anim': {
+          component: require('../components/queue-anim.vue')
+        },
+
         'upload': {
           component: require('../components/upload.vue')
         },

@@ -227,10 +227,10 @@ export default {
             name: 'affix',
             desc: '固钉'
           }
-          // {
-          //   name: 'enter-animation',
-          //   desc: '进场动画'
-          // }
+          {
+            name: 'queue-anim',
+            desc: '进场动画'
+          }
         ]
       }
     }
