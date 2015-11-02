@@ -8,6 +8,9 @@
 <ol v-if="component === 'ol'">
   <slot></slot>
 </ol>
+<form v-if="component === 'form'">
+  <slot></slot>
+</form>
 </template>
 
 <script>
@@ -30,7 +33,7 @@ function transformArguments (arg) {
 
 export default {
   props: defaultProps({
-    component: oneOf(['div', 'ul', 'ol'], 'div'),
+    component: oneOf(['div', 'form', 'ul', 'ol'], 'div'),
     interval: oneOfType([Number, Array], 100),
     duration: oneOfType([Number, Array], 500),
     delay: oneOfType([Number, Array], 0),
@@ -62,6 +65,8 @@ export default {
       this.children.push(child)
       this.originChildren.push(child)
     })
+
+    this.keysToEnter.forEach(this._performEnter)
   },
 
   beforeDestory () {

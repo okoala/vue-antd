@@ -51,9 +51,7 @@
     </p>
   </example>
   <example title="进场和离场">
-    <v-queue-anim
-      class="demo-content"
-      key="demo"
+    <v-queue-anim class="demo-content" key="demo"
       :show="show"
       :type="['right', 'left']"
       :ease="['easeOutQuart', 'easeInOutQuart']">
@@ -80,8 +78,7 @@
     </p>
   </example>
   <example title="自定义动画进出场">
-    <v-queue-anim
-      class="demo-content"
+    <v-queue-anim class="demo-content"
       :show="show"
       :animConfig="[{ opacity: [1, 0], translateY: [0, 50] },{ opacity: [1, 0], translateY: [0, -50] }]">
       <div class="demo-kp" key="a">
@@ -107,10 +104,7 @@
     </p>
   </example>
   <example title="表单动画进出场">
-    <v-queue-anim
-      class="ant-form-horizontal"
-      component="form"
-      type="bottom"
+    <v-queue-anim class="ant-form-horizontal" component="form" type="bottom"
       :leave-reverse="true"
       :show="show">
       <div class="ant-form-item ant-form-item-compact" key='name'>
