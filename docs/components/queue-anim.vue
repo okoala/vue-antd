@@ -149,21 +149,69 @@
       <v-button type="primary" @click="_handlelick">切换</v-button>
     </p>
   </example>
-  <example>
-    <div className="demo-content">
-        <div className="demo-listBox" key="b">
-          <div className="demo-list">
-            <div className="title"></div>
+  <example title="添加与删除">
+    <div class="demo-content">
+        <div class="demo-listBox" key="b">
+          <div class="demo-list">
+            <div class="title"></div>
             <v-queue-anim component="ul" :type="['right', 'left']" :show="show">
               <li v-for="item in items" :key="Date.now()"></li>
             </v-queue-anim>
           </div>
         </div>
     </div>
-    <p className="buttons">
-      <v-button type="primary" onClick={this.onClick}>切换</v-button>
-      <v-button onClick={this.onAdd} style={{marginLeft:10}}>添加</v-button>
-      <v-button onClick={this.onRemove} style={{marginLeft:10}}>删除</v-button>
+    <p class="buttons">
+      <v-button type="primary" @click="_handleClick">切换</v-button>
+      <v-button @click="_handleAdd" style="margin-left: 10px">添加</v-button>
+      <v-button @click="_handleRemove" style="margin-left: 10px">删除</v-button>
+    </p>
+  </example>
+  <example title="一个复杂些的例子">
+    <v-queue-anim
+      :show="show"
+      :type="['right', 'left']">
+      <div class="demo-header" key="header">
+        <div class="logo">
+          <img width="30" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" />
+          <span>logo</span>
+        </div>
+        <v-queue-anim component="ul">
+          <li key="0"></li>
+          <li key="1"></li>
+          <li key="2"></li>
+          <li key="3"></li>
+          <li key="4"></li>
+        </v-queue-anim>
+      </div>,
+      <v-queue-anim class="demo-content" key="content" :delay="300">
+        <div class="demo-title" key="title">我是标题</div>
+        <div class="demo-kp" key="b">
+          <v-queue-anim component="ul">
+            <li key="0"></li>
+            <li key="1"></li>
+            <li key="2"></li>
+          </v-queue-anim>
+        </div>
+        <div class="demo-title" key="title2">我是标题</div>
+        <div class="demo-listBox">
+          <v-queue-anim class="demo-list" delay={500}>
+            <div class="title" key="title3"></div>
+            <v-queue-anim component="ul" type="bottom" key="li">
+              <li key="0"></li>
+              <li key="1"></li>
+              <li key="2"></li>
+              <li key="3"></li>
+              <li key="4"></li>
+            </v-queue-anim>
+          </v-queue-anim>
+        </div>
+      </v-queue-anim>,
+      <v-queue-anim :delay="1000" type="bottom" key="footerBox">
+        <div class="demo-footer" key="footer"></div>
+      </v-queue-anim>
+    </v-queue-anim>
+    <p class="buttons">
+      <v-button type="primary" @click="_handleClick">切换</v-button>
     </p>
   </example>
 </demo>
@@ -208,6 +256,7 @@ import vCheckbox from '../../components/checkbox'
 export default {
   data () {
     return {
+      items: ['1', '2', '3'],
       show: true
     }
   },
@@ -215,8 +264,16 @@ export default {
   components: { vQueueAnim, vButton, vCheckbox },
 
   methods: {
-    _handlelick () {
+    _handleClick () {
       this.show = !this.show
+    },
+
+    _handleAdd () {
+
+    },
+
+    _handleRemove () {
+
     }
   }
 
