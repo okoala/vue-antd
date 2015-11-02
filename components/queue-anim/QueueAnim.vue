@@ -1,16 +1,18 @@
 <template>
-<div v-if="component === 'div'">
-  <slot></slot>
+<div>
+  <div v-if="component === 'div'">
+    <slot></slot>
+  </div>
+  <ul v-if="component === 'ul'">
+    <slot></slot>
+  </ul>
+  <ol v-if="component === 'ol'">
+    <slot></slot>
+  </ol>
+  <form v-if="component === 'form'">
+    <slot></slot>
+  </form>
 </div>
-<ul v-if="component === 'ul'">
-  <slot></slot>
-</ul>
-<ol v-if="component === 'ol'">
-  <slot></slot>
-</ol>
-<form v-if="component === 'form'">
-  <slot></slot>
-</form>
 </template>
 
 <script>

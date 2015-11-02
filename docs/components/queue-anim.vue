@@ -47,7 +47,7 @@
       </div>
     </v-queue-anim>
     <p class="buttons">
-      <v-button type="primary" @click="_handlelick">切换</v-button>
+      <v-button type="primary" @click="_handleClick">切换</v-button>
     </p>
   </example>
   <example title="进场和离场">
@@ -61,7 +61,7 @@
           <li></li>
           <li></li>
         </ul>
-      </div>,
+      </div>
       <div class="demo-listBox" key="b">
         <div class="demo-list">
           <div class="title"></div>
@@ -74,7 +74,7 @@
       </div>
     </v-queue-anim>
     <p class="buttons">
-      <v-button type="primary" @click="_handlelick">切换</v-button>
+      <v-button type="primary" @click="_handleClick">切换</v-button>
     </p>
   </example>
   <example title="自定义动画进出场">
@@ -100,7 +100,7 @@
       </div>
     </v-queue-anim>
     <p class="buttons">
-      <v-button type="primary" @click="_handlelick">切换</v-button>
+      <v-button type="primary" @click="_handleClick">切换</v-button>
     </p>
   </example>
   <example title="表单动画进出场">
@@ -140,7 +140,7 @@
       </div>
     </v-queue-anim>
     <p class="buttons">
-      <v-button type="primary" @click="_handlelick">切换</v-button>
+      <v-button type="primary" @click="_handleClick">切换</v-button>
     </p>
   </example>
   <example title="添加与删除">
@@ -188,7 +188,8 @@
         </div>
         <div class="demo-title" key="title2">我是标题</div>
         <div class="demo-listBox">
-          <v-queue-anim class="demo-list" delay={500}>
+          <v-queue-anim class="demo-list"
+            :delay="500">
             <div class="title" key="title3"></div>
             <v-queue-anim component="ul" type="bottom" key="li">
               <li key="0"></li>
@@ -200,7 +201,8 @@
           </v-queue-anim>
         </div>
       </v-queue-anim>,
-      <v-queue-anim :delay="1000" type="bottom" key="footerBox">
+      <v-queue-anim type="bottom"
+        :delay="1000" key="footerBox">
         <div class="demo-footer" key="footer"></div>
       </v-queue-anim>
     </v-queue-anim>
@@ -275,7 +277,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .code-box-demo .demo-header {
   width: 100%;
   background: #ebedee;
@@ -428,5 +430,10 @@ export default {
 .code-box-demo .demo-footer:after {
   display: block;
   content: "";
+}
+.code-box-demo .buttons {
+  text-align: center;
+  padding-top: 20px;
+  clear: both;
 }
 </style>
