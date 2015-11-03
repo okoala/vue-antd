@@ -1,6 +1,6 @@
 {
   "name": "vue-antd",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Ant Design components built with Vue.js ",
   "main": "src/index.js",
   "scripts": {
@@ -29,13 +29,13 @@
     "lodash.isplainobject": "^3.2.0",
     "object-assign": "^4.0.1",
     "rc-util": "^2.0.3",
-    "velocity-animate": "^1.2.3",
+    "velocity-animate": "^1.2.3"
+  },
+  "devDependencies": {
     "vue": "^1.0.4",
     "vue-async-data": "^1.0.2",
     "vue-resource": "^0.1.16",
-    "vue-router": "^0.7.4"
-  },
-  "devDependencies": {
+    "vue-router": "^0.7.4",
     "autoprefixer-loader": "^3.1.0",
     "babel": "^5.8.29",
     "babel-core": "^5.8.33",
