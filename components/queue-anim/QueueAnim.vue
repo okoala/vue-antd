@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { defaultProps, oneOfType, oneOf } from '../../utils'
+import { defaultProps, oneOfType, oneOf, guid } from '../../utils'
 import velocity from 'velocity-animate'
 import ANIM_TYPES from './animTypes'
 
@@ -64,12 +64,14 @@ export default {
     this.keysToLeave = []
     this.keysAnimating = []
 
-    const keyNodes = Array.prototype.slice.call(this.$el.querySelectorAll('[key]'))
+    const keyNodes = Array.prototype.slice.call(this.$el.querySelectorAll('[key]:not([__scope_key__])'))
 
     keyNodes.forEach(child => {
       if (!child) {
         return
       }
+
+      child.setAttribute('__scope_key__', 1)
 
       const key = child.getAttribute('key')
       if (!key) {
@@ -89,6 +91,11 @@ export default {
       })
     })
 
+    this.$on('queue-anim-hidden', () => {
+      this._hiddenVelocityNode()
+      return true
+    })
+
     if (this.show) {
       this._performEnter()
     }
@@ -102,21 +109,37 @@ export default {
     }
   },
 
+  isActHideAnimate: false,
+
   watch: {
     show (value) {
       if (value) {
-        this._performEnter()
+        this.isActHideAnimate = true
+        this.$nextTick(() => {
+          this.$broadcast('queue-anim-hidden')
+          setTimeout(() => {
+            this._performEnter()
+            this.isActHideAnimate = false
+          }, 50)
+        })
       } else {
-        this._performLeave()
+        this._performLeave(() => {
+          if (!this.isActHideAnimate) {
+            this.$broadcast('queue-anim-hidden')
+          }
+        })
       }
     }
   },
 
   methods: {
     _getNodeByKey (key) {
-      const node = this.children.filter(item => {
-        return item.key === key
-      })
+      let node = []
+      for (let i = 0; i < this.children.length; i++) {
+        if (this.children[i].key === key) {
+          node.push(this.children[i])
+        }
+      }
 
       return node && node.length ? node[0].el : null
     },
@@ -153,6 +176,17 @@ export default {
       })
     },
 
+    _hiddenVelocityNode () {
+      this.keysToEnter.forEach((key, i) => {
+        const node = this._getNodeByKey(key)
+        if (!node) {
+          return
+        }
+        node.style.visibility = 'hidden'
+        velocity(node, 'stop')
+      })
+    },
+
     _performEnter () {
       this.keysToEnter.forEach((key, i) => {
         const node = this._getNodeByKey(key)
@@ -169,13 +203,26 @@ export default {
           duration: duration,
           easing: this._getVelocityEasing()[0],
           visibility: 'visible',
-          begin: this._enterBegin.bind(this, key),
+          begin: (elements) => {
+            this._enterBegin(key, elements)
+            if (node.__vue__) {
+              const _enterFn = node.__vue__._performEnter
+              _enterFn && _enterFn()
+
+              const children = node.__vue__.$children
+              children.forEach(item => {
+                item._performEnter && item._performEnter()
+              })
+            }
+          },
           complete: this._enterComplete.bind(this, key)
         })
       })
     },
 
-    _performLeave () {
+    _performLeave (done) {
+      const len = this.keysToLeave.length
+      const self = this
       this.keysToLeave.forEach((key, i) => {
         const node = this._getNodeByKey(key)
         if (!node) {
@@ -191,7 +238,12 @@ export default {
           duration: duration,
           easing: this._getVelocityEasing()[1],
           begin: this._leaveBegin.bind(this),
-          complete: this._leaveComplete.bind(this, key)
+          complete: (elements) => {
+            this._leaveComplete(key, elements)
+            if (i === len - 1) {
+              done && done()
+            }
+          }
         })
       })
     },

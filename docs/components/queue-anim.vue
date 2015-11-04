@@ -179,13 +179,13 @@
       </div>,
       <v-queue-anim class="demo-content" key="content" :delay="300">
         <div class="demo-title" key="title">我是标题</div>
-        <div class="demo-kp" key="b">
+        <v-queue-anim class="demo-kp" key="b">
           <v-queue-anim component="ul">
             <li key="0"></li>
             <li key="1"></li>
             <li key="2"></li>
           </v-queue-anim>
-        </div>
+        </v-queue-anim>
         <div class="demo-title" key="title2">我是标题</div>
         <div class="demo-listBox">
           <v-queue-anim class="demo-list"
@@ -200,7 +200,7 @@
             </v-queue-anim>
           </v-queue-anim>
         </div>
-      </v-queue-anim>,
+      </v-queue-anim>
       <v-queue-anim type="bottom"
         :delay="1000" key="footerBox">
         <div class="demo-footer" key="footer"></div>
@@ -373,7 +373,7 @@ export default {
 }
 .code-box-demo .demo-content .demo-kp ul li {
   display: inline-block;
-  width: 32%;
+  width: 30%;
   height: 40px;
   background: #cacaca;
   color: #ebeded;
@@ -435,5 +435,12 @@ export default {
   text-align: center;
   padding-top: 20px;
   clear: both;
+}
+.demo-list ul li {
+    height: 25px;
+    background: #ebeded;
+    border-bottom: 1px solid #cacaca;
+    overflow: hidden;
+    padding: 5px 15px;
 }
 </style>

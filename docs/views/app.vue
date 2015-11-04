@@ -19,7 +19,7 @@
     </ul>
   </nav>
 </header>
-<router-view class="view"></router-view>
+<router-view></router-view>
 </div>
 </template>
 
