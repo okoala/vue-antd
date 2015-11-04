@@ -1,57 +1,57 @@
 <template>
 <div v-show='!closed'>
-    <div v-if='description'>
+  <div v-if='description'>
+    <div
+      data-show={{closeing}}
+      :class="'ant-alert-with-description ant-alert-with-description-' + type + closeName">
+      <i :class="'anticon ' + iconClass"></i>
+      <p class='ant-alert-with-description-message'>
+        {{message}}
+      </p>
+      <span class='ant-alert-with-description-description'>
+        {{description}}
+      </span>
+      <a
+        v-if='closable'
+        @click='_handleClose'
+        class='ant-alert-with-description-close-icon'>
+        <span class='ant-alert-with-description-close-icon-x'></span>
+      </a>
+    </div>
+  </div>
+  <div v-else>
+    <div v-if='closeText'>
       <div
-        data-show={{closeing}}
-        :class="'ant-alert-with-description ant-alert-with-description-' + type + closeName">
+        data-show={{closing}}
+        :class="'ant-alert ant-alert-' + type + closeName">
         <i :class="'anticon ' + iconClass"></i>
-        <p class='ant-alert-with-description-message'>
-          {{message}}
-        </p>
-        <span class='ant-alert-with-description-description'>
-          {{description}}
-        </span>
-        <a
-          v-if='closable'
+        <span class='ant-alert-description'>{{message}}</span>
+        <span
           @click='_handleClose'
-          class='ant-alert-with-description-close-icon'>
-          <span class='ant-alert-with-description-close-icon-x'></span>
-        </a>
+          class='ant-alert-close-text'>{{{closeText}}}</span>
       </div>
     </div>
     <div v-else>
-      <div v-if='closeText'>
-        <div
-          data-show={{closing}}
-          :class="'ant-alert ant-alert-' + type + closeName">
-          <i :class="'anticon ' + iconClass"></i>
-          <span class='ant-alert-description'>{{message}}</span>
-          <span
-            @click='_handleClose'
-            class='ant-alert-close-text'>{{{closeText}}}</span>
-        </div>
-      </div>
-      <div v-else>
-        <div
-          data-show={{closing}}
-          :class="'ant-alert ant-alert-' + type + closeName">
-          <i :class="'anticon ' + iconClass"></i>
-          <span class='ant-alert-description'>{{message}}</span>
-          <a
-            v-if='closable'
-            @click='_handleClose'
-            class='ant-alert-close-icon'>
-            <span class='ant-alert-close-icon-x'></span>
-          </a>
-        </div>
+      <div
+        data-show={{closing}}
+        :class="'ant-alert ant-alert-' + type + closeName">
+        <i :class="'anticon ' + iconClass"></i>
+        <span class='ant-alert-description'>{{message}}</span>
+        <a
+          v-if='closable'
+          @click='_handleClose'
+          class='ant-alert-close-icon'>
+          <span class='ant-alert-close-icon-x'></span>
+        </a>
       </div>
     </div>
+  </div>
 </div>
 </template>
 
 <script>
 import { defaultProps } from '../../utils'
-// import Animate from './base/animate.vue'
+// import vAnimate from '../animate'
 
 export default {
   props: defaultProps({
@@ -63,6 +63,8 @@ export default {
     closeText: String,
     onClose: () => {}
   }),
+
+  // components: { vAnimate },
 
   data () {
     return {
