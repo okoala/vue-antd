@@ -44,6 +44,7 @@ export default {
     animConfig: oneOfType([String, Array]),
     ease: oneOfType([String, Array], 'easeOutQuart'),
     animatingClassName: Array,
+    watchValue: oneOfType([String, Array]),
     leaveReverse: false
   }),
 
@@ -60,36 +61,12 @@ export default {
   },
 
   ready () {
-    this.keysToEnter = []
-    this.keysToLeave = []
     this.keysAnimating = []
 
-    const keyNodes = Array.prototype.slice.call(this.$el.querySelectorAll('[key]:not([__scope_key__])'))
-
-    keyNodes.forEach(child => {
-      if (!child) {
-        return
-      }
-
-      child.setAttribute('__scope_key__', 1)
-
-      const key = child.getAttribute('key')
-      if (!key) {
-        return
-      }
-
-      this.keysToEnter.push(key)
-      this.keysToLeave.push(key)
-      this.keysAnimating.push(key)
-      this.children.push({
-        el: child,
-        key: key
-      })
-      this.originChildren.push({
-        el: child,
-        key: key
-      })
-    })
+    const freeChild = this._getFreeKeysAndChild()
+    this.keysAnimating = Object.keys(freeChild)
+    this.children = freeChild
+    this.originChildren = freeChild
 
     this.$on('queue-anim-hidden', () => {
       this._hiddenVelocityNode()
@@ -97,7 +74,7 @@ export default {
     })
 
     if (this.show) {
-      this._performEnter()
+      this._animateEnter()
     }
   },
 
@@ -118,30 +95,113 @@ export default {
         this.$nextTick(() => {
           this.$broadcast('queue-anim-hidden')
           setTimeout(() => {
-            this._performEnter()
+            this._animateEnter()
             this.isActHideAnimate = false
           }, 50)
         })
       } else {
-        this._performLeave(() => {
+        this._animateLeave(() => {
           if (!this.isActHideAnimate) {
             this.$broadcast('queue-anim-hidden')
           }
         })
       }
+    },
+
+    watchValue (newValue, oldValue) {
+      this.$nextTick(() => {
+        let shouldEnterChild = []
+        let shouldLeaveChild = []
+
+        const newChild = this._getKeysChild()
+        const nodeMap = {}
+
+        // 不要问我性能问题，先实现再说
+        //
+        // TODO: 删除的动画暂时实现不了，等之后再看看有没有方法
+        for (let i = 0; i < this.children.length; i++) {
+          let curChild = this.children[i]
+          let hasRemove = true
+          for (let j = 0; j < newChild.length; j++) {
+            if (curChild.key === newChild[j].key) {
+              hasRemove = false
+            }
+          }
+          if (hasRemove) {
+            shouldLeaveChild.push(curChild)
+          }
+        }
+
+        for (let i = 0; i < newChild.length; i++) {
+          let curChild = newChild[i]
+          let hasAdd = true
+          for (let j = 0; j < this.children.length; j++) {
+            if (curChild.key === this.children[j].key) {
+              hasAdd = false
+            }
+          }
+          if (hasAdd) {
+            shouldEnterChild.push(curChild)
+          }
+        }
+
+        shouldEnterChild.forEach(this._performEnter)
+        shouldLeaveChild.forEach(this._performLeave)
+
+        this.children = newChild
+      })
     }
   },
 
   methods: {
-    _getNodeByKey (key) {
-      let node = []
-      for (let i = 0; i < this.children.length; i++) {
-        if (this.children[i].key === key) {
-          node.push(this.children[i])
+    _getKeysChild () {
+      const ret = []
+      const keyNodes = Array.prototype.slice.call(this.$el.querySelectorAll('[key]'))
+      keyNodes.forEach(child => {
+        if (!child) {
+          return
         }
-      }
 
-      return node && node.length ? node[0].el : null
+        child.setAttribute('__scope_key__', 1)
+
+        const key = child.getAttribute('key')
+
+        if (!key) {
+          return
+        }
+
+        ret.push({
+          key: key,
+          el: child
+        })
+      })
+
+      return ret
+    },
+
+    _getFreeKeysAndChild () {
+      const ret = []
+      const keyNodes = Array.prototype.slice.call(this.$el.querySelectorAll('[key]:not([__scope_key__])'))
+      keyNodes.forEach(child => {
+        if (!child) {
+          return
+        }
+
+        child.setAttribute('__scope_key__', 1)
+
+        const key = child.getAttribute('key')
+
+        if (!key) {
+          return
+        }
+
+        ret.push({
+          key: key,
+          el: child
+        })
+      })
+
+      return ret
     },
 
     _getVelocityConfig (index) {
@@ -177,8 +237,8 @@ export default {
     },
 
     _hiddenVelocityNode () {
-      this.keysToEnter.forEach((key, i) => {
-        const node = this._getNodeByKey(key)
+      this.children.forEach((item, i) => {
+        const node = item.el
         if (!node) {
           return
         }
@@ -187,64 +247,72 @@ export default {
       })
     },
 
-    _performEnter () {
-      this.keysToEnter.forEach((key, i) => {
-        const node = this._getNodeByKey(key)
-        if (!node) {
-          return
-        }
-        const interval = transformArguments(this.interval)[0]
-        const delay = transformArguments(this.delay)[0];
-        const duration = transformArguments(this.duration)[0]
-        node.style.visibility = 'hidden'
-        velocity(node, 'stop')
-        velocity(node, this._getVelocityEnterConfig('enter'), {
-          delay: interval * i + delay,
-          duration: duration,
-          easing: this._getVelocityEasing()[0],
-          visibility: 'visible',
-          begin: (elements) => {
-            this._enterBegin(key, elements)
-            if (node.__vue__) {
-              const _enterFn = node.__vue__._performEnter
-              _enterFn && _enterFn()
-
-              const children = node.__vue__.$children
-              children.forEach(item => {
-                item._performEnter && item._performEnter()
-              })
-            }
-          },
-          complete: this._enterComplete.bind(this, key)
-        })
-      })
+    _animateEnter () {
+      this.children.forEach(this._performEnter)
     },
 
-    _performLeave (done) {
-      const len = this.keysToLeave.length
-      const self = this
-      this.keysToLeave.forEach((key, i) => {
-        const node = this._getNodeByKey(key)
-        if (!node) {
-          return
-        }
-        const interval = transformArguments(this.interval)[1]
-        const delay = transformArguments(this.delay)[1]
-        const duration = transformArguments(this.duration)[1]
-        const order = this.leaveReverse ? (this.keysToLeave.length - i - 1) : i
-        velocity(node, 'stop')
-        velocity(node, this._getVelocityLeaveConfig('leave'), {
-          delay: interval * order + delay,
-          duration: duration,
-          easing: this._getVelocityEasing()[1],
-          begin: this._leaveBegin.bind(this),
-          complete: (elements) => {
-            this._leaveComplete(key, elements)
-            if (i === len - 1) {
-              done && done()
-            }
+    _performEnter (item, i) {
+      const node = item.el
+      const key = item.key
+
+      if (!node) {
+        return
+      }
+      const interval = transformArguments(this.interval)[0]
+      const delay = transformArguments(this.delay)[0];
+      const duration = transformArguments(this.duration)[0]
+      node.style.visibility = 'hidden'
+      velocity(node, 'stop')
+      velocity(node, this._getVelocityEnterConfig('enter'), {
+        delay: interval * i + delay,
+        duration: duration,
+        easing: this._getVelocityEasing()[0],
+        visibility: 'visible',
+        begin: (elements) => {
+          this._enterBegin(key, elements)
+          if (node.__vue__) {
+            const _enterFn = node.__vue__._animateEnter
+            _enterFn && _enterFn()
+
+            const children = node.__vue__.$children
+            children.forEach(item => {
+              item._animateEnter && item._animateEnter()
+            })
           }
-        })
+        },
+        complete: this._enterComplete.bind(this, key)
+      })
+    },
+
+    _animateLeave (done) {
+      this.children.forEach((item, i) => {
+        this._performLeave(item, i, done)
+      })
+    },
+
+    _performLeave (item, i, done) {
+      const node = item.el
+      const key = item.key
+      if (!node) {
+        return
+      }
+      const interval = transformArguments(this.interval)[1]
+      const delay = transformArguments(this.delay)[1]
+      const duration = transformArguments(this.duration)[1]
+      const order = this.leaveReverse ? (this.children.length - i - 1) : i
+      velocity(node, 'stop')
+      velocity(node, this._getVelocityLeaveConfig('leave'), {
+        delay: interval * order + delay,
+        duration: duration,
+        easing: this._getVelocityEasing()[1],
+        begin: this._leaveBegin.bind(this),
+        complete: (elements) => {
+          this._leaveComplete(key, elements)
+          const len = this.children.length
+          if (i === len - 1) {
+            done && done()
+          }
+        }
       })
     },
 

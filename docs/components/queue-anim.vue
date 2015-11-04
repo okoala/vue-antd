@@ -148,7 +148,7 @@
         <div class="demo-listBox" key="b">
           <div class="demo-list">
             <div class="title"></div>
-            <v-queue-anim component="ul" :type="['right', 'left']" :show="show">
+            <v-queue-anim component="ul" :type="['right', 'left']" :watch-value="items" :show="show">
               <li v-for="item in items" :key="Date.now()"></li>
             </v-queue-anim>
           </div>
@@ -265,11 +265,12 @@ export default {
     },
 
     _handleAdd () {
-
+      const len = this.items.length
+      this.items.push(`${len}`)
     },
 
     _handleRemove () {
-
+      this.items.pop()
     }
   }
 
