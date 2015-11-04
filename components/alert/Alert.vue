@@ -28,7 +28,7 @@
           <span class='ant-alert-description'>{{message}}</span>
           <span
             @click='_handleClose'
-            class='ant-alert-close-text'>{{closeText}}</span>
+            class='ant-alert-close-text'>{{{closeText}}}</span>
         </div>
       </div>
       <div v-else>

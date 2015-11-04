@@ -131,10 +131,10 @@ export default {
           // }
         ],
         show: [
-          // {
-          //   name: 'alert',
-          //   desc: '警告提示'
-          // },
+          {
+            name: 'alert',
+            desc: '警告提示'
+          },
           {
             name: 'badge',
             desc: '徽标数'
