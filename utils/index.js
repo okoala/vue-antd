@@ -112,3 +112,13 @@ export function oneOf (validList, defaultValue) {
 export function getPlainObject (vueObject) {
   return JSON.parse(JSON.stringify(vueObject))
 }
+
+export function contains (root, node) {
+  while (node) {
+    if (node === root) {
+      return true
+    }
+    node = node.parentNode
+  }
+  return false
+}

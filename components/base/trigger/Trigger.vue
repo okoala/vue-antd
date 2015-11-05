@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import { defaultProps } from '../../../utils'
+import { defaultProps, contains } from '../../../utils'
 import Popup from './Popup.vue'
 
 export default {
   props: defaultProps({
-    prefixCls: 'rc-trigger-popup',
+    prefixCls: 'ant-trigger-popup',
     // getPopupClassNameFromAlign: returnEmptyString,
     onPopupVisibleChange: () => {},
     afterPopupVisibleChange: () => {},
@@ -121,7 +121,23 @@ export default {
       if (this.destoryPopupOnHide) {
         // todo
       }
-    }
+    },
+
+    _onDocumentClick (e) {
+      const target = e.target
+      const root = this.$el
+      const popupNode = this.$els.popup
+      if (!contains(root, target) && !contains(popupNode, target)) {
+        this._setPopupVisible(false)
+      }
+    },
+
+    _setPopupVisible (popupVisible) {
+      if (this.popupVisible !== popupVisible) {
+        this.popupVisible = popupVisible
+      }
+      this.onPopupVisibleChange(popupVisible)
+    },
 
     _delaySetPopupVisible (visible, delayS) {
       const delay = delayS * 1000
