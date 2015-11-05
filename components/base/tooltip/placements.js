@@ -77,7 +77,7 @@ export const placements = {
     overflow: autoAdjustOverflow,
     offset: [-3, 0],
     targetOffset
-  },
+  }
 }
 
 export default placements
