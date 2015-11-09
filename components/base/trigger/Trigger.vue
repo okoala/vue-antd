@@ -7,6 +7,10 @@
   @mouseenter="_onMouseEnter"
   @mouseleave="_onMouseLeave"
   @touchstart="_onTouchStart">
+  <popup v-if="popupRendered"
+    :prefixCls="prefixCls"
+    :visible="popupVisible"
+    :className="popupClassName"></popup>
   <slot></slot>
 </div>
 </template>
@@ -130,6 +134,18 @@ export default {
       if (!contains(root, target) && !contains(popupNode, target)) {
         this._setPopupVisible(false)
       }
+    },
+
+    _getPopupDomNode () {
+      return this.popupDomNode
+    },
+
+    _getPopupContainer () {
+      if (!this.popupContainer) {
+        this.popupContainer = document.createElement('div')
+        document.body.appendChild(this.popupContainer)
+      }
+      return this.popupContainer
     },
 
     _setPopupVisible (popupVisible) {

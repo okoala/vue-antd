@@ -1,13 +1,15 @@
 <template>
 <div :class="wrapClasses">
-  <ajax-upload :action="action"
-              :name="name"
-              :multiple="multiple"
-              :on-start="_onStart"
-              :on-progress="_onProgress"
-              :on-success="_onSuccess"
-              :on-error="_onError"
-              :before-upload="beforeUpload">
+  <ajax-upload
+    :action="action"
+    :name="name"
+    :data="data"
+    :multiple="multiple"
+    :on-start="_onStart"
+    :on-progress="_onProgress"
+    :on-success="_onSuccess"
+    :on-error="_onError"
+    :before-upload="beforeUpload">
     <div :class="containerClasses">
       <slot></slot>
     </div>

@@ -1,16 +1,16 @@
 <template>
 <span role="button"
-      tabIndex="0"
-      @click="_onClick"
-      @keydown="_onKeyDown"
-      @drop="_onFileDrop"
-      @dragover="_onFileDrop">
+  tabIndex="0"
+  @click="_onClick"
+  @keydown="_onKeyDown"
+  @drop="_onFileDrop"
+  @dragover="_onFileDrop">
   <input v-el:file
-         type="file"
-         style="display: none"
-         :accept="accept"
-         :multiple="multiple"
-         @change="_onChange">
+    type="file"
+    style="display: none"
+    :accept="accept"
+    :multiple="multiple"
+    @change="_onChange">
   <slot></slot>
 </span>
 </template>
