@@ -1,11 +1,9 @@
 <template>
 <div :class="loadingClasses">
   <div v-if="!hide" :class="spinWrapClasses">
-    <div :class="spinClasses">
-      <span :class="prefixCls + '-dot ' + prefixCls + '-dot-first'"></span>
-      <span :class="prefixCls + '-dot ' + prefixCls + '-dot-second'"></span>
-      <span :class="prefixCls + '-dot ' + prefixCls + '-dot-third'"></span>
-    </div>
+    <span :class="prefixCls + '-dot ' + prefixCls + '-dot-first'"></span>
+    <span :class="prefixCls + '-dot ' + prefixCls + '-dot-second'"></span>
+    <span :class="prefixCls + '-dot ' + prefixCls + '-dot-third'"></span>
   </div>
   <div :class="prefixCls + '-container'">
     <slot></slot>
@@ -39,15 +37,10 @@ export default {
 
     spinWrapClasses () {
       return cx({
-        [`${this.prefixCls}-wrapper`]: 1,
-        [`${this.prefixCls}-${this.size}`]: !!this.size
-      })
-    },
-
-    spinClasses () {
-      return cx({
         [this.prefixCls]: 1,
-        [this.className]: !!this.className
+        [this.className]: !!this.className,
+        [`${this.prefixCls}-spining`]: 1,
+        [`${this.prefixCls}-${this.size}`]: !!this.size
       })
     }
   },
