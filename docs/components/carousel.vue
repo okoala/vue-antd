@@ -25,7 +25,7 @@
 | easing | 动画效果 | String   | linear |
 | onChange         | 切换面板的回调                               | Function | 无
 
-<style>
+<style scoped>
 .ant-carousel .slick-slide {
   text-align: center;
   height: 100px;

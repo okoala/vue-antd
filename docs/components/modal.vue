@@ -99,7 +99,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .code-box-demo .ant-btn {
   margin-right: 8px;
 }

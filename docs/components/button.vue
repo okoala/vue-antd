@@ -211,7 +211,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 #components-button-demo-icon .ant-btn {
   margin-right: 8px;
   margin-bottom: 12px;

@@ -71,7 +71,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .spin-demo2-container {
   text-align: center;
   background: rgba(0,0,0,0.05);

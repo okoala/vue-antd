@@ -63,7 +63,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .head-example {
   width: 42px;
   height: 42px;
