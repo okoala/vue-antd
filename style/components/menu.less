@@ -12,6 +12,10 @@
   color: @text-color;
   background: #fff;
 
+  &-hidden {
+    display: none;
+  }
+
   &-item-group-list {
     margin: 0;
     padding: 0;
@@ -48,7 +52,6 @@
   }
 
   & > li&-submenu {
-    padding: 0;
     cursor: pointer;
     transition: all 0.3s ease;
   }
@@ -93,7 +96,6 @@
     position: relative;
 
     > .@{menu-prefix-cls} {
-      display: none;
       background-color: #fff;
     }
 
@@ -128,14 +130,10 @@
     }
 
     &-open {
-      > .@{menu-prefix-cls} {
-        display: block;
-      }
       &.@{menu-prefix-cls}-submenu-inline > .@{menu-prefix-cls}-submenu-title:after {
         .ie-rotate(1);
         transform: rotate(180deg) scale(0.75);
       }
-
     }
   }
 
@@ -158,11 +156,14 @@
     z-index: 0;
 
     & > .@{menu-prefix-cls}-item,
-    & > .@{menu-prefix-cls}-submenu > .@{menu-prefix-cls}-submenu-title {
+    & > .@{menu-prefix-cls}-submenu {
       padding: 0 20px;
       line-height: 50px;
       position: relative;
       top: 1px;
+      > a , > span{
+        line-height: 51px;
+      }
       > a {
         display: block;
         color: @text-color;
