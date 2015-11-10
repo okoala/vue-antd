@@ -6,8 +6,23 @@
   :transition-appear="true"
   :on-leave="_onAnimateLeave"
   :transition-name="transitionName">
-  <align>
-    <slot></slot>
+  <align
+    key="popup"
+    :target="wrap"
+    :monitor-window-resize="true"
+    :xVsible="visible"
+    :children-props="{visible: 'xVsible'}"
+    :disabled="!visible"
+    :align="align"
+    :on-align="_onAlign">
+    <popup-inner
+      :class-name="className"
+      :hidden-class-name="hiddenClassName"
+      :on-mouse-enter="onMouseEnter"
+      :on-mouse-leave="onMouseLeave"
+      :style="style">
+      <slot></slot>
+    </popup-inner>
   </align>
 </animation>
 </template>
