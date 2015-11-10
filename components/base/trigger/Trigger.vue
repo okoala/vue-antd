@@ -27,7 +27,9 @@
 
 <script>
 import { defaultProps, contains } from '../../../utils'
+import cx from 'classnames'
 import Popup from './Popup.vue'
+import { getAlignFromPlacement, getPopupClassNameFromAlign } from './utils'
 
 export default {
   props: defaultProps({

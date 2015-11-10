@@ -29,6 +29,7 @@
 
 <script>
 import { defaultProps, contains } from '../../../utils'
+import cx from 'classnames'
 import Align from '../align'
 import Animation from '../animate'
 import PopupInner from './PopupInner.vue'
