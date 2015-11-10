@@ -7,11 +7,21 @@
   @mouseenter="_onMouseEnter"
   @mouseleave="_onMouseLeave"
   @touchstart="_onTouchStart">
-  <popup v-if="popupRendered"
+  <popup
+    v-if="popupRendered"
+    :style="popupStyle"
     :prefixCls="prefixCls"
     :visible="popupVisible"
-    :className="popupClassName"></popup>
-  <slot></slot>
+    :class-name="popupClassName"
+    :action="action"
+    :animation="popupAnimation"
+    :on-animation-Leave="onAnimateLeave"
+    :on-mouse-enter="_onMouseEnter"
+    :on-mouse-leave="_onMouseLeave"
+    :transition-name="popupTransitionName">
+    <slot></slot>
+    </popup>
+  <slot v-if="!popupRendered"></slot>
 </div>
 </template>
 
@@ -60,7 +70,7 @@ export default {
     }
   }
 
-  mehtods: {
+  methods: {
     _onClick (e) {
       if (this.isClickAction) {
         if (this.focusTime) {
