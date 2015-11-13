@@ -30,6 +30,7 @@ export default {
   watch: {
     show (val) {
       if (val) {
+        this.currentNode.style.display = ''
         if (this._isEnterSupported()) {
           this._transition('enter', () => {
             if (this._allowEnterCallback()) {
@@ -41,11 +42,24 @@ export default {
         if (this._isLeaveSupported()) {
           this._transition('leave', () => {
             if (this._allowLeaveCallback()) {
+              this.currentNode.style.display = 'none'
               this.onEnd()
             }
           })
         }
       }
+    }
+  },
+
+  computed: {
+    currentNode () {
+      return this.$el.nextSibling
+    }
+  },
+
+  ready () {
+    if (!this.show) {
+      this.currentNode.style.display = 'none'
     }
   },
 

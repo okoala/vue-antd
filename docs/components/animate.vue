@@ -3,9 +3,7 @@
 
 ---
 
-基础组件
-
-通常情况下原始的 ```v-transition``` 已经够用了。
+**注：通常情况下原始的 ```v-transition``` 已经够用了。**
 
 
 ## 组件演示
@@ -14,7 +12,7 @@
   <example title="简单的徽章显示">
     <v-checkbox :default-value="show" :on-change="_toggle"><span>显示</span></v-checkbox>
     <v-animate :show="show" transition-name="fade">
-      <div v-show="show" style="margin-top: 20px; width: 200px; height: 200px; background-color: red"></div>
+      <div style="margin-top: 20px; width: 200px; height: 200px; background-color: red"></div>
     </v-animate>
   </example>
 </demo>
