@@ -1,3 +1,3 @@
-import Align from './Align.vue'
+import vAlign from './Align.vue'
 
-export default Align
+export default vAlign

@@ -12,18 +12,6 @@
   <span>=</span>
   <img width="150" src="../../vue-antd.150.png">
 </div>
-<style>
-.pic-plus > * {
-  display: inline-block!important;
-  vertical-align: middle;
-}
-.pic-plus span {
-  font-size: 30px;
-  color: #aaa;
-  margin: 0 20px;
-}
-</style>
-
 
 ## 特性
 
@@ -52,3 +40,20 @@
 
 我们欢迎任何形式的贡献，有任何建议或意见您可以进行 [Pull Request](https://github.com/okoala/vue-antd/pulls)，或者给我们[提问](https://github.com/okoala/vue-antd/issues)。
 </template>
+
+<style scoped>
+.pic-plus {
+  margin-top: 15px;
+}
+
+.pic-plus > * {
+  display: inline-block!important;
+  vertical-align: middle;
+}
+
+.pic-plus span {
+  font-size: 30px;
+  color: #aaa;
+  margin: 0 20px;
+}
+</style>

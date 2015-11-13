@@ -1,9 +1,9 @@
 <template>
-<slot v-el:source></slot>
+<slot></slot>
 </template>
 
 <script>
-import { defaultProps } from '../../utils'
+import { defaultProps } from '../../../utils'
 import align from 'dom-align'
 
 function isWindow(obj) {
@@ -37,10 +37,22 @@ export default {
     disabled: false
   }),
 
-  compiled () {
-    if (!this.disabled) {
-      if (this.monitorWindowResize) {
+  computed: {
+    currentNode () {
+      return this.$el.nextSibling
+    }
+  },
+
+  watch: {
+    align () {
+      this._doAlign()
+    },
+
+    monitorWindowResize (val) {
+      if (val && !this.disabled) {
         this._startMonitorWindowResize()
+      } else {
+        this._stopMonitorWindowResize()
       }
     }
   },
@@ -50,17 +62,9 @@ export default {
   },
 
   ready () {
-    let reAlign = false
-    let currentTarget
+    this._doAlign()
 
-    // if (!this.disabled) {
-    //   if ()
-    // }
-
-    if (reAlign) {
-      const source = this.$els.source
-      this.onAlign(source, align(source, this.target(), this.align)
-    }
+    this.resizeHandler = buffer(this._onWindowResize, this.monitorBufferTime)
 
     if (this.monitorWindowResize && !this.disabled) {
       this._startMonitorWindowResize()
@@ -70,23 +74,27 @@ export default {
   },
 
   methods: {
+    _doAlign () {
+      this.onAlign(this.currentNode, align(this.currentNode, this.target(), this.align))
+    },
+
     _onWindowResize () {
       if (!this.disabled) {
-        const source = this.$els.source
-        this.onAlign(source, align(source, this.target(), this.align))
+        this._doAlign()
       }
     },
 
     _startMonitorWindowResize () {
-      if (!this.resizeHandler) {
-        this.resizeHandler = window.addEventListener('resize', buffer(this._onWindowResize, this.monitorBufferTime), false)
+      if (!this.hasListener) {
+        this.hasListener = true
+        window.addEventListener('resize', this.resizeHandler, false)
       }
     },
 
     _stopMonitorWindowResize () {
-      if (this.resizeHandler) {
-        this.resizeHandler.remove()
-        this.resizeHandler = null
+      if (this.hasListener) {
+        this.hasListener = false
+        window.removeEventListener('resize', this.resizeHandler, false)
       }
     }
   }

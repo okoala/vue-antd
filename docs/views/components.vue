@@ -243,6 +243,10 @@ export default {
           {
             name: 'animate',
             desc: '动画'
+          },
+          {
+            name: 'align',
+            desc: '对齐'
           }
         ]
       }

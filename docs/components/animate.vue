@@ -9,7 +9,7 @@
 ## 组件演示
 
 <demo>
-  <example title="简单的徽章显示">
+  <example title="简单使用">
     <v-checkbox :default-value="show" :on-change="_toggle"><span>显示</span></v-checkbox>
     <v-animate :show="show" transition-name="fade">
       <div style="margin-top: 20px; width: 200px; height: 200px; background-color: red"></div>

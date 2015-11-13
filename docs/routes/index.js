@@ -20,6 +20,10 @@ export function configRouter (router) {
           component: require('../components/animate.vue')
         },
 
+        'align': {
+          component: require('../components/align.vue')
+        },
+
         'affix': {
           component: require('../components/affix.vue')
         },
