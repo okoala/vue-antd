@@ -9,7 +9,6 @@
 <script>
 import Vue from 'vue'
 import Animate from '../animate'
-import {createChainedFunction, classSet} from 'rc-util'
 import { defaultProps } from '../../../utils'
 import Notice from './Notice.vue'
 

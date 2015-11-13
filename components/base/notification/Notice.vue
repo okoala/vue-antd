@@ -16,7 +16,6 @@
 
 <script>
 import Animate from '../animate'
-import {createChainedFunction, classSet} from 'rc-util'
 import { defaultProps } from '../../../utils'
 
 const Notice = {
