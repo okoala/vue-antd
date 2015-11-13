@@ -13,8 +13,8 @@
 <demo>
   <example title="简单的徽章显示">
     <v-checkbox :default-value="show" :on-change="_toggle"><span>显示</span></v-checkbox>
-    <v-animate >
-      <div></div>
+    <v-animate :show="show" transition-name="fade">
+      <div v-show="show" style="margin-top: 20px; width: 200px; height: 200px; background-color: red"></div>
     </v-animate>
   </example>
 </demo>
@@ -43,5 +43,59 @@ export default {
 </script>
 
 <style scoped>
+.fade-enter {
+  opacity: 0;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+.fade-appear {
+  opacity: 0;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+.fade-leave {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-play-state: paused;
+}
+.fade-enter.fade-enter-active {
+  animation-name: fadeIn;
+  animation-play-state: running;
+}
+.fade-appear.fade-appear-active {
+  animation-name: fadeIn;
+  animation-play-state: running;
+}
+.fade-leave.fade-leave-active {
+  animation-name: fadeOut;
+  animation-play-state: running;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-enter,
+.fade-leave,
+.fade-appear {
+  animation-duration: 2s;
+}
 
 </style>

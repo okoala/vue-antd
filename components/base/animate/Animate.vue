@@ -4,7 +4,7 @@
 
 <script>
 import { defaultProps } from '../../../utils'
-import cssAnimatie from 'css-animation'
+import cssAnimate, { isCssAnimationSupported } from 'css-animation'
 
 const transitionMap = {
   enter: 'transitionEnter',
@@ -31,7 +31,7 @@ export default {
     show (val) {
       if (val) {
         if (this._isEnterSupported()) {
-          this.transition('enter', () => {
+          this._transition('enter', () => {
             if (this._allowEnterCallback()) {
               this.onEnter()
             }
@@ -39,7 +39,7 @@ export default {
         }
       } else {
         if (this._isLeaveSupported()) {
-          this.transition('leave', () => {
+          this._transition('leave', () => {
             if (this._allowLeaveCallback()) {
               this.onEnd()
             }
@@ -54,13 +54,13 @@ export default {
   },
 
   methods: {
-    _transition (animationType, finishCallback) {
-      const node = this.$el
+    _transition (animationType, done) {
+      const node = this.$el.nextSibling
       const transitionName = this.transitionName
-      this.stop()
+      this._stop()
       const end = () => {
         this.stopper = null
-        finishCallback()
+        done()
       }
       if ((isCssAnimationSupported || !this.animation[animationType]) && transitionName && this[transitionMap[animationType]]) {
         this.stopper = cssAnimate(node, transitionName + '-' + animationType, end)
