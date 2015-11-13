@@ -58,6 +58,13 @@
               <span class="chinese">{{component.desc}}</span>
             </a>
           </li>
+          <li class="type-divider">基础</li>
+          <li v-for="component in componentsMenu.basic">
+            <a v-link="{path: '/components/' + component.name}">
+              {{component.name | Upper}}
+              <span class="chinese">{{component.desc}}</span>
+            </a>
+          </li>
         </ul>
       </li>
     </ul>
@@ -230,6 +237,12 @@ export default {
           {
             name: 'queue-anim',
             desc: '进场动画'
+          }
+        ],
+        basic: [
+          {
+            name: 'animate',
+            desc: '动画'
           }
         ]
       }

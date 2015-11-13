@@ -1,3 +1,3 @@
-import vAnimate from './vAnimate.vue'
+import vAnimate from './Animate.vue'
 
 export default vAnimate
