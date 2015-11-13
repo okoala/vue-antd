@@ -10,7 +10,7 @@
   <span>+</span>
   <img width="150" src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg">
   <span>=</span>
-  <img width="150" src="http://s2.upload.tf/Gbv.png">
+  <img width="150" src="../../vue-antd.150.png">
 </div>
 <style>
 .pic-plus > * {

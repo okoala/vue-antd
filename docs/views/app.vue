@@ -2,7 +2,7 @@
 <div>
 <header class="clearfix">
   <a class="logo" href="..">
-    <img width="50" src="http://s2.upload.tf/Hbv.png">
+    <img width="50" src="../vue-antd.50.png">
     <span>Vue Antd<span>
   </a>
   <nav class="nav">
