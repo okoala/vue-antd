@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -146,6 +146,4 @@ a.logo {
     transform: rotate(0deg);
   }
 }
-
-
 </style>
