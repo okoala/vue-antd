@@ -247,6 +247,10 @@ export default {
           {
             name: 'align',
             desc: '对齐'
+          },
+          {
+            name: 'trigger',
+            desc: '触发'
           }
         ]
       }

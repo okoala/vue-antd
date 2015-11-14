@@ -102,6 +102,10 @@ export function configRouter (router) {
 
         'tag': {
           component: require('../components/tag.vue')
+        },
+
+        'trigger': {
+          component: require('../components/trigger.vue')
         }
       }
     },
