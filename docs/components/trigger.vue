@@ -9,8 +9,8 @@
 <demo>
   <example title="简单使用">
     <div>
+      <span>placement:</span>
       <label>
-        placement:
         <select v-model="placement">
           <option>right</option>
           <option>left</option>
@@ -27,37 +27,39 @@
         <v-checkbox
           :value="rc-trigger-popup-zoom"
           :on-change="_onTransitionChange"
-          :checked="transitionName === 'rc-trigger-popup-zoom'">{{transitionName}}</v-checkbox>
+          :checked="transitionName === 'rc-trigger-popup-zoom'">transitionName</v-checkbox>
       </label>
       <br>
-      trigger:
+      <br>
+      <span>trigger:</span>
       <label>
         <v-checkbox
           :value="hover"
-          :checked="trigger.hover"
+          :checked="!!trigger.hover"
           :on-change="_onTriggerChange">hover</v-checkbox>
       </label>
       <label>
         <v-checkbox
           :value="focus"
-          :checked="trigger.focus"
+          :checked="!!trigger.focus"
           :on-change="_onTriggerChange">focus</v-checkbox>
       </label>
       <label>
         <v-checkbox
           :value="click"
-          :checked="trigger.click"
+          :checked="!!trigger.click"
           :on-change="_onTriggerChange">click</v-checkbox>
       </label>
-      <br/>
+      <br>
+      <br>
+      <span>offsetX:</span>
       <label>
-        offsetX:
-        <input type='text' class="ant-input" @change="_onOffsetXChange"/>
+        <input type='text' style="width: 100px;" class="ant-input" @change="_onOffsetXChange"/>
       </label>
-      &nbsp;&nbsp;&nbsp;&nbsp;
+      <br>
+      <span>offsetY:</span>
       <label>
-        offsetY:
-        <input type='text' class="ant-input" @change="_onOffsetYChange"/>
+        <input type='text' style="width: 100px;" class="ant-input" @change="_onOffsetYChange"/>
       </label>
     </div>
     <div style="margin: 100px;">
@@ -66,7 +68,7 @@
         :mouse-enter-delay="0"
         :popup-placement="placement"
         :mouse-leave-delay="0.1"
-        :action="Object.keys(trigger)"
+        :action="action"
         :builtin-placements="builtinPlacements"
         :popup-transition-name="transitionName">
         <div slot="popup" style="border:1px solid red; padding:10px;">i am a popup</div>
@@ -122,6 +124,12 @@ export default {
 
   components: { vTrigger, vCheckbox },
 
+  computed: {
+    action () {
+      return Object.keys(this.trigger)
+    }
+  },
+
   methods: {
     _onPlacementChange (e) {
       this.placement = e.target.value
@@ -159,5 +167,7 @@ export default {
 </script>
 
 <style scoped>
-
+label {
+  margin-left: 5px;
+}
 </style>

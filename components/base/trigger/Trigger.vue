@@ -34,9 +34,6 @@ import { getAlignFromPlacement, getPopupClassNameFromAlign } from './utils'
 export default {
   props: defaultProps({
     prefixCls: 'ant-trigger-popup',
-    // getPopupClassNameFromAlign: returnEmptyString,
-    onPopupVisibleChange: () => {},
-    afterPopupVisibleChange: () => {},
     popupClassName: '',
     mouseEnterDelay: 0,
     mouseLeaveDelay: 0.1,
@@ -44,7 +41,9 @@ export default {
     destroyPopupOnHide: false,
     popupAlign: {},
     defaultPopupVisible: false,
-    action: []
+    action: [],
+    onPopupVisibleChange: () => {},
+    afterPopupVisibleChange: () => {}
   }),
 
   components: { Popup },
@@ -96,7 +95,7 @@ export default {
       }
     },
 
-    _oMouseDown (e) {
+    _onMouseDown (e) {
       if (this.isClickAction) {
         this.preClickTime = Date.now()
       }
