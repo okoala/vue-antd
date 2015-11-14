@@ -70,7 +70,7 @@ export default {
       }
       return true
     }
-  }
+  },
 
   methods: {
     _onClick (e) {
