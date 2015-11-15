@@ -1,21 +1,18 @@
 <template>
 <animation
-  components=""
-  show-prop="xVsible"
-  :exclusive="true"
-  :transition-appear="true"
+  :show="xVsible"
   :on-leave="_onAnimateLeave"
   :transition-name="transitionName">
   <align
     key="popup"
     :target="wrap"
     :monitor-window-resize="true"
-    :xVsible="visible"
-    :children-props="{visible: 'xVsible'}"
+    :visible="visible"
     :disabled="!visible"
     :align="align"
     :on-align="_onAlign">
     <popup-inner
+      :visible="visible"
       :class-name="className"
       :hidden-class-name="hiddenClassName"
       :on-mouse-enter="onMouseEnter"

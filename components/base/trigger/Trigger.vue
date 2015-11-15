@@ -19,9 +19,9 @@
     :on-mouse-enter="_onMouseEnter"
     :on-mouse-leave="_onMouseLeave"
     :transition-name="popupTransitionName">
-    <slot></slot>
-    </popup>
-  <slot v-if="!popupRendered"></slot>
+    <slot name="popup"></slot>
+  </popup>
+  <slot></slot>
 </div>
 </template>
 
@@ -34,13 +34,17 @@ import { getAlignFromPlacement, getPopupClassNameFromAlign } from './utils'
 export default {
   props: defaultProps({
     prefixCls: 'ant-trigger-popup',
+    popup: String,
+    popupStyle: {},
+    popupAlign: {},
+    popupPlacement: String,
     popupClassName: '',
+    popupVisible: Boolean,
     mouseEnterDelay: 0,
     mouseLeaveDelay: 0.1,
-    popupStyle: {},
     destroyPopupOnHide: false,
-    popupAlign: {},
     defaultPopupVisible: false,
+    builtinPlacements: Object,
     action: [],
     onPopupVisibleChange: () => {},
     afterPopupVisibleChange: () => {}
@@ -68,6 +72,12 @@ export default {
         return false
       }
       return true
+    }
+  },
+
+  compiled () {
+    if (!('popupVisible' in this)) {
+      this.popupVisible = !!this.defaultPopupVisible
     }
   },
 
