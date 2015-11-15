@@ -1,27 +1,29 @@
 <template>
-<animation
-  :show="xVsible"
-  :on-leave="_onAnimateLeave"
-  :transition-name="transitionName">
-  <align
-    key="popup"
-    :target="wrap"
-    :monitor-window-resize="true"
-    :visible="visible"
-    :disabled="!visible"
-    :align="align"
-    :on-align="_onAlign">
-    <popup-inner
+<div>
+  <animation
+    :show="xVsible"
+    :on-leave="_onAnimateLeave"
+    :transition-name="popupTransitionName">
+    <align
+      key="popup"
+      :target="wrap"
+      :monitor-window-resize="true"
       :visible="visible"
-      :class-name="className"
-      :hidden-class-name="hiddenClassName"
-      :on-mouse-enter="onMouseEnter"
-      :on-mouse-leave="onMouseLeave"
-      :style="style">
-      <slot></slot>
-    </popup-inner>
-  </align>
-</animation>
+      :disabled="!visible"
+      :align="align"
+      :on-align="_onAlign">
+      <popup-inner
+        :visible="visible"
+        :class-name="className"
+        :hidden-class-name="hiddenClassName"
+        :on-mouse-enter="onMouseEnter"
+        :on-mouse-leave="onMouseLeave"
+        :style="style">
+        <slot></slot>
+      </popup-inner>
+    </align>
+  </animation>
+</div>
 </template>
 
 <script>
@@ -38,8 +40,8 @@ export default {
     wrap: Object,
     align: Object,
     style: Object,
-    className: String,
-    transitionName: String,
+    className: '',
+    transitionName: '',
     animation: String,
     getClassNameFromAlign: () => {},
     onMouseEnter: () => {},
@@ -56,7 +58,7 @@ export default {
   },
 
   computed: {
-    transitionName () {
+    popupTransitionName () {
       let transitionName = this.transitionName
       if (!transitionName && this.animation) {
         transitionName = `${this.prefixCls}-${this.animation}`

@@ -8,14 +8,13 @@
   @mouseleave="_onMouseLeave"
   @touchstart="_onTouchStart">
   <popup
-    v-if="popupRendered"
     :style="popupStyle"
     :prefixCls="prefixCls"
     :visible="popupVisible"
     :class-name="popupClassName"
     :action="action"
     :animation="popupAnimation"
-    :on-animation-Leave="onAnimateLeave"
+    :on-animation-leave="onAnimateLeave"
     :on-mouse-enter="_onMouseEnter"
     :on-mouse-leave="_onMouseLeave"
     :transition-name="popupTransitionName">
@@ -39,12 +38,12 @@ export default {
     popupAlign: {},
     popupPlacement: String,
     popupClassName: '',
-    popupVisible: Boolean,
+    popupVisible: false,
     mouseEnterDelay: 0,
     mouseLeaveDelay: 0.1,
     destroyPopupOnHide: false,
-    defaultPopupVisible: false,
     builtinPlacements: Object,
+    popupTransitionName: '',
     action: [],
     onPopupVisibleChange: () => {},
     afterPopupVisibleChange: () => {}
@@ -72,12 +71,6 @@ export default {
         return false
       }
       return true
-    }
-  },
-
-  compiled () {
-    if (!('popupVisible' in this)) {
-      this.popupVisible = !!this.defaultPopupVisible
     }
   },
 
