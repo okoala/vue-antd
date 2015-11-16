@@ -13,6 +13,7 @@
     :visible="popupVisible"
     :class-name="popupClassName"
     :action="action"
+    :wrap="_getTarget.bind($parent)"
     :align="_getPopupAlign()"
     :animation="popupAnimation"
     :on-animation-leave="onAnimateLeave"
@@ -21,7 +22,7 @@
     :transition-name="popupTransitionName">
     <slot name="popup"></slot>
   </popup>
-  <slot @mouseenter="_onMouseEnter"></slot>
+  <slot test="true"></slot>
 </div>
 </template>
 
@@ -102,6 +103,10 @@ export default {
         event.preventDefault()
         this._setPopupVisible(!this.popupVisible)
       }
+    },
+
+    _getTarget () {
+      return this.$refs.target
     },
 
     _onMouseDown (e) {

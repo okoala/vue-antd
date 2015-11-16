@@ -15,7 +15,9 @@ const transitionMap = {
 export default {
   props: defaultProps({
     show: false,
-    animation: {},
+    animation: {
+      default: function() {return{}}
+    },
     transitionName: String,
     transitionEnter: true,
     transitionAppear: false,

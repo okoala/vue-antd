@@ -37,6 +37,12 @@ export default {
   props: defaultProps({
     prefixCls: '',
     visible: Boolean,
+    wrap: {
+      default: function (){
+        const self = this
+        return function () { return this.$el }
+      }
+    },
     align: {
       default: function (){ return {} }
     },
@@ -81,13 +87,6 @@ export default {
 
     hiddenClassName () {
       return `${this.prefixCls}-hidden`
-    },
-
-    wrap () {
-      const self = this
-      return function () {
-        return self.$el
-      }
     }
   },
 
