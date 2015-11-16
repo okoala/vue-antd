@@ -93,7 +93,7 @@ export default {
 
   watch: {
     visible (val) {
-      if (!visible) {
+      if (!val) {
         this.currentAlignClassName = null
       }
     }

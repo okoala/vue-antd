@@ -60,23 +60,23 @@ export default {
   computed: {
     isClickAction () {
       if (this.action.indexOf('click') === -1) {
-        return false
+        return true
       }
-      return true
+      return false
     },
 
     isHoverAction () {
       if (this.action.indexOf('hover') !== -1) {
-        return false
+        return true
       }
-      return true
+      return false
     },
 
     isFocusAction () {
       if (this.action.indexOf('focus') !== -1) {
-        return false
+        return true
       }
-      return true
+      return false
     }
   },
 
@@ -191,11 +191,11 @@ export default {
       }
       if (delay) {
         this.delayTimer = setTimeout(() => {
-          this.setPopupVisible(visible)
+          this._setPopupVisible(visible)
           this.delayTimer = null
         }, delay)
       } else {
-        this.setPopupVisible(visible)
+        this._setPopupVisible(visible)
       }
     }
   }
