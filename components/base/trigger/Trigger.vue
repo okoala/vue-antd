@@ -20,7 +20,7 @@
     :transition-name="popupTransitionName">
     <slot name="popup"></slot>
   </popup>
-  <slot></slot>
+  <slot @mouseenter="_onMouseEnter"></slot>
 </div>
 </template>
 
@@ -36,14 +36,15 @@ export default {
     popup: String,
     popupStyle: {},
     popupAlign: {},
+    popupAnimation: '',
     popupPlacement: String,
     popupClassName: '',
     popupVisible: false,
+    popupTransitionName: '',
     mouseEnterDelay: 0,
     mouseLeaveDelay: 0.1,
     destroyPopupOnHide: false,
     builtinPlacements: Object,
-    popupTransitionName: '',
     action: [],
     onPopupVisibleChange: () => {},
     afterPopupVisibleChange: () => {}

@@ -25,9 +25,9 @@
       &nbsp;&nbsp;&nbsp;&nbsp;
       <label>
         <v-checkbox
-          :value="rc-trigger-popup-zoom"
+          :value="ant-trigger-popup-zoom"
           :on-change="_onTransitionChange"
-          :checked="transitionName === 'rc-trigger-popup-zoom'">transitionName</v-checkbox>
+          :checked="transitionName === 'ant-trigger-popup-zoom'">transitionName</v-checkbox>
       </label>
       <br>
       <br>
@@ -91,6 +91,7 @@ export default {
       trigger: {
         hover: 1
       },
+      transitionName: '',
       offsetX: undefined,
       offsetY: undefined,
       builtinPlacements: {
@@ -169,5 +170,85 @@ export default {
 <style scoped>
 label {
   margin-left: 5px;
+}
+.ant-trigger-popup {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 1070;
+}
+.ant-trigger-popup-hidden {
+  display: none;
+}
+.ant-trigger-popup-zoom-enter,
+.ant-trigger-popup-zoom-appear {
+  opacity: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation-play-state: paused;
+}
+.ant-trigger-popup-zoom-leave {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+  animation-play-state: paused;
+}
+.ant-trigger-popup-zoom-enter.ant-trigger-popup-zoom-enter-active,
+.ant-trigger-popup-zoom-appear.ant-trigger-popup-zoom-appear-active {
+  animation-name: rcTriggerZoomIn;
+  animation-play-state: running;
+}
+.ant-trigger-popup-zoom-leave.ant-trigger-popup-zoom-leave-active {
+  animation-name: rcTriggerZoomOut;
+  animation-play-state: running;
+}
+@-webkit-keyframes rcTriggerZoomIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+}
+@keyframes rcTriggerZoomIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes rcTriggerZoomOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+}
+@keyframes rcTriggerZoomOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
 }
 </style>

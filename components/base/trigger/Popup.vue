@@ -1,7 +1,7 @@
 <template>
 <div>
   <animation
-    :show="xVsible"
+    :show="visible"
     :on-leave="_onAnimateLeave"
     :transition-name="popupTransitionName">
     <align
@@ -37,16 +37,16 @@ export default {
   props: defaultProps({
     prefixCls: '',
     visible: Boolean,
-    wrap: Object,
-    align: Object,
+    align: {},
     style: Object,
     className: '',
     transitionName: '',
     animation: String,
-    getClassNameFromAlign: () => {},
+    wrap: () => {},
     onMouseEnter: () => {},
     onMouseLeave: () => {},
-    onAnimateLeave: () => {}
+    onAnimateLeave: () => {},
+    getClassNameFromAlign: () => {}
   }),
 
   components: { Align, Animation, PopupInner },
@@ -76,6 +76,10 @@ export default {
         [`${this.className}`]: 1,
         [`${currentAlignClassName}`]: 1
       })
+    },
+
+    hiddenClassName () {
+      return `${this.prefixCls}-hidden`
     }
   },
 

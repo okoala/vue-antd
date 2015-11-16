@@ -1,5 +1,5 @@
 <template>
-<slot></slot>
+<div><slot></slot></div>
 </template>
 
 <script>
@@ -39,7 +39,7 @@ export default {
 
   computed: {
     currentNode () {
-      return this.$el.nextSibling
+      return this.$el
     }
   },
 
