@@ -66,7 +66,10 @@ export default {
   },
 
   ready () {
-    this._doAlign()
+    const self = this
+    // this.$nextTick(() => {
+      self._doAlign()
+    // })
 
     this.resizeHandler = buffer(this._onWindowResize, this.monitorBufferTime)
 
@@ -79,7 +82,9 @@ export default {
 
   methods: {
     _doAlign () {
-      this.onAlign(this.currentNode, align(this.currentNode, this.target(), this.align))
+      const target = this.target()
+      const currentNode = this.currentNode
+      this.onAlign(currentNode, align(currentNode, target, this.align))
     },
 
     _onWindowResize () {

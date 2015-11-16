@@ -87,7 +87,7 @@ import vCheckbox from '../../components/checkbox'
 export default {
   data () {
     return {
-      placement: 'right',
+      placement: 'top',
       trigger: {
         hover: 1
       },
@@ -167,7 +167,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 label {
   margin-left: 5px;
 }
