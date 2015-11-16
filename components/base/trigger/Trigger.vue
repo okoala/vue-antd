@@ -13,6 +13,7 @@
     :visible="popupVisible"
     :class-name="popupClassName"
     :action="action"
+    :align="_getPopupAlign()"
     :animation="popupAnimation"
     :on-animation-leave="onAnimateLeave"
     :on-mouse-enter="_onMouseEnter"
@@ -34,8 +35,12 @@ export default {
   props: defaultProps({
     prefixCls: 'ant-trigger-popup',
     popup: String,
-    popupStyle: {},
-    popupAlign: {},
+    popupStyle: {
+      default: function (){ return {} }
+    },
+    popupAlign: {
+      default: function (){ return {} }
+    },
     popupAnimation: '',
     popupPlacement: String,
     popupClassName: '',
@@ -149,6 +154,14 @@ export default {
       if (!contains(root, target) && !contains(popupNode, target)) {
         this._setPopupVisible(false)
       }
+    },
+
+    _getPopupAlign () {
+      const {popupPlacement, popupAlign, builtinPlacements} = this
+      if (popupPlacement && builtinPlacements) {
+        return getAlignFromPlacement(builtinPlacements, popupPlacement, popupAlign)
+      }
+      return popupAlign
     },
 
     _getPopupDomNode () {

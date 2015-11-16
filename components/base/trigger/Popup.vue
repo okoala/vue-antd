@@ -37,12 +37,13 @@ export default {
   props: defaultProps({
     prefixCls: '',
     visible: Boolean,
-    align: {},
+    align: {
+      default: function (){ return {} }
+    },
     style: Object,
     className: '',
     transitionName: '',
     animation: String,
-    wrap: () => {},
     onMouseEnter: () => {},
     onMouseLeave: () => {},
     onAnimateLeave: () => {},
@@ -80,6 +81,13 @@ export default {
 
     hiddenClassName () {
       return `${this.prefixCls}-hidden`
+    },
+
+    wrap () {
+      const self = this
+      return function () {
+        return self.$el
+      }
     }
   },
 
