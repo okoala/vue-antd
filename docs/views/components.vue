@@ -270,7 +270,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 .main-container {
   margin-left: 260px;
   padding: 30px 40px 120px;
