@@ -2,6 +2,7 @@ import velocity from 'velocity-animate'
 import isPlainObject from 'lodash.isplainobject'
 import _KeyCode from './KeyCode'
 import _guid from './guid'
+import _slotMixin from './slotMixin'
 
 const toString = Object.prototype.toString
 
@@ -31,6 +32,7 @@ function animate (node, show, transitionName, done) {
   }
 }
 
+export const slotMixin = _slotMixin
 export const guid = _guid
 export const KeyCode = _KeyCode
 export const openAnimation = {

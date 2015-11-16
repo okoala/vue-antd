@@ -72,7 +72,7 @@
         :builtin-placements="builtinPlacements"
         :popup-transition-name="transitionName">
         <div slot="popup" style="border:1px solid red; padding:10px;">i am a popup</div>
-        <a href="javascript:;" style="margin: 20px;" @click.prevent="">trigger</a>
+        <a slot="trigger" href="javascript:;" style="margin: 20px;" @click.prevent="">trigger</a>
       </v-trigger>
     </div>
   </example>

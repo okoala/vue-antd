@@ -1,5 +1,5 @@
 <template>
-<div>
+<span>
   <animation
     :show="visible"
     :on-leave="_onAnimateLeave"
@@ -23,7 +23,7 @@
       </popup-inner>
     </align>
   </animation>
-</div>
+</span>
 </template>
 
 <script>
@@ -110,9 +110,7 @@ export default {
 
     _onAnimateLeave () {
       this.onAnimateLeave()
-    },
-
-
+    }
   }
 }
 

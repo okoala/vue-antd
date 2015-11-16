@@ -1,19 +1,12 @@
 <template>
-<div
-  @blur="_onBlur"
-  @click="_onClick"
-  @focus="_onFocus"
-  @mousedown="_onMouseDown"
-  @mouseenter="_onMouseEnter"
-  @mouseleave="_onMouseLeave"
-  @touchstart="_onTouchStart">
+<span>
   <popup
     :style="popupStyle"
     :prefixCls="prefixCls"
     :visible="popupVisible"
     :class-name="popupClassName"
     :action="action"
-    :wrap="_getTarget.bind($parent)"
+    :wrap="_getTriggerTarget.bind($parent)"
     :align="_getPopupAlign()"
     :animation="popupAnimation"
     :on-animation-leave="onAnimateLeave"
@@ -22,12 +15,12 @@
     :transition-name="popupTransitionName">
     <slot name="popup"></slot>
   </popup>
-  <slot test="true"></slot>
-</div>
+  <slot name="trigger"></slot>
+</span>
 </template>
 
 <script>
-import { defaultProps, contains } from '../../../utils'
+import { defaultProps, contains, slotMixin } from '../../../utils'
 import cx from 'classnames'
 import Popup from './Popup.vue'
 import { getAlignFromPlacement, getPopupClassNameFromAlign } from './utils'
@@ -56,6 +49,7 @@ export default {
     afterPopupVisibleChange: () => {}
   }),
 
+  mixins: [slotMixin],
   components: { Popup },
 
   computed: {
@@ -103,10 +97,6 @@ export default {
         event.preventDefault()
         this._setPopupVisible(!this.popupVisible)
       }
-    },
-
-    _getTarget () {
-      return this.$refs.target
     },
 
     _onMouseDown (e) {
