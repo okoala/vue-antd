@@ -70,7 +70,7 @@
     </ul>
   </aside>
   <section class="main-container">
-    <router-view class="view xRightMatrix"></router-view>
+    <router-view class="view"></router-view>
   </section>
 </div>
 </template>
@@ -274,8 +274,7 @@ export default {
 .main-container {
   margin-left: 260px;
   padding: 30px 40px 120px;
-  -webkit-animation: xRightMatrix .5s ease-out;
-  animation: xRightMatrix .5s ease-out;
+  /*animation: xRightMatrix .5s ease-out;*/
   background: #fff;
   min-height: 500px;
 }
