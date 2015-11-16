@@ -1,5 +1,8 @@
 <template>
-<div><slot></slot></div>
+<div
+  :class="className">
+  <slot></slot>
+</div>
 </template>
 
 <script>
@@ -26,6 +29,7 @@ function buffer(fn, ms) {
 
 export default {
   props: defaultProps({
+    className: '',
     align: {
       type: Object,
       require: true

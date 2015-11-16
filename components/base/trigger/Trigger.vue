@@ -2,7 +2,7 @@
 <span>
   <popup
     :style="popupStyle"
-    :prefixCls="prefixCls"
+    :prefix-cls="prefixCls"
     :visible="popupVisible"
     :class-name="popupClassName"
     :action="action"
@@ -12,7 +12,8 @@
     :on-animation-leave="onAnimateLeave"
     :on-mouse-enter="_onMouseEnter"
     :on-mouse-leave="_onMouseLeave"
-    :transition-name="popupTransitionName">
+    :transition-name="popupTransitionName"
+    :get-popup-class-name-from-align="getPopupClassNameFromAlign">
     <slot name="popup"></slot>
   </popup>
   <slot name="trigger"></slot>
@@ -76,6 +77,7 @@ export default {
   },
 
   methods: {
+    getPopupClassNameFromAlign,
     _onClick (e) {
       if (this.isClickAction) {
         if (this.focusTime) {

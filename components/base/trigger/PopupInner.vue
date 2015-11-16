@@ -1,11 +1,11 @@
 <template>
-<div
+<span
   :class="wrapClasses"
   :style="style"
   @mouseenter="onMouseEnter"
   @mouseleave="onMouseLeave">
   <slot></slot>
-</div>
+</span>
 </template>
 
 <script>

@@ -1,11 +1,22 @@
 <template>
-<span>
+<span></span>
+</template>
+
+<script>
+import { defaultProps, contains } from '../../../utils'
+import cx from 'classnames'
+import Align from '../align'
+import Animation from '../animate'
+import PopupInner from './PopupInner.vue'
+
+const template = `
   <animation
     :show="visible"
     :on-leave="_onAnimateLeave"
     :transition-name="popupTransitionName">
     <align
       key="popup"
+      :class-name="popupInnerWrapClasses"
       :target="wrap"
       :monitor-window-resize="true"
       :visible="visible"
@@ -23,15 +34,7 @@
       </popup-inner>
     </align>
   </animation>
-</span>
-</template>
-
-<script>
-import { defaultProps, contains } from '../../../utils'
-import cx from 'classnames'
-import Align from '../align'
-import Animation from '../animate'
-import PopupInner from './PopupInner.vue'
+`
 
 export default {
   props: defaultProps({
@@ -62,6 +65,13 @@ export default {
     return {
       currentAlignClassName: ''
     }
+  },
+
+  compiled () {
+    const div = document.createElement('div')
+    div.innerHTML = template
+    this.$compile(div)
+    document.body.appendChild(div)
   },
 
   computed: {
