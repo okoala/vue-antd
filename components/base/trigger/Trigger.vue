@@ -13,7 +13,7 @@
     :on-mouse-enter="_onMouseEnter"
     :on-mouse-leave="_onMouseLeave"
     :transition-name="popupTransitionName"
-    :get-popup-class-name-from-align="getPopupClassNameFromAlign">
+    :get-class-name-from-align="_getPopupClassNameFromAlign">
     <slot name="popup"></slot>
   </popup>
   <slot name="trigger"></slot>
@@ -46,6 +46,7 @@ export default {
     destroyPopupOnHide: false,
     builtinPlacements: Object,
     action: [],
+    getPopupClassNameFromAlign: () => '',
     onPopupVisibleChange: () => {},
     afterPopupVisibleChange: () => {}
   }),
@@ -77,7 +78,18 @@ export default {
   },
 
   methods: {
-    getPopupClassNameFromAlign,
+    _getPopupClassNameFromAlign (align) {
+      const className = []
+      const {popupPlacement, builtinPlacements, prefixCls} = this
+      if (popupPlacement && builtinPlacements) {
+        className.push(getPopupClassNameFromAlign(builtinPlacements, prefixCls, align))
+      }
+      if (this.getPopupClassNameFromAlign) {
+        className.push(this.getPopupClassNameFromAlign(align))
+      }
+      return className.join(' ')
+    },
+
     _onClick (e) {
       if (this.isClickAction) {
         if (this.focusTime) {
