@@ -66,11 +66,7 @@ export default {
   },
 
   ready () {
-    const self = this
-    // this.$nextTick(() => {
-      self._doAlign()
-    // })
-
+    this._doAlign()
     this.resizeHandler = buffer(this._onWindowResize, this.monitorBufferTime)
 
     if (this.monitorWindowResize && !this.disabled) {
@@ -83,8 +79,7 @@ export default {
   methods: {
     _doAlign () {
       const target = this.target()
-      const currentNode = this.currentNode
-      this.onAlign(currentNode, align(currentNode, target, this.align))
+      this.onAlign(this.currentNode, align(this.currentNode, target, this.align))
     },
 
     _onWindowResize () {
