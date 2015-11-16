@@ -24,6 +24,7 @@ module.exports = {
     new ExtractTextPlugin('[name].css'),
     new HtmlWebpackPlugin({
       template : './docs/index.html',
+      favicon  : './docs/favicon.ico',
       hash     : true,
       filename : 'index.html',
       minify   : false,
