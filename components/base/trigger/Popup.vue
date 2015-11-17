@@ -84,15 +84,7 @@ export default {
     },
 
     popupInnerWrapClasses () {
-      const currentAlignClassName =
-        this.currentAlignClassName
-        || this.getClassNameFromAlign(this.align)
-
-      return cx({
-        [`${this.prefixCls}`]: 1,
-        [`${this.className}`]: 1,
-        [`${currentAlignClassName}`]: 1
-      })
+      return this._getClassName(this.currentAlignClassName || this.getClassNameFromAlign(this.align))
     },
 
     hiddenClassName () {
@@ -120,6 +112,13 @@ export default {
 
     _onAnimateLeave () {
       this.onAnimateLeave()
+    },
+
+    _getClassName (currentAlignClassName) {
+      const { prefixCls } = this
+      let className = prefixCls + ' ' + this.className + ' '
+      className += currentAlignClassName
+      return className
     }
   }
 }

@@ -7,7 +7,7 @@
     :class-name="popupClassName"
     :action="action"
     :wrap="_getTriggerTarget.bind($parent)"
-    :align="_getPopupAlign()"
+    :align="_popupAlign"
     :animation="popupAnimation"
     :on-animation-leave="onAnimateLeave"
     :on-mouse-enter="_onMouseEnter"
@@ -55,8 +55,18 @@ export default {
   components: { Popup },
 
   computed: {
+    _popupAlign () {
+      const {popupPlacement, popupAlign, builtinPlacements} = this
+      if (popupPlacement && builtinPlacements) {
+        return getAlignFromPlacement(builtinPlacements, popupPlacement, popupAlign)
+      }
+      return popupAlign
+    }
+  },
+
+  methods: {
     isClickAction () {
-      if (this.action.indexOf('click') === -1) {
+      if (this.action.indexOf('click') !== -1) {
         return true
       }
       return false
@@ -74,10 +84,8 @@ export default {
         return true
       }
       return false
-    }
-  },
+    },
 
-  methods: {
     _getPopupClassNameFromAlign (align) {
       const className = []
       const {popupPlacement, builtinPlacements, prefixCls} = this
@@ -91,7 +99,7 @@ export default {
     },
 
     _onClick (e) {
-      if (this.isClickAction) {
+      if (this.isClickAction()) {
         if (this.focusTime) {
           let preTime
           if (this.preClickTime && this.preTouchTime) {
@@ -114,38 +122,38 @@ export default {
     },
 
     _onMouseDown (e) {
-      if (this.isClickAction) {
+      if (this.isClickAction()) {
         this.preClickTime = Date.now()
       }
     },
 
     _onTouchStart (e) {
-      if (this.isClickAction) {
+      if (this.isClickAction()) {
         this.preTouchTime = Date.now()
       }
     },
 
     _onMouseEnter (e) {
-      if (this.isHoverAction) {
+      if (this.isHoverAction()) {
         this._delaySetPopupVisible(true, this.mouseEnterDelay)
       }
     },
 
     _onMouseLeave (e) {
-      if (this.isHoverAction) {
+      if (this.isHoverAction()) {
         this._delaySetPopupVisible(false, this.mouseLeaveDelay)
       }
     },
 
     _onFocus (e) {
-      if (this.isFocusAction) {
+      if (this.isFocusAction()) {
         this.focusTime = Date.now()
         this._setPopupVisible(true)
       }
     },
 
     _onBlur (e) {
-      if (this.isFocusAction) {
+      if (this.isFocusAction()) {
         this._setPopupVisible(false)
       }
     },
@@ -163,14 +171,6 @@ export default {
       if (!contains(root, target) && !contains(popupNode, target)) {
         this._setPopupVisible(false)
       }
-    },
-
-    _getPopupAlign () {
-      const {popupPlacement, popupAlign, builtinPlacements} = this
-      if (popupPlacement && builtinPlacements) {
-        return getAlignFromPlacement(builtinPlacements, popupPlacement, popupAlign)
-      }
-      return popupAlign
     },
 
     _getPopupDomNode () {

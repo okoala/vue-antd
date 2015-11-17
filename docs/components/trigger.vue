@@ -60,7 +60,7 @@
     </div>
     <div style="margin: 100px;">
       <v-trigger
-        :popupAlign="{offset: [offsetX, offsetY], overflow: {adjustX: 1, adjustY: 1}}"
+        :popup-align="popupAlign"
         :mouse-enter-delay="0"
         :popup-placement="placement"
         :mouse-leave-delay="0.1"
@@ -83,7 +83,7 @@ import vCheckbox from '../../components/checkbox'
 export default {
   data () {
     return {
-      placement: 'bottom',
+      placement: 'top',
       trigger: {
         hover: 1
       },
@@ -122,6 +122,10 @@ export default {
   components: { vTrigger, vCheckbox },
 
   computed: {
+    popupAlign () {
+      return { offset: [this.offsetX, this.offsetY], overflow: {adjustX: 1, adjustY: 1} }
+    },
+
     action () {
       return Object.keys(this.trigger)
     }
