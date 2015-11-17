@@ -63,10 +63,11 @@ const Notice = {
     }
   },
 
+  beforeDestory () {
+    this._clearCloseTimer()
+  },
+
   methods: {
-    beforeDestory () {
-      this._clearCloseTimer()
-    },
 
     _clearCloseTimer () {
       if (this.closeTimer) {
