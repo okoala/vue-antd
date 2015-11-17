@@ -24,8 +24,7 @@
       </label>
       &nbsp;&nbsp;&nbsp;&nbsp;
       <label>
-        <v-checkbox
-          :value="ant-trigger-popup-zoom"
+        <v-checkbox value="ant-trigger-popup-zoom"
           :on-change="_onTransitionChange"
           :checked="transitionName === 'ant-trigger-popup-zoom'">transitionName</v-checkbox>
       </label>
@@ -33,20 +32,17 @@
       <br>
       <span>trigger:</span>
       <label>
-        <v-checkbox
-          :value="hover"
+        <v-checkbox value="hover"
           :checked="!!trigger.hover"
           :on-change="_onTriggerChange">hover</v-checkbox>
       </label>
       <label>
-        <v-checkbox
-          :value="focus"
+        <v-checkbox value="focus"
           :checked="!!trigger.focus"
           :on-change="_onTriggerChange">focus</v-checkbox>
       </label>
       <label>
-        <v-checkbox
-          :value="click"
+        <v-checkbox value="click"
           :checked="!!trigger.click"
           :on-change="_onTriggerChange">click</v-checkbox>
       </label>

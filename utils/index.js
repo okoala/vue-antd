@@ -111,6 +111,12 @@ export function oneOf (validList, defaultValue) {
   return validaObj
 }
 
+export const any = {
+  validator: function (value) {
+    return true
+  }
+}
+
 export function getPlainObject (vueObject) {
   return JSON.parse(JSON.stringify(vueObject))
 }

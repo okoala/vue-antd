@@ -16,13 +16,14 @@
 </template>
 
 <script>
-import { defaultProps } from '../../utils'
+import { defaultProps, any } from '../../utils'
 import cx from 'classnames'
 
 export default {
   props: defaultProps({
     prefixCls: 'ant-checkbox',
     style: {},
+    value: any,
     type: 'checkbox',
     className: '',
     disabled: false,
