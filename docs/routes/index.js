@@ -16,14 +16,6 @@ export function configRouter (router) {
           component: require('../views/docs/download.vue')
         },
 
-        'animate': {
-          component: require('../components/animate.vue')
-        },
-
-        'align': {
-          component: require('../components/align.vue')
-        },
-
         'affix': {
           component: require('../components/affix.vue')
         },
@@ -104,8 +96,20 @@ export function configRouter (router) {
           component: require('../components/tag.vue')
         },
 
-        'trigger': {
-          component: require('../components/trigger.vue')
+        '_trigger': {
+          component: require('../components/_trigger.vue')
+        },
+
+        '_align': {
+          component: require('../components/_align.vue')
+        },
+
+        '_animate': {
+          component: require('../components/_animate.vue')
+        },
+
+        '_notification': {
+          component: require('../components/_notification.vue')
         }
       }
     },

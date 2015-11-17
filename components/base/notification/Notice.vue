@@ -51,7 +51,7 @@ const Notice = {
         [this.className]: !!this.className
       })
     }
-  }
+  },
 
   compiled () {
     this._clearCloseTimer()

@@ -241,16 +241,20 @@ export default {
         ],
         basic: [
           {
-            name: 'animate',
+            name: '_animate',
             desc: '动画'
           },
           {
-            name: 'align',
+            name: '_align',
             desc: '对齐'
           },
           {
-            name: 'trigger',
+            name: '_trigger',
             desc: '触发'
+          },
+          {
+            name: '_notification',
+            desc: '通知'
           }
         ]
       }

@@ -49,7 +49,7 @@ export default {
         [this.className]: !!this.className
       })
     }
-  }
+  },
 
   methods: {
     _remove (key) {
