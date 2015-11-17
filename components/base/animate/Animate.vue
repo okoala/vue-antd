@@ -42,6 +42,8 @@ export default {
         }
       } else {
         if (this._isLeaveSupported()) {
+          // todo 之后优化
+          this.currentNode.style.display = 'block'
           this._transition('leave', () => {
             if (this._allowLeaveCallback()) {
               this.currentNode.style.display = 'none'
