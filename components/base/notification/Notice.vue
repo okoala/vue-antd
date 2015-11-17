@@ -1,8 +1,6 @@
 <template>
-<div :class="classnames" :style="style">
-  <div :class="componentClass + '-content'">
-    <slot></slot>
-  </div>
+<div :class="wrapClasses" :style="style">
+  <div :class="componentClass + '-content'" v-el:content></div>
   <span v-if="closable">
     <a
       tabIndex="0"
@@ -16,19 +14,20 @@
 
 <script>
 import Animate from '../animate'
+import cx from 'classnames'
 import { defaultProps } from '../../../utils'
 
-const Notice = {
+export default {
   props: defaultProps({
-    prefixCls: {
-      type: String,
-      required: true
-    },
+    prefixCls: '',
     duration: 1.5,
+    content: '',
     style: {
       type: Object,
-      default: {
-        right: '50%'
+      default: function() {
+        return {
+          right: '50%'
+        }
       }
     },
     closable: Boolean,
@@ -37,20 +36,28 @@ const Notice = {
     onClose: () => {}
   }),
 
-  data () {
-    return {
-      componentClass: `${this.prefixCls}-notice`
+  watch: {
+    content () {
+      this._renderContent()
     }
   },
 
   computed: {
-    classnames () {
-      return classSet({
-        [`${this.componentClass}`]: 1,
-        [`${this.componentClass}-closable`]: this.closable,
-        [this.className]: !!this.className
+    componentClass () {
+      return `${this.prefixCls}-notice`
+    },
+
+    wrapClasses () {
+      return cx({
+        [this.componentClass]: 1,
+        [this.className]: !!this.className,
+        [`${this.componentClass}-closable`]: this.closable
       })
     }
+  },
+
+  ready () {
+    this._renderContent()
   },
 
   compiled () {
@@ -68,6 +75,13 @@ const Notice = {
   },
 
   methods: {
+    _renderContent () {
+      const node = this.$els.content
+      const span = document.createElement('span')
+      span.innerHTML = this.content
+      this.$parent.$parent.$parent.$compile(span)
+      node.appendChild(span)
+    },
 
     _clearCloseTimer () {
       if (this.closeTimer) {

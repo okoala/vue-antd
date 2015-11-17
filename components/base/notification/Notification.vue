@@ -1,6 +1,6 @@
 <template>
 <div :class="wrapClasses" :style="style">
-  <Animate v-for="notice in notices" :transitionName="_getTransitionName()">
+  <Animate v-for="notice in notices" :show="notice.show" :transition-name="_getTransitionName()">
     <Notice
       :prefix-cls="prefixCls"
       :content="notice.content"
@@ -31,8 +31,13 @@ export default {
     prefixCls: 'ant-notification',
     animation: 'fade',
     style: {
-      top: 65,
-      left: '50%'
+      type: Object,
+      default: function() {
+        return {
+          top: '65px',
+          left: '50%'
+        }
+      }
     },
     className: String,
     transitionName: String
@@ -67,6 +72,7 @@ export default {
       if (!notices.filter(v => v.key === key).length) {
         this.notices = notices.concat(
           Object.assign({
+            show: true,
             content: '',
             duration: 0.5,
             closable: false,

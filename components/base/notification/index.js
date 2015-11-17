@@ -5,7 +5,7 @@ import { camelcaseToHyphen } from '../../../utils'
 Notification.newInstance = (properties) => {
   const data = properties || {}
 
-  const props = ''
+  let props = ''
   Object.keys(data).forEach(item => {
     props += ' :' + camelcaseToHyphen(item) + '=' + item
   })
@@ -18,7 +18,7 @@ Notification.newInstance = (properties) => {
     el: div,
     data: data,
     components: { Notification }
-  })
+  }).$children[0]
 
   return {
     notice (noticeProps) {
