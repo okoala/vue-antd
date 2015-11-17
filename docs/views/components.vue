@@ -274,7 +274,7 @@ export default {
 .main-container {
   margin-left: 260px;
   padding: 30px 40px 120px;
-  /*animation: xRightMatrix .5s ease-out;*/
+  animation: xRightMatrix .5s ease-out;
   background: #fff;
   min-height: 500px;
 }

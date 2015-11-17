@@ -87,7 +87,7 @@ import vCheckbox from '../../components/checkbox'
 export default {
   data () {
     return {
-      placement: 'top',
+      placement: 'bottom',
       trigger: {
         hover: 1
       },

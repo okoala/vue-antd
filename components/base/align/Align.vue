@@ -34,6 +34,7 @@ export default {
       type: Object,
       require: true
     },
+    visible: true,
     target: () => window,
     onAlign: () => {},
     monitorBufferTime: 50,
@@ -50,6 +51,12 @@ export default {
   watch: {
     align () {
       this._doAlign()
+    },
+
+    visible (val) {
+      if (val) {
+        this._doAlign()
+      }
     },
 
     monitorWindowResize (val) {
@@ -79,7 +86,13 @@ export default {
   methods: {
     _doAlign () {
       const target = this.target()
-      this.onAlign(this.currentNode, align(this.currentNode, target, this.align))
+      const currentNode = this.currentNode
+      const display = currentNode.style.display
+      currentNode.style.left = '0'
+      currentNode.style.top = '0'
+      currentNode.style.display = 'block'
+      this.onAlign(currentNode, align(currentNode, target, this.align))
+      currentNode.style.display = display
     },
 
     _onWindowResize () {
