@@ -56,6 +56,10 @@ export function configRouter (router) {
           component: require('../components/message.vue')
         },
 
+        'notification': {
+          component: require('../components/notification.vue')
+        },
+
         'progress': {
           component: require('../components/progress.vue')
         },

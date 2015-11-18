@@ -17,7 +17,7 @@
 
 <demo>
   <example title="基本">
-    <v-button type="primary" @click="_success">打开通知提醒框</v-button>
+    <v-button type="primary" @click="_openNotification">打开通知提醒框</v-button>
   </example>
   <example title="自动关闭的延时">
     <v-button type="primary" @click="_openNotification2">打开通知提醒框</v-button>
@@ -77,17 +77,13 @@ import message from '../../components/message'
 import vButton from '../../components/button'
 
 const close = function() {
-  console.log("我被默认的关闭按钮关闭了！")
+  message.info('成功关闭')
 }
 
 export default {
   components: { vButton },
 
   methods: {
-    close () {
-
-    },
-
     _openNotification () {
       notification.open({
         message: "这是标题",
@@ -97,19 +93,17 @@ export default {
 
     _openNotification2 () {
       notification.open({
-        message: "这是标题",
+        message: "我不会自动关闭",
         description: "我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，",
         duration: 0
       })
     },
 
     _openNotificationWithIcon (type) {
-      return function(){
-        notification[type]({
-          message: "这是标题",
-          description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"
-        })
-      }
+      notification[type]({
+        message: "这是标题",
+        description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"
+      })
     },
 
     _openNotification3 () {

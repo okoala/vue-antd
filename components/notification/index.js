@@ -1,6 +1,6 @@
-import Notification from './base/notification'
+import Notification from '../base/notification'
 
-let top = 24
+let top = '24px'
 let notificationInstance
 
 function getNotificationInstance () {
@@ -38,7 +38,7 @@ function notice (args) {
         break
       case 'info':
         iconClass += 'info-circle-o'
-        break;
+        break
       case 'error':
         iconClass += 'exclamation-circle-o'
         break
@@ -92,16 +92,16 @@ function notice (args) {
 }
 
 let api = {
-  open(args){
+  open (args) {
     notice(args)
   },
-  close(key){
+  close (key) {
     if (notificationInstance) {
       notificationInstance.removeNotice(key)
     }
   },
-  config(options) {
-    top = isNaN(options.top) ? 24 : options.top
+  config (options) {
+    top = options.top
   }
 };
 

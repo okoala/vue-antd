@@ -166,10 +166,10 @@ export default {
           //   name: 'modal',
           //   desc: '对话框'
           // },
-          // {
-          //   name: 'notification',
-          //   desc: '通知提醒框'
-          // },
+          {
+            name: 'notification',
+            desc: '通知提醒框'
+          },
           // {
           //   name: 'popconfirm',
           //   desc: '气泡确认框'
