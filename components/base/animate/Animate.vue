@@ -32,25 +32,9 @@ export default {
   watch: {
     show (val) {
       if (val) {
-        this.currentNode.style.display = ''
-        if (this._isEnterSupported()) {
-          this._transition('enter', () => {
-            if (this._allowEnterCallback()) {
-              this.onEnter()
-            }
-          })
-        }
+        this._enter()
       } else {
-        if (this._isLeaveSupported()) {
-          // todo 之后优化
-          this.currentNode.style.display = 'block'
-          this._transition('leave', () => {
-            if (this._allowLeaveCallback()) {
-              this.currentNode.style.display = 'none'
-              this.onEnd()
-            }
-          })
-        }
+        this._leave()
       }
     }
   },
@@ -65,6 +49,8 @@ export default {
     if (!this.show) {
       this.currentNode.style.display = 'none'
     }
+
+    this._enter()
   },
 
   beforeDestory () {
@@ -72,6 +58,30 @@ export default {
   },
 
   methods: {
+    _enter () {
+      this.currentNode.style.display = ''
+      if (this._isEnterSupported()) {
+        this._transition('enter', () => {
+          if (this._allowEnterCallback()) {
+            this.onEnter()
+          }
+        })
+      }
+    },
+
+    _leave () {
+      if (this._isLeaveSupported()) {
+        // todo 之后优化
+        this.currentNode.style.display = 'block'
+        this._transition('leave', () => {
+          if (this._allowLeaveCallback()) {
+            this.currentNode.style.display = 'none'
+            this.onEnd()
+          }
+        })
+      }
+    },
+
     _transition (animationType, done) {
       const node = this.$el.nextSibling
       const transitionName = this.transitionName
