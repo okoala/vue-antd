@@ -11,7 +11,6 @@
     <v-button type="primary" @click="_simple">simple show</v-button>
     <v-button type="primary" @click="_duration">duration=0</v-button>
     <v-button type="primary" @click="_closable">closable</v-button>
-    <v-button type="primary" @click="_manualClose">controlled close</v-button>
   </example>
 </demo>
 
@@ -63,19 +62,19 @@ export default {
         },
         closable: true
       })
-    },
-
-    _manualClose () {
-      const key = 'manual'
-      notification.notice({
-        content: `<div>
-          <p>click below button to close</p>
-          <v-button @click="close.bind(null, ${key})">close</v-button>
-        </div>`,
-        key: key,
-        duration: null
-      })
     }
+
+    // _manualClose () {
+    //   const key = 'manual'
+    //   notification.notice({
+    //     content: `<div>
+    //       <p>click below button to close</p>
+    //       <v-button @click="close.bind(null, ${key})">close</v-button>
+    //     </div>`,
+    //     key: key,
+    //     duration: null
+    //   })
+    // }
   }
 }
 </script>
