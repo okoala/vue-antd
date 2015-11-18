@@ -15,12 +15,12 @@
 <script>
 import Animate from '../animate'
 import cx from 'classnames'
-import { defaultProps } from '../../../utils'
+import { defaultProps, oneOfType } from '../../../utils'
 
 export default {
   props: defaultProps({
     prefixCls: '',
-    duration: 1.5,
+    duration: oneOfType([String, 'Null'], 1.5),
     content: '',
     style: {
       type: Object,

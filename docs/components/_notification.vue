@@ -118,7 +118,8 @@ export default {
   text-decoration: none;
 }
 .ant-basic-notification-notice-close-x:after {
-  content: 'Ã—';
+  content: "\E62D";
+  font-family: "anticon" !important;
 }
 .ant-basic-notification-notice-close:hover {
   opacity: 1;
