@@ -3,6 +3,7 @@
   <Animate v-for="notice in notices" :show="notice.show" :transition-name="_getTransitionName()">
     <Notice
       :prefix-cls="prefixCls"
+      :show.sync="notice.show"
       :content="notice.content"
       :on-close="notice.onClose"
       :duration="notice.duration"
@@ -66,19 +67,24 @@ export default {
 
   methods: {
     add (notice) {
+      const self = this
       const key = notice.key = notice.key || getUuid()
       const notices = this.notices
 
       if (!notices.filter(v => v.key === key).length) {
-        this.notices = notices.concat(
-          Object.assign({
-            show: true,
-            content: '',
-            duration: 0.5,
-            closable: false,
-            onClose: () => {}
-          }, notice)
-        )
+        let _notice = Object.assign({
+          show: true,
+          content: '',
+          duration: 0.5,
+          closable: false
+        }, notice)
+
+        _notice.onClose = function() {
+          notice.onClose && notice.onClose()
+          self._close(_notice)
+        }
+
+        this.notices = notices.concat(_notice)
       }
     },
 
@@ -86,6 +92,10 @@ export default {
       this.notices = this.notices.filter(notice => {
         return notice.key !== key
       })
+    },
+
+    _close (notice) {
+      this.remove(notice.key)
     },
 
     _getTransitionName () {

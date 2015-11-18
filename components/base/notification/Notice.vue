@@ -32,6 +32,7 @@ export default {
     },
     closable: Boolean,
     className: String,
+    show: Boolean,
     onEnd: () => {},
     onClose: () => {}
   }),
@@ -93,6 +94,7 @@ export default {
     _close () {
       this._clearCloseTimer()
       this.onClose()
+      this.show = false
     }
   }
 }
