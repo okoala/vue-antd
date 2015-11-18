@@ -20,7 +20,7 @@ import { defaultProps, oneOfType } from '../../../utils'
 export default {
   props: defaultProps({
     prefixCls: '',
-    duration: oneOfType([String, 'Null'], 1.5),
+    duration: oneOfType([Number, 'Null'], 1.5),
     content: '',
     style: {
       type: Object,
