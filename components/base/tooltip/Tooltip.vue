@@ -1,7 +1,7 @@
 <template>
 <trigger
   :popup-class-name="overlayClassName"
-  :prefixCls="prefixCls"
+  :prefix-cls="prefixCls"
   :popup="''"
   :action="trigger"
   :builtin-placements="placements"
@@ -12,7 +12,7 @@
   :popup-transition-name="transitionName"
   :popup-animation="animation"
   :on-popup-visible-change="onVisibleChange"
-  :destoryPopupOnHide="destoryTooltipOnHide"
+  :destory-popup-on-hide="destoryTooltipOnHide"
   :mouse-enter-delay="mouseEnterDelay"
   :mouse-leave-delay="mouseLeaveDelay"
   :default-popup-visible="defaultVisible">
@@ -45,7 +45,9 @@ export default {
     visible: Boolean,
     defaultVisible: Boolean,
     overlayClassName: '',
-    overlayStyle: {},
+    overlayStyle: {
+      default: function (){ return {} }
+    },
     getTooltipContainer: () => {},
     onVisibleChange: () => {},
     afterVisibleChange: () => {}
