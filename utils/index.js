@@ -84,7 +84,13 @@ export function oneOfType (validList, defaultValue) {
   validaObj.default = defaultValue
   validaObj.validator = function (value) {
     for (let j = 0; j < validList.length; j++) {
-      const validName = validList[j].name
+      const currentValid = validList[j]
+      let validName
+      if (typeof currentValid === 'string') {
+        validName = currentValid
+      } else {
+        validName = currentValid.name
+      }
       if (toString.call(value).indexOf(validName) > -1) {
         return true
       }
