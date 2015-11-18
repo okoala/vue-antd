@@ -7,13 +7,24 @@
 ## 组件演示
 
 <demo>
-  <example title="简单使用">
-    <div style="margin-top: 100px; margin-left: 100px; margin-bottom: 100px">
+  <example title="Form错误提示">
+    <div style="margin-top: 100px; margin-bottom: 100px; text-align: center;">
       <tooltip animation="zoom"
         :visible="visible"
         :trigger="[]">
         <span slot="tooltip" style="z-index: 1000;">required!</span>
-        <input type="text" class="ant-input" style="width: 200px;" @keyup="_onChange"/>
+        <input type="text" class="ant-input" style="width: 200px;" @keyup="_onChange" placeholder="不能为空哦！"/>
+      </tooltip>
+    </div>
+  </example>
+  <example title="简单触发">
+    <div style="margin-top: 100px; margin-bottom: 100px; text-align: center;">
+      <tooltip animation="zoom"
+        :trigger="['click']"
+        :visible="triggerVisible"
+        :on-visible-change="_toggle">
+        <span slot="tooltip" style="z-index: 1000;">i am a tooltip!</span>
+        <a href='#' @click.prevent="">点我，点我！</a>
       </tooltip>
     </div>
   </example>
@@ -27,7 +38,8 @@ import Tooltip from '../../components/base/tooltip'
 export default {
   data () {
     return {
-      visible: false
+      visible: false,
+      triggerVisible: false
     }
   },
 
@@ -36,6 +48,10 @@ export default {
   methods: {
     _onChange (e) {
       this.visible = !e.target.value
+    },
+
+    _toggle (visible) {
+      this.triggerVisible = visible
     }
   }
 }
