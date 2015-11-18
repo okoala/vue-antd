@@ -16,13 +16,13 @@
   :mouse-enter-delay="mouseEnterDelay"
   :mouse-leave-delay="mouseLeaveDelay"
   :default-popup-visible="defaultVisible">
-  <span name="popup">
+  <span slot="popup">
     <div :class="prefixCls + '-arrow'"></div>
     <div :class="prefixCls + '-inner'">
       <slot name="tooltip"></slot>
     </div>
   </span>
-  <slot></slot>
+  <span slot="trigger"><slot></slot></span>
 </trigger>
 </template>
 
@@ -65,5 +65,4 @@ export default {
 
   }
 }
-
 </script>

@@ -52,6 +52,7 @@ export default {
   }),
 
   mixins: [slotMixin],
+
   components: { Popup },
 
   computed: {
