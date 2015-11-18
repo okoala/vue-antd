@@ -10,11 +10,15 @@
 
 ## Intro
 
-这是个结合Vue 和 Antd的项目。个人维护，欢迎PR~~
+这个项目是Ant.Design的Vue实现。
 
-- [vue](https://github.com/yyx990803/vue)
-- [antd](https://github.com/ant-design/ant-design)
+**目前项目还不稳定，不建议在生产环境使用**
+
+- [Vue官网](http://vuejs.org/)
+- [Ant.Design官网](http://ant.design/)
 
 ## Docs
 
 [Go to Docs](http://okoala.github.io/vue-antd/#!/components)
+
+
