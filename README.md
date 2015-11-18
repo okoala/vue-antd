@@ -10,12 +10,13 @@
 
 ## Intro
 
-这个项目是Ant.Design的Vue实现。
-
-**目前项目还不稳定，不建议在生产环境使用**
+这个项目是 Ant.Design 的 Vue 实现。
 
 - [Vue官网](http://vuejs.org/)
 - [Ant.Design官网](http://ant.design/)
+
+
+**(目前项目还不稳定，不建议在生产环境使用)**
 
 ## Docs
 
