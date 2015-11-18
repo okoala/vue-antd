@@ -28,6 +28,60 @@
       </tooltip>
     </div>
   </example>
+  <example title="各种位置">
+    <div id="tooltip_demo_pos" style="">
+      <tooltip placement="left">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">左边</a>
+      </tooltip>
+      <tooltip placement="top">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">上边</a>
+      </tooltip>
+      <tooltip placement="bottom">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">左边</a>
+      </tooltip>
+      <tooltip placement="right">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">右边</a>
+      </tooltip>
+
+      <tooltip placement="leftTop">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">左上</a>
+      </tooltip>
+      <tooltip placement="leftBottom">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">左下</a>
+      </tooltip>
+      <tooltip placement="rightTop">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">右上</a>
+      </tooltip>
+      <tooltip placement="rightBottom">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">右下</a>
+      </tooltip>
+
+      <tooltip placement="topLeft">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">上左</a>
+      </tooltip>
+      <tooltip placement="topRight">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">上右</a>
+      </tooltip>
+      <tooltip placement="bottomLeft">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">下左</a>
+      </tooltip>
+      <tooltip placement="bottomRight">
+        <span slot="tooltip">提示文字!</span>
+        <a href='#' @click.prevent="">下右</a>
+      </tooltip>
+    </div>
+  </example>
 </demo>
 
 </template>
@@ -58,6 +112,18 @@ export default {
 </script>
 
 <style>
+#tooltip_demo_pos a {
+  display: inline-block;
+  line-height: 40px;
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  background: #f6f6f6;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+}
+
 .ant-tooltip {
   position: absolute;
   z-index: 1070;

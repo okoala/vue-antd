@@ -34,18 +34,25 @@ import Trigger from '../trigger'
 export default {
   props: defaultProps({
     prefixCls: 'ant-tooltip',
-    trigger: ['hover'],
+    trigger: {
+      type: Array,
+      default: function (){ return ['hover'] }
+    },
     mouseEnterDelay: 0,
     destoryTooltipOnHide: false,
     mouseLeaveDelay: 0.1,
-    align: {},
+    align: {
+      type: Object,
+      default: function (){ return {} }
+    },
     transitionName: '',
     placement: 'right',
     animation: '',
-    visible: Boolean,
-    defaultVisible: Boolean,
+    visible: false,
+    defaultVisible: false,
     overlayClassName: '',
     overlayStyle: {
+      type: Object,
       default: function (){ return {} }
     },
     getTooltipContainer: () => {},
