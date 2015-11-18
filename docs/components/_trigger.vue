@@ -59,7 +59,7 @@
       </label>
     </div>
     <div style="margin: 100px;">
-      <v-trigger
+      <trigger
         :popup-align="popupAlign"
         :mouse-enter-delay="0"
         :popup-placement="placement"
@@ -69,7 +69,7 @@
         :popup-transition-name="transitionName">
         <div slot="popup" style="border:1px solid red; padding:10px;">i am a popup</div>
         <a slot="trigger" href="javascript:;" style="margin: 20px;" @click.prevent="">trigger</a>
-      </v-trigger>
+      </trigger>
     </div>
   </example>
 </demo>
@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import vTrigger from '../../components/base/trigger'
+import Trigger from '../../components/base/trigger'
 import vCheckbox from '../../components/checkbox'
 
 export default {
@@ -119,7 +119,7 @@ export default {
     }
   },
 
-  components: { vTrigger, vCheckbox },
+  components: { Trigger, vCheckbox },
 
   computed: {
     popupAlign () {

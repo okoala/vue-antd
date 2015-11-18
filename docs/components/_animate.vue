@@ -11,16 +11,16 @@
 <demo>
   <example title="简单使用">
     <v-checkbox :default-value="show" :on-change="_toggle"><span>显示</span></v-checkbox>
-    <v-animate :show="show" transition-name="fade">
+    <animate :show="show" transition-name="fade">
       <div style="margin-top: 20px; width: 200px; height: 200px; background-color: red"></div>
-    </v-animate>
+    </animate>
   </example>
 </demo>
 
 </template>
 
 <script>
-import vAnimate from '../../components/base/animate'
+import Animate from '../../components/base/animate'
 import vCheckbox from '../../components/checkbox'
 
 export default {
@@ -30,7 +30,7 @@ export default {
     }
   },
 
-  components: { vAnimate, vCheckbox },
+  components: { Animate, vCheckbox },
 
   methods: {
     _toggle () {
