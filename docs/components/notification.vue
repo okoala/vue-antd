@@ -1,8 +1,5 @@
+<template lang="md">
 # Notification
-
-- category: Components
-- chinese: 通知提醒框
-- type: 展示
 
 ---
 
@@ -15,6 +12,29 @@
 - 较为复杂的通知内容。
 - 带有交互的通知，给出用户下一步的行动点。
 - 系统主动推送。
+
+## 组件演示
+
+<demo>
+  <example title="基本">
+    <v-button type="primary" @click="_success">打开通知提醒框</v-button>
+  </example>
+  <example title="自动关闭的延时">
+    <v-button type="primary" @click="_openNotification2">打开通知提醒框</v-button>
+  </example>
+  <example title="带有Icon的通知提醒框">
+    <v-button @click="_openNotificationWithIcon('success')">成功</v-button>
+    <v-button @click="_openNotificationWithIcon('info')">消息</v-button>
+    <v-button @click="_openNotificationWithIcon('warn')">警告</v-button>
+    <v-button @click="_openNotificationWithIcon('error')">错误</v-button>
+  </example>
+  <example title="回调函数">
+    <v-button type="primary" @click="_openNotification3">打开通知提醒框</v-button>
+  </example>
+  <example title="自定义">
+    <v-button type="primary" @click="_openNotification4">打开通知提醒框</v-button>
+  </example>
+</demo>
 
 ## API
 
@@ -49,3 +69,74 @@ message.config({
 | 参数       | 说明               | 类型                       | 默认值       |
 |------------|--------------------|----------------------------|--------------|
 | top        | 消息距离顶部的位置 | Number                     | 24px         |
+</template>
+
+<script>
+import notification from '../../components/notification'
+import message from '../../components/message'
+import vButton from '../../components/button'
+
+const close = function() {
+  console.log("我被默认的关闭按钮关闭了！")
+}
+
+export default {
+  components: { vButton },
+
+  methods: {
+    close () {
+
+    },
+
+    _openNotification () {
+      notification.open({
+        message: "这是标题",
+        description: "这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案这是提示框的文案"
+      })
+    },
+
+    _openNotification2 () {
+      notification.open({
+        message: "这是标题",
+        description: "我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，我不会自动关闭，",
+        duration: 0
+      })
+    },
+
+    _openNotificationWithIcon (type) {
+      return function(){
+        notification[type]({
+          message: "这是标题",
+          description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案"
+        })
+      }
+    },
+
+    _openNotification3 () {
+      notification.open({
+        message: "这是标题",
+        description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
+        onClose: close
+      })
+    },
+
+    _openNotification4 () {
+      message.error('暂不支持')
+      // const key='open'+Date.now()
+      // const btnClick = function() {
+      //   // 隐藏提醒框
+      //   notification.close(key)
+      // }
+      // notification.open({
+      //   message: "这是标题",
+      //   description: "这是提示框的文案这是提示框示框的文案这是提示是提示框的文案这是提示框的文案",
+      //   btn: `
+      //     <v-button type="primary" size="small" @click="btnClick">自定义关闭按钮并触发回调函数</v-button>
+      //   `,
+      //   key: key,
+      //   onClose: close
+      // });
+    }
+  }
+}
+</script>
