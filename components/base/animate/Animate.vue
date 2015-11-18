@@ -48,9 +48,9 @@ export default {
   ready () {
     if (!this.show) {
       this.currentNode.style.display = 'none'
+    } else {
+      this._enter()
     }
-
-    this._enter()
   },
 
   beforeDestory () {
