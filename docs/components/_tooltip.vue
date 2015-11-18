@@ -9,12 +9,11 @@
 <demo>
   <example title="简单使用">
     <div style="margin-top: 100px; margin-left: 100px; margin-bottom: 100px">
-      <tooltip
+      <tooltip animation="zoom"
         :visible="visible"
-        :animation="zoom"
         :trigger="[]">
         <span slot="tooltip" style="z-index: 1000;">required!</span>
-        <input @change="_onChange"/>
+        <input class="ant-input" @change="_onChange"/>
       </tooltip>
     </div>
   </example>

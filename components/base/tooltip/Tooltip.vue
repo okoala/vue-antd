@@ -1,11 +1,11 @@
 <template>
 <trigger
-  v-rel:trigger
   :popup-class-name="overlayClassName"
   :prefixCls="prefixCls"
   :popup="''"
   :action="trigger"
   :builtin-placements="placements"
+  :popup-visible="visible"
   :popup-placement="placement"
   :popup-align="align"
   :popup-style="overlayStyle"
@@ -14,7 +14,8 @@
   :on-popup-visible-change="onVisibleChange"
   :destoryPopupOnHide="destoryTooltipOnHide"
   :mouse-enter-delay="mouseEnterDelay"
-  :mouse-leave-delay="mouseLeaveDelay">
+  :mouse-leave-delay="mouseLeaveDelay"
+  :default-popup-visible="defaultVisible">
   <span name="popup">
     <div :class="prefixCls + '-arrow'"></div>
     <div :class="prefixCls + '-inner'">
@@ -26,20 +27,35 @@
 </template>
 
 <script>
-import { defaultProps } from '../../../utils'
+import { defaultProps, any } from '../../../utils'
 import { placements } from './placements'
 import Trigger from '../trigger'
 
 export default {
   props: defaultProps({
     prefixCls: 'ant-tooltip',
+    trigger: ['hover'],
     mouseEnterDelay: 0,
     destoryTooltipOnHide: false,
     mouseLeaveDelay: 0.1,
     align: {},
+    transitionName: '',
     placement: 'right',
-    trigger: ['hover']
+    animation: '',
+    visible: Boolean,
+    defaultVisible: Boolean,
+    overlayClassName: '',
+    overlayStyle: {},
+    getTooltipContainer: () => {},
+    onVisibleChange: () => {},
+    afterVisibleChange: () => {}
   }),
+
+  data () {
+    return {
+      placements: placements
+    }
+  },
 
   components: { Trigger },
 
