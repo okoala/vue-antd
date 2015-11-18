@@ -1,8 +1,9 @@
 <template>
 <div :class="wrapClasses" :style="style">
-  <Animate v-for="notice in notices" :show="notice.show" :transition-name="_getTransitionName()">
+  <Animate v-for="notice in notices" :show="notice.show" :on-end="_remove.bind(null, notice.key)" :transition-name="_getTransitionName()">
     <Notice
       :prefix-cls="prefixCls"
+      :style="notice.style"
       :show.sync="notice.show"
       :content="notice.content"
       :on-close="notice.onClose"
@@ -52,10 +53,6 @@ export default {
     }
   },
 
-  compiled () {
-
-  },
-
   computed: {
     wrapClasses () {
       return cx({
@@ -74,6 +71,9 @@ export default {
       if (!notices.filter(v => v.key === key).length) {
         let _notice = Object.assign({
           show: true,
+          style: {
+            right: '50%'
+          },
           content: '',
           duration: 0.5,
           closable: false
@@ -89,13 +89,21 @@ export default {
     },
 
     remove (key) {
+      this.notices.map(notice => {
+        if (notice.key === key) {
+          notice.show = false
+        }
+      })
+    },
+
+    _remove (key) {
       this.notices = this.notices.filter(notice => {
         return notice.key !== key
       })
     },
 
     _close (notice) {
-      this.remove(notice.key)
+      notice.show = false
     },
 
     _getTransitionName () {

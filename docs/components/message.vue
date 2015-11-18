@@ -1,10 +1,6 @@
 <template lang="md">
 # Message
 
-- category: Components
-- chinese: 全局提示
-- type: 展示
-
 ---
 
 全局展示操作反馈信息。
@@ -69,10 +65,6 @@ import message from '../../components/message'
 import vButton from '../../components/button'
 
 export default {
-  data () {
-
-  },
-
   components: { vButton },
 
   methods: {

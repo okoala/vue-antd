@@ -1,4 +1,4 @@
-import Notification from './base/notification'
+import Notification from '../base/notification'
 
 const defaultDuration = 1.5
 
@@ -37,14 +37,14 @@ function notice (content, duration = defaultDuration, type, onClose) {
         <i class="anticon ${iconClass}"></i>
         <span>${content}</span>
       </div>
-    `
+    `,
     onClose: onClose
   })
 
-  return (function() {
+  return (function () {
     let target = key++
 
-    return function() {
+    return function () {
       instance.removeNotice(target)
     }
   })()

@@ -158,10 +158,10 @@ export default {
           //   name: 'dropdown',
           //   desc: '下拉菜单'
           // },
-          // {
-          //   name: 'message',
-          //   desc: '全局提示'
-          // },
+          {
+            name: 'message',
+            desc: '全局提示'
+          },
           // {
           //   name: 'modal',
           //   desc: '对话框'
