@@ -118,6 +118,10 @@ export function configRouter (router) {
 
         '_notification': {
           component: require('../components/_notification.vue')
+        },
+
+        '_tooltip': {
+          component: require('../components/_tooltip.vue')
         }
       }
     },

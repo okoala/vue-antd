@@ -255,6 +255,10 @@ export default {
           {
             name: '_notification',
             desc: '通知'
+          },
+          {
+            name: '_tooltip',
+            desc: '提示'
           }
         ]
       }

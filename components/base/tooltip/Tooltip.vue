@@ -15,14 +15,18 @@
   :destoryPopupOnHide="destoryTooltipOnHide"
   :mouse-enter-delay="mouseEnterDelay"
   :mouse-leave-delay="mouseLeaveDelay">
-  <div :class="prefixCls + '-arrow'"></div>
-  <div :class="prefixCls + '-inner'">
-    <slot></slot>
-  </div>
+  <span name="popup">
+    <div :class="prefixCls + '-arrow'"></div>
+    <div :class="prefixCls + '-inner'">
+      <slot name="tooltip"></slot>
+    </div>
+  </span>
+  <slot></slot>
 </trigger>
 </template>
 
 <script>
+import { defaultProps } from '../../../utils'
 import { placements } from './placements'
 import Trigger from '../trigger'
 
