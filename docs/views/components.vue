@@ -170,10 +170,10 @@ export default {
             name: 'notification',
             desc: '通知提醒框'
           },
-          // {
-          //   name: 'popconfirm',
-          //   desc: '气泡确认框'
-          // },
+          {
+            name: 'popconfirm',
+            desc: '气泡确认框'
+          },
           // {
           //   name: 'popover',
           //   desc: '气泡卡片'

@@ -1,5 +1,4 @@
 import velocity from 'velocity-animate'
-import isPlainObject from 'lodash.isplainobject'
 import _KeyCode from './KeyCode'
 import _guid from './guid'
 import _slotMixin from './slotMixin'

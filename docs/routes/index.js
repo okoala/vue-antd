@@ -68,6 +68,10 @@ export function configRouter (router) {
           component: require('../components/queue-anim.vue')
         },
 
+        'popconfirm': {
+          component: require('../components/popconfirm.vue')
+        },
+
         'upload': {
           component: require('../components/upload.vue')
         },
