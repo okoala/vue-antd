@@ -1,4 +1,29 @@
-<template></template>
+<template>
+<span>
+  <tooltip
+    :prefix-cls="prefixCls"
+    :placement="placement"
+    :on-visible-change="_onVisibleChange"
+    :transition-name="transitionName"
+    :visible="visible"
+    :trigger="trigger">
+    <div slot="tooltip">
+      <div :class="prefixCls + '-content'">
+        <p :class="prefixCls + '-message'">
+          <v-icon type="exclamation-circle"></v-icon>
+          <slot name="title"></slot>
+        </p>
+
+        <div :class="prefixCls + '-buttons'">
+          <v-button @click="_cancel" type="ghost" size="small">取消</v-button>
+          <v-button @click="_confirm" type="primary" size="small">确定</v-button>
+        </div>
+      </div>
+    </div>
+    <span slot="trigger"><slot></slot></span>
+  </tooltip>
+</span>
+</template>
 
 <script>
 import { defaultProps } from '../../utils'
@@ -11,7 +36,9 @@ export default {
     prefixCls: 'ant-popover',
     transitionName: '',
     placement: 'top',
-    trigger: 'click',
+    trigger: {
+      default: function() {return ['click']}
+    },
     overlayStyle: {
       default: function() {return{}}
     },
@@ -27,9 +54,38 @@ export default {
     }
   },
 
+  computed: {
+    transitionName () {
+      return ({
+        top: 'zoom-down',
+        bottom: 'zoom-up',
+        left: 'zoom-right',
+        right: 'zoom-left',
+        topLeft: 'zoom-down',
+        bottomLeft: 'zoom-up',
+        leftTop: 'zoom-right',
+        rightTop: 'zoom-left',
+        topRight: 'zoom-down',
+        bottomRight: 'zoom-up',
+        leftBottom: 'zoom-right',
+        rightBottom: 'zoom-left'
+      })[this.placement]
+    }
+  },
+
   methods: {
     _confirm () {
+      this.onConfirm()
+      this.visible = false
+    },
 
+    _cancel () {
+      this.onCancel()
+      this.visible = false
+    },
+
+    _onVisibleChange (value) {
+      this.visible = value
     }
   }
 }

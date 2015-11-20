@@ -23,46 +23,46 @@
   </example>
   <example title="偏移">
     <div style="margin-left: 60px;">
-      <v-popconfirm placement="topLeft" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="topLeft" :title="text" :on-confirm="_confirm">
         <v-button>上左</v-button>
       </v-popconfirm>
-      <v-popconfirm placement="top" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="top" :title="text" :on-confirm="_confirm">
         <v-button>上边</v-button>
       </v-popconfirm>
-      <v-popconfirm placement="topRight" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="topRight" :title="text" :on-confirm="_confirm">
         <v-button>上右</v-button>
       </v-popconfirm>
     </div>
     <div style="width: 60px; float: left">
-      <v-popconfirm placement="leftTop" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="leftTop" :title="text" :on-confirm="_confirm">
         <v-button>左上</v-button>
       </v-popconfirm>
-      <v-popconfirm placement="left" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="left" :title="text" :on-confirm="_confirm">
         <v-button>左边</v-button>
       </v-popconfirm>
-      <v-popconfirm placement="leftBottom" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="leftBottom" :title="text" :on-confirm="_confirm">
         <v-button>左下</v-button>
       </v-popconfirm>
     </div>
     <div style="width: 60px; margin-left: 270px;">
-      <v-popconfirm placement="rightTop" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="rightTop" :title="text" :on-confirm="_confirm">
         <v-button>右上</v-button>
       </v-popconfirm>
-      <v-popconfirm placement="right" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="right" :title="text" :on-confirm="_confirm">
         <v-button>右边</v-button>
       </v-popconfirm>
-      <v-popconfirm placement="rightBottom" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="rightBottom" :title="text" :on-confirm="_confirm">
         <v-button>右下</v-button>
       </v-popconfirm>
     </div>
     <div style="margin-left: 60px; cleat: both;">
-      <v-popconfirm placement="bottomLeft" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="bottomLeft" :title="text" :on-confirm="_confirm">
         <v-button>下左</v-button>
       </v-popconfirm>
-      <v-popconfirm placement="bottom" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="bottom" :title="text" :on-confirm="_confirm">
         <v-button>下边</v-button>
       </v-popconfirm>
-      <v-popconfirm placement="bottomRight" :title="text" :on-confirm="confirm">
+      <v-popconfirm placement="bottomRight" :title="text" :on-confirm="_confirm">
         <v-button>下右</v-button>
       </v-popconfirm>
     </div>
