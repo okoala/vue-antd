@@ -174,10 +174,10 @@ export default {
             name: 'popconfirm',
             desc: '气泡确认框'
           },
-          // {
-          //   name: 'popover',
-          //   desc: '气泡卡片'
-          // },
+          {
+            name: 'popover',
+            desc: '气泡卡片'
+          },
           {
             name: 'progress',
             desc: '进度条'

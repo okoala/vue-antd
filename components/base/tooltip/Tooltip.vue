@@ -27,17 +27,14 @@
 </template>
 
 <script>
-import { defaultProps, any } from '../../../utils'
+import { defaultProps, oneOfType, any } from '../../../utils'
 import { placements } from './placements'
 import Trigger from '../trigger'
 
 export default {
   props: defaultProps({
     prefixCls: 'ant-tooltip',
-    trigger: {
-      type: Array,
-      default: function (){ return ['hover'] }
-    },
+    trigger: oneOfType([Array, String], 'hover'),
     mouseEnterDelay: 0,
     destoryTooltipOnHide: false,
     mouseLeaveDelay: 0.1,

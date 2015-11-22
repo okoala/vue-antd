@@ -11,7 +11,7 @@
 
 和 `confirm` 弹出的全屏居中模态对话框相比，交互形式更轻量。
 
-## API
+## 组件演示
 
 <demo>
   <example title="基本">

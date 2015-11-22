@@ -72,6 +72,10 @@ export function configRouter (router) {
           component: require('../components/popconfirm.vue')
         },
 
+        'popover': {
+          component: require('../components/popover.vue')
+        },
+
         'upload': {
           component: require('../components/upload.vue')
         },

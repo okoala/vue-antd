@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { defaultProps, contains, slotMixin } from '../../../utils'
+import { defaultProps, oneOfType, contains, slotMixin } from '../../../utils'
 import cx from 'classnames'
 import Popup from './Popup.vue'
 import { getAlignFromPlacement, getPopupClassNameFromAlign } from './utils'
@@ -45,7 +45,7 @@ export default {
     mouseLeaveDelay: 0.1,
     destroyPopupOnHide: false,
     builtinPlacements: Object,
-    action: [],
+    action: oneOfType([Array, String]),
     getPopupClassNameFromAlign: () => '',
     onPopupVisibleChange: () => {},
     afterPopupVisibleChange: () => {}
