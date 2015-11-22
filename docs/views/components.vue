@@ -193,15 +193,15 @@ export default {
           {
             name: 'spin',
             desc: '加载动画'
-          }
+          },
           // {
           //   name: 'timeline',
           //   desc: '时间轴'
           // },
-          // {
-          //   name: 'tooltip',
-          //   desc: '文字提示'
-          // },
+          {
+            name: 'tooltip',
+            desc: '文字提示'
+          },
           // {
           //   name: 'tree',
           //   desc: '树形控件'
@@ -680,6 +680,11 @@ export default {
   display: none;
   padding: 5px;
   border-top: 1px dashed #e9e9e9;
+}
+
+.code-box-code pre {
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 .xRightMatrix {
