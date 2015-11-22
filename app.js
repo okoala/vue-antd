@@ -71,31 +71,31 @@
 	
 	var _interopRequireDefault = __webpack_require__(1)['default'];
 	
-	var _vue = __webpack_require__(31);
+	var _vue = __webpack_require__(28);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
-	var _vueRouter = __webpack_require__(457);
+	var _vueRouter = __webpack_require__(445);
 	
 	var _vueRouter2 = _interopRequireDefault(_vueRouter);
 	
-	var _vueResource = __webpack_require__(446);
+	var _vueResource = __webpack_require__(434);
 	
 	var _vueResource2 = _interopRequireDefault(_vueResource);
 	
-	var _vueAsyncData = __webpack_require__(337);
+	var _vueAsyncData = __webpack_require__(322);
 	
 	var _vueAsyncData2 = _interopRequireDefault(_vueAsyncData);
 	
-	var _routes = __webpack_require__(158);
+	var _routes = __webpack_require__(148);
 	
-	var _viewsAppVue = __webpack_require__(437);
+	var _viewsAppVue = __webpack_require__(425);
 	
 	var _viewsAppVue2 = _interopRequireDefault(_viewsAppVue);
 	
-	__webpack_require__(284);
+	__webpack_require__(266);
 	
-	__webpack_require__(283).polyfill();
+	__webpack_require__(265).polyfill();
 	
 	_vue2['default'].config.debug = true;
 	
@@ -141,15 +141,15 @@
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var lang = __webpack_require__(506)
+	var lang = __webpack_require__(494)
 	var extend = lang.extend
 	
 	extend(exports, lang)
-	extend(exports, __webpack_require__(505))
-	extend(exports, __webpack_require__(504))
-	extend(exports, __webpack_require__(507))
-	extend(exports, __webpack_require__(502))
-	extend(exports, __webpack_require__(503))
+	extend(exports, __webpack_require__(493))
+	extend(exports, __webpack_require__(492))
+	extend(exports, __webpack_require__(495))
+	extend(exports, __webpack_require__(490))
+	extend(exports, __webpack_require__(491))
 
 
 /***/ },
@@ -170,19 +170,19 @@
 	exports.contains = contains;
 	exports.camelcaseToHyphen = camelcaseToHyphen;
 	
-	var _velocityAnimate = __webpack_require__(71);
+	var _velocityAnimate = __webpack_require__(60);
 	
 	var _velocityAnimate2 = _interopRequireDefault(_velocityAnimate);
 	
-	var _KeyCode2 = __webpack_require__(223);
+	var _KeyCode2 = __webpack_require__(215);
 	
 	var _KeyCode3 = _interopRequireDefault(_KeyCode2);
 	
-	var _guid2 = __webpack_require__(224);
+	var _guid2 = __webpack_require__(216);
 	
 	var _guid3 = _interopRequireDefault(_guid2);
 	
-	var _slotMixin2 = __webpack_require__(225);
+	var _slotMixin2 = __webpack_require__(217);
 	
 	var _slotMixin3 = _interopRequireDefault(_slotMixin2);
 	
@@ -411,7 +411,7 @@
 
 	"use strict";
 	
-	var _Object$defineProperty = __webpack_require__(58)["default"];
+	var _Object$defineProperty = __webpack_require__(53)["default"];
 	
 	exports["default"] = function (obj, key, value) {
 	  if (key in obj) {
@@ -442,11 +442,11 @@
 	  value: true
 	});
 	
-	var _ButtonVue = __webpack_require__(389);
+	var _ButtonVue = __webpack_require__(375);
 	
 	var _ButtonVue2 = _interopRequireDefault(_ButtonVue);
 	
-	var _ButtonGroupVue = __webpack_require__(390);
+	var _ButtonGroupVue = __webpack_require__(376);
 	
 	var _ButtonGroupVue2 = _interopRequireDefault(_ButtonGroupVue);
 	
@@ -769,6 +769,25 @@
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(1)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _IconfontVue = __webpack_require__(378);
+	
+	var _IconfontVue2 = _interopRequireDefault(_IconfontVue);
+
+	exports['default'] = _IconfontVue2['default'];
+	module.exports = exports['default'];
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
 	module.exports = {
 	
 	  /**
@@ -860,7 +879,7 @@
 	
 	var delimiters = ['{{', '}}']
 	var unsafeDelimiters = ['{{{', '}}}']
-	var textParser = __webpack_require__(29)
+	var textParser = __webpack_require__(26)
 	
 	Object.defineProperty(module.exports, 'delimiters', {
 	  get: function () {
@@ -884,25 +903,6 @@
 
 
 /***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _interopRequireDefault = __webpack_require__(1)['default'];
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _IconfontVue = __webpack_require__(392);
-	
-	var _IconfontVue2 = _interopRequireDefault(_IconfontVue);
-
-	exports['default'] = _IconfontVue2['default'];
-	module.exports = exports['default'];
-
-/***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -918,7 +918,7 @@
 	exports.resolveAsyncComponent = resolveAsyncComponent;
 	exports.mapParams = mapParams;
 	
-	var _routeRecognizer = __webpack_require__(70);
+	var _routeRecognizer = __webpack_require__(59);
 	
 	var _routeRecognizer2 = _interopRequireDefault(_routeRecognizer);
 	
@@ -1085,47 +1085,10 @@
 
 /***/ },
 /* 13 */
-/***/ function(module, exports) {
-
-	var core = module.exports = {version: '1.2.6'};
-	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-
-/***/ },
-/* 14 */
-/***/ function(module, exports) {
-
-	var $Object = Object;
-	module.exports = {
-	  create:     $Object.create,
-	  getProto:   $Object.getPrototypeOf,
-	  isEnum:     {}.propertyIsEnumerable,
-	  getDesc:    $Object.getOwnPropertyDescriptor,
-	  setDesc:    $Object.defineProperty,
-	  setDescs:   $Object.defineProperties,
-	  getKeys:    $Object.keys,
-	  getNames:   $Object.getOwnPropertyNames,
-	  getSymbols: $Object.getOwnPropertySymbols,
-	  each:       [].forEach
-	};
-
-/***/ },
-/* 15 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var store  = __webpack_require__(250)('wks')
-	  , uid    = __webpack_require__(253)
-	  , Symbol = __webpack_require__(35).Symbol;
-	module.exports = function(name){
-	  return store[name] || (store[name] =
-	    Symbol && Symbol[name] || (Symbol || uid)('Symbol.' + name));
-	};
-
-/***/ },
-/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Cache = __webpack_require__(17)
+	var Cache = __webpack_require__(14)
 	var templateCache = new Cache(1000)
 	var idSelectorCache = new Cache(1000)
 	
@@ -1415,7 +1378,7 @@
 
 
 /***/ },
-/* 17 */
+/* 14 */
 /***/ function(module, exports) {
 
 	/**
@@ -1533,7 +1496,7 @@
 
 
 /***/ },
-/* 18 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1544,7 +1507,7 @@
 	  value: true
 	});
 	
-	var _CheckboxVue = __webpack_require__(391);
+	var _CheckboxVue = __webpack_require__(377);
 	
 	var _CheckboxVue2 = _interopRequireDefault(_CheckboxVue);
 
@@ -1552,19 +1515,26 @@
 	module.exports = exports['default'];
 
 /***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(224), __esModule: true };
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(228), __esModule: true };
+
+/***/ },
+/* 18 */
+/***/ function(module, exports) {
+
+	var core = module.exports = {version: '1.2.6'};
+	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+
+/***/ },
 /* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(232), __esModule: true };
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(236), __esModule: true };
-
-/***/ },
-/* 21 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2063,21 +2033,21 @@
 
 
 /***/ },
-/* 22 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
 	
-	_.extend(exports, __webpack_require__(468))
-	_.extend(exports, __webpack_require__(469))
+	_.extend(exports, __webpack_require__(456))
+	_.extend(exports, __webpack_require__(457))
 
 
 /***/ },
-/* 23 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Cache = __webpack_require__(17)
+	var Cache = __webpack_require__(14)
 	var cache = new Cache(1000)
 	var filterTokenRE = /[^\s'"]+|'[^']*'|"[^"]*"/g
 	var reservedArgRE = /^in$|^-?\d+/
@@ -2213,11 +2183,11 @@
 
 
 /***/ },
-/* 24 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Cache = __webpack_require__(17)
+	var Cache = __webpack_require__(14)
 	var pathCache = new Cache(1000)
 	var identRE = exports.identRE = /^[$_a-zA-Z]+[\w$]*$/
 	
@@ -2577,7 +2547,7 @@
 
 
 /***/ },
-/* 25 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2588,7 +2558,7 @@
 	  value: true
 	});
 	
-	var _AnimateVue = __webpack_require__(380);
+	var _AnimateVue = __webpack_require__(366);
 	
 	var _AnimateVue2 = _interopRequireDefault(_AnimateVue);
 
@@ -2596,65 +2566,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global    = __webpack_require__(35)
-	  , core      = __webpack_require__(13)
-	  , ctx       = __webpack_require__(60)
-	  , PROTOTYPE = 'prototype';
-	
-	var $export = function(type, name, source){
-	  var IS_FORCED = type & $export.F
-	    , IS_GLOBAL = type & $export.G
-	    , IS_STATIC = type & $export.S
-	    , IS_PROTO  = type & $export.P
-	    , IS_BIND   = type & $export.B
-	    , IS_WRAP   = type & $export.W
-	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
-	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
-	    , key, own, out;
-	  if(IS_GLOBAL)source = name;
-	  for(key in source){
-	    // contains in native
-	    own = !IS_FORCED && target && key in target;
-	    if(own && key in exports)continue;
-	    // export native or passed
-	    out = own ? target[key] : source[key];
-	    // prevent global pollution for namespaces
-	    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
-	    // bind timers to global for call from export context
-	    : IS_BIND && own ? ctx(out, global)
-	    // wrap global constructors for prevent change them in library
-	    : IS_WRAP && target[key] == out ? (function(C){
-	      var F = function(param){
-	        return this instanceof C ? new C(param) : C(param);
-	      };
-	      F[PROTOTYPE] = C[PROTOTYPE];
-	      return F;
-	    // make static versions for prototype methods
-	    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-	    if(IS_PROTO)(exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
-	  }
-	};
-	// type bitmap
-	$export.F = 1;  // forced
-	$export.G = 2;  // global
-	$export.S = 4;  // static
-	$export.P = 8;  // proto
-	$export.B = 16; // bind
-	$export.W = 32; // wrap
-	module.exports = $export;
-
-/***/ },
-/* 27 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var compiler = __webpack_require__(22)
-	var templateParser = __webpack_require__(16)
-	var Fragment = __webpack_require__(492)
-	var Cache = __webpack_require__(17)
+	var compiler = __webpack_require__(20)
+	var templateParser = __webpack_require__(13)
+	var Fragment = __webpack_require__(480)
+	var Cache = __webpack_require__(14)
 	var linkerCache = new Cache(5000)
 	
 	/**
@@ -2709,12 +2628,12 @@
 
 
 /***/ },
-/* 28 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Path = __webpack_require__(24)
-	var Cache = __webpack_require__(17)
+	var Path = __webpack_require__(22)
+	var Cache = __webpack_require__(14)
 	var expressionCache = new Cache(1000)
 	
 	var allowedKeywords =
@@ -2979,12 +2898,12 @@
 
 
 /***/ },
-/* 29 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Cache = __webpack_require__(17)
-	var config = __webpack_require__(9)
-	var dirParser = __webpack_require__(23)
+	var Cache = __webpack_require__(14)
+	var config = __webpack_require__(10)
+	var dirParser = __webpack_require__(21)
 	var regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g
 	var cache, tagRE, htmlRE
 	
@@ -3145,7 +3064,7 @@
 
 
 /***/ },
-/* 30 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -3230,7 +3149,7 @@
 
 
 /***/ },
-/* 31 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -3258,7 +3177,7 @@
 	 * Mixin global API
 	 */
 	
-	extend(Vue, __webpack_require__(464))
+	extend(Vue, __webpack_require__(452))
 	
 	/**
 	 * Vue and every constructor that extends Vue has an
@@ -3271,9 +3190,9 @@
 	
 	Vue.options = {
 	  replace: true,
-	  directives: __webpack_require__(130),
-	  elementDirectives: __webpack_require__(471),
-	  filters: __webpack_require__(491),
+	  directives: __webpack_require__(120),
+	  elementDirectives: __webpack_require__(459),
+	  filters: __webpack_require__(479),
 	  transitions: {},
 	  components: {},
 	  partials: {}
@@ -3305,20 +3224,20 @@
 	 * Mixin internal instance methods
 	 */
 	
-	extend(p, __webpack_require__(494))
-	extend(p, __webpack_require__(493))
-	extend(p, __webpack_require__(497))
-	extend(p, __webpack_require__(495))
-	extend(p, __webpack_require__(496))
+	extend(p, __webpack_require__(482))
+	extend(p, __webpack_require__(481))
+	extend(p, __webpack_require__(485))
+	extend(p, __webpack_require__(483))
+	extend(p, __webpack_require__(484))
 	
 	/**
 	 * Mixin public API methods
 	 */
 	
-	extend(p, __webpack_require__(461))
-	extend(p, __webpack_require__(462))
-	extend(p, __webpack_require__(463))
-	extend(p, __webpack_require__(465))
+	extend(p, __webpack_require__(449))
+	extend(p, __webpack_require__(450))
+	extend(p, __webpack_require__(451))
+	extend(p, __webpack_require__(453))
 	
 	Vue.version = '1.0.8'
 	module.exports = _.Vue = Vue
@@ -3332,14 +3251,14 @@
 
 
 /***/ },
-/* 32 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var config = __webpack_require__(9)
-	var Dep = __webpack_require__(54)
-	var expParser = __webpack_require__(28)
-	var batcher = __webpack_require__(466)
+	var config = __webpack_require__(10)
+	var Dep = __webpack_require__(49)
+	var expParser = __webpack_require__(25)
+	var batcher = __webpack_require__(454)
 	var uid = 0
 	
 	/**
@@ -3674,12 +3593,12 @@
 
 
 /***/ },
-/* 33 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$keys = __webpack_require__(20)['default'];
+	var _Object$keys = __webpack_require__(17)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(1)['default'];
 	
@@ -3687,11 +3606,11 @@
 	  value: true
 	});
 	
-	var _NotificationVue = __webpack_require__(382);
+	var _NotificationVue = __webpack_require__(368);
 	
 	var _NotificationVue2 = _interopRequireDefault(_NotificationVue);
 	
-	var _vue = __webpack_require__(31);
+	var _vue = __webpack_require__(28);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
@@ -3736,56 +3655,114 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 34 */
-/***/ function(module, exports) {
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = function(exec){
-	  try {
-	    return !!exec();
-	  } catch(e){
-	    return true;
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(1)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _baseNotification = __webpack_require__(30);
+	
+	var _baseNotification2 = _interopRequireDefault(_baseNotification);
+	
+	var defaultDuration = 1.5;
+	
+	var top = undefined;
+	var messageInstance = undefined;
+	var key = 1;
+	
+	function getMessageInstance() {
+	  messageInstance = messageInstance || _baseNotification2['default'].newInstance({
+	    prefixCls: 'ant-message',
+	    transitionName: 'move-up',
+	    style: {
+	      top: top
+	    }
+	  });
+	
+	  return messageInstance;
+	}
+	
+	function notice(content, duration, type, onClose) {
+	  if (duration === undefined) duration = defaultDuration;
+	
+	  var iconClass = ({
+	    'info': 'anticon-info-circle ant-message-info',
+	    'success': 'anticon-check-circle ant-message-success',
+	    'error': 'anticon-exclamation-circle ant-message-error',
+	    'loading': 'anticon-loading ant-message-loading'
+	  })[type];
+	
+	  var instance = getMessageInstance();
+	
+	  instance.notice({
+	    key: key,
+	    duration: duration,
+	    style: {},
+	    content: '\n      <div class="ant-message-custom-content">\n        <i class="anticon ' + iconClass + '"></i>\n        <span>' + content + '</span>\n      </div>\n    ',
+	    onClose: onClose
+	  });
+	
+	  return (function () {
+	    var target = key++;
+	
+	    return function () {
+	      instance.removeNotice(target);
+	    };
+	  })();
+	}
+	
+	exports['default'] = {
+	  info: function info(content, duration, onClose) {
+	    return notice(content, duration, 'info', onClose);
+	  },
+	  success: function success(content, duration, onClose) {
+	    return notice(content, duration, 'success', onClose);
+	  },
+	  error: function error(content, duration, onClose) {
+	    return notice(content, duration, 'error', onClose);
+	  },
+	  loading: function loading(content, duration, onClose) {
+	    return notice(content, duration, 'loading', onClose);
+	  },
+	  config: function config(options) {
+	    if (options.top) {
+	      top = options.top;
+	    }
 	  }
 	};
+	module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 32 */
 /***/ function(module, exports) {
 
-	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-	var global = module.exports = typeof window != 'undefined' && window.Math == Math
-	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
-	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $          = __webpack_require__(14)
-	  , createDesc = __webpack_require__(65);
-	module.exports = __webpack_require__(240) ? function(object, key, value){
-	  return $.setDesc(object, key, createDesc(1, value));
-	} : function(object, key, value){
-	  object[key] = value;
-	  return object;
+	var $Object = Object;
+	module.exports = {
+	  create:     $Object.create,
+	  getProto:   $Object.getPrototypeOf,
+	  isEnum:     {}.propertyIsEnumerable,
+	  getDesc:    $Object.getOwnPropertyDescriptor,
+	  setDesc:    $Object.defineProperty,
+	  setDescs:   $Object.defineProperties,
+	  getKeys:    $Object.keys,
+	  getNames:   $Object.getOwnPropertyNames,
+	  getSymbols: $Object.getOwnPropertySymbols,
+	  each:       [].forEach
 	};
 
 /***/ },
-/* 37 */
-/***/ function(module, exports) {
-
-	module.exports = {};
-
-/***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(61);
-	module.exports = function(it){
-	  return Object(defined(it));
-	};
-
-/***/ },
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
 /* 39 */,
 /* 40 */,
 /* 41 */,
@@ -3795,12 +3772,7 @@
 /* 45 */,
 /* 46 */,
 /* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */
+/* 48 */
 /***/ function(module, exports) {
 
 	/**
@@ -4016,7 +3988,7 @@
 
 
 /***/ },
-/* 54 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -4083,7 +4055,7 @@
 
 
 /***/ },
-/* 55 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4094,7 +4066,7 @@
 	  value: true
 	});
 	
-	var _AlignVue = __webpack_require__(379);
+	var _AlignVue = __webpack_require__(365);
 	
 	var _AlignVue2 = _interopRequireDefault(_AlignVue);
 
@@ -4102,7 +4074,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 56 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4113,7 +4085,26 @@
 	  value: true
 	});
 	
-	var _TriggerVue = __webpack_require__(386);
+	var _TooltipVue = __webpack_require__(369);
+	
+	var _TooltipVue2 = _interopRequireDefault(_TooltipVue);
+
+	exports['default'] = _TooltipVue2['default'];
+	module.exports = exports['default'];
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(1)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _TriggerVue = __webpack_require__(372);
 	
 	var _TriggerVue2 = _interopRequireDefault(_TriggerVue);
 
@@ -4121,165 +4112,82 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 57 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	module.exports = { "default": __webpack_require__(226), __esModule: true };
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var global    = __webpack_require__(233)
+	  , core      = __webpack_require__(18)
+	  , ctx       = __webpack_require__(231)
+	  , PROTOTYPE = 'prototype';
 	
-	var _interopRequireDefault = __webpack_require__(1)['default'];
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _baseNotification = __webpack_require__(33);
-	
-	var _baseNotification2 = _interopRequireDefault(_baseNotification);
-	
-	var defaultDuration = 1.5;
-	
-	var top = undefined;
-	var messageInstance = undefined;
-	var key = 1;
-	
-	function getMessageInstance() {
-	  messageInstance = messageInstance || _baseNotification2['default'].newInstance({
-	    prefixCls: 'ant-message',
-	    transitionName: 'move-up',
-	    style: {
-	      top: top
-	    }
-	  });
-	
-	  return messageInstance;
-	}
-	
-	function notice(content, duration, type, onClose) {
-	  if (duration === undefined) duration = defaultDuration;
-	
-	  var iconClass = ({
-	    'info': 'anticon-info-circle ant-message-info',
-	    'success': 'anticon-check-circle ant-message-success',
-	    'error': 'anticon-exclamation-circle ant-message-error',
-	    'loading': 'anticon-loading ant-message-loading'
-	  })[type];
-	
-	  var instance = getMessageInstance();
-	
-	  instance.notice({
-	    key: key,
-	    duration: duration,
-	    style: {},
-	    content: '\n      <div class="ant-message-custom-content">\n        <i class="anticon ' + iconClass + '"></i>\n        <span>' + content + '</span>\n      </div>\n    ',
-	    onClose: onClose
-	  });
-	
-	  return (function () {
-	    var target = key++;
-	
-	    return function () {
-	      instance.removeNotice(target);
-	    };
-	  })();
-	}
-	
-	exports['default'] = {
-	  info: function info(content, duration, onClose) {
-	    return notice(content, duration, 'info', onClose);
-	  },
-	  success: function success(content, duration, onClose) {
-	    return notice(content, duration, 'success', onClose);
-	  },
-	  error: function error(content, duration, onClose) {
-	    return notice(content, duration, 'error', onClose);
-	  },
-	  loading: function loading(content, duration, onClose) {
-	    return notice(content, duration, 'loading', onClose);
-	  },
-	  config: function config(options) {
-	    if (options.top) {
-	      top = options.top;
-	    }
+	var $export = function(type, name, source){
+	  var IS_FORCED = type & $export.F
+	    , IS_GLOBAL = type & $export.G
+	    , IS_STATIC = type & $export.S
+	    , IS_PROTO  = type & $export.P
+	    , IS_BIND   = type & $export.B
+	    , IS_WRAP   = type & $export.W
+	    , exports   = IS_GLOBAL ? core : core[name] || (core[name] = {})
+	    , target    = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE]
+	    , key, own, out;
+	  if(IS_GLOBAL)source = name;
+	  for(key in source){
+	    // contains in native
+	    own = !IS_FORCED && target && key in target;
+	    if(own && key in exports)continue;
+	    // export native or passed
+	    out = own ? target[key] : source[key];
+	    // prevent global pollution for namespaces
+	    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
+	    // bind timers to global for call from export context
+	    : IS_BIND && own ? ctx(out, global)
+	    // wrap global constructors for prevent change them in library
+	    : IS_WRAP && target[key] == out ? (function(C){
+	      var F = function(param){
+	        return this instanceof C ? new C(param) : C(param);
+	      };
+	      F[PROTOTYPE] = C[PROTOTYPE];
+	      return F;
+	    // make static versions for prototype methods
+	    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+	    if(IS_PROTO)(exports[PROTOTYPE] || (exports[PROTOTYPE] = {}))[key] = out;
 	  }
 	};
-	module.exports = exports['default'];
+	// type bitmap
+	$export.F = 1;  // forced
+	$export.G = 2;  // global
+	$export.S = 4;  // static
+	$export.P = 8;  // proto
+	$export.B = 16; // bind
+	$export.W = 32; // wrap
+	module.exports = $export;
 
 /***/ },
-/* 58 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(234), __esModule: true };
-
-/***/ },
-/* 59 */
+/* 55 */
 /***/ function(module, exports) {
 
-	var toString = {}.toString;
-	
-	module.exports = function(it){
-	  return toString.call(it).slice(8, -1);
-	};
-
-/***/ },
-/* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// optional / simple context binding
-	var aFunction = __webpack_require__(237);
-	module.exports = function(fn, that, length){
-	  aFunction(fn);
-	  if(that === undefined)return fn;
-	  switch(length){
-	    case 1: return function(a){
-	      return fn.call(that, a);
-	    };
-	    case 2: return function(a, b){
-	      return fn.call(that, a, b);
-	    };
-	    case 3: return function(a, b, c){
-	      return fn.call(that, a, b, c);
-	    };
+	module.exports = function(exec){
+	  try {
+	    return !!exec();
+	  } catch(e){
+	    return true;
 	  }
-	  return function(/* ...args */){
-	    return fn.apply(that, arguments);
-	  };
 	};
 
 /***/ },
-/* 61 */
-/***/ function(module, exports) {
-
-	// 7.2.1 RequireObjectCoercible(argument)
-	module.exports = function(it){
-	  if(it == undefined)throw TypeError("Can't call method on  " + it);
-	  return it;
-	};
-
-/***/ },
-/* 62 */
-/***/ function(module, exports) {
-
-	var hasOwnProperty = {}.hasOwnProperty;
-	module.exports = function(it, key){
-	  return hasOwnProperty.call(it, key);
-	};
-
-/***/ },
-/* 63 */
-/***/ function(module, exports) {
-
-	module.exports = function(it){
-	  return typeof it === 'object' ? it !== null : typeof it === 'function';
-	};
-
-/***/ },
-/* 64 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// most Object methods by ES6 should accept primitives
-	var $export = __webpack_require__(26)
-	  , core    = __webpack_require__(13)
-	  , fails   = __webpack_require__(34);
+	var $export = __webpack_require__(54)
+	  , core    = __webpack_require__(18)
+	  , fails   = __webpack_require__(55);
 	module.exports = function(KEY, exec){
 	  var fn  = (core.Object || {})[KEY] || Object[KEY]
 	    , exp = {};
@@ -4288,43 +4196,17 @@
 	};
 
 /***/ },
-/* 65 */
-/***/ function(module, exports) {
-
-	module.exports = function(bitmap, value){
-	  return {
-	    enumerable  : !(bitmap & 1),
-	    configurable: !(bitmap & 2),
-	    writable    : !(bitmap & 4),
-	    value       : value
-	  };
-	};
-
-/***/ },
-/* 66 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var def = __webpack_require__(14).setDesc
-	  , has = __webpack_require__(62)
-	  , TAG = __webpack_require__(15)('toStringTag');
-	
-	module.exports = function(it, tag, stat){
-	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
-	};
-
-/***/ },
-/* 67 */
-/***/ function(module, exports) {
-
-	// 7.1.4 ToInteger
-	var ceil  = Math.ceil
-	  , floor = Math.floor;
+	// 7.1.13 ToObject(argument)
+	var defined = __webpack_require__(232);
 	module.exports = function(it){
-	  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+	  return Object(defined(it));
 	};
 
 /***/ },
-/* 68 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4335,7 +4217,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(21);
+	var _utils = __webpack_require__(19);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -4382,8 +4264,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 69 */,
-/* 70 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {(function() {
@@ -5029,7 +4910,7 @@
 	    var $$route$recognizer$$default = $$route$recognizer$$RouteRecognizer;
 	
 	    /* global define:true module:true window: true */
-	    if ("function" === 'function' && __webpack_require__(131)['amd']) {
+	    if ("function" === 'function' && __webpack_require__(121)['amd']) {
 	      !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return $$route$recognizer$$default; }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof module !== 'undefined' && module['exports']) {
 	      module['exports'] = $$route$recognizer$$default;
@@ -5039,10 +4920,10 @@
 	}).call(this);
 	
 	//# sourceMappingURL=route-recognizer.js.map
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(132)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(122)(module)))
 
 /***/ },
-/* 71 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! VelocityJS.org (1.2.3). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */
@@ -8933,12 +8814,12 @@
 	will produce an inaccurate conversion value. The same issue exists with the cx/cy attributes of SVG circles and ellipses. */
 
 /***/ },
-/* 72 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(324)
-	module.exports = __webpack_require__(182)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(361)
+	__webpack_require__(307)
+	module.exports = __webpack_require__(173)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(347)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -8955,6 +8836,17 @@
 	}
 
 /***/ },
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
 /* 73 */,
 /* 74 */,
 /* 75 */,
@@ -8996,24 +8888,14 @@
 /* 111 */,
 /* 112 */,
 /* 113 */,
-/* 114 */,
-/* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$keys = __webpack_require__(20)['default'];
+	var _Object$keys = __webpack_require__(17)['default'];
 	
-	var _Object$create = __webpack_require__(227)['default'];
+	var _Object$create = __webpack_require__(218)['default'];
 	
 	exports.__esModule = true;
 	exports.canReuse = canReuse;
@@ -9329,18 +9211,18 @@
 	}
 
 /***/ },
-/* 125 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.style = __webpack_require__(127)
-	exports['class'] = __webpack_require__(474)
-	exports.component = __webpack_require__(475)
-	exports.prop = __webpack_require__(126)
-	exports.transition = __webpack_require__(476)
+	exports.style = __webpack_require__(117)
+	exports['class'] = __webpack_require__(462)
+	exports.component = __webpack_require__(463)
+	exports.prop = __webpack_require__(116)
+	exports.transition = __webpack_require__(464)
 
 
 /***/ },
-/* 126 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// NOTE: the prop internal directive is compiled and linked
@@ -9349,8 +9231,8 @@
 	// inside `created` hooks and `data` functions.
 	
 	var _ = __webpack_require__(2)
-	var Watcher = __webpack_require__(32)
-	var bindingModes = __webpack_require__(9)._propBindingModes
+	var Watcher = __webpack_require__(29)
+	var bindingModes = __webpack_require__(10)._propBindingModes
 	
 	module.exports = {
 	
@@ -9415,7 +9297,7 @@
 
 
 /***/ },
-/* 127 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -9528,11 +9410,11 @@
 
 
 /***/ },
-/* 128 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var FragmentFactory = __webpack_require__(27)
+	var FragmentFactory = __webpack_require__(24)
 	var isObject = _.isObject
 	var uid = 0
 	
@@ -10123,11 +10005,11 @@
 
 
 /***/ },
-/* 129 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var FragmentFactory = __webpack_require__(27)
+	var FragmentFactory = __webpack_require__(24)
 	
 	module.exports = {
 	
@@ -10195,44 +10077,44 @@
 
 
 /***/ },
-/* 130 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// text & html
-	exports.text = __webpack_require__(489)
-	exports.html = __webpack_require__(480)
+	exports.text = __webpack_require__(477)
+	exports.html = __webpack_require__(468)
 	
 	// logic control
-	exports['for'] = __webpack_require__(128)
-	exports['if'] = __webpack_require__(129)
-	exports.show = __webpack_require__(488)
+	exports['for'] = __webpack_require__(118)
+	exports['if'] = __webpack_require__(119)
+	exports.show = __webpack_require__(476)
 	
 	// two-way binding
-	exports.model = __webpack_require__(482)
+	exports.model = __webpack_require__(470)
 	
 	// event handling
-	exports.on = __webpack_require__(486)
+	exports.on = __webpack_require__(474)
 	
 	// attributes
-	exports.bind = __webpack_require__(477)
+	exports.bind = __webpack_require__(465)
 	
 	// ref & el
-	exports.el = __webpack_require__(479)
-	exports.ref = __webpack_require__(487)
+	exports.el = __webpack_require__(467)
+	exports.ref = __webpack_require__(475)
 	
 	// cloak
-	exports.cloak = __webpack_require__(478)
+	exports.cloak = __webpack_require__(466)
 
 
 /***/ },
-/* 131 */
+/* 121 */
 /***/ function(module, exports) {
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };
 
 
 /***/ },
-/* 132 */
+/* 122 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -10248,7 +10130,7 @@
 
 
 /***/ },
-/* 133 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10259,7 +10141,7 @@
 	  value: true
 	});
 	
-	var _AffixVue = __webpack_require__(376);
+	var _AffixVue = __webpack_require__(362);
 	
 	var _AffixVue2 = _interopRequireDefault(_AffixVue);
 
@@ -10267,7 +10149,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 134 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10278,7 +10160,7 @@
 	  value: true
 	});
 	
-	var _AlertVue = __webpack_require__(377);
+	var _AlertVue = __webpack_require__(363);
 	
 	var _AlertVue2 = _interopRequireDefault(_AlertVue);
 
@@ -10286,7 +10168,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 135 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10297,7 +10179,7 @@
 	  value: true
 	});
 	
-	var _BadgeVue = __webpack_require__(378);
+	var _BadgeVue = __webpack_require__(364);
 	
 	var _BadgeVue2 = _interopRequireDefault(_BadgeVue);
 
@@ -10305,26 +10187,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 136 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _interopRequireDefault = __webpack_require__(1)['default'];
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	var _TooltipVue = __webpack_require__(383);
-	
-	var _TooltipVue2 = _interopRequireDefault(_TooltipVue);
-
-	exports['default'] = _TooltipVue2['default'];
-	module.exports = exports['default'];
-
-/***/ },
-/* 137 */
+/* 126 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10418,12 +10281,12 @@
 	exports['default'] = placements;
 
 /***/ },
-/* 138 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$assign = __webpack_require__(19)['default'];
+	var _Object$assign = __webpack_require__(16)['default'];
 	
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
@@ -10452,7 +10315,7 @@
 	}
 
 /***/ },
-/* 139 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10463,11 +10326,11 @@
 	  value: true
 	});
 	
-	var _BreadcrumbVue = __webpack_require__(387);
+	var _BreadcrumbVue = __webpack_require__(373);
 	
 	var _BreadcrumbVue2 = _interopRequireDefault(_BreadcrumbVue);
 	
-	var _BreadcrumbItemVue = __webpack_require__(388);
+	var _BreadcrumbItemVue = __webpack_require__(374);
 	
 	var _BreadcrumbItemVue2 = _interopRequireDefault(_BreadcrumbItemVue);
 	
@@ -10477,7 +10340,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 140 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10488,7 +10351,7 @@
 	  value: true
 	});
 	
-	var _InputNumberVue = __webpack_require__(393);
+	var _InputNumberVue = __webpack_require__(379);
 	
 	var _InputNumberVue2 = _interopRequireDefault(_InputNumberVue);
 
@@ -10496,7 +10359,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 141 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10507,11 +10370,11 @@
 	  value: true
 	});
 	
-	var _RowVue = __webpack_require__(395);
+	var _RowVue = __webpack_require__(381);
 	
 	var _RowVue2 = _interopRequireDefault(_RowVue);
 	
-	var _ColVue = __webpack_require__(394);
+	var _ColVue = __webpack_require__(380);
 	
 	var _ColVue2 = _interopRequireDefault(_ColVue);
 	
@@ -10519,12 +10382,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 142 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$assign = __webpack_require__(19)['default'];
+	var _Object$assign = __webpack_require__(16)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(1)['default'];
 	
@@ -10532,7 +10395,7 @@
 	  value: true
 	});
 	
-	var _baseNotification = __webpack_require__(33);
+	var _baseNotification = __webpack_require__(30);
 	
 	var _baseNotification2 = _interopRequireDefault(_baseNotification);
 	
@@ -10644,7 +10507,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 143 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10655,11 +10518,30 @@
 	  value: true
 	});
 	
-	var _ProgressLineVue = __webpack_require__(397);
+	var _PopconfirmVue = __webpack_require__(382);
+	
+	var _PopconfirmVue2 = _interopRequireDefault(_PopconfirmVue);
+
+	exports['default'] = _PopconfirmVue2['default'];
+	module.exports = exports['default'];
+
+/***/ },
+/* 133 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(1)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _ProgressLineVue = __webpack_require__(384);
 	
 	var _ProgressLineVue2 = _interopRequireDefault(_ProgressLineVue);
 	
-	var _ProgressCircleVue = __webpack_require__(396);
+	var _ProgressCircleVue = __webpack_require__(383);
 	
 	var _ProgressCircleVue2 = _interopRequireDefault(_ProgressCircleVue);
 	
@@ -10667,7 +10549,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 144 */
+/* 134 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10715,7 +10597,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 145 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10726,7 +10608,7 @@
 	  value: true
 	});
 	
-	var _QueueAnimVue = __webpack_require__(398);
+	var _QueueAnimVue = __webpack_require__(385);
 	
 	var _QueueAnimVue2 = _interopRequireDefault(_QueueAnimVue);
 
@@ -10734,7 +10616,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 146 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10745,11 +10627,11 @@
 	  value: true
 	});
 	
-	var _RadioVue = __webpack_require__(72);
+	var _RadioVue = __webpack_require__(61);
 	
 	var _RadioVue2 = _interopRequireDefault(_RadioVue);
 	
-	var _RadioGroupVue = __webpack_require__(399);
+	var _RadioGroupVue = __webpack_require__(386);
 	
 	var _RadioGroupVue2 = _interopRequireDefault(_RadioGroupVue);
 	
@@ -10759,7 +10641,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 147 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10770,11 +10652,11 @@
 	  value: true
 	});
 	
-	var _SelectVue = __webpack_require__(401);
+	var _SelectVue = __webpack_require__(388);
 	
 	var _SelectVue2 = _interopRequireDefault(_SelectVue);
 	
-	var _OptionVue = __webpack_require__(400);
+	var _OptionVue = __webpack_require__(387);
 	
 	var _OptionVue2 = _interopRequireDefault(_OptionVue);
 	
@@ -10784,7 +10666,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 148 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10795,7 +10677,7 @@
 	  value: true
 	});
 	
-	var _SpinVue = __webpack_require__(402);
+	var _SpinVue = __webpack_require__(389);
 	
 	var _SpinVue2 = _interopRequireDefault(_SpinVue);
 
@@ -10803,7 +10685,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 149 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10814,11 +10696,11 @@
 	  value: true
 	});
 	
-	var _StepsVue = __webpack_require__(404);
+	var _StepsVue = __webpack_require__(391);
 	
 	var _StepsVue2 = _interopRequireDefault(_StepsVue);
 	
-	var _StepVue = __webpack_require__(403);
+	var _StepVue = __webpack_require__(390);
 	
 	var _StepVue2 = _interopRequireDefault(_StepVue);
 	
@@ -10828,7 +10710,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 150 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10839,7 +10721,7 @@
 	  value: true
 	});
 	
-	var _SwitchVue = __webpack_require__(405);
+	var _SwitchVue = __webpack_require__(392);
 	
 	var _SwitchVue2 = _interopRequireDefault(_SwitchVue);
 
@@ -10847,16 +10729,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 151 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _createClass = __webpack_require__(229)['default'];
+	var _createClass = __webpack_require__(220)['default'];
 	
 	var _classCallCheck = __webpack_require__(12)['default'];
 	
-	var _Object$assign = __webpack_require__(19)['default'];
+	var _Object$assign = __webpack_require__(16)['default'];
 	
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
@@ -10903,7 +10785,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 152 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10914,11 +10796,11 @@
 	  value: true
 	});
 	
-	var _DataSource = __webpack_require__(151);
+	var _DataSource = __webpack_require__(141);
 	
 	var _DataSource2 = _interopRequireDefault(_DataSource);
 	
-	var _TableVue = __webpack_require__(406);
+	var _TableVue = __webpack_require__(393);
 	
 	var _TableVue2 = _interopRequireDefault(_TableVue);
 	
@@ -10928,7 +10810,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 153 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10939,7 +10821,7 @@
 	  value: true
 	});
 	
-	var _TagVue = __webpack_require__(407);
+	var _TagVue = __webpack_require__(394);
 	
 	var _TagVue2 = _interopRequireDefault(_TagVue);
 
@@ -10947,7 +10829,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 154 */
+/* 144 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10974,7 +10856,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 155 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10985,7 +10867,7 @@
 	  value: true
 	});
 	
-	var _UploadsVue = __webpack_require__(410);
+	var _UploadsVue = __webpack_require__(397);
 	
 	var _UploadsVue2 = _interopRequireDefault(_UploadsVue);
 
@@ -10993,12 +10875,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 156 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$keys = __webpack_require__(20)['default'];
+	var _Object$keys = __webpack_require__(17)['default'];
 	
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
@@ -11069,7 +10951,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 157 */
+/* 147 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11088,7 +10970,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 158 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11101,74 +10983,78 @@
 	function configRouter(router) {
 	  router.map({
 	    'components': {
-	      component: __webpack_require__(438),
+	      component: __webpack_require__(426),
 	      subRoutes: {
 	        'introduce': {
-	          component: __webpack_require__(441)
+	          component: __webpack_require__(429)
 	        },
 	
 	        'getting-started': {
-	          component: __webpack_require__(440)
-	        },
-	
-	        'download': {
-	          component: __webpack_require__(439)
-	        },
-	
-	        'affix': {
-	          component: __webpack_require__(416)
-	        },
-	
-	        'alert': {
-	          component: __webpack_require__(417)
-	        },
-	
-	        'button': {
-	          component: __webpack_require__(420)
-	        },
-	
-	        'badge': {
-	          component: __webpack_require__(418)
-	        },
-	
-	        'breadcrumb': {
-	          component: __webpack_require__(419)
-	        },
-	
-	        'checkbox': {
-	          component: __webpack_require__(421)
-	        },
-	
-	        'iconfont': {
-	          component: __webpack_require__(422)
-	        },
-	
-	        'input-number': {
-	          component: __webpack_require__(423)
-	        },
-	
-	        'layout': {
-	          component: __webpack_require__(424)
-	        },
-	
-	        'message': {
-	          component: __webpack_require__(425)
-	        },
-	
-	        'notification': {
-	          component: __webpack_require__(426)
-	        },
-	
-	        'progress': {
-	          component: __webpack_require__(427)
-	        },
-	
-	        'queue-anim': {
 	          component: __webpack_require__(428)
 	        },
 	
+	        'download': {
+	          component: __webpack_require__(427)
+	        },
+	
+	        'affix': {
+	          component: __webpack_require__(403)
+	        },
+	
+	        'alert': {
+	          component: __webpack_require__(404)
+	        },
+	
+	        'button': {
+	          component: __webpack_require__(407)
+	        },
+	
+	        'badge': {
+	          component: __webpack_require__(405)
+	        },
+	
+	        'breadcrumb': {
+	          component: __webpack_require__(406)
+	        },
+	
+	        'checkbox': {
+	          component: __webpack_require__(408)
+	        },
+	
+	        'iconfont': {
+	          component: __webpack_require__(409)
+	        },
+	
+	        'input-number': {
+	          component: __webpack_require__(410)
+	        },
+	
+	        'layout': {
+	          component: __webpack_require__(411)
+	        },
+	
+	        'message': {
+	          component: __webpack_require__(412)
+	        },
+	
+	        'notification': {
+	          component: __webpack_require__(413)
+	        },
+	
+	        'progress': {
+	          component: __webpack_require__(415)
+	        },
+	
+	        'queue-anim': {
+	          component: __webpack_require__(416)
+	        },
+	
+	        'popconfirm': {
+	          component: __webpack_require__(414)
+	        },
+	
 	        'upload': {
-	          component: __webpack_require__(436)
+	          component: __webpack_require__(424)
 	        },
 	
 	        // 'modal': {
@@ -11176,57 +11062,57 @@
 	        // },
 	
 	        'radio': {
-	          component: __webpack_require__(429)
+	          component: __webpack_require__(417)
 	        },
 	
 	        'select': {
-	          component: __webpack_require__(430)
+	          component: __webpack_require__(418)
 	        },
 	
 	        'switch': {
-	          component: __webpack_require__(433)
+	          component: __webpack_require__(421)
 	        },
 	
 	        'steps': {
-	          component: __webpack_require__(432)
+	          component: __webpack_require__(420)
 	        },
 	
 	        'spin': {
-	          component: __webpack_require__(431)
+	          component: __webpack_require__(419)
 	        },
 	
 	        'table': {
-	          component: __webpack_require__(434)
+	          component: __webpack_require__(422)
 	        },
 	
 	        'tag': {
-	          component: __webpack_require__(435)
+	          component: __webpack_require__(423)
 	        },
 	
 	        '_trigger': {
-	          component: __webpack_require__(415)
+	          component: __webpack_require__(402)
 	        },
 	
 	        '_align': {
-	          component: __webpack_require__(411)
+	          component: __webpack_require__(398)
 	        },
 	
 	        '_animate': {
-	          component: __webpack_require__(412)
+	          component: __webpack_require__(399)
 	        },
 	
 	        '_notification': {
-	          component: __webpack_require__(413)
+	          component: __webpack_require__(400)
 	        },
 	
 	        '_tooltip': {
-	          component: __webpack_require__(414)
+	          component: __webpack_require__(401)
 	        }
 	      }
 	    },
 	
 	    '*': {
-	      component: __webpack_require__(442)
+	      component: __webpack_require__(430)
 	    }
 	  });
 	
@@ -11257,7 +11143,7 @@
 	}
 
 /***/ },
-/* 159 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11361,7 +11247,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 160 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11450,7 +11336,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 161 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11477,7 +11363,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 162 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11490,7 +11376,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _domAlign = __webpack_require__(282);
+	var _domAlign = __webpack_require__(264);
 	
 	var _domAlign2 = _interopRequireDefault(_domAlign);
 	
@@ -11605,7 +11491,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 163 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11618,7 +11504,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _cssAnimation = __webpack_require__(262);
+	var _cssAnimation = __webpack_require__(242);
 	
 	var _cssAnimation2 = _interopRequireDefault(_cssAnimation);
 	
@@ -11757,7 +11643,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 164 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11770,7 +11656,7 @@
 	  value: true
 	});
 	
-	var _animate = __webpack_require__(25);
+	var _animate = __webpack_require__(23);
 	
 	var _animate2 = _interopRequireDefault(_animate);
 	
@@ -11864,14 +11750,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 165 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var _defineProperty = __webpack_require__(5)['default'];
 	
-	var _Object$assign = __webpack_require__(19)['default'];
+	var _Object$assign = __webpack_require__(16)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(1)['default'];
 	
@@ -11879,7 +11765,7 @@
 	  value: true
 	});
 	
-	var _vue = __webpack_require__(31);
+	var _vue = __webpack_require__(28);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
@@ -11887,13 +11773,13 @@
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _animate = __webpack_require__(25);
+	var _animate = __webpack_require__(23);
 	
 	var _animate2 = _interopRequireDefault(_animate);
 	
 	var _utils = __webpack_require__(3);
 	
-	var _NoticeVue = __webpack_require__(381);
+	var _NoticeVue = __webpack_require__(367);
 	
 	var _NoticeVue2 = _interopRequireDefault(_NoticeVue);
 	
@@ -12001,7 +11887,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 166 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12014,9 +11900,9 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _placements = __webpack_require__(137);
+	var _placements = __webpack_require__(126);
 	
-	var _trigger = __webpack_require__(56);
+	var _trigger = __webpack_require__(52);
 	
 	var _trigger2 = _interopRequireDefault(_trigger);
 	
@@ -12068,7 +11954,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 167 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12085,15 +11971,15 @@
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _align = __webpack_require__(55);
+	var _align = __webpack_require__(50);
 	
 	var _align2 = _interopRequireDefault(_align);
 	
-	var _animate = __webpack_require__(25);
+	var _animate = __webpack_require__(23);
 	
 	var _animate2 = _interopRequireDefault(_animate);
 	
-	var _PopupInnerVue = __webpack_require__(385);
+	var _PopupInnerVue = __webpack_require__(371);
 	
 	var _PopupInnerVue2 = _interopRequireDefault(_PopupInnerVue);
 	
@@ -12193,7 +12079,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 168 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12242,7 +12128,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 169 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12259,11 +12145,11 @@
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _PopupVue = __webpack_require__(384);
+	var _PopupVue = __webpack_require__(370);
 	
 	var _PopupVue2 = _interopRequireDefault(_PopupVue);
 	
-	var _utils2 = __webpack_require__(138);
+	var _utils2 = __webpack_require__(127);
 	
 	exports['default'] = {
 	  props: (0, _utils.defaultProps)({
@@ -12466,7 +12352,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 170 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12485,7 +12371,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 171 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12505,7 +12391,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 172 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12553,7 +12439,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 173 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12596,7 +12482,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 174 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12658,7 +12544,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 175 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12697,7 +12583,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 176 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12870,7 +12756,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 177 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12910,7 +12796,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 178 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12948,7 +12834,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 179 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12961,7 +12847,98 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _iconfont = __webpack_require__(10);
+	var _baseTooltip = __webpack_require__(51);
+	
+	var _baseTooltip2 = _interopRequireDefault(_baseTooltip);
+	
+	var _iconfont = __webpack_require__(9);
+	
+	var _iconfont2 = _interopRequireDefault(_iconfont);
+	
+	var _button = __webpack_require__(6);
+	
+	var _button2 = _interopRequireDefault(_button);
+	
+	exports['default'] = {
+	  props: (0, _utils.defaultProps)({
+	    prefixCls: 'ant-popover',
+	    title: '',
+	    transitionName: '',
+	    placement: 'top',
+	    trigger: {
+	      'default': function _default() {
+	        return ['click'];
+	      }
+	    },
+	    overlayStyle: {
+	      'default': function _default() {
+	        return {};
+	      }
+	    },
+	    onConfirm: function onConfirm() {},
+	    onCancel: function onCancel() {}
+	  }),
+	
+	  components: { Tooltip: _baseTooltip2['default'], vIcon: _iconfont2['default'], vButton: _button2['default'] },
+	
+	  data: function data() {
+	    return {
+	      visible: false
+	    };
+	  },
+	
+	  computed: {
+	    transitionName: function transitionName() {
+	      return ({
+	        top: 'zoom-down',
+	        bottom: 'zoom-up',
+	        left: 'zoom-right',
+	        right: 'zoom-left',
+	        topLeft: 'zoom-down',
+	        bottomLeft: 'zoom-up',
+	        leftTop: 'zoom-right',
+	        rightTop: 'zoom-left',
+	        topRight: 'zoom-down',
+	        bottomRight: 'zoom-up',
+	        leftBottom: 'zoom-right',
+	        rightBottom: 'zoom-left'
+	      })[this.placement];
+	    }
+	  },
+	
+	  methods: {
+	    _confirm: function _confirm() {
+	      this.onConfirm();
+	      this.visible = false;
+	    },
+	
+	    _cancel: function _cancel() {
+	      this.onCancel();
+	      this.visible = false;
+	    },
+	
+	    _onVisibleChange: function _onVisibleChange(value) {
+	      this.visible = value;
+	    }
+	  }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 170 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(1)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _utils = __webpack_require__(3);
+	
+	var _iconfont = __webpack_require__(9);
 	
 	var _iconfont2 = _interopRequireDefault(_iconfont);
 	
@@ -13033,7 +13010,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 180 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13048,7 +13025,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _iconfont = __webpack_require__(10);
+	var _iconfont = __webpack_require__(9);
 	
 	var _iconfont2 = _interopRequireDefault(_iconfont);
 	
@@ -13097,12 +13074,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 181 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$keys = __webpack_require__(20)['default'];
+	var _Object$keys = __webpack_require__(17)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(1)['default'];
 	
@@ -13112,11 +13089,11 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _velocityAnimate = __webpack_require__(71);
+	var _velocityAnimate = __webpack_require__(60);
 	
 	var _velocityAnimate2 = _interopRequireDefault(_velocityAnimate);
 	
-	var _animTypes = __webpack_require__(144);
+	var _animTypes = __webpack_require__(134);
 	
 	var _animTypes2 = _interopRequireDefault(_animTypes);
 	
@@ -13472,7 +13449,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 182 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13536,7 +13513,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 183 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13549,7 +13526,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _RadioVue = __webpack_require__(72);
+	var _RadioVue = __webpack_require__(61);
 	
 	var _RadioVue2 = _interopRequireDefault(_RadioVue);
 	
@@ -13592,7 +13569,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 184 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13655,7 +13632,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 185 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13706,7 +13683,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 186 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13754,7 +13731,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 187 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13937,7 +13914,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 188 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13993,7 +13970,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 189 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14004,7 +13981,7 @@
 	  value: true
 	});
 	
-	var _vue = __webpack_require__(31);
+	var _vue = __webpack_require__(28);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
@@ -14108,7 +14085,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 190 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14127,7 +14104,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _iconfont = __webpack_require__(10);
+	var _iconfont = __webpack_require__(9);
 	
 	var _iconfont2 = _interopRequireDefault(_iconfont);
 	
@@ -14171,7 +14148,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 191 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14184,11 +14161,11 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _request = __webpack_require__(156);
+	var _request = __webpack_require__(146);
 	
 	var _request2 = _interopRequireDefault(_request);
 	
-	var _uid = __webpack_require__(157);
+	var _uid = __webpack_require__(147);
 	
 	var _uid2 = _interopRequireDefault(_uid);
 	
@@ -14299,7 +14276,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 192 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14312,7 +14289,7 @@
 	
 	var _utils = __webpack_require__(3);
 	
-	var _iconfont = __webpack_require__(10);
+	var _iconfont = __webpack_require__(9);
 	
 	var _iconfont2 = _interopRequireDefault(_iconfont);
 	
@@ -14335,7 +14312,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 193 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14354,15 +14331,15 @@
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _AjaxUploaderVue = __webpack_require__(408);
+	var _AjaxUploaderVue = __webpack_require__(395);
 	
 	var _AjaxUploaderVue2 = _interopRequireDefault(_AjaxUploaderVue);
 	
-	var _UploadListVue = __webpack_require__(409);
+	var _UploadListVue = __webpack_require__(396);
 	
 	var _UploadListVue2 = _interopRequireDefault(_UploadListVue);
 	
-	var _getFileItem = __webpack_require__(154);
+	var _getFileItem = __webpack_require__(144);
 	
 	var _getFileItem2 = _interopRequireDefault(_getFileItem);
 	
@@ -14555,7 +14532,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 194 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14566,11 +14543,11 @@
 	  value: true
 	});
 	
-	var _componentsBaseAlign = __webpack_require__(55);
+	var _componentsBaseAlign = __webpack_require__(50);
 	
 	var _componentsBaseAlign2 = _interopRequireDefault(_componentsBaseAlign);
 	
-	var _componentsCheckbox = __webpack_require__(18);
+	var _componentsCheckbox = __webpack_require__(15);
 	
 	var _componentsCheckbox2 = _interopRequireDefault(_componentsCheckbox);
 	
@@ -14608,7 +14585,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 195 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14619,11 +14596,11 @@
 	  value: true
 	});
 	
-	var _componentsBaseAnimate = __webpack_require__(25);
+	var _componentsBaseAnimate = __webpack_require__(23);
 	
 	var _componentsBaseAnimate2 = _interopRequireDefault(_componentsBaseAnimate);
 	
-	var _componentsCheckbox = __webpack_require__(18);
+	var _componentsCheckbox = __webpack_require__(15);
 	
 	var _componentsCheckbox2 = _interopRequireDefault(_componentsCheckbox);
 	
@@ -14645,7 +14622,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 196 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14656,7 +14633,7 @@
 	  value: true
 	});
 	
-	var _componentsBaseNotification = __webpack_require__(33);
+	var _componentsBaseNotification = __webpack_require__(30);
 	
 	var _componentsBaseNotification2 = _interopRequireDefault(_componentsBaseNotification);
 	
@@ -14724,7 +14701,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 197 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14735,7 +14712,7 @@
 	  value: true
 	});
 	
-	var _componentsBaseTooltip = __webpack_require__(136);
+	var _componentsBaseTooltip = __webpack_require__(51);
 	
 	var _componentsBaseTooltip2 = _interopRequireDefault(_componentsBaseTooltip);
 	
@@ -14762,14 +14739,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 198 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$keys = __webpack_require__(20)['default'];
+	var _Object$keys = __webpack_require__(17)['default'];
 	
-	var _Object$assign = __webpack_require__(19)['default'];
+	var _Object$assign = __webpack_require__(16)['default'];
 	
 	var _interopRequireDefault = __webpack_require__(1)['default'];
 	
@@ -14777,11 +14754,11 @@
 	  value: true
 	});
 	
-	var _componentsBaseTrigger = __webpack_require__(56);
+	var _componentsBaseTrigger = __webpack_require__(52);
 	
 	var _componentsBaseTrigger2 = _interopRequireDefault(_componentsBaseTrigger);
 	
-	var _componentsCheckbox = __webpack_require__(18);
+	var _componentsCheckbox = __webpack_require__(15);
 	
 	var _componentsCheckbox2 = _interopRequireDefault(_componentsCheckbox);
 	
@@ -14873,7 +14850,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 199 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14884,7 +14861,7 @@
 	  value: true
 	});
 	
-	var _componentsAffix = __webpack_require__(133);
+	var _componentsAffix = __webpack_require__(123);
 	
 	var _componentsAffix2 = _interopRequireDefault(_componentsAffix);
 	
@@ -14900,7 +14877,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 200 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14911,7 +14888,7 @@
 	  value: true
 	});
 	
-	var _componentsAlert = __webpack_require__(134);
+	var _componentsAlert = __webpack_require__(124);
 	
 	var _componentsAlert2 = _interopRequireDefault(_componentsAlert);
 	
@@ -14931,7 +14908,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 201 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14942,11 +14919,11 @@
 	  value: true
 	});
 	
-	var _componentsBadge = __webpack_require__(135);
+	var _componentsBadge = __webpack_require__(125);
 	
 	var _componentsBadge2 = _interopRequireDefault(_componentsBadge);
 	
-	var _componentsIconfont = __webpack_require__(10);
+	var _componentsIconfont = __webpack_require__(9);
 	
 	var _componentsIconfont2 = _interopRequireDefault(_componentsIconfont);
 	
@@ -14958,7 +14935,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 202 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14969,11 +14946,11 @@
 	  value: true
 	});
 	
-	var _componentsBreadcrumb = __webpack_require__(139);
+	var _componentsBreadcrumb = __webpack_require__(128);
 	
 	var _componentsBreadcrumb2 = _interopRequireDefault(_componentsBreadcrumb);
 	
-	var _componentsIconfont = __webpack_require__(10);
+	var _componentsIconfont = __webpack_require__(9);
 	
 	var _componentsIconfont2 = _interopRequireDefault(_componentsIconfont);
 	
@@ -14985,7 +14962,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 203 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15000,7 +14977,7 @@
 	
 	var _componentsButton2 = _interopRequireDefault(_componentsButton);
 	
-	var _componentsIconfont = __webpack_require__(10);
+	var _componentsIconfont = __webpack_require__(9);
 	
 	var _componentsIconfont2 = _interopRequireDefault(_componentsIconfont);
 	
@@ -15022,7 +14999,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 204 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15033,7 +15010,7 @@
 	  value: true
 	});
 	
-	var _componentsCheckbox = __webpack_require__(18);
+	var _componentsCheckbox = __webpack_require__(15);
 	
 	var _componentsCheckbox2 = _interopRequireDefault(_componentsCheckbox);
 	
@@ -15078,42 +15055,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 205 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _toConsumableArray = __webpack_require__(230)['default'];
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	exports['default'] = {
-	  ready: function ready() {
-	    [].concat(_toConsumableArray(document.querySelectorAll('.anticons-list li'))).forEach(function (item, i) {
-	      var client = new ZeroClipboard(item);
-	
-	      client.on("copy", function (event) {
-	        client.setText('<v-icon type="' + item.querySelectorAll('.anticon-class')[0].innerHTML + '"></v-icon>');
-	      });
-	
-	      client.on("ready", function (readyEvent) {
-	        client.on("aftercopy", function (event) {
-	          // `this` === `client`
-	          // `event.target` === the element that was clicked
-	          event.target.classList.add('copied');
-	          setTimeout(function () {
-	            event.target.classList.remove('copied');
-	          }, 2000);
-	        });
-	      });
-	    });
-	  }
-	};
-	module.exports = exports['default'];
-
-/***/ },
-/* 206 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15124,7 +15066,74 @@
 	  value: true
 	});
 	
-	var _componentsInputNumber = __webpack_require__(140);
+	var _componentsIconfont = __webpack_require__(9);
+	
+	var _componentsIconfont2 = _interopRequireDefault(_componentsIconfont);
+	
+	window.Clipboard = __webpack_require__(222);
+	
+	exports['default'] = {
+	  data: function data() {
+	    return {
+	      icons1: ['step-backward', 'step-forward', 'fast-backward', 'fast-forward', 'shrink', 'arrow-salt', 'down', 'up', 'left', 'right', 'caret-down', 'caret-up', 'caret-left', 'caret-right', 'caret-circle-right', 'caret-circle-left', 'caret-circle-o-right', 'caret-circle-o-left', 'circle-right', 'circle-left', 'circle-o-right', 'circle-o-left', 'double-right', 'double-left', 'verticle-right', 'verticle-left', 'forward', 'backward', 'rollback', 'retweet', 'swap', 'swap-left', 'swap-right', 'arrow-right', 'arrow-up', 'arrow-down', 'arrow-left', 'play-circle', 'play-circle-o', 'circle-up', 'circle-down', 'circle-o-up', 'circle-o-down', 'caret-circle-o-up', 'caret-circle-o-down', 'caret-circle-up', 'caret-circle-down'],
+	      icons2: ['question', 'question-circle-o', 'question-circle', 'plus', 'plus-circle-o', 'plus-circle', 'pause', 'pause-circle-o', 'pause-circle', 'minus', 'minus-circle-o', 'minus-circle', 'info', 'info-circle-o', 'info-circle', 'exclamation', 'exclamation-circle-o', 'exclamation-circle', 'cross', 'cross-circle-o', 'cross-circle', 'check', 'check-circle-o', 'check-circle', 'clock-circle-o', 'clock-circle'],
+	      icons3: ['lock', 'unlock', 'android', 'apple', 'area-chart', 'bar-chart', 'bars', 'book', 'calendar', 'cloud', 'cloud-download', 'code', 'copy', 'credit-card', 'delete', 'desktop', 'download-line', 'edit', 'ellipsis', 'file', 'file-text', 'folder', 'folder-open', 'github', 'hdd', 'frown', 'meh', 'inbox', 'laptop', 'appstore', 'line-chart', 'link', 'logout', 'mail', 'menu-fold', 'menu-unfold', 'mobile', 'notification', 'paper-clip', 'picture', 'pie-chart', 'poweroff', 'reload', 'search', 'setting', 'share-alt', 'shopping-cart', 'smile', 'tablet', 'tag', 'tags', 'to-top', 'upload', 'user', 'video-camera', 'windows', 'ie', 'chrome', 'home', 'loading', 'smile-circle', 'meh-circle', 'frown-circle', 'tags-o', 'tag-o', 'cloud-upload-o', 'cloud-download-o', 'cloud-upload', 'cloud-o', 'star-o', 'star', 'environment', 'environment-o', 'eye', 'eye-o', 'camera', 'camera-o', 'aliwangwang', 'aliwangwang-o', 'save', 'team', 'solution', 'phone', 'filter', 'exception', 'export', 'customerservice', 'qrcode']
+	    };
+	  },
+	
+	  components: { vIcon: _componentsIconfont2['default'] },
+	
+	  computed: {
+	    icons1Obj: function icons1Obj() {
+	      return this.icons1.map(function (name) {
+	        return { name: name, justCopied: false };
+	      });
+	    },
+	    icons2Obj: function icons2Obj() {
+	      return this.icons2.map(function (name) {
+	        return { name: name, justCopied: false };
+	      });
+	    },
+	    icons3Obj: function icons3Obj() {
+	      return this.icons3.map(function (name) {
+	        return { name: name, justCopied: false };
+	      });
+	    }
+	  },
+	
+	  ready: function ready() {
+	    var clipboard = new Clipboard('.anticons-list li');
+	    clipboard.on('success', function (e) {
+	      var item = e.trigger.__vfrag__.scope.item;
+	
+	      item.justCopied = true;
+	      setTimeout(function () {
+	        item.justCopied = false;
+	      }, 1000);
+	    });
+	  },
+	
+	  methods: {
+	    _getCopyCode: function _getCopyCode(type) {
+	      return '<v-icon type="' + type + '"></v-icon>';
+	    }
+	  }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 197 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(1)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _componentsInputNumber = __webpack_require__(129);
 	
 	var _componentsInputNumber2 = _interopRequireDefault(_componentsInputNumber);
 	
@@ -15155,7 +15164,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 207 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15164,7 +15173,7 @@
 	  value: true
 	});
 	
-	var _componentsLayout = __webpack_require__(141);
+	var _componentsLayout = __webpack_require__(130);
 	
 	exports['default'] = {
 	
@@ -15174,7 +15183,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 208 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15185,7 +15194,7 @@
 	  value: true
 	});
 	
-	var _componentsMessage = __webpack_require__(57);
+	var _componentsMessage = __webpack_require__(31);
 	
 	var _componentsMessage2 = _interopRequireDefault(_componentsMessage);
 	
@@ -15223,7 +15232,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 209 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15234,11 +15243,11 @@
 	  value: true
 	});
 	
-	var _componentsNotification = __webpack_require__(142);
+	var _componentsNotification = __webpack_require__(131);
 	
 	var _componentsNotification2 = _interopRequireDefault(_componentsNotification);
 	
-	var _componentsMessage = __webpack_require__(57);
+	var _componentsMessage = __webpack_require__(31);
 	
 	var _componentsMessage2 = _interopRequireDefault(_componentsMessage);
 	
@@ -15306,7 +15315,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 210 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15317,13 +15326,58 @@
 	  value: true
 	});
 	
-	var _componentsProgress = __webpack_require__(143);
+	var _componentsPopconfirm = __webpack_require__(132);
+	
+	var _componentsPopconfirm2 = _interopRequireDefault(_componentsPopconfirm);
 	
 	var _componentsButton = __webpack_require__(6);
 	
 	var _componentsButton2 = _interopRequireDefault(_componentsButton);
 	
-	var _componentsIconfont = __webpack_require__(10);
+	var _componentsMessage = __webpack_require__(31);
+	
+	var _componentsMessage2 = _interopRequireDefault(_componentsMessage);
+	
+	exports['default'] = {
+	  data: function data() {
+	    return {
+	      text: '确定要删除这个任务吗？'
+	    };
+	  },
+	
+	  components: { vPopconfirm: _componentsPopconfirm2['default'], vButton: _componentsButton2['default'] },
+	
+	  methods: {
+	    _confirm: function _confirm() {
+	      _componentsMessage2['default'].success('点击了确定');
+	    },
+	
+	    _cancel: function _cancel() {
+	      _componentsMessage2['default'].error('点击了取消');
+	    }
+	  }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 202 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(1)['default'];
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	var _componentsProgress = __webpack_require__(133);
+	
+	var _componentsButton = __webpack_require__(6);
+	
+	var _componentsButton2 = _interopRequireDefault(_componentsButton);
+	
+	var _componentsIconfont = __webpack_require__(9);
 	
 	var _componentsIconfont2 = _interopRequireDefault(_componentsIconfont);
 	
@@ -15358,7 +15412,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 211 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15369,7 +15423,7 @@
 	  value: true
 	});
 	
-	var _componentsQueueAnim = __webpack_require__(145);
+	var _componentsQueueAnim = __webpack_require__(135);
 	
 	var _componentsQueueAnim2 = _interopRequireDefault(_componentsQueueAnim);
 	
@@ -15377,7 +15431,7 @@
 	
 	var _componentsButton2 = _interopRequireDefault(_componentsButton);
 	
-	var _componentsCheckbox = __webpack_require__(18);
+	var _componentsCheckbox = __webpack_require__(15);
 	
 	var _componentsCheckbox2 = _interopRequireDefault(_componentsCheckbox);
 	
@@ -15410,7 +15464,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 212 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15421,7 +15475,7 @@
 	  value: true
 	});
 	
-	var _componentsRadio = __webpack_require__(146);
+	var _componentsRadio = __webpack_require__(136);
 	
 	var _componentsRadio2 = _interopRequireDefault(_componentsRadio);
 	
@@ -15461,7 +15515,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 213 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15472,7 +15526,7 @@
 	  value: true
 	});
 	
-	var _componentsSelect = __webpack_require__(147);
+	var _componentsSelect = __webpack_require__(137);
 	
 	var _componentsSelect2 = _interopRequireDefault(_componentsSelect);
 	
@@ -15490,7 +15544,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 214 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15501,7 +15555,7 @@
 	  value: true
 	});
 	
-	var _componentsSpin = __webpack_require__(148);
+	var _componentsSpin = __webpack_require__(138);
 	
 	var _componentsSpin2 = _interopRequireDefault(_componentsSpin);
 	
@@ -15528,7 +15582,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 215 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15539,7 +15593,7 @@
 	  value: true
 	});
 	
-	var _componentsSteps = __webpack_require__(149);
+	var _componentsSteps = __webpack_require__(139);
 	
 	var _componentsSteps2 = _interopRequireDefault(_componentsSteps);
 	
@@ -15575,7 +15629,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 216 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15586,7 +15640,7 @@
 	  value: true
 	});
 	
-	var _componentsSwitch = __webpack_require__(150);
+	var _componentsSwitch = __webpack_require__(140);
 	
 	var _componentsSwitch2 = _interopRequireDefault(_componentsSwitch);
 	
@@ -15622,7 +15676,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 217 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15633,7 +15687,7 @@
 	  value: true
 	});
 	
-	var _componentsTable = __webpack_require__(152);
+	var _componentsTable = __webpack_require__(142);
 	
 	var _componentsTable2 = _interopRequireDefault(_componentsTable);
 	
@@ -15698,7 +15752,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 218 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15709,7 +15763,7 @@
 	  value: true
 	});
 	
-	var _componentsTag = __webpack_require__(153);
+	var _componentsTag = __webpack_require__(143);
 	
 	var _componentsTag2 = _interopRequireDefault(_componentsTag);
 	
@@ -15727,7 +15781,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 219 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15738,11 +15792,11 @@
 	  value: true
 	});
 	
-	var _componentsUpload = __webpack_require__(155);
+	var _componentsUpload = __webpack_require__(145);
 	
 	var _componentsUpload2 = _interopRequireDefault(_componentsUpload);
 	
-	var _componentsIconfont = __webpack_require__(10);
+	var _componentsIconfont = __webpack_require__(9);
 	
 	var _componentsIconfont2 = _interopRequireDefault(_componentsIconfont);
 	
@@ -15784,7 +15838,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 220 */
+/* 212 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -15810,7 +15864,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 221 */
+/* 213 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -15900,11 +15954,10 @@
 	        {
 	          name: 'notification',
 	          desc: '通知提醒框'
+	        }, {
+	          name: 'popconfirm',
+	          desc: '气泡确认框'
 	        },
-	        // {
-	        //   name: 'popconfirm',
-	        //   desc: '气泡确认框'
-	        // },
 	        // {
 	        //   name: 'popover',
 	        //   desc: '气泡卡片'
@@ -15996,7 +16049,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 222 */
+/* 214 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -16010,7 +16063,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 223 */
+/* 215 */
 /***/ function(module, exports) {
 
 	/**
@@ -16539,7 +16592,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 224 */
+/* 216 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16556,7 +16609,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 225 */
+/* 217 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16591,30 +16644,24 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 226 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(231), __esModule: true };
+	module.exports = { "default": __webpack_require__(225), __esModule: true };
 
 /***/ },
-/* 227 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(233), __esModule: true };
+	module.exports = { "default": __webpack_require__(227), __esModule: true };
 
 /***/ },
-/* 228 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(235), __esModule: true };
-
-/***/ },
-/* 229 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _Object$defineProperty = __webpack_require__(58)["default"];
+	var _Object$defineProperty = __webpack_require__(53)["default"];
 	
 	exports["default"] = (function () {
 	  function defineProperties(target, props) {
@@ -16638,74 +16685,461 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 230 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	
-	var _Array$from = __webpack_require__(226)["default"];
-	
-	exports["default"] = function (arr) {
-	  if (Array.isArray(arr)) {
-	    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
-	
-	    return arr2;
-	  } else {
-	    return _Array$from(arr);
-	  }
-	};
+	'use strict';
 	
 	exports.__esModule = true;
+	
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	var _select = __webpack_require__(305);
+	
+	var _select2 = _interopRequireDefault(_select);
+	
+	/**
+	 * Inner class which performs selection from either `text` or `target`
+	 * properties and then executes copy or cut operations.
+	 */
+	
+	var ClipboardAction = (function () {
+	    /**
+	     * @param {Object} options
+	     */
+	
+	    function ClipboardAction(options) {
+	        _classCallCheck(this, ClipboardAction);
+	
+	        this.resolveOptions(options);
+	        this.initSelection();
+	    }
+	
+	    /**
+	     * Defines base properties passed from constructor.
+	     * @param {Object} options
+	     */
+	
+	    ClipboardAction.prototype.resolveOptions = function resolveOptions() {
+	        var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	
+	        this.action = options.action;
+	        this.emitter = options.emitter;
+	        this.target = options.target;
+	        this.text = options.text;
+	        this.trigger = options.trigger;
+	
+	        this.selectedText = '';
+	    };
+	
+	    /**
+	     * Decides which selection strategy is going to be applied based
+	     * on the existence of `text` and `target` properties.
+	     */
+	
+	    ClipboardAction.prototype.initSelection = function initSelection() {
+	        if (this.text && this.target) {
+	            throw new Error('Multiple attributes declared, use either "target" or "text"');
+	        } else if (this.text) {
+	            this.selectFake();
+	        } else if (this.target) {
+	            this.selectTarget();
+	        } else {
+	            throw new Error('Missing required attributes, use either "target" or "text"');
+	        }
+	    };
+	
+	    /**
+	     * Creates a fake textarea element, sets its value from `text` property,
+	     * and makes a selection on it.
+	     */
+	
+	    ClipboardAction.prototype.selectFake = function selectFake() {
+	        var _this = this;
+	
+	        this.removeFake();
+	
+	        this.fakeHandler = document.body.addEventListener('click', function () {
+	            return _this.removeFake();
+	        });
+	
+	        this.fakeElem = document.createElement('textarea');
+	        this.fakeElem.style.position = 'absolute';
+	        this.fakeElem.style.left = '-9999px';
+	        this.fakeElem.style.top = (window.pageYOffset || document.documentElement.scrollTop) + 'px';
+	        this.fakeElem.setAttribute('readonly', '');
+	        this.fakeElem.value = this.text;
+	
+	        document.body.appendChild(this.fakeElem);
+	
+	        this.selectedText = _select2['default'](this.fakeElem);
+	        this.copyText();
+	    };
+	
+	    /**
+	     * Only removes the fake element after another click event, that way
+	     * a user can hit `Ctrl+C` to copy because selection still exists.
+	     */
+	
+	    ClipboardAction.prototype.removeFake = function removeFake() {
+	        if (this.fakeHandler) {
+	            document.body.removeEventListener('click');
+	            this.fakeHandler = null;
+	        }
+	
+	        if (this.fakeElem) {
+	            document.body.removeChild(this.fakeElem);
+	            this.fakeElem = null;
+	        }
+	    };
+	
+	    /**
+	     * Selects the content from element passed on `target` property.
+	     */
+	
+	    ClipboardAction.prototype.selectTarget = function selectTarget() {
+	        this.selectedText = _select2['default'](this.target);
+	        this.copyText();
+	    };
+	
+	    /**
+	     * Executes the copy operation based on the current selection.
+	     */
+	
+	    ClipboardAction.prototype.copyText = function copyText() {
+	        var succeeded = undefined;
+	
+	        try {
+	            succeeded = document.execCommand(this.action);
+	        } catch (err) {
+	            succeeded = false;
+	        }
+	
+	        this.handleResult(succeeded);
+	    };
+	
+	    /**
+	     * Fires an event based on the copy operation result.
+	     * @param {Boolean} succeeded
+	     */
+	
+	    ClipboardAction.prototype.handleResult = function handleResult(succeeded) {
+	        if (succeeded) {
+	            this.emitter.emit('success', {
+	                action: this.action,
+	                text: this.selectedText,
+	                trigger: this.trigger,
+	                clearSelection: this.clearSelection.bind(this)
+	            });
+	        } else {
+	            this.emitter.emit('error', {
+	                action: this.action,
+	                trigger: this.trigger,
+	                clearSelection: this.clearSelection.bind(this)
+	            });
+	        }
+	    };
+	
+	    /**
+	     * Removes current selection and focus from `target` element.
+	     */
+	
+	    ClipboardAction.prototype.clearSelection = function clearSelection() {
+	        if (this.target) {
+	            this.target.blur();
+	        }
+	
+	        window.getSelection().removeAllRanges();
+	    };
+	
+	    /**
+	     * Sets the `action` to be performed which can be either 'copy' or 'cut'.
+	     * @param {String} action
+	     */
+	
+	    /**
+	     * Destroy lifecycle.
+	     */
+	
+	    ClipboardAction.prototype.destroy = function destroy() {
+	        this.removeFake();
+	    };
+	
+	    _createClass(ClipboardAction, [{
+	        key: 'action',
+	        set: function set() {
+	            var action = arguments.length <= 0 || arguments[0] === undefined ? 'copy' : arguments[0];
+	
+	            this._action = action;
+	
+	            if (this._action !== 'copy' && this._action !== 'cut') {
+	                throw new Error('Invalid "action" value, use either "copy" or "cut"');
+	            }
+	        },
+	
+	        /**
+	         * Gets the `action` property.
+	         * @return {String}
+	         */
+	        get: function get() {
+	            return this._action;
+	        }
+	
+	        /**
+	         * Sets the `target` property using an element
+	         * that will be have its content copied.
+	         * @param {Element} target
+	         */
+	    }, {
+	        key: 'target',
+	        set: function set(target) {
+	            if (target !== undefined) {
+	                if (target && typeof target === 'object' && target.nodeType === 1) {
+	                    this._target = target;
+	                } else {
+	                    throw new Error('Invalid "target" value, use a valid Element');
+	                }
+	            }
+	        },
+	
+	        /**
+	         * Gets the `target` property.
+	         * @return {String|HTMLElement}
+	         */
+	        get: function get() {
+	            return this._target;
+	        }
+	    }]);
+	
+	    return ClipboardAction;
+	})();
+	
+	exports['default'] = ClipboardAction;
+	module.exports = exports['default'];
 
 /***/ },
-/* 231 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(259);
-	__webpack_require__(255);
-	module.exports = __webpack_require__(13).Array.from;
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var _clipboardAction = __webpack_require__(221);
+	
+	var _clipboardAction2 = _interopRequireDefault(_clipboardAction);
+	
+	var _tinyEmitter = __webpack_require__(321);
+	
+	var _tinyEmitter2 = _interopRequireDefault(_tinyEmitter);
+	
+	var _goodListener = __webpack_require__(272);
+	
+	var _goodListener2 = _interopRequireDefault(_goodListener);
+	
+	/**
+	 * Base class which takes one or more elements, adds event listeners to them,
+	 * and instantiates a new `ClipboardAction` on each click.
+	 */
+	
+	var Clipboard = (function (_Emitter) {
+	    _inherits(Clipboard, _Emitter);
+	
+	    /**
+	     * @param {String|HTMLElement|HTMLCollection|NodeList} trigger
+	     * @param {Object} options
+	     */
+	
+	    function Clipboard(trigger, options) {
+	        _classCallCheck(this, Clipboard);
+	
+	        _Emitter.call(this);
+	
+	        this.resolveOptions(options);
+	        this.listenClick(trigger);
+	    }
+	
+	    /**
+	     * Helper function to retrieve attribute value.
+	     * @param {String} suffix
+	     * @param {Element} element
+	     */
+	
+	    /**
+	     * Defines if attributes would be resolved using internal setter functions
+	     * or custom functions that were passed in the constructor.
+	     * @param {Object} options
+	     */
+	
+	    Clipboard.prototype.resolveOptions = function resolveOptions() {
+	        var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	
+	        this.action = typeof options.action === 'function' ? options.action : this.defaultAction;
+	        this.target = typeof options.target === 'function' ? options.target : this.defaultTarget;
+	        this.text = typeof options.text === 'function' ? options.text : this.defaultText;
+	    };
+	
+	    /**
+	     * Adds a click event listener to the passed trigger.
+	     * @param {String|HTMLElement|HTMLCollection|NodeList} trigger
+	     */
+	
+	    Clipboard.prototype.listenClick = function listenClick(trigger) {
+	        var _this = this;
+	
+	        this.listener = _goodListener2['default'](trigger, 'click', function (e) {
+	            return _this.onClick(e);
+	        });
+	    };
+	
+	    /**
+	     * Defines a new `ClipboardAction` on each click event.
+	     * @param {Event} e
+	     */
+	
+	    Clipboard.prototype.onClick = function onClick(e) {
+	        var trigger = e.delegateTarget || e.currentTarget;
+	
+	        if (this.clipboardAction) {
+	            this.clipboardAction = null;
+	        }
+	
+	        this.clipboardAction = new _clipboardAction2['default']({
+	            action: this.action(trigger),
+	            target: this.target(trigger),
+	            text: this.text(trigger),
+	            trigger: trigger,
+	            emitter: this
+	        });
+	    };
+	
+	    /**
+	     * Default `action` lookup function.
+	     * @param {Element} trigger
+	     */
+	
+	    Clipboard.prototype.defaultAction = function defaultAction(trigger) {
+	        return getAttributeValue('action', trigger);
+	    };
+	
+	    /**
+	     * Default `target` lookup function.
+	     * @param {Element} trigger
+	     */
+	
+	    Clipboard.prototype.defaultTarget = function defaultTarget(trigger) {
+	        var selector = getAttributeValue('target', trigger);
+	
+	        if (selector) {
+	            return document.querySelector(selector);
+	        }
+	    };
+	
+	    /**
+	     * Default `text` lookup function.
+	     * @param {Element} trigger
+	     */
+	
+	    Clipboard.prototype.defaultText = function defaultText(trigger) {
+	        return getAttributeValue('text', trigger);
+	    };
+	
+	    /**
+	     * Destroy lifecycle.
+	     */
+	
+	    Clipboard.prototype.destroy = function destroy() {
+	        this.listener.destroy();
+	
+	        if (this.clipboardAction) {
+	            this.clipboardAction.destroy();
+	            this.clipboardAction = null;
+	        }
+	    };
+	
+	    return Clipboard;
+	})(_tinyEmitter2['default']);
+	
+	function getAttributeValue(suffix, element) {
+	    var attribute = 'data-clipboard-' + suffix;
+	
+	    if (!element.hasAttribute(attribute)) {
+	        return;
+	    }
+	
+	    return element.getAttribute(attribute);
+	}
+	
+	exports['default'] = Clipboard;
+	module.exports = exports['default'];
 
 /***/ },
-/* 232 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(256);
-	module.exports = __webpack_require__(13).Object.assign;
+	var matches = __webpack_require__(303)
+	
+	module.exports = function (element, selector, checkYoSelf) {
+	  var parent = checkYoSelf ? element : element.parentNode
+	
+	  while (parent && parent !== document) {
+	    if (matches(parent, selector)) return parent;
+	    parent = parent.parentNode
+	  }
+	}
+
 
 /***/ },
-/* 233 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $ = __webpack_require__(14);
+	__webpack_require__(237);
+	module.exports = __webpack_require__(18).Object.assign;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(32);
 	module.exports = function create(P, D){
 	  return $.create(P, D);
 	};
 
 /***/ },
-/* 234 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $ = __webpack_require__(14);
+	var $ = __webpack_require__(32);
 	module.exports = function defineProperty(it, key, desc){
 	  return $.setDesc(it, key, desc);
 	};
 
 /***/ },
-/* 235 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(257);
-	module.exports = __webpack_require__(13).Object.freeze;
+	__webpack_require__(238);
+	module.exports = __webpack_require__(18).Object.freeze;
 
 /***/ },
-/* 236 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(258);
-	module.exports = __webpack_require__(13).Object.keys;
+	__webpack_require__(239);
+	module.exports = __webpack_require__(18).Object.keys;
 
 /***/ },
-/* 237 */
+/* 229 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -16714,217 +17148,88 @@
 	};
 
 /***/ },
-/* 238 */
+/* 230 */
+/***/ function(module, exports) {
+
+	var toString = {}.toString;
+	
+	module.exports = function(it){
+	  return toString.call(it).slice(8, -1);
+	};
+
+/***/ },
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(63);
+	// optional / simple context binding
+	var aFunction = __webpack_require__(229);
+	module.exports = function(fn, that, length){
+	  aFunction(fn);
+	  if(that === undefined)return fn;
+	  switch(length){
+	    case 1: return function(a){
+	      return fn.call(that, a);
+	    };
+	    case 2: return function(a, b){
+	      return fn.call(that, a, b);
+	    };
+	    case 3: return function(a, b, c){
+	      return fn.call(that, a, b, c);
+	    };
+	  }
+	  return function(/* ...args */){
+	    return fn.apply(that, arguments);
+	  };
+	};
+
+/***/ },
+/* 232 */
+/***/ function(module, exports) {
+
+	// 7.2.1 RequireObjectCoercible(argument)
 	module.exports = function(it){
-	  if(!isObject(it))throw TypeError(it + ' is not an object!');
+	  if(it == undefined)throw TypeError("Can't call method on  " + it);
 	  return it;
 	};
 
 /***/ },
-/* 239 */
-/***/ function(module, exports, __webpack_require__) {
+/* 233 */
+/***/ function(module, exports) {
 
-	// getting tag from 19.1.3.6 Object.prototype.toString()
-	var cof = __webpack_require__(59)
-	  , TAG = __webpack_require__(15)('toStringTag')
-	  // ES3 wrong here
-	  , ARG = cof(function(){ return arguments; }()) == 'Arguments';
-	
-	module.exports = function(it){
-	  var O, T, B;
-	  return it === undefined ? 'Undefined' : it === null ? 'Null'
-	    // @@toStringTag case
-	    : typeof (T = (O = Object(it))[TAG]) == 'string' ? T
-	    // builtinTag case
-	    : ARG ? cof(O)
-	    // ES3 arguments fallback
-	    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-	};
+	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+	var global = module.exports = typeof window != 'undefined' && window.Math == Math
+	  ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
+	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ },
-/* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(34)(function(){
-	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
-	});
-
-/***/ },
-/* 241 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(59);
+	var cof = __webpack_require__(230);
 	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
 /***/ },
-/* 242 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// check on default Array iterator
-	var Iterators  = __webpack_require__(37)
-	  , ITERATOR   = __webpack_require__(15)('iterator')
-	  , ArrayProto = Array.prototype;
-	
-	module.exports = function(it){
-	  return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
-	};
-
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// call something on iterator step with safe closing on error
-	var anObject = __webpack_require__(238);
-	module.exports = function(iterator, fn, value, entries){
-	  try {
-	    return entries ? fn(anObject(value)[0], value[1]) : fn(value);
-	  // 7.4.6 IteratorClose(iterator, completion)
-	  } catch(e){
-	    var ret = iterator['return'];
-	    if(ret !== undefined)anObject(ret.call(iterator));
-	    throw e;
-	  }
-	};
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var $              = __webpack_require__(14)
-	  , descriptor     = __webpack_require__(65)
-	  , setToStringTag = __webpack_require__(66)
-	  , IteratorPrototype = {};
-	
-	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(36)(IteratorPrototype, __webpack_require__(15)('iterator'), function(){ return this; });
-	
-	module.exports = function(Constructor, NAME, next){
-	  Constructor.prototype = $.create(IteratorPrototype, {next: descriptor(1, next)});
-	  setToStringTag(Constructor, NAME + ' Iterator');
-	};
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var LIBRARY        = __webpack_require__(247)
-	  , $export        = __webpack_require__(26)
-	  , redefine       = __webpack_require__(249)
-	  , hide           = __webpack_require__(36)
-	  , has            = __webpack_require__(62)
-	  , Iterators      = __webpack_require__(37)
-	  , $iterCreate    = __webpack_require__(244)
-	  , setToStringTag = __webpack_require__(66)
-	  , getProto       = __webpack_require__(14).getProto
-	  , ITERATOR       = __webpack_require__(15)('iterator')
-	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
-	  , FF_ITERATOR    = '@@iterator'
-	  , KEYS           = 'keys'
-	  , VALUES         = 'values';
-	
-	var returnThis = function(){ return this; };
-	
-	module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED){
-	  $iterCreate(Constructor, NAME, next);
-	  var getMethod = function(kind){
-	    if(!BUGGY && kind in proto)return proto[kind];
-	    switch(kind){
-	      case KEYS: return function keys(){ return new Constructor(this, kind); };
-	      case VALUES: return function values(){ return new Constructor(this, kind); };
-	    } return function entries(){ return new Constructor(this, kind); };
-	  };
-	  var TAG        = NAME + ' Iterator'
-	    , DEF_VALUES = DEFAULT == VALUES
-	    , VALUES_BUG = false
-	    , proto      = Base.prototype
-	    , $native    = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
-	    , $default   = $native || getMethod(DEFAULT)
-	    , methods, key;
-	  // Fix native
-	  if($native){
-	    var IteratorPrototype = getProto($default.call(new Base));
-	    // Set @@toStringTag to native iterators
-	    setToStringTag(IteratorPrototype, TAG, true);
-	    // FF fix
-	    if(!LIBRARY && has(proto, FF_ITERATOR))hide(IteratorPrototype, ITERATOR, returnThis);
-	    // fix Array#{values, @@iterator}.name in V8 / FF
-	    if(DEF_VALUES && $native.name !== VALUES){
-	      VALUES_BUG = true;
-	      $default = function values(){ return $native.call(this); };
-	    }
-	  }
-	  // Define iterator
-	  if((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])){
-	    hide(proto, ITERATOR, $default);
-	  }
-	  // Plug for library
-	  Iterators[NAME] = $default;
-	  Iterators[TAG]  = returnThis;
-	  if(DEFAULT){
-	    methods = {
-	      values:  DEF_VALUES  ? $default : getMethod(VALUES),
-	      keys:    IS_SET      ? $default : getMethod(KEYS),
-	      entries: !DEF_VALUES ? $default : getMethod('entries')
-	    };
-	    if(FORCED)for(key in methods){
-	      if(!(key in proto))redefine(proto, key, methods[key]);
-	    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
-	  }
-	  return methods;
-	};
-
-/***/ },
-/* 246 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var ITERATOR     = __webpack_require__(15)('iterator')
-	  , SAFE_CLOSING = false;
-	
-	try {
-	  var riter = [7][ITERATOR]();
-	  riter['return'] = function(){ SAFE_CLOSING = true; };
-	  Array.from(riter, function(){ throw 2; });
-	} catch(e){ /* empty */ }
-	
-	module.exports = function(exec, skipClosing){
-	  if(!skipClosing && !SAFE_CLOSING)return false;
-	  var safe = false;
-	  try {
-	    var arr  = [7]
-	      , iter = arr[ITERATOR]();
-	    iter.next = function(){ safe = true; };
-	    arr[ITERATOR] = function(){ return iter; };
-	    exec(arr);
-	  } catch(e){ /* empty */ }
-	  return safe;
-	};
-
-/***/ },
-/* 247 */
+/* 235 */
 /***/ function(module, exports) {
 
-	module.exports = true;
+	module.exports = function(it){
+	  return typeof it === 'object' ? it !== null : typeof it === 'function';
+	};
 
 /***/ },
-/* 248 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.1 Object.assign(target, source, ...)
-	var $        = __webpack_require__(14)
-	  , toObject = __webpack_require__(38)
-	  , IObject  = __webpack_require__(241);
+	var $        = __webpack_require__(32)
+	  , toObject = __webpack_require__(57)
+	  , IObject  = __webpack_require__(234);
 	
 	// should work with symbols and should have deterministic property order (V8 bug)
-	module.exports = __webpack_require__(34)(function(){
+	module.exports = __webpack_require__(55)(function(){
 	  var a = Object.assign
 	    , A = {}
 	    , B = {}
@@ -16953,179 +17258,42 @@
 	} : Object.assign;
 
 /***/ },
-/* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(36);
-
-/***/ },
-/* 250 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global = __webpack_require__(35)
-	  , SHARED = '__core-js_shared__'
-	  , store  = global[SHARED] || (global[SHARED] = {});
-	module.exports = function(key){
-	  return store[key] || (store[key] = {});
-	};
-
-/***/ },
-/* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(67)
-	  , defined   = __webpack_require__(61);
-	// true  -> String#at
-	// false -> String#codePointAt
-	module.exports = function(TO_STRING){
-	  return function(that, pos){
-	    var s = String(defined(that))
-	      , i = toInteger(pos)
-	      , l = s.length
-	      , a, b;
-	    if(i < 0 || i >= l)return TO_STRING ? '' : undefined;
-	    a = s.charCodeAt(i);
-	    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-	      ? TO_STRING ? s.charAt(i) : a
-	      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-	  };
-	};
-
-/***/ },
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(67)
-	  , min       = Math.min;
-	module.exports = function(it){
-	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-	};
-
-/***/ },
-/* 253 */
-/***/ function(module, exports) {
-
-	var id = 0
-	  , px = Math.random();
-	module.exports = function(key){
-	  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-	};
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var classof   = __webpack_require__(239)
-	  , ITERATOR  = __webpack_require__(15)('iterator')
-	  , Iterators = __webpack_require__(37);
-	module.exports = __webpack_require__(13).getIteratorMethod = function(it){
-	  if(it != undefined)return it[ITERATOR]
-	    || it['@@iterator']
-	    || Iterators[classof(it)];
-	};
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var ctx         = __webpack_require__(60)
-	  , $export     = __webpack_require__(26)
-	  , toObject    = __webpack_require__(38)
-	  , call        = __webpack_require__(243)
-	  , isArrayIter = __webpack_require__(242)
-	  , toLength    = __webpack_require__(252)
-	  , getIterFn   = __webpack_require__(254);
-	$export($export.S + $export.F * !__webpack_require__(246)(function(iter){ Array.from(iter); }), 'Array', {
-	  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
-	  from: function from(arrayLike/*, mapfn = undefined, thisArg = undefined*/){
-	    var O       = toObject(arrayLike)
-	      , C       = typeof this == 'function' ? this : Array
-	      , $$      = arguments
-	      , $$len   = $$.length
-	      , mapfn   = $$len > 1 ? $$[1] : undefined
-	      , mapping = mapfn !== undefined
-	      , index   = 0
-	      , iterFn  = getIterFn(O)
-	      , length, result, step, iterator;
-	    if(mapping)mapfn = ctx(mapfn, $$len > 2 ? $$[2] : undefined, 2);
-	    // if object isn't iterable or it's array with default iterator - use simple case
-	    if(iterFn != undefined && !(C == Array && isArrayIter(iterFn))){
-	      for(iterator = iterFn.call(O), result = new C; !(step = iterator.next()).done; index++){
-	        result[index] = mapping ? call(iterator, mapfn, [step.value, index], true) : step.value;
-	      }
-	    } else {
-	      length = toLength(O.length);
-	      for(result = new C(length); length > index; index++){
-	        result[index] = mapping ? mapfn(O[index], index) : O[index];
-	      }
-	    }
-	    result.length = index;
-	    return result;
-	  }
-	});
-
-
-/***/ },
-/* 256 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.3.1 Object.assign(target, source)
-	var $export = __webpack_require__(26);
+	var $export = __webpack_require__(54);
 	
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(248)});
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(236)});
 
 /***/ },
-/* 257 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.5 Object.freeze(O)
-	var isObject = __webpack_require__(63);
+	var isObject = __webpack_require__(235);
 	
-	__webpack_require__(64)('freeze', function($freeze){
+	__webpack_require__(56)('freeze', function($freeze){
 	  return function freeze(it){
 	    return $freeze && isObject(it) ? $freeze(it) : it;
 	  };
 	});
 
 /***/ },
-/* 258 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 Object.keys(O)
-	var toObject = __webpack_require__(38);
+	var toObject = __webpack_require__(57);
 	
-	__webpack_require__(64)('keys', function($keys){
+	__webpack_require__(56)('keys', function($keys){
 	  return function keys(it){
 	    return $keys(toObject(it));
 	  };
 	});
 
 /***/ },
-/* 259 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var $at  = __webpack_require__(251)(true);
-	
-	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(245)(String, 'String', function(iterated){
-	  this._t = String(iterated); // target
-	  this._i = 0;                // next index
-	// 21.1.5.2.1 %StringIteratorPrototype%.next()
-	}, function(){
-	  var O     = this._t
-	    , index = this._i
-	    , point;
-	  if(index >= O.length)return {value: undefined, done: true};
-	  point = $at(O, index);
-	  this._i += point.length;
-	  return {value: point, done: false};
-	});
-
-/***/ },
-/* 260 */
+/* 240 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17156,7 +17324,7 @@
 	};
 
 /***/ },
-/* 261 */
+/* 241 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17244,13 +17412,13 @@
 	module.exports = TransitionEvents;
 
 /***/ },
-/* 262 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var Event = __webpack_require__(261);
-	var Css = __webpack_require__(260);
+	var Event = __webpack_require__(241);
+	var Css = __webpack_require__(240);
 	var isCssAnimationSupported = Event.endEvents.length !== 0;
 	
 	function getDuration(node, name) {
@@ -17402,7 +17570,7 @@
 	module.exports = cssAnimation;
 
 /***/ },
-/* 263 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17416,7 +17584,7 @@
 
 
 /***/ },
-/* 264 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17430,7 +17598,7 @@
 
 
 /***/ },
-/* 265 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17444,7 +17612,21 @@
 
 
 /***/ },
-/* 266 */
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(7)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "#tooltip_demo_pos a {\n  display: inline-block;\n  line-height: 40px;\n  height: 40px;\n  width: 80px;\n  text-align: center;\n  background: #f6f6f6;\n  margin-right: 1em;\n  margin-bottom: 1em;\n  border-radius: 6px;\n}\n\n.ant-tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  visibility: visible;\n  font-size: 12px;\n  line-height: 1.5;\n  opacity: 0.9;\n}\n.ant-tooltip-hidden {\n  display: none;\n}\n.ant-tooltip-placement-top,\n.ant-tooltip-placement-topLeft,\n.ant-tooltip-placement-topRight {\n  padding: 5px 0 9px 0;\n}\n.ant-tooltip-placement-right,\n.ant-tooltip-placement-rightTop,\n.ant-tooltip-placement-rightBottom {\n  padding: 0 5px 0 9px;\n}\n.ant-tooltip-placement-bottom,\n.ant-tooltip-placement-bottomLeft,\n.ant-tooltip-placement-bottomRight {\n  padding: 9px 0 5px 0;\n}\n.ant-tooltip-placement-left,\n.ant-tooltip-placement-leftTop,\n.ant-tooltip-placement-leftBottom {\n  padding: 0 9px 0 5px;\n}\n.ant-tooltip-inner {\n  padding: 8px 10px;\n  color: #fff;\n  text-align: left;\n  text-decoration: none;\n  background-color: #373737;\n  border-radius: 6px;\n  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);\n  min-height: 34px;\n}\n.ant-tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.ant-tooltip-placement-top .ant-tooltip-arrow,\n.ant-tooltip-placement-topLeft .ant-tooltip-arrow,\n.ant-tooltip-placement-topRight .ant-tooltip-arrow {\n  bottom: 4px;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #373737;\n}\n.ant-tooltip-placement-top .ant-tooltip-arrow {\n  left: 50%;\n}\n.ant-tooltip-placement-topLeft .ant-tooltip-arrow {\n  left: 15%;\n}\n.ant-tooltip-placement-topRight .ant-tooltip-arrow {\n  right: 15%;\n}\n.ant-tooltip-placement-right .ant-tooltip-arrow,\n.ant-tooltip-placement-rightTop .ant-tooltip-arrow,\n.ant-tooltip-placement-rightBottom .ant-tooltip-arrow {\n  left: 4px;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #373737;\n}\n.ant-tooltip-placement-right .ant-tooltip-arrow {\n  top: 50%;\n}\n.ant-tooltip-placement-rightTop .ant-tooltip-arrow {\n  top: 15%;\n  margin-top: 0;\n}\n.ant-tooltip-placement-rightBottom .ant-tooltip-arrow {\n  bottom: 15%;\n}\n.ant-tooltip-placement-left .ant-tooltip-arrow,\n.ant-tooltip-placement-leftTop .ant-tooltip-arrow,\n.ant-tooltip-placement-leftBottom .ant-tooltip-arrow {\n  right: 4px;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #373737;\n}\n.ant-tooltip-placement-left .ant-tooltip-arrow {\n  top: 50%;\n}\n.ant-tooltip-placement-leftTop .ant-tooltip-arrow {\n  top: 15%;\n  margin-top: 0;\n}\n.ant-tooltip-placement-leftBottom .ant-tooltip-arrow {\n  bottom: 15%;\n}\n.ant-tooltip-placement-bottom .ant-tooltip-arrow,\n.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow,\n.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {\n  top: 4px;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #373737;\n}\n.ant-tooltip-placement-bottom .ant-tooltip-arrow {\n  left: 50%;\n}\n.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow {\n  left: 15%;\n}\n.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {\n  right: 15%;\n}\n.ant-tooltip.ant-tooltip-zoom-enter,\n.ant-tooltip.ant-tooltip-zoom-leave {\n  display: block;\n}\n.ant-tooltip-zoom-enter,\n.ant-tooltip-zoom-appear {\n  opacity: 0;\n  -webkit-animation-duration: 0.3s;\n          animation-duration: 0.3s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);\n          animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);\n  -webkit-animation-play-state: paused;\n          animation-play-state: paused;\n}\n.ant-tooltip-zoom-leave {\n  -webkit-animation-duration: 0.3s;\n          animation-duration: 0.3s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);\n          animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);\n  -webkit-animation-play-state: paused;\n          animation-play-state: paused;\n}\n.ant-tooltip-zoom-enter.ant-tooltip-zoom-enter-active,\n.ant-tooltip-zoom-appear.ant-tooltip-zoom-appear-active {\n  -webkit-animation-name: antToolTipZoomIn;\n          animation-name: antToolTipZoomIn;\n  -webkit-animation-play-state: running;\n          animation-play-state: running;\n}\n.ant-tooltip-zoom-leave.ant-tooltip-zoom-leave-active {\n  -webkit-animation-name: antToolTipZoomOut;\n          animation-name: antToolTipZoomOut;\n  -webkit-animation-play-state: running;\n          animation-play-state: running;\n}\n@-webkit-keyframes antToolTipZoomIn {\n  0% {\n    opacity: 0;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n  }\n  100% {\n    opacity: 1;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n  }\n}\n@keyframes antToolTipZoomIn {\n  0% {\n    opacity: 0;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n  }\n  100% {\n    opacity: 1;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n  }\n}\n@-webkit-keyframes antToolTipZoomOut {\n  0% {\n    opacity: 1;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n  }\n  100% {\n    opacity: 0;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n  }\n}\n@keyframes antToolTipZoomOut {\n  0% {\n    opacity: 1;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n  }\n  100% {\n    opacity: 0;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n  }\n}\n\n/*# souanteMappingURL=common.css.map*/", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17458,7 +17640,7 @@
 
 
 /***/ },
-/* 267 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17466,13 +17648,13 @@
 	
 	
 	// module
-	exports.push([module.id, ".main-container {\n  margin-left: 260px;\n  padding: 30px 40px 120px;\n  -webkit-animation: xRightMatrix .5s ease-out;\n          animation: xRightMatrix .5s ease-out;\n  background: #fff;\n  min-height: 500px;\n}\n\n.main-container-center {\n  margin: 0 auto;\n  padding: 30px 80px 120px;\n  border-left: 1px solid #e9e9e9;\n  border-right: 1px solid #e9e9e9;\n  width: 80%;\n  height: 100%;\n}\n\n.aside-container {\n  width: 260px;\n  background: #F9F9F9;\n  padding-top: 10px;\n  padding-bottom: 50px;\n  float: left;\n}\n\n.aside-container > ul > li {\n  overflow: hidden;\n}\n\n.aside-container li h4 {\n  font-size: 14px;\n  font-weight: 600;\n  padding: 10px 0 10px 46px;\n  margin: 0;\n  color: #5C6B77;\n  cursor: pointer;\n  -webkit-transition: background .5s, border .5s;\n  transition: background .5s, border .5s;\n  border-left: 3px solid transparent;\n  position: relative;\n  z-index: 1;\n  background: #F9F9F9;\n  position: relative;\n}\n\n.aside-container li h4:after {\n  position: absolute;\n  top: 11px;\n  right: 30px;\n  content: \"\\E600\";\n  font-family: \"anticon\";\n  -webkit-transform: scale(0.6);\n      -ms-transform: scale(0.6);\n          transform: scale(0.6);\n  font-size: 12px;\n  color: #5C6B76;\n  opacity: 0;\n  -webkit-transform: scale(0.6) rotate(180deg);\n  -ms-transform: scale(0.6) rotate(180deg);\n      transform: scale(0.6) rotate(180deg);\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n}\n\n.aside-container li[open=open] h4:after {\n  -webkit-transform: scale(0.6) rotate(0deg);\n  -ms-transform: scale(0.6) rotate(0deg);\n      transform: scale(0.6) rotate(0deg);\n}\n\n.aside-container li:hover h4:after {\n  opacity: 0.8;\n}\n\n.aside-container li > ul.aside-list-show {\n  display: block;\n}\n\n.aside-container li > ul li {\n  border-left: 3px solid transparent;\n}\n\n.aside-container li a {\n  line-height: 40px;\n  height: 40px;\n  display: block;\n  padding-left: 60px;\n  font-size: 14px;\n  color: #5C6B76;\n}\n\n.aside-container li.type-divider {\n  font-size: 12px;\n  -webkit-transform:  scale(0.9);\n  -ms-transform: scale(0.9);\n      transform: scale(0.9);\n  -webkit-transform-origin: 0 50%;\n      -ms-transform-origin: 0 50%;\n          transform-origin: 0 50%;\n  color: #aaa;\n  text-shadow: 0px 1px 0px #FFF;\n  margin: 6px 0 6px 48px;\n}\n\n.aside-container > ul > li > a {\n  padding-left: 46px;\n  font-size: 14px;\n  border-left: 3px solid transparent;\n}\n\n.aside-container > ul > li.current > a {\n  border-left: 0;\n}\n\n.aside-container .chinese {\n  font-size: 12px;\n  margin-left: 6px;\n  font-weight: normal;\n  opacity: 0.67;\n}\n\n.aside-container li a:hover {\n  color: #6EB4E0;\n}\n\n.aside-container .current {\n  background: #fff;\n  border-left: 3px solid #71B5DE;\n  color: #71B5DE;\n}\n\n.aside-container .current a {\n  color: #71B5DE;\n}\n\n.markdown {\n  /*color: #777;*/\n  font-size: 14px;\n  /*line-height: 1.8;\n  width: 80%;*/\n}\n\n.markdown img {\n  vertical-align: middle;\n}\n\n.markdown h1 {\n  color: #5C6B77;\n  font-weight: 600;\n}\n\n.markdown h2,\n.markdown h3,\n.markdown h4,\n.markdown h5,\n.markdown h6 {\n  color: #5C6B77;\n  margin: 1.8em 0 1em 0;\n  font-weight: 600;\n}\n\n.markdown hr {\n  border-radius: 10px;\n  height: 3px;\n  border: 0;\n  background: #eee;\n  margin: 20px 0;\n}\n\n.markdown code,\n.markdown kbd,\n.markdown pre,\n.markdown samp {\n  font-family: Consolas, monospace;\n}\n\n.markdown pre {\n  margin: 1.2em 0;\n  padding: 1em;\n}\n\n.markdown > ul li {\n  list-style: circle;\n  margin-left: 20px;\n  padding-left: 8px;\n}\n\n.markdown > ol li {\n  list-style: decimal;\n  margin-left: 20px;\n  padding-left: 8px;\n}\n\n.markdown code {\n  margin: 0 3px;\n}\n\n.markdown pre {\n  background: #F7F7F7;\n  border-radius: 6px;\n}\n\n/*.markdown pre code {\n  background: #F7F7F7;\n  border: none;\n  padding: 12px 20px;\n  margin: 0;\n}*/\n\n.markdown strong,\n.markdown b {\n  font-weight: 600;\n}\n\n.markdown > table {\n  border-collapse: collapse;\n  border-spacing: 0px;\n  empty-cells: show;\n  border: 1px solid #e9e9e9;\n  width: 100%;\n  margin-bottom: 24px;\n}\n\n.markdown > table th {\n  white-space: nowrap;\n  color: #5C6B77;\n  font-weight: 600;\n}\n\n.markdown > table th,\n.markdown > table td {\n  border: 1px solid #e9e9e9;\n  padding: 8px 16px;\n  text-align: left;\n}\n\n.markdown > table th {\n  background: #F7F7F7;\n}\n\n.markdown blockquote {\n  font-size: 90%;\n  color: #999;\n  border-left: 4px solid #e9e9e9;\n  padding-left: 0.8em;\n  margin: 0;\n}\n\n.markdown .anchor {\n  opacity: 0;\n  -webkit-transition: opacity 0.3s ease;\n  transition: opacity 0.3s ease;\n  margin-left: 8px;\n}\n\n.markdown h1:hover .anchor,\n.markdown h2:hover .anchor,\n.markdown h3:hover .anchor,\n.markdown h4:hover .anchor,\n.markdown h5:hover .anchor,\n.markdown h6:hover .anchor {\n  opacity: 1;\n  display: inline-block;\n}\n\n#api ~ ul > li > p > strong ~ code {\n  background: #fff;\n  color: #CC7300;\n  border: none;\n  margin-left: 0.5em;\n}\n\n.code-boxes-col {\n  width: 100%;\n}\n\n.code-boxes-col-1-1 {\n  width: 80%;\n}\n\n.code-boxes-col-2-1 {\n  width: 49%;\n  display: inline-block;\n  vertical-align: top;\n  padding-right: 15px;\n}\n\n.code-boxes-col-2-1:last-child {\n  padding-right: 0;\n}\n\n.code-box {\n  border: 1px solid #E9E9E9;\n  border-radius: 6px;\n  display: inline-block;\n  width: 100%;\n  position: relative;\n  margin: 0px 15px 15px 0px;\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n}\n\n.code-box:hover {\n  border-color: #ccc;\n}\n\n.code-box:target {\n  border: 1px solid rgba(45, 183, 245, 0.7);\n  box-shadow: 0 0 4px rgba(45, 183, 245, 0.5);\n}\n\n.code-box:hover .code-box-meta,\n.code-box:target .code-box-meta {\n  background: #fbfbfb;\n}\n\n.code-box:hover .code-box-title,\n.code-box:target .code-box-title {\n  background: #fbfbfb;\n  box-shadow: 0 -1.2px 0 #e9e9e9;\n}\n\n.code-box h3 {\n  margin: 1em;\n  font-size: 14px;\n}\n\n.code-box .code-box-title a,\n.code-box .code-box-title a:hover {\n  color: #666;\n}\n\n.code-box .code-box-demo {\n  padding: 1.2em 1em;\n}\n\n.code-box-meta {\n  position: relative;\n  padding: 10px 15px;\n  border-radius: 0 0 6px 6px;\n  -webkit-transition: background-color 0.4s ease;\n  transition: background-color 0.4s ease;\n  width: 100%;\n}\n\n.code-box-meta h4,\n.code-box-meta p {\n  margin: 0;\n}\n\n.code-box-title {\n  position: absolute;\n  top: -14px;\n  padding: 1px 1.1em;\n  color: #777;\n  border-radius: 6px;\n  background: #fff;\n  -webkit-transition: all 0.4s ease;\n  transition: all 0.4s ease;\n}\n\n.code-box-title:before {\n  font-family: anticon;\n  content: \"\\E665\";\n  font-size: 16px;\n  vertical-align: middle;\n  line-height: 22px;\n  position: relative;\n  margin-right: 8px;\n  top: -2px;\n  color: #ccc;\n  -webkit-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n      transform: rotate(-45deg);\n  display: inline-block;\n}\n\n.code-box-meta > p {\n  font-size: 12px;\n  margin: 0.5em 0;\n  padding-right: 25px;\n}\n\n.code-box .collapse {\n  position: absolute;\n  right: 16px;\n  bottom: 18px;\n  cursor: pointer;\n  width: 18px;\n  height: 18px;\n  font-size: 18px;\n  line-height: 18px;\n  opacity: 0.5;\n  text-align: center;\n  -webkit-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n      transform: rotate(90deg);\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n  color: #999;\n  background: #fff;\n}\n\n.code-box.expand .collapse {\n  -webkit-transform: rotate(-90deg);\n  -ms-transform: rotate(-90deg);\n      transform: rotate(-90deg);\n}\n\n.code-box .collapse:hover {\n  opacity: 1;\n}\n\n.code-box .highlight {\n  overflow: hidden;\n  display: none;\n  padding: 5px;\n  border-top: 1px dashed #e9e9e9;\n}\n\n.xRightMatrix {\n  -webkit-animation: xRightMatrix .5s ease-out;\n          animation: xRightMatrix .5s ease-out;\n}\n\n@-webkit-keyframes xRightMatrix {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(50px);\n            transform: translateX(50px);\n  }\n\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n  }\n}\n\n@keyframes xRightMatrix {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(50px);\n            transform: translateX(50px);\n  }\n\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n  }\n}", ""]);
+	exports.push([module.id, ".main-container {\n  margin-left: 260px;\n  padding: 30px 40px 120px;\n  -webkit-animation: xRightMatrix .5s ease-out;\n          animation: xRightMatrix .5s ease-out;\n  background: #fff;\n  min-height: 500px;\n}\n\n.main-container-center {\n  margin: 0 auto;\n  padding: 30px 80px 120px;\n  border-left: 1px solid #e9e9e9;\n  border-right: 1px solid #e9e9e9;\n  width: 80%;\n  height: 100%;\n}\n\n.aside-container {\n  width: 260px;\n  background: #F9F9F9;\n  padding-top: 10px;\n  padding-bottom: 50px;\n  float: left;\n}\n\n.aside-container > ul > li {\n  overflow: hidden;\n}\n\n.aside-container li h4 {\n  font-size: 14px;\n  font-weight: 600;\n  padding: 10px 0 10px 46px;\n  margin: 0;\n  color: #5C6B77;\n  cursor: pointer;\n  -webkit-transition: background .5s, border .5s;\n  transition: background .5s, border .5s;\n  border-left: 3px solid transparent;\n  position: relative;\n  z-index: 1;\n  background: #F9F9F9;\n  position: relative;\n}\n\n.aside-container li h4:after {\n  position: absolute;\n  top: 11px;\n  right: 30px;\n  content: \"\\E600\";\n  font-family: \"anticon\";\n  -webkit-transform: scale(0.6);\n      -ms-transform: scale(0.6);\n          transform: scale(0.6);\n  font-size: 12px;\n  color: #5C6B76;\n  opacity: 0;\n  -webkit-transform: scale(0.6) rotate(180deg);\n  -ms-transform: scale(0.6) rotate(180deg);\n      transform: scale(0.6) rotate(180deg);\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n}\n\n.aside-container li[open=open] h4:after {\n  -webkit-transform: scale(0.6) rotate(0deg);\n  -ms-transform: scale(0.6) rotate(0deg);\n      transform: scale(0.6) rotate(0deg);\n}\n\n.aside-container li:hover h4:after {\n  opacity: 0.8;\n}\n\n.aside-container li > ul.aside-list-show {\n  display: block;\n}\n\n.aside-container li > ul li {\n  border-left: 3px solid transparent;\n}\n\n.aside-container li a {\n  line-height: 40px;\n  height: 40px;\n  display: block;\n  padding-left: 60px;\n  font-size: 14px;\n  color: #5C6B76;\n}\n\n.aside-container li.type-divider {\n  font-size: 12px;\n  -webkit-transform:  scale(0.9);\n  -ms-transform: scale(0.9);\n      transform: scale(0.9);\n  -webkit-transform-origin: 0 50%;\n      -ms-transform-origin: 0 50%;\n          transform-origin: 0 50%;\n  color: #aaa;\n  text-shadow: 0px 1px 0px #FFF;\n  margin: 6px 0 6px 48px;\n}\n\n.aside-container > ul > li > a {\n  padding-left: 46px;\n  font-size: 14px;\n  border-left: 3px solid transparent;\n}\n\n.aside-container > ul > li.current > a {\n  border-left: 0;\n}\n\n.aside-container .chinese {\n  font-size: 12px;\n  margin-left: 6px;\n  font-weight: normal;\n  opacity: 0.67;\n}\n\n.aside-container li a:hover {\n  color: #6EB4E0;\n}\n\n.aside-container .current {\n  background: #fff;\n  border-left: 3px solid #71B5DE;\n  color: #71B5DE;\n}\n\n.aside-container .current a {\n  color: #71B5DE;\n}\n\n.markdown {\n  /*color: #777;*/\n  font-size: 14px;\n  /*line-height: 1.8;\n  width: 80%;*/\n}\n\n.markdown img {\n  vertical-align: middle;\n}\n\n.markdown h1 {\n  color: #5C6B77;\n  font-weight: 600;\n}\n\n.markdown h2,\n.markdown h3,\n.markdown h4,\n.markdown h5,\n.markdown h6 {\n  color: #5C6B77;\n  margin: 1.8em 0 1em 0;\n  font-weight: 600;\n}\n\n.markdown hr {\n  border-radius: 10px;\n  height: 3px;\n  border: 0;\n  background: #eee;\n  margin: 20px 0;\n}\n\n.markdown code,\n.markdown kbd,\n.markdown pre,\n.markdown samp {\n  font-family: Consolas, monospace;\n}\n\n.markdown pre {\n  margin: 1.2em 0;\n  padding: 1em;\n}\n\n.markdown > ul li {\n  list-style: circle;\n  margin-left: 20px;\n  /*padding-left: 8px;*/\n}\n\n.markdown > ol li {\n  list-style: decimal;\n  margin-left: 20px;\n  padding-left: 8px;\n}\n\n.markdown code {\n  margin: 0 3px;\n}\n\n.markdown pre {\n  background: #F7F7F7;\n  border-radius: 6px;\n}\n\n/*.markdown pre code {\n  background: #F7F7F7;\n  border: none;\n  padding: 12px 20px;\n  margin: 0;\n}*/\n\n.markdown strong,\n.markdown b {\n  font-weight: 600;\n}\n\n.markdown > table {\n  border-collapse: collapse;\n  border-spacing: 0px;\n  empty-cells: show;\n  border: 1px solid #e9e9e9;\n  width: 100%;\n  margin-bottom: 24px;\n}\n\n.markdown > table th {\n  white-space: nowrap;\n  color: #5C6B77;\n  font-weight: 600;\n}\n\n.markdown > table th,\n.markdown > table td {\n  border: 1px solid #e9e9e9;\n  padding: 8px 16px;\n  text-align: left;\n}\n\n.markdown > table th {\n  background: #F7F7F7;\n}\n\n.markdown blockquote {\n  font-size: 90%;\n  color: #999;\n  border-left: 4px solid #e9e9e9;\n  padding-left: 0.8em;\n  margin: 0;\n}\n\n.markdown .anchor {\n  opacity: 0;\n  -webkit-transition: opacity 0.3s ease;\n  transition: opacity 0.3s ease;\n  margin-left: 8px;\n}\n\n.markdown h1:hover .anchor,\n.markdown h2:hover .anchor,\n.markdown h3:hover .anchor,\n.markdown h4:hover .anchor,\n.markdown h5:hover .anchor,\n.markdown h6:hover .anchor {\n  opacity: 1;\n  display: inline-block;\n}\n\n#api ~ ul > li > p > strong ~ code {\n  background: #fff;\n  color: #CC7300;\n  border: none;\n  margin-left: 0.5em;\n}\n\n.code-boxes-col {\n  width: 100%;\n}\n\n.code-boxes-col-1-1 {\n  width: 80%;\n}\n\n.code-boxes-col-2-1 {\n  width: 49%;\n  display: inline-block;\n  vertical-align: top;\n  padding-right: 15px;\n}\n\n.code-boxes-col-2-1:last-child {\n  padding-right: 0;\n}\n\n.code-box {\n  border: 1px solid #E9E9E9;\n  border-radius: 6px;\n  display: inline-block;\n  width: 100%;\n  position: relative;\n  margin: 0px 15px 15px 0px;\n  -webkit-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n}\n\n.code-box:hover {\n  border-color: #ccc;\n}\n\n.code-box:target {\n  border: 1px solid rgba(45, 183, 245, 0.7);\n  box-shadow: 0 0 4px rgba(45, 183, 245, 0.5);\n}\n\n.code-box:hover .code-box-meta,\n.code-box:target .code-box-meta {\n  background: #fbfbfb;\n}\n\n.code-box:hover .code-box-title,\n.code-box:target .code-box-title {\n  background: #fbfbfb;\n  box-shadow: 0 -1.2px 0 #e9e9e9;\n}\n\n.code-box h3 {\n  margin: 1em;\n  font-size: 14px;\n}\n\n.code-box .code-box-title a,\n.code-box .code-box-title a:hover {\n  color: #666;\n}\n\n.code-box .code-box-demo {\n  padding: 1.2em 1em;\n}\n\n.code-box-meta {\n  position: relative;\n  padding: 10px 15px;\n  border-radius: 0 0 6px 6px;\n  -webkit-transition: background-color 0.4s ease;\n  transition: background-color 0.4s ease;\n  width: 100%;\n}\n\n.code-box-meta h4,\n.code-box-meta p {\n  margin: 0;\n}\n\n.code-box-title {\n  position: absolute;\n  top: -14px;\n  padding: 1px 1.1em;\n  color: #777;\n  border-radius: 6px;\n  background: #fff;\n  -webkit-transition: all 0.4s ease;\n  transition: all 0.4s ease;\n}\n\n.code-box-title:before {\n  font-family: anticon;\n  content: \"\\E665\";\n  font-size: 16px;\n  vertical-align: middle;\n  line-height: 22px;\n  position: relative;\n  margin-right: 8px;\n  top: -2px;\n  color: #ccc;\n  -webkit-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n      transform: rotate(-45deg);\n  display: inline-block;\n}\n\n.code-box-meta > p {\n  font-size: 12px;\n  margin: 0.5em 0;\n  padding-right: 25px;\n}\n\n.code-box .collapse {\n  position: absolute;\n  right: 16px;\n  bottom: 18px;\n  cursor: pointer;\n  width: 18px;\n  height: 18px;\n  font-size: 18px;\n  line-height: 18px;\n  opacity: 0.5;\n  text-align: center;\n  -webkit-transform: rotate(90deg);\n  -ms-transform: rotate(90deg);\n      transform: rotate(90deg);\n  -webkit-transition: all 0.3s ease;\n  transition: all 0.3s ease;\n  color: #999;\n  background: #fff;\n}\n\n.code-box.expand .collapse {\n  -webkit-transform: rotate(-90deg);\n  -ms-transform: rotate(-90deg);\n      transform: rotate(-90deg);\n}\n\n.code-box .collapse:hover {\n  opacity: 1;\n}\n\n.code-box .highlight {\n  overflow: hidden;\n  display: none;\n  padding: 5px;\n  border-top: 1px dashed #e9e9e9;\n}\n\n.xRightMatrix {\n  -webkit-animation: xRightMatrix .5s ease-out;\n          animation: xRightMatrix .5s ease-out;\n}\n\n@-webkit-keyframes xRightMatrix {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(50px);\n            transform: translateX(50px);\n  }\n\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n  }\n}\n\n@keyframes xRightMatrix {\n  0% {\n    opacity: 0;\n    -webkit-transform: translateX(50px);\n            transform: translateX(50px);\n  }\n\n  100% {\n    opacity: 1;\n    -webkit-transform: translateX(0px);\n            transform: translateX(0px);\n  }\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 268 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17486,7 +17668,7 @@
 
 
 /***/ },
-/* 269 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17500,8 +17682,7 @@
 
 
 /***/ },
-/* 270 */,
-/* 271 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17515,7 +17696,7 @@
 
 
 /***/ },
-/* 272 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17529,7 +17710,7 @@
 
 
 /***/ },
-/* 273 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17543,7 +17724,21 @@
 
 
 /***/ },
-/* 274 */
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(7)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".code-box-demo .ant-btn[_v-27f6b4a9] {\n  margin-right: 1em;\n  margin-bottom: 1em;\n}", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17557,7 +17752,7 @@
 
 
 /***/ },
-/* 275 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17571,7 +17766,7 @@
 
 
 /***/ },
-/* 276 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -17585,7 +17780,56 @@
 
 
 /***/ },
-/* 277 */
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var closest = __webpack_require__(223);
+	
+	/**
+	 * Delegates event to a selector.
+	 *
+	 * @param {Element} element
+	 * @param {String} selector
+	 * @param {String} type
+	 * @param {Function} callback
+	 * @return {Object}
+	 */
+	function delegate(element, selector, type, callback) {
+	    var listenerFn = listener.apply(this, arguments);
+	
+	    element.addEventListener(type, listenerFn);
+	
+	    return {
+	        destroy: function() {
+	            element.removeEventListener(type, listenerFn);
+	        }
+	    }
+	}
+	
+	/**
+	 * Finds closest match and invokes callback.
+	 *
+	 * @param {Element} element
+	 * @param {String} selector
+	 * @param {String} type
+	 * @param {Function} callback
+	 * @return {Function}
+	 */
+	function listener(element, selector, type, callback) {
+	    return function(e) {
+	        e.delegateTarget = closest(e.target, selector, true);
+	
+	        if (e.delegateTarget) {
+	            callback.call(element, e);
+	        }
+	    }
+	}
+	
+	module.exports = delegate;
+
+
+/***/ },
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17596,7 +17840,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(21);
+	var _utils = __webpack_require__(19);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -17645,7 +17889,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 278 */
+/* 260 */
 /***/ function(module, exports) {
 
 	/**
@@ -17690,7 +17934,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 279 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17701,7 +17945,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _getAlignOffset = __webpack_require__(278);
+	var _getAlignOffset = __webpack_require__(260);
 	
 	var _getAlignOffset2 = _interopRequireDefault(_getAlignOffset);
 	
@@ -17731,7 +17975,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 280 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17742,7 +17986,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(21);
+	var _utils = __webpack_require__(19);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
@@ -17772,7 +18016,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 281 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17783,11 +18027,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(21);
+	var _utils = __webpack_require__(19);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
-	var _getOffsetParent = __webpack_require__(68);
+	var _getOffsetParent = __webpack_require__(58);
 	
 	var _getOffsetParent2 = _interopRequireDefault(_getOffsetParent);
 	
@@ -17853,7 +18097,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 282 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -17869,27 +18113,27 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _utils = __webpack_require__(21);
+	var _utils = __webpack_require__(19);
 	
 	var _utils2 = _interopRequireDefault(_utils);
 	
-	var _getOffsetParent = __webpack_require__(68);
+	var _getOffsetParent = __webpack_require__(58);
 	
 	var _getOffsetParent2 = _interopRequireDefault(_getOffsetParent);
 	
-	var _getVisibleRectForElement = __webpack_require__(281);
+	var _getVisibleRectForElement = __webpack_require__(263);
 	
 	var _getVisibleRectForElement2 = _interopRequireDefault(_getVisibleRectForElement);
 	
-	var _adjustForViewport = __webpack_require__(277);
+	var _adjustForViewport = __webpack_require__(259);
 	
 	var _adjustForViewport2 = _interopRequireDefault(_adjustForViewport);
 	
-	var _getRegion = __webpack_require__(280);
+	var _getRegion = __webpack_require__(262);
 	
 	var _getRegion2 = _interopRequireDefault(_getRegion);
 	
-	var _getElFuturePos = __webpack_require__(279);
+	var _getElFuturePos = __webpack_require__(261);
 	
 	var _getElFuturePos2 = _interopRequireDefault(_getElFuturePos);
 	
@@ -18057,7 +18301,7 @@
 
 
 /***/ },
-/* 283 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
@@ -18191,7 +18435,7 @@
 	    function lib$es6$promise$asap$$attemptVertx() {
 	      try {
 	        var r = require;
-	        var vertx = __webpack_require__(508);
+	        var vertx = __webpack_require__(496);
 	        lib$es6$promise$asap$$vertxNext = vertx.runOnLoop || vertx.runOnContext;
 	        return lib$es6$promise$asap$$useVertxTimer();
 	      } catch(e) {
@@ -19016,7 +19260,7 @@
 	    };
 	
 	    /* global define:true module:true window: true */
-	    if ("function" === 'function' && __webpack_require__(131)['amd']) {
+	    if ("function" === 'function' && __webpack_require__(121)['amd']) {
 	      !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return lib$es6$promise$umd$$ES6Promise; }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof module !== 'undefined' && module['exports']) {
 	      module['exports'] = lib$es6$promise$umd$$ES6Promise;
@@ -19028,209 +19272,411 @@
 	}).call(this);
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(322), (function() { return this; }()), __webpack_require__(132)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(304), (function() { return this; }()), __webpack_require__(122)(module)))
 
 /***/ },
-/* 284 */
+/* 266 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 285 */
-284,
-/* 286 */
+/* 267 */,
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "45d809bfeeaa44603f43a5f05c92f3fc.png"
 
 /***/ },
-/* 287 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "cf8d8a95abca1df0ca562ea8302493db.png"
 
 /***/ },
-/* 288 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "e88c7ce4b6fee5de8f579d99027fda9a.png"
 
 /***/ },
-/* 289 */
+/* 271 */
+/***/ function(module, exports) {
+
+	/**
+	 * Check if argument is a HTML element.
+	 *
+	 * @param {Object} value
+	 * @return {Boolean}
+	 */
+	exports.node = function(value) {
+	    return value !== undefined
+	        && value instanceof HTMLElement
+	        && value.nodeType === 1;
+	};
+	
+	/**
+	 * Check if argument is a list of HTML elements.
+	 *
+	 * @param {Object} value
+	 * @return {Boolean}
+	 */
+	exports.nodeList = function(value) {
+	    var type = Object.prototype.toString.call(value);
+	
+	    return value !== undefined
+	        && (type === '[object NodeList]' || type === '[object HTMLCollection]')
+	        && ('length' in value)
+	        && (value.length === 0 || exports.node(value[0]));
+	};
+	
+	/**
+	 * Check if argument is a string.
+	 *
+	 * @param {Object} value
+	 * @return {Boolean}
+	 */
+	exports.string = function(value) {
+	    return typeof value === 'string'
+	        || value instanceof String;
+	};
+	
+	/**
+	 * Check if argument is a function.
+	 *
+	 * @param {Object} value
+	 * @return {Boolean}
+	 */
+	exports.function = function(value) {
+	    var type = Object.prototype.toString.call(value);
+	
+	    return type === '[object Function]';
+	};
+
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var is = __webpack_require__(271);
+	var delegate = __webpack_require__(258);
+	
+	/**
+	 * Validates all params and calls the right
+	 * listener function based on its target type.
+	 *
+	 * @param {String|HTMLElement|HTMLCollection|NodeList} target
+	 * @param {String} type
+	 * @param {Function} callback
+	 * @return {Object}
+	 */
+	function listen(target, type, callback) {
+	    if (!target && !type && !callback) {
+	        throw new Error('Missing required arguments');
+	    }
+	
+	    if (!is.string(type)) {
+	        throw new TypeError('Second argument must be a String');
+	    }
+	
+	    if (!is.function(callback)) {
+	        throw new TypeError('Third argument must be a Function');
+	    }
+	
+	    if (is.node(target)) {
+	        return listenNode(target, type, callback);
+	    }
+	    else if (is.nodeList(target)) {
+	        return listenNodeList(target, type, callback);
+	    }
+	    else if (is.string(target)) {
+	        return listenSelector(target, type, callback);
+	    }
+	    else {
+	        throw new TypeError('First argument must be a String, HTMLElement, HTMLCollection, or NodeList');
+	    }
+	}
+	
+	/**
+	 * Adds an event listener to a HTML element
+	 * and returns a remove listener function.
+	 *
+	 * @param {HTMLElement} node
+	 * @param {String} type
+	 * @param {Function} callback
+	 * @return {Object}
+	 */
+	function listenNode(node, type, callback) {
+	    node.addEventListener(type, callback);
+	
+	    return {
+	        destroy: function() {
+	            node.removeEventListener(type, callback);
+	        }
+	    }
+	}
+	
+	/**
+	 * Add an event listener to a list of HTML elements
+	 * and returns a remove listener function.
+	 *
+	 * @param {NodeList|HTMLCollection} nodeList
+	 * @param {String} type
+	 * @param {Function} callback
+	 * @return {Object}
+	 */
+	function listenNodeList(nodeList, type, callback) {
+	    Array.prototype.forEach.call(nodeList, function(node) {
+	        node.addEventListener(type, callback);
+	    });
+	
+	    return {
+	        destroy: function() {
+	            Array.prototype.forEach.call(nodeList, function(node) {
+	                node.removeEventListener(type, callback);
+	            });
+	        }
+	    }
+	}
+	
+	/**
+	 * Add an event listener to a selector
+	 * and returns a remove listener function.
+	 *
+	 * @param {String} selector
+	 * @param {String} type
+	 * @param {Function} callback
+	 * @return {Object}
+	 */
+	function listenSelector(selector, type, callback) {
+	    return delegate(document.body, selector, type, callback);
+	}
+	
+	module.exports = listen;
+
+
+/***/ },
+/* 273 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"notification\">Notification</h1>\n<hr>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>使用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_simple\">simple show</v-button>\n    <v-button type=\"primary\" @click=\"_duration\">duration=0</v-button>\n    <v-button type=\"primary\" @click=\"_closable\">closable</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_simple<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>simple show<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_duration<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>duration=0<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_closable<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>closable<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div></div>";
 
 /***/ },
-/* 290 */
+/* 274 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"markdown\"><h1 id=\"tooltip\">Tooltip</h1>\n<hr>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>Form错误提示</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div style=\"margin-top: 100px; margin-bottom: 100px; text-align: center;\">\n      <tooltip animation=\"zoom\"\n        :visible=\"visible\"\n        :trigger=\"[]\">\n        <span slot=\"tooltip\" style=\"z-index: 1000;\">required!</span>\n        <input type=\"text\" class=\"ant-input\" style=\"width: 200px;\" @keyup=\"_onChange\" placeholder=\"不能为空哦！\"/>\n      </tooltip>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >margin-bottom</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  &lt;tooltip animation=\"zoom\"\n    :visible=\"visible\"\n    :trigger=\"[]\">\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >z-index</span><span class=\"token punctuation\" >:</span> 1000<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>required!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>input</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>text<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-input<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> 200px<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@keyup</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_onChange<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>不能为空哦！<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>简单触发</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div style=\"margin-top: 100px; margin-bottom: 100px; text-align: center;\">\n      <tooltip animation=\"zoom\"\n        :trigger=\"['click']\"\n        :visible=\"triggerVisible\"\n        :on-visible-change=\"_toggle\">\n        <span slot=\"tooltip\" style=\"z-index: 1000;\">i am a tooltip!</span>\n        <a href='#' @click.prevent=\"\">点我，点我！</a>\n      </tooltip>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >margin-bottom</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  &lt;tooltip animation=\"zoom\"\n    :trigger=\"['click']\"\n    :visible=\"triggerVisible\"\n    :on-visible-change=\"_toggle\">\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >z-index</span><span class=\"token punctuation\" >:</span> 1000<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>i am a tooltip!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>点我，点我！<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>各种位置</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div id=\"tooltip_demo_pos\" style=\"\">\n      <tooltip placement=\"left\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">左边</a>\n      </tooltip>\n      <tooltip placement=\"top\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">上边</a>\n      </tooltip>\n      <tooltip placement=\"bottom\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">左边</a>\n      </tooltip>\n      <tooltip placement=\"right\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">右边</a>\n      </tooltip>\n      <tooltip placement=\"leftTop\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">左上</a>\n      </tooltip>\n      <tooltip placement=\"leftBottom\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">左下</a>\n      </tooltip>\n      <tooltip placement=\"rightTop\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">右上</a>\n      </tooltip>\n      <tooltip placement=\"rightBottom\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">右下</a>\n      </tooltip>\n      <tooltip placement=\"topLeft\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">上左</a>\n      </tooltip>\n      <tooltip placement=\"topRight\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">上右</a>\n      </tooltip>\n      <tooltip placement=\"bottomLeft\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">下左</a>\n      </tooltip>\n      <tooltip placement=\"bottomRight\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">下右</a>\n      </tooltip>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip_demo_pos<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>left<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>左边<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>top<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>上边<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottom<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>左边<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>right<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>右边<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>leftTop<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>左上<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>leftBottom<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>左下<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>rightTop<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>右上<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>rightBottom<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>右下<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>topLeft<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>上左<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>topRight<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>上右<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottomLeft<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>下左<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottomRight<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>下右<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div></div>";
+
+/***/ },
+/* 275 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"trigger\">Trigger</h1>\n<hr>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>简单使用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div>\n      <span>placement:</span>\n      <label>\n        <select v-model=\"placement\">\n          <option>right</option>\n          <option>left</option>\n          <option>top</option>\n          <option>bottom</option>\n          <option>topLeft</option>\n          <option>topRight</option>\n          <option>bottomRight</option>\n          <option>bottomLeft</option>\n        </select>\n      </label>\n      &nbsp;&nbsp;&nbsp;&nbsp;\n      <label>\n        <v-checkbox value=\"ant-trigger-popup-zoom\"\n          :on-change=\"_onTransitionChange\"\n          :checked=\"transitionName === 'ant-trigger-popup-zoom'\">transitionName</v-checkbox>\n      </label>\n      <br>\n      <br>\n      <span>trigger:</span>\n      <label>\n        <v-checkbox value=\"hover\"\n          :checked=\"!!trigger.hover\"\n          :on-change=\"_onTriggerChange\">hover</v-checkbox>\n      </label>\n      <label>\n        <v-checkbox value=\"focus\"\n          :checked=\"!!trigger.focus\"\n          :on-change=\"_onTriggerChange\">focus</v-checkbox>\n      </label>\n      <label>\n        <v-checkbox value=\"click\"\n          :checked=\"!!trigger.click\"\n          :on-change=\"_onTriggerChange\">click</v-checkbox>\n      </label>\n      <br>\n      <br>\n      <span>offsetX:</span>\n      <label>\n        <input type='text' style=\"width: 100px;\" class=\"ant-input\" @change=\"_onOffsetXChange\"/>\n      </label>\n      <br>\n      <span>offsetY:</span>\n      <label>\n        <input type='text' style=\"width: 100px;\" class=\"ant-input\" @change=\"_onOffsetYChange\"/>\n      </label>\n    </div>\n    <div style=\"margin: 100px;\">\n      <trigger\n        :popup-align=\"popupAlign\"\n        :mouse-enter-delay=\"0\"\n        :popup-placement=\"placement\"\n        :mouse-leave-delay=\"0.1\"\n        :action=\"action\"\n        :builtin-placements=\"builtinPlacements\"\n        :popup-transition-name=\"transitionName\">\n        <div slot=\"popup\" style=\"border:1px solid red; padding:10px;\">i am a popup</div>\n        <a slot=\"trigger\" href=\"javascript:;\" style=\"margin: 20px;\" @click.prevent=\"\">trigger</a>\n      </trigger>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>placement:<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>label</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>select</span> <span class=\"token attr-name\" >v-model</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>placement<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>option</span><span class=\"token punctuation\" >></span></span>right<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>option</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>option</span><span class=\"token punctuation\" >></span></span>left<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>option</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>option</span><span class=\"token punctuation\" >></span></span>top<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>option</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>option</span><span class=\"token punctuation\" >></span></span>bottom<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>option</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>option</span><span class=\"token punctuation\" >></span></span>topLeft<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>option</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>option</span><span class=\"token punctuation\" >></span></span>topRight<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>option</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>option</span><span class=\"token punctuation\" >></span></span>bottomRight<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>option</span><span class=\"token punctuation\" >></span></span>\n      <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>option</span><span class=\"token punctuation\" >></span></span>bottomLeft<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>option</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>select</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>label</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token entity\" title=\"&nbsp;\">&amp;nbsp;</span><span class=\"token entity\" title=\"&nbsp;\">&amp;nbsp;</span><span class=\"token entity\" title=\"&nbsp;\">&amp;nbsp;</span><span class=\"token entity\" title=\"&nbsp;\">&amp;nbsp;</span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>label</span><span class=\"token punctuation\" >></span></span>\n    &lt;v-checkbox value=\"ant-trigger-popup-zoom\"\n      :on-change=\"_onTransitionChange\"\n      :checked=\"transitionName === 'ant-trigger-popup-zoom'\">transitionName<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-checkbox</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>label</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>trigger:<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>label</span><span class=\"token punctuation\" >></span></span>\n    &lt;v-checkbox value=\"hover\"\n      :checked=\"!!trigger.hover\"\n      :on-change=\"_onTriggerChange\">hover<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-checkbox</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>label</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>label</span><span class=\"token punctuation\" >></span></span>\n    &lt;v-checkbox value=\"focus\"\n      :checked=\"!!trigger.focus\"\n      :on-change=\"_onTriggerChange\">focus<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-checkbox</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>label</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>label</span><span class=\"token punctuation\" >></span></span>\n    &lt;v-checkbox value=\"click\"\n      :checked=\"!!trigger.click\"\n      :on-change=\"_onTriggerChange\">click<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-checkbox</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>label</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>offsetX:<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>label</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>input</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>text<span class=\"token punctuation\" >'</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-input<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_onOffsetXChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>label</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>offsetY:<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>label</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>input</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>text<span class=\"token punctuation\" >'</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-input<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_onOffsetYChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>label</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >margin</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  &lt;trigger\n    :popup-align=\"popupAlign\"\n    :mouse-enter-delay=\"0\"\n    :popup-placement=\"placement\"\n    :mouse-leave-delay=\"0.1\"\n    :action=\"action\"\n    :builtin-placements=\"builtinPlacements\"\n    :popup-transition-name=\"transitionName\">\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>popup<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >border</span><span class=\"token punctuation\" >:</span>1px solid red<span class=\"token punctuation\" >;</span> <span class=\"token property\" >padding</span><span class=\"token punctuation\" >:</span>10px<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>i am a popup<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>trigger<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>javascript:;<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >margin</span><span class=\"token punctuation\" >:</span> 20px<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>trigger<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>trigger</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div></div>";
 
 /***/ },
-/* 291 */
+/* 276 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"affix\">Affix</h1>\n<hr>\n<p>将页面元素钉在可视范围。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>当内容区域比较长，需要滚动页面时，这部分内容对应的操作或者导航需要在滚动范围内始终展现。常用于侧边菜单和按钮组合。</p>\n<p>页面可视范围过小时，慎用此功能以免遮挡页面内容。</p>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>基本</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-affix>\n      <v-button type=\"primary\">固定在顶部</v-button>\n    </v-affix>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-affix</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>固定在顶部<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-affix</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>偏移</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-affix offset=\"75\">\n      <v-button type=\"primary\">固定在距离顶部 75px 的位置</v-button>\n    </v-affix>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-affix</span> <span class=\"token attr-name\" >offset</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>75<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>固定在距离顶部 75px 的位置<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-affix</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<table>\n<thead>\n<tr>\n<th>成员</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>offset</td>\n<td>达到指定偏移量后触发</td>\n<td>Number</td>\n<td>0</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 292 */
+/* 277 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"alert\">Alert</h1>\n<hr>\n<p>警告提示，展现需要关注的信息。</p>\n<h2 id=\"-\">何时使用</h2>\n<ul>\n<li>当某个页面需要向用户显示警告的信息时。</li>\n<li>非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>基本</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-alert :message=\"'成功提示的文案'\" :type=\"'success'\"></v-alert>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>成功提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>success<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>含有辅助性文字介绍</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-alert :message=\"'成功提示的文案'\" :type=\"'success'\" :description=\"'成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍'\"></v-alert>\n    <v-alert :message=\"'消息提示的文案'\" :type=\"'info'\" :description=\"'消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍'\"></v-alert>\n    <v-alert :message=\"'警告提示的文案'\" :type=\"'warn'\" :description=\"'成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍'\"></v-alert>\n    <v-alert :message=\"'错误提示的文案'\" :type=\"'error'\" :description=\"'错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍'\"></v-alert>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>成功提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>success<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>消息提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>info<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>消息提示的辅助性文字介绍消息提示的辅助性文字介绍消息提示的辅助性文字介绍<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>警告提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>warn<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍成功提示的辅助性文字介绍<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>错误提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>error<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>可关闭的警告提示</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-alert :message=\"'警告提示的文案'\" :type=\"'warn'\" :closable=\"true\" :on-close=\"_close\"></v-alert>\n    <v-alert :message=\"'错误提示的文案'\" :type=\"'error'\" :description=\"'错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍'\" :closable=\"true\" :on-close=\"_close\"></v-alert>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>警告提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>warn<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:closable</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>true<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-close</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_close<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>错误提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>error<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍错误提示的辅助性文字介绍<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:closable</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>true<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-close</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_close<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>四种样式</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-alert :message=\"'成功提示的文案'\" :type=\"'success'\"></v-alert>\n    <v-alert :message=\"'消息提示的文案'\" :type=\"'info'\"></v-alert>\n    <v-alert :message=\"'警告提示的文案'\" :type=\"'warn'\"></v-alert>\n    <v-alert :message=\"'错误提示的文案'\" :type=\"'error'\"></v-alert>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>成功提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>success<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>消息提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>info<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>警告提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>warn<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>错误提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>error<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>自定义关闭</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-alert :message=\"'消息提示的文案'\" :type=\"'info'\" :closable=\"true\" :close-text=\"'<a>不再提醒</a>'\"></v-alert>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-alert</span> <span class=\"token attr-name\" >:message</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>消息提示的文案<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>info<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:closable</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>true<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:close-text</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>&lt;a<span class=\"token punctuation\" >></span>不再提醒&lt;/a<span class=\"token punctuation\" >></span><span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-alert</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>type</td>\n<td>必选参数，指定警告提示的样式，有四种选择<code>success</code>、<code>info</code>、<code>warn</code>、<code>error</code></td>\n<td>String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>closable</td>\n<td>可选参数，默认不显示关闭按钮</td>\n<td>Boolean</td>\n<td>无</td>\n<td></td>\n<td>message</td>\n<td>必选参数，警告提示内容</td>\n<td>String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>description</td>\n<td>可选参数，警告提示的辅助性文字介绍</td>\n<td>String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>onClose</td>\n<td>可选参数，关闭时触发的回调函数</td>\n<td>Function</td>\n<td>无</td>\n</tr>\n<tr>\n<td>closeText</td>\n<td>可选参数，自定义关闭按钮</td>\n<td>slot</td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 293 */
+/* 278 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"breadcrumb\">Breadcrumb</h1>\n<hr>\n<p>显示当前页面在系统层级结构中的位置，并能向上返回。</p>\n<h2 id=\"-\">何时使用</h2>\n<ul>\n<li>当系统拥有超过两级以上的层级结构时；</li>\n<li>当需要告知用户“你在哪里”时；</li>\n<li>当需要向上导航的功能时。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>基本</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-breadcrumb>\n      <v-breadcrumb-item>首页</v-breadcrumb-item>\n      <v-breadcrumb-item :href=\"'#'\">应用中心</v-breadcrumb-item>\n      <v-breadcrumb-item :href=\"'#'\">应用列表</v-breadcrumb-item>\n      <v-breadcrumb-item>某应用</v-breadcrumb-item>\n    </v-breadcrumb>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>首页<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb-item</span> <span class=\"token attr-name\" >:href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>应用中心<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb-item</span> <span class=\"token attr-name\" >:href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>应用列表<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>某应用<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>带图标</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-breadcrumb>\n      <v-breadcrumb-item><v-icon :type=\"'home'\"></v-icon>首页</v-breadcrumb-item>\n      <v-breadcrumb-item><v-icon :type=\"'user'\"></v-icon>应用列表</v-breadcrumb-item>\n      <v-breadcrumb-item>应用</v-breadcrumb-item>\n    </v-breadcrumb>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>home<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span>首页<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>user<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span>应用列表<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>应用<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb-item</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-breadcrumb</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<h3 id=\"breadcrumb\">Breadcrumb</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>router</td>\n<td>可传入 react-router 的实例</td>\n<td>Object</td>\n<td></td>\n<td>-</td>\n</tr>\n<tr>\n<td>routes</td>\n<td>router 的路由栈信息</td>\n<td>Array</td>\n<td></td>\n<td>-</td>\n</tr>\n<tr>\n<td>params</td>\n<td>路由的参数</td>\n<td>Object</td>\n<td></td>\n<td>-</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"breadcrumb-item\">Breadcrumb.Item</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>href</td>\n<td>链接，如不传则不可点击</td>\n<td>string</td>\n<td></td>\n<td>-</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 294 */
+/* 279 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"checkbox\">Checkbox</h1>\n<hr>\n<p>多选框。</p>\n<h2 id=\"-\">何时使用</h2>\n<ul>\n<li>需要表示开关状态/两种状态之间的切换时；</li>\n<li>和 <code>switch</code>的区别是，切换 <code>switch</code> 会直接触发状态改变，而 <code>checkbox</code> 一般用于状态标记，需要和提交操作配合。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>基本用法</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-checkbox :default-checked=\"false\" :on-change=\"_change\"><span>Checkbox</span></v-checkbox>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-checkbox</span> <span class=\"token attr-name\" >:default-checked</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>false<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_change<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>Checkbox<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-checkbox</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>不可用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-checkbox :default-checked=\"false\" :disabled=\"true\"><span>不可用</span></v-checkbox>\n    <br>\n    <v-checkbox :default-checked=\"true\" :disabled=\"true\"><span>不可用</span></v-checkbox>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-checkbox</span> <span class=\"token attr-name\" >:default-checked</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>false<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>true<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>不可用<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-checkbox</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-checkbox</span> <span class=\"token attr-name\" >:default-checked</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>true<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>true<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>不可用<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-checkbox</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>和外部组件通信</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-checkbox :checked=\"checked\" :disabled=\"disabled\"><span>{{checkedStatus}}-{{disabledStatus}}</span></v-checkbox>\n    <br>\n    <br>\n    <v-button type=\"primary\" size=\"small\" @click=\"_toggleChecked\">{{checkedStatus}}</v-button>\n    <v-button type=\"primary\" size=\"small\" @click=\"_toggleDisable\">{{disabledStatus}}</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-checkbox</span> <span class=\"token attr-name\" >:checked</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>checked<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>disabled<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>{{checkedStatus}}-{{disabledStatus}}<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-checkbox</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_toggleChecked<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>{{checkedStatus}}<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_toggleDisable<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>{{disabledStatus}}<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<h3 id=\"checkbox\">Checkbox</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>checked</td>\n<td>指定当前是否选中</td>\n<td>boolean</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>default-checked</td>\n<td>初始是否选中</td>\n<td>boolean</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>on-change</td>\n<td>变化时回调函数</td>\n<td>Function(e:Event)</td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 295 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"markdown\"><h1 id=\"iconfont\">Iconfont</h1>\n<hr>\n<p>有含义的矢量图形，每一个图标打倒一个敌人。</p>\n<h2 id=\"-\">图标的命名规范</h2>\n<p>我们为每个图标赋予了语义化的命名。只需在 <code>&lt;v-icon&gt;&lt;/v-icon&gt;</code> 标签内，制定对应的 type 属性即可。</p>\n<p>不同 type 命名规则如下:</p>\n<ul>\n<li><p>实心和描线图标保持同名，用 <code>-o</code> 来区分，比如 <code>question-circle</code>(实心) 和 <code>question-circle-o</code>(描线)；</p>\n</li>\n<li><p>命名顺序：<code>[icon名]-[描线与否]-[方向]</code>。</p>\n</li>\n</ul>\n<h2 id=\"-\">实现原理</h2>\n<p>所有的 Icon 标签最终会渲染为</p>\n<pre><code class=\"lang-html\">&lt;i class=&quot;anticon anticon-${type}&quot;&gt;&lt;/i&gt;\n</code></pre>\n<h2 id=\"-\">如何使用</h2>\n<p>使用 <code>&lt;v-icon&gt;</code> 标签申明组件，设置对应的 type 设置需要渲染的图标，示例代码如下:</p>\n<pre><code class=\"lang-html\">&lt;v-icon type=&quot;link&quot; &gt;&lt;/v-icon&gt;\n</code></pre>\n<blockquote>\n<p>点击图标复制代码。</p>\n</blockquote>\n<h2 id=\"-\">图标列表</h2>\n<h3 id=\"-\">一. 方向性图标</h3>\n<ul class=\"row anticons-list clearfix\">\n  <li>\n    <i class=\"anticon anticon-step-backward\"></i>\n    <span class=\"anticon-class\">step-backward</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-step-forward\"></i>\n    <span class=\"anticon-class\">step-forward</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-fast-backward\"></i>\n    <span class=\"anticon-class\">fast-backward</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-fast-forward\"></i>\n    <span class=\"anticon-class\">fast-forward</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-shrink\"></i>\n    <span class=\"anticon-class\">shrink</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-arrow-salt\"></i>\n    <span class=\"anticon-class\">arrow-salt</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-down\"></i>\n    <span class=\"anticon-class\">down</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-up\"></i>\n    <span class=\"anticon-class\">up</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-left\"></i>\n    <span class=\"anticon-class\">left</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-right\"></i>\n    <span class=\"anticon-class\">right</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-caret-down\"></i>\n    <span class=\"anticon-class\">caret-down</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-caret-up\"></i>\n    <span class=\"anticon-class\">caret-up</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-caret-left\"></i>\n    <span class=\"anticon-class\">caret-left</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-caret-right\"></i>\n    <span class=\"anticon-class\">caret-right</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-caret-circle-right\"></i>\n    <span class=\"anticon-class\">caret-circle-right</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-caret-circle-left\"></i>\n    <span class=\"anticon-class\">caret-circle-left</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-caret-circle-o-right\"></i>\n    <span class=\"anticon-class\">caret-circle-o-right</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-caret-circle-o-left\"></i>\n    <span class=\"anticon-class\">caret-circle-o-left</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-circle-right\"></i>\n    <span class=\"anticon-class\">circle-right</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-circle-left\"></i>\n    <span class=\"anticon-class\">circle-left</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-circle-o-right\"></i>\n    <span class=\"anticon-class\">circle-o-right</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-circle-o-left\"></i>\n    <span class=\"anticon-class\">circle-o-left</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-double-right\"></i>\n    <span class=\"anticon-class\">double-right</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-double-left\"></i>\n    <span class=\"anticon-class\">double-left</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-verticle-right\"></i>\n    <span class=\"anticon-class\">verticle-right</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-verticle-left\"></i>\n    <span class=\"anticon-class\">verticle-left</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-forward\"></i>\n    <span class=\"anticon-class\">forward</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-backward\"></i>\n    <span class=\"anticon-class\">backward</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-rollback\"></i>\n    <span class=\"anticon-class\">rollback</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-retweet\"></i>\n    <span class=\"anticon-class\">retweet</span>\n  </li>\n</ul>\n<h3 id=\"-\">二. 提示建议性图标</h3>\n<ul class=\"anticons-list clearfix\">\n  <li>\n    <i class=\"anticon anticon-question\"></i>\n    <span class=\"anticon-class\">question</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-question-circle-o\"></i>\n    <span class=\"anticon-class\">question-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-question-circle\"></i>\n    <span class=\"anticon-class\">question-circle</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-plus\"></i>\n    <span class=\"anticon-class\">plus</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-plus-circle-o\"></i>\n    <span class=\"anticon-class\">plus-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-plus-circle\"></i>\n    <span class=\"anticon-class\">plus-circle</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-pause\"></i>\n    <span class=\"anticon-class\">pause</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-pause-circle-o\"></i>\n    <span class=\"anticon-class\">pause-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-pause-circle\"></i>\n    <span class=\"anticon-class\">pause-circle</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-minus\"></i>\n    <span class=\"anticon-class\">minus</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-minus-circle-o\"></i>\n    <span class=\"anticon-class\">minus-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-minus-circle\"></i>\n    <span class=\"anticon-class\">minus-circle</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-info\"></i>\n    <span class=\"anticon-class\">info</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-info-circle-o\"></i>\n    <span class=\"anticon-class\">info-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-info-circle\"></i>\n    <span class=\"anticon-class\">info-circle</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-exclamation\"></i>\n    <span class=\"anticon-class\">exclamation</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-exclamation-circle-o\"></i>\n    <span class=\"anticon-class\">exclamation-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-exclamation-circle\"></i>\n    <span class=\"anticon-class\">exclamation-circle</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-cross\"></i>\n    <span class=\"anticon-class\">cross</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-cross-circle-o\"></i>\n    <span class=\"anticon-class\">cross-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-cross-circle\"></i>\n    <span class=\"anticon-class\">cross-circle</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-check\"></i>\n    <span class=\"anticon-class\">check</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-check-circle-o\"></i>\n    <span class=\"anticon-class\">check-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-check-circle\"></i>\n    <span class=\"anticon-class\">check-circle</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-clock-circle-o\"></i>\n    <span class=\"anticon-class\">clock-circle-o</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-clock-circle\"></i>\n    <span class=\"anticon-class\">clock-circle</span>\n  </li>\n</ul>\n<h3 id=\"-\">三. 网站通用图标</h3>\n<ul class=\"anticons-list clearfix\">\n  <li>\n    <i class=\"anticon anticon-lock\"></i>\n    <span class=\"anticon-class\">lock</span>\n  </li>\n    <li>\n    <i class=\"anticon anticon-unlock\"></i>\n    <span class=\"anticon-class\">unlock</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-android\"></i>\n    <span class=\"anticon-class\">android</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-apple\"></i>\n    <span class=\"anticon-class\">apple</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-area-chart\"></i>\n    <span class=\"anticon-class\">area-chart</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-bar-chart\"></i>\n    <span class=\"anticon-class\">bar-chart</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-bars\"></i>\n    <span class=\"anticon-class\">bars</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-book\"></i>\n    <span class=\"anticon-class\">book</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-calendar\"></i>\n    <span class=\"anticon-class\">calendar</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-cloud\"></i>\n    <span class=\"anticon-class\">cloud</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-cloud-download\"></i>\n    <span class=\"anticon-class\">cloud-download</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-code\"></i>\n    <span class=\"anticon-class\">code</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-copy\"></i>\n    <span class=\"anticon-class\">copy</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-credit-card\"></i>\n    <span class=\"anticon-class\">credit-card</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-delete\"></i>\n    <span class=\"anticon-class\">delete</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-desktop\"></i>\n    <span class=\"anticon-class\">desktop</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-download-line\"></i>\n    <span class=\"anticon-class\">download-line</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-edit\"></i>\n    <span class=\"anticon-class\">edit</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-ellipsis\"></i>\n    <span class=\"anticon-class\">ellipsis</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-environment\"></i>\n    <span class=\"anticon-class\">environment</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-file\"></i>\n    <span class=\"anticon-class\">file</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-file-text\"></i>\n    <span class=\"anticon-class\">file-text</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-folder\"></i>\n    <span class=\"anticon-class\">folder</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-folder-open\"></i>\n    <span class=\"anticon-class\">folder-open</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-github\"></i>\n    <span class=\"anticon-class\">github</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-hdd\"></i>\n    <span class=\"anticon-class\">hdd</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-frown\"></i>\n    <span class=\"anticon-class\">frown</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-meh\"></i>\n    <span class=\"anticon-class\">meh</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-inbox\"></i>\n    <span class=\"anticon-class\">inbox</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-laptop\"></i>\n    <span class=\"anticon-class\">laptop</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-appstore\"></i>\n    <span class=\"anticon-class\">appstore</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-line-chart\"></i>\n    <span class=\"anticon-class\">line-chart</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-link\"></i>\n    <span class=\"anticon-class\">link</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-logout\"></i>\n    <span class=\"anticon-class\">logout</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-mail\"></i>\n    <span class=\"anticon-class\">mail</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-menu-fold\"></i>\n    <span class=\"anticon-class\">menu-fold</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-menu-unfold\"></i>\n    <span class=\"anticon-class\">menu-unfold</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-mobile\"></i>\n    <span class=\"anticon-class\">mobile</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-notification\"></i>\n    <span class=\"anticon-class\">notification</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-paper-clip\"></i>\n    <span class=\"anticon-class\">paper-clip</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-picture\"></i>\n    <span class=\"anticon-class\">picture</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-pie-chart\"></i>\n    <span class=\"anticon-class\">pie-chart</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-poweroff\"></i>\n    <span class=\"anticon-class\">poweroff</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-reload\"></i>\n    <span class=\"anticon-class\">reload</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-search\"></i>\n    <span class=\"anticon-class\">search</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-setting\"></i>\n    <span class=\"anticon-class\">setting</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-share-alt\"></i>\n    <span class=\"anticon-class\">share-alt</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-shopping-cart\"></i>\n    <span class=\"anticon-class\">shopping-cart</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-smile\"></i>\n    <span class=\"anticon-class\">smile</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-tablet\"></i>\n    <span class=\"anticon-class\">tablet</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-tag\"></i>\n    <span class=\"anticon-class\">tag</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-tags\"></i>\n    <span class=\"anticon-class\">tags</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-to-top\"></i>\n    <span class=\"anticon-class\">to-top</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-upload\"></i>\n    <span class=\"anticon-class\">upload</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-user\"></i>\n    <span class=\"anticon-class\">user</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-video-camera\"></i>\n    <span class=\"anticon-class\">video-camera</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-windows\"></i>\n    <span class=\"anticon-class\">windows</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-ie\"></i>\n    <span class=\"anticon-class\">ie</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-chrome\"></i>\n    <span class=\"anticon-class\">chrome</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-home\"></i>\n    <span class=\"anticon-class\">home</span>\n  </li>\n  <li>\n    <i class=\"anticon anticon-loading\"></i>\n    <span class=\"anticon-class\">loading</span>\n  </li>\n</ul>\n<style>\nul.anticons-list {\n  margin: 20px 0;\n  list-style: none;\n  width: 120%;\n  overflow: hidden;\n}\nul.anticons-list li {\n  float: left;\n  margin: 5px 5px 5px 0;\n  width: 155px;\n  text-align: center;\n  list-style: none;\n  cursor: pointer;\n  height: 110px;\n  color: #5C6B77;\n  transition: all 0.2s ease;\n  position: relative;\n  padding: 0;\n}\nul.anticons-list li:hover,\nul.anticons-list li.zeroclipboard-is-hover {\n  background-color: #4BB8FF;\n  color: #fff;\n  border-radius: 4px;\n}\nul.anticons-list li.copied.zeroclipboard-is-hover {\n  color: rgba(255,255,255,0.2);\n}\nul.anticons-list li:after {\n  position: absolute;\n  top: 10px;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  content: \"Copied!\";\n  text-align: center;\n  line-height: 110px;\n  color: #fff;\n  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);\n  opacity: 0;\n}\nul.anticons-list li.copied:after {\n  opacity: 1;\n  top: 0;\n}\n.anticon {\n  font-size: 26px;\n  margin: 12px 0 16px;\n}\n.anticon-class {\n  display: block;\n  text-align: center;\n  word-wrap: break-word;\n}\n</style>\n<p></template></p>\n</div>";
-
-/***/ },
-/* 296 */
+/* 280 */,
+/* 281 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"inputnumber\">InputNumber</h1>\n<hr>\n<p>通过鼠标或键盘，输入范围内的数值。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>当需要获取标准数值时。</p>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>基本</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-input-number min=\"1\" max=\"10\" default-value=\"3\" :on-change=\"_handleChange\"></v-input-number>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-input-number</span> <span class=\"token attr-name\" >min</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >max</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>10<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >default-value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>3<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_handleChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-input-number</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>三种大小</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-input-number size=\"large\" min=\"1\" max=\"100000\" default-value=\"3\" :on-change=\"_handleChange\"></v-input-number>\n    <v-input-number min=\"1\" max=\"100000\" default-value=\"3\" :on-change=\"_handleChange\"></v-input-number>\n    <v-input-number size=\"small\" min=\"1\" max=\"100000\" default-value=\"3\" :on-change=\"_handleChange\"></v-input-number>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-input-number</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>large<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >min</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >max</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>100000<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >default-value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>3<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_handleChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-input-number</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-input-number</span> <span class=\"token attr-name\" >min</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >max</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>100000<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >default-value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>3<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_handleChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-input-number</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-input-number</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >min</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >max</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>100000<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >default-value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>3<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_handleChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-input-number</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>不可用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-input-number min=\"1\" max=\"10\" :disabled=\"disabled\" default-value=\"3\"></v-input-number>\n    <div style=\"margin-top: 20px\">\n      <v-button @click=\"_toggle\" type=\"primary\">Toggle disabled</v-button>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-input-number</span> <span class=\"token attr-name\" >min</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >max</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>10<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>disabled<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >default-value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>3<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-input-number</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> 20px</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_toggle<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Toggle disabled<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>大步数</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-input-number default-value=\"1\" step=\"10\"></v-input-number>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-input-number</span> <span class=\"token attr-name\" >default-value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >step</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>10<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-input-number</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<p>属性如下</p>\n<table>\n<thead>\n<tr>\n<th>成员</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>min</td>\n<td>最小值</td>\n<td>Number</td>\n<td>-Infinity</td>\n</tr>\n<tr>\n<td>max</td>\n<td>最大值</td>\n<td>Number</td>\n<td>Infinity</td>\n</tr>\n<tr>\n<td>value</td>\n<td>当前值</td>\n<td>Number</td>\n<td></td>\n</tr>\n<tr>\n<td>step</td>\n<td>每次改变步数</td>\n<td>Number</td>\n<td>1</td>\n</tr>\n<tr>\n<td>defaultValue</td>\n<td>初始值</td>\n<td>Number</td>\n<td></td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>变化回调</td>\n<td>Function</td>\n<td></td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>禁用</td>\n<td>Boolean</td>\n<td>false</td>\n</tr>\n<tr>\n<td>size</td>\n<td>输入框大小</td>\n<td>String</td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 297 */
+/* 282 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"message\">Message</h1>\n<hr>\n<p>全局展示操作反馈信息。</p>\n<h2 id=\"-\">何时使用</h2>\n<ul>\n<li>可提供成功、警告和错误等反馈信息。</li>\n<li>顶部居中显示并自动消失，是一种不打断用户操作的轻量级提示方式。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>成功</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_success\">显示成功提示</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_success<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>显示成功提示<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>错误或失败</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_error\">显示失败提示</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_error<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>显示失败提示<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>普通提示</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_info\">显示普通提醒</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_info<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>显示普通提醒<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>修改延时</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_customTime\">自定义时长提示</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_customTime<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>自定义时长提示<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>加载中</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_showLoading\">显示加载中...</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_showLoading<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>显示加载中...<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<ul>\n<li><code>message.success(content, duration)</code></li>\n<li><code>message.error(content, duration)</code></li>\n<li><code>message.info(content, duration)</code></li>\n<li><code>message.loading(content, duration)</code></li>\n</ul>\n<p>组件提供了三个静态方法，参数如下：</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>content</td>\n<td>提示内容</td>\n<td>React.Element or String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>duration</td>\n<td>自动关闭的延时</td>\n<td>number</td>\n<td>1.5</td>\n</tr>\n</tbody>\n</table>\n<p>还提供了一个全局配置方法：</p>\n<ul>\n<li><code>message.config(options)</code></li>\n</ul>\n<pre><code class=\"lang-js\">message.config({\n  top: 100\n});\n</code></pre>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>top</td>\n<td>消息距离顶部的位置</td>\n<td>Number</td>\n<td>24px</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 298 */
+/* 283 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"notification\">Notification</h1>\n<hr>\n<p>全局展示通知提醒信息。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>在系统右上角显示通知提醒信息。经常用于以下情况：</p>\n<ul>\n<li>较为复杂的通知内容。</li>\n<li>带有交互的通知，给出用户下一步的行动点。</li>\n<li>系统主动推送。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>基本</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_openNotification\">打开通知提醒框</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_openNotification<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>打开通知提醒框<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>自动关闭的延时</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_openNotification2\">打开通知提醒框</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_openNotification2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>打开通知提醒框<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>带有Icon的通知提醒框</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button @click=\"_openNotificationWithIcon('success')\">成功</v-button>\n    <v-button @click=\"_openNotificationWithIcon('info')\">消息</v-button>\n    <v-button @click=\"_openNotificationWithIcon('warn')\">警告</v-button>\n    <v-button @click=\"_openNotificationWithIcon('error')\">错误</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_openNotificationWithIcon(<span class=\"token punctuation\" >'</span>success<span class=\"token punctuation\" >'</span>)<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>成功<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_openNotificationWithIcon(<span class=\"token punctuation\" >'</span>info<span class=\"token punctuation\" >'</span>)<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>消息<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_openNotificationWithIcon(<span class=\"token punctuation\" >'</span>warn<span class=\"token punctuation\" >'</span>)<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>警告<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_openNotificationWithIcon(<span class=\"token punctuation\" >'</span>error<span class=\"token punctuation\" >'</span>)<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>错误<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>回调函数</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_openNotification3\">打开通知提醒框</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_openNotification3<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>打开通知提醒框<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>自定义</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-button type=\"primary\" @click=\"_openNotification4\">打开通知提醒框</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>primary<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_openNotification4<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>打开通知提醒框<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<ul>\n<li><code>notification.success(config)</code></li>\n<li><code>notification.error(config)</code></li>\n<li><code>notification.info(config)</code></li>\n<li><code>notification.warn(config)</code></li>\n<li><code>notification.open(config)</code></li>\n<li><code>notification.close(key: String)</code></li>\n</ul>\n<p>config 参数如下：</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>message</td>\n<td>通知提醒标题，必选</td>\n<td>React.Element or String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>description</td>\n<td>通知提醒内容，必选</td>\n<td>React.Element or String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>btn</td>\n<td>自定义关闭按钮</td>\n<td>React.Element</td>\n<td>无</td>\n</tr>\n<tr>\n<td>key</td>\n<td>当前通知唯一标志</td>\n<td>String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>onClose</td>\n<td>点击默认关闭按钮时触发的回调函数</td>\n<td>Function</td>\n<td>无</td>\n</tr>\n<tr>\n<td>duration</td>\n<td>默认 4.5 秒后自动关闭，配置为 null 则不自动关闭</td>\n<td>Number</td>\n<td>4.5</td>\n</tr>\n</tbody>\n</table>\n<p>还提供了一个全局配置方法，需要在调用前提前配置，一次有效。</p>\n<ul>\n<li><code>notification.config(options)</code></li>\n</ul>\n<pre><code class=\"lang-js\">message.config({\n  top: 100\n});\n</code></pre>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>top</td>\n<td>消息距离顶部的位置</td>\n<td>Number</td>\n<td>24px</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 299 */
+/* 284 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"progress\">Progress</h1>\n<hr>\n<p>展示操作的当前进度。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>在操作需要较长时间才能完成时，为用户显示该操作的当前进度和状态。</p>\n<ul>\n<li>当一个操作会打断当前界面，或者需要在后台运行，且耗时可能超过2秒时；</li>\n<li>当需要显示一个操作完成的百分比时。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>进度条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-progress-line :percent=\"30\"></v-progress-line>\n    <v-progress-line :percent=\"50\" status=\"active\"></v-progress-line>\n    <v-progress-line :percent=\"70\" status=\"exception\"></v-progress-line>\n    <v-progress-line :percent=\"100\"></v-progress-line>\n    <v-progress-line :percent=\"50\" :show-info=\"false\"></v-progress-line>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>30<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>50<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>active<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>70<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>exception<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>100<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>50<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:show-info</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>false<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>小型进度条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-progress-line :percent=\"30\"  :stroke-width=\"5\"></v-progress-line>\n    <v-progress-line :percent=\"50\"  :stroke-width=\"5\" status=\"active\"></v-progress-line>\n    <v-progress-line :percent=\"70\"  :stroke-width=\"5\" status=\"exception\"></v-progress-line>\n    <v-progress-line :percent=\"100\" :stroke-width=\"5\"></v-progress-line>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>30<span class=\"token punctuation\" >\"</span></span>  <span class=\"token attr-name\" >:stroke-width</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>5<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>50<span class=\"token punctuation\" >\"</span></span>  <span class=\"token attr-name\" >:stroke-width</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>5<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>active<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>70<span class=\"token punctuation\" >\"</span></span>  <span class=\"token attr-name\" >:stroke-width</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>5<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>exception<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>100<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:stroke-width</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>5<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>进度圈</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-progress-circle :percent=\"30\"></v-progress-circle>\n    <v-progress-circle :percent=\"70\" status=\"exception\"></v-progress-circle>\n    <v-progress-circle :percent=\"100\"></v-progress-circle>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-circle</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>30<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-circle</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-circle</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>70<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>exception<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-circle</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-circle</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>100<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-circle</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>小型进度圈</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-progress-circle :percent=\"30\"  :width=\"80\"></v-progress-circle>\n    <v-progress-circle :percent=\"70\"  :width=\"80\" status=\"exception\"></v-progress-circle>\n    <v-progress-circle :percent=\"100\" :width=\"80\"></v-progress-circle>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-circle</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>30<span class=\"token punctuation\" >\"</span></span>  <span class=\"token attr-name\" >:width</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>80<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-circle</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-circle</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>70<span class=\"token punctuation\" >\"</span></span>  <span class=\"token attr-name\" >:width</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>80<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>exception<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-circle</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-circle</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>100<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:width</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>80<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-circle</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>进度圈动态展示</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-progress-circle :percent=\"percent\"></v-progress-circle>\n    <v-button-group>\n      <v-button type=\"ghost\" @click=\"_decline\">\n        <v-icon type=\"minus\"></v-icon>\n      </v-button>\n      <v-button type=\"ghost\" @click=\"_increase\">\n        <v-icon type=\"plus\"></v-icon>\n      </v-button>\n    </v-button-group>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-circle</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>percent<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-circle</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button-group</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ghost<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_decline<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>minus<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ghost<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_increase<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>plus<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button-group</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>动态展示</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-progress-line :percent=\"percent\"></v-progress-line>\n    <v-button-group>\n      <v-button type=\"ghost\" @click=\"_decline\">\n        <v-icon type=\"minus\"></v-icon>\n      </v-button>\n      <v-button type=\"ghost\" @click=\"_increase\">\n        <v-icon type=\"plus\"></v-icon>\n      </v-button>\n    </v-button-group>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-progress-line</span> <span class=\"token attr-name\" >:percent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>percent<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-progress-line</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button-group</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ghost<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_decline<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>minus<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ghost<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_increase<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>plus<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button-group</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<h2 id=\"progress-bar\">Progress Bar</h2>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>percent</td>\n<td>百分比</td>\n<td>number</td>\n<td>0</td>\n</tr>\n<tr>\n<td>status</td>\n<td>状态，有两个值normal、exception、active三种状态</td>\n<td>string</td>\n<td>normal</td>\n</tr>\n<tr>\n<td>strokeWidth</td>\n<td>进度条线的宽度，单位是px</td>\n<td>number</td>\n<td>1</td>\n</tr>\n<tr>\n<td>showInfo</td>\n<td>是否显示进度数值和状态图标</td>\n<td>bool</td>\n<td>true</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"progress-circle\">Progress Circle</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>percent</td>\n<td>百分比</td>\n<td>number</td>\n<td>0</td>\n</tr>\n<tr>\n<td>status</td>\n<td>状态，有两个值normal、exception</td>\n<td>string</td>\n<td>normal</td>\n</tr>\n<tr>\n<td>strokeWidth</td>\n<td>进度条线的宽度，单位是进度条画布宽度的百分比</td>\n<td>number</td>\n<td>1</td>\n</tr>\n<tr>\n<td>width</td>\n<td>必填，进度条画布宽度，单位px。这里没有提供height属性设置，Line型高度就是strokeWidth，Circle型高度等于width</td>\n<td>number</td>\n<td>null</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 300 */
+/* 285 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"radio\">Radio</h1>\n<hr>\n<p>单选框。</p>\n<h2 id=\"-\">何时使用</h2>\n<ul>\n<li>用于在多个备选项中选中单个状态。</li>\n<li>和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>最基本的用法</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-radio :on-change=\"_change\"><span>Radio</span></v-radio>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-radio</span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_change<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>Radio<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-radio</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>不可用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-radio :default-checked=\"false\" :disabled=\"disabled\"><span>不可用</span></v-radio>\n    <br>\n    <v-radio :default-checked=\"true\" :disabled=\"disabled\"><span>不可用</span></v-radio>\n    <br>\n    <br>\n    <v-button :type=\"'primary'\" @click=\"_toggleDisabled\">Toggle disabled</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-radio</span> <span class=\"token attr-name\" >:default-checked</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>false<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>disabled<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>不可用<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-radio</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-radio</span> <span class=\"token attr-name\" >:default-checked</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>true<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>disabled<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>不可用<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-radio</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>primary<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_toggleDisabled<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Toggle disabled<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>一组互斥的Radio配合使用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-radio-group\n      :on-change=\"_onGroupChange\"\n      :value=\"groupValue\"\n      :radios=\"[{value: 'a', name: 'A'},{value: 'b', name: 'B'},{value: 'c', name: 'C'},{value: 'd', name: 'D'}]\">\n    </v-radio-group>\n    <br>\n    <br>\n    <p>你选中的是： <span>{{groupValue}}</span></p>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n&lt;v-radio-group\n  :on-change=\"_onGroupChange\"\n  :value=\"groupValue\"\n  :radios=\"[{value: 'a', name: 'A'},{value: 'b', name: 'B'},{value: 'c', name: 'C'},{value: 'd', name: 'D'}]\">\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-radio-group</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span><span class=\"token punctuation\" >></span></span>你选中的是： <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>{{groupValue}}<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>按钮样式的单选组合</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-radio-group\n      :type=\"'button'\"\n      :on-change=\"_onCityChange\"\n      :default-value=\"'hangzhou'\"\n      :radios=\"[{value: 'hangzhou', name: '杭州'},{value: 'shanghai', name: '上海'},{value: 'beijing', name: '北京'},{value: 'chengdu', name: '成都'}]\">\n    </v-radio-group>\n    <div style=\"margin-top: 20px\" v-if=\"cityName\">\n      <span>你选中的是： </span><span>{{cityName}}</span>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n&lt;v-radio-group\n  :type=\"'button'\"\n  :on-change=\"_onCityChange\"\n  :default-value=\"'hangzhou'\"\n  :radios=\"[{value: 'hangzhou', name: '杭州'},{value: 'shanghai', name: '上海'},{value: 'beijing', name: '北京'},{value: 'chengdu', name: '成都'}]\">\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-radio-group</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> 20px</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >v-if</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>cityName<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>你选中的是： <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span><span class=\"token punctuation\" >></span></span>{{cityName}}<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<h3 id=\"radio\">Radio</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>checked</td>\n<td>指定当前是否选中</td>\n<td>Boolean</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>defaultChecked</td>\n<td>初始是否选中</td>\n<td>Boolean</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>value</td>\n<td>根据 value 进行比较，判断是否选中</td>\n<td>String</td>\n<td></td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"radiogroup\">RadioGroup</h3>\n<p>单选框组合，用于包裹一组 <code>Radio</code>。</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>onChange</td>\n<td>选项变化时的回调函数</td>\n<td>Function(e:Event)</td>\n<td>无</td>\n<td>无</td>\n</tr>\n<tr>\n<td>value</td>\n<td>用于设置当前选中的值</td>\n<td>String</td>\n<td>无</td>\n<td>无</td>\n</tr>\n<tr>\n<td>defaultValue</td>\n<td>默认选中的值</td>\n<td>String</td>\n<td>无</td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 301 */
+/* 286 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"select\">Select</h1>\n<hr>\n<p>类似 Select2 的选择器。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>弹出一个下拉菜单给用户选择操作，用于代替原生的选择器，或者需要一个更优雅的多选器时。</p>\n<pre><code class=\"lang-html\">&lt;v-select&gt;\n  &lt;v-option value=&quot;lucy&quot;&gt;lucy&lt;/v-option&gt;\n&lt;/v-select&gt;\n</code></pre>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3></h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-select defaultValue=\"lucy\" :on-change=\"_handleChange\" style=\"width: '200px'\">\n      <v-option value=\"jack\">Jack</v-option>\n      <v-option value=\"lucy\">Lucy</v-option>\n      <v-option value=\"disabled\" disabled>Disabled</v-option>\n      <v-option value=\"okoala\">okoala</v-option>\n    </v-select>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-select</span> <span class=\"token attr-name\" >defaultValue</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>lucy<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_handleChange<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> <span class=\"token string\" >'200px'</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>jack<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Jack<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-option</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>lucy<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Lucy<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-option</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>disabled<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >disabled</span><span class=\"token punctuation\" >></span></span>Disabled<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-option</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-option</span> <span class=\"token attr-name\" >value</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>okoala<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>okoala<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-option</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-select</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<h3 id=\"select-props\">Select props</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>value</td>\n<td>指定当前选中的条目</td>\n<td>string/Array<String></td>\n<td>无</td>\n</tr>\n<tr>\n<td>defaultValue</td>\n<td>指定默认选中的条目</td>\n<td>string/Array<String></td>\n<td>无</td>\n</tr>\n<tr>\n<td>multiple</td>\n<td>支持多选</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>filterOption</td>\n<td>是否根据输入项进行筛选</td>\n<td></td>\n<td>true</td>\n</tr>\n<tr>\n<td>tags</td>\n<td>可以把随意输入的条目作为tag，输入项不需要与下拉选项匹配</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>onSelect</td>\n<td>被选中时调用，参数为选中的option value值</td>\n<td>function</td>\n<td>无</td>\n</tr>\n<tr>\n<td>onDeselect</td>\n<td>取消选中时调用，参数为选中的option value值，仅在multiple或tags模式下生效</td>\n<td>function</td>\n<td>无</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>选中option，或input的value变化(combobox模式下)时，调用此函数</td>\n<td>function</td>\n<td>无</td>\n</tr>\n<tr>\n<td>allowClear</td>\n<td>显示清除按钮</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>placeholder</td>\n<td>选择框默认文字</td>\n<td>string</td>\n<td>无</td>\n</tr>\n<tr>\n<td>searchPlaceholder</td>\n<td>搜索框默认文字</td>\n<td>string</td>\n<td>无</td>\n</tr>\n<tr>\n<td>optionFilterProp</td>\n<td>输入项过滤对应的 option 属性</td>\n<td>string</td>\n<td>value</td>\n</tr>\n<tr>\n<td>combobox</td>\n<td>输入框自动提示模式</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>size</td>\n<td>选择框大小</td>\n<td>String</td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"option-props\">Option props</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>disabled</td>\n<td>是否禁用</td>\n<td>Boolean</td>\n<td>false</td>\n</tr>\n<tr>\n<td>key</td>\n<td>如果react需要你设置此项，此项值与value的值相同，然后可以省略value设置</td>\n<td>String</td>\n<td></td>\n</tr>\n<tr>\n<td>value</td>\n<td>默认根据此属性值进行筛选</td>\n<td>String</td>\n<td>-</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"optgroup-props\">OptGroup props</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>label</td>\n<td>组名</td>\n<td>String/React.Element</td>\n<td>无</td>\n</tr>\n<tr>\n<td>key</td>\n<td></td>\n<td>String</td>\n<td>-</td>\n</tr>\n</tbody>\n</table>\n<p></template></p>\n</div>";
 
 /***/ },
-/* 302 */
+/* 287 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"steps\">Steps</h1>\n<hr>\n<p>引导用户按照流程完成任务的导航条。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。</p>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>简单的步骤条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-steps :current=\"1\">\n      <v-step title=\"已完成\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"进行中\" description=\"这里是多信息的耶哦耶哦哦耶哦耶\"></v-step>\n      <v-step title=\"有一个待运行\" description=\"描述啊描述啊\"></v-step>\n      <v-step title=\"待运行\" description=\"这里是多信息的描述啊\"></v-step>\n    </v-steps>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-steps</span> <span class=\"token attr-name\" >:current</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>已完成<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>进行中<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的耶哦耶哦哦耶哦耶<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>有一个待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>描述啊描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>迷你版</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-steps size=\"small\" :current=\"1\">\n      <v-step title=\"已完成\" status=\"finish\"></v-step>\n      <v-step title=\"进行中\" status=\"process\"></v-step>\n      <v-step title=\"待运行\" status=\"wait\"></v-step>\n      <v-step title=\"待运行\" status=\"wait\"></v-step>\n    </v-steps>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-steps</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>small<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:current</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>已完成<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>finish<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>进行中<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>process<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>wait<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>wait<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>带ICON图标的步骤条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-steps>\n      <v-step title=\"步骤1\" status=\"finish\" icon=\"cloud\"></v-step>\n      <v-step title=\"步骤2\" status=\"process\" icon=\"apple\"></v-step>\n      <v-step title=\"步骤3\" status=\"wait\" icon=\"github\"></v-step>\n    </v-steps>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>步骤1<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>finish<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>cloud<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>步骤2<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>process<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>apple<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>步骤3<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>wait<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >icon</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>github<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>切换到下一步</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div>当前正在执行第 {{currentStep + 1}} 步</div>\n    <br>\n    <v-steps :current=\"currentStep\">\n      <v-step title=\"步骤1\"></v-step>\n      <v-step title=\"步骤2\"></v-step>\n      <v-step title=\"步骤3\"></v-step>\n    </v-steps>\n    <br>\n    <div>\n      <v-button @click=\"_next\">下一步</v-button>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>当前正在执行第 {{currentStep + 1}} 步<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-steps</span> <span class=\"token attr-name\" >:current</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>currentStep<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>步骤1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>步骤2<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>步骤3<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_next<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>下一步<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>竖直方向的步骤条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-steps direction=\"vertical\" :current=\"1\">\n      <v-step title=\"已完成\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"进行中\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"待运行\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"又一个待运行\" description=\"这里是多信息的描述啊\"></v-step>\n    </v-steps>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-steps</span> <span class=\"token attr-name\" >direction</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>vertical<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:current</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>已完成<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>进行中<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>又一个待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>竖直方向的小型步骤条</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-steps size='small' direction=\"vertical\" :current=\"1\">\n      <v-step title=\"已完成\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"进行中\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"待运行\" description=\"这里是多信息的描述啊\"></v-step>\n    </v-steps>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-steps</span> <span class=\"token attr-name\" >size</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>small<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >direction</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>vertical<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:current</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>1<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>已完成<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>进行中<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>自定义状态</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-steps>\n      <v-step title=\"已完成\" status=\"finish\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"进行中\" status=\"process\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"待运行\" status=\"wait\" description=\"这里是多信息的描述啊\"></v-step>\n      <v-step title=\"又一个待运行\" status=\"wait\" description=\"这里是多信息的描述啊\"></v-step>\n    </v-steps>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>已完成<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>finish<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>进行中<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>process<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>wait<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-step</span> <span class=\"token attr-name\" >title</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>又一个待运行<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >status</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>wait<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >description</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>这里是多信息的描述啊<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-step</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-steps</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<pre><code class=\"lang-js\">&lt;v-steps&gt;\n  &lt;v-step title=&quot;第一步&quot;&gt;&lt;/v-step&gt;\n  &lt;v-step title=&quot;第二步&quot;&gt;&lt;/v-step&gt;\n  &lt;v-step title=&quot;第三步&quot;&gt;&lt;/v-step&gt;\n&lt;/v-steps&gt;\n</code></pre>\n<h3 id=\"steps\">Steps</h3>\n<p>整体步骤条。</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>current</td>\n<td>可选参数，指定当前处理正在执行状态的步骤，从0开始记数。在子Step元素中，可以通过status属性覆盖状态。</td>\n<td>number</td>\n<td>无</td>\n<td>0</td>\n</tr>\n<tr>\n<td>size</td>\n<td>可选参数，指定大小（目前只支持普通和迷你两种大小）。</td>\n<td>string</td>\n<td>small, default</td>\n<td>default</td>\n</tr>\n<tr>\n<td>direction</td>\n<td>可选参数，指定步骤条方向（目前支持水平和竖直两种方向，默认水平方向）。</td>\n<td>string</td>\n<td>vertical</td>\n<td>无</td>\n</tr>\n<tr>\n<td>maxDescriptionWidth</td>\n<td>可选参数，指定步骤的详细描述文字的最大宽度。</td>\n<td>number</td>\n<td>无</td>\n<td>100</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"steps-step\">Steps.Step</h3>\n<p>步骤条内的每一个步。</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>status</td>\n<td>可选参数，指定状态。当不配置该属性时，会使用父Steps元素的current来自动指定状态。</td>\n<td>string</td>\n<td>wait, process, finish</td>\n<td>wait</td>\n</tr>\n<tr>\n<td>title</td>\n<td>必要参数，标题。</td>\n<td>string/jsx</td>\n<td>无</td>\n<td>无</td>\n</tr>\n<tr>\n<td>description</td>\n<td>可选参数，步骤的详情描述。</td>\n<td>string/jsx</td>\n<td>无</td>\n<td>空</td>\n</tr>\n<tr>\n<td>icon</td>\n<td>可选参数，步骤的Icon。如果不指定，则使用默认的样式。</td>\n<td>string/jsx</td>\n<td>无</td>\n<td>空</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 303 */
+/* 288 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"switch\">Switch</h1>\n<hr>\n<p>开关选择器。</p>\n<h2 id=\"-\">何时使用</h2>\n<ul>\n<li>需要表示开关状态/两种状态之间的切换时；</li>\n<li>和 <code>checkbox</code>的区别是，切换 <code>switch</code> 会直接触发状态改变，而 <code>checkbox</code> 一般用于状态标记，需要和提交操作配合。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>最简单的用法</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-switch :on-change=\"_change\"></v-switch>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-switch</span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_change<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-switch</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>不可用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-switch :disabled=\"disabled\"></v-switch>\n    <br>\n    <br>\n    <v-button :type=\"'primary'\" @click=\"_toogle\">Toggle disabled</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-switch</span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>disabled<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-switch</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>br</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >:type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >'</span>primary<span class=\"token punctuation\" >'</span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@click</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_toogle<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>Toggle disabled<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>带文字和图标</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-switch :disabled=\"disabled\">\n      <span slot=\"checkedChildren\">开</span>\n      <span slot=\"unCheckedChildren\">关</span>\n    </v-switch>\n    <v-switch :disabled=\"disabled\">\n      <span slot=\"checkedChildren\">\n        <i class=\"anticon anticon-check\"></i>\n      </span>\n      <span slot=\"unCheckedChildren\">\n        <i class=\"anticon anticon-cross\"></i>\n      </span>\n    </v-switch>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-switch</span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>disabled<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>checkedChildren<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>开<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>unCheckedChildren<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>关<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-switch</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-switch</span> <span class=\"token attr-name\" >:disabled</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>disabled<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>checkedChildren<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>i</span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>anticon anticon-check<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>i</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>unCheckedChildren<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>i</span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>anticon anticon-cross<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>i</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-switch</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<h3 id=\"switch\">Switch</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>checked</td>\n<td>指定当前是否选中</td>\n<td>boolean</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>defaultChecked</td>\n<td>初始是否选中</td>\n<td>boolean</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>变化时回调函数</td>\n<td>Function(checked:boolean)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>slot::checkedChildren</td>\n<td>选中时的内容</td>\n<td>slot node</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>slot::unCheckedChildren</td>\n<td>非选中时的内容</td>\n<td>slot node</td>\n<td></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 304 */
+/* 289 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"table\">Table</h1>\n<hr>\n<p>展示行列数据。</p>\n<h2 id=\"-\">何时使用</h2>\n<ul>\n<li>当有大量结构化的数据需要展现时；</li>\n<li>当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。</li>\n</ul>\n<h2 id=\"-\">如何使用</h2>\n<p>Table 有两种模式，本地数据和远程数据模式。</p>\n<p><strong>本地数据模式</strong>是指数据一次性载入内存，纯前端进行分页、筛选、排序等功能。</p>\n<p>通过指定表格的数据源 <code>dataSource</code> 为一个数据数组。</p>\n<p><strong>远程数据模式</strong>是更常见的业务场景，是一次只从服务端读取一页的数据放在前端，执行筛选、排序、切换页码等操作时均向后台发送请求，后台返回当页的数据和相关分页信息。</p>\n<p>通过指定表格的数据源 <code>dataSource</code> 为一个 DataSource 的实例如下。</p>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>简单实用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-table :columns=\"columns\" :data-source=\"dataSource\"></v-table>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-table</span> <span class=\"token attr-name\" >:columns</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>columns<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:data-source</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>dataSource<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-table</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<h3 id=\"table\">Table</h3>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>rowSelection</td>\n<td>列表项是否可选择</td>\n<td>Object</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>pagination</td>\n<td>分页器</td>\n<td>Object</td>\n<td>配置项参考 <a href=\"/components/pagination\">pagination</a>，设为 false 时不显示分页</td>\n<td></td>\n</tr>\n<tr>\n<td>size</td>\n<td>正常或迷你类型</td>\n<td>String</td>\n<td><code>normal</code> or <code>small</code></td>\n<td>normal</td>\n</tr>\n<tr>\n<td>dataSource</td>\n<td>数据源，可以为数组（本地模式）或一个数据源描述对象（远程模式）</td>\n<td>Array or Object</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>columns</td>\n<td>表格列的配置描述，具体项见下表</td>\n<td>Array</td>\n<td></td>\n<td>无</td>\n</tr>\n<tr>\n<td>rowKey</td>\n<td>表格列 key 的取值</td>\n<td>Function(recode, index):string</td>\n<td></td>\n<td>record.key</td>\n</tr>\n<tr>\n<td>expandIconAsCell</td>\n<td>设置展开 Icon 是否单独一列</td>\n<td>Boolean</td>\n<td></td>\n<td>true</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>分页、排序、筛选变化时触发</td>\n<td>Function(pagination, filters, sorter)</td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"column\">Column</h3>\n<p>列描述数据对象，是 columns 中的一项。</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>title</td>\n<td>列头显示文字</td>\n<td>String or React.Element</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>dataIndex</td>\n<td>列数据在 data 中对应的 key</td>\n<td>String</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>key</td>\n<td>React 需要的 key</td>\n<td>String</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>render</td>\n<td>生成复杂数据的渲染函数，参数分别为当前列的值，当前列数据，列索引</td>\n<td>Function(text, record, index) {}</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>filters</td>\n<td>表头的筛选菜单项</td>\n<td>Array</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>onFilter</td>\n<td>本地模式下，确定筛选的运行函数</td>\n<td>Function</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>sorter</td>\n<td>排序函数，本地模式下为一个函数，远程模式下为布尔值</td>\n<td>Function or Boolean</td>\n<td></td>\n<td>无</td>\n</tr>\n<tr>\n<td>width</td>\n<td>列宽度</td>\n<td>String or Number</td>\n<td></td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"datasource\">dataSource</h3>\n<p>远程数据源配置对象。</p>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>url</td>\n<td>数据源地址</td>\n<td>String</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>resolve</td>\n<td>获得数据的解析函数，接收参数为远程数据返回的 result</td>\n<td>Function</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>getPagination</td>\n<td>和后台接口返回的分页数据进行适配的函数，返回值会传给表格中的分页器</td>\n<td>Function</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>getParams</td>\n<td>和后台接口接收的参数进行适配，返回值会作为请求的参数发送</td>\n<td>Function</td>\n<td></td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 305 */
+/* 290 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"tag\">Tag</h1>\n<hr>\n<p>进行标记和分类的小标签。</p>\n<h2 id=\"-\">何时使用</h2>\n<ul>\n<li>用于标记事物的属性和维度。</li>\n<li>进行分类。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>基本</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-tag>标签一</v-tag>\n    <v-tag>标签二</v-tag>\n    <v-tag closable :on-close=\"_onClose\">标签三</v-tag>\n    <v-tag href=\"http://www.baidu.com\">标签四 (链接)</v-tag>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-tag</span><span class=\"token punctuation\" >></span></span>标签一<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-tag</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-tag</span><span class=\"token punctuation\" >></span></span>标签二<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-tag</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-tag</span> <span class=\"token attr-name\" >closable</span> <span class=\"token attr-name\" >:on-close</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_onClose<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>标签三<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-tag</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-tag</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>http://www.baidu.com<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>标签四 (链接)<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-tag</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>四种颜色的类型</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-tag closable color=\"blue\">蓝色</v-tag>\n    <v-tag closable color=\"green\">绿色</v-tag>\n    <v-tag closable color=\"yellow\">黄色</v-tag>\n    <v-tag closable color=\"red\">红色</v-tag>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-tag</span> <span class=\"token attr-name\" >closable</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>blue<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>蓝色<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-tag</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-tag</span> <span class=\"token attr-name\" >closable</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>green<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>绿色<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-tag</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-tag</span> <span class=\"token attr-name\" >closable</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>yellow<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>黄色<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-tag</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-tag</span> <span class=\"token attr-name\" >closable</span> <span class=\"token attr-name\" >color</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>red<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>红色<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-tag</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>可选值</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>href</td>\n<td>链接的地址，会传给 a 标签</td>\n<td>string</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>closable</td>\n<td>标签是否可以关闭</td>\n<td>boolean</td>\n<td></td>\n<td>false</td>\n</tr>\n<tr>\n<td>on-close</td>\n<td>组合时根据此项判定checked</td>\n<td>function</td>\n<td></td>\n<td>无</td>\n</tr>\n<tr>\n<td>color</td>\n<td>标签的色彩</td>\n<td>string</td>\n<td>blue green yellow red</td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 306 */
+/* 291 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"upload\">Upload</h1>\n<hr>\n<p>文件选择上传和拖拽上传控件。</p>\n<h2 id=\"-\">何时使用</h2>\n<p>上传是将信息（网页、文字、图片、视频等）通过网页或者上传工具发布到远程服务器上的过程。</p>\n<ul>\n<li>当需要上传一个或一些文件时。</li>\n<li>当需要展现上传的进度时。</li>\n<li>当需要使用拖拽交互时。</li>\n</ul>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>点击上传</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-upload :name=\"name\" :action=\"action\" :on-change=\"onChange\">\n      <v-button type=\"ghost\">\n        <v-icon type=\"upload\"></v-icon> 点击上传\n      </v-button>\n    </v-upload>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-upload</span> <span class=\"token attr-name\" >:name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>name<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:action</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>action<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>onChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ghost<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>upload<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span> 点击上传\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-upload</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>传入已上传的文件</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-upload :name=\"name\" :action=\"action\" :default-file-list=\"defaultFileList\" :on-change=\"onChange\">\n      <v-button type=\"ghost\">\n        <v-icon type=\"upload\"></v-icon> 点击上传\n      </v-button>\n    </v-upload>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-upload</span> <span class=\"token attr-name\" >:name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>name<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:action</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>action<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:default-file-list</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>defaultFileList<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>onChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ghost<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>upload<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span> 点击上传\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-upload</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>拖拽上传1</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-upload :name=\"name\" :action=\"action\" type=\"drag\" :on-change=\"onChange\">\n      <p class=\"ant-upload-drag-icon\">\n        <v-icon type=\"inbox\"></v-icon>\n      </p>\n      <p class=\"ant-upload-text\">点击或将文件拖拽到此区域上传</p>\n      <p class=\"ant-upload-hint\">支持单个或批量上传，严禁上传公司内部资料及其他违禁文件</p>\n    </v-upload>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-upload</span> <span class=\"token attr-name\" >:name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>name<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:action</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>action<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>drag<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>onChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-drag-icon<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>inbox<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-text<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>点击或将文件拖拽到此区域上传<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>p</span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-upload-hint<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>支持单个或批量上传，严禁上传公司内部资料及其他违禁文件<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>p</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-upload</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>拖拽上传2</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div style=\"width: 246px; height: 146px\">\n      <v-upload :name=\"name\" :action=\"action\" type=\"drag\" :on-change=\"onChange\">\n        <v-icon type=\"plus\"></v-icon>\n      </v-upload>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> 246px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >height</span><span class=\"token punctuation\" >:</span> 146px</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-upload</span> <span class=\"token attr-name\" >:name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>name<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:action</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>action<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>drag<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>onChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>plus<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-upload</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>多文件选择</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <v-upload :name=\"name\" :action=\"action\" :multiple=\"true\" :on-change=\"onChange\">\n      <v-button type=\"ghost\">\n        <v-icon type=\"upload\"></v-icon> 点击上传\n      </v-button>\n    </v-upload>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-upload</span> <span class=\"token attr-name\" >:name</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>name<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:action</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>action<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:multiple</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>true<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >:on-change</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>onChange<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-button</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ghost<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>v-icon</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>upload<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span><span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-icon</span><span class=\"token punctuation\" >></span></span> 点击上传\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-button</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>v-upload</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\">API</h2>\n<table>\n<thead>\n<tr>\n<th>参数</th>\n<th>说明</th>\n<th>类型</th>\n<th>默认值</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>name</td>\n<td>可选参数, 上传的文件</td>\n<td>String</td>\n<td>file</td>\n</tr>\n<tr>\n<td>action</td>\n<td>必选参数, 上传的地址</td>\n<td>String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>data</td>\n<td>可选参数, 上传所需参数</td>\n<td>Object</td>\n<td>无</td>\n</tr>\n<tr>\n<td>multiple</td>\n<td>可选参数, 是否支持多选文件，支持 <code>ie10+</code></td>\n<td>Boolean</td>\n<td>false</td>\n</tr>\n<tr>\n<td>accept</td>\n<td>可选参数, 接受上传的文件类型, 详见 input accept Attribute</td>\n<td>String</td>\n<td>无</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>可选参数, 上传文件改变时的状态，详见 onChange</td>\n<td>Function</td>\n<td>无</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"onchange\">onChange</h3>\n<p>文件状态改变的回调，返回为：</p>\n<pre><code class=\"lang-js\">{\n  file: { ... },\n  fileList: [ ... ],\n  event: { ... }\n}\n</code></pre>\n<ol>\n<li><p><code>file</code> 当前操作的文件对象。</p>\n<pre><code class=\"lang-js\">{\n   uid: &#39;uid&#39;,      // 文件唯一标识，建议设置为负数，防止和内部产生的 id 冲突\n   name: &#39;xx.png&#39;   // 文件名\n   status: &#39;done&#39;,  // 状态有：uploading done error removed\n   response: &#39;{&quot;status&quot;:&quot;success&quot;}&#39;  // 服务端响应内容\n}\n</code></pre>\n<p>如果上传控件是 multiple 时，此参数将为一个对象数组 <code>[file, ...]</code>。</p>\n</li>\n<li><p><code>fileList</code> 当前的文件列表。</p>\n</li>\n<li><code>event</code> 上传中的服务端响应内容，包含了上传进度等信息，高级浏览器支持。</li>\n</ol>\n<h2 id=\"-\">显示下载链接</h2>\n<p>请使用 fileList 属性设置数组项的 url 属性进行展示控制。</p>\n<h2 id=\"ie-note\">IE note</h2>\n<ul>\n<li><a href=\"https://github.com/react-component/upload#ie89-note\">https://github.com/react-component/upload#ie89-note</a></li>\n</ul>\n</div>";
 
 /***/ },
-/* 307 */
+/* 292 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"-\">下载</h1>\n<hr>\n<p>可以使用 npm 进行安装或直接下载文件。</p>\n<h2 id=\"-npm-\">从 npm 安装</h2>\n<p><strong>我们推荐使用 npm 的方式进行开发</strong>，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。</p>\n<p>可以通过 npm 直接安装到本地，使用 <code>require</code> 或 <code>import</code> 进行引用。</p>\n<p><a href=\"https://www.npmjs.org/package/antd\"><img src=\"http://img.shields.io/npm/v/antd.svg?style=flat-square\" alt=\"npm package\"></a></p>\n<pre><code class=\"lang-bash\">$ npm install vue-antd --save\n</code></pre>\n<p>安装最新的开发版本：</p>\n<p><a href=\"https://www.npmjs.org/package/antd\"><img src=\"https://cnpmjs.org/badge/v/antd.svg?&amp;tag=beta&amp;subject=npm\" alt=\"\"></a></p>\n<pre><code class=\"lang-bash\">$ npm install vue-antd@beta --save\n</code></pre>\n<pre><code class=\"lang-json\">&quot;scripts&quot;: {\n  &quot;dev&quot;: &quot;antd server&quot;,\n  &quot;build&quot;: &quot;antd build&quot;\n}\n</code></pre>\n<style>\n.versions {\n  font-weight: bold;\n  color: #C05B4D;\n  font-family: Consolas;\n  margin-left: 0.3em;\n  background: #FFF1E7;\n  padding: 2px 5px;\n  border-radius: 3px;\n}\n</style></div>";
 
 /***/ },
-/* 308 */
+/* 293 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\"><h1 id=\"-\">快速上手</h1>\n<hr>\n<p>Ant Design Vue 致力于提供给程序员愉悦的开发体验。</p>\n<h2 id=\"-\">标准项目</h2>\n<p>实际项目开发中，你会需要 CommonJS 、JSX 构建、打包部署等一系列工程化的需求。\n提供了一套 <code>npm</code> + <code>webpack</code> 的开发工具链来辅助开发，下面我们用一个简单的实例来说明。</p>\n<h3 id=\"3-\">3. 使用组件</h3>\n<h3 id=\"4-\">4. 开发调试</h3>\n<p>一键启动调试，访问 <a href=\"http://127.0.0.1:8000\">http://127.0.0.1:8000</a> 查看效果。</p>\n<pre><code class=\"lang-bash\">$ npm run dev\n</code></pre>\n<h3 id=\"5-\">5. 构建和部署</h3>\n<pre><code class=\"lang-bash\">$ npm run build\n</code></pre>\n<p>入口文件会构建到 <code>dist</code> 目录中，你可以自由部署到不同环境中进行引用。</p>\n<blockquote>\n<p>上述例子用于帮助你理解 Ant Design Vue 的使用流程，并非真实的开发过程，你可以根据自己的项目开发流程进行接入。</p>\n</blockquote>\n<h2 id=\"-\">兼容性</h2>\n<p>Ant Design Vue 支持所有的现代浏览器。</p>\n<h2 id=\"-\">小甜点</h2>\n<ul>\n<li>你可以享用 <code>npm</code> 生态圈里的所有模块。</li>\n<li>我们使用了 <code>babel</code> 的写法来提升编码的愉悦感。</li>\n</ul>\n</div>";
 
 /***/ },
-/* 309 */
+/* 294 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\" _v-5d8fc4e0=\"\"><h1 id=\"align\" _v-5d8fc4e0=\"\">Align</h1>\n<hr _v-5d8fc4e0=\"\">\n<h2 id=\"-\" _v-5d8fc4e0=\"\">组件演示</h2>\n<div class=\"code-boxes\" _v-5d8fc4e0=\"\">\n  <div class=\"code-box code-boxes-col\" _v-5d8fc4e0=\"\">\n          <h3 _v-5d8fc4e0=\"\">简单使用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-5d8fc4e0=\"\">\n    <v-checkbox :default-value=\"show\" :on-change=\"_toggleAlign\" _v-5d8fc4e0=\"\"><span _v-5d8fc4e0=\"\">force align</span></v-checkbox>\n    <v-checkbox :default-value=\"show\" :on-change=\"_toggleMonitor\" _v-5d8fc4e0=\"\"><span _v-5d8fc4e0=\"\">toggle monitor</span></v-checkbox>\n    <div v-el:container=\"\" id=\"container\" style=\"width: 80%; height: 500px; border: 1px solid red\" _v-5d8fc4e0=\"\">\n      <align :align=\"align\" :target=\"_getTarget\" :monitor-window-resize=\"monitor\" _v-5d8fc4e0=\"\">\n        <div style=\"position: absolute; width: 50px; height: 50px; background: yellow\" _v-5d8fc4e0=\"\">source</div>\n      </align>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-5d8fc4e0=\"\"><pre _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;</span>v-checkbox</span> <span class=\"token attr-name\" _v-5d8fc4e0=\"\">:default-value</span><span class=\"token attr-value\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">=</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span>show<span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span></span> <span class=\"token attr-name\" _v-5d8fc4e0=\"\">:on-change</span><span class=\"token attr-value\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">=</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span>_toggleAlign<span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span></span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>force align<span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;/</span>v-checkbox</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;</span>v-checkbox</span> <span class=\"token attr-name\" _v-5d8fc4e0=\"\">:default-value</span><span class=\"token attr-value\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">=</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span>show<span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span></span> <span class=\"token attr-name\" _v-5d8fc4e0=\"\">:on-change</span><span class=\"token attr-value\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">=</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span>_toggleMonitor<span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span></span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>toggle monitor<span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;/</span>v-checkbox</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-5d8fc4e0=\"\"><span class=\"token namespace\" _v-5d8fc4e0=\"\">v-el:</span>container</span> <span class=\"token attr-name\" _v-5d8fc4e0=\"\">id</span><span class=\"token attr-value\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">=</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span>container<span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span></span><span class=\"token style-attr language-css\" _v-5d8fc4e0=\"\"><span class=\"token attr-name\" _v-5d8fc4e0=\"\"> <span class=\"token attr-name\" _v-5d8fc4e0=\"\">style</span></span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">=\"</span><span class=\"token attr-value\" _v-5d8fc4e0=\"\"><span class=\"token property\" _v-5d8fc4e0=\"\">width</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">:</span> 80%<span class=\"token punctuation\" _v-5d8fc4e0=\"\">;</span> <span class=\"token property\" _v-5d8fc4e0=\"\">height</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">:</span> 500px<span class=\"token punctuation\" _v-5d8fc4e0=\"\">;</span> <span class=\"token property\" _v-5d8fc4e0=\"\">border</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">:</span> 1px solid red</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span></span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>\n  &lt;align\n    :align=\"align\"\n    :target=\"_getTarget\"\n    :monitor-window-resize=\"monitor\"&gt;\n    <span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;</span>div</span><span class=\"token style-attr language-css\" _v-5d8fc4e0=\"\"><span class=\"token attr-name\" _v-5d8fc4e0=\"\"> <span class=\"token attr-name\" _v-5d8fc4e0=\"\">style</span></span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">=\"</span><span class=\"token attr-value\" _v-5d8fc4e0=\"\"><span class=\"token property\" _v-5d8fc4e0=\"\">position</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">:</span> absolute<span class=\"token punctuation\" _v-5d8fc4e0=\"\">;</span> <span class=\"token property\" _v-5d8fc4e0=\"\">width</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">:</span> 50px<span class=\"token punctuation\" _v-5d8fc4e0=\"\">;</span> <span class=\"token property\" _v-5d8fc4e0=\"\">height</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">:</span> 50px<span class=\"token punctuation\" _v-5d8fc4e0=\"\">;</span> <span class=\"token property\" _v-5d8fc4e0=\"\">background</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">:</span> yellow</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">\"</span></span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>source<span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;/</span>align</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token tag\" _v-5d8fc4e0=\"\"><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-5d8fc4e0=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n</div></div>";
 
 /***/ },
-/* 310 */
+/* 295 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\" _v-573eadfc=\"\"><h1 id=\"animate\" _v-573eadfc=\"\">Animate</h1>\n<hr _v-573eadfc=\"\">\n<p _v-573eadfc=\"\"><strong _v-573eadfc=\"\">注：通常情况下原始的 <code _v-573eadfc=\"\">v-transition</code> 已经够用了。</strong></p>\n<h2 id=\"-\" _v-573eadfc=\"\">组件演示</h2>\n<div class=\"code-boxes\" _v-573eadfc=\"\">\n  <div class=\"code-box code-boxes-col\" _v-573eadfc=\"\">\n          <h3 _v-573eadfc=\"\">简单使用</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-573eadfc=\"\">\n    <v-checkbox :default-value=\"show\" :on-change=\"_toggle\" _v-573eadfc=\"\"><span _v-573eadfc=\"\">显示</span></v-checkbox>\n    <animate :show=\"show\" transition-name=\"fade\" _v-573eadfc=\"\">\n      <div style=\"margin-top: 20px; width: 200px; height: 200px; background-color: red\" _v-573eadfc=\"\"></div>\n    </animate>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-573eadfc=\"\"><pre _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">&lt;</span>v-checkbox</span> <span class=\"token attr-name\" _v-573eadfc=\"\">:default-value</span><span class=\"token attr-value\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">=</span><span class=\"token punctuation\" _v-573eadfc=\"\">\"</span>show<span class=\"token punctuation\" _v-573eadfc=\"\">\"</span></span> <span class=\"token attr-name\" _v-573eadfc=\"\">:on-change</span><span class=\"token attr-value\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">=</span><span class=\"token punctuation\" _v-573eadfc=\"\">\"</span>_toggle<span class=\"token punctuation\" _v-573eadfc=\"\">\"</span></span><span class=\"token punctuation\" _v-573eadfc=\"\">&gt;</span></span><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-573eadfc=\"\">&gt;</span></span>显示<span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-573eadfc=\"\">&gt;</span></span><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">&lt;/</span>v-checkbox</span><span class=\"token punctuation\" _v-573eadfc=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">&lt;</span>animate</span> <span class=\"token attr-name\" _v-573eadfc=\"\">:show</span><span class=\"token attr-value\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">=</span><span class=\"token punctuation\" _v-573eadfc=\"\">\"</span>show<span class=\"token punctuation\" _v-573eadfc=\"\">\"</span></span> <span class=\"token attr-name\" _v-573eadfc=\"\">transition-name</span><span class=\"token attr-value\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">=</span><span class=\"token punctuation\" _v-573eadfc=\"\">\"</span>fade<span class=\"token punctuation\" _v-573eadfc=\"\">\"</span></span><span class=\"token punctuation\" _v-573eadfc=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">&lt;</span>div</span><span class=\"token style-attr language-css\" _v-573eadfc=\"\"><span class=\"token attr-name\" _v-573eadfc=\"\"> <span class=\"token attr-name\" _v-573eadfc=\"\">style</span></span><span class=\"token punctuation\" _v-573eadfc=\"\">=\"</span><span class=\"token attr-value\" _v-573eadfc=\"\"><span class=\"token property\" _v-573eadfc=\"\">margin-top</span><span class=\"token punctuation\" _v-573eadfc=\"\">:</span> 20px<span class=\"token punctuation\" _v-573eadfc=\"\">;</span> <span class=\"token property\" _v-573eadfc=\"\">width</span><span class=\"token punctuation\" _v-573eadfc=\"\">:</span> 200px<span class=\"token punctuation\" _v-573eadfc=\"\">;</span> <span class=\"token property\" _v-573eadfc=\"\">height</span><span class=\"token punctuation\" _v-573eadfc=\"\">:</span> 200px<span class=\"token punctuation\" _v-573eadfc=\"\">;</span> <span class=\"token property\" _v-573eadfc=\"\">background-color</span><span class=\"token punctuation\" _v-573eadfc=\"\">:</span> red</span><span class=\"token punctuation\" _v-573eadfc=\"\">\"</span></span><span class=\"token punctuation\" _v-573eadfc=\"\">&gt;</span></span><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-573eadfc=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token tag\" _v-573eadfc=\"\"><span class=\"token punctuation\" _v-573eadfc=\"\">&lt;/</span>animate</span><span class=\"token punctuation\" _v-573eadfc=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n</div></div>";
 
 /***/ },
-/* 311 */,
-/* 312 */
+/* 296 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\" _v-391c6d8e=\"\"><h1 id=\"badge\" _v-391c6d8e=\"\">Badge</h1>\n<hr _v-391c6d8e=\"\">\n<p _v-391c6d8e=\"\">图标右上角的圆形徽标数字。</p>\n<h2 id=\"-\" _v-391c6d8e=\"\">何时使用</h2>\n<p _v-391c6d8e=\"\">一般出现在通知图标或头像的右上角，用于显示需要处理的消息条数，通过醒目视觉形式吸引用户处理。</p>\n<h2 id=\"-\" _v-391c6d8e=\"\">组件演示</h2>\n<div class=\"code-boxes\" _v-391c6d8e=\"\">\n  <div class=\"code-box code-boxes-col\" _v-391c6d8e=\"\">\n          <h3 _v-391c6d8e=\"\">简单的徽章显示</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-391c6d8e=\"\">\n    <v-badge :count=\"5\" _v-391c6d8e=\"\">\n      <a href=\"javascript:;\" class=\"head-example\" _v-391c6d8e=\"\"></a>\n    </v-badge>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-391c6d8e=\"\"><pre _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>v-badge</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">:count</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>5<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>a</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">href</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>javascript:;<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span> <span class=\"token attr-name\" _v-391c6d8e=\"\">class</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>head-example<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>a</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>v-badge</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-391c6d8e=\"\">\n          <h3 _v-391c6d8e=\"\">超过99的会显示为99+</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-391c6d8e=\"\">\n    <v-badge :count=\"99\" _v-391c6d8e=\"\">\n      <a href=\"javascript:;\" class=\"head-example\" _v-391c6d8e=\"\"></a>\n    </v-badge>\n    <v-badge :count=\"200\" _v-391c6d8e=\"\">\n      <a href=\"javascript:;\" class=\"head-example\" _v-391c6d8e=\"\"></a>\n    </v-badge>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-391c6d8e=\"\"><pre _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>v-badge</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">:count</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>99<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>a</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">href</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>javascript:;<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span> <span class=\"token attr-name\" _v-391c6d8e=\"\">class</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>head-example<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>a</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>v-badge</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>v-badge</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">:count</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>200<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>a</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">href</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>javascript:;<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span> <span class=\"token attr-name\" _v-391c6d8e=\"\">class</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>head-example<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>a</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>v-badge</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-391c6d8e=\"\">\n          <h3 _v-391c6d8e=\"\">没有具体的数字</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-391c6d8e=\"\">\n    <v-badge :dot=\"true\" _v-391c6d8e=\"\">\n      <v-icon :type=\"'notification'\" _v-391c6d8e=\"\"></v-icon>\n    </v-badge>\n    <v-badge :dot=\"true\" _v-391c6d8e=\"\">\n      <a href=\"javascript:;\" _v-391c6d8e=\"\">一个链接</a>\n    </v-badge>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-391c6d8e=\"\"><pre _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>v-badge</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">:dot</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>true<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">:type</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span><span class=\"token punctuation\" _v-391c6d8e=\"\">'</span>notification<span class=\"token punctuation\" _v-391c6d8e=\"\">'</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>v-badge</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>v-badge</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">:dot</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>true<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>a</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">href</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>javascript:;<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>一个链接<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>a</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>v-badge</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-391c6d8e=\"\">\n          <h3 _v-391c6d8e=\"\">用a标签进行包裹即可</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-391c6d8e=\"\">\n    <a href=\"#\" _v-391c6d8e=\"\">\n      <v-badge :dot=\"true\" _v-391c6d8e=\"\">\n        <span class=\"head-example\" _v-391c6d8e=\"\"></span>\n      </v-badge>\n    </a>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-391c6d8e=\"\"><pre _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>a</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">href</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>#<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>v-badge</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">:dot</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>true<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;</span>span</span> <span class=\"token attr-name\" _v-391c6d8e=\"\">class</span><span class=\"token attr-value\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">=</span><span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span>head-example<span class=\"token punctuation\" _v-391c6d8e=\"\">\"</span></span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>v-badge</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token tag\" _v-391c6d8e=\"\"><span class=\"token punctuation\" _v-391c6d8e=\"\">&lt;/</span>a</span><span class=\"token punctuation\" _v-391c6d8e=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\" _v-391c6d8e=\"\">API</h2>\n<table _v-391c6d8e=\"\">\n<thead _v-391c6d8e=\"\">\n<tr _v-391c6d8e=\"\">\n<th _v-391c6d8e=\"\">参数</th>\n<th _v-391c6d8e=\"\">说明</th>\n<th _v-391c6d8e=\"\">类型</th>\n<th _v-391c6d8e=\"\">可选值</th>\n<th _v-391c6d8e=\"\">默认值</th>\n</tr>\n</thead>\n<tbody _v-391c6d8e=\"\">\n<tr _v-391c6d8e=\"\">\n<td _v-391c6d8e=\"\">count</td>\n<td _v-391c6d8e=\"\">展示的数字，大于 99 时显示为 99+</td>\n<td _v-391c6d8e=\"\">Number</td>\n<td _v-391c6d8e=\"\"></td>\n<td _v-391c6d8e=\"\"></td>\n</tr>\n<tr _v-391c6d8e=\"\">\n<td _v-391c6d8e=\"\">dot</td>\n<td _v-391c6d8e=\"\">不展示数字，只有一个小红点</td>\n<td _v-391c6d8e=\"\">boolean</td>\n<td _v-391c6d8e=\"\"></td>\n<td _v-391c6d8e=\"\">false</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 313 */
+/* 297 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\" _v-62597c0c=\"\"><h1 id=\"button\" _v-62597c0c=\"\">Button</h1>\n<hr _v-62597c0c=\"\">\n<p _v-62597c0c=\"\">按钮用于开始一个即时操作。</p>\n<h2 id=\"-\" _v-62597c0c=\"\">何时使用</h2>\n<p _v-62597c0c=\"\">标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。</p>\n<h2 id=\"-\" _v-62597c0c=\"\">如何使用</h2>\n<ul _v-62597c0c=\"\">\n<li _v-62597c0c=\"\"><p _v-62597c0c=\"\">通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：<code _v-62597c0c=\"\">type</code> -&gt; <code _v-62597c0c=\"\">shape</code> -&gt; <code _v-62597c0c=\"\">size</code> -&gt; <code _v-62597c0c=\"\">loading</code> -&gt; <code _v-62597c0c=\"\">disabled</code></p>\n</li>\n<li _v-62597c0c=\"\"><p _v-62597c0c=\"\">按钮的属性说明如下：</p>\n</li>\n</ul>\n<table _v-62597c0c=\"\">\n<thead _v-62597c0c=\"\">\n<tr _v-62597c0c=\"\">\n<th _v-62597c0c=\"\">属性</th>\n<th _v-62597c0c=\"\">说明</th>\n<th _v-62597c0c=\"\">类型</th>\n<th _v-62597c0c=\"\">默认值</th>\n</tr>\n</thead>\n<tbody _v-62597c0c=\"\">\n<tr _v-62597c0c=\"\">\n<td _v-62597c0c=\"\">type</td>\n<td _v-62597c0c=\"\">设置按钮类型，可选值为 <code _v-62597c0c=\"\">primary</code> <code _v-62597c0c=\"\">ghost</code> 或者不设</td>\n<td _v-62597c0c=\"\">Enum</td>\n<td _v-62597c0c=\"\">undefined</td>\n</tr>\n<tr _v-62597c0c=\"\">\n<td _v-62597c0c=\"\">htmlType</td>\n<td _v-62597c0c=\"\">设置 <code _v-62597c0c=\"\">button</code> 原生的 <code _v-62597c0c=\"\">type</code> 值，可选值请参考 HTML标准</td>\n<td _v-62597c0c=\"\">Enum</td>\n<td _v-62597c0c=\"\"><code _v-62597c0c=\"\">button</code></td>\n</tr>\n<tr _v-62597c0c=\"\">\n<td _v-62597c0c=\"\">shape</td>\n<td _v-62597c0c=\"\">设置按钮形状，可选值为 <code _v-62597c0c=\"\">circle</code> <code _v-62597c0c=\"\">circle-outline</code> 或者不设</td>\n<td _v-62597c0c=\"\">Enum</td>\n<td _v-62597c0c=\"\">undefined</td>\n</tr>\n<tr _v-62597c0c=\"\">\n<td _v-62597c0c=\"\">size</td>\n<td _v-62597c0c=\"\">设置按钮大小，可选值为 <code _v-62597c0c=\"\">sm</code> <code _v-62597c0c=\"\">lg</code> 或者不设</td>\n<td _v-62597c0c=\"\">Enum</td>\n<td _v-62597c0c=\"\">undefined</td>\n</tr>\n<tr _v-62597c0c=\"\">\n<td _v-62597c0c=\"\">loading</td>\n<td _v-62597c0c=\"\">设置按钮载入状态，存在为 <code _v-62597c0c=\"\">true</code>，不存在为 <code _v-62597c0c=\"\">false</code>，或直接设置值，如：<code _v-62597c0c=\"\">loading=\"true\"</code></td>\n<td _v-62597c0c=\"\">Bool</td>\n<td _v-62597c0c=\"\">false</td>\n</tr>\n<tr _v-62597c0c=\"\">\n<td _v-62597c0c=\"\">onClick</td>\n<td _v-62597c0c=\"\"><code _v-62597c0c=\"\">click</code> 事件的 handler</td>\n<td _v-62597c0c=\"\">Function</td>\n<td _v-62597c0c=\"\"><code _v-62597c0c=\"\">function() {}</code></td>\n</tr>\n</tbody>\n</table>\n<ul _v-62597c0c=\"\">\n<li _v-62597c0c=\"\"><code _v-62597c0c=\"\">&lt;Button&gt;Hello world!&lt;/Button&gt;</code> 最终会被渲染为 <code _v-62597c0c=\"\">&lt;button&gt;Hello world!&lt;/button&gt;</code>，并且除了上表中的属性，其它属性都会直接传到 <code _v-62597c0c=\"\">&lt;button&gt;&lt;/button&gt;</code></li>\n</ul>\n<h2 id=\"-\" _v-62597c0c=\"\">组件演示</h2>\n<div class=\"code-boxes\" _v-62597c0c=\"\">\n  <div class=\"code-box code-boxes-col\" _v-62597c0c=\"\">\n          <h3 _v-62597c0c=\"\">按钮类型</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-62597c0c=\"\">\n    <v-button type=\"primary\" _v-62597c0c=\"\">主按钮</v-button>\n    <v-button _v-62597c0c=\"\">次按钮</v-button>\n    <v-button type=\"ghost\" _v-62597c0c=\"\">幽灵按钮</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-62597c0c=\"\"><pre _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>主按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>次按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>幽灵按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-62597c0c=\"\">\n          <h3 _v-62597c0c=\"\">按钮尺寸</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-62597c0c=\"\">\n    <v-button type=\"primary\" size=\"large\" _v-62597c0c=\"\">大号按钮</v-button>\n    <v-button type=\"primary\" _v-62597c0c=\"\">中号按钮(默认)</v-button>\n    <v-button type=\"primary\" size=\"small\" _v-62597c0c=\"\">小号按钮</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-62597c0c=\"\"><pre _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>large<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>大号按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>中号按钮(默认)<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>small<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>小号按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-62597c0c=\"\">\n          <h3 _v-62597c0c=\"\">按钮形状</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-62597c0c=\"\">\n    <v-button type=\"primary\" shape=\"circle\" size=\"large\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n    <v-button type=\"primary\" shape=\"circle\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n    <v-button type=\"primary\" shape=\"circle\" size=\"small\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n    <br _v-62597c0c=\"\">\n    <v-button type=\"ghost\" shape=\"circle-outline\" size=\"large\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n    <v-button type=\"ghost\" shape=\"circle-outline\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n    <v-button type=\"ghost\" shape=\"circle-outline\" size=\"small\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-62597c0c=\"\"><pre _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>large<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>small<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>br</span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle-outline<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>large<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle-outline<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle-outline<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>small<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-62597c0c=\"\">\n          <h3 _v-62597c0c=\"\">按钮状态</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-62597c0c=\"\">\n    <h4 _v-62597c0c=\"\">使用 <code _v-62597c0c=\"\">disabled</code> 属性</h4>\n    <v-button type=\"primary\" _v-62597c0c=\"\">主按钮</v-button>\n    <v-button type=\"primary\" disabled=\"\" _v-62597c0c=\"\">主按钮(失效)</v-button>\n    <br _v-62597c0c=\"\">\n    <v-button _v-62597c0c=\"\">次按钮</v-button>\n    <v-button disabled=\"\" _v-62597c0c=\"\">次按钮(失效)</v-button>\n    <br _v-62597c0c=\"\">\n    <h4 _v-62597c0c=\"\">使用 <code _v-62597c0c=\"\">.disabled</code> class</h4>\n    <v-button type=\"ghost\" _v-62597c0c=\"\">幽灵按钮</v-button>\n    <v-button type=\"ghost\" class=\"disabled\" _v-62597c0c=\"\">幽灵按钮(失效)</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-62597c0c=\"\"><pre _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>使用 <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>code</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>disabled<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>code</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span> 属性<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>主按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">disabled</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>主按钮(失效)<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>br</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>次按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">disabled</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>次按钮(失效)<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>br</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>使用 <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>code</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>.disabled<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>code</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span> class<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>幽灵按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">class</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>disabled<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>幽灵按钮(失效)<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-62597c0c=\"\">\n          <h3 _v-62597c0c=\"\">按钮加载中</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-62597c0c=\"\">\n    <v-button type=\"primary\" :loading=\"true\" size=\"large\" _v-62597c0c=\"\">加载中</v-button>\n    <v-button type=\"primary\" :loading=\"true\" _v-62597c0c=\"\">加载中</v-button>\n    <v-button type=\"primary\" :loading=\"true\" size=\"small\" _v-62597c0c=\"\">加载中</v-button>\n    <v-button type=\"primary\" :loading=\"loading\" @click=\"_enterLoading\" _v-62597c0c=\"\">点击变加载</v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-62597c0c=\"\"><pre _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">:loading</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>true<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>large<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>加载中<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">:loading</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>true<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>加载中<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">:loading</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>true<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>small<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>加载中<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">:loading</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>loading<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">@click</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>_enterLoading<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>点击变加载<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-62597c0c=\"\">\n          <h3 _v-62597c0c=\"\">按钮组合</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-62597c0c=\"\">\n    <h4 _v-62597c0c=\"\">基本组合</h4>\n    <v-button-group _v-62597c0c=\"\">\n      <v-button type=\"primary\" _v-62597c0c=\"\">确定</v-button>\n      <v-button type=\"primary\" _v-62597c0c=\"\">取消</v-button>\n    </v-button-group>\n    <v-button-group _v-62597c0c=\"\">\n      <v-button _v-62597c0c=\"\">左</v-button>\n      <v-button _v-62597c0c=\"\">中</v-button>\n      <v-button _v-62597c0c=\"\">右</v-button>\n    </v-button-group>\n    <v-button-group _v-62597c0c=\"\">\n      <v-button type=\"primary\" _v-62597c0c=\"\">左</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">中</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">中</v-button>\n      <v-button _v-62597c0c=\"\">右</v-button>\n    </v-button-group>\n    <h4 _v-62597c0c=\"\">带图标按钮组合 </h4>\n    <v-button-group _v-62597c0c=\"\">\n      <v-button type=\"primary\" _v-62597c0c=\"\">\n        <v-icon type=\"left\" _v-62597c0c=\"\"></v-icon>\n        <span _v-62597c0c=\"\">后退</span>\n      </v-button>\n      <v-button type=\"primary\" _v-62597c0c=\"\">\n        前进\n        <v-icon type=\"right\" _v-62597c0c=\"\"></v-icon>\n      </v-button>\n    </v-button-group>\n    <v-button-group _v-62597c0c=\"\">\n      <v-button type=\"primary\" _v-62597c0c=\"\">\n        <v-icon type=\"cloud\" _v-62597c0c=\"\"></v-icon>\n      </v-button>\n      <v-button type=\"primary\" _v-62597c0c=\"\">\n        <v-icon type=\"cloud-download\" _v-62597c0c=\"\"></v-icon>\n      </v-button>\n    </v-button-group>\n    <h4 _v-62597c0c=\"\">多个组合</h4>\n    <v-button-group _v-62597c0c=\"\">\n      <v-button type=\"ghost\" _v-62597c0c=\"\">1</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">2</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">3</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">4</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">\n        <span _v-62597c0c=\"\">前进</span>\n        <v-icon type=\"right\" _v-62597c0c=\"\"></v-icon>\n      </v-button>\n    </v-button-group>\n    <h4 _v-62597c0c=\"\">尺寸</h4>\n    <v-button-group size=\"large\" _v-62597c0c=\"\">\n      <v-button type=\"ghost\" _v-62597c0c=\"\">大</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">大</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">大</v-button>\n    </v-button-group>\n    <v-button-group _v-62597c0c=\"\">\n      <v-button type=\"ghost\" _v-62597c0c=\"\">默认</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">默认</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">默认</v-button>\n    </v-button-group>\n    <v-button-group size=\"small\" _v-62597c0c=\"\">\n      <v-button type=\"ghost\" _v-62597c0c=\"\">小</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">小</v-button>\n      <v-button type=\"ghost\" _v-62597c0c=\"\">小</v-button>\n    </v-button-group>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-62597c0c=\"\"><pre _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>基本组合<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>确定<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>取消<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>左<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>中<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>右<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>左<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>中<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>中<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>右<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>带图标按钮组合 <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>left<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>后退<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n    前进\n    <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>right<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>cloud<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>cloud-download<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>多个组合<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>1<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>2<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>3<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>4<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>前进<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>right<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>尺寸<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>h4</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>large<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>大<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>大<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>大<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>默认<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>默认<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>默认<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button-group</span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>small<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>小<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>小<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>小<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button-group</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-62597c0c=\"\">\n          <h3 _v-62597c0c=\"\">图标按钮</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-62597c0c=\"\">\n    <v-button type=\"primary\" shape=\"circle\" size=\"large\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\"></v-icon>\n    </v-button>\n    <v-button type=\"primary\" size=\"large\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\"></v-icon>\n      <span _v-62597c0c=\"\">大按钮</span>\n    </v-button>\n    <br _v-62597c0c=\"\">\n    <v-button type=\"primary\" shape=\"circle\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\"></v-icon>\n    </v-button>\n    <v-button type=\"primary\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\"></v-icon>\n      <span _v-62597c0c=\"\">中按钮</span>\n    </v-button>\n    <br _v-62597c0c=\"\">\n    <v-button type=\"primary\" shape=\"circle\" size=\"small\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\"></v-icon>\n    </v-button>\n    <v-button type=\"primary\" size=\"small\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\"></v-icon>\n      <span _v-62597c0c=\"\">小按钮</span>\n    </v-button>\n    <br _v-62597c0c=\"\">\n    <v-button type=\"ghost\" shape=\"circle-outline\" size=\"large\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n    <v-button type=\"ghost\" shape=\"circle-outline\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n    <v-button type=\"ghost\" shape=\"circle-outline\" size=\"small\" _v-62597c0c=\"\">\n      <v-icon type=\"search\" _v-62597c0c=\"\">\n    </v-icon></v-button>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-62597c0c=\"\"><pre _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>large<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>large<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>大按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>br</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>中按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>br</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>small<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>primary<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>small<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-icon</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>小按钮<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>br</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle-outline<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>large<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle-outline<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>ghost<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">shape</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>circle-outline<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token attr-name\" _v-62597c0c=\"\">size</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>small<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;</span>v-icon</span> <span class=\"token attr-name\" _v-62597c0c=\"\">type</span><span class=\"token attr-value\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">=</span><span class=\"token punctuation\" _v-62597c0c=\"\">\"</span>search<span class=\"token punctuation\" _v-62597c0c=\"\">\"</span></span> <span class=\"token punctuation\" _v-62597c0c=\"\">/&gt;</span></span>\n<span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token tag\" _v-62597c0c=\"\"><span class=\"token punctuation\" _v-62597c0c=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-62597c0c=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n</div></div>";
 
 /***/ },
-/* 314 */
+/* 298 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\" _v-61579404=\"\"><h1 id=\"layout-\" _v-61579404=\"\">Layout 布局</h1>\n<hr _v-61579404=\"\">\n<p _v-61579404=\"\">24 栅格系统。</p>\n<h2 id=\"-\" _v-61579404=\"\">设计理念</h2>\n<div class=\"row demo-row\" _v-61579404=\"\">\n  <div class=\"col-24 demo-col demo-col-1\" _v-61579404=\"\">\n    100%\n  </div>\n</div>\n<div class=\"row demo-row\" _v-61579404=\"\">\n  <div class=\"col-6 demo-col demo-col-2\" _v-61579404=\"\">\n    25%\n  </div>\n  <div class=\"col-6 demo-col demo-col-3\" _v-61579404=\"\">\n    25%\n  </div>\n  <div class=\"col-6 demo-col demo-col-2\" _v-61579404=\"\">\n    25%\n  </div>\n  <div class=\"col-6 demo-col demo-col-3\" _v-61579404=\"\">\n    25%\n  </div>\n</div>\n<div class=\"row demo-row\" _v-61579404=\"\">\n  <div class=\"col-8 demo-col demo-col-4\" _v-61579404=\"\">\n    33.33%\n  </div>\n  <div class=\"col-8 demo-col demo-col-5\" _v-61579404=\"\">\n    33.33%\n  </div>\n  <div class=\"col-8 demo-col demo-col-4\" _v-61579404=\"\">\n    33.33%\n  </div>\n</div>\n<div class=\"row demo-row\" _v-61579404=\"\">\n  <div class=\"col-12 demo-col demo-col-1\" _v-61579404=\"\">\n    50%\n  </div>\n  <div class=\"col-12 demo-col demo-col-3\" _v-61579404=\"\">\n    50%\n  </div>\n</div>\n<div class=\"row demo-row\" _v-61579404=\"\">\n  <div class=\"col-16 demo-col demo-col-4\" _v-61579404=\"\">\n    66.66%\n  </div>\n  <div class=\"col-8 demo-col demo-col-5\" _v-61579404=\"\">\n    33.33%\n  </div>\n</div>\n<p _v-61579404=\"\">在多数业务情况下，Ant Design需要在设计区域内解决大量信息收纳的问题，因此在12栅格系统的基础上，我们将整个设计建议区域按照24等分的原则进行划分。</p>\n<p _v-61579404=\"\">划分之后的信息区块我们称之为“盒子”。建议横向排列的盒子数量最多四个，最少一个。“盒子”在整个屏幕上占比见上图。设计部分基于盒子的单位定制盒子内部的排版规则，以保证视觉层面的舒适感。</p>\n<h2 id=\"-\" _v-61579404=\"\">概述</h2>\n<p _v-61579404=\"\">布局的栅格化系统，我们是基于行（row）和列（col）来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：</p>\n<ul _v-61579404=\"\">\n<li _v-61579404=\"\">通过<code _v-61579404=\"\">row</code>在水平方向建立一组<code _v-61579404=\"\">column</code>（简写col）</li>\n<li _v-61579404=\"\">你的内容应当放置于<code _v-61579404=\"\">col</code>内，并且，只有<code _v-61579404=\"\">col</code>可以作为<code _v-61579404=\"\">row</code>的直接元素</li>\n<li _v-61579404=\"\">栅格系统中的列是指1到24的值来表示其跨越的范围。例如，三个等宽d的列可以使用<code _v-61579404=\"\">.col-8</code>来创建</li>\n<li _v-61579404=\"\">如果一个<code _v-61579404=\"\">row</code>中的<code _v-61579404=\"\">col</code>总和超过24，那么多余的<code _v-61579404=\"\">col</code>会作为一个整体另起一行排列</li>\n</ul>\n<h2 id=\"flex-\" _v-61579404=\"\">Flex 布局</h2>\n<p _v-61579404=\"\">我们的栅格化系统支持 Flex 布局，允许子元素在父节点内的水平对齐方式 - 居左、居中、居右、等宽排列、分散排列。子元素与子元素之间，支持顶部对齐、垂直居中对齐、底部对齐的方式。同时，支持使用 order 来定义元素的排列顺序。</p>\n<p _v-61579404=\"\">Flex 布局是基于 24 栅格来定义每一个“盒子”的宽度，但排版则不拘泥于栅格。</p>\n<h2 id=\"-\" _v-61579404=\"\">组件演示</h2>\n<div class=\"code-boxes\" _v-61579404=\"\">\n  <div class=\"code-box code-boxes-col\" _v-61579404=\"\">\n          <h3 _v-61579404=\"\">基础布局</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-61579404=\"\">\n    <v-row _v-61579404=\"\">\n      <v-col span=\"12\" _v-61579404=\"\">.col-12</v-col>\n      <v-col span=\"12\" _v-61579404=\"\">.col-12</v-col>\n    </v-row>\n    <v-row class=\"testRowClassName\" _v-61579404=\"\">\n      <v-col span=\"8\" _v-61579404=\"\">.col-8</v-col>\n      <v-col span=\"8\" _v-61579404=\"\">.col-8</v-col>\n      <v-col span=\"8\" class=\"testColClassName\" _v-61579404=\"\">.col-8</v-col>\n    </v-row>\n    <v-row _v-61579404=\"\">\n      <v-col span=\"6\" _v-61579404=\"\">.col-6</v-col>\n      <v-col span=\"6\" _v-61579404=\"\">.col-6</v-col>\n      <v-col span=\"6\" _v-61579404=\"\">.col-6</v-col>\n      <v-col span=\"6\" _v-61579404=\"\">.col-6</v-col>\n    </v-row>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-61579404=\"\"><pre _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>12<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-12<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>12<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-12<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">class</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>testRowClassName<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>8<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-8<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>8<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-8<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>8<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">class</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>testColClassName<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-8<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-6<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-6<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-6<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-6<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-61579404=\"\">\n          <h3 _v-61579404=\"\">左右偏移</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-61579404=\"\">\n    <v-row _v-61579404=\"\">\n      <v-col span=\"8\" _v-61579404=\"\">.col-8</v-col>\n      <v-col span=\"8\" offset=\"8\" _v-61579404=\"\">.col-8</v-col>\n    </v-row>\n    <v-row _v-61579404=\"\">\n      <v-col span=\"6\" offset=\"6\" _v-61579404=\"\">.col-6 .col-offset-6</v-col>\n      <v-col span=\"6\" offset=\"6\" _v-61579404=\"\">.col-6 .col-offset-6</v-col>\n    </v-row>\n    <v-row _v-61579404=\"\">\n      <v-col span=\"12\" offset=\"6\" _v-61579404=\"\">.col-12 .col-offset-6</v-col>\n    </v-row>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-61579404=\"\"><pre _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>8<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-8<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>8<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">offset</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>8<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-8<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">offset</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-6 .col-offset-6<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">offset</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-6 .col-offset-6<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>12<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">offset</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-12 .col-offset-6<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-61579404=\"\">\n          <h3 _v-61579404=\"\">布局排序</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-61579404=\"\">\n    <v-row _v-61579404=\"\">\n      <v-col span=\"18\" push=\"6\" _v-61579404=\"\">.col-18 .col-push-6</v-col>\n      <v-col span=\"6\" pull=\"18\" _v-61579404=\"\">.col-6 .col-pull-18</v-col>\n    </v-row>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-61579404=\"\"><pre _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>18<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">push</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-18 .col-push-6<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">pull</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>18<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-6 .col-pull-18<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-61579404=\"\">\n          <h3 _v-61579404=\"\">Flex布局</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-61579404=\"\">\n    <p _v-61579404=\"\">子元素居左排列</p>\n    <v-row type=\"flex\" justify=\"start\" _v-61579404=\"\">\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n    </v-row>\n    <p _v-61579404=\"\">子元素居中排列</p>\n    <v-row type=\"flex\" justify=\"center\" _v-61579404=\"\">\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n    </v-row>\n    <p _v-61579404=\"\">子元素居右排列</p>\n    <v-row type=\"flex\" justify=\"end\" _v-61579404=\"\">\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n    </v-row>\n    <p _v-61579404=\"\">子元素等宽排列</p>\n    <v-row type=\"flex\" justify=\"space-between\" _v-61579404=\"\">\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n    </v-row>\n    <p _v-61579404=\"\">子元素分散对齐</p>\n    <v-row type=\"flex\" justify=\"space-around\" _v-61579404=\"\">\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n      <v-col span=\"4\" _v-61579404=\"\">.col-4</v-col>\n    </v-row>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-61579404=\"\"><pre _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>子元素居左排列<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">justify</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>start<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>子元素居中排列<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">justify</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>center<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>子元素居右排列<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">justify</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>end<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>子元素等宽排列<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">justify</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>space-between<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>子元素分散对齐<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">justify</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>space-around<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-61579404=\"\">\n          <h3 _v-61579404=\"\">Flex对齐</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-61579404=\"\">\n    <p _v-61579404=\"\">顶部对齐</p>\n    <v-row type=\"flex\" justify=\"center\" align=\"top\" _v-61579404=\"\">\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 100px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 50px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 120px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 80px\" _v-61579404=\"\">.col-4</p></v-col>\n    </v-row>\n    <p _v-61579404=\"\">居中对齐</p>\n    <v-row type=\"flex\" justify=\"space-around\" align=\"middle\" _v-61579404=\"\">\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 100px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 50px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 120px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 80px\" _v-61579404=\"\">.col-4</p></v-col>\n    </v-row>\n    <p _v-61579404=\"\">底部对齐</p>\n    <v-row type=\"flex\" justify=\"space-between\" align=\"bottom\" _v-61579404=\"\">\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 100px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 50px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 120px\" _v-61579404=\"\">.col-4</p></v-col>\n      <v-col span=\"4\" _v-61579404=\"\"><p style=\"height: 80px\" _v-61579404=\"\">.col-4</p></v-col>\n    </v-row>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-61579404=\"\"><pre _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>顶部对齐<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">justify</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>center<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">align</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>top<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 100px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 50px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 120px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 80px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>居中对齐<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">justify</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>space-around<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">align</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>middle<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 100px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 50px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 120px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 80px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>底部对齐<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span> <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">justify</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>space-between<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">align</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>bottom<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 100px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 50px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 120px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>p</span><span class=\"token style-attr language-css\" _v-61579404=\"\"><span class=\"token attr-name\" _v-61579404=\"\"> <span class=\"token attr-name\" _v-61579404=\"\">style</span></span><span class=\"token punctuation\" _v-61579404=\"\">=\"</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token property\" _v-61579404=\"\">height</span><span class=\"token punctuation\" _v-61579404=\"\">:</span> 80px</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>.col-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-61579404=\"\">\n          <h3 _v-61579404=\"\">Flex排序</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-61579404=\"\">\n    <v-row type=\"flex\" _v-61579404=\"\">\n      <v-col span=\"6\" order=\"4\" _v-61579404=\"\">1 col-order-4</v-col>\n      <v-col span=\"6\" order=\"3\" _v-61579404=\"\">2 col-order-3</v-col>\n      <v-col span=\"6\" order=\"2\" _v-61579404=\"\">3 col-order-2</v-col>\n      <v-col span=\"6\" order=\"1\" _v-61579404=\"\">4 col-order-1</v-col>\n    </v-row>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-61579404=\"\"><pre _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-row</span>  <span class=\"token attr-name\" _v-61579404=\"\">type</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>flex<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">order</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>4<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>1 col-order-4<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">order</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>3<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>2 col-order-3<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">order</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>2<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>3 col-order-2<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;</span>v-col</span> <span class=\"token attr-name\" _v-61579404=\"\">span</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>6<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span> <span class=\"token attr-name\" _v-61579404=\"\">order</span><span class=\"token attr-value\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">=</span><span class=\"token punctuation\" _v-61579404=\"\">\"</span>1<span class=\"token punctuation\" _v-61579404=\"\">\"</span></span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>4 col-order-1<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-col</span><span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-61579404=\"\"><span class=\"token tag\" _v-61579404=\"\"><span class=\"token punctuation\" _v-61579404=\"\">&lt;/</span>v-row</span> <span class=\"token punctuation\" _v-61579404=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n</div></div>";
 
 /***/ },
-/* 315 */
+/* 299 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"markdown\" _v-27f6b4a9=\"\"><h1 id=\"popconfirm\" _v-27f6b4a9=\"\">Popconfirm</h1>\n<hr _v-27f6b4a9=\"\">\n<p _v-27f6b4a9=\"\">点击元素，弹出气泡式的确认框。</p>\n<h2 id=\"-\" _v-27f6b4a9=\"\">何时使用</h2>\n<p _v-27f6b4a9=\"\">目标元素的操作需要用户进一步的确认时，在目标元素附近弹出浮层提示，询问用户。</p>\n<p _v-27f6b4a9=\"\">和 <code _v-27f6b4a9=\"\">confirm</code> 弹出的全屏居中模态对话框相比，交互形式更轻量。</p>\n<h2 id=\"api\" _v-27f6b4a9=\"\">API</h2>\n<div class=\"code-boxes\" _v-27f6b4a9=\"\">\n  <div class=\"code-box code-boxes-col\" _v-27f6b4a9=\"\">\n          <h3 _v-27f6b4a9=\"\">基本</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-27f6b4a9=\"\">\n    <v-popconfirm title=\"确定要删除这个任务吗？\" :on-confirm=\"_confirm\" :on-cancel=\"_cancel\" _v-27f6b4a9=\"\">\n      <a href=\"javascript:;\" _v-27f6b4a9=\"\">删除</a>\n    </v-popconfirm>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-27f6b4a9=\"\"><pre _v-27f6b4a9=\"\">&lt;v-popconfirm title=\"确定要删除这个任务吗？\"\n  :on-confirm=\"_confirm\"\n  :on-cancel=\"_cancel\"&gt;\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>a</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">href</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>javascript:;<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>删除<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>a</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-27f6b4a9=\"\">\n          <h3 _v-27f6b4a9=\"\">偏移</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-27f6b4a9=\"\">\n    <div style=\"margin-left: 60px;\" _v-27f6b4a9=\"\">\n      <v-popconfirm placement=\"topLeft\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">上左</v-button>\n      </v-popconfirm>\n      <v-popconfirm placement=\"top\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">上边</v-button>\n      </v-popconfirm>\n      <v-popconfirm placement=\"topRight\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">上右</v-button>\n      </v-popconfirm>\n    </div>\n    <div style=\"width: 60px; float: left\" _v-27f6b4a9=\"\">\n      <v-popconfirm placement=\"leftTop\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">左上</v-button>\n      </v-popconfirm>\n      <v-popconfirm placement=\"left\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">左边</v-button>\n      </v-popconfirm>\n      <v-popconfirm placement=\"leftBottom\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">左下</v-button>\n      </v-popconfirm>\n    </div>\n    <div style=\"width: 60px; margin-left: 270px;\" _v-27f6b4a9=\"\">\n      <v-popconfirm placement=\"rightTop\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">右上</v-button>\n      </v-popconfirm>\n      <v-popconfirm placement=\"right\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">右边</v-button>\n      </v-popconfirm>\n      <v-popconfirm placement=\"rightBottom\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">右下</v-button>\n      </v-popconfirm>\n    </div>\n    <div style=\"margin-left: 60px; cleat: both;\" _v-27f6b4a9=\"\">\n      <v-popconfirm placement=\"bottomLeft\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">下左</v-button>\n      </v-popconfirm>\n      <v-popconfirm placement=\"bottom\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">下边</v-button>\n      </v-popconfirm>\n      <v-popconfirm placement=\"bottomRight\" :title=\"text\" :on-confirm=\"_confirm\" _v-27f6b4a9=\"\">\n        <v-button _v-27f6b4a9=\"\">下右</v-button>\n      </v-popconfirm>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-27f6b4a9=\"\"><pre _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>div</span><span class=\"token style-attr language-css\" _v-27f6b4a9=\"\"><span class=\"token attr-name\" _v-27f6b4a9=\"\"> <span class=\"token attr-name\" _v-27f6b4a9=\"\">style</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">=\"</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token property\" _v-27f6b4a9=\"\">margin-left</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">:</span> 60px<span class=\"token punctuation\" _v-27f6b4a9=\"\">;</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>topLeft<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>上左<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>top<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>上边<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>topRight<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>上右<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>div</span><span class=\"token style-attr language-css\" _v-27f6b4a9=\"\"><span class=\"token attr-name\" _v-27f6b4a9=\"\"> <span class=\"token attr-name\" _v-27f6b4a9=\"\">style</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">=\"</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token property\" _v-27f6b4a9=\"\">width</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">:</span> 60px<span class=\"token punctuation\" _v-27f6b4a9=\"\">;</span> <span class=\"token property\" _v-27f6b4a9=\"\">float</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">:</span> left</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>leftTop<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>左上<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>left<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>左边<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>leftBottom<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>左下<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>div</span><span class=\"token style-attr language-css\" _v-27f6b4a9=\"\"><span class=\"token attr-name\" _v-27f6b4a9=\"\"> <span class=\"token attr-name\" _v-27f6b4a9=\"\">style</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">=\"</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token property\" _v-27f6b4a9=\"\">width</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">:</span> 60px<span class=\"token punctuation\" _v-27f6b4a9=\"\">;</span> <span class=\"token property\" _v-27f6b4a9=\"\">margin-left</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">:</span> 270px<span class=\"token punctuation\" _v-27f6b4a9=\"\">;</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>rightTop<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>右上<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>right<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>右边<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>rightBottom<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>右下<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>div</span><span class=\"token style-attr language-css\" _v-27f6b4a9=\"\"><span class=\"token attr-name\" _v-27f6b4a9=\"\"> <span class=\"token attr-name\" _v-27f6b4a9=\"\">style</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">=\"</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token property\" _v-27f6b4a9=\"\">margin-left</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">:</span> 60px<span class=\"token punctuation\" _v-27f6b4a9=\"\">;</span> <span class=\"token property\" _v-27f6b4a9=\"\">cleat</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">:</span> both<span class=\"token punctuation\" _v-27f6b4a9=\"\">;</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>bottomLeft<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>下左<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>bottom<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>下边<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-popconfirm</span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">placement</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>bottomRight<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:title</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>text<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span> <span class=\"token attr-name\" _v-27f6b4a9=\"\">:on-confirm</span><span class=\"token attr-value\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">=</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span>_confirm<span class=\"token punctuation\" _v-27f6b4a9=\"\">\"</span></span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>下右<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>v-popconfirm</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token tag\" _v-27f6b4a9=\"\"><span class=\"token punctuation\" _v-27f6b4a9=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-27f6b4a9=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\" _v-27f6b4a9=\"\">API</h2>\n<table _v-27f6b4a9=\"\">\n<thead _v-27f6b4a9=\"\">\n<tr _v-27f6b4a9=\"\">\n<th _v-27f6b4a9=\"\">参数</th>\n<th _v-27f6b4a9=\"\">说明</th>\n<th _v-27f6b4a9=\"\">类型</th>\n<th _v-27f6b4a9=\"\">默认值</th>\n</tr>\n</thead>\n<tbody _v-27f6b4a9=\"\">\n<tr _v-27f6b4a9=\"\">\n<td _v-27f6b4a9=\"\">placement</td>\n<td _v-27f6b4a9=\"\">气泡框位置，可选 <code _v-27f6b4a9=\"\">top/left/right/bottom</code></td>\n<td _v-27f6b4a9=\"\">string</td>\n<td _v-27f6b4a9=\"\">top</td>\n</tr>\n<tr _v-27f6b4a9=\"\">\n<td _v-27f6b4a9=\"\">title</td>\n<td _v-27f6b4a9=\"\">确认框的描述</td>\n<td _v-27f6b4a9=\"\">string</td>\n<td _v-27f6b4a9=\"\">无</td>\n</tr>\n<tr _v-27f6b4a9=\"\">\n<td _v-27f6b4a9=\"\">onConfirm</td>\n<td _v-27f6b4a9=\"\">点击确认的回调</td>\n<td _v-27f6b4a9=\"\">function</td>\n<td _v-27f6b4a9=\"\">无</td>\n</tr>\n<tr _v-27f6b4a9=\"\">\n<td _v-27f6b4a9=\"\">onCancel</td>\n<td _v-27f6b4a9=\"\">卡片内容</td>\n<td _v-27f6b4a9=\"\">function</td>\n<td _v-27f6b4a9=\"\">无</td>\n</tr>\n</tbody>\n</table>\n</div>";
+
+/***/ },
+/* 300 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\" _v-f44fa8b2=\"\"><h1 id=\"queueanim\" _v-f44fa8b2=\"\">QueueAnim</h1>\n<hr _v-f44fa8b2=\"\">\n<p _v-f44fa8b2=\"\">通过简单的配置对一组元素添加串行的进场动画效果。</p>\n<h2 id=\"-\" _v-f44fa8b2=\"\">何时使用</h2>\n<ul _v-f44fa8b2=\"\">\n<li _v-f44fa8b2=\"\"><p _v-f44fa8b2=\"\">从内容A到内容B的转变过程时能有效的吸引用户注意力，突出视觉中心，提高整体视觉效果。</p>\n</li>\n<li _v-f44fa8b2=\"\"><p _v-f44fa8b2=\"\">小的信息元素排布或块状较多的情况下，根据一定的路径层次依次进场，区分维度层级，来凸显量级，使页面转场更加流畅和舒适，提高整体视觉效果和产品的质感。</p>\n</li>\n<li _v-f44fa8b2=\"\"><p _v-f44fa8b2=\"\">特别适合首页和需要视觉展示效果的宣传页，以及单页应用的切换页面动效。</p>\n</li>\n</ul>\n<h2 id=\"-\" _v-f44fa8b2=\"\">组件演示</h2>\n<div class=\"code-boxes\" _v-f44fa8b2=\"\">\n  <div class=\"code-box code-boxes-col\" _v-f44fa8b2=\"\">\n          <h3 _v-f44fa8b2=\"\">默认</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-f44fa8b2=\"\">\n    <v-queue-anim :delay=\"1000\" _v-f44fa8b2=\"\">\n      <div key=\"a\" _v-f44fa8b2=\"\">依次进场</div>\n      <div key=\"b\" _v-f44fa8b2=\"\">依次进场</div>\n      <div key=\"c\" _v-f44fa8b2=\"\">依次进场</div>\n      <div key=\"d\" _v-f44fa8b2=\"\">依次进场</div>\n      <div key=\"e\" _v-f44fa8b2=\"\">依次进场</div>\n      <div key=\"f\" _v-f44fa8b2=\"\">依次进场</div>\n    </v-queue-anim>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-f44fa8b2=\"\"><pre _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-queue-anim</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">:delay</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>1000<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>a<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>依次进场<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>b<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>依次进场<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>c<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>依次进场<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>d<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>依次进场<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>e<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>依次进场<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>f<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>依次进场<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-f44fa8b2=\"\">\n          <h3 _v-f44fa8b2=\"\">进场和离场</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-f44fa8b2=\"\">\n    <v-queue-anim :show=\"show\" class=\"demo-content\" _v-f44fa8b2=\"\">\n      <div class=\"demo-kp\" key=\"a\" _v-f44fa8b2=\"\">\n        <ul _v-f44fa8b2=\"\">\n          <li _v-f44fa8b2=\"\"></li>\n          <li _v-f44fa8b2=\"\"></li>\n          <li _v-f44fa8b2=\"\"></li>\n        </ul>\n      </div>\n      <div class=\"demo-listBox\" key=\"b\" _v-f44fa8b2=\"\">\n        <div class=\"demo-list\" _v-f44fa8b2=\"\">\n          <div class=\"title\" _v-f44fa8b2=\"\"></div>\n          <ul _v-f44fa8b2=\"\">\n            <li _v-f44fa8b2=\"\"></li>\n            <li _v-f44fa8b2=\"\"></li>\n            <li _v-f44fa8b2=\"\"></li>\n          </ul>\n        </div>\n      </div>\n    </v-queue-anim>\n    <p class=\"buttons\" _v-f44fa8b2=\"\">\n      <v-button type=\"primary\" @click=\"_handleClick\" _v-f44fa8b2=\"\">切换</v-button>\n    </p>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-f44fa8b2=\"\"><pre _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-queue-anim</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">:show</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>show<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-content<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-kp<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>a<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-listBox<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>b<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-list<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>title<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>p</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>buttons<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>primary<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">@click</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>_handleClick<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>切换<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-f44fa8b2=\"\">\n          <h3 _v-f44fa8b2=\"\">进场和离场</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-f44fa8b2=\"\">\n    <v-queue-anim class=\"demo-content\" key=\"demo\" :show=\"show\" :type=\"['right', 'left']\" :ease=\"['easeOutQuart', 'easeInOutQuart']\" _v-f44fa8b2=\"\">\n      <div class=\"demo-kp\" key=\"a\" _v-f44fa8b2=\"\">\n        <ul _v-f44fa8b2=\"\">\n          <li _v-f44fa8b2=\"\"></li>\n          <li _v-f44fa8b2=\"\"></li>\n          <li _v-f44fa8b2=\"\"></li>\n        </ul>\n      </div>\n      <div class=\"demo-listBox\" key=\"b\" _v-f44fa8b2=\"\">\n        <div class=\"demo-list\" _v-f44fa8b2=\"\">\n          <div class=\"title\" _v-f44fa8b2=\"\"></div>\n          <ul _v-f44fa8b2=\"\">\n            <li _v-f44fa8b2=\"\"></li>\n            <li _v-f44fa8b2=\"\"></li>\n            <li _v-f44fa8b2=\"\"></li>\n          </ul>\n        </div>\n      </div>\n    </v-queue-anim>\n    <p class=\"buttons\" _v-f44fa8b2=\"\">\n      <v-button type=\"primary\" @click=\"_handleClick\" _v-f44fa8b2=\"\">切换</v-button>\n    </p>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-f44fa8b2=\"\"><pre _v-f44fa8b2=\"\">&lt;v-queue-anim class=\"demo-content\" key=\"demo\"\n  :show=\"show\"\n  :type=\"['right', 'left']\"\n  :ease=\"['easeOutQuart', 'easeInOutQuart']\"&gt;\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-kp<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>a<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-listBox<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>b<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-list<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>title<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>p</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>buttons<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>primary<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">@click</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>_handleClick<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>切换<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-f44fa8b2=\"\">\n          <h3 _v-f44fa8b2=\"\">自定义动画进出场</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-f44fa8b2=\"\">\n    <v-queue-anim class=\"demo-content\" :show=\"show\" :anim-config=\"[{ opacity: [1, 0], translateY: [0, 50] },{ opacity: [1, 0], translateY: [0, -50] }]\" _v-f44fa8b2=\"\">\n      <div class=\"demo-kp\" key=\"a\" _v-f44fa8b2=\"\">\n        <ul _v-f44fa8b2=\"\">\n          <li _v-f44fa8b2=\"\"></li>\n          <li _v-f44fa8b2=\"\"></li>\n          <li _v-f44fa8b2=\"\"></li>\n        </ul>\n      </div>\n      <div class=\"demo-listBox\" key=\"b\" _v-f44fa8b2=\"\">\n        <div class=\"demo-list\" _v-f44fa8b2=\"\">\n          <div class=\"title\" _v-f44fa8b2=\"\"></div>\n          <ul _v-f44fa8b2=\"\">\n            <li _v-f44fa8b2=\"\"></li>\n            <li _v-f44fa8b2=\"\"></li>\n            <li _v-f44fa8b2=\"\"></li>\n          </ul>\n        </div>\n      </div>\n    </v-queue-anim>\n    <p class=\"buttons\" _v-f44fa8b2=\"\">\n      <v-button type=\"primary\" @click=\"_handleClick\" _v-f44fa8b2=\"\">切换</v-button>\n    </p>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-f44fa8b2=\"\"><pre _v-f44fa8b2=\"\">&lt;v-queue-anim class=\"demo-content\"\n  :show=\"show\"\n  :anim-config=\"[{ opacity: [1, 0], translateY: [0, 50] },{ opacity: [1, 0], translateY: [0, -50] }]\"&gt;\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-kp<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>a<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-listBox<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>b<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-list<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>title<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>ul</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>p</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>buttons<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>primary<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">@click</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>_handleClick<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>切换<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-f44fa8b2=\"\">\n          <h3 _v-f44fa8b2=\"\">表单动画进出场</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-f44fa8b2=\"\">\n    <v-queue-anim class=\"ant-form-horizontal\" component=\"form\" type=\"bottom\" :leave-reverse=\"true\" :show=\"show\" _v-f44fa8b2=\"\">\n      <div class=\"ant-form-item ant-form-item-compact\" key=\"name\" _v-f44fa8b2=\"\">\n        <label htmlfor=\"userName\" class=\"col-6\" required=\"\" _v-f44fa8b2=\"\">用户名：</label>\n        <div class=\"col-6\" _v-f44fa8b2=\"\">\n          <p class=\"ant-form-text\" _v-f44fa8b2=\"\">大眼萌 minion</p>\n        </div>\n      </div>\n      <div class=\"ant-form-item\" key=\"password\" _v-f44fa8b2=\"\">\n        <label htmlfor=\"password\" class=\"col-6\" required=\"\" _v-f44fa8b2=\"\">密码：</label>\n        <div class=\"col-14\" _v-f44fa8b2=\"\">\n          <input class=\"ant-input\" type=\"password\" id=\"password\" placeholder=\"请输入密码\" _v-f44fa8b2=\"\">\n        </div>\n      </div>\n      <div class=\"ant-form-item\" key=\"remark\" _v-f44fa8b2=\"\">\n        <label htmlfor=\"remark\" class=\"col-6\" required=\"\" _v-f44fa8b2=\"\">备注：</label>\n        <div class=\"col-14\" _v-f44fa8b2=\"\">\n          <textarea class=\"ant-input\" id=\"remark\" placeholder=\"随便写\" _v-f44fa8b2=\"\"></textarea>\n          <p class=\"ant-form-explain\" _v-f44fa8b2=\"\">随便写点什么</p>\n        </div>\n      </div>\n      <div class=\"ant-form-item ant-form-item-compact\" key=\"checkbox\" _v-f44fa8b2=\"\">\n        <div class=\"col-14 col-offset-6\" _v-f44fa8b2=\"\">\n          <label _v-f44fa8b2=\"\">\n            <v-checkbox _v-f44fa8b2=\"\">同意</v-checkbox>\n          </label>\n        </div>\n      </div>\n      <div class=\"row\" key=\"btn\" _v-f44fa8b2=\"\">\n        <div class=\"col-16 col-offset-6\" _v-f44fa8b2=\"\">\n          <v-button type=\"primary\" _v-f44fa8b2=\"\">确定</v-button>\n        </div>\n      </div>\n    </v-queue-anim>\n    <p class=\"buttons\" _v-f44fa8b2=\"\">\n      <v-button type=\"primary\" @click=\"_handleClick\" _v-f44fa8b2=\"\">切换</v-button>\n    </p>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-f44fa8b2=\"\"><pre _v-f44fa8b2=\"\">&lt;v-queue-anim class=\"ant-form-horizontal\" component=\"form\" type=\"bottom\"\n  :leave-reverse=\"true\"\n  :show=\"show\"&gt;\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ant-form-item ant-form-item-compact<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>name<span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>label</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">htmlFor</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>userName<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>col-6<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">required</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>用户名：<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>label</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>col-6<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>p</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ant-form-text<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>大眼萌 minion<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ant-form-item<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>password<span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>label</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">htmlFor</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>password<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>col-6<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">required</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>密码：<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>label</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>col-14<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>input</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ant-input<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>password<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">id</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>password<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">placeholder</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>请输入密码<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">/&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ant-form-item<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>remark<span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>label</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">htmlFor</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>remark<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>col-6<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">required</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>备注：<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>label</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>col-14<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>textarea</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ant-input<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">id</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>remark<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">placeholder</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>随便写<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>textarea</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>p</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ant-form-explain<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>随便写点什么<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ant-form-item ant-form-item-compact<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>checkbox<span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>col-14 col-offset-6<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>label</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-checkbox</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>同意<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-checkbox</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>label</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>row<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>btn<span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>col-16 col-offset-6<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>primary<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>确定<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>p</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>buttons<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>primary<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">@click</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>_handleClick<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>切换<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-f44fa8b2=\"\">\n          <h3 _v-f44fa8b2=\"\">添加与删除</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-f44fa8b2=\"\">\n    <div class=\"demo-content\" _v-f44fa8b2=\"\">\n        <div class=\"demo-listBox\" key=\"b\" _v-f44fa8b2=\"\">\n          <div class=\"demo-list\" _v-f44fa8b2=\"\">\n            <div class=\"title\" _v-f44fa8b2=\"\"></div>\n            <v-queue-anim component=\"ul\" :type=\"['right', 'left']\" :watch-value=\"items\" :show=\"show\" _v-f44fa8b2=\"\">\n              <li v-for=\"item in items\" :key=\"Date.now()\" _v-f44fa8b2=\"\"></li>\n            </v-queue-anim>\n          </div>\n        </div>\n    </div>\n    <p class=\"buttons\" _v-f44fa8b2=\"\">\n      <v-button type=\"primary\" @click=\"_handleClick\" _v-f44fa8b2=\"\">切换</v-button>\n      <v-button @click=\"_handleAdd\" style=\"margin-left: 10px\" _v-f44fa8b2=\"\">添加</v-button>\n      <v-button @click=\"_handleRemove\" style=\"margin-left: 10px\" _v-f44fa8b2=\"\">删除</v-button>\n    </p>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-f44fa8b2=\"\"><pre _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-content<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-listBox<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>b<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-list<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>title<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-queue-anim</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">component</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ul<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">:type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>[<span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>right<span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>, <span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>left<span class=\"token punctuation\" _v-f44fa8b2=\"\">'</span>]<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">:watch-value</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>items<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">:show</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>show<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n          <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">v-for</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>item in items<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">:key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>Date.now()<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>p</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>buttons<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>primary<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">@click</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>_handleClick<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>切换<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">@click</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>_handleAdd<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token style-attr language-css\" _v-f44fa8b2=\"\"><span class=\"token attr-name\" _v-f44fa8b2=\"\"> <span class=\"token attr-name\" _v-f44fa8b2=\"\">style</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">=\"</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token property\" _v-f44fa8b2=\"\">margin-left</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">:</span> 10px</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>添加<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">@click</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>_handleRemove<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token style-attr language-css\" _v-f44fa8b2=\"\"><span class=\"token attr-name\" _v-f44fa8b2=\"\"> <span class=\"token attr-name\" _v-f44fa8b2=\"\">style</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">=\"</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token property\" _v-f44fa8b2=\"\">margin-left</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">:</span> 10px</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>删除<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-f44fa8b2=\"\">\n          <h3 _v-f44fa8b2=\"\">一个复杂些的例子</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-f44fa8b2=\"\">\n    <v-queue-anim :show=\"show\" :type=\"['right', 'left']\" _v-f44fa8b2=\"\">\n      <div class=\"demo-header\" key=\"header\" _v-f44fa8b2=\"\">\n        <div class=\"logo\" _v-f44fa8b2=\"\">\n          <img width=\"30\" src=\"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg\" _v-f44fa8b2=\"\">\n          <span _v-f44fa8b2=\"\">logo</span>\n        </div>\n        <v-queue-anim component=\"ul\" _v-f44fa8b2=\"\">\n          <li key=\"0\" _v-f44fa8b2=\"\"></li>\n          <li key=\"1\" _v-f44fa8b2=\"\"></li>\n          <li key=\"2\" _v-f44fa8b2=\"\"></li>\n          <li key=\"3\" _v-f44fa8b2=\"\"></li>\n          <li key=\"4\" _v-f44fa8b2=\"\"></li>\n        </v-queue-anim>\n      </div>,\n      <v-queue-anim class=\"demo-content\" key=\"content\" :delay=\"300\" _v-f44fa8b2=\"\">\n        <div class=\"demo-title\" key=\"title\" _v-f44fa8b2=\"\">我是标题</div>\n        <v-queue-anim class=\"demo-kp\" key=\"b\" _v-f44fa8b2=\"\">\n          <v-queue-anim component=\"ul\" _v-f44fa8b2=\"\">\n            <li key=\"0\" _v-f44fa8b2=\"\"></li>\n            <li key=\"1\" _v-f44fa8b2=\"\"></li>\n            <li key=\"2\" _v-f44fa8b2=\"\"></li>\n          </v-queue-anim>\n        </v-queue-anim>\n        <div class=\"demo-title\" key=\"title2\" _v-f44fa8b2=\"\">我是标题</div>\n        <div class=\"demo-listBox\" _v-f44fa8b2=\"\">\n          <v-queue-anim class=\"demo-list\" :delay=\"500\" _v-f44fa8b2=\"\">\n            <div class=\"title\" key=\"title3\" _v-f44fa8b2=\"\"></div>\n            <v-queue-anim component=\"ul\" type=\"bottom\" key=\"li\" _v-f44fa8b2=\"\">\n              <li key=\"0\" _v-f44fa8b2=\"\"></li>\n              <li key=\"1\" _v-f44fa8b2=\"\"></li>\n              <li key=\"2\" _v-f44fa8b2=\"\"></li>\n              <li key=\"3\" _v-f44fa8b2=\"\"></li>\n              <li key=\"4\" _v-f44fa8b2=\"\"></li>\n            </v-queue-anim>\n          </v-queue-anim>\n        </div>\n      </v-queue-anim>\n      <v-queue-anim type=\"bottom\" :delay=\"1000\" key=\"footerBox\" _v-f44fa8b2=\"\">\n        <div class=\"demo-footer\" key=\"footer\" _v-f44fa8b2=\"\"></div>\n      </v-queue-anim>\n    </v-queue-anim>\n    <p class=\"buttons\" _v-f44fa8b2=\"\">\n      <v-button type=\"primary\" @click=\"_handleClick\" _v-f44fa8b2=\"\">切换</v-button>\n    </p>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-f44fa8b2=\"\"><pre _v-f44fa8b2=\"\">&lt;v-queue-anim\n  :show=\"show\"\n  :type=\"['right', 'left']\"&gt;\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-header<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>header<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>logo<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>img</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">width</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>30<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">src</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token punctuation\" _v-f44fa8b2=\"\">/&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>span</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>logo<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>span</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-queue-anim</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">component</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ul<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>0<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>1<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>2<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>3<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>4<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>,\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-queue-anim</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-content<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>content<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">:delay</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>300<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-title<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>title<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>我是标题<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-queue-anim</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-kp<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>b<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-queue-anim</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">component</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ul<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>0<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>1<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>2<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-title<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>title2<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>我是标题<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-listBox<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      &lt;v-queue-anim class=\"demo-list\"\n        :delay=\"500\"&gt;\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>title<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>title3<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-queue-anim</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">component</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>ul<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>bottom<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>li<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n          <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>0<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n          <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>1<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n          <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>2<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n          <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>3<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n          <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>li</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>4<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>li</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n        <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n      <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  &lt;v-queue-anim type=\"bottom\"\n    :delay=\"1000\" key=\"footerBox\"&gt;\n    <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>demo-footer<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">key</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>footer<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-queue-anim</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>p</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">class</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>buttons<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">type</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>primary<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span> <span class=\"token attr-name\" _v-f44fa8b2=\"\">@click</span><span class=\"token attr-value\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">=</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span>_handleClick<span class=\"token punctuation\" _v-f44fa8b2=\"\">\"</span></span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>切换<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token tag\" _v-f44fa8b2=\"\"><span class=\"token punctuation\" _v-f44fa8b2=\"\">&lt;/</span>p</span><span class=\"token punctuation\" _v-f44fa8b2=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\" _v-f44fa8b2=\"\">API</h2>\n<p _v-f44fa8b2=\"\">元素依次进场。</p>\n<pre _v-f44fa8b2=\"\"><code class=\"lang-html\" _v-f44fa8b2=\"\">&lt;v-queue-anim&gt;\n  &lt;div key='demo1'&gt;依次进场&lt;/div&gt;\n  &lt;div key='demo2'&gt;依次进场&lt;/div&gt;\n  &lt;div key='demo3'&gt;依次进场&lt;/div&gt;\n  &lt;div key='demo4'&gt;依次进场&lt;/div&gt;\n&lt;/v-queue-anim&gt;\n</code></pre>\n<blockquote _v-f44fa8b2=\"\">\n<p _v-f44fa8b2=\"\">每个子标签必须带 key，如果未设置 key 将不执行动画。</p>\n</blockquote>\n<table _v-f44fa8b2=\"\">\n<thead _v-f44fa8b2=\"\">\n<tr _v-f44fa8b2=\"\">\n<th _v-f44fa8b2=\"\">参数</th>\n<th _v-f44fa8b2=\"\">类型</th>\n<th _v-f44fa8b2=\"\">默认</th>\n<th _v-f44fa8b2=\"\">详细</th>\n</tr>\n</thead>\n<tbody _v-f44fa8b2=\"\">\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">type</td>\n<td _v-f44fa8b2=\"\">string / array</td>\n<td _v-f44fa8b2=\"\"><code _v-f44fa8b2=\"\">right</code></td>\n<td _v-f44fa8b2=\"\">动画内置参数 <br _v-f44fa8b2=\"\"> <code _v-f44fa8b2=\"\">left</code> <code _v-f44fa8b2=\"\">right</code> <code _v-f44fa8b2=\"\">top</code> <code _v-f44fa8b2=\"\">bottom</code> <code _v-f44fa8b2=\"\">scale</code> <code _v-f44fa8b2=\"\">scaleBig</code> <code _v-f44fa8b2=\"\">scaleX</code> <code _v-f44fa8b2=\"\">scaleY</code></td>\n</tr>\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">animConfig</td>\n<td _v-f44fa8b2=\"\">object / array</td>\n<td _v-f44fa8b2=\"\">null</td>\n<td _v-f44fa8b2=\"\">配置动画参数 <br _v-f44fa8b2=\"\"> 如 <code _v-f44fa8b2=\"\">{opacity:[1, 0],translateY:[0, -30]}</code> 具体参考 <a href=\"http://julian.com/research/velocity\" _v-f44fa8b2=\"\">velocity</a> 的写法</td>\n</tr>\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">delay</td>\n<td _v-f44fa8b2=\"\">number / array</td>\n<td _v-f44fa8b2=\"\">0</td>\n<td _v-f44fa8b2=\"\">整个动画的延时,以毫秒为单位</td>\n</tr>\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">duration</td>\n<td _v-f44fa8b2=\"\">number / array</td>\n<td _v-f44fa8b2=\"\">500</td>\n<td _v-f44fa8b2=\"\">每个动画的时间,以毫秒为单位</td>\n</tr>\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">interval</td>\n<td _v-f44fa8b2=\"\">number / array</td>\n<td _v-f44fa8b2=\"\">100</td>\n<td _v-f44fa8b2=\"\">每个动画的间隔时间,以毫秒为单位</td>\n</tr>\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">leaveReverse</td>\n<td _v-f44fa8b2=\"\">boolean</td>\n<td _v-f44fa8b2=\"\">false</td>\n<td _v-f44fa8b2=\"\">出场时是否倒放,从最后一个 dom 开始往上播放</td>\n</tr>\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">ease</td>\n<td _v-f44fa8b2=\"\">string / array</td>\n<td _v-f44fa8b2=\"\"><code _v-f44fa8b2=\"\">easeOutQuart</code></td>\n<td _v-f44fa8b2=\"\">动画的缓动函数,<a href=\"http://julian.com/research/velocity/#easing\" _v-f44fa8b2=\"\">查看详细</a></td>\n</tr>\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">animatingClassName</td>\n<td _v-f44fa8b2=\"\">array</td>\n<td _v-f44fa8b2=\"\"><code _v-f44fa8b2=\"\">['queue-anim-entering', 'queue-anim-leaving']</code></td>\n<td _v-f44fa8b2=\"\">进出场动画进行中的类名</td>\n</tr>\n<tr _v-f44fa8b2=\"\">\n<td _v-f44fa8b2=\"\">component</td>\n<td _v-f44fa8b2=\"\">string</td>\n<td _v-f44fa8b2=\"\"><code _v-f44fa8b2=\"\">div</code></td>\n<td _v-f44fa8b2=\"\">QueueAnim 替换的标签名</td>\n</tr>\n</tbody>\n</table>\n<blockquote _v-f44fa8b2=\"\">\n<p _v-f44fa8b2=\"\">当以上数据类型为 Array 时，<code _v-f44fa8b2=\"\">['left', 'top']</code> 第一个为进场动画属性, 第二个为离场属性。</p>\n</blockquote>\n</div>";
 
 /***/ },
-/* 316 */
+/* 301 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"markdown\" _v-5467a4c8=\"\"><h1 id=\"spin\" _v-5467a4c8=\"\">Spin</h1>\n<hr _v-5467a4c8=\"\">\n<p _v-5467a4c8=\"\">用于页面和区块的loading状态。</p>\n<h2 id=\"-\" _v-5467a4c8=\"\">何时使用</h2>\n<p _v-5467a4c8=\"\">页面局部处于等待数据渲染时。</p>\n<h2 id=\"-\" _v-5467a4c8=\"\">组件演示</h2>\n<div class=\"code-boxes\" _v-5467a4c8=\"\">\n  <div class=\"code-box code-boxes-col\" _v-5467a4c8=\"\">\n          <h3 _v-5467a4c8=\"\">基本用法</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-5467a4c8=\"\">\n    <v-spin _v-5467a4c8=\"\"></v-spin>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-5467a4c8=\"\"><pre _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-5467a4c8=\"\">\n          <h3 _v-5467a4c8=\"\">容器</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-5467a4c8=\"\">\n    <div class=\"spin-demo2-container\" _v-5467a4c8=\"\">\n      <v-spin _v-5467a4c8=\"\"></v-spin>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-5467a4c8=\"\"><pre _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>div</span> <span class=\"token attr-name\" _v-5467a4c8=\"\">class</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>spin-demo2-container<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-5467a4c8=\"\">\n          <h3 _v-5467a4c8=\"\">卡片加载中</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-5467a4c8=\"\">\n    <v-spin size=\"large\" :hide=\"!loading\" _v-5467a4c8=\"\">\n      <div style=\"text-align: center;\" _v-5467a4c8=\"\">\n        <img src=\"https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg\" width=\"200px\" height=\"200px\" _v-5467a4c8=\"\">\n        <div _v-5467a4c8=\"\">我是一张图片</div>\n      </div>\n    </v-spin>\n    <br _v-5467a4c8=\"\">\n    <div style=\"text-align: center\" _v-5467a4c8=\"\">\n      <v-button type=\"primary\" @click=\"_enterLoading\" _v-5467a4c8=\"\">点击切换</v-button>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-5467a4c8=\"\"><pre _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>v-spin</span> <span class=\"token attr-name\" _v-5467a4c8=\"\">size</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>large<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span> <span class=\"token attr-name\" _v-5467a4c8=\"\">:hide</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>!loading<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>div</span><span class=\"token style-attr language-css\" _v-5467a4c8=\"\"><span class=\"token attr-name\" _v-5467a4c8=\"\"> <span class=\"token attr-name\" _v-5467a4c8=\"\">style</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">=\"</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token property\" _v-5467a4c8=\"\">text-align</span><span class=\"token punctuation\" _v-5467a4c8=\"\">:</span> center<span class=\"token punctuation\" _v-5467a4c8=\"\">;</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n    <span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>img</span> <span class=\"token attr-name\" _v-5467a4c8=\"\">src</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span> <span class=\"token attr-name\" _v-5467a4c8=\"\">width</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>200px<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span> <span class=\"token attr-name\" _v-5467a4c8=\"\">height</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>200px<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span> <span class=\"token punctuation\" _v-5467a4c8=\"\">/&gt;</span></span>\n    <span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>div</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>我是一张图片<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>br</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>div</span><span class=\"token style-attr language-css\" _v-5467a4c8=\"\"><span class=\"token attr-name\" _v-5467a4c8=\"\"> <span class=\"token attr-name\" _v-5467a4c8=\"\">style</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">=\"</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token property\" _v-5467a4c8=\"\">text-align</span><span class=\"token punctuation\" _v-5467a4c8=\"\">:</span> center</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n  <span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>v-button</span> <span class=\"token attr-name\" _v-5467a4c8=\"\">type</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>primary<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span> <span class=\"token attr-name\" _v-5467a4c8=\"\">@click</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>_enterLoading<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>点击切换<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>v-button</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>div</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\" _v-5467a4c8=\"\">\n          <h3 _v-5467a4c8=\"\">各种大小</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\" _v-5467a4c8=\"\">\n    <v-spin size=\"small\" _v-5467a4c8=\"\"></v-spin>\n    <br _v-5467a4c8=\"\">\n    <v-spin _v-5467a4c8=\"\"></v-spin>\n    <br _v-5467a4c8=\"\">\n    <v-spin size=\"large\" _v-5467a4c8=\"\"></v-spin>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\" _v-5467a4c8=\"\"><pre _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>v-spin</span> <span class=\"token attr-name\" _v-5467a4c8=\"\">size</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>small<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>br</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>br</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n<span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;</span>v-spin</span> <span class=\"token attr-name\" _v-5467a4c8=\"\">size</span><span class=\"token attr-value\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">=</span><span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span>large<span class=\"token punctuation\" _v-5467a4c8=\"\">\"</span></span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token tag\" _v-5467a4c8=\"\"><span class=\"token punctuation\" _v-5467a4c8=\"\">&lt;/</span>v-spin</span><span class=\"token punctuation\" _v-5467a4c8=\"\">&gt;</span></span>\n</pre></div>\n      </div>\n</div>\n<h2 id=\"api\" _v-5467a4c8=\"\">API</h2>\n<table _v-5467a4c8=\"\">\n<thead _v-5467a4c8=\"\">\n<tr _v-5467a4c8=\"\">\n<th _v-5467a4c8=\"\">参数</th>\n<th _v-5467a4c8=\"\">类型</th>\n<th _v-5467a4c8=\"\">默认值</th>\n<th _v-5467a4c8=\"\">说明</th>\n</tr>\n</thead>\n<tbody _v-5467a4c8=\"\">\n<tr _v-5467a4c8=\"\">\n<td _v-5467a4c8=\"\">size</td>\n<td _v-5467a4c8=\"\">enum</td>\n<td _v-5467a4c8=\"\">default</td>\n<td _v-5467a4c8=\"\">spin组件中点的大小，可选值为small default large</td>\n</tr>\n</tbody>\n</table>\n</div>";
 
 /***/ },
-/* 317 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"markdown\" _v-c79ccd4a=\"\"><h1 id=\"ant-design-of-vue\" _v-c79ccd4a=\"\">Ant Design of Vue</h1>\n<hr _v-c79ccd4a=\"\">\n<p _v-c79ccd4a=\"\">这里是 Ant Design 的 Vue 实现，开发和服务于企业级后台产品。</p>\n<div class=\"pic-plus\" _v-c79ccd4a=\"\">\n  <img width=\"150\" src=\"" + __webpack_require__(286) + "\" _v-c79ccd4a=\"\">\n  <span _v-c79ccd4a=\"\">+</span>\n  <img width=\"150\" src=\"https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg\" _v-c79ccd4a=\"\">\n  <span _v-c79ccd4a=\"\">=</span>\n  <img width=\"150\" src=\"" + __webpack_require__(287) + "\" _v-c79ccd4a=\"\">\n</div>\n<h2 id=\"-\" _v-c79ccd4a=\"\">特性</h2>\n<ul _v-c79ccd4a=\"\">\n<li _v-c79ccd4a=\"\">Designed as Ant Design.</li>\n<li _v-c79ccd4a=\"\">基于 Vue 的组件化开发模式。</li>\n<li _v-c79ccd4a=\"\">背靠 npm 生态圈。</li>\n<li _v-c79ccd4a=\"\">基于 webpack 的调试构建方案，支持 ES6。</li>\n</ul>\n<h2 id=\"-\" _v-c79ccd4a=\"\">示例</h2>\n<h2 id=\"-\" _v-c79ccd4a=\"\">版本</h2>\n<h2 id=\"-\" _v-c79ccd4a=\"\">链接</h2>\n<ul _v-c79ccd4a=\"\">\n<li _v-c79ccd4a=\"\"><a href=\"/vue-antd/\" _v-c79ccd4a=\"\">首页</a></li>\n<li _v-c79ccd4a=\"\"><a href=\"/introduce\" _v-c79ccd4a=\"\">文档</a></li>\n<li _v-c79ccd4a=\"\"><a href=\"/components/\" _v-c79ccd4a=\"\">组件</a></li>\n</ul>\n<h2 id=\"-\" _v-c79ccd4a=\"\">谁在使用</h2>\n<ul _v-c79ccd4a=\"\">\n<li _v-c79ccd4a=\"\">本人</li>\n</ul>\n<h2 id=\"-\" _v-c79ccd4a=\"\">如何贡献</h2>\n<p _v-c79ccd4a=\"\">我们欢迎任何形式的贡献，有任何建议或意见您可以进行 <a href=\"https://github.com/okoala/vue-antd/pulls\" _v-c79ccd4a=\"\">Pull Request</a>，或者给我们<a href=\"https://github.com/okoala/vue-antd/issues\" _v-c79ccd4a=\"\">提问</a>。</p>\n</div>";
+	module.exports = "<div class=\"markdown\" _v-c79ccd4a=\"\"><h1 id=\"ant-design-of-vue\" _v-c79ccd4a=\"\">Ant Design of Vue</h1>\n<hr _v-c79ccd4a=\"\">\n<p _v-c79ccd4a=\"\">这里是 Ant Design 的 Vue 实现，开发和服务于企业级后台产品。</p>\n<div class=\"pic-plus\" _v-c79ccd4a=\"\">\n  <img width=\"150\" src=\"" + __webpack_require__(268) + "\" _v-c79ccd4a=\"\">\n  <span _v-c79ccd4a=\"\">+</span>\n  <img width=\"150\" src=\"https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg\" _v-c79ccd4a=\"\">\n  <span _v-c79ccd4a=\"\">=</span>\n  <img width=\"150\" src=\"" + __webpack_require__(269) + "\" _v-c79ccd4a=\"\">\n</div>\n<h2 id=\"-\" _v-c79ccd4a=\"\">特性</h2>\n<ul _v-c79ccd4a=\"\">\n<li _v-c79ccd4a=\"\">Designed as Ant Design.</li>\n<li _v-c79ccd4a=\"\">基于 Vue 的组件化开发模式。</li>\n<li _v-c79ccd4a=\"\">背靠 npm 生态圈。</li>\n<li _v-c79ccd4a=\"\">基于 webpack 的调试构建方案，支持 ES6。</li>\n</ul>\n<h2 id=\"-\" _v-c79ccd4a=\"\">示例</h2>\n<h2 id=\"-\" _v-c79ccd4a=\"\">版本</h2>\n<h2 id=\"-\" _v-c79ccd4a=\"\">链接</h2>\n<ul _v-c79ccd4a=\"\">\n<li _v-c79ccd4a=\"\"><a href=\"/vue-antd/\" _v-c79ccd4a=\"\">首页</a></li>\n<li _v-c79ccd4a=\"\"><a href=\"/introduce\" _v-c79ccd4a=\"\">文档</a></li>\n<li _v-c79ccd4a=\"\"><a href=\"/components/\" _v-c79ccd4a=\"\">组件</a></li>\n</ul>\n<h2 id=\"-\" _v-c79ccd4a=\"\">谁在使用</h2>\n<ul _v-c79ccd4a=\"\">\n<li _v-c79ccd4a=\"\">本人</li>\n</ul>\n<h2 id=\"-\" _v-c79ccd4a=\"\">如何贡献</h2>\n<p _v-c79ccd4a=\"\">我们欢迎任何形式的贡献，有任何建议或意见您可以进行 <a href=\"https://github.com/okoala/vue-antd/pulls\" _v-c79ccd4a=\"\">Pull Request</a>，或者给我们<a href=\"https://github.com/okoala/vue-antd/issues\" _v-c79ccd4a=\"\">提问</a>。</p>\n</div>";
 
 /***/ },
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */
+/* 303 */
+/***/ function(module, exports) {
+
+	
+	/**
+	 * Element prototype.
+	 */
+	
+	var proto = Element.prototype;
+	
+	/**
+	 * Vendor function.
+	 */
+	
+	var vendor = proto.matchesSelector
+	  || proto.webkitMatchesSelector
+	  || proto.mozMatchesSelector
+	  || proto.msMatchesSelector
+	  || proto.oMatchesSelector;
+	
+	/**
+	 * Expose `match()`.
+	 */
+	
+	module.exports = match;
+	
+	/**
+	 * Match `el` to `selector`.
+	 *
+	 * @param {Element} el
+	 * @param {String} selector
+	 * @return {Boolean}
+	 * @api public
+	 */
+	
+	function match(el, selector) {
+	  if (vendor) return vendor.call(el, selector);
+	  var nodes = el.parentNode.querySelectorAll(selector);
+	  for (var i = 0; i < nodes.length; ++i) {
+	    if (nodes[i] == el) return true;
+	  }
+	  return false;
+	}
+
+/***/ },
+/* 304 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -19327,13 +19773,47 @@
 
 
 /***/ },
-/* 323 */
+/* 305 */
+/***/ function(module, exports) {
+
+	function select(element) {
+	    var selectedText;
+	
+	    if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+	        element.focus();
+	        element.setSelectionRange(0, element.value.length);
+	
+	        selectedText = element.value;
+	    }
+	    else {
+	        if (element.hasAttribute('contenteditable')) {
+	            element.focus();
+	        }
+	
+	        var selection = window.getSelection();
+	        var range = document.createRange();
+	
+	        range.selectNodeContents(element);
+	        selection.removeAllRanges();
+	        selection.addRange(range);
+	
+	        selectedText = selection.toString();
+	    }
+	
+	    return selectedText;
+	}
+	
+	module.exports = select;
+
+
+/***/ },
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(263);
+	var content = __webpack_require__(243);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19353,13 +19833,13 @@
 	}
 
 /***/ },
-/* 324 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(264);
+	var content = __webpack_require__(244);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19379,13 +19859,13 @@
 	}
 
 /***/ },
-/* 325 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(265);
+	var content = __webpack_require__(245);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19405,13 +19885,39 @@
 	}
 
 /***/ },
-/* 326 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(266);
+	var content = __webpack_require__(246);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(8)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./_tooltip.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./_tooltip.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 310 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(247);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19431,13 +19937,13 @@
 	}
 
 /***/ },
-/* 327 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(267);
+	var content = __webpack_require__(248);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19457,13 +19963,13 @@
 	}
 
 /***/ },
-/* 328 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(268);
+	var content = __webpack_require__(249);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19483,13 +19989,13 @@
 	}
 
 /***/ },
-/* 329 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(269);
+	var content = __webpack_require__(250);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19509,14 +20015,13 @@
 	}
 
 /***/ },
-/* 330 */,
-/* 331 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(271);
+	var content = __webpack_require__(251);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19536,13 +20041,13 @@
 	}
 
 /***/ },
-/* 332 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(272);
+	var content = __webpack_require__(252);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19562,13 +20067,13 @@
 	}
 
 /***/ },
-/* 333 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(273);
+	var content = __webpack_require__(253);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19588,13 +20093,39 @@
 	}
 
 /***/ },
-/* 334 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(274);
+	var content = __webpack_require__(254);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(8)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./popconfirm.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./popconfirm.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 318 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(255);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19614,13 +20145,13 @@
 	}
 
 /***/ },
-/* 335 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(275);
+	var content = __webpack_require__(256);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19640,13 +20171,13 @@
 	}
 
 /***/ },
-/* 336 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(276);
+	var content = __webpack_require__(257);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -19666,7 +20197,79 @@
 	}
 
 /***/ },
-/* 337 */
+/* 321 */
+/***/ function(module, exports) {
+
+	function E () {
+		// Keep this empty so it's easier to inherit from
+	  // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
+	}
+	
+	E.prototype = {
+		on: function (name, callback, ctx) {
+	    var e = this.e || (this.e = {});
+	
+	    (e[name] || (e[name] = [])).push({
+	      fn: callback,
+	      ctx: ctx
+	    });
+	
+	    return this;
+	  },
+	
+	  once: function (name, callback, ctx) {
+	    var self = this;
+	    function listener () {
+	      self.off(name, listener);
+	      callback.apply(ctx, arguments);
+	    };
+	
+	    listener._ = callback
+	    return this.on(name, listener, ctx);
+	  },
+	
+	  emit: function (name) {
+	    var data = [].slice.call(arguments, 1);
+	    var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
+	    var i = 0;
+	    var len = evtArr.length;
+	
+	    for (i; i < len; i++) {
+	      evtArr[i].fn.apply(evtArr[i].ctx, data);
+	    }
+	
+	    return this;
+	  },
+	
+	  off: function (name, callback) {
+	    var e = this.e || (this.e = {});
+	    var evts = e[name];
+	    var liveEvents = [];
+	
+	    if (evts && callback) {
+	      for (var i = 0, len = evts.length; i < len; i++) {
+	        if (evts[i].fn !== callback && evts[i].fn._ !== callback)
+	          liveEvents.push(evts[i]);
+	      }
+	    }
+	
+	    // Remove event from queue to prevent memory leak
+	    // Suggested by https://github.com/lazd
+	    // Ref: https://github.com/scottcorgan/tiny-emitter/commit/c6ebfaa9bc973b33d110a84a307742b7cf94c953#commitcomment-5024910
+	
+	    (liveEvents.length)
+	      ? e[name] = liveEvents
+	      : delete e[name];
+	
+	    return this;
+	  }
+	};
+	
+	module.exports = E;
+
+
+/***/ },
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function () {
@@ -19743,235 +20346,236 @@
 
 
 /***/ },
-/* 338 */
+/* 323 */
 /***/ function(module, exports) {
 
 	module.exports = "<div>\n  <div :class=\"wrapClasses\" :style=\"affixStyle\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 339 */
+/* 324 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-show='!closed'>\n  <div v-if='description'>\n    <div\n      data-show={{closeing}}\n      :class=\"'ant-alert-with-description ant-alert-with-description-' + type + closeName\">\n      <i :class=\"'anticon ' + iconClass\"></i>\n      <p class='ant-alert-with-description-message'>\n        {{message}}\n      </p>\n      <span class='ant-alert-with-description-description'>\n        {{description}}\n      </span>\n      <a\n        v-if='closable'\n        @click='_handleClose'\n        class='ant-alert-with-description-close-icon'>\n        <span class='ant-alert-with-description-close-icon-x'></span>\n      </a>\n    </div>\n  </div>\n  <div v-else>\n    <div v-if='closeText'>\n      <div\n        data-show={{closing}}\n        :class=\"'ant-alert ant-alert-' + type + closeName\">\n        <i :class=\"'anticon ' + iconClass\"></i>\n        <span class='ant-alert-description'>{{message}}</span>\n        <span\n          @click='_handleClose'\n          class='ant-alert-close-text'>{{{closeText}}}</span>\n      </div>\n    </div>\n    <div v-else>\n      <div\n        data-show={{closing}}\n        :class=\"'ant-alert ant-alert-' + type + closeName\">\n        <i :class=\"'anticon ' + iconClass\"></i>\n        <span class='ant-alert-description'>{{message}}</span>\n        <a\n          v-if='closable'\n          @click='_handleClose'\n          class='ant-alert-close-icon'>\n          <span class='ant-alert-close-icon-x'></span>\n        </a>\n      </div>\n    </div>\n  </div>\n</div>";
 
 /***/ },
-/* 340 */
+/* 325 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-if='dot' :class=\"prefixCls\">\n  <slot></slot>\n  <sup :class=\"prefixCls + '-dot'\"></sup>\n</span>\n<span v-else :class=\"prefixCls\">\n  <slot></slot>\n  <sup v-if='count' :class=\"prefixCls + '-count'\">{{count | short}}</sup>\n</span>";
 
 /***/ },
-/* 341 */
+/* 326 */
 /***/ function(module, exports) {
 
 	module.exports = "<div\n  :class=\"className\">\n  <slot></slot>\n</div>";
 
 /***/ },
-/* 342 */
+/* 327 */
 /***/ function(module, exports) {
 
 	module.exports = "<slot></slot>";
 
 /***/ },
-/* 343 */
+/* 328 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"wrapClasses\" :style=\"style\">\n  <div :class=\"componentClass + '-content'\" v-el:content></div>\n  <span v-if=\"closable\">\n    <a\n      tabIndex=\"0\"\n      @click=\"_close\"\n      :class=\"componentClass + '-close'\">\n      <span :class=\"componentClass + '-close-x'\"></span>\n    </a>\n  </span>\n</div>";
 
 /***/ },
-/* 344 */
+/* 329 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"wrapClasses\" :style=\"style\">\n  <Animate v-for=\"notice in notices\" :show=\"notice.show\" :on-end=\"_remove.bind(null, notice.key)\" :transition-name=\"_getTransitionName()\">\n    <Notice\n      :prefix-cls=\"prefixCls\"\n      :style=\"notice.style\"\n      :show.sync=\"notice.show\"\n      :content=\"notice.content\"\n      :on-close=\"notice.onClose\"\n      :duration=\"notice.duration\"\n      :closable=\"notice.closable\">\n    </Notice>\n  </Animate>\n</div>";
 
 /***/ },
-/* 345 */
+/* 330 */
 /***/ function(module, exports) {
 
 	module.exports = "<trigger\n  :popup-class-name=\"overlayClassName\"\n  :prefix-cls=\"prefixCls\"\n  :popup=\"''\"\n  :action=\"trigger\"\n  :builtin-placements=\"placements\"\n  :popup-visible=\"visible\"\n  :popup-placement=\"placement\"\n  :popup-align=\"align\"\n  :popup-style=\"overlayStyle\"\n  :popup-transition-name=\"transitionName\"\n  :popup-animation=\"animation\"\n  :on-popup-visible-change=\"onVisibleChange\"\n  :destory-popup-on-hide=\"destoryTooltipOnHide\"\n  :mouse-enter-delay=\"mouseEnterDelay\"\n  :mouse-leave-delay=\"mouseLeaveDelay\"\n  :default-popup-visible=\"defaultVisible\">\n  <span slot=\"popup\">\n    <div :class=\"prefixCls + '-arrow'\"></div>\n    <div :class=\"prefixCls + '-inner'\">\n      <slot name=\"tooltip\"></slot>\n    </div>\n  </span>\n  <span slot=\"trigger\"><slot></slot></span>\n</trigger>";
 
 /***/ },
-/* 346 */
+/* 331 */
 /***/ function(module, exports) {
 
 	module.exports = "<span></span>";
 
 /***/ },
-/* 347 */
+/* 332 */
 /***/ function(module, exports) {
 
 	module.exports = "<span\n  @mouseenter=\"onMouseEnter\"\n  @mouseleave=\"onMouseLeave\">\n  <slot></slot>\n</span>";
 
 /***/ },
-/* 348 */
+/* 333 */
 /***/ function(module, exports) {
 
 	module.exports = "<span>\n  <popup\n    :style=\"popupStyle\"\n    :prefix-cls=\"prefixCls\"\n    :visible=\"popupVisible\"\n    :class-name=\"popupClassName\"\n    :action=\"action\"\n    :wrap=\"_getTriggerTarget.bind($parent)\"\n    :align=\"_popupAlign\"\n    :animation=\"popupAnimation\"\n    :on-animation-leave=\"onAnimateLeave\"\n    :on-mouse-enter=\"_onMouseEnter\"\n    :on-mouse-leave=\"_onMouseLeave\"\n    :transition-name=\"popupTransitionName\"\n    :get-class-name-from-align=\"_getPopupClassNameFromAlign\">\n    <slot name=\"popup\"></slot>\n  </popup>\n  <slot name=\"trigger\"></slot>\n</span>";
 
 /***/ },
-/* 349 */
+/* 334 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"prefixCls\">\n  <slot></slot>\n</div>";
 
 /***/ },
-/* 350 */
+/* 335 */
 /***/ function(module, exports) {
 
 	module.exports = "<span>\n  <a v-if='href' :href=\"href\" :class=\"prefixCls + '-link'\">\n    <slot></slot>\n  </a>\n  <span v-else :class=\"prefixCls + '-link'\">\n    <slot></slot>\n  </span>\n  <span :class=\"prefixCls + '-slash'\">/</span>\n</span>";
 
 /***/ },
-/* 351 */
+/* 336 */
 /***/ function(module, exports) {
 
 	module.exports = "<button :type=\"htmlType || 'button'\" :class=\"btClasses\" @click=\"onclick\">\n  <slot></slot>\n</button>";
 
 /***/ },
-/* 352 */
+/* 337 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"btgClasses\">\n  <slot></slot>\n</div>";
 
 /***/ },
-/* 353 */
+/* 338 */
 /***/ function(module, exports) {
 
 	module.exports = "<label :class=\"wrapClasses\">\n  <span :class=\"ckClasses\" :style=\"style\">\n    <span :class=\"prefixCls + '-inner'\"></span>\n    <input\n      type=\"checkbox\"\n      :disabled=\"disabled\"\n      :defaultChecked=\"!!defaultChecked\"\n      :value=\"value\"\n      :class=\"prefixCls + '-input'\"\n      :checked=\"!!checked\"\n      @change=\"_handleChange\"/>\n  </span>\n  <slot></slot>\n</label>";
 
 /***/ },
-/* 354 */
+/* 339 */
 /***/ function(module, exports) {
 
 	module.exports = "<i :class=\"iconClasses\">\n  <slot></slot>\n</i>";
 
 /***/ },
-/* 355 */
+/* 340 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"wrapClasses\" style=\"width: 90px\">\n  <div :class=\"prefixCls + '-handler-wrap'\">\n    <a unselectable=\"unselectable\"\n       ref=\"up\"\n       @click=\"_up\"\n       @mouse.down=\"preventDefault\"\n       :class=\"prefixCls + '-handler ' + prefixCls + '-handler-up ' + upDisabledClass\">\n        <span unselectable=\"unselectable\"\n            :class=\"prefixCls + '-handler-up-inner'\"\n            @click=\"preventDefault\"/>\n    </a>\n    <a unselectable=\"unselectable\"\n       ref=\"down\"\n       @mouse.down=\"preventDefault\"\n       @click=\"_down\"\n       :class=\"prefixCls + '-handler ' + prefixCls + '-handler-down ' + downDisabledClass\">\n      <span unselectable=\"unselectable\"\n            :class=\"prefixCls + '-handler-down-inner'\"\n            @click=\"preventDefault\"/>\n    </a>\n  </div>\n  <div :class=\"prefixCls + '-input-wrap'\">\n    <input v-el:input\n           ref=\"input\"\n           autoComplete=\"off\"\n           @focus=\"_onFocus\"\n           @blur=\"_onBlur\"\n           @keydown.stop=\"_onKeyDown\"\n           @change=\"_onChange\"\n           :class=\"prefixCls + '-input'\"\n           :autoFocus=\"autoFocus\"\n           :readOnly=\"readOnly\"\n           :disabled=\"disabled\"\n           :max=\"max\"\n           :min=\"min\"\n           :name=\"name\"\n           :value=\"value\"/>\n  </div>\n</div>";
 
 /***/ },
-/* 356 */
+/* 341 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"wrapClasses\"><slot></slot></div>";
 
 /***/ },
-/* 357 */
-356,
-/* 358 */
+/* 342 */
+341,
+/* 343 */
+/***/ function(module, exports) {
+
+	module.exports = "<tooltip\n  :prefix-cls=\"prefixCls\"\n  :placement=\"placement\"\n  :on-visible-change=\"_onVisibleChange\"\n  :transition-name=\"transitionName\"\n  :visible=\"visible\"\n  :trigger=\"trigger\">\n  <div slot=\"tooltip\">\n    <div :class=\"prefixCls + '-content'\">\n      <p :class=\"prefixCls + '-message'\">\n        <v-icon type=\"exclamation-circle\"></v-icon>\n        {{title}}\n      </p>\n\n      <div :class=\"prefixCls + '-buttons'\">\n        <v-button @click=\"_cancel\" type=\"ghost\" size=\"small\">取消</v-button>\n        <v-button @click=\"_confirm\" type=\"primary\" size=\"small\">确定</v-button>\n      </div>\n    </div>\n  </div>\n  <span slot=\"trigger\"><slot></slot></span>\n</tooltip>";
+
+/***/ },
+/* 344 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"prefixCls + '-circle-wrap status-' + status\" >\n  <div\n    :class=\"prefixCls + '-circle-inner'\"\n    :style=\"{\n      'width': width + 'px',\n      'height': width + 'px',\n      'fontSize': width * 0.16 + 6 + 'px'\n    }\">\n\n    <svg viewBox='0 0 100 100'>\n      <path :d=\"pathString\" :stroke=\"trailColor\"\n        :stroke-width=\"trailWidth\" fill-opacity='0'/>\n      <path :d=\"pathString\" stroke-linecap='round'\n        :stroke=\"strokeColor\" :stroke-width=\"strokeWidth\" fill-opacity='0' :style=\"pathStyle\" />\n    </svg>\n\n    <span v-if=\"status === 'exception'\" :class=\"prefixCls + '-circle-text'\"><v-icon type=\"exclamation\"></v-icon></span>\n    <span v-if=\"status === 'success'\" :class=\"prefixCls + '-circle-text'\"><v-icon type=\"check\"></v-icon></span>\n    <span v-if=\"status !== 'exception' && status !== 'success'\" :class=\"prefixCls + '-circle-text'\">{{ percent }}%</span>\n  </div>\n</div>";
 
 /***/ },
-/* 359 */
+/* 345 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"wrapClasses\">\n  <span v-if=\"showInfo === true\">\n    <span v-if=\"status === 'exception' || status === 'success'\" :class=\"prefixCls + '-line-text'\">\n      <v-icon type=\"exclamation-circle\"></v-icon>\n    </span>\n    <span v-else :class=\"prefixCls + '-line-text'\">\n      {{ percent }}%\n    </span>\n  </span>\n\n  <div :class=\"prefixCls + '-line-outer'\">\n    <div :class=\"prefixCls + '-line-inner'\">\n      <div\n        :class=\"prefixCls + '-line-bg'\"\n        :style=\"{width: percent + '%', height: strokeWidth + 'px'}\"></div>\n    </div>\n  </div>\n</div>";
 
 /***/ },
-/* 360 */
+/* 346 */
 /***/ function(module, exports) {
 
 	module.exports = "<div>\n  <div v-if=\"component === 'div'\">\n    <slot></slot>\n  </div>\n  <ul v-if=\"component === 'ul'\">\n    <slot></slot>\n  </ul>\n  <ol v-if=\"component === 'ol'\">\n    <slot></slot>\n  </ol>\n  <form v-if=\"component === 'form'\">\n    <slot></slot>\n  </form>\n</div>";
 
 /***/ },
-/* 361 */
+/* 347 */
 /***/ function(module, exports) {
 
 	module.exports = "<label :class=\"wrapClasses\">\n  <span :class=\"radioClasses\">\n    <span :class=\"prefixCls + '-inner'\"></span>\n    <input\n      type=\"radio\"\n      :disabled=\"disabled\"\n      :value=\"value\"\n      :checked=\"!!checked\"\n      :class=\"prefixCls + '-input'\"\n      @change=\"_handleChange\">\n  </span>\n  <slot>Radio</slot>\n</label>";
 
 /***/ },
-/* 362 */
+/* 348 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"prefixCls\">\n  <v-radio v-for=\"radio in radios\" :class-name=\"radioClasses\" :value=\"radio.value\" :on-change=\"_onRadioChange.bind(radio, $index)\" :checked=\"value === radio.value\"><span>{{radio.name}}</span></v-radio>\n</div>";
 
 /***/ },
-/* 363 */
+/* 349 */
 /***/ function(module, exports) {
 
 	module.exports = "";
 
 /***/ },
-/* 364 */
+/* 350 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"loadingClasses\">\n  <div v-if=\"!hide\" :class=\"spinWrapClasses\">\n    <span :class=\"prefixCls + '-dot ' + prefixCls + '-dot-first'\"></span>\n    <span :class=\"prefixCls + '-dot ' + prefixCls + '-dot-second'\"></span>\n    <span :class=\"prefixCls + '-dot ' + prefixCls + '-dot-third'\"></span>\n  </div>\n  <div :class=\"prefixCls + '-container'\">\n    <slot></slot>\n  </div>\n</div>";
 
 /***/ },
-/* 365 */
+/* 351 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"wrapClasses\" :style=\"{'width': tailWidth}\">\n  <div v-if=\"!stepLast\" :class=\"prefixCls + '-tail'\"><i></i></div>\n  <div :class=\"prefixCls + '-head'\">\n    <div :class=\"prefixCls + '-head-inner'\">\n      <span v-if=\"!icon && status !== 'finish'\" :class=\"prefixCls + '-icon'\">{{stepNumber}}</span>\n      <span v-else :class=\"prefixCls + '-icon ' + iconPrefix + 'icon ' + iconPrefix + 'icon-' + iconName\"></span>\n    </div>\n  </div>\n  <div :class=\"prefixCls + '-main'\" :style=\"{'maxWidth': maxDescriptionWidth}\">\n    <div :class=\"prefixCls + '-title'\">{{title}}</div>\n    <div v-if=\"description\" :class=\"prefixCls + '-description'\">{{description}}</div>\n  </div>\n</div>";
 
 /***/ },
-/* 366 */
+/* 352 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"wrapClasses\">\n  <slot></slot>\n</div>";
 
 /***/ },
-/* 367 */
+/* 353 */
 /***/ function(module, exports) {
 
 	module.exports = "<span :class=\"wrapClasses\" @click=\"_toggle\">\n  <span :class=\"prefixCls + '-inner'\">\n    <slot v-if=\"checked\" name=\"checkedChildren\"></slot>\n    <slot v-if=\"!checked\" name=\"unCheckedChildren\"></slot>\n  </span>\n</span>";
 
 /***/ },
-/* 368 */
+/* 354 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"clearfix\" :class=\"{'ant-table-empty': isEmpty}\">\n  <div :class=\"tableClass\" :style=\"style\">\n    <div v-if=\"useFixedHeader\" :class=\"prefixCls + '-header'\">\n      <table>\n        <colgroup>\n          <col v-if=\"expandIconAsCell\" :class=\"prefixCls + '-expand-icon-col'\"></col>\n          <col v-for=\"col in columns\" :style=\"{'width': col.width}\"></col>\n        </colgroup>\n        <thead :class=\"prefixCls + '-thead'\">\n          <tr>\n            <th v-for=\"col in columns\">{{col.title}}</th>\n          </tr>\n        </thead>\n      </table>\n    </div>\n    <div :class=\"prefixCls + '-body'\" :style=\"bodyStyle\">\n      <table>\n        <colgroup>\n          <col v-if=\"expandIconAsCell\" :class=\"prefixCls + '-expand-icon-col'\"></col>\n          <col v-for=\"col in columns\" :style=\"{'width': col.width}\"></col>\n        </colgroup>\n        <thead :class=\"prefixCls + '-thead'\">\n          <tr>\n            <th v-for=\"col in columns\">{{col.title}}</th>\n          </tr>\n        </thead>\n        <tbody :class=\"prefixCls + '-tbody'\" v-el:render>\n          <tr v-for=\"data in dataSource\" :class=\"prefixCls + classString\">\n            <td v-for=\"col in columns\">{{{!col.render && col.dataIndex ? data[col.dataIndex] : ''}}}</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>";
 
 /***/ },
-/* 369 */
+/* 355 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-if=\"!closed\" :class=\"wrapClasses\">\n  <a :class=\"prefixCls + '-text'\" :href=\"href\"><slot></slot></a>\n  <v-icon v-if=\"closable\" type=\"cross\" @click=\"_close\"></v-icon>\n</div>";
 
 /***/ },
-/* 370 */
+/* 356 */
 /***/ function(module, exports) {
 
 	module.exports = "<span role=\"button\"\n  tabIndex=\"0\"\n  @click=\"_onClick\"\n  @keydown=\"_onKeyDown\"\n  @drop=\"_onFileDrop\"\n  @dragover=\"_onFileDrop\">\n  <input v-el:file\n    type=\"file\"\n    style=\"display: none\"\n    :accept=\"accept\"\n    :multiple=\"multiple\"\n    @change=\"_onChange\">\n  <slot></slot>\n</span>";
 
 /***/ },
-/* 371 */
+/* 357 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"prefixCls + '-list'\">\n  <div v-for=\"file in items\" :class=\"prefixCls + '-list-item'\" :key=\"file.uid\">\n    <v-icon v-if=\"file.status === 'done'\" type=\"check\" :class=\"prefixCls + '-success-icon'\"></v-icon>\n    <v-icon v-if=\"file.status !== 'done'\" type=\"loading\"></v-icon>\n\n    <a v-if=\"file.url\" :class=\"prefixCls + '-item-name'\" :href=\"file.url\" target=\"_blank\">{{file.name}}</a>\n    <b v-if=\"!file.url\" :class=\"prefixCls + '-item-name'\">{{file.name}}</b>\n\n    <v-icon type=\"cross\" @click=\"_handleClose(file)\"></v-icon>\n  </div>\n</div>";
 
 /***/ },
-/* 372 */
+/* 358 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"wrapClasses\">\n  <ajax-upload\n    :action=\"action\"\n    :name=\"name\"\n    :data=\"data\"\n    :multiple=\"multiple\"\n    :on-start=\"_onStart\"\n    :on-progress=\"_onProgress\"\n    :on-success=\"_onSuccess\"\n    :on-error=\"_onError\"\n    :before-upload=\"beforeUpload\">\n    <div :class=\"containerClasses\">\n      <slot></slot>\n    </div>\n  </ajax-upload>\n</div>\n<upload-list :items=\"fileList\" :on-remove=\"_handleManualRemove\" ></upload-list>";
 
 /***/ },
-/* 373 */
+/* 359 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"main-wrapper\">\n  <aside class=\"aside-container\">\n    <ul>\n      <li>\n        <a v-link=\"{path: '/docs/introduce'}\" class=\"\">\n          Ant Design of Vue\n          <span class=\"chinese\"></span>\n        </a>\n      </li>\n      <li>\n        <a v-link=\"{path: '/docs/getting-started'}\" class=\"\">\n          快速上手\n          <span class=\"chinese\"></span>\n        </a>\n      </li>\n      <li>\n        <a v-link=\"{path: '/docs/download'}\" class=\"\">\n          下载\n          <span class=\"chinese\"></span>\n        </a>\n      </li>\n      <li>\n        <h4>Components</h4>\n        <ul>\n          <li class=\"type-divider\">基本</li>\n          <li v-for=\"component in componentsMenu.base\">\n            <a v-link=\"{path: '/components/' + component.name}\">\n              {{component.name | Upper}}\n              <span class=\"chinese\">{{component.desc}}</span>\n            </a>\n          </li>\n          <li class=\"type-divider\">表单</li>\n          <li v-for=\"component in componentsMenu.form\">\n            <a v-link=\"{path: '/components/' + component.name}\">\n              {{component.name | Upper}}\n              <span class=\"chinese\">{{component.desc}}</span>\n            </a>\n          </li>\n          <li class=\"type-divider\">展示</li>\n          <li v-for=\"component in componentsMenu.show\">\n            <a v-link=\"{path: '/components/' + component.name}\">\n              {{component.name | Upper}}\n              <span class=\"chinese\">{{component.desc}}</span>\n            </a>\n          </li>\n          <li class=\"type-divider\">导航</li>\n          <li v-for=\"component in componentsMenu.pagination\">\n            <a v-link=\"{path: '/components/' + component.name}\">\n              {{component.name | Upper}}\n              <span class=\"chinese\">{{component.desc}}</span>\n            </a>\n          </li>\n          <li class=\"type-divider\">其他</li>\n          <li v-for=\"component in componentsMenu.other\">\n            <a v-link=\"{path: '/components/' + component.name}\">\n              {{component.name | Upper}}\n              <span class=\"chinese\">{{component.desc}}</span>\n            </a>\n          </li>\n          <li class=\"type-divider\">基础</li>\n          <li v-for=\"component in componentsMenu.basic\">\n            <a v-link=\"{path: '/components/' + component.name}\">\n              {{component.name | Upper}}\n              <span class=\"chinese\">{{component.desc}}</span>\n            </a>\n          </li>\n        </ul>\n      </li>\n    </ul>\n  </aside>\n  <section class=\"main-container\">\n    <router-view class=\"view\"></router-view>\n  </section>\n</div>";
 
 /***/ },
-/* 374 */
+/* 360 */
 /***/ function(module, exports) {
 
 	module.exports = "404 Not Found.";
 
 /***/ },
-/* 375 */
+/* 361 */,
+/* 362 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div _v-ef9c457e=\"\">\n<header class=\"clearfix\" _v-ef9c457e=\"\">\n  <a class=\"logo\" href=\"..\" _v-ef9c457e=\"\">\n    <img width=\"50\" src=\"" + __webpack_require__(288) + "\" _v-ef9c457e=\"\">\n    <span _v-ef9c457e=\"\">Vue Antd<span _v-ef9c457e=\"\">\n  </span></span></a>\n  <nav class=\"nav\" _v-ef9c457e=\"\">\n    <ul _v-ef9c457e=\"\">\n      <li :class=\"{current: isHomePage}\" _v-ef9c457e=\"\">\n        <a href=\"..\" data-no-instant=\"\" _v-ef9c457e=\"\">首页</a>\n      </li>\n      <li :class=\"{current: isComponentsPage}\" _v-ef9c457e=\"\">\n        <a v-link=\"{path: '/components'}\" _v-ef9c457e=\"\">Components</a>\n      </li>\n      <li _v-ef9c457e=\"\">\n        <a target=\"_blank\" title=\"Please star me and fork me!\" alt=\"star and fork\" href=\"https://github.com/okoala/vue-antd\" _v-ef9c457e=\"\">Github</a>\n      </li>\n    </ul>\n  </nav>\n</header>\n<router-view _v-ef9c457e=\"\"></router-view>\n</div>";
-
-/***/ },
-/* 376 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(159)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(338)
+	module.exports = __webpack_require__(149)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(323)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -19988,11 +20592,11 @@
 	}
 
 /***/ },
-/* 377 */
+/* 363 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(160)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(339)
+	module.exports = __webpack_require__(150)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(324)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20009,12 +20613,12 @@
 	}
 
 /***/ },
-/* 378 */
+/* 364 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(323)
-	module.exports = __webpack_require__(161)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(340)
+	__webpack_require__(306)
+	module.exports = __webpack_require__(151)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(325)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20031,11 +20635,11 @@
 	}
 
 /***/ },
-/* 379 */
+/* 365 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(162)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(341)
+	module.exports = __webpack_require__(152)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(326)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20052,11 +20656,11 @@
 	}
 
 /***/ },
-/* 380 */
+/* 366 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(163)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(342)
+	module.exports = __webpack_require__(153)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(327)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20073,11 +20677,11 @@
 	}
 
 /***/ },
-/* 381 */
+/* 367 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(164)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(343)
+	module.exports = __webpack_require__(154)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(328)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20094,11 +20698,11 @@
 	}
 
 /***/ },
-/* 382 */
+/* 368 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(165)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(344)
+	module.exports = __webpack_require__(155)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(329)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20115,11 +20719,11 @@
 	}
 
 /***/ },
-/* 383 */
+/* 369 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(166)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(345)
+	module.exports = __webpack_require__(156)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(330)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20136,11 +20740,11 @@
 	}
 
 /***/ },
-/* 384 */
+/* 370 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(167)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(346)
+	module.exports = __webpack_require__(157)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(331)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20157,11 +20761,11 @@
 	}
 
 /***/ },
-/* 385 */
+/* 371 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(168)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(347)
+	module.exports = __webpack_require__(158)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(332)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20178,11 +20782,11 @@
 	}
 
 /***/ },
-/* 386 */
+/* 372 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(169)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(348)
+	module.exports = __webpack_require__(159)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(333)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20199,11 +20803,11 @@
 	}
 
 /***/ },
-/* 387 */
+/* 373 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(170)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(349)
+	module.exports = __webpack_require__(160)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(334)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20220,11 +20824,11 @@
 	}
 
 /***/ },
-/* 388 */
+/* 374 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(171)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(350)
+	module.exports = __webpack_require__(161)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(335)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20241,11 +20845,11 @@
 	}
 
 /***/ },
-/* 389 */
+/* 375 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(172)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(351)
+	module.exports = __webpack_require__(162)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(336)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20262,11 +20866,11 @@
 	}
 
 /***/ },
-/* 390 */
+/* 376 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(173)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(352)
+	module.exports = __webpack_require__(163)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(337)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20283,11 +20887,11 @@
 	}
 
 /***/ },
-/* 391 */
+/* 377 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(174)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(353)
+	module.exports = __webpack_require__(164)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(338)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20304,11 +20908,11 @@
 	}
 
 /***/ },
-/* 392 */
+/* 378 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(175)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(354)
+	module.exports = __webpack_require__(165)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(339)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20325,11 +20929,11 @@
 	}
 
 /***/ },
-/* 393 */
+/* 379 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(176)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(355)
+	module.exports = __webpack_require__(166)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(340)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20346,11 +20950,11 @@
 	}
 
 /***/ },
-/* 394 */
+/* 380 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(177)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(356)
+	module.exports = __webpack_require__(167)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(341)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20367,11 +20971,11 @@
 	}
 
 /***/ },
-/* 395 */
+/* 381 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(178)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(357)
+	module.exports = __webpack_require__(168)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(342)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20388,11 +20992,32 @@
 	}
 
 /***/ },
-/* 396 */
+/* 382 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(179)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(358)
+	module.exports = __webpack_require__(169)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(343)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Popconfirm.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Popconfirm.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Popconfirm.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Popconfirm.vue")
+	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Popconfirm.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 383 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(170)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(344)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20409,11 +21034,11 @@
 	}
 
 /***/ },
-/* 397 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(180)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(359)
+	module.exports = __webpack_require__(171)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(345)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20430,11 +21055,11 @@
 	}
 
 /***/ },
-/* 398 */
+/* 385 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(181)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(360)
+	module.exports = __webpack_require__(172)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(346)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20451,11 +21076,11 @@
 	}
 
 /***/ },
-/* 399 */
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(183)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(362)
+	module.exports = __webpack_require__(174)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(348)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20472,17 +21097,17 @@
 	}
 
 /***/ },
-/* 400 */
+/* 387 */
 /***/ function(module, exports) {
 
 
 
 /***/ },
-/* 401 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(184)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(363)
+	module.exports = __webpack_require__(175)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(349)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20499,11 +21124,11 @@
 	}
 
 /***/ },
-/* 402 */
+/* 389 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(185)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(364)
+	module.exports = __webpack_require__(176)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(350)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20520,11 +21145,11 @@
 	}
 
 /***/ },
-/* 403 */
+/* 390 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(186)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(365)
+	module.exports = __webpack_require__(177)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(351)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20541,11 +21166,11 @@
 	}
 
 /***/ },
-/* 404 */
+/* 391 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(187)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(366)
+	module.exports = __webpack_require__(178)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(352)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20562,11 +21187,11 @@
 	}
 
 /***/ },
-/* 405 */
+/* 392 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(188)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(367)
+	module.exports = __webpack_require__(179)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(353)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20583,11 +21208,11 @@
 	}
 
 /***/ },
-/* 406 */
+/* 393 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(189)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(368)
+	module.exports = __webpack_require__(180)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(354)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20604,11 +21229,11 @@
 	}
 
 /***/ },
-/* 407 */
+/* 394 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(190)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(369)
+	module.exports = __webpack_require__(181)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(355)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20625,11 +21250,11 @@
 	}
 
 /***/ },
-/* 408 */
+/* 395 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(191)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(370)
+	module.exports = __webpack_require__(182)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(356)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20646,11 +21271,11 @@
 	}
 
 /***/ },
-/* 409 */
+/* 396 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(192)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(371)
+	module.exports = __webpack_require__(183)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(357)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20667,11 +21292,11 @@
 	}
 
 /***/ },
-/* 410 */
+/* 397 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(193)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(372)
+	module.exports = __webpack_require__(184)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(358)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20688,12 +21313,12 @@
 	}
 
 /***/ },
-/* 411 */
+/* 398 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(328)
-	module.exports = __webpack_require__(194)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(309)
+	__webpack_require__(312)
+	module.exports = __webpack_require__(185)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(294)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20710,12 +21335,12 @@
 	}
 
 /***/ },
-/* 412 */
+/* 399 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(329)
-	module.exports = __webpack_require__(195)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(310)
+	__webpack_require__(313)
+	module.exports = __webpack_require__(186)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(295)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20732,12 +21357,12 @@
 	}
 
 /***/ },
-/* 413 */
+/* 400 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(325)
-	module.exports = __webpack_require__(196)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(289)
+	__webpack_require__(308)
+	module.exports = __webpack_require__(187)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(273)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20754,12 +21379,12 @@
 	}
 
 /***/ },
-/* 414 */
+/* 401 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(586)
-	module.exports = __webpack_require__(197)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(585)
+	__webpack_require__(309)
+	module.exports = __webpack_require__(188)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(274)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20776,12 +21401,12 @@
 	}
 
 /***/ },
-/* 415 */
+/* 402 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(326)
-	module.exports = __webpack_require__(198)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(290)
+	__webpack_require__(310)
+	module.exports = __webpack_require__(189)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(275)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20798,11 +21423,11 @@
 	}
 
 /***/ },
-/* 416 */
+/* 403 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(199)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(291)
+	module.exports = __webpack_require__(190)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(276)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20819,11 +21444,11 @@
 	}
 
 /***/ },
-/* 417 */
+/* 404 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(200)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(292)
+	module.exports = __webpack_require__(191)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(277)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20840,12 +21465,12 @@
 	}
 
 /***/ },
-/* 418 */
+/* 405 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(331)
-	module.exports = __webpack_require__(201)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(312)
+	__webpack_require__(314)
+	module.exports = __webpack_require__(192)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(296)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20862,11 +21487,11 @@
 	}
 
 /***/ },
-/* 419 */
+/* 406 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(202)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(293)
+	module.exports = __webpack_require__(193)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(278)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20883,12 +21508,12 @@
 	}
 
 /***/ },
-/* 420 */
+/* 407 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(332)
-	module.exports = __webpack_require__(203)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(313)
+	__webpack_require__(315)
+	module.exports = __webpack_require__(194)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(297)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20905,11 +21530,11 @@
 	}
 
 /***/ },
-/* 421 */
+/* 408 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(204)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(294)
+	module.exports = __webpack_require__(195)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(279)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20926,11 +21551,12 @@
 	}
 
 /***/ },
-/* 422 */
+/* 409 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(205)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(295)
+	__webpack_require__(581)
+	module.exports = __webpack_require__(196)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(580)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20938,20 +21564,20 @@
 	if (!hotAPI.compatible) return
 	var id = "-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./iconfont.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./iconfont.vue","-!html!vue-antd-docs!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./iconfont.vue"], function () {
+	module.hot.accept(["-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./iconfont.vue","-!html!./../../node_modules/vue-loader/lib/template-rewriter.js!vue-antd-docs!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./iconfont.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./iconfont.vue")
-	var newTemplate = require("-!html!vue-antd-docs!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./iconfont.vue")
+	var newTemplate = require("-!html!./../../node_modules/vue-loader/lib/template-rewriter.js!vue-antd-docs!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./iconfont.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
 	}
 
 /***/ },
-/* 423 */
+/* 410 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(206)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(296)
+	module.exports = __webpack_require__(197)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(281)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20968,12 +21594,12 @@
 	}
 
 /***/ },
-/* 424 */
+/* 411 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(333)
-	module.exports = __webpack_require__(207)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(314)
+	__webpack_require__(316)
+	module.exports = __webpack_require__(198)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(298)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -20990,11 +21616,11 @@
 	}
 
 /***/ },
-/* 425 */
+/* 412 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(208)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(297)
+	module.exports = __webpack_require__(199)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(282)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21011,11 +21637,11 @@
 	}
 
 /***/ },
-/* 426 */
+/* 413 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(209)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(298)
+	module.exports = __webpack_require__(200)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(283)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21032,11 +21658,33 @@
 	}
 
 /***/ },
-/* 427 */
+/* 414 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(210)
+	__webpack_require__(317)
+	module.exports = __webpack_require__(201)
 	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(299)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./popconfirm.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./popconfirm.vue","-!html!./../../node_modules/vue-loader/lib/template-rewriter.js!vue-antd-docs!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./popconfirm.vue"], function () {
+	var newOptions = require("-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./popconfirm.vue")
+	var newTemplate = require("-!html!./../../node_modules/vue-loader/lib/template-rewriter.js!vue-antd-docs!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./popconfirm.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 415 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(202)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(284)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21053,12 +21701,12 @@
 	}
 
 /***/ },
-/* 428 */
+/* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(334)
-	module.exports = __webpack_require__(211)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(315)
+	__webpack_require__(318)
+	module.exports = __webpack_require__(203)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(300)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21075,11 +21723,11 @@
 	}
 
 /***/ },
-/* 429 */
+/* 417 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(212)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(300)
+	module.exports = __webpack_require__(204)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(285)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21096,11 +21744,11 @@
 	}
 
 /***/ },
-/* 430 */
+/* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(213)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(301)
+	module.exports = __webpack_require__(205)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(286)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21117,12 +21765,12 @@
 	}
 
 /***/ },
-/* 431 */
+/* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(335)
-	module.exports = __webpack_require__(214)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(316)
+	__webpack_require__(319)
+	module.exports = __webpack_require__(206)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(301)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21139,11 +21787,11 @@
 	}
 
 /***/ },
-/* 432 */
+/* 420 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(215)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(302)
+	module.exports = __webpack_require__(207)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(287)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21160,11 +21808,11 @@
 	}
 
 /***/ },
-/* 433 */
+/* 421 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(216)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(303)
+	module.exports = __webpack_require__(208)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(288)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21181,11 +21829,11 @@
 	}
 
 /***/ },
-/* 434 */
+/* 422 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(217)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(304)
+	module.exports = __webpack_require__(209)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(289)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21202,11 +21850,11 @@
 	}
 
 /***/ },
-/* 435 */
+/* 423 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(218)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(305)
+	module.exports = __webpack_require__(210)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(290)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21223,11 +21871,11 @@
 	}
 
 /***/ },
-/* 436 */
+/* 424 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(219)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(306)
+	module.exports = __webpack_require__(211)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(291)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21244,12 +21892,12 @@
 	}
 
 /***/ },
-/* 437 */
+/* 425 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(285)
-	module.exports = __webpack_require__(220)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(375)
+	__webpack_require__(582)
+	module.exports = __webpack_require__(212)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(583)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21257,21 +21905,21 @@
 	if (!hotAPI.compatible) return
 	var id = "-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app.vue","-!vue-html!./../../node_modules/vue-loader/lib/template-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./app.vue"], function () {
+	module.hot.accept(["-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./app.vue"], function () {
 	var newOptions = require("-!babel?optional[]=runtime&stage=2!eslint!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app.vue")
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/template-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./app.vue")
+	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./app.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
 	}
 
 /***/ },
-/* 438 */
+/* 426 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(327)
-	module.exports = __webpack_require__(221)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(373)
+	__webpack_require__(311)
+	module.exports = __webpack_require__(213)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(359)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21288,10 +21936,10 @@
 	}
 
 /***/ },
-/* 439 */
+/* 427 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(307)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(292)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21308,10 +21956,10 @@
 	}
 
 /***/ },
-/* 440 */
+/* 428 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(308)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(293)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21328,11 +21976,11 @@
 	}
 
 /***/ },
-/* 441 */
+/* 429 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(336)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(317)
+	__webpack_require__(320)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(302)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21349,11 +21997,11 @@
 	}
 
 /***/ },
-/* 442 */
+/* 430 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(222)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(374)
+	module.exports = __webpack_require__(214)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(360)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -21370,18 +22018,18 @@
 	}
 
 /***/ },
-/* 443 */,
-/* 444 */,
-/* 445 */
+/* 431 */,
+/* 432 */,
+/* 433 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Service for sending network requests.
 	 */
 	
-	var xhr = __webpack_require__(449);
-	var jsonp = __webpack_require__(447);
-	var Promise = __webpack_require__(53);
+	var xhr = __webpack_require__(437);
+	var jsonp = __webpack_require__(435);
+	var Promise = __webpack_require__(48);
 	
 	module.exports = function (_) {
 	
@@ -21538,7 +22186,7 @@
 
 
 /***/ },
-/* 446 */
+/* 434 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21547,11 +22195,11 @@
 	
 	function install(Vue) {
 	
-	    var _ = __webpack_require__(448)(Vue);
+	    var _ = __webpack_require__(436)(Vue);
 	
-	    Vue.url = __webpack_require__(451)(_);
-	    Vue.http = __webpack_require__(445)(_);
-	    Vue.resource = __webpack_require__(450)(_);
+	    Vue.url = __webpack_require__(439)(_);
+	    Vue.http = __webpack_require__(433)(_);
+	    Vue.resource = __webpack_require__(438)(_);
 	
 	    Object.defineProperties(Vue.prototype, {
 	
@@ -21583,14 +22231,14 @@
 	module.exports = install;
 
 /***/ },
-/* 447 */
+/* 435 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * JSONP request.
 	 */
 	
-	var Promise = __webpack_require__(53);
+	var Promise = __webpack_require__(48);
 	
 	module.exports = function (_, options) {
 	
@@ -21639,7 +22287,7 @@
 
 
 /***/ },
-/* 448 */
+/* 436 */
 /***/ function(module, exports) {
 
 	/**
@@ -21725,14 +22373,14 @@
 
 
 /***/ },
-/* 449 */
+/* 437 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * XMLHttp request.
 	 */
 	
-	var Promise = __webpack_require__(53);
+	var Promise = __webpack_require__(48);
 	var XDomain = window.XDomainRequest;
 	
 	module.exports = function (_, options) {
@@ -21782,7 +22430,7 @@
 
 
 /***/ },
-/* 450 */
+/* 438 */
 /***/ function(module, exports) {
 
 	/**
@@ -21899,7 +22547,7 @@
 
 
 /***/ },
-/* 451 */
+/* 439 */
 /***/ function(module, exports) {
 
 	/**
@@ -22062,7 +22710,7 @@
 
 
 /***/ },
-/* 452 */
+/* 440 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22202,7 +22850,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 453 */
+/* 441 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22211,7 +22859,7 @@
 	
 	var _util = __webpack_require__(11);
 	
-	var _pipeline = __webpack_require__(124);
+	var _pipeline = __webpack_require__(114);
 	
 	exports['default'] = function (Vue) {
 	
@@ -22283,7 +22931,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 454 */
+/* 442 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22328,7 +22976,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 455 */
+/* 443 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22397,7 +23045,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 456 */
+/* 444 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22490,7 +23138,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 457 */
+/* 445 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22505,39 +23153,39 @@
 	
 	var _util2 = _interopRequireDefault(_util);
 	
-	var _override = __webpack_require__(458);
+	var _override = __webpack_require__(446);
 	
 	var _override2 = _interopRequireDefault(_override);
 	
-	var _routeRecognizer = __webpack_require__(70);
+	var _routeRecognizer = __webpack_require__(59);
 	
 	var _routeRecognizer2 = _interopRequireDefault(_routeRecognizer);
 	
-	var _route = __webpack_require__(459);
+	var _route = __webpack_require__(447);
 	
 	var _route2 = _interopRequireDefault(_route);
 	
-	var _transition = __webpack_require__(460);
+	var _transition = __webpack_require__(448);
 	
 	var _transition2 = _interopRequireDefault(_transition);
 	
-	var _directivesView = __webpack_require__(453);
+	var _directivesView = __webpack_require__(441);
 	
 	var _directivesView2 = _interopRequireDefault(_directivesView);
 	
-	var _directivesLink = __webpack_require__(452);
+	var _directivesLink = __webpack_require__(440);
 	
 	var _directivesLink2 = _interopRequireDefault(_directivesLink);
 	
-	var _historyAbstract = __webpack_require__(454);
+	var _historyAbstract = __webpack_require__(442);
 	
 	var _historyAbstract2 = _interopRequireDefault(_historyAbstract);
 	
-	var _historyHash = __webpack_require__(455);
+	var _historyHash = __webpack_require__(443);
 	
 	var _historyHash2 = _interopRequireDefault(_historyHash);
 	
-	var _historyHtml5 = __webpack_require__(456);
+	var _historyHtml5 = __webpack_require__(444);
 	
 	var _historyHtml52 = _interopRequireDefault(_historyHtml5);
 	
@@ -23127,7 +23775,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 458 */
+/* 446 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23199,14 +23847,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 459 */
+/* 447 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
 	var _classCallCheck = __webpack_require__(12)["default"];
 	
-	var _Object$freeze = __webpack_require__(228)["default"];
+	var _Object$freeze = __webpack_require__(219)["default"];
 	
 	exports.__esModule = true;
 	var internalKeysRE = /^(component|subRoutes)$/;
@@ -23257,7 +23905,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 460 */
+/* 448 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23268,7 +23916,7 @@
 	
 	var _util = __webpack_require__(11);
 	
-	var _pipeline = __webpack_require__(124);
+	var _pipeline = __webpack_require__(114);
 	
 	/**
 	 * A RouteTransition object manages the pipeline of a
@@ -23590,15 +24238,15 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 461 */
+/* 449 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Watcher = __webpack_require__(32)
-	var Path = __webpack_require__(24)
-	var textParser = __webpack_require__(29)
-	var dirParser = __webpack_require__(23)
-	var expParser = __webpack_require__(28)
+	var Watcher = __webpack_require__(29)
+	var Path = __webpack_require__(22)
+	var textParser = __webpack_require__(26)
+	var dirParser = __webpack_require__(21)
+	var expParser = __webpack_require__(25)
 	var filterRE = /[^|]\|[^|]/
 	
 	/**
@@ -23770,11 +24418,11 @@
 
 
 /***/ },
-/* 462 */
+/* 450 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var transition = __webpack_require__(30)
+	var transition = __webpack_require__(27)
 	
 	/**
 	 * Convenience on-instance nextTick. The callback is
@@ -23980,7 +24628,7 @@
 
 
 /***/ },
-/* 463 */
+/* 451 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -24155,11 +24803,11 @@
 
 
 /***/ },
-/* 464 */
+/* 452 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var config = __webpack_require__(9)
+	var config = __webpack_require__(10)
 	
 	/**
 	 * Expose useful internals
@@ -24175,15 +24823,15 @@
 	 * The following are exposed for advanced usage / plugins
 	 */
 	
-	exports.compiler = __webpack_require__(22)
-	exports.FragmentFactory = __webpack_require__(27)
-	exports.internalDirectives = __webpack_require__(125)
+	exports.compiler = __webpack_require__(20)
+	exports.FragmentFactory = __webpack_require__(24)
+	exports.internalDirectives = __webpack_require__(115)
 	exports.parsers = {
-	  path: __webpack_require__(24),
-	  text: __webpack_require__(29),
-	  template: __webpack_require__(16),
-	  directive: __webpack_require__(23),
-	  expression: __webpack_require__(28)
+	  path: __webpack_require__(22),
+	  text: __webpack_require__(26),
+	  template: __webpack_require__(13),
+	  directive: __webpack_require__(21),
+	  expression: __webpack_require__(25)
 	}
 	
 	/**
@@ -24322,11 +24970,11 @@
 
 
 /***/ },
-/* 465 */
+/* 453 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var compiler = __webpack_require__(22)
+	var compiler = __webpack_require__(20)
 	
 	/**
 	 * Set instance target element and kick off the compilation
@@ -24396,11 +25044,11 @@
 
 
 /***/ },
-/* 466 */
+/* 454 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var config = __webpack_require__(9)
+	var config = __webpack_require__(10)
 	
 	// we have two separate queues: one for directive updates
 	// and one for user watcher registered via $watch().
@@ -24507,17 +25155,17 @@
 
 
 /***/ },
-/* 467 */
+/* 455 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var dirParser = __webpack_require__(23)
-	var propDef = __webpack_require__(126)
-	var propBindingModes = __webpack_require__(9)._propBindingModes
+	var dirParser = __webpack_require__(21)
+	var propDef = __webpack_require__(116)
+	var propBindingModes = __webpack_require__(10)._propBindingModes
 	var empty = {}
 	
 	// regexes
-	var identRE = __webpack_require__(24).identRE
+	var identRE = __webpack_require__(22).identRE
 	var settablePathRE = /^[A-Za-z_$][\w$]*(\.[A-Za-z_$][\w$]*|\[[^\[\]]+\])*$/
 	
 	/**
@@ -24720,16 +25368,16 @@
 
 
 /***/ },
-/* 468 */
+/* 456 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var publicDirectives = __webpack_require__(130)
-	var internalDirectives = __webpack_require__(125)
-	var compileProps = __webpack_require__(467)
-	var textParser = __webpack_require__(29)
-	var dirParser = __webpack_require__(23)
-	var templateParser = __webpack_require__(16)
+	var publicDirectives = __webpack_require__(120)
+	var internalDirectives = __webpack_require__(115)
+	var compileProps = __webpack_require__(455)
+	var textParser = __webpack_require__(26)
+	var dirParser = __webpack_require__(21)
+	var templateParser = __webpack_require__(13)
 	var resolveAsset = _.resolveAsset
 	
 	// special binding prefixes
@@ -25497,11 +26145,11 @@
 
 
 /***/ },
-/* 469 */
+/* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var templateParser = __webpack_require__(16)
+	var templateParser = __webpack_require__(13)
 	var specialCharRE = /[^\w\-:\.]/
 	
 	/**
@@ -25651,12 +26299,12 @@
 
 
 /***/ },
-/* 470 */
+/* 458 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Watcher = __webpack_require__(32)
-	var expParser = __webpack_require__(28)
+	var Watcher = __webpack_require__(29)
+	var expParser = __webpack_require__(25)
 	function noop () {}
 	
 	/**
@@ -25979,20 +26627,20 @@
 
 
 /***/ },
-/* 471 */
+/* 459 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports.slot = __webpack_require__(473)
-	exports.partial = __webpack_require__(472)
+	exports.slot = __webpack_require__(461)
+	exports.partial = __webpack_require__(460)
 
 
 /***/ },
-/* 472 */
+/* 460 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var vIf = __webpack_require__(129)
-	var FragmentFactory = __webpack_require__(27)
+	var vIf = __webpack_require__(119)
+	var FragmentFactory = __webpack_require__(24)
 	
 	module.exports = {
 	
@@ -26036,11 +26684,11 @@
 
 
 /***/ },
-/* 473 */
+/* 461 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var templateParser = __webpack_require__(16)
+	var templateParser = __webpack_require__(13)
 	
 	// This is the elementDirective that handles <content>
 	// transclusions. It relies on the raw content of an
@@ -26166,7 +26814,7 @@
 
 
 /***/ },
-/* 474 */
+/* 462 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -26243,11 +26891,11 @@
 
 
 /***/ },
-/* 475 */
+/* 463 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var templateParser = __webpack_require__(16)
+	var templateParser = __webpack_require__(13)
 	
 	module.exports = {
 	
@@ -26597,11 +27245,11 @@
 
 
 /***/ },
-/* 476 */
+/* 464 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Transition = __webpack_require__(501)
+	var Transition = __webpack_require__(489)
 	
 	module.exports = {
 	
@@ -26623,7 +27271,7 @@
 
 
 /***/ },
-/* 477 */
+/* 465 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -26714,7 +27362,7 @@
 	  },
 	
 	  // share object handler with v-bind:class
-	  handleObject: __webpack_require__(127).handleObject,
+	  handleObject: __webpack_require__(117).handleObject,
 	
 	  handleSingle: function (attr, value) {
 	    if (inputProps[attr] && attr in this.el) {
@@ -26752,7 +27400,7 @@
 
 
 /***/ },
-/* 478 */
+/* 466 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -26766,7 +27414,7 @@
 
 
 /***/ },
-/* 479 */
+/* 467 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -26799,11 +27447,11 @@
 
 
 /***/ },
-/* 480 */
+/* 468 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var templateParser = __webpack_require__(16)
+	var templateParser = __webpack_require__(13)
 	
 	module.exports = {
 	
@@ -26845,7 +27493,7 @@
 
 
 /***/ },
-/* 481 */
+/* 469 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -26913,16 +27561,16 @@
 
 
 /***/ },
-/* 482 */
+/* 470 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
 	
 	var handlers = {
-	  text: __webpack_require__(485),
-	  radio: __webpack_require__(483),
-	  select: __webpack_require__(484),
-	  checkbox: __webpack_require__(481)
+	  text: __webpack_require__(473),
+	  radio: __webpack_require__(471),
+	  select: __webpack_require__(472),
+	  checkbox: __webpack_require__(469)
 	}
 	
 	module.exports = {
@@ -27001,7 +27649,7 @@
 
 
 /***/ },
-/* 483 */
+/* 471 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -27041,7 +27689,7 @@
 
 
 /***/ },
-/* 484 */
+/* 472 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -27165,7 +27813,7 @@
 
 
 /***/ },
-/* 485 */
+/* 473 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -27298,7 +27946,7 @@
 
 
 /***/ },
-/* 486 */
+/* 474 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -27428,7 +28076,7 @@
 
 
 /***/ },
-/* 487 */
+/* 475 */
 /***/ function(module, exports, __webpack_require__) {
 
 	if (true) {
@@ -27444,11 +28092,11 @@
 
 
 /***/ },
-/* 488 */
+/* 476 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var transition = __webpack_require__(30)
+	var transition = __webpack_require__(27)
 	
 	module.exports = {
 	
@@ -27476,7 +28124,7 @@
 
 
 /***/ },
-/* 489 */
+/* 477 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -27496,12 +28144,12 @@
 
 
 /***/ },
-/* 490 */
+/* 478 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Path = __webpack_require__(24)
-	var toArray = __webpack_require__(128)._postProcess
+	var Path = __webpack_require__(22)
+	var toArray = __webpack_require__(118)._postProcess
 	
 	/**
 	 * Limit filter for arrays
@@ -27620,7 +28268,7 @@
 
 
 /***/ },
-/* 491 */
+/* 479 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -27740,15 +28388,15 @@
 	 * Install special array filters
 	 */
 	
-	_.extend(exports, __webpack_require__(490))
+	_.extend(exports, __webpack_require__(478))
 
 
 /***/ },
-/* 492 */
+/* 480 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var transition = __webpack_require__(30)
+	var transition = __webpack_require__(27)
 	
 	/**
 	 * Abstraction for a partially-compiled fragment.
@@ -27936,7 +28584,7 @@
 
 
 /***/ },
-/* 493 */
+/* 481 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -28105,7 +28753,7 @@
 
 
 /***/ },
-/* 494 */
+/* 482 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var mergeOptions = __webpack_require__(2).mergeOptions
@@ -28223,12 +28871,12 @@
 
 
 /***/ },
-/* 495 */
+/* 483 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var Directive = __webpack_require__(470)
-	var compiler = __webpack_require__(22)
+	var Directive = __webpack_require__(458)
+	var compiler = __webpack_require__(20)
 	
 	/**
 	 * Update v-ref for component.
@@ -28466,7 +29114,7 @@
 
 
 /***/ },
-/* 496 */
+/* 484 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -28565,14 +29213,14 @@
 
 
 /***/ },
-/* 497 */
+/* 485 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var compiler = __webpack_require__(22)
-	var Observer = __webpack_require__(499)
-	var Dep = __webpack_require__(54)
-	var Watcher = __webpack_require__(32)
+	var compiler = __webpack_require__(20)
+	var Observer = __webpack_require__(487)
+	var Dep = __webpack_require__(49)
+	var Watcher = __webpack_require__(29)
 	
 	/**
 	 * Setup the scope of an instance, which contains:
@@ -28812,7 +29460,7 @@
 
 
 /***/ },
-/* 498 */
+/* 486 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -28908,13 +29556,13 @@
 
 
 /***/ },
-/* 499 */
+/* 487 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var config = __webpack_require__(9)
-	var Dep = __webpack_require__(54)
-	var arrayMethods = __webpack_require__(498)
+	var config = __webpack_require__(10)
+	var Dep = __webpack_require__(49)
+	var arrayMethods = __webpack_require__(486)
 	var arrayKeys = Object.getOwnPropertyNames(arrayMethods)
 	
 	/**
@@ -29141,7 +29789,7 @@
 
 
 /***/ },
-/* 500 */
+/* 488 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -29182,11 +29830,11 @@
 
 
 /***/ },
-/* 501 */
+/* 489 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var queue = __webpack_require__(500)
+	var queue = __webpack_require__(488)
 	var addClass = _.addClass
 	var removeClass = _.removeClass
 	var transitionEndEvent = _.transitionEndEvent
@@ -29555,7 +30203,7 @@
 
 
 /***/ },
-/* 502 */
+/* 490 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
@@ -29711,7 +30359,7 @@
 
 
 /***/ },
-/* 503 */
+/* 491 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -29720,7 +30368,7 @@
 	
 	if (true) {
 	
-	  var config = __webpack_require__(9)
+	  var config = __webpack_require__(10)
 	  var hasConsole = typeof console !== 'undefined'
 	
 	  /**
@@ -29764,12 +30412,12 @@
 
 
 /***/ },
-/* 504 */
+/* 492 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var config = __webpack_require__(9)
-	var transition = __webpack_require__(30)
+	var config = __webpack_require__(10)
+	var transition = __webpack_require__(27)
 	
 	/**
 	 * Query an element selector if it's not an element already.
@@ -30133,7 +30781,7 @@
 
 
 /***/ },
-/* 505 */
+/* 493 */
 /***/ function(module, exports) {
 
 	// can we use __proto__?
@@ -30224,7 +30872,7 @@
 
 
 /***/ },
-/* 506 */
+/* 494 */
 /***/ function(module, exports) {
 
 	/**
@@ -30620,11 +31268,11 @@
 
 
 /***/ },
-/* 507 */
+/* 495 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var _ = __webpack_require__(2)
-	var config = __webpack_require__(9)
+	var config = __webpack_require__(10)
 	var extend = _.extend
 	
 	/**
@@ -30985,12 +31633,24 @@
 
 
 /***/ },
-/* 508 */
+/* 496 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
+/* 497 */,
+/* 498 */,
+/* 499 */,
+/* 500 */,
+/* 501 */,
+/* 502 */,
+/* 503 */,
+/* 504 */,
+/* 505 */,
+/* 506 */,
+/* 507 */,
+/* 508 */,
 /* 509 */,
 /* 510 */,
 /* 511 */,
@@ -31061,12 +31721,7 @@
 /* 576 */,
 /* 577 */,
 /* 578 */,
-/* 579 */,
-/* 580 */,
-/* 581 */,
-/* 582 */,
-/* 583 */,
-/* 584 */
+/* 579 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(7)();
@@ -31074,25 +31729,25 @@
 	
 	
 	// module
-	exports.push([module.id, "#tooltip_demo_pos a {\n  display: inline-block;\n  line-height: 40px;\n  height: 40px;\n  width: 80px;\n  text-align: center;\n  background: #f6f6f6;\n  margin-right: 1em;\n  margin-bottom: 1em;\n  border-radius: 6px;\n}\n\n.ant-tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  visibility: visible;\n  font-size: 12px;\n  line-height: 1.5;\n  opacity: 0.9;\n}\n.ant-tooltip-hidden {\n  display: none;\n}\n.ant-tooltip-placement-top,\n.ant-tooltip-placement-topLeft,\n.ant-tooltip-placement-topRight {\n  padding: 5px 0 9px 0;\n}\n.ant-tooltip-placement-right,\n.ant-tooltip-placement-rightTop,\n.ant-tooltip-placement-rightBottom {\n  padding: 0 5px 0 9px;\n}\n.ant-tooltip-placement-bottom,\n.ant-tooltip-placement-bottomLeft,\n.ant-tooltip-placement-bottomRight {\n  padding: 9px 0 5px 0;\n}\n.ant-tooltip-placement-left,\n.ant-tooltip-placement-leftTop,\n.ant-tooltip-placement-leftBottom {\n  padding: 0 9px 0 5px;\n}\n.ant-tooltip-inner {\n  padding: 8px 10px;\n  color: #fff;\n  text-align: left;\n  text-decoration: none;\n  background-color: #373737;\n  border-radius: 6px;\n  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);\n  min-height: 34px;\n}\n.ant-tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.ant-tooltip-placement-top .ant-tooltip-arrow,\n.ant-tooltip-placement-topLeft .ant-tooltip-arrow,\n.ant-tooltip-placement-topRight .ant-tooltip-arrow {\n  bottom: 4px;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #373737;\n}\n.ant-tooltip-placement-top .ant-tooltip-arrow {\n  left: 50%;\n}\n.ant-tooltip-placement-topLeft .ant-tooltip-arrow {\n  left: 15%;\n}\n.ant-tooltip-placement-topRight .ant-tooltip-arrow {\n  right: 15%;\n}\n.ant-tooltip-placement-right .ant-tooltip-arrow,\n.ant-tooltip-placement-rightTop .ant-tooltip-arrow,\n.ant-tooltip-placement-rightBottom .ant-tooltip-arrow {\n  left: 4px;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #373737;\n}\n.ant-tooltip-placement-right .ant-tooltip-arrow {\n  top: 50%;\n}\n.ant-tooltip-placement-rightTop .ant-tooltip-arrow {\n  top: 15%;\n  margin-top: 0;\n}\n.ant-tooltip-placement-rightBottom .ant-tooltip-arrow {\n  bottom: 15%;\n}\n.ant-tooltip-placement-left .ant-tooltip-arrow,\n.ant-tooltip-placement-leftTop .ant-tooltip-arrow,\n.ant-tooltip-placement-leftBottom .ant-tooltip-arrow {\n  right: 4px;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #373737;\n}\n.ant-tooltip-placement-left .ant-tooltip-arrow {\n  top: 50%;\n}\n.ant-tooltip-placement-leftTop .ant-tooltip-arrow {\n  top: 15%;\n  margin-top: 0;\n}\n.ant-tooltip-placement-leftBottom .ant-tooltip-arrow {\n  bottom: 15%;\n}\n.ant-tooltip-placement-bottom .ant-tooltip-arrow,\n.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow,\n.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {\n  top: 4px;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #373737;\n}\n.ant-tooltip-placement-bottom .ant-tooltip-arrow {\n  left: 50%;\n}\n.ant-tooltip-placement-bottomLeft .ant-tooltip-arrow {\n  left: 15%;\n}\n.ant-tooltip-placement-bottomRight .ant-tooltip-arrow {\n  right: 15%;\n}\n.ant-tooltip.ant-tooltip-zoom-enter,\n.ant-tooltip.ant-tooltip-zoom-leave {\n  display: block;\n}\n.ant-tooltip-zoom-enter,\n.ant-tooltip-zoom-appear {\n  opacity: 0;\n  -webkit-animation-duration: 0.3s;\n          animation-duration: 0.3s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);\n          animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);\n  -webkit-animation-play-state: paused;\n          animation-play-state: paused;\n}\n.ant-tooltip-zoom-leave {\n  -webkit-animation-duration: 0.3s;\n          animation-duration: 0.3s;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);\n          animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);\n  -webkit-animation-play-state: paused;\n          animation-play-state: paused;\n}\n.ant-tooltip-zoom-enter.ant-tooltip-zoom-enter-active,\n.ant-tooltip-zoom-appear.ant-tooltip-zoom-appear-active {\n  -webkit-animation-name: antToolTipZoomIn;\n          animation-name: antToolTipZoomIn;\n  -webkit-animation-play-state: running;\n          animation-play-state: running;\n}\n.ant-tooltip-zoom-leave.ant-tooltip-zoom-leave-active {\n  -webkit-animation-name: antToolTipZoomOut;\n          animation-name: antToolTipZoomOut;\n  -webkit-animation-play-state: running;\n          animation-play-state: running;\n}\n@-webkit-keyframes antToolTipZoomIn {\n  0% {\n    opacity: 0;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n  }\n  100% {\n    opacity: 1;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n  }\n}\n@keyframes antToolTipZoomIn {\n  0% {\n    opacity: 0;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n  }\n  100% {\n    opacity: 1;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n  }\n}\n@-webkit-keyframes antToolTipZoomOut {\n  0% {\n    opacity: 1;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n  }\n  100% {\n    opacity: 0;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n  }\n}\n@keyframes antToolTipZoomOut {\n  0% {\n    opacity: 1;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(1, 1);\n            transform: scale(1, 1);\n  }\n  100% {\n    opacity: 0;\n    -webkit-transform-origin: 50% 50%;\n            transform-origin: 50% 50%;\n    -webkit-transform: scale(0, 0);\n            transform: scale(0, 0);\n  }\n}\n\n/*# souanteMappingURL=common.css.map*/", ""]);
+	exports.push([module.id, "ul.anticons-list[_v-a8c514bc] {\n  margin: 20px 0;\n  list-style: none;\n  width: 120%;\n  overflow: hidden;\n}\nul.anticons-list li[_v-a8c514bc] {\n  float: left;\n  margin: 5px 5px 5px 0;\n  width: 155px;\n  text-align: center;\n  list-style: none;\n  cursor: pointer;\n  height: 110px; color: #5C6B77;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  position: relative; padding-top: 10px;\n}\nul.anticons-list li[_v-a8c514bc]:hover {\n  background-color: #4BB8FF;\n  color: #fff;\n  border-radius: 4px;\n}\nul.anticons-list li.copied[_v-a8c514bc]:hover {\n  color: rgba(255,255,255,0.2);\n}\nul.anticons-list li[_v-a8c514bc]:after {\n  position: absolute;\n  top: 10px;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  content: \"Copied!\";\n  text-align: center;\n  line-height: 110px;\n  color: #fff;\n  -webkit-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);\n  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);\n  opacity: 0;\n}\nul.anticons-list li.copied[_v-a8c514bc]:after {\n  opacity: 1;\n  top: 0;\n}\n.anticon[_v-a8c514bc] {\n  font-size: 26px;\n  margin: 12px 0 16px;\n}\n.anticon-class[_v-a8c514bc] {\n  display: block;\n  text-align: center;\n  word-wrap: break-word;\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 585 */
+/* 580 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"markdown\"><h1 id=\"tooltip\">Tooltip</h1>\n<hr>\n<h2 id=\"-\">组件演示</h2>\n<div class=\"code-boxes\">\n  <div class=\"code-box code-boxes-col\">\n          <h3>Form错误提示</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div style=\"margin-top: 100px; margin-bottom: 100px; text-align: center;\">\n      <tooltip animation=\"zoom\"\n        :visible=\"visible\"\n        :trigger=\"[]\">\n        <span slot=\"tooltip\" style=\"z-index: 1000;\">required!</span>\n        <input type=\"text\" class=\"ant-input\" style=\"width: 200px;\" @keyup=\"_onChange\" placeholder=\"不能为空哦！\"/>\n      </tooltip>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >margin-bottom</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  &lt;tooltip animation=\"zoom\"\n    :visible=\"visible\"\n    :trigger=\"[]\">\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >z-index</span><span class=\"token punctuation\" >:</span> 1000<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>required!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>input</span> <span class=\"token attr-name\" >type</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>text<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >class</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>ant-input<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >width</span><span class=\"token punctuation\" >:</span> 200px<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >@keyup</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>_onChange<span class=\"token punctuation\" >\"</span></span> <span class=\"token attr-name\" >placeholder</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>不能为空哦！<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >/></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>简单触发</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div style=\"margin-top: 100px; margin-bottom: 100px; text-align: center;\">\n      <tooltip animation=\"zoom\"\n        :trigger=\"['click']\"\n        :visible=\"triggerVisible\"\n        :on-visible-change=\"_toggle\">\n        <span slot=\"tooltip\" style=\"z-index: 1000;\">i am a tooltip!</span>\n        <a href='#' @click.prevent=\"\">点我，点我！</a>\n      </tooltip>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >margin-top</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >margin-bottom</span><span class=\"token punctuation\" >:</span> 100px<span class=\"token punctuation\" >;</span> <span class=\"token property\" >text-align</span><span class=\"token punctuation\" >:</span> center<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  &lt;tooltip animation=\"zoom\"\n    :trigger=\"['click']\"\n    :visible=\"triggerVisible\"\n    :on-visible-change=\"_toggle\">\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token attr-value\" ><span class=\"token property\" >z-index</span><span class=\"token punctuation\" >:</span> 1000<span class=\"token punctuation\" >;</span></span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>i am a tooltip!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>点我，点我！<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n  <div class=\"code-box code-boxes-col\">\n          <h3>各种位置</h3>\n          <div class=\"code-boxes-col-2-1 code-box-demo\">\n    <div id=\"tooltip_demo_pos\" style=\"\">\n      <tooltip placement=\"left\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">左边</a>\n      </tooltip>\n      <tooltip placement=\"top\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">上边</a>\n      </tooltip>\n      <tooltip placement=\"bottom\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">左边</a>\n      </tooltip>\n      <tooltip placement=\"right\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">右边</a>\n      </tooltip>\n      <tooltip placement=\"leftTop\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">左上</a>\n      </tooltip>\n      <tooltip placement=\"leftBottom\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">左下</a>\n      </tooltip>\n      <tooltip placement=\"rightTop\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">右上</a>\n      </tooltip>\n      <tooltip placement=\"rightBottom\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">右下</a>\n      </tooltip>\n      <tooltip placement=\"topLeft\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">上左</a>\n      </tooltip>\n      <tooltip placement=\"topRight\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">上右</a>\n      </tooltip>\n      <tooltip placement=\"bottomLeft\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">下左</a>\n      </tooltip>\n      <tooltip placement=\"bottomRight\">\n        <span slot=\"tooltip\">提示文字!</span>\n        <a href='#' @click.prevent=\"\">下右</a>\n      </tooltip>\n    </div>\n  </div>\n          <div class=\"code-boxes-col-2-1 code-box-code\"><pre>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>div</span> <span class=\"token attr-name\" >id</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip_demo_pos<span class=\"token punctuation\" >\"</span></span><span class=\"token style-attr language-css\" ><span class=\"token attr-name\" > <span class=\"token attr-name\" >style</span></span><span class=\"token punctuation\" >=\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>left<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>左边<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>top<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>上边<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottom<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>左边<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>right<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>右边<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>leftTop<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>左上<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>leftBottom<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>左下<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>rightTop<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>右上<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>rightBottom<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>右下<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>topLeft<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>上左<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>topRight<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>上右<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottomLeft<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>下左<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>tooltip</span> <span class=\"token attr-name\" >placement</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>bottomRight<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>span</span> <span class=\"token attr-name\" >slot</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span>tooltip<span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>提示文字!<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>span</span><span class=\"token punctuation\" >></span></span>\n    <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;</span>a</span> <span class=\"token attr-name\" >href</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >'</span>#<span class=\"token punctuation\" >'</span></span> <span class=\"token attr-name\" >@click.prevent</span><span class=\"token attr-value\" ><span class=\"token punctuation\" >=</span><span class=\"token punctuation\" >\"</span><span class=\"token punctuation\" >\"</span></span><span class=\"token punctuation\" >></span></span>下右<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>a</span><span class=\"token punctuation\" >></span></span>\n  <span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>tooltip</span><span class=\"token punctuation\" >></span></span>\n<span class=\"token tag\" ><span class=\"token tag\" ><span class=\"token punctuation\" >&lt;/</span>div</span><span class=\"token punctuation\" >></span></span>\n</pre></div>\n      </div>\n</div></div>";
+	module.exports = "<div class=\"markdown\" _v-a8c514bc=\"\"><h1 id=\"iconfont\" _v-a8c514bc=\"\">Iconfont</h1>\n<hr _v-a8c514bc=\"\">\n<p _v-a8c514bc=\"\">有含义的矢量图形，每一个图标打倒一个敌人。</p>\n<h2 id=\"-\" _v-a8c514bc=\"\">图标的命名规范</h2>\n<p _v-a8c514bc=\"\">我们为每个图标赋予了语义化的命名。只需在 <code _v-a8c514bc=\"\">&lt;v-icon&gt;&lt;/v-icon&gt;</code> 标签内，制定对应的 type 属性即可。</p>\n<p _v-a8c514bc=\"\">不同 type 命名规则如下:</p>\n<ul _v-a8c514bc=\"\">\n<li _v-a8c514bc=\"\"><p _v-a8c514bc=\"\">实心和描线图标保持同名，用 <code _v-a8c514bc=\"\">-o</code> 来区分，比如 <code _v-a8c514bc=\"\">question-circle</code>(实心) 和 <code _v-a8c514bc=\"\">question-circle-o</code>(描线)；</p>\n</li>\n<li _v-a8c514bc=\"\"><p _v-a8c514bc=\"\">命名顺序：<code _v-a8c514bc=\"\">[icon名]-[描线与否]-[方向]</code>。</p>\n</li>\n</ul>\n<h2 id=\"-\" _v-a8c514bc=\"\">实现原理</h2>\n<p _v-a8c514bc=\"\">所有的 Icon 标签最终会渲染为</p>\n<pre _v-a8c514bc=\"\"><code class=\"lang-html\" _v-a8c514bc=\"\">&lt;i class=\"anticon anticon-${type}\"&gt;&lt;/i&gt;\n</code></pre>\n<h2 id=\"-\" _v-a8c514bc=\"\">如何使用</h2>\n<p _v-a8c514bc=\"\">使用 <code _v-a8c514bc=\"\">&lt;v-icon&gt;</code> 标签申明组件，设置对应的 type 设置需要渲染的图标，示例代码如下:</p>\n<pre _v-a8c514bc=\"\"><code class=\"lang-html\" _v-a8c514bc=\"\">&lt;v-icon type=\"link\" &gt;&lt;/v-icon&gt;\n</code></pre>\n<blockquote _v-a8c514bc=\"\">\n<p _v-a8c514bc=\"\">点击图标复制代码。</p>\n</blockquote>\n<h2 id=\"-\" _v-a8c514bc=\"\">图标列表</h2>\n<h3 id=\"-\" _v-a8c514bc=\"\">一. 方向性图标</h3>\n<ul class=\"anticons-list clearfix\" _v-a8c514bc=\"\">\n  <li v-for=\"item in icons1Obj\" :data-clipboard-text=\"_getCopyCode(item.name)\" :class=\"{copied: item.justCopied}\" _v-a8c514bc=\"\">\n    <v-icon :type=\"item.name\" _v-a8c514bc=\"\"></v-icon>\n    <span class=\"anticon-class\" _v-a8c514bc=\"\">{{item.name}}</span>\n  </li>\n</ul>\n<h3 id=\"-\" _v-a8c514bc=\"\">二. 提示建议性图标</h3>\n<ul class=\"anticons-list clearfix\" _v-a8c514bc=\"\">\n  <li v-for=\"item in icons2Obj\" :data-clipboard-text=\"_getCopyCode(item.name)\" :class=\"{copied: item.justCopied}\" _v-a8c514bc=\"\">\n    <v-icon :type=\"item.name\" _v-a8c514bc=\"\"></v-icon>\n    <span class=\"anticon-class\" _v-a8c514bc=\"\">{{item.name}}</span>\n  </li>\n</ul>\n<h3 id=\"-\" _v-a8c514bc=\"\">三. 网站通用图标</h3>\n<p _v-a8c514bc=\"\"></p><ul class=\"anticons-list clearfix\" _v-a8c514bc=\"\">\n  <li v-for=\"item in icons3Obj\" :data-clipboard-text=\"_getCopyCode(item.name)\" :class=\"{copied: item.justCopied}\" _v-a8c514bc=\"\">\n    <v-icon :type=\"item.name\" _v-a8c514bc=\"\"></v-icon>\n    <span class=\"anticon-class\" _v-a8c514bc=\"\">{{item.name}}</span>\n  </li>\n</ul>\n<p _v-a8c514bc=\"\"></p>\n</div>";
 
 /***/ },
-/* 586 */
+/* 581 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(584);
+	var content = __webpack_require__(579);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(8)(content, {});
@@ -31101,8 +31756,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./_tooltip.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./_tooltip.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./iconfont.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./iconfont.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -31110,6 +31765,14 @@
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
+
+/***/ },
+/* 582 */
+266,
+/* 583 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = "<div>\n<header class=\"clearfix\">\n  <a class=\"logo\" href=\"..\">\n    <img width=\"50\" src=\"" + __webpack_require__(270) + "\">\n    <span>Vue Antd<span>\n  </a>\n  <nav class=\"nav\">\n    <ul>\n      <li :class=\"{current: isHomePage}\">\n        <a href=\"..\" data-no-instant=\"\" >首页</a>\n      </li>\n      <li :class=\"{current: isComponentsPage}\">\n        <a v-link=\"{path: '/components'}\">Components</a>\n      </li>\n      <li>\n        <a target=\"_blank\" title=\"Please star me and fork me!\" alt=\"star and fork\" href=\"https://github.com/okoala/vue-antd\">Github</a>\n      </li>\n    </ul>\n  </nav>\n</header>\n<router-view></router-view>\n</div>";
 
 /***/ }
 /******/ ])));
