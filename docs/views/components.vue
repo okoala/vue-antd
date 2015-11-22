@@ -454,7 +454,7 @@ export default {
 .markdown > ul li {
   list-style: circle;
   margin-left: 20px;
-  padding-left: 8px;
+  /*padding-left: 8px;*/
 }
 
 .markdown > ol li {

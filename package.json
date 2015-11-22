@@ -41,6 +41,7 @@
     "browser-sync": "^2.9.1",
     "browser-sync-webpack-plugin": "^1.0.0",
     "casperjs": "^1.1.0-beta3",
+    "clipboard": "^1.5.5",
     "codecov.io": "^0.1.6",
     "css-loader": "^0.21.0",
     "es6-promise": "^3.0.2",
