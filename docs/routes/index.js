@@ -112,6 +112,10 @@ export function configRouter (router) {
           component: require('../components/tag.vue')
         },
 
+        'tooltip': {
+          component: require('../components/tooltip.vue')
+        },
+
         '_trigger': {
           component: require('../components/_trigger.vue')
         },
