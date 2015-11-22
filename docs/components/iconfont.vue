@@ -116,7 +116,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 ul.anticons-list {
   margin: 20px 0;
   list-style: none;
@@ -167,8 +167,6 @@ ul.anticons-list li.copied:after {
   display: block;
   text-align: center;
   word-wrap: break-word;
-  transform: scale(0.83);
-  font-family: Consolas;
 }
 </style>
 

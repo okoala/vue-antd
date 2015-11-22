@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
