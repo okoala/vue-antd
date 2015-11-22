@@ -1,28 +1,26 @@
 <template>
-<span>
-  <tooltip
-    :prefix-cls="prefixCls"
-    :placement="placement"
-    :on-visible-change="_onVisibleChange"
-    :transition-name="transitionName"
-    :visible="visible"
-    :trigger="trigger">
-    <div slot="tooltip">
-      <div :class="prefixCls + '-content'">
-        <p :class="prefixCls + '-message'">
-          <v-icon type="exclamation-circle"></v-icon>
-          <slot name="title"></slot>
-        </p>
+<tooltip
+  :prefix-cls="prefixCls"
+  :placement="placement"
+  :on-visible-change="_onVisibleChange"
+  :transition-name="'ant-trigger-popup-zoom'"
+  :visible="visible"
+  :trigger="trigger">
+  <div slot="tooltip">
+    <div :class="prefixCls + '-content'">
+      <p :class="prefixCls + '-message'">
+        <v-icon type="exclamation-circle"></v-icon>
+        {{title}}
+      </p>
 
-        <div :class="prefixCls + '-buttons'">
-          <v-button @click="_cancel" type="ghost" size="small">取消</v-button>
-          <v-button @click="_confirm" type="primary" size="small">确定</v-button>
-        </div>
+      <div :class="prefixCls + '-buttons'">
+        <v-button @click="_cancel" type="ghost" size="small">取消</v-button>
+        <v-button @click="_confirm" type="primary" size="small">确定</v-button>
       </div>
     </div>
-    <span slot="trigger"><slot></slot></span>
-  </tooltip>
-</span>
+  </div>
+  <span slot="trigger"><slot></slot></span>
+</tooltip>
 </template>
 
 <script>
@@ -34,6 +32,7 @@ import vButton from '../button'
 export default {
   props: defaultProps({
     prefixCls: 'ant-popover',
+    title: '',
     transitionName: '',
     placement: 'top',
     trigger: {

@@ -203,18 +203,6 @@ label {
   animation-name: rcTriggerZoomOut;
   animation-play-state: running;
 }
-@-webkit-keyframes rcTriggerZoomIn {
-  0% {
-    opacity: 0;
-    transform-origin: 50% 50%;
-    transform: scale(0, 0);
-  }
-  100% {
-    opacity: 1;
-    transform-origin: 50% 50%;
-    transform: scale(1, 1);
-  }
-}
 @keyframes rcTriggerZoomIn {
   0% {
     opacity: 0;
@@ -225,18 +213,6 @@ label {
     opacity: 1;
     transform-origin: 50% 50%;
     transform: scale(1, 1);
-  }
-}
-@-webkit-keyframes rcTriggerZoomOut {
-  0% {
-    opacity: 1;
-    transform-origin: 50% 50%;
-    transform: scale(1, 1);
-  }
-  100% {
-    opacity: 0;
-    transform-origin: 50% 50%;
-    transform: scale(0, 0);
   }
 }
 @keyframes rcTriggerZoomOut {
