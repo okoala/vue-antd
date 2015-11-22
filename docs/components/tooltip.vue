@@ -81,6 +81,7 @@ import vButton from '../../components/button'
 export default {
   data () {
     return {
+      text: '提示文字',
       visible: false
     }
   },

@@ -1,9 +1,12 @@
 <template>
 <tooltip
   :transition-name="transitionName"
-  :overlay="title"
   :visible="visible"
+  :placement="placement"
   :on-visible-change="_onVisibleChange">
+  <span slot="tooltip">
+    {{{title}}}
+  </span>
   <span slot="trigger"><slot></slot></span>
 </tooltip>
 </template>
