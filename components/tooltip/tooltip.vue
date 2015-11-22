@@ -12,8 +12,6 @@
 import { defaultProps, any } from '../../utils'
 import Tooltip from '../base/tooltip'
 
-const transitionNameMap =
-
 export default {
   props: defaultProps({
     prefixCls: 'ant-tooltip',
@@ -50,13 +48,13 @@ export default {
     }
   },
 
-  watch () {
+  watch: {
     title (val) {
       if (!val) {
         this.visible = false
       }
     }
-  }
+  },
 
   compiled () {
     if (!this.title) {
