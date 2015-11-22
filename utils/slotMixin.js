@@ -1,15 +1,26 @@
 export default {
-  compiled () {
+  ready () {
     this._bindTriggerEvent()
   },
 
   methods: {
     _getTriggerTarget () {
-      return this.$el.querySelector('[slot="trigger"]')
+      const els = this.$el.querySelectorAll('[slot="trigger"]')
+      const len = els.length
+      if (len) {
+        const currentWrap = els[len - 1]
+        const children = currentWrap.children
+        if (children && children.length === 1) {
+          return children[children.length - 1]
+        } else {
+          return currentWrap
+        }
+      }
+      return null
     },
 
     _bindTriggerEvent () {
-      const el = this.$el.querySelector('[slot="trigger"]')
+      const el = this._getTriggerTarget()
       if (el) {
         el.addEventListener('blur', this._onBlur.bind(this), false)
         el.addEventListener('click', this._onClick.bind(this), false)
