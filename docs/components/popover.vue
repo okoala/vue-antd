@@ -25,21 +25,21 @@
   </example>
   <example title="位置">
     <div style="margin-left: 60px;">
-      <v-popover placement="topLeft" :title="text">
+      <v-popover placement="topLeft" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
         </div>
         <v-button>上左</v-button>
       </v-popover>
-      <v-popover placement="top" :title="text">
+      <v-popover placement="top" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
         </div>
         <v-button>上边</v-button>
       </v-popover>
-      <v-popover placement="topRight" :title="text">
+      <v-popover placement="topRight" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
@@ -48,21 +48,21 @@
       </v-popover>
     </div>
     <div style="width: 60px; float: left">
-      <v-popover placement="leftTop" :title="text">
+      <v-popover placement="leftTop" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
         </div>
         <v-button>左上</v-button>
       </v-popover>
-      <v-popover placement="left" :title="text">
+      <v-popover placement="left" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
         </div>
         <v-button>左边</v-button>
       </v-popover>
-      <v-popover placement="leftBottom" :title="text">
+      <v-popover placement="leftBottom" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
@@ -71,21 +71,21 @@
       </v-popover>
     </div>
     <div style="width: 60px; margin-left: 270px;">
-      <v-popover placement="rightTop" :title="text">
+      <v-popover placement="rightTop" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
         </div>
         <v-button>右上</v-button>
       </v-popover>
-      <v-popover placement="right" :title="text">
+      <v-popover placement="right" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
         </div>
         <v-button>右边</v-button>
       </v-popover>
-      <v-popover placement="rightBottom" :title="text">
+      <v-popover placement="rightBottom" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
@@ -94,21 +94,21 @@
       </v-popover>
     </div>
     <div style="margin-left: 60px; cleat: both;">
-      <v-popover placement="bottomLeft" :title="text">
+      <v-popover placement="bottomLeft" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
         </div>
         <v-button>下左</v-button>
       </v-popover>
-      <v-popover placement="bottom" :title="text">
+      <v-popover placement="bottom" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
         </div>
         <v-button>下边</v-button>
       </v-popover>
-      <v-popover placement="bottomRight" :title="text">
+      <v-popover placement="bottomRight" :title="text" trigger="click">
         <div slot="overlay">
           <p>内容</p>
           <p>内容</p>
@@ -170,6 +170,7 @@ import vButton from '../../components/button'
 export default {
   data () {
     return {
+      text: '标题',
       visible: false
     }
   },
