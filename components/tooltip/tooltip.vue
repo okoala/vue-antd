@@ -67,7 +67,7 @@ export default {
 
   methods: {
     _onVisibleChange (visible) {
-      this.visible = visible
+      // this.visible = visible
     }
   }
 }
