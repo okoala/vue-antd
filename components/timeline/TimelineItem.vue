@@ -16,6 +16,7 @@ export default {
   props: defaultProps({
     prefixCls: 'ant-timeline',
     color: 'blue',
+    timelineLast: false,
     pending: false
   }),
 
