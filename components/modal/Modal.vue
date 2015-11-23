@@ -143,4 +143,4 @@ export default {
     // }
   }
 }
-<script>
+</script>

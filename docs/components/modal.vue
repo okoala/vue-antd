@@ -13,24 +13,20 @@
 
 ## 组件演示
 
-<div class="code-boxes">
-  <div class="code-boxes-col-2-1">
-    <div class="code-box">
-      <div class="code-box-demo">
-        <v-button :type="'primary'" @click="_showModal">显示对话框</v-button>
-        <v-modal
-          :visible="visible"
-          :confirm-loading="confirmLoading"
-          :on-ok="_handleOk"
-          :on-cancel="_handleCancel">
-          <p>对话框的内容</p>
-          <p>对话框的内容</p>
-          <p>对话框的内容</p>
-        </v-modal>
-      </div>
-    </div>
-  </div>
-</div>
+<demo>
+  <example title="基本">
+    <v-button type="primary" @click="_showModal">显示对话框</v-button>
+    <v-modal title="第一个 Modal"
+      :visible="visible"
+      :confirm-loading="confirmLoading"
+      :on-ok="_handleOk"
+      :on-cancel="_handleCancel">
+      <p>对话框的内容</p>
+      <p>对话框的内容</p>
+      <p>对话框的内容</p>
+    </v-modal>
+  </example>
+</demo>
 
 ## API
 
@@ -69,6 +65,7 @@
 <script>
 import vButton from '../../components/button'
 import vModal from '../../components/modal'
+import message from '../../components/message'
 
 export default {
   data () {
@@ -86,12 +83,13 @@ export default {
     },
 
     _handleOk () {
-      console.log('点击了确定')
+      message.success('点击了确定')
       this.confirmLoading = false
       this.visible = false
     },
 
     _handleCancel () {
+      message.info('点击了取消')
       this.visible = true
     }
   }

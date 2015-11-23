@@ -162,10 +162,10 @@ export default {
             name: 'message',
             desc: '全局提示'
           },
-          // {
-          //   name: 'modal',
-          //   desc: '对话框'
-          // },
+          {
+            name: 'modal',
+            desc: '对话框'
+          },
           {
             name: 'notification',
             desc: '通知提醒框'

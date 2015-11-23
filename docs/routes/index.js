@@ -80,9 +80,9 @@ export function configRouter (router) {
           component: require('../components/upload.vue')
         },
 
-        // 'modal': {
-        //   component: require('../components/modal.vue')
-        // },
+        'modal': {
+          component: require('../components/modal.vue')
+        },
 
         'radio': {
           component: require('../components/radio.vue')
