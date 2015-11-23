@@ -116,6 +116,10 @@ export function configRouter (router) {
           component: require('../components/tooltip.vue')
         },
 
+        'timeline': {
+          component: require('../components/timeline.vue')
+        },
+
         '_trigger': {
           component: require('../components/_trigger.vue')
         },

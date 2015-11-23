@@ -194,10 +194,10 @@ export default {
             name: 'spin',
             desc: '加载动画'
           },
-          // {
-          //   name: 'timeline',
-          //   desc: '时间轴'
-          // },
+          {
+            name: 'timeline',
+            desc: '时间轴'
+          },
           {
             name: 'tooltip',
             desc: '文字提示'
