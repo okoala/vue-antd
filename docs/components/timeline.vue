@@ -41,6 +41,13 @@
       </v-timeline-item>
     </v-timeline>
   </example>
+  <example title="最后一个">
+    <v-timeline :pending="true">
+      <v-timeline-item>创建服务现场 2015-09-01</v-timeline-item>
+      <v-timeline-item>初步排除网络异常 2015-09-01</v-timeline-item>
+      <v-timeline-item>技术测试异常 2015-09-01</v-timeline-item>
+    </v-timeline>
+  </example>
 </demo>
 
 ## API
