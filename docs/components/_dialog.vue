@@ -17,7 +17,7 @@
           :on-change="_onDestroyOnCloseChange"/></label>
       </p>
       <dialog title="第二个弹框" animation="zoom" mask-animation="fade"
-        :style="{'width': width}"
+        :style="{'width': width + 'px'}"
         :visible="visible"
         :align="align"
         :on-close="_onClose"
@@ -54,7 +54,7 @@ export default {
   components: { Dialog, vButton },
 
   methods: {
-    _onClick () {
+    _onClick (e) {
       this.mousePosition = {
         x: e.pageX,
         y: e.pageY
@@ -78,12 +78,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .vc-dialog {
   outline: none;
   position: absolute;
-  left: -9999px;
-  top: -9999px;
   z-index: 1000;
 }
 .vc-dialog-hidden {
@@ -119,7 +117,7 @@ export default {
   text-decoration: none;
 }
 .vc-dialog-close-x:after {
-  content: 'Ã—';
+  content: '×';
 }
 .vc-dialog-close:hover {
   opacity: 1;

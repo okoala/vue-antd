@@ -26,7 +26,7 @@
         :class="dialogContentWrapClasses"
         @keydown="_onKeyDown">
         <div :class="prefixCls + '-content'">
-          <a v-if="closable" tabIndex="0" onClick="close" :class="prefixCls + '-close'">
+          <a v-if="closable" tabIndex="0" @click="_close" :class="prefixCls + '-close'">
             <span :class="prefixCls + '-close-x'"/>
           </a>
           <div v-if="title" :class="prefixCls + '-header'">
