@@ -9,17 +9,17 @@
   :transition-name="transitionName"
   :mask-animation="maskAnimation"
   :mouse-position="mousePosition">
+  <slot></slot>
   <div slot="footer">
     <v-button key="cancel" type="ghost" size="large"
       @click="_handleCancel">
       {{cancelText}}
-    </v-button>,
+    </v-button>
     <v-button key="confirm" type="primary" size="large" :loading="confirmLoading"
       @click="_handleOk">
       {{okText}}
     </v-button>
   </div>
-  <slot></slot>
 </v-dialog>
 </template>
 

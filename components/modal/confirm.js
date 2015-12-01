@@ -1,26 +1,30 @@
 import Vue from 'vue'
-import vModal from './Modal.vue'
+import Dialog from '../base/Dialog'
 import vIcon from '../iconfont'
 import vButton from '../button'
+import { guid } from '../../utils'
 
 let fragmentNode = {
   create () {
     let div = document.createElement('div')
+    fragmentNode.id = div.id = guid()
     document.body.appendChild(div)
-    fragmentNode.el = div
 
     return div
   },
 
   remove () {
-    fragmentNode.el && fragmentNode.el.parentNode.remvoeChild(fragmentNode.el)
+    if (fragmentNode.id) {
+      const el = document.getElementById(fragmentNode.id)
+      el.parentNode && el.parentNode.removeChild(el)
+    }
   }
 }
 
 export default function (props) {
   props = props || {}
   props.iconClassName = props.iconClassName || 'question-circle'
-  props.width = props.width || 416
+  props.width = (props.width || 416) + 'px'
 
   // 默认为 true，保持向下兼容
   if (!('okCancel' in props)) {
@@ -29,39 +33,41 @@ export default function (props) {
 
   const container = fragmentNode.create()
 
-  const Dialog = Vue.extend({
+  const _Dialog = Vue.extend({
     template: `
-      <v-modal
-        :prefixCls="'ant-modal'"
-        :classNmae="'ant-confirm'"
-        :visible="true"
-        :closeable="false"
-        :title="''"
-        :transitionName="'zoom'"
-        :footer="''"
-        :maskTransitionName="'fade'"
-        :width="width">
-        <div style="zoom: 1; overflow: 'hidden'">
-          <div class="ant-confirm-body">
-            <v-icon :type="iconClassName"></v-icon>
-            <span class="ant-confirm-title">{{title}}</span>
-            <div class="ant-confirm-content">{{content}}</div>
+      <div>
+        <dialog
+          title=""
+          prefix-cls="ant-modal"
+          class-name="ant-confirm"
+          transition-name="zoom"
+          :visible="true"
+          :closeable="false"
+          :mask-transition-name="'fade'"
+          :style="{'width': width}">
+          <div style="zoom: 1; overflow: hidden">
+            <div class="ant-confirm-body">
+              <v-icon :type="iconClassName"></v-icon>
+              <span class="ant-confirm-title">{{title}}</span>
+              <div class="ant-confirm-content">{{content}}</div>
+            </div>
+            <span> </span>
+            <div class="ant-confirm-btns" v-if="!okCancel">
+              <v-button :type="'primary'" :size="'large'" @click="_handleOk">知道了</v-button>
+            </div>
+            <div class="ant-confirm-btns" v-else>
+              <v-button :type="'ghost'" :size="'large'" @click="_handleCancel">取 消</v-button>
+              <v-button :type="'primary'" :size="'large'" @click="_handleOk">确 定</v-button>
+            </div>
           </div>
-          <div slot="footer" class="ant-confirm-btns" v-if="!okCancel">
-            <v-button :type="'primary'" :size="'large'" :on-click="_handleOk">知道了</v-button>
-          </div>
-          <div slot="footer" className="ant-confirm-btns" v-else>
-            <v-button :type="'ghost'" :size="'large'" :on-click="_handleCancel">取 消</v-button>
-            <v-button :type="'primary'" :size="'large'" :on-click="_handleOk">确 定</v-button>
-          </div>
-        </div>
-      </v-modal>
+        </dialog>
+      </div>
     `,
 
-    components: { vModal, vIcon, vButton }
+    components: { Dialog, vIcon, vButton }
   })
 
-  new Dialog({
+  new _Dialog({
     el: container,
     data: props,
     methods: {
