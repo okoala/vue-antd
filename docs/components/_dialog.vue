@@ -16,11 +16,10 @@
           :checked="destroyOnClose"
           :on-change="_onDestroyOnCloseChange"/></label>
       </p>
-      <dialog title="第二个弹框" animation="zoom"
+      <dialog title="第二个弹框" animation="zoom" mask-animation="fade"
         :style="{'width': width}"
         :visible="visible"
         :align="align"
-        :mask-animation="fade"
         :on-close="_onClose"
         :mouse-position="mousePosition">
         <input />

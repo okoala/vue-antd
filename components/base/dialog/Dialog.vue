@@ -2,16 +2,16 @@
 <div :class="prefixCls + '-wrap'">
   <v-animate
     :show="visible"
-    :transitionName="maskTransition">
+    :transition-name="maskTransition">
     <div
-      :class="maskWrap"
+      :class="maskWrapClasses"
       @click="_onMaskClick"
       ></div>
   </v-animate>
   <v-animate
-    :show="dialogVisible"
+    :show="visible"
     :on-leave="_onAnimateLeave"
-    :transition-name="transitionName">
+    :transition-name="contentTransition">
     <v-align
       :align="align"
       :on-align="_onAlign"
@@ -23,7 +23,7 @@
         role="dialog"
         tabIndex="0"
         :style="style"
-        :class="dialogContentWrap"
+        :class="dialogContentWrapClasses"
         @keydown="_onKeyDown">
         <div :class="prefixCls + '-content'">
           <a v-if="closable" tabIndex="0" onClick="close" :class="prefixCls + '-close'">
@@ -105,6 +105,7 @@ export default {
     visible: Boolean,
     zIndex: Number,
     footer: true,
+    maskAnimation: String,
     maskTransitionName: String,
     transitionName: String,
     animation: String,
@@ -114,7 +115,7 @@ export default {
   components: { vAlign, vAnimate },
 
   computed: {
-    maskWrap () {
+    maskWrapClasses () {
       return cx({
         [`${this.prefixCls}-mask`]: 1,
         [`${this.prefixCls}-mask-hidden`]: !this.visible
@@ -130,15 +131,15 @@ export default {
       return transitionName
     },
 
-    dialogContentWrap () {
+    dialogContentWrapClasses () {
       return cx({
         [`${this.prefixCls}`]: 1,
         [`${this.className}`]: !!this.className,
-        [`${this.prefixCls}-mask-hidden`]: !visible
+        [`${this.prefixCls}-mask-hidden`]: !this.visible
       })
     },
 
-    transitionName () {
+    contentTransition () {
       let transitionName = this.transitionName
       const animation = this.animation
       if (!transitionName && animation) {
