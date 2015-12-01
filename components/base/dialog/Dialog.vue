@@ -18,11 +18,27 @@
       :dialog-visible="visible"
       :monitor-buffer-time="80"
       :disabled="!visible">
-      <div :class="{`${props.prefixCls}-mask-hidden`: !visible}">
+      <div
+        v-el:dialog
+        role="dialog"
+        tabIndex="0"
+        :class="{`${prefixCls}`: 1 , `${className}`: !!className, `${props.prefixCls}-mask-hidden`: !visible}"
+        @keydown="_onKeyDown">
         <div :class="{`${prefixCls}-content`: 1}">
-
+          <a v-if="closable" tabIndex="0" onClick="close" :class="{`${prefixCls}-close`: 1}">
+            <span className={`${prefixCls}-close-x`} />
+          </a>
+          <div v-if="title" :class="{`${prefixCls}-header`: 1}">
+            <div :class="{`${prefixCls}-title`: 1}">{{title}}</div>
+          </div>
+          <div :class="{`${prefixCls}-body`: 1}">
+            <slot></slot>
+          </div>
+          <div v-if="footer" :class="{`${prefixCls}-footer`: 1}">
+            <slot name="footer"></slot>
+          </div>
         </div>
-        <div tabIndex="0" ref="sentinel" style="{width: 0, height: 0, overflow: 'hidden'}">
+        <div tabIndex="0" v-el:sentinel style="{width: 0, height: 0, overflow: 'hidden'}">
           sentinel
         </div>
       </div>
@@ -77,9 +93,11 @@ export default {
     onAfterClose: () => {},
     onClose: () => {},
     align: String,
+    title: String,
     closable: Boolean,
     visible: Boolean,
     zIndex: Number,
+    footer: true,
     maskTransitionName: String,
     transitionName: String,
     animation: String,
@@ -110,19 +128,49 @@ export default {
 
   methods: {
     _onAnimateLeave () {
-
+      this.onAfterClose()
     },
 
     _onMaskClick () {
-
+      if (this.closable) {
+        this.close()
+      }
+      this.$els.dialog.focus()
     },
 
-    _onKeyDown () {
+    _onKeyDown (e) {
+      if (this.closable) {
+        if (e.keyCode === KeyCode.ESC) {
+          this.close()
+        }
+      }
 
+      if (this.visible) {
+        if (e.keyCode === KeyCode.TAB) {
+          const activeElement = document.activeElement
+          const dialogRoot = this.$els.dialog
+          const sentinel = this.$els.sentinel
+          if (e.shiftKey) {
+            if (activeElement === dialogRoot) {
+              sentinel.focus()
+            }
+          } else if (activeElement === sentinel) {
+            dialogRoot.focus()
+          }
+        }
+      }
     },
 
-    _onAlign () {
-
+    _onAlign (dialogNode) {
+      const mousePosition = this.mousePosition;
+      if (this.visible) {
+        if (mousePosition) {
+          const elOffset = offset(dialogNode);
+          setTransformOrigin(dialogNode, `${mousePosition.x - elOffset.left}px ${mousePosition.y - elOffset.top}px`);
+        } else {
+          setTransformOrigin(dialogNode, '');
+        }
+      }
     }
 
     _close () {
