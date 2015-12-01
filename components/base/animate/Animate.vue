@@ -83,7 +83,6 @@ export default {
     },
 
     _transition (animationType, done) {
-      const node = this.$el.nextSibling
       const transitionName = this.transitionName
       this._stop()
       const end = () => {
@@ -91,9 +90,9 @@ export default {
         done()
       }
       if ((isCssAnimationSupported || !this.animation[animationType]) && transitionName && this[transitionMap[animationType]]) {
-        this.stopper = cssAnimate(node, transitionName + '-' + animationType, end)
+        this.stopper = cssAnimate(this.currentNode, transitionName + '-' + animationType, end)
       } else {
-        this.stopper = this.animation[animationType](node, end)
+        this.stopper = this.animation[animationType](this.currentNode, end)
       }
     },
 
