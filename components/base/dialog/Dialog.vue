@@ -22,6 +22,7 @@
         v-el:dialog
         role="dialog"
         tabIndex="0"
+        :style="style"
         :class="{`${prefixCls}`: 1 , `${className}`: !!className, `${props.prefixCls}-mask-hidden`: !visible}"
         @keydown="_onKeyDown">
         <div :class="{`${prefixCls}-content`: 1}">
@@ -90,11 +91,19 @@ function offset (el) {
 export default {
   props: defaultProps({
     prefixCls: 'vc-dialog',
+    className: '',
     onAfterClose: () => {},
     onClose: () => {},
-    align: String,
+    align: () => {
+      return {
+        points: ['tc', 'tc'],
+        offset: [0, 100]
+      }
+    },
+    style: Object,
+    mask: true,
     title: String,
-    closable: Boolean,
+    closable: true,
     visible: Boolean,
     zIndex: Number,
     footer: true,
@@ -171,7 +180,7 @@ export default {
           setTransformOrigin(dialogNode, '');
         }
       }
-    }
+    },
 
     _close () {
       this.onClose()
