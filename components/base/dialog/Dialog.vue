@@ -34,11 +34,11 @@
           <div :class="prefixCls + '-body'">
             <slot></slot>
           </div>
-          <div v-if="footer" :class="prefixCls + '-footer'">
+          <div v-if="hasFooter" :class="prefixCls + '-footer'">
             <slot name="footer"></slot>
           </div>
         </div>
-        <div tabIndex="0" v-el:sentinel style="{width: 0, height: 0, overflow: 'hidden'}">
+        <div tabIndex="0" v-el:sentinel :style="{width: 0, height: 0, overflow: 'hidden'}">
           sentinel
         </div>
       </div>
@@ -103,7 +103,6 @@ export default {
     closable: true,
     visible: Boolean,
     zIndex: Number,
-    footer: true,
     maskAnimation: String,
     maskTransitionName: String,
     transitionName: String,
@@ -145,6 +144,10 @@ export default {
         transitionName = `${this.prefixCls}-${animation}`
       }
       return transitionName
+    },
+
+    hasFooter () {
+      return this.$el.querySelector('[slot="footer"]')
     }
   },
 
