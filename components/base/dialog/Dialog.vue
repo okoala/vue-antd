@@ -1,10 +1,10 @@
 <template>
-<div :class="{`${prefixCls}-wrap`: 1}">
+<div :class="prefixCls + '-wrap'">
   <v-animate
     :show="visible"
     :transitionName="maskTransition">
     <div
-      :class="{`${props.prefixCls}-mask`: 1, `${props.prefixCls}-mask-hidden`: !visible}"
+      :class="maskWrap"
       @click="_onMaskClick"
       ></div>
   </v-animate>
@@ -23,19 +23,19 @@
         role="dialog"
         tabIndex="0"
         :style="style"
-        :class="{`${prefixCls}`: 1 , `${className}`: !!className, `${props.prefixCls}-mask-hidden`: !visible}"
+        :class="dialogContentWrap"
         @keydown="_onKeyDown">
-        <div :class="{`${prefixCls}-content`: 1}">
-          <a v-if="closable" tabIndex="0" onClick="close" :class="{`${prefixCls}-close`: 1}">
-            <span className={`${prefixCls}-close-x`} />
+        <div :class="prefixCls + '-content'">
+          <a v-if="closable" tabIndex="0" onClick="close" :class="prefixCls + '-close'">
+            <span :class="prefixCls + '-close-x'"/>
           </a>
-          <div v-if="title" :class="{`${prefixCls}-header`: 1}">
-            <div :class="{`${prefixCls}-title`: 1}">{{title}}</div>
+          <div v-if="title" :class="prefixCls + '-header'">
+            <div :class="prefixCls + '-title'">{{title}}</div>
           </div>
-          <div :class="{`${prefixCls}-body`: 1}">
+          <div :class="prefixCls + '-body'">
             <slot></slot>
           </div>
-          <div v-if="footer" :class="{`${prefixCls}-footer`: 1}">
+          <div v-if="footer" :class="prefixCls + '-footer'">
             <slot name="footer"></slot>
           </div>
         </div>
@@ -51,8 +51,8 @@
 <script>
 import { defaultProps, KeyCode } from '../../../utils'
 import cx from 'classnames'
-import vAnimate from './animate'
-import vAlign from './align'
+import vAnimate from '../animate'
+import vAlign from '../align'
 
 function getScroll (w, top) {
   let ret = w['page' + (top ? 'Y' : 'X') + 'Offset']
@@ -94,11 +94,9 @@ export default {
     className: '',
     onAfterClose: () => {},
     onClose: () => {},
-    align: () => {
-      return {
-        points: ['tc', 'tc'],
-        offset: [0, 100]
-      }
+    align: {
+      points: ['tc', 'tc'],
+      offset: [0, 100]
     },
     style: Object,
     mask: true,
@@ -113,9 +111,16 @@ export default {
     mousePosition: Object
   }),
 
-  components: { vAlign, vAnimate }
+  components: { vAlign, vAnimate },
 
   computed: {
+    maskWrap () {
+      return cx({
+        [`${this.prefixCls}-mask`]: 1,
+        [`${this.prefixCls}-mask-hidden`]: !this.visible
+      })
+    },
+
     maskTransition () {
       let transitionName = this.maskTransitionName
       const animation = this.maskAnimation
@@ -123,6 +128,14 @@ export default {
         transitionName = `${this.prefixCls}-${animation}`
       }
       return transitionName
+    },
+
+    dialogContentWrap () {
+      return cx({
+        [`${this.prefixCls}`]: 1,
+        [`${this.className}`]: !!this.className,
+        [`${this.prefixCls}-mask-hidden`]: !visible
+      })
     },
 
     transitionName () {

@@ -16,20 +16,18 @@
           :checked="destroyOnClose"
           :on-change="_onDestroyOnCloseChange"/></label>
       </p>
-      <v-dialog
+      <dialog title="第二个弹框" animation="zoom"
         :style="{'width': width}"
         :visible="visible"
         :align="align"
-        :animation="zoom"
         :mask-animation="fade"
         :on-close="_onClose"
-        :mouse-position="mousePosition"
-        :title="第二个弹框">
+        :mouse-position="mousePosition">
         <input />
         <p>basic modal</p>
         <button @click="_changeWidth">change width</button>
         <div :style="{height: 200}"></div>
-      </v-dialog>
+      </dialog>
     </div>
   </example>
 </demo>
@@ -37,8 +35,7 @@
 </template>
 
 <script>
-import Animate from '../../components/base/animate'
-import vCheckbox from '../../components/checkbox'
+import Dialog from '../../components/base/dialog'
 import vButton from '../../components/button'
 
 export default {
@@ -50,11 +47,12 @@ export default {
         points: ['tc', 'tc'],
         offset: [0, 100]
       },
+      mousePosition: {},
       destroyOnClose: false
     }
   },
 
-  components: { Animate, vCheckbox, vButton },
+  components: { Dialog, vButton },
 
   methods: {
     _onClick () {
