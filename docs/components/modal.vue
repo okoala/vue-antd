@@ -18,7 +18,6 @@
     <v-button type="primary" @click="_showModal">显示对话框</v-button>
     <v-modal title="第一个 Modal"
       :visible="visible"
-      :confirm-loading="confirmLoading"
       :on-ok="_handleOk"
       :on-cancel="_handleCancel">
       <p>对话框的内容</p>
@@ -90,7 +89,7 @@ export default {
 
     _handleCancel () {
       message.info('点击了取消')
-      this.visible = true
+      this.visible = false
     }
   }
 }

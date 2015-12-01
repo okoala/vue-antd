@@ -34,7 +34,7 @@
           <div :class="prefixCls + '-body'">
             <slot></slot>
           </div>
-          <div v-if="hasFooter" :class="prefixCls + '-footer'">
+          <div :class="prefixCls + '-footer'">
             <slot name="footer"></slot>
           </div>
         </div>
@@ -144,10 +144,6 @@ export default {
         transitionName = `${this.prefixCls}-${animation}`
       }
       return transitionName
-    },
-
-    hasFooter () {
-      return this.$el.querySelector('[slot="footer"]')
     }
   },
 
