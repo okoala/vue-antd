@@ -259,6 +259,10 @@ export default {
           {
             name: '_tooltip',
             desc: '提示'
+          },
+          {
+            name: '_dialog',
+            desc: '对话框'
           }
         ]
       }

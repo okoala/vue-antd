@@ -138,6 +138,10 @@ export function configRouter (router) {
 
         '_tooltip': {
           component: require('../components/_tooltip.vue')
+        },
+
+        '_dialog': {
+          component: require('../components/_dialog.vue')
         }
       }
     },
