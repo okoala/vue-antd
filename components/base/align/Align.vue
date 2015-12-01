@@ -1,12 +1,9 @@
 <template>
-<div
-  :class="className">
-  <slot></slot>
-</div>
+<slot></slot>
 </template>
 
 <script>
-import { defaultProps } from '../../../utils'
+import { defaultProps, getTrustSlotNode } from '../../../utils'
 import align from 'dom-align'
 
 function isWindow(obj) {
@@ -44,7 +41,7 @@ export default {
 
   computed: {
     currentNode () {
-      return this.$el
+      return getTrustSlotNode(this.$el)
     }
   },
 

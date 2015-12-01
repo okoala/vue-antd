@@ -143,6 +143,14 @@ export const any = {
   }
 }
 
+export function getTrustSlotNode (node) {
+  let childNode = node.nextSibling
+  if (childNode.nodeType !== 1) {
+    return getTrustSlotNode(childNode)
+  }
+  return childNode
+}
+
 export function getPlainObject (vueObject) {
   return JSON.parse(JSON.stringify(vueObject))
 }

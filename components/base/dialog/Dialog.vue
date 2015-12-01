@@ -15,7 +15,6 @@
     <v-align
       :align="align"
       :on-align="_onAlign"
-      :dialog-visible="visible"
       :monitor-buffer-time="80"
       :disabled="!visible">
       <div

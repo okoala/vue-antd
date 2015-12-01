@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { defaultProps } from '../../../utils'
+import { defaultProps, getTrustSlotNode } from '../../../utils'
 import cssAnimate, { isCssAnimationSupported } from 'css-animation'
 
 const transitionMap = {
@@ -41,7 +41,7 @@ export default {
 
   computed: {
     currentNode () {
-      return this.$el.nextSibling
+      return getTrustSlotNode(this.$el)
     }
   },
 

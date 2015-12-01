@@ -82,6 +82,8 @@ export default {
 .vc-dialog {
   outline: none;
   position: absolute;
+  left: -9999px;
+  top: -9999px;
   z-index: 1000;
 }
 .vc-dialog-hidden {
@@ -156,11 +158,11 @@ export default {
 }
 .vc-dialog-zoom-enter.vc-dialog-zoom-enter-active,
 .vc-dialog-zoom-appear.vc-dialog-zoom-appear-active {
-  animation-name: rcDialogZoomIn;
+  animation-name: vcDialogZoomIn;
   animation-play-state: running;
 }
 .vc-dialog-zoom-leave.vc-dialog-zoom-leave-active {
-  animation-name: rcDialogZoomOut;
+  animation-name: vcDialogZoomOut;
   animation-play-state: running;
 }
 
@@ -215,14 +217,14 @@ export default {
 }
 .vc-dialog-fade-enter.vc-dialog-fade-enter-active,
 .vc-dialog-fade-appear.vc-dialog-fade-appear-active {
-  animation-name: rcDialogFadeIn;
+  animation-name: vcDialogFadeIn;
   animation-play-state: running;
 }
 .vc-dialog-fade-leave.vc-dialog-fade-leave-active {
-  animation-name: rcDialogFadeOut;
+  animation-name: vcDialogFadeOut;
   animation-play-state: running;
 }
-@keyframes rcDialogFadeIn {
+@keyframes vcDialogFadeIn {
   0% {
     opacity: 0;
   }
@@ -230,7 +232,7 @@ export default {
     opacity: 1;
   }
 }
-@keyframes rcDialogFadeOut {
+@keyframes vcDialogFadeOut {
   0% {
     opacity: 1;
   }
