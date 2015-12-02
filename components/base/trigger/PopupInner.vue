@@ -1,5 +1,6 @@
 <template>
 <span
+  :class="wrapClasses"
   @mouseenter="onMouseEnter"
   @mouseleave="onMouseLeave">
   <slot></slot>
@@ -18,16 +19,6 @@ export default {
     onMouseEnter: () => {},
     onMouseLeave: () => {}
   }),
-
-  watch: {
-    visible (val) {
-      if (val) {
-        this.$el.parentNode.classList.remove(this.hiddenClassName)
-      } else {
-        this.$el.parentNode.classList.add(this.hiddenClassName)
-      }
-    }
-  },
 
   computed: {
     wrapClasses () {

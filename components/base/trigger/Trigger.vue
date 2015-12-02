@@ -1,23 +1,21 @@
 <template>
-<span>
-  <popup
-    :style="popupStyle"
-    :prefix-cls="prefixCls"
-    :visible="popupVisible"
-    :class-name="popupClassName"
-    :action="action"
-    :wrap="_getTriggerTarget.bind($parent)"
-    :align="_popupAlign"
-    :animation="popupAnimation"
-    :on-animation-leave="onAnimateLeave"
-    :on-mouse-enter="_onMouseEnter"
-    :on-mouse-leave="_onMouseLeave"
-    :transition-name="popupTransitionName"
-    :get-class-name-from-align="_getPopupClassNameFromAlign">
-    <slot name="popup"></slot>
-  </popup>
-  <slot name="trigger"></slot>
-</span>
+<popup
+  :style="popupStyle"
+  :prefix-cls="prefixCls"
+  :visible="popupVisible"
+  :class-name="popupClassName"
+  :action="action"
+  :wrap="_getTriggerTarget.bind($parent)"
+  :align="_popupAlign"
+  :animation="popupAnimation"
+  :on-animation-leave="onAnimateLeave"
+  :on-mouse-enter="_onMouseEnter"
+  :on-mouse-leave="_onMouseLeave"
+  :transition-name="popupTransitionName"
+  :get-class-name-from-align="_getPopupClassNameFromAlign">
+  <slot name="popup"></slot>
+</popup>
+<slot name="trigger"></slot>
 </template>
 
 <script>
@@ -43,7 +41,8 @@ export default {
     popupTransitionName: '',
     mouseEnterDelay: 0,
     mouseLeaveDelay: 0.1,
-    destroyPopupOnHide: false,
+    destoryPopupOnHide: false,
+    defaultPopupVisible: true,
     builtinPlacements: Object,
     action: oneOfType([Array, String]),
     getPopupClassNameFromAlign: () => '',

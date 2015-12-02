@@ -1,3 +1,11 @@
+function getSlotNode (el) {
+  if (!el) return null
+  if (el.nodeType === 1 && el.getAttribute('slot') === 'trigger') {
+    return el
+  }
+  return getSlotNode(el.nextSibling)
+}
+
 export default {
   ready () {
     this._bindTriggerEvent()
@@ -5,7 +13,7 @@ export default {
 
   methods: {
     _getTriggerTarget () {
-      const els = this.$el.querySelectorAll('[slot="trigger"]')
+      const els = getSlotNode(this.$el).querySelectorAll('[slot="trigger"]')
       const len = els.length
       if (len) {
         const currentWrap = els[len - 1]
@@ -21,6 +29,7 @@ export default {
 
     _bindTriggerEvent () {
       const el = this._getTriggerTarget()
+      console.log(el)
       if (el) {
         el.addEventListener('blur', this._onBlur.bind(this), false)
         el.addEventListener('click', this._onClick.bind(this), false)

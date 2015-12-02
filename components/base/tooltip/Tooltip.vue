@@ -63,10 +63,6 @@ export default {
     }
   },
 
-  components: { Trigger },
-
-  methods: {
-
-  }
+  components: { Trigger }
 }
 </script>

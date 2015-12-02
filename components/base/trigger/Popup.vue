@@ -15,8 +15,6 @@ const template = `
     :on-leave="_onAnimateLeave"
     :transition-name="popupTransitionName">
     <align
-      key="popup"
-      :class-name="popupInnerWrapClasses"
       :target="wrap"
       :monitor-window-resize="true"
       :visible="visible"
@@ -25,7 +23,7 @@ const template = `
       :on-align="_onAlign">
       <popup-inner
         :visible="visible"
-        :class-name="className"
+        :class-name="popupInnerWrapClasses"
         :hidden-class-name="hiddenClassName"
         :on-mouse-enter="onMouseEnter"
         :on-mouse-leave="onMouseLeave"
