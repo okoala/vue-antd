@@ -25,7 +25,9 @@ export default {
       defaultActiveKey = defaultActiveKey || [];
     }
     this.activeKey = activeKey || defaultActiveKey
+  },
 
+  ready () {
     this._mapPropsToChildComponent()
   },
 
@@ -33,12 +35,15 @@ export default {
     _mapPropsToChildComponent () {
       const activeKey = this._getActivityKey()
       const self = this
-      const len = this.$children.length - 1
-      this.$children.forEach((child, index) => {
+
+      const $children = this.$el.querySelectorAll('[role="tab"]')
+      const len = $children.length - 1;
+      [...$children].forEach(($child, index) => {
+        const child = $child.__vue__
         const key = child.key || index
         const header = child.header
         let isActive = false
-        if (accordion) {
+        if (self.accordion) {
           isActive = activeKey === key
         } else {
           isActive = activeKey.indexOf(key) > -1
@@ -86,7 +91,4 @@ export default {
     }
   }
 }
-
-export var Panel
-
 </script>

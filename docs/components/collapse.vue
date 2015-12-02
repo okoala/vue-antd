@@ -26,36 +26,6 @@
       </v-panel>
     </v-collapse>
   </example>
-  <example title="手风琴">
-    <v-collapse :accordion="true">
-      <v-panel header="This is panel header 1" key="1">
-        <p>{{text}}</p>
-      </v-panel>
-      <v-panel header="This is panel header 2" key="2">
-        <p>{{text}}</p>
-      </v-panel>
-      <v-panel header="This is panel header 3" key="3">
-        <p>{{text}}</p>
-      </v-panel>
-    </v-collapse>
-  </example>
-  <example title="面板嵌套">
-    <v-collapse :on-change="_onChange" :accordion="true">
-      <v-panel header="This is panel header 1" key="1">
-        <v-collapse :default-active-key="1">
-          <v-panel header="This is panel nest panel" key="1">
-            <p>{{text}}</p>
-          </v-panel>
-        </v-collapse>
-      </v-panel>
-      <v-panel header="This is panel header 2" key="2">
-        <p>{{text}}</p>
-      </v-panel>
-      <v-panel header="This is panel header 3" key="3">
-        <p>{{text}}</p>
-      </v-panel>
-    </v-collapse>
-  </example>
 </demo>
 
 ## API

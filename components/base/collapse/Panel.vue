@@ -1,6 +1,6 @@
 <template>
-<div :class="prefixCls + '-item'">
-  <div role="tab"
+<div role="tab" :class="prefixCls + '-item'">
+  <div
     :class="prefixCls + '-header'"
     :aria-expanded="isActive"
     @click="_handleItemClick">

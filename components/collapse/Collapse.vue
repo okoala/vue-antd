@@ -4,7 +4,9 @@
   :active-key="activeKey"
   :accordion="accordion"
   :default-active-key="defaultActiveKey"
-  :on-change="onChange"></collapse>
+  :on-change="onChange">
+  <slot></slot>
+</collapse>
 </template>
 
 <script>
@@ -14,8 +16,8 @@ import Collapse from '../base/collapse'
 export default {
   props: defaultProps({
     prefixCls: 'ant-collapse',
-    activeKey: oneOfType(['Array', 'String']),
-    defaultActiveKey: String,
+    activeKey: oneOfType([Array, String]),
+    defaultActiveKey: oneOfType([String, Array]),
     accordion: false,
     onChange() {}
   }),
