@@ -35,7 +35,7 @@
           <div :class="prefixCls + '-body'">
             <slot></slot>
           </div>
-          <div v-if="hasFooter" :class="prefixCls + '-footer'">
+          <div v-show="hasFooter" :class="prefixCls + '-footer'">
             <slot name="footer"></slot>
           </div>
         </div>
