@@ -13,7 +13,15 @@ export default {
 
   methods: {
     _getTriggerTarget () {
-      const els = getSlotNode(this.$el).querySelectorAll('[slot="trigger"]')
+      const el = getSlotNode(this.$el)
+
+      let els
+      if (el.getAttribute('slot') === 'trigger') {
+        els = [el]
+      } else {
+        els = getSlotNode(this.$el).querySelectorAll('[slot="trigger"]')
+      }
+
       const len = els.length
       if (len) {
         const currentWrap = els[len - 1]
