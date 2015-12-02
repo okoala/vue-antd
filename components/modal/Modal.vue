@@ -1,5 +1,5 @@
 <template>
-<v-dialog
+<dialog
   :title="title"
   :prefix-cls="prefixCls"
   :on-close="_handleCancel"
@@ -20,13 +20,13 @@
       {{okText}}
     </v-button>
   </div>
-</v-dialog>
+</dialog>
 </template>
 
 <script>
 import { defaultProps, KeyCode } from '../../utils'
 import cx from 'classnames'
-import vDialog from '../base/dialog'
+import Dialog from '../base/_dialog'
 import vButton from '../button'
 
 export default {
@@ -53,7 +53,7 @@ export default {
     }
   },
 
-  components: { vDialog, vButton },
+  components: { Dialog, vButton },
 
   compiled () {
     // 只有点击事件支持从鼠标位置动画展开
