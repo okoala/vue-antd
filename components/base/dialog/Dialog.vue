@@ -1,19 +1,20 @@
 <template>
 <div :class="prefixCls + '-wrap'">
-  <v-animate
+  <animate
     :show="visible"
     :transition-name="maskTransition">
     <div
       :class="maskWrapClasses"
       @click="_onMaskClick"
       ></div>
-  </v-animate>
-  <v-animate
+  </animate>
+  <animate
     :show="visible"
     :on-leave="_onAnimateLeave"
     :transition-name="contentTransition">
-    <v-align
+    <align
       :align="align"
+      :visible="visible"
       :on-align="_onAlign"
       :monitor-buffer-time="80"
       :disabled="!visible">
@@ -42,16 +43,16 @@
           sentinel
         </div>
       </div>
-    </v-align>
-  </v-animate>
+    </align>
+  </animate>
 </div>
 </template>
 
 <script>
 import { defaultProps, KeyCode } from '../../../utils'
 import cx from 'classnames'
-import vAnimate from '../animate'
-import vAlign from '../align'
+import Animate from '../animate'
+import Align from '../align'
 
 function getScroll (w, top) {
   let ret = w['page' + (top ? 'Y' : 'X') + 'Offset']
@@ -110,7 +111,7 @@ export default {
     mousePosition: Object
   }),
 
-  components: { vAlign, vAnimate },
+  components: { Align, Animate },
 
   computed: {
     maskWrapClasses () {
