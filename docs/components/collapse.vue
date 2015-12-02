@@ -1,8 +1,5 @@
+<template lang="md">
 # Collapse
-
-- category: Components
-- chinese: 折叠面板
-- type: 展示
 
 ---
 
@@ -30,3 +27,13 @@
 |------|------------------|-------------------------|--------|
 | key  | 对应 activeKey   | String                  | 无     |
 | header | 面板头内容 | React.Element or String | 无     |
+</template>
+
+<script>
+import { vCollapse } from '../../components/collapse'
+
+export default {
+  components: { vCollapse }
+}
+
+</script>

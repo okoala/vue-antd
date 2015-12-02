@@ -150,10 +150,10 @@ export default {
           //   name: 'carousel',
           //   desc: '走马灯'
           // },
-          // {
-          //   name: 'collapse',
-          //   desc: '折叠面板'
-          // },
+          {
+            name: 'collapse',
+            desc: '折叠面板'
+          },
           {
             name: 'dropdown',
             desc: '下拉菜单'
