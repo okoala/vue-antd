@@ -40,6 +40,10 @@ export function configRouter (router) {
           component: require('../components/checkbox.vue')
         },
 
+        'dropdown': {
+          component: require('../components/dropdown.vue')
+        },
+
         'iconfont': {
           component: require('../components/iconfont.vue')
         },

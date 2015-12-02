@@ -154,10 +154,10 @@ export default {
           //   name: 'collapse',
           //   desc: '折叠面板'
           // },
-          // {
-          //   name: 'dropdown',
-          //   desc: '下拉菜单'
-          // },
+          {
+            name: 'dropdown',
+            desc: '下拉菜单'
+          },
           {
             name: 'message',
             desc: '全局提示'
