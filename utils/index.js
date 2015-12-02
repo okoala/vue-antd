@@ -63,6 +63,8 @@ export function oneOfType (validList, defaultValue) {
 
   validaObj.default = defaultValue
   validaObj.validator = function (value) {
+    if (value == null) return true
+
     for (let j = 0; j < validList.length; j++) {
       const currentValid = validList[j]
       let validName
@@ -86,6 +88,8 @@ export function oneOf (validList, defaultValue) {
 
   validaObj.default = defaultValue
   validaObj.validator = function (value) {
+    if (value == null) return true
+
     for (let j = 0; j < validList.length; j++) {
       if (value === validList[j]) {
         return true
