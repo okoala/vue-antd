@@ -1,24 +1,24 @@
 <template>
 <Pagination
-  :prefixCls="className"
+  :prefix-cls="className"
   :current="current"
   :total="total"
-  :pageSize="pageSize"
-  :onChange="onChange"
-  :showSizeChanger="showSizeChanger"
-  :onShowSizeChange="onShowSizeChange"
-  :showQuickJumper="showQuickJumper"
+  :page-size="pageSize"
+  :on-change="onChange"
+  :show-size-changer="showSizeChanger"
+  :on-show-size-change="onShowSizeChange"
+  :show-quick-jumper="showQuickJumper"
   :simple="simple"></Pagination>
 </template>
 
-<script>
-import Pagination from './base/pagination'
-import { defaultProps } from '../utils'
+<script type="text/babel">
+import Pagination from '../base/pagination'
+import { defaultProps } from '../../utils'
 
 export default {
   props: defaultProps({
     current: 1, // 当前页数
-    total: 0, // 数据总数
+    total: 1, // 数据总数
     pageSize: 10, // 每页条数
     onChange: () => {}, // 页码改变的回调，参数是改变后的页码
     showSizeChanger: false, // 是否可以改变 pageSize
@@ -30,6 +30,5 @@ export default {
 
   components: { Pagination }
 }
-
 
 </script>

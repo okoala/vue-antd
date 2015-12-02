@@ -20,10 +20,10 @@
 </div>
 </template>
 
-<script>
+<script type="text/babel">
 import { defaultProps } from '../../../utils'
 import KEYCODE from './KeyCode'
-import Select, { Option } from './select'
+import Select, { Option } from '../select'
 
 export default {
   props: defaultProps({

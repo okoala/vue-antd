@@ -53,13 +53,13 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(bower_components)/,
         loader: 'babel?optional[]=runtime&stage=2!eslint'
       },
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract(
-          'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
+          'css?sourceMap&-minimize!' + 'less?sourceMap'
         )
       },
       { test: /\.css$/,
@@ -74,7 +74,7 @@ module.exports = {
       md: 'html!vue-antd-docs',
       js: 'babel?optional[]=runtime&stage=2!eslint',
       less: ExtractTextPlugin.extract(
-        'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
+        'css?sourceMap&-minimize!' + 'less?sourceMap'
       )
     }
   },

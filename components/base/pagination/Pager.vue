@@ -4,7 +4,7 @@
 </li>
 </template>
 
-<script>
+<script type="text/babel">
 import { defaultProps } from '../../../utils'
 
 export default {

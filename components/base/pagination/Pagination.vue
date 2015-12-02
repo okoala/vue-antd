@@ -1,24 +1,24 @@
 <template>
 <div>
-  <ul v-if="simple" :class="`prefixCls + ' ' + prefixCls + '-simple ' + className">
+  <ul v-if="simple" :class="prefixCls + ' ' + prefixCls + '-simple ' + className">
     <li
       title="Previous Page"
       @click="_prev"
-      :class="(_hasPrev() ? '' : `${prefixCls}-disabled `) + prefixCls + '-prev'">
+      :class="(_hasPrev() ? '' : prefixCls + '-disabled ') + prefixCls + '-prev'">
       <a></a>
     </li>
-    <div title={`Page ${this.state.current} of ${allPages}`} className={`${prefixCls}-simple-pager`}>
+    <div :title="'Page ' + current + ' of ' + total" :class="prefixCls + '-simple-pager'">
       <input type="text"
-            value="_current"
+            :value="current"
             @keydown="_handleKeyDown"
             @keyup="_handleKeyUp"
             @change="_handleKeyUp" />
-      <span :class={`${prefixCls}-slash`}>／</span>
-      {allPages}
+      <span :class="prefixCls + '-slash'">／</span>
+      {{total}}
     </div>
     <li title="Next Page"
         @click="_next"
-        :class={(this._hasNext() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-next`}>
+        :class="(this._hasNext() ? '' : prefixCls + '-disabled ') + prefixCls + '-next'">
       <a></a>
     </li>
   </ul>
@@ -28,31 +28,31 @@
     <li
       title="Previous Page"
       @click="_prev"
-      :class={(this._hasPrev() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-prev`}>
+      :class="(this._hasPrev() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-prev`">
       <a></a>
     </li>
-    {pagerList}
+    {{pagerList}}
     <li
       title="Next Page"
       @click="_next"
-      :class={(this._hasNext() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-next`}>
+      :class="(this._hasNext() ? '' : `${prefixCls}-disabled `) + `${prefixCls}-next`">
       <a></a>
     </li>
-    <Options
-      :rootPrefixCls={prefixCls}
-      :selectComponentClass={selectComponentClass}
-      :selectPrefixCls={selectPrefixCls}
-      :changeSize={showSizeChanger ? _changePageSize.bind(this) : null}
-      :current={current}
-      :quickGo={showQuickJumper ? _handleChange.bind(this) : null} />
+    <!--<Options-->
+      <!--:rootPrefixCls={prefixCls}-->
+      <!--:selectComponentClass={selectComponentClass}-->
+      <!--:selectPrefixCls={selectPrefixCls}-->
+      <!--:changeSize={showSizeChanger ? _changePageSize.bind(this) : null}-->
+      <!--:current={current}-->
+      <!--:quickGo={showQuickJumper ? _handleChange.bind(this) : null} />-->
   </ul>
 </div>
 
 </template>
 
-<script>
+<script type="text/babel">
 import Pager from './Pager.vue'
-import Options from './Options.vue'
+//import Options from './Options.vue'
 import KEYCODE from './KeyCode'
 import { defaultProps } from '../../../utils'
 
@@ -62,7 +62,7 @@ export default {
     total: 0,
     simple: false,
     pageSize: 10,
-    onChange: () => {,
+    onChange: () => {},
     className: '',
     selectPrefixCls: 'ant-select',
     prefixCls: 'ant-pagination',
@@ -76,7 +76,7 @@ export default {
     return {
       _current: null
     }
-  }
+  },
 
   methods: {
     _calcPage (pageSize) {
@@ -88,7 +88,7 @@ export default {
     },
 
     _isValid (page) {
-      return typeof page === 'number' && page >= 1 && page !== this.state.current
+      return typeof page === 'number' && page >= 1 && page !== this.current
     },
 
     _handleKeyDown (e) {

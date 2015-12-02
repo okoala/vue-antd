@@ -75,7 +75,7 @@
 </div>
 </template>
 
-<script>
+<script type="text/babel">
 
 export default {
   data () {
@@ -216,10 +216,10 @@ export default {
           //   name: 'menu',
           //   desc: '导航菜单'
           // },
-          // {
-          //   name: 'pagination',
-          //   desc: '分页'
-          // },
+          {
+           name: 'pagination',
+           desc: '分页'
+          },
           {
             name: 'steps',
             desc: '步骤条'
