@@ -1,10 +1,12 @@
 <template>
-
+<select {..._props}>
+  <slot></slot>
+</select>
 </template>
 
 <script>
-import { defaultProps, oneOfType } from '../../utils'
-// import Select from './base/select'
+import { defaultProps, oneOfType, camelcaseToHyphen } from '../../utils'
+import Select from '../base/select'
 
 export default {
   props: defaultProps({
@@ -14,6 +16,7 @@ export default {
     notFoundContent: Boolean,
     showSearch: false,
     className: ' ',
+    size: 'default',
 
     value: oneOfType([String, Array]),
     defaultValue: oneOfType([String, Array]),
@@ -25,23 +28,38 @@ export default {
     searchPlaceholder: String,
     optionFilterProp: 'value',
     combobox: false,
-    size: String,
     onSelect: () => {},
     onDeselect: () => {},
     onChange: () => {}
   }),
 
+  components: { Select },
+
   computed: {
     wrapClassName () {
-      let sizeClass = ''
+      let sizeClass = null
+      let classNames = []
 
       if (this.size === 'large') {
         sizeClass = 'ant-select-lg'
-      } else {
+      } else if (this.size === 'small') {
         sizeClass = 'ant-select-sm'
       }
 
-      return this.className + sizeClass
+      if (className) {
+        classNames.push(className)
+      }
+      if (sizeClass) {
+        classNames.push(sizeClass)
+      }
+
+      return classNames.join(' ')
+    }
+  },
+
+  computed: {
+    _props () {
+      return camelcaseToHyphen(this.$data)
     }
   },
 
@@ -52,7 +70,6 @@ export default {
   },
 
   methods: {
-
   }
 }
 

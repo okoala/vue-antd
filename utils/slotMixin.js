@@ -29,7 +29,6 @@ export default {
 
     _bindTriggerEvent () {
       const el = this._getTriggerTarget()
-      console.log(el)
       if (el) {
         el.addEventListener('blur', this._onBlur.bind(this), false)
         el.addEventListener('click', this._onClick.bind(this), false)

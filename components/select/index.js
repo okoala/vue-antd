@@ -1,5 +1,5 @@
 import vSelect from './Select.vue'
-import vOption from './Option.vue'
+import { vOption } from '../base/select'
 
 vSelect.vOption = vOption
 
