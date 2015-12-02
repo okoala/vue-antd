@@ -1,52 +1,12 @@
-import velocity from 'velocity-animate'
 import _KeyCode from './KeyCode'
 import _guid from './guid'
 import _slotMixin from './slotMixin'
 
 const toString = Object.prototype.toString
 
-function animate (node, show, transitionName, done) {
-  let ok
-
-  const complete = () => {
-    if (!ok) {
-      ok = true
-      done()
-    }
-  }
-
-  node.style.display = show ? 'block' : 'none'
-
-  velocity(node, transitionName, {
-    duration: 240,
-    complete: complete,
-    easing: 'easeInOutQuad'
-  })
-
-  return {
-    stop () {
-      velocity(node, 'finish')
-      complete()
-    }
-  }
-}
-
 export const slotMixin = _slotMixin
 export const guid = _guid
 export const KeyCode = _KeyCode
-export const openAnimation = {
-  enter (node, done) {
-    return animate(node, false, 'slideDown', done)
-  },
-
-  leave (node, done) {
-    return animate(node, true, 'slideUp', done)
-  },
-
-  appear (node, done) {
-    return animate(node, false, 'slideDown', done)
-  }
-}
 
 // 返回vue匹配的props的对象
 export function defaultProps (props) {
