@@ -1,51 +1,52 @@
 <template>
 <div :class="prefixCls + '-item'">
-  <div
+  <div role="tab"
     :class="prefixCls + '-header'"
-    @click="_handleItemClick"
-    role="tab"
-    :aria-expanded="isActive">
+    :aria-expanded="isActive"
+    @click="_handleItemClick">
     <i class="arrow"></i>
-    <slot name="header"></slot>
+    {{{header}}}
   </div>
-  <Animate
-    showProp='data-active'
+  <animate
+    :show="isActive"
     :exclusive="true"
     :animation="openAnimation">
     <div
       :class="contentCls"
-      :data-active="isActive"
       role="tabpanel">
       <div :class="prefixCls + '-content-box'">
         <slot></slot>
       </div>
     </div>
-  </Animate>
+  </animate>
 </div>
 </template>
 
 <script>
+import { defaultProps, oneOfType } from '../../../utils'
 import cx from 'classnames'
-import Animate from './base/animate'
-import { defaultProps, oneOfType } from '../utils'
+import Animate from '../animate'
 
 export default {
   props: defaultProps({
-    openAnimation: Object,
     prefixCls: String,
+    openAnimation: Object,
     header: oneOfType([String, Number]),
     isActive: false,
-    onItemClick: () => {}
+    onItemClick() {}
   }),
+
   components: { Animate },
+
   computed: {
     contentCls () {
       return cx({
-        [`${prefixCls}-content`]: true,
-        [`${prefixCls}-content-active`]: this.isActive
+        [`${this.prefixCls}-content`]: 1,
+        [`${this.prefixCls}-content-active`]: this.isActive
       })
     }
-  }
+  },
+
   methods: {
     _handleItemClick () {
       this.onItemClick()
