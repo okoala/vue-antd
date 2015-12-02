@@ -4,31 +4,32 @@ import vIcon from '../iconfont'
 import vButton from '../button'
 import { guid } from '../../utils'
 
-let fragmentNode = {
-  create () {
-    let div = document.createElement('div')
-    fragmentNode.id = div.id = guid()
-    document.body.appendChild(div)
-
-    return div
-  },
-
-  remove () {
-    if (fragmentNode.id) {
-      const el = document.getElementById(fragmentNode.id)
-      el.parentNode && el.parentNode.removeChild(el)
-    }
-  }
-}
-
 export default function (props) {
   props = props || {}
   props.iconClassName = props.iconClassName || 'question-circle'
   props.width = (props.width || 416) + 'px'
+  props.visible = true
 
   // 默认为 true，保持向下兼容
   if (!('okCancel' in props)) {
     props.okCancel = true
+  }
+
+  let fragmentNode = {
+    create () {
+      let div = document.createElement('div')
+      fragmentNode.id = div.id = guid()
+      document.body.appendChild(div)
+
+      return div
+    },
+
+    remove () {
+      if (fragmentNode.id) {
+        const el = document.getElementById(fragmentNode.id)
+        el.parentNode && el.parentNode.removeChild(el)
+      }
+    }
   }
 
   const container = fragmentNode.create()
@@ -41,8 +42,10 @@ export default function (props) {
           prefix-cls="ant-modal"
           class-name="ant-confirm"
           transition-name="zoom"
-          :visible="true"
+          :visible="visible"
           :closeable="false"
+          :has-footer="false"
+          :on-close="_handleCancel"
           :mask-transition-name="'fade'"
           :style="{'width': width}">
           <div style="zoom: 1; overflow: hidden">
@@ -73,7 +76,9 @@ export default function (props) {
     methods: {
       _close () {
         this.visible = false
-        fragmentNode.remove()
+        setTimeout(() => {
+          fragmentNode.remove()
+        }, 1500)
       },
 
       _handleOk () {

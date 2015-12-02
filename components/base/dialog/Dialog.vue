@@ -35,7 +35,7 @@
           <div :class="prefixCls + '-body'">
             <slot></slot>
           </div>
-          <div :class="prefixCls + '-footer'">
+          <div v-if="hasFooter" :class="prefixCls + '-footer'">
             <slot name="footer"></slot>
           </div>
         </div>
@@ -104,6 +104,7 @@ export default {
     closable: true,
     visible: Boolean,
     zIndex: Number,
+    hasFooter: false,
     maskAnimation: String,
     maskTransitionName: String,
     transitionName: String,
@@ -112,6 +113,12 @@ export default {
   }),
 
   components: { Align, Animate },
+
+  ready () {
+    if (this.$el.querySelector('[slot="footer"]')) {
+      this.hasFooter = true
+    }
+  },
 
   computed: {
     maskWrapClasses () {
