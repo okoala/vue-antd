@@ -15,7 +15,11 @@
   <example title="基本">
     <v-dropdown>
       <div slot="overlay">
-        asfdasf
+        <ul class="ant-dropdown-menu ant-dropdown-menu-vertical  ant-dropdown-menu-light ant-dropdown-menu-root">
+          <li class="ant-dropdown-menu-item"><a target="_blank" href="http://www.alipay.com/">第一个菜单项</a></li>
+          <li class="ant-dropdown-menu-item"><a target="_blank" href="http://www.taobao.com/">第二个菜单项</a></li>
+          <li class="ant-dropdown-menu-item"><a target="_blank" href="http://www.tmall.com/">第三个菜单项</a></li>
+        </ul>
       </div>
       <v-button>
         某按钮 <v-icon type="down"></v-icon>

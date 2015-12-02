@@ -83,6 +83,9 @@ export default {
   methods: {
     _doAlign () {
       const target = this.target()
+      if (!target) {
+        return
+      }
       const currentNode = this.currentNode
       const display = currentNode.style.display
       currentNode.style.left = '0'

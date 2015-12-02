@@ -1,6 +1,7 @@
 <template>
 <trigger
   :prefix-cls="prefixCls"
+  :popup="''"
   :popup-class-name="overlayClassName"
   :popup-style="overlayStyle"
   :builtin-placements="placements"
@@ -12,7 +13,7 @@
   :popup-visible="visible"
   :after-popup-visible-change="_afterVisibleChange"
   :on-popup-visible-change="_onVisibleChange">
-  <span slot="popup" v-el:popup :class="prefixCls + '-menu'" @click="_onClick">
+  <span slot="popup" v-el:popup @click="_onClick">
     <slot name="overlay"></slot>
   </span>
   <span slot="trigger"><slot></slot></span>
@@ -20,25 +21,49 @@
 </template>
 
 <script>
-import { defaultProps, any } from '../../../utils'
+import { defaultProps, oneOfType, any } from '../../../utils'
 import Trigger from '../trigger'
+import placements from './placements'
+
+function _getOverlayNode (el) {
+  const els = el.querySelectorAll('[slot="overlay"]')
+  const len = els.length
+  if (len) {
+    const currentWrap = els[len - 1]
+    const children = currentWrap.children
+    if (children && children.length === 1) {
+      return children[children.length - 1]
+    } else {
+      return currentWrap
+    }
+  }
+}
 
 export default {
   props: defaultProps({
     minOverlayWidthMatchTrigger: true,
     prefixCls: 'vc-dropdown',
-    visible: Boolean,
-    trigger: ['hover'],
+    visible: false,
+    trigger: oneOfType([Array, String], 'hover'),
     overlayClassName: '',
     overlayStyle: {},
     defaultVisible: false,
-    transitionName: String,
-    animation: any,
-    align: {},
+    transitionName: '',
+    animation: '',
+    align: {
+      type: Object,
+      default: function (){ return {} }
+    },
     placement: 'bottomLeft',
     onClick() {},
     onVisibleChange() {}
   }),
+
+  data () {
+    return {
+      placements
+    }
+  },
 
   components: { Trigger },
 
@@ -46,6 +71,11 @@ export default {
     if (!this.visible) {
       this.visible = this.defaultVisible
     }
+  },
+
+  ready () {
+    const el = _getOverlayNode(this.$els.popup)
+    el.classList.add(this.prefixCls + '-menu')
   },
 
   methods: {
