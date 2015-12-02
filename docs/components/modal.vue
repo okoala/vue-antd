@@ -38,6 +38,14 @@
   <example title="确认对话框">
     <v-button @click="_showConfirm">确认对话框</v-button>
   </example>
+  <example title="确认对话框">
+    <v-button @click="_showConfirm2">确认对话框</v-button>
+  </example>
+  <example title="确认对话框">
+    <v-button @click="info">信息提示</v-button>
+    <v-button @click="success">成功提示</v-button>
+    <v-button @click="error">失败提示</v-button>
+  </example>
 </demo>
 
 ## API
@@ -80,6 +88,9 @@ import vModal from '../../components/modal'
 import message from '../../components/message'
 
 const confirm = vModal.confirm
+const info = vModal.info
+const success = vModal.success
+const error = vModal.error
 
 export default {
   data () {
@@ -136,6 +147,41 @@ export default {
           console.log('确定')
         },
         onCancel: function() {}
+      })
+    },
+
+    _showConfirm2 () {
+      confirm({
+        title: '您是否确认要删除这项内容',
+        content: '点确认 1 秒后关闭',
+        onOk: function() {
+          return new Promise(function(resolve) {
+            setTimeout(resolve, 1000)
+          })
+        },
+        onCancel: function() {}
+      })
+    },
+
+    info() {
+      info({
+        title: '这是一条通知信息',
+        content: '一些附加信息一些附加信息一些附加信息',
+        onOk: function() {}
+      })
+    },
+
+    success() {
+      success({
+        title: '这是一条通知信息',
+        content: '一些附加信息一些附加信息一些附加信息'
+      })
+    },
+
+    error() {
+      error({
+        title: '这是一条通知信息',
+        content: '一些附加信息一些附加信息一些附加信息'
       })
     }
   }
