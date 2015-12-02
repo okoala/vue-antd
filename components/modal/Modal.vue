@@ -26,7 +26,7 @@
 <script>
 import { defaultProps, KeyCode } from '../../utils'
 import cx from 'classnames'
-import Dialog from '../base/_dialog'
+import Dialog from '../base/dialog'
 import vButton from '../button'
 
 export default {

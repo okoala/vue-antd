@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Dialog from '../base/_dialog'
+import Dialog from '../base/dialog'
 import vIcon from '../iconfont'
 import vButton from '../button'
 import { guid } from '../../utils'

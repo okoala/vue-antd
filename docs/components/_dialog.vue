@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Dialog from '../../components/base/_dialog'
+import Dialog from '../../components/base/dialog'
 import vButton from '../../components/button'
 
 export default {
