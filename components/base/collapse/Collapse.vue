@@ -14,7 +14,7 @@ export default {
     prefixCls: 'ant-collapse',
     activeKey: oneOfType([String, Array]),
     defaultActiveKey: oneOfType([String, Array]),
-    openAnimation: openAnimation,
+    openAnimation: Object,
     onChange() {},
     accordion: false
   }),
@@ -25,6 +25,10 @@ export default {
       defaultActiveKey = defaultActiveKey || [];
     }
     this.activeKey = activeKey || defaultActiveKey
+
+    if (!this.openAnimation) {
+      this.openAnimation = openAnimation
+    }
   },
 
   ready () {
@@ -35,9 +39,7 @@ export default {
     _mapPropsToChildComponent () {
       const activeKey = this._getActivityKey()
       const self = this
-
-      const $children = this.$el.querySelectorAll('[role="tab"]')
-      const len = $children.length - 1;
+      const $children = this.$el.querySelectorAll('[role="tab"]');
       [...$children].forEach(($child, index) => {
         const child = $child.__vue__
         const key = child.key || index
@@ -51,28 +53,43 @@ export default {
         child.prefixCls = self.prefixCls
         child.openAnimation = self.openAnimation
         child.isActive = isActive
-        child.onItemClick = self._handleClickItem(key).bind(this)
+        child.onItemClick = self._handleClickItem.bind(this, key)
       })
     },
 
-    _handleClickItem (key) {
-      return () => {
-        const activeKey = this._getActivityKey()
-
-        if (this.accordion) {
-          this.activeKey = key === activeKey ? null : key
+    _setChildAcitve () {
+      const activeKey = this._getActivityKey()
+      const self = this
+      const $children = this.$el.querySelectorAll('[role="tab"]');
+      [...$children].forEach(($child, index) => {
+        const child = $child.__vue__
+        const key = child.key || index
+        let isActive = false
+        if (self.accordion) {
+          isActive = activeKey === key
         } else {
-          const index = activeKey.indexOf(key)
-          const isActive = index > -1
-
-          if (isActive) activeKey.splice(index, 1)
-          else activeKey.push(key)
-
-          this.activeKey = activeKey
+          isActive = activeKey.indexOf(key) > -1
         }
+        child.isActive = isActive
+      })
+    },
 
-        this.onChange(key)
+    _handleClickItem (key, e) {
+      const activeKey = this._getActivityKey()
+
+      if (this.accordion) {
+        this.activeKey = key === activeKey ? null : key
+      } else {
+        const index = activeKey.indexOf(key)
+        const isActive = index > -1
+
+        if (isActive) activeKey.splice(index, 1)
+        else activeKey.push(key)
+
+        this.activeKey = activeKey
       }
+      this._setChildAcitve()
+      this.onChange(key)
     },
 
     _getActivityKey () {

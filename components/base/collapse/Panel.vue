@@ -1,8 +1,8 @@
 <template>
 <div role="tab" :class="prefixCls + '-item'">
   <div
+    v-el:header
     :class="prefixCls + '-header'"
-    :aria-expanded="isActive"
     @click="_handleItemClick">
     <i class="arrow"></i>
     {{{header}}}
@@ -29,6 +29,7 @@ import Animate from '../animate'
 
 export default {
   props: defaultProps({
+    key: oneOfType([String, Number]),
     prefixCls: String,
     openAnimation: Object,
     header: oneOfType([String, Number]),
@@ -37,6 +38,16 @@ export default {
   }),
 
   components: { Animate },
+
+  ready () {
+    this._setAriaExpend(this.$els.header, this.isActive)
+  },
+
+  watch: {
+    isActive (value) {
+      this._setAriaExpend(this.$els.header, value)
+    }
+  },
 
   computed: {
     contentCls () {
@@ -48,6 +59,10 @@ export default {
   },
 
   methods: {
+    _setAriaExpend (el, value) {
+      el.setAttribute('aria-expanded', value)
+    },
+
     _handleItemClick () {
       this.onItemClick()
     }

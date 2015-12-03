@@ -42,7 +42,7 @@
   <example title="面板嵌套">
     <v-collapse :on-change="_onChange" :accordion="true">
       <v-panel header="This is panel header 1" key="1">
-        <v-collapse :default-active-key="1">
+        <v-collapse default-active-key="1">
           <v-panel header="This is panel nest panel" key="1">
             <p>{{text}}</p>
           </v-panel>
