@@ -22,7 +22,7 @@ import vCheckbox from './components/checkbox'
 import { vRow, vCol } from './components/layout'
 import vSteps, { vStep } from './components/steps'
 import vInputNumber from './components/input-number'
-import vSelect, { vOption } from './components/select'
+// import vSelect, { vOption } from './components/select'
 import vRadio, { vRadioGroup } from './components/radio'
 import vButton, { vButtonGroup } from './components/button'
 import vBreadcrumb, { vBreadcrumbItem } from './components/breadcrumb'
@@ -38,7 +38,7 @@ const antd = {
   vInputNumber,
   vRadio,
   vRadioGroup,
-  vSelect,
+  // vSelect,
   vOption,
   vSwitch,
   vUpload,
