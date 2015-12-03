@@ -5,8 +5,12 @@
     :arrows="arrows"
     :effect="effect"
     :fade="fade"
+    :autoplay="autoplay"
+    :easing="easing"
     :draggable="draggable"
-    :vertical="vertical">
+    :vertical="vertical"
+    :before-change="beforeChange"
+    :after-change="afterChange">
     <slot></slot>
   </carousel>
 </div>
@@ -37,10 +41,14 @@ export default {
     prefixCls: 'ant-carousel',
     dots: true,
     arrows: false,
-    effect: String,
+    effect: 'scrollx',
     fade: Boolean,
     draggable: Boolean,
-    vertical: false
+    vertical: false,
+    easing: 'linear',
+    autoplay: true,
+    beforeChange() {},
+    afterChange() {}
   }),
 
   components: { Carousel },
