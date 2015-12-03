@@ -39,7 +39,7 @@ const antd = {
   vRadio,
   vRadioGroup,
   // vSelect,
-  vOption,
+  // vOption,
   vSwitch,
   vUpload,
   vBadge,
