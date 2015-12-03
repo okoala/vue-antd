@@ -26,7 +26,7 @@
     :style="{display: 'block'}"
     @click="_nextHandler"> Next</button>
   <ul :class="dotsClass" :style="{display: 'block'}">
-    <li v-for="dot in dots" :key="$index">
+    <li v-for="dot in dots" :key="$index" :class="{'slick-active': currentSlide === $index * slidesToScroll}">
       <button @click="clickHandler.bind(this, $index)">{{$index}}</button>
     </li>
   </ul>
@@ -89,6 +89,11 @@ export default {
         ['slick-next']: 1,
         ['slick-disabled']: this.isNextFinite
       })
+    },
+
+    dots () {
+      const dotCount = Math.ceil(this.slideCount / this.slidesToScroll)
+      return Array.apply(null, Array(dotCount + 1).join('0').split(''))
     }
   },
 
@@ -110,6 +115,15 @@ export default {
         return
       }
       this.clickHandler.call(this, {message: 'next'})
+    },
+
+    _dotHandler (e, i) {
+      this._clickHandler({
+        message: 'dots',
+        index: i,
+        slidesToScroll: this.slidesToScroll,
+        currentSlide: this.currentSlide
+      })
     }
   }
 }
