@@ -18,13 +18,13 @@ export default {
           match: handler
         }
       }
-      enquire.register(query, handler)
+      enquire.register(_query, handler)
 
       // Queue the handlers to unregister them at unmount
-      if (! this._responsiveMediaHandlers) {
+      if (!this._responsiveMediaHandlers) {
         this._responsiveMediaHandlers = []
       }
-      this._responsiveMediaHandlers.push({query: query, handler: handler})
+      this._responsiveMediaHandlers.push({query: _query, handler: handler})
     }
   }
 }

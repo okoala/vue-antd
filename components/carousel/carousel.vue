@@ -60,7 +60,7 @@ export default {
         this.draggable = false
       }
     }
-  }
+  },
 
   computed: {
     wrapClasses () {
