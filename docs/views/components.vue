@@ -146,10 +146,10 @@ export default {
             name: 'badge',
             desc: '徽标数'
           },
-          // {
-          //   name: 'carousel',
-          //   desc: '走马灯'
-          // },
+          {
+            name: 'carousel',
+            desc: '走马灯'
+          },
           {
             name: 'collapse',
             desc: '折叠面板'

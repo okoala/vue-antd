@@ -40,6 +40,10 @@ export function configRouter (router) {
           component: require('../components/checkbox.vue')
         },
 
+        'carousel': {
+          component: require('../components/carousel.vue')
+        },
+
         'collapse': {
           component: require('../components/collapse.vue')
         },

@@ -1,8 +1,5 @@
+<template lang="md">
 # Carousel
-
-- category: Components
-- chinese: 走马灯
-- type: 展示
 
 ---
 
@@ -13,6 +10,19 @@
 - 当有一组平级的内容。
 - 当内容空间不足时，可以用走马灯的形式进行收纳，进行轮播展现。
 - 常用于一组图片或卡片轮播。
+
+## 组件演示
+
+<demo>
+  <example title="基本">
+    <v-carousel :after-change="onChange">
+      <div><h3>1</h3></div>
+      <div><h3>2</h3></div>
+      <div><h3>3</h3></div>
+      <div><h3>4</h3></div>
+    </v-carousel>
+  </example>
+</demo>
 
 ## API
 
@@ -38,3 +48,22 @@
   margin-right: 35px;
 }
 </style>
+</template>
+
+<script>
+import vCarousel from '../../components/carousel'
+import message from '../../components/message'
+
+export default {
+
+  components: { vCarousel },
+
+  methods: {
+    onChange (current) {
+      message.info(current)
+    }
+  }
+
+}
+
+</script>
