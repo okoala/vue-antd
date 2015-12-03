@@ -3,7 +3,7 @@ import velocity from 'velocity-animate'
 function animate (node, show, transitionName, done) {
   let ok
 
-  function complete() {
+  function complete () {
     if (!ok) {
       ok = true
       done()
@@ -18,7 +18,7 @@ function animate (node, show, transitionName, done) {
     easing: 'easeInOutQuad'
   })
   return {
-    stop() {
+    stop () {
       velocity(node, 'finish')
       complete()
     }
@@ -26,10 +26,10 @@ function animate (node, show, transitionName, done) {
 }
 
 const animation = {
-  enter(node, done) {
+  enter (node, done) {
     return animate(node, false, 'slideDown', done)
   },
-  leave(node, done) {
+  leave (node, done) {
     return animate(node, true, 'slideUp', done)
   }
 }
