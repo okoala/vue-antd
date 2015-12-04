@@ -1,33 +1,28 @@
 <template>
 <inner-slider
-  :dots="dots">
+  :dots="dots"
+  :arrows="arrows"
+  :fade="fade"
+  :autoplay="autoplay"
+  :easing="easing"
+  :draggable="draggable"
+  :vertical="vertical"
+  :before-change="beforeChange"
+  :after-change="afterChange">
   <slot></slot>
 </inner-slider>
 </template>
 
 <script>
-import { defaultProps } from '../../../utils'
+import props from './props'
 import InnerSlider from './InnerSlider.vue'
 import json2mq from 'json2mq'
-import ResponsiveMixins from './mixins/responsive'
+import ResponsiveMixin from './mixins/responsive'
 
 export default {
-  mixins: [ResponsiveMixins],
+  mixins: [ResponsiveMixin],
 
-  props: defaultProps({
-    prefixCls: 'vc-carousel',
-    responsive: Array,
-    dots: true,
-    arrows: false,
-    effect: 'scrollx',
-    fade: Boolean,
-    draggable: Boolean,
-    vertical: false,
-    easing: 'linear',
-    autoplay: true,
-    beforeChange() {},
-    afterChange() {}
-  }),
+  props: props,
 
   components: { InnerSlider },
 

@@ -1,12 +1,11 @@
 <template>
-<div class='slick-track' :style="trackStyle">
+<div class='slick-track'>
   <slot></slot>
 </div>
 </template>
 
 <script>
-import { addStyle, addClass, insertBefore, insertAfter } from '../../../utils'
-import cx from 'classnames'
+import { cx, addStyle, addClass, insertBefore, insertAfter } from '../../../utils'
 
 const getSlideClasses = function (spec) {
   let slickActive, slickCenter, slickCloned
@@ -56,20 +55,24 @@ const getSlideStyle = function (spec) {
 }
 
 export default {
+  data () {
+    return {}
+  },
   ready () {
     this.children = this.$el.children
     this.preClone = this.children[0].cloneNode(true)
     this.postClone = this.children[this.children.length - 1].cloneNode(true)
 
-    this._mapPropsToChild()
+    // this._mapPropsToChild()
   },
 
   methods: {
     _mapPropsToChild () {
-
       [...this.children].forEach((el, index) => {
+        let child
+
         if (!this.lazyLoad | (this.lazyLoad && this.lazyLoadedList.indexOf(index) >= 0)) {
-          child = elem;
+          child = el
         } else {
           child = document.createElement('div')
         }
@@ -111,5 +114,4 @@ export default {
     }
   }
 }
-
 </script>

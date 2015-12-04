@@ -1,8 +1,6 @@
 <template>
 <div :class="wrapClasses">
-  <div
-    v-el:list
-    class="slick-list"
+  <div v-el:list class="slick-list"
     @mousedown="_swipeStart"
     @mousemove="_swipeMove"
     @mouseup="_swipeEnd"
@@ -11,22 +9,22 @@
     @touchmove="_swipeMove"
     @touchend="_swipeEnd"
     @touchcancel="_swipeEnd">
-    <track v-rel:track
+    <v-track
+      v-ref:track
       :fade="fade"
       :css-ease="cssEase"
       :speed="speed"
       :infinite="infinite"
-      :centermode="centerMode"
-      :currentslide="currentSlide"
+      :center-mode="centerMode"
+      :current-slide="currentSlide"
       :lazy-load="lazyLoad"
       :lazy-loaded-list="lazyLoadedList"
       :slide-width="slideWidth"
       :slides-to-show="slidesToShow"
       :slide-count="slideCount"
-      :track-style="trackStyle"
       :variable-width="variableWidth">
       <slot></slot>
-    </track>
+    </v-track>
   </div>
   <button key='0' type='button' data-role='none'
     v-if="arrows"
@@ -34,14 +32,14 @@
     :class="prevClasses"
     :style="{display: 'block'}"
     @click="_prevHandler"> Previous</button>
-  <button key='0' type='button' data-role='none'
+  <button key='1' type='button' data-role='none'
     v-if="arrows"
     v-el:next
     :class="nextClasses"
     :style="{display: 'block'}"
     @click="_nextHandler"> Next</button>
   <ul :class="dotsClass" :style="{display: 'block'}">
-    <li v-for="dot in dots" :key="$index" :class="{'slick-active': currentSlide === $index * slidesToScroll}">
+    <li v-for="dot in dots" track-by="$index" :key="$index" :class="{'slick-active': currentSlide === $index * slidesToScroll}">
       <button @click="clickHandler.bind(this, $index)">{{$index}}</button>
     </li>
   </ul>
@@ -50,8 +48,9 @@
 </template>
 
 <script>
-import { defaultProps, cx, addEndEventListener, removeEndEventListener } from '../../../utils'
-import Track from './Track.vue'
+import props from './props'
+import { cx, addEndEventListener, removeEndEventListener } from '../../../utils'
+import vTrack from './Track.vue'
 import { getTrackCSS, getTrackLeft, getTrackAnimateCSS } from './helpers/track'
 
 const getDotCount = function (spec) {
@@ -59,47 +58,10 @@ const getDotCount = function (spec) {
 }
 
 export default {
-  props: defaultProps({
-    className: '',
-    adaptiveHeight: false,
-    arrows: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    centerMode: false,
-    centerPadding: '50px',
-    cssEase: 'ease',
-    dots: false,
-    dotsClass: 'slick-dots',
-    idraggable: true,
-    easing: 'linear',
-    edgeFriction: 0.35,
-    fade: false,
-    focusOnSelect: false,
-    infinite: true,
-    initialSlide: 0,
-    lazyLoad: false,
-    responsive: null,
-    rtl: false,
-    slide: 'div',
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 500,
-    swipe: true,
-    swipeToSlide: false,
-    touchMove: true,
-    touchThreshold: 5,
-    useCSS: true,
-    variableWidth: false,
-    vertical: false,
-    afterChange: null,
-    beforeChange: null,
-    edgeEvent: null,
-    swipeEvent: null,
-    clickHandler() {},
-    init() {}
-  }),
+  props: props,
 
-  components: { Track },
+  // 这里我也是醉了，组件要有前缀，不然slot位置不正确。
+  components: { vTrack },
 
   data () {
     return {
@@ -186,10 +148,10 @@ export default {
   },
 
   ready () {
-    this.children = this.$refs.track.children
+    this.children = this.$refs.track.$el.children
     this.mounted = true
-    this.initialize()
-    this.adaptHeight()
+    this._initialize()
+    this._adaptHeight()
     if (window.addEventListener) {
       window.addEventListener('resize', this._onWindowResized)
     } else {
@@ -221,9 +183,9 @@ export default {
   methods: {
     _initialize () {
       const slideCount = this.children.length
-      const listWidth = this.getWidth(ReactDOM.findDOMNode(this.$els.list))
-      const trackWidth = this.getWidth(ReactDOM.findDOMNode(this.$refs.track))
-      const slideWidth = this.getWidth(ReactDOM.findDOMNode(this))/this.slidesToShow
+      const listWidth = this._getWidth(this.$els.list)
+      const trackWidth = this._getWidth(this.$refs.track.$el)
+      const slideWidth = this._getWidth(this.$el)/this.slidesToShow
 
       const currentSlide = this.rtl ? slideCount - 1 - this.initialSlide : this.initialSlide
 
@@ -241,7 +203,7 @@ export default {
       const trackStyle = getTrackCSS(Object.assign({left: targetLeft}, this))
 
       this.trackStyle = trackStyle
-      this.autoPlay() // once we're set up, trigger the initial autoplay.
+      this._autoPlay() // once we're set up, trigger the initial autoplay.
     },
 
     _getWidth (elem) {
@@ -290,18 +252,18 @@ export default {
           if (this.afterChange) {
             this.afterChange(currentSlide)
           }
-          removeEndEventListener(this.$refs.track.children[currentSlide], callback)
+          removeEndEventListener(this.$refs.track.$el.children[currentSlide], callback)
         }
 
         this.animating = true
         this.currentSlide = targetSlide
-          addEndEventListener(this.$refs.track.children[currentSlide], callback)
+          addEndEventListener(this.$refs.track.$el.children[currentSlide], callback)
 
         if (this.beforeChange) {
           this.beforeChange(this.currentSlide, currentSlide)
         }
 
-        this.autoPlay()
+        this._autoPlay()
         return
       }
 
@@ -386,16 +348,16 @@ export default {
           if (this.afterChange) {
             this.afterChange(currentSlide);
           }
-          removeEndEventListener(this.$refs.track, callback);
+          removeEndEventListener(this.$refs.track.$el, callback);
         };
 
         this.animating = true
         this.currentSlide = targetSlide,
         this.trackStyle = getTrackAnimateCSS(Object.assign({left: targetLeft}, this.$data))
-        addEndEventListener(ReactDOM.findDOMNode(this.refs.track), callback)
+        addEndEventListener(this.$refs.track.$el, callback)
       }
 
-      this.autoPlay()
+      this._autoPlay()
     },
 
     _swipeDirection (touchObject) {
@@ -422,7 +384,7 @@ export default {
     _autoPlay () {
       const play = () => {
         if (this.mounted) {
-          this.slideHandler(this.currentSlide + this.slidesToScroll)
+          this._slideHandler(this.currentSlide + this.slidesToScroll)
         }
       }
       if (this.autoplay) {
@@ -529,7 +491,7 @@ export default {
 
       var currentSlide = this.currentSlide
       var dotCount = Math.ceil(this.slideCount / this.slidesToScroll)
-      var swipeDirection = this.swipeDirection(this.touchObject)
+      var swipeDirection = this._swipeDirection(this.touchObject)
       var touchSwipeLength = touchObject.swipeLength
 
       if (this.infinite === false) {
@@ -584,11 +546,11 @@ export default {
       if (touchObject.swipeLength > minSwipe) {
         e.preventDefault()
         if (swipeDirection === 'left') {
-          this.slideHandler(this.currentSlide + this.slidesToScroll)
+          this._slideHandler(this.currentSlide + this.slidesToScroll)
         } else if (swipeDirection === 'right') {
-          this.slideHandler(this.currentSlide - this.slidesToScroll)
+          this._slideHandler(this.currentSlide - this.slidesToScroll)
         } else {
-          this.slideHandler(this.currentSlide)
+          this._slideHandler(this.currentSlide)
         }
       } else {
         // Adjust the track back to it's original position.
