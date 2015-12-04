@@ -3,14 +3,14 @@
   <div
     v-el:list
     class="slick-list"
-    @mousedown="swipeStart"
-    @mousemove="swipeMove"
-    @mouseup="swipeEnd"
-    @mouseleave="swipeEnd"
-    @touchstart="swipeStart"
-    @touchmove="swipeMove"
-    @touchend="swipeEnd"
-    @touchcancel="swipeEnd">
+    @mousedown="_swipeStart"
+    @mousemove="_swipeMove"
+    @mouseup="_swipeEnd"
+    @mouseleave="_swipeEnd"
+    @touchstart="_swipeStart"
+    @touchmove="_swipeMove"
+    @touchend="_swipeEnd"
+    @touchcancel="_swipeEnd">
     <track v-rel:track
       :fade="fade"
       :css-ease="cssEase"
@@ -236,7 +236,7 @@ export default {
       const targetLeft = getTrackLeft(Object.assign({
         slideIndex: this.currentSlide,
         trackRef: this.$refs.track
-      }, this))
+      }, this.$data))
       // getCSS function needs previously set state
       const trackStyle = getTrackCSS(Object.assign({left: targetLeft}, this))
 
@@ -290,18 +290,15 @@ export default {
           if (this.afterChange) {
             this.afterChange(currentSlide)
           }
-          removeEndEventListener(ReactDOM.findDOMNode(this.refs.track).children[currentSlide], callback)
+          removeEndEventListener(this.$refs.track.children[currentSlide], callback)
         }
 
-        this.setState({
-          animating: true,
-          currentSlide: targetSlide
-        }, function () {
-          addEndEventListener(ReactDOM.findDOMNode(this.refs.track).children[currentSlide], callback)
-        });
+        this.animating = true
+        this.currentSlide = targetSlide
+          addEndEventListener(this.$refs.track.children[currentSlide], callback)
 
         if (this.beforeChange) {
-          this.beforeChange(this.state.currentSlide, currentSlide)
+          this.beforeChange(this.currentSlide, currentSlide)
         }
 
         this.autoPlay()
@@ -310,56 +307,54 @@ export default {
 
       targetSlide = index;
       if (targetSlide < 0) {
-        if(this.props.infinite === false) {
+        if(this.infinite === false) {
           currentSlide = 0;
-        } else if (this.state.slideCount % this.props.slidesToScroll !== 0) {
-          currentSlide = this.state.slideCount - (this.state.slideCount % this.props.slidesToScroll);
+        } else if (this.slideCount % this.slidesToScroll !== 0) {
+          currentSlide = this.slideCount - (this.slideCount % this.slidesToScroll);
         } else {
-          currentSlide = this.state.slideCount + targetSlide;
+          currentSlide = this.slideCount + targetSlide;
         }
-      } else if (targetSlide >= this.state.slideCount) {
-        if(this.props.infinite === false) {
-          currentSlide = this.state.slideCount - this.props.slidesToShow;
-        } else if (this.state.slideCount % this.props.slidesToScroll !== 0) {
+      } else if (targetSlide >= this.slideCount) {
+        if(this.infinite === false) {
+          currentSlide = this.slideCount - this.slidesToShow;
+        } else if (this.slideCount % this.slidesToScroll !== 0) {
           currentSlide = 0;
         } else {
-          currentSlide = targetSlide - this.state.slideCount;
+          currentSlide = targetSlide - this.slideCount;
         }
       } else {
         currentSlide = targetSlide;
       }
 
-      targetLeft = getTrackLeft(assign({
+      targetLeft = getTrackLeft(Object.assign({
         slideIndex: targetSlide,
-        trackRef: this.refs.track
-      }, this.props, this.state));
+        trackRef: this.$refs.track
+      }, this.$data));
 
-      currentLeft = getTrackLeft(assign({
+      currentLeft = getTrackLeft(Object.assign({
         slideIndex: currentSlide,
-        trackRef: this.refs.track
-      }, this.props, this.state));
+        trackRef: this.$refs.track
+      }, this.$data));
 
-      if (this.props.infinite === false) {
+      if (this.infinite === false) {
         targetLeft = currentLeft;
       }
 
-      if (this.props.beforeChange) {
-        this.props.beforeChange(this.state.currentSlide, currentSlide);
+      if (this.beforeChange) {
+        this.beforeChange(this.currentSlide, currentSlide);
       }
 
-      if (this.props.lazyLoad) {
+      if (this.lazyLoad) {
         var loaded = true;
         var slidesToLoad = [];
-        for (var i = targetSlide; i < targetSlide + this.props.slidesToShow; i++ ) {
-          loaded = loaded && (this.state.lazyLoadedList.indexOf(i) >= 0);
+        for (var i = targetSlide; i < targetSlide + this.slidesToShow; i++ ) {
+          loaded = loaded && (this.lazyLoadedList.indexOf(i) >= 0);
           if (!loaded) {
             slidesToLoad.push(i);
           }
         }
         if (!loaded) {
-          this.setState({
-            lazyLoadedList: this.state.lazyLoadedList.concat(slidesToLoad)
-          });
+          this.lazyLoadedList = this.lazyLoadedList.concat(slidesToLoad)
         }
       }
 
@@ -368,45 +363,72 @@ export default {
       // non - animated transition happens to current Slide
       // If CSS transitions are false, directly go the current slide.
 
-      if (this.props.useCSS === false) {
-
-        this.setState({
-          currentSlide: currentSlide,
-          trackStyle: getTrackCSS(assign({left: currentLeft}, this.props, this.state))
-        }, function () {
-          if (this.props.afterChange) {
-            this.props.afterChange(currentSlide);
-          }
-        });
-
+      if (this.useCSS === false) {
+        this.currentSlide = currentSlide
+        this.trackStyle = getTrackCSS(Object.assign({left: currentLeft}, this.$data))
+        if (this.afterChange) {
+          this.afterChange(currentSlide);
+        }
       } else {
 
         var nextStateChanges = {
           animating: false,
           currentSlide: currentSlide,
-          trackStyle: getTrackCSS(assign({left: currentLeft}, this.props, this.state)),
+          trackStyle: getTrackCSS(Object.assign({left: currentLeft}, this.$data)),
           swipeLeft: null
         };
 
         callback = () => {
-          this.setState(nextStateChanges);
-          if (this.props.afterChange) {
-            this.props.afterChange(currentSlide);
+          this.animating = nextStateChanges.animating
+          this.currentSlide = nextStateChanges.currentSlide
+          this.trackStyle = nextStateChanges.trackStyle
+          this.swipeLeft = nextStateChanges.swipeLeft
+          if (this.afterChange) {
+            this.afterChange(currentSlide);
           }
-          ReactTransitionEvents.removeEndEventListener(ReactDOM.findDOMNode(this.refs.track), callback);
+          removeEndEventListener(this.$refs.track, callback);
         };
 
-        this.setState({
-          animating: true,
-          currentSlide: targetSlide,
-          trackStyle: getTrackAnimateCSS(assign({left: targetLeft}, this.props, this.state))
-        }, function () {
-          ReactTransitionEvents.addEndEventListener(ReactDOM.findDOMNode(this.refs.track), callback);
-        });
-
+        this.animating = true
+        this.currentSlide = targetSlide,
+        this.trackStyle = getTrackAnimateCSS(Object.assign({left: targetLeft}, this.$data))
+        addEndEventListener(ReactDOM.findDOMNode(this.refs.track), callback)
       }
 
-      this.autoPlay();
+      this.autoPlay()
+    },
+
+    _swipeDirection (touchObject) {
+      let xDist, yDist, r, swipeAngle
+
+      xDist = touchObject.startX - touchObject.curX
+      yDist = touchObject.startY - touchObject.curY
+      r = Math.atan2(yDist, xDist)
+
+      swipeAngle = Math.round(r * 180 / Math.PI)
+      if (swipeAngle < 0) {
+          swipeAngle = 360 - Math.abs(swipeAngle)
+      }
+      if ((swipeAngle <= 45) && (swipeAngle >= 0) || (swipeAngle <= 360) && (swipeAngle >= 315)) {
+          return left
+      }
+      if ((swipeAngle >= 135) && (swipeAngle <= 225)) {
+          return right
+      }
+
+      return 'vertical'
+    },
+
+    _autoPlay () {
+      const play = () => {
+        if (this.mounted) {
+          this.slideHandler(this.currentSlide + this.slidesToScroll)
+        }
+      }
+      if (this.autoplay) {
+        window.clearTimeout(this.autoPlayTimer)
+        this.autoPlayTimer = window.setTimeout(play, this.autoplaySpeed)
+      }
     },
 
     _clickHandler (options, e) {
@@ -439,6 +461,144 @@ export default {
 
     _onWindowResized (e) {
 
+    },
+
+    _changeSlide (options) {
+      let indexOffset, slideOffset, unevenOffset, targetSlide
+      unevenOffset = (this.slideCount % this.slidesToScroll !== 0)
+      indexOffset = unevenOffset ? 0 : (this.slideCount - this.currentSlide) % this.slidesToScroll
+
+      if (options.message === 'previous') {
+        slideOffset = (indexOffset === 0) ? this.slidesToScroll : this.slidesToShow - indexOffset
+        targetSlide = this.currentSlide - slideOffset
+      } else if (options.message === 'next') {
+        slideOffset = (indexOffset === 0) ? this.slidesToScroll : indexOffset
+        targetSlide = this.currentSlide + slideOffset
+      } else if (options.message === 'dots') {
+        // Click on dots
+        targetSlide = options.index * options.slidesToScroll
+        if (targetSlide === options.currentSlide) {
+          return
+        }
+      }
+
+      this._slideHandler(targetSlide)
+    },
+
+    _swipeStart (e) {
+      let touches, posX, posY
+
+      if ((this.swipe === false) || ('ontouchend' in document && this.swipe === false)) {
+        return
+      } else if (this.draggable === false && e.type.indexOf('mouse') !== -1) {
+        return
+      }
+      posX = (e.touches !== undefined) ? e.touches[0].pageX : e.clientX
+      posY = (e.touches !== undefined) ? e.touches[0].pageY : e.clientY
+
+      this.dragging = true
+      this.touchObject = {
+        startX: posX,
+        startY: posY,
+        curX: posX,
+        curY: posY
+      }
+    },
+
+    _swipeMove (e) {
+      if (!this.dragging) {
+        return
+      }
+      if (this.animating) {
+        return
+      }
+      let swipeLeft
+      let curLeft, positionOffset
+      const touchObject = this.touchObject
+
+      curLeft = getTrackLeft(Object.assign({
+        slideIndex: this.currentSlide,
+        trackRef: this.$refs.track
+      }, this.$data))
+
+      touchObject.curX = (e.touches) ? e.touches[0].pageX : e.clientX
+      touchObject.curY = (e.touches) ? e.touches[0].pageY : e.clientY
+      touchObject.swipeLength = Math.round(Math.sqrt(Math.pow(touchObject.curX - touchObject.startX, 2)))
+
+      positionOffset = -1 * (touchObject.curX > touchObject.startX ? 1 : -1)
+
+      var currentSlide = this.currentSlide
+      var dotCount = Math.ceil(this.slideCount / this.slidesToScroll)
+      var swipeDirection = this.swipeDirection(this.touchObject)
+      var touchSwipeLength = touchObject.swipeLength
+
+      if (this.infinite === false) {
+        if ((currentSlide === 0 &&
+          swipeDirection === 'right') ||
+          (currentSlide + 1 >= dotCount && swipeDirection === 'left')) {
+          touchSwipeLength = touchObject.swipeLength * this.edgeFriction
+
+          if (this.edgeDragged === false && this.edgeEvent) {
+            this.edgeEvent(swipeDirection)
+            this.edgeDragged = true
+          }
+        }
+      }
+
+      if (this.swiped === false && this.swipeEvent) {
+        this.swipeEvent(swipeDirection)
+        this.swiped = true
+      }
+
+      swipeLeft = curLeft + touchSwipeLength * positionOffset
+      this.touchObject = touchObject
+      this.swipeLeft = swipeLeft
+      this.trackStyle = getTrackCSS(Object.assign({left: swipeLeft}, this.$data))
+
+      if (Math.abs(touchObject.curX - touchObject.startX) < Math.abs(touchObject.curY - touchObject.startY) * 0.8){
+        return
+      }
+      if (touchObject.swipeLength > 4) {
+        e.preventDefault()
+      }
+    },
+
+    _swipeEnd (e) {
+      if (!this.dragging) {
+        return
+      }
+      const touchObject = this.touchObject
+      const minSwipe = this.listWidth/this.touchThreshold
+      const swipeDirection = this.swipeDirection(touchObject)
+
+      // reset the state of touch related state variables.
+      this.dragging = false
+      this.edgeDragged = false
+      this.swiped = false
+      this.swipeLeft = null
+      this.touchObject = {}
+      // Fix for #13
+      if (!touchObject.swipeLength) {
+        return
+      }
+      if (touchObject.swipeLength > minSwipe) {
+        e.preventDefault()
+        if (swipeDirection === 'left') {
+          this.slideHandler(this.currentSlide + this.slidesToScroll)
+        } else if (swipeDirection === 'right') {
+          this.slideHandler(this.currentSlide - this.slidesToScroll)
+        } else {
+          this.slideHandler(this.currentSlide)
+        }
+      } else {
+        // Adjust the track back to it's original position.
+        var currentLeft = getTrackLeft(Object.assign({
+          slideIndex: this.state.currentSlide,
+          trackRef: this.$refs.track
+        }, this.$data))
+
+        this.trackStyle = getTrackAnimateCSS(Object.assign({left: currentLeft}, this.$data))
+      }
     }
   }
 }
