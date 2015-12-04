@@ -10,3 +10,12 @@ const toUpper = function (_, c) {
 export function camelize (str) {
   return str.replace(camelizeRE, toUpper)
 }
+
+export function strToObj (str) {
+  const strArr = str.split(' ')
+  const obj = {}
+  strArr.forEach(item => {
+    obj[item] = 1
+  })
+  return obj
+}

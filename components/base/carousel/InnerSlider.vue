@@ -531,7 +531,7 @@ export default {
       }
       const touchObject = this.touchObject
       const minSwipe = this.listWidth/this.touchThreshold
-      const swipeDirection = this.swipeDirection(touchObject)
+      const swipeDirection = this._swipeDirection(touchObject)
 
       // reset the state of touch related state variables.
       this.dragging = false

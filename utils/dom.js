@@ -12,7 +12,8 @@ const setClass = isIE9
 
 export function addClass (el, cls) {
   if (el.classList) {
-    el.classList.add(cls)
+    const clsArr = cls.split(' ')
+    clsArr.map(cl => el.classList.add(cl))
   } else {
     var cur = ' ' + (el.getAttribute('class') || '') + ' '
     if (cur.indexOf(' ' + cls + ' ') < 0) {

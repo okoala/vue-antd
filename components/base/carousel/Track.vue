@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { cx, addStyle, addClass, insertBefore, insertAfter } from '../../../utils'
+import { cx, addStyle, addClass, insertBefore, insertAfter, strToObj } from '../../../utils'
 
 const getSlideClasses = function (spec) {
   let slickActive, slickCenter, slickCloned
@@ -40,12 +40,12 @@ const getSlideStyle = function (spec) {
   let style = {}
 
   if (spec.variableWidth === undefined || spec.variableWidth === false) {
-    style.width = spec.slideWidth
+    style.width = spec.slideWidth + 'px'
   }
 
   if (spec.fade) {
     style.position = 'relative'
-    style.left = -spec.index * spec.slideWidth
+    style.left = -spec.index * spec.slideWidth + 'px'
     style.opacity = (spec.currentSlide === spec.index) ? 1 : 0
     style.transition = 'opacity ' + spec.speed + 'ms ' + spec.cssEase
     style.WebkitTransition = 'opacity ' + spec.speed + 'ms ' + spec.cssEase
@@ -55,20 +55,30 @@ const getSlideStyle = function (spec) {
 }
 
 export default {
-  data () {
-    return {}
-  },
+  props: [
+    'fade', 'cssEase', 'speed', 'infinite', 'centerMode',
+    'currentSlide', 'lazyLoad', 'lazyLoadedList',
+    'slideWidth', 'slidesToShow', 'slideCount', 'trackStyle', 'variableWidth'
+  ],
+
   ready () {
     this.children = this.$el.children
     this.preClone = this.children[0].cloneNode(true)
     this.postClone = this.children[this.children.length - 1].cloneNode(true)
 
-    // this._mapPropsToChild()
+    this._mapPropsToChild()
+
+    Object.keys(this.$data).map(item => {
+      this.$watch(item, this._mapPropsToChild)
+    })
   },
 
   methods: {
     _mapPropsToChild () {
-      [...this.children].forEach((el, index) => {
+      let key
+      const count = this.children.length
+
+      ;[...this.children].forEach((el, index) => {
         let child
 
         if (!this.lazyLoad | (this.lazyLoad && this.lazyLoadedList.indexOf(index) >= 0)) {
@@ -76,12 +86,12 @@ export default {
         } else {
           child = document.createElement('div')
         }
-        const childStyle = getSlideStyle(Object.assign({}, this, {index: index}))
-        const slickClasses = getSlideClasses(Object.assign({index: index}, this))
+        const childStyle = getSlideStyle(Object.assign({}, this.$data, {index: index}))
+        const slickClasses = getSlideClasses(Object.assign({index: index}, this.$data))
         let cssClasses
 
-        if (child.classList) {
-          cssClasses = cx(slickClasses, child.classList)
+        if (child.className) {
+          cssClasses = cx(slickClasses, strToObj(child.className))
         } else {
           cssClasses = slickClasses
         }
