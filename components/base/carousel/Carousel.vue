@@ -7,7 +7,7 @@
 
 <script>
 import { defaultProps } from '../../../utils'
-import { InnerSlider } from './InnerSlider.vue'
+import InnerSlider from './InnerSlider.vue'
 import json2mq from 'json2mq'
 import ResponsiveMixins from './mixins/responsive'
 
