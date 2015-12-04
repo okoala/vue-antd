@@ -1,5 +1,5 @@
 import { isIE9 } from './env'
-import { camelize } from 'lang'
+import { camelize } from './lang'
 
 const setClass = isIE9
   ? function (el, cls) {
@@ -27,7 +27,6 @@ export function addStyle (el, clsObj) {
   })
 }
 
-
 /**
  * Insert el before target
  *
@@ -48,7 +47,7 @@ export function insertBefore (el, target) {
 
 export function insertAfter (el, target) {
   if (target.nextSibling) {
-    before(el, target.nextSibling)
+    insertBefore(el, target.nextSibling)
   } else {
     target.parentNode.appendChild(el)
   }

@@ -19,13 +19,13 @@ const EVENT_NAME_MAP = {
     OAnimation: 'oAnimationEnd',
     msAnimation: 'MSAnimationEnd'
   }
-};
+}
 
 let endEvents = []
 
 const detectEvents = function () {
   const testEl = document.createElement('div')
-  var style = testEl.style;
+  const style = testEl.style
 
   // On some platforms, in particular some releases of Android 4.x,
   // the un-prefixed "animation" and "transition" properties are defined on the
@@ -40,9 +40,9 @@ const detectEvents = function () {
     delete EVENT_NAME_MAP.transitionend.transition
   }
 
-  for (var baseEventName in EVENT_NAME_MAP) {
-    var baseEvents = EVENT_NAME_MAP[baseEventName]
-    for (var styleName in baseEvents) {
+  for (const baseEventName in EVENT_NAME_MAP) {
+    const baseEvents = EVENT_NAME_MAP[baseEventName]
+    for (const styleName in baseEvents) {
       if (styleName in style) {
         endEvents.push(baseEvents[styleName])
         break
@@ -67,7 +67,7 @@ const removeEventListener = function (node, eventName, eventListener) {
   node.removeEventListener(eventName, eventListener, false)
 }
 
-export default addEndEventListener (node, eventListener) {
+export function addEndEventListener (node, eventListener) {
   if (endEvents.length === 0) {
     // If CSS transitions are not supported, trigger an "end animation"
     // event immediately.
@@ -79,7 +79,7 @@ export default addEndEventListener (node, eventListener) {
   })
 }
 
-export default removeEndEventListener (node, eventListener) {
+export function removeEndEventListener (node, eventListener) {
   if (endEvents.length === 0) {
     return
   }

@@ -12,11 +12,11 @@ export function getTrackCSS (spec) {
   let trackWidth
 
   if (spec.variableWidth) {
-    trackWidth = (spec.slideCount + 2*spec.slidesToShow) * spec.slideWidth
+    trackWidth = (spec.slideCount + 2 * spec.slidesToShow) * spec.slideWidth
   } else if (spec.centerMode) {
-    trackWidth = (spec.slideCount + 2*(spec.slidesToShow + 1)) * spec.slideWidth
+    trackWidth = (spec.slideCount + 2 * (spec.slidesToShow + 1)) * spec.slideWidth
   } else {
-    trackWidth = (spec.slideCount + 2*spec.slidesToShow) * spec.slideWidth
+    trackWidth = (spec.slideCount + 2 * spec.slidesToShow) * spec.slideWidth
   }
 
   let style = {
@@ -50,8 +50,8 @@ export function getTrackAnimateCSS (spec) {
 
 export function getTrackLeft (spec) {
   checkSpecKeys(spec, [
-   'slideIndex', 'trackRef', 'infinite', 'centerMode', 'slideCount', 'slidesToShow',
-   'slidesToScroll', 'slideWidth', 'listWidth', 'variableWidth'])
+    'slideIndex', 'trackRef', 'infinite', 'centerMode', 'slideCount', 'slidesToShow',
+    'slidesToScroll', 'slideWidth', 'listWidth', 'variableWidth'])
 
   let slideOffset = 0
   let targetLeft
@@ -63,21 +63,21 @@ export function getTrackLeft (spec) {
 
   if (spec.infinite) {
     if (spec.slideCount > spec.slidesToShow) {
-     slideOffset = (spec.slideWidth * spec.slidesToShow) * -1
+      slideOffset = (spec.slideWidth * spec.slidesToShow) * -1
     }
     if (spec.slideCount % spec.slidesToScroll !== 0) {
       if (spec.slideIndex + spec.slidesToScroll > spec.slideCount && spec.slideCount > spec.slidesToShow) {
-          if(spec.slideIndex > spec.slideCount) {
-            slideOffset = ((spec.slidesToShow - (spec.slideIndex - spec.slideCount)) * spec.slideWidth) * -1
-          } else {
-            slideOffset = ((spec.slideCount % spec.slidesToScroll) * spec.slideWidth) * -1
-          }
+        if (spec.slideIndex > spec.slideCount) {
+          slideOffset = ((spec.slidesToShow - (spec.slideIndex - spec.slideCount)) * spec.slideWidth) * -1
+        } else {
+          slideOffset = ((spec.slideCount % spec.slidesToScroll) * spec.slideWidth) * -1
+        }
       }
     }
   }
 
   if (spec.centerMode) {
-    if(spec.infinite) {
+    if (spec.infinite) {
       slideOffset += spec.slideWidth * Math.floor(spec.slidesToShow / 2)
     } else {
       slideOffset = spec.slideWidth * Math.floor(spec.slidesToShow / 2)
@@ -87,24 +87,24 @@ export function getTrackLeft (spec) {
   targetLeft = ((spec.slideIndex * spec.slideWidth) * -1) + slideOffset
 
   if (spec.variableWidth === true) {
-      var targetSlideIndex;
-      if(spec.slideCount <= spec.slidesToShow || spec.infinite === false) {
-          targetSlide = ReactDOM.findDOMNode(spec.trackRef).childNodes[spec.slideIndex]
+    let targetSlideIndex
+    if (spec.slideCount <= spec.slidesToShow || spec.infinite === false) {
+      targetSlide = spec.trackRef.childNodes[spec.slideIndex]
+    } else {
+      targetSlideIndex = (spec.slideIndex + spec.slidesToShow)
+      targetSlide = spec.trackRef.childNodes[targetSlideIndex]
+    }
+    targetLeft = targetSlide ? targetSlide.offsetLeft * -1 : 0
+    if (spec.centerMode === true) {
+      if (spec.infinite === false) {
+        targetSlide = spec.trackRef.children[spec.slideIndex]
       } else {
-          targetSlideIndex = (spec.slideIndex + spec.slidesToShow);
-          targetSlide = ReactDOM.findDOMNode(spec.trackRef).childNodes[targetSlideIndex]
+        targetSlide = spec.trackRef.children[(spec.slideIndex + spec.slidesToShow + 1)]
       }
-      targetLeft = targetSlide ? targetSlide.offsetLeft * -1 : 0
-      if (spec.centerMode === true) {
-          if(spec.infinite === false) {
-              targetSlide = ReactDOM.findDOMNode(spec.trackRef).children[spec.slideIndex]
-          } else {
-              targetSlide = ReactDOM.findDOMNode(spec.trackRef).children[(spec.slideIndex + spec.slidesToShow + 1)]
-          }
 
-          targetLeft = targetSlide ? targetSlide.offsetLeft * -1 : 0
-          targetLeft += (spec.listWidth - targetSlide.offsetWidth) / 2
-      }
+      targetLeft = targetSlide ? targetSlide.offsetLeft * -1 : 0
+      targetLeft += (spec.listWidth - targetSlide.offsetWidth) / 2
+    }
   }
 
   return targetLeft
