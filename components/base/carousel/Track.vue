@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { addStyle } from '../../../utils'
+import { addStyle, addClass, insertBefore, insertAfter } from '../../../utils'
 import cx from 'classnames'
 
 const getSlideClasses = function (spec) {
@@ -57,16 +57,17 @@ const getSlideStyle = function (spec) {
 
 export default {
   ready () {
+    this.children = this.$el.children
+    this.preClone = this.children[0].cloneNode(true)
+    this.postClone = this.children[this.children.length - 1].cloneNode(true)
+
     this._mapPropsToChild()
   },
 
   methods: {
     _mapPropsToChild () {
-      const $children = this.$el.children;
-      const preClone = $children[0].cloneNode(true)
-      const postClone = $children[$children.length - 1].cloneNode(true)
 
-      [...$children].forEach((el, index) => {
+      [...this.children].forEach((el, index) => {
         if (!this.lazyLoad | (this.lazyLoad && this.lazyLoadedList.indexOf(index) >= 0)) {
           child = elem;
         } else {
@@ -84,8 +85,28 @@ export default {
 
         child.setAttribute('key', index)
         child.setAttribute('data-index', index)
-        child.setAttribute('class', cssClasses)
-        addStyle('child', childStyle)
+        addClass(child, cssClasses)
+        addStyle(child, childStyle)
+
+        if (this.infinite && this.fade === false) {
+          const infiniteCount = this.variableWidth ? this.slidesToShow + 1 : this.slidesToShow
+          if (index >= (count - infiniteCount)) {
+            key = -(count - index)
+            this.preClone.setAttribute('key', key)
+            this.preClone.setAttribute('data-index', key)
+            addClass(this.preClone, getSlideClasses(Object.assign({index: key}, this)))
+            addStyle(this.preClone, childStyle)
+            insertBefore(this.preClone, child)
+          }
+          if (index < infiniteCount) {
+            key = count + index
+            this.postClone.setAttribute('key', key)
+            this.postClone.setAttribute('data-index', key)
+            addClass(this.postClone, getSlideClasses(Object.assign({index: key}, this)))
+            addStyle(this.postClone, childStyle)
+            insertAfter(this.postClone, child)
+          }
+        }
       })
     }
   }
