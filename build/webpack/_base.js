@@ -1,7 +1,6 @@
 var vue = require('vue-loader')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var path = require('path')
 
@@ -14,11 +13,6 @@ module.exports = {
     filename: '[name].js'
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"development"'
-      }
-    }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
     new ExtractTextPlugin('[name].css'),
@@ -29,10 +23,7 @@ module.exports = {
       filename : 'index.html',
       minify   : false,
       inject   : 'body'
-    }),
-    new BrowserSyncPlugin({
-      proxy: 'localhost:8002'
-    }),
+    })
   ],
   resolve: {
     root: path.resolve('./'),
