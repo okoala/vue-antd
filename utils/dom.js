@@ -1,4 +1,5 @@
 import { isIE9 } from './env'
+import { camelize } from 'lang'
 
 const setClass = isIE9
   ? function (el, cls) {
@@ -22,7 +23,7 @@ export function addClass (el, cls) {
 
 export function addStyle (el, clsObj) {
   Object.keys(clsObj).forEach(name => {
-    el.style[]
+    el.style[camelize(name)] = clsObj[name]
   })
 }
 

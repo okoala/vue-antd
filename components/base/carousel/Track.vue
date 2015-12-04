@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { addStyle } from '../../../utils'
 import cx from 'classnames'
 
 const getSlideClasses = function (spec) {
@@ -56,18 +57,14 @@ const getSlideStyle = function (spec) {
 
 export default {
   ready () {
-    this._mapPropsToChildComponent()
+    this._mapPropsToChild()
   },
 
   methods: {
-    _mapPropsToChildComponent () {
-      let key
-      let slides = []
-      let preCloneSlides = []
-      let postCloneSlides = []
-      let child
-
+    _mapPropsToChild () {
       const $children = this.$el.children;
+      const preClone = $children[0].cloneNode(true)
+      const postClone = $children[$children.length - 1].cloneNode(true)
 
       [...$children].forEach((el, index) => {
         if (!this.lazyLoad | (this.lazyLoad && this.lazyLoadedList.indexOf(index) >= 0)) {
@@ -84,6 +81,11 @@ export default {
         } else {
           cssClasses = slickClasses
         }
+
+        child.setAttribute('key', index)
+        child.setAttribute('data-index', index)
+        child.setAttribute('class', cssClasses)
+        addStyle('child', childStyle)
       })
     }
   }
