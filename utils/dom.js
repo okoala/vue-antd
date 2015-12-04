@@ -27,6 +27,33 @@ export function addStyle (el, clsObj) {
   })
 }
 
+
+/**
+ * Insert el before target
+ *
+ * @param {Element} el
+ * @param {Element} target
+ */
+
+export function insertBefore (el, target) {
+  target.parentNode.insertBefore(el, target)
+}
+
+/**
+ * Insert el after target
+ *
+ * @param {Element} el
+ * @param {Element} target
+ */
+
+export function insertAfter (el, target) {
+  if (target.nextSibling) {
+    before(el, target.nextSibling)
+  } else {
+    target.parentNode.appendChild(el)
+  }
+}
+
 export function contains (root, node) {
   while (node) {
     if (node === root) {
