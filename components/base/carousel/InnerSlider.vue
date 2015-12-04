@@ -50,8 +50,7 @@
 </template>
 
 <script>
-import { defaultProps } from '../../../utils'
-import cx from 'classnames'
+import { defaultProps, cx, addEndEventListener, removeEndEventListener } from '../../../utils'
 import Track from './Track.vue'
 import { getTrackCSS, getTrackLeft, getTrackAnimateCSS } from './helpers/track'
 
@@ -128,7 +127,7 @@ export default {
       trackStyle: {},
       trackWidth: 0
     }
-  }
+  },
 
   computed: {
     wrapClasses () {
@@ -257,6 +256,157 @@ export default {
           slickList.style.height = slickList.querySelector(selector).offsetHeight + 'px';
         }
       }
+    },
+
+    _slideHandler (index) {
+      // Functionality of animateSlide and postSlide is merged into this function
+      // console.log('slideHandler', index);
+      let targetSlide, currentSlide
+      let targetLeft, currentLeft
+      let callback
+
+      if (this.currentSlide === index) {
+        return;
+      }
+
+      if (this.fade) {
+        currentSlide = this.currentSlide;
+
+        //  Shifting targetSlide back into the range
+        if (index < 0) {
+          targetSlide = index + this.slideCount;
+        } else if (index >= this.slideCount) {
+          targetSlide = index - this.slideCount;
+        } else {
+          targetSlide = index;
+        }
+
+        if (this.lazyLoad && this.lazyLoadedList.indexOf(targetSlide) < 0) {
+          this.lazyLoadedList = this.lazyLoadedList.concat(targetSlide)
+        }
+
+        callback = () => {
+          this.animating = false
+          if (this.afterChange) {
+            this.afterChange(currentSlide)
+          }
+          removeEndEventListener(ReactDOM.findDOMNode(this.refs.track).children[currentSlide], callback)
+        }
+
+        this.setState({
+          animating: true,
+          currentSlide: targetSlide
+        }, function () {
+          addEndEventListener(ReactDOM.findDOMNode(this.refs.track).children[currentSlide], callback)
+        });
+
+        if (this.beforeChange) {
+          this.beforeChange(this.state.currentSlide, currentSlide)
+        }
+
+        this.autoPlay()
+        return
+      }
+
+      targetSlide = index;
+      if (targetSlide < 0) {
+        if(this.props.infinite === false) {
+          currentSlide = 0;
+        } else if (this.state.slideCount % this.props.slidesToScroll !== 0) {
+          currentSlide = this.state.slideCount - (this.state.slideCount % this.props.slidesToScroll);
+        } else {
+          currentSlide = this.state.slideCount + targetSlide;
+        }
+      } else if (targetSlide >= this.state.slideCount) {
+        if(this.props.infinite === false) {
+          currentSlide = this.state.slideCount - this.props.slidesToShow;
+        } else if (this.state.slideCount % this.props.slidesToScroll !== 0) {
+          currentSlide = 0;
+        } else {
+          currentSlide = targetSlide - this.state.slideCount;
+        }
+      } else {
+        currentSlide = targetSlide;
+      }
+
+      targetLeft = getTrackLeft(assign({
+        slideIndex: targetSlide,
+        trackRef: this.refs.track
+      }, this.props, this.state));
+
+      currentLeft = getTrackLeft(assign({
+        slideIndex: currentSlide,
+        trackRef: this.refs.track
+      }, this.props, this.state));
+
+      if (this.props.infinite === false) {
+        targetLeft = currentLeft;
+      }
+
+      if (this.props.beforeChange) {
+        this.props.beforeChange(this.state.currentSlide, currentSlide);
+      }
+
+      if (this.props.lazyLoad) {
+        var loaded = true;
+        var slidesToLoad = [];
+        for (var i = targetSlide; i < targetSlide + this.props.slidesToShow; i++ ) {
+          loaded = loaded && (this.state.lazyLoadedList.indexOf(i) >= 0);
+          if (!loaded) {
+            slidesToLoad.push(i);
+          }
+        }
+        if (!loaded) {
+          this.setState({
+            lazyLoadedList: this.state.lazyLoadedList.concat(slidesToLoad)
+          });
+        }
+      }
+
+      // Slide Transition happens here.
+      // animated transition happens to target Slide and
+      // non - animated transition happens to current Slide
+      // If CSS transitions are false, directly go the current slide.
+
+      if (this.props.useCSS === false) {
+
+        this.setState({
+          currentSlide: currentSlide,
+          trackStyle: getTrackCSS(assign({left: currentLeft}, this.props, this.state))
+        }, function () {
+          if (this.props.afterChange) {
+            this.props.afterChange(currentSlide);
+          }
+        });
+
+      } else {
+
+        var nextStateChanges = {
+          animating: false,
+          currentSlide: currentSlide,
+          trackStyle: getTrackCSS(assign({left: currentLeft}, this.props, this.state)),
+          swipeLeft: null
+        };
+
+        callback = () => {
+          this.setState(nextStateChanges);
+          if (this.props.afterChange) {
+            this.props.afterChange(currentSlide);
+          }
+          ReactTransitionEvents.removeEndEventListener(ReactDOM.findDOMNode(this.refs.track), callback);
+        };
+
+        this.setState({
+          animating: true,
+          currentSlide: targetSlide,
+          trackStyle: getTrackAnimateCSS(assign({left: targetLeft}, this.props, this.state))
+        }, function () {
+          ReactTransitionEvents.addEndEventListener(ReactDOM.findDOMNode(this.refs.track), callback);
+        });
+
+      }
+
+      this.autoPlay();
     },
 
     _clickHandler (options, e) {

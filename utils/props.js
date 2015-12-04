@@ -7,7 +7,7 @@ export function defaultProps (props) {
       let defaultValue = props[i]
 
       // 支持String， Number等类型
-      if (defaultValue.name && window[defaultValue.name] === defaultValue) {
+      if (defaultValue && defaultValue.name && window[defaultValue.name] === defaultValue) {
         props[i] = {
           type: defaultValue,
           default: null
