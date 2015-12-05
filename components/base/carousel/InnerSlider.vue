@@ -488,7 +488,7 @@ export default {
       touchObject.curY = (e.touches) ? e.touches[0].pageY : e.clientY
       touchObject.swipeLength = Math.round(Math.sqrt(Math.pow(touchObject.curX - touchObject.startX, 2)))
 
-      positionOffset = -1 * (touchObject.curX > touchObject.startX ? 1 : -1)
+      positionOffset = touchObject.curX > touchObject.startX ? 1 : -1
 
       var currentSlide = this.currentSlide
       var dotCount = Math.ceil(this.slideCount / this.slidesToScroll)

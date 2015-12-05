@@ -22,6 +22,22 @@ export function addClass (el, cls) {
   }
 }
 
+export function removeClass (el, cls) {
+  if (el.classList) {
+    el.classList.remove(cls)
+  } else {
+    var cur = ' ' + (el.getAttribute('class') || '') + ' '
+    var tar = ' ' + cls + ' '
+    while (cur.indexOf(tar) >= 0) {
+      cur = cur.replace(tar, ' ')
+    }
+    setClass(el, cur.trim())
+  }
+  if (!el.className) {
+    el.removeAttribute('class')
+  }
+}
+
 export function addStyle (el, clsObj) {
   Object.keys(clsObj).forEach(name => {
     el.style[camelize(name)] = clsObj[name]

@@ -15,7 +15,7 @@
 
 <demo>
   <example title="基本">
-    <v-carousel :after-change="onChange">
+    <v-carousel :after-change="onChange" :autoplay="false">
       <div><h3>1</h3></div>
       <div><h3>2</h3></div>
       <div><h3>3</h3></div>

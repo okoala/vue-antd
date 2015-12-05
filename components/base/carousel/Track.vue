@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { cx, addStyle, addClass, insertBefore, insertAfter, strToObj } from '../../../utils'
+import { cx, addStyle, addClass, removeClass, insertBefore, insertAfter, strToObj } from '../../../utils'
 
 const getSlideClasses = function (spec) {
   let slickActive, slickCenter, slickCloned
@@ -95,8 +95,10 @@ export default {
         const slickClasses = getSlideClasses(Object.assign({index: index}, this.$data))
         let cssClasses
 
+        removeClass(child, 'slick-active')
+
         if (child.className) {
-          cssClasses = cx(slickClasses, strToObj(child.className))
+          cssClasses = cx(Object.assign(strToObj(slickClasses), strToObj(child.className)))
         } else {
           cssClasses = slickClasses
         }
@@ -110,6 +112,7 @@ export default {
       if (this.infinite && this.fade === false) {
         const infiniteCount = this.variableWidth ? this.slidesToShow + 1 : this.slidesToShow
         ;(function() {
+          removeClass(this.preClone, 'slick-active')
           const child = this.children[this.slideCount - 1]
           const key = this.slideCount
           this.preClone.setAttribute('key', key)
@@ -124,6 +127,7 @@ export default {
           }
         }.bind(this))()
         ;(function() {
+          removeClass(this.postClone, 'slick-active')
           const child = this.children[0]
           const key = -1
           this.postClone.setAttribute('key', key)
