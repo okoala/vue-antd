@@ -15,7 +15,23 @@
 
 <demo>
   <example title="基本">
-    <v-carousel :after-change="onChange" :autoplay="false">
+    <v-carousel :after-change="onChange">
+      <div><h3>1</h3></div>
+      <div><h3>2</h3></div>
+      <div><h3>3</h3></div>
+      <div><h3>4</h3></div>
+    </v-carousel>
+  </example>
+  <example title="垂直">
+    <v-carousel :vertical="true">
+      <div><h3>1</h3></div>
+      <div><h3>2</h3></div>
+      <div><h3>3</h3></div>
+      <div><h3>4</h3></div>
+    </v-carousel>
+  </example>
+  <example title="渐显">
+    <v-carousel effect="fade">
       <div><h3>1</h3></div>
       <div><h3>2</h3></div>
       <div><h3>3</h3></div>
@@ -61,6 +77,7 @@ export default {
   background: #71B5DE;
   color: #fff;
   overflow: hidden;
+  margin: 0;
 }
 #components-carousel-demo-vertical .ant-carousel {
   margin-right: 35px;

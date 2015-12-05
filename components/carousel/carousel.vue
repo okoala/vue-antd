@@ -46,7 +46,7 @@ export default {
     draggable: true,
     vertical: false,
     easing: 'linear',
-    autoplay: true,
+    autoplay: false,
     beforeChange() {},
     afterChange() {}
   }),
@@ -55,11 +55,12 @@ export default {
 
   watch: {
     effect (value) {
-      if (value === 'fade') {
-        this.fade = true
-        this.draggable = false
-      }
+      this._setEffect()
     }
+  },
+
+  compiled () {
+    this._setEffect()
   },
 
   computed: {
@@ -68,6 +69,15 @@ export default {
         [`${this.prefixCls}`]: 1,
         [`${this.prefixCls}-vertical`]: this.vertical
       })
+    }
+  },
+
+  methods: {
+    _setEffect () {
+      if (this.effect === 'fade') {
+        this.fade = true
+        this.draggable = false
+      }
     }
   }
 }
