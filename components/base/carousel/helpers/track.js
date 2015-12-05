@@ -12,11 +12,11 @@ export function getTrackCSS (spec) {
   let trackWidth
 
   if (spec.variableWidth) {
-    trackWidth = (spec.slideCount + 2 * spec.slidesToShow) * spec.slideWidth
+    trackWidth = (spec.slideCount + 2 * spec.slidesToShow) * spec.slideWidth + 'px'
   } else if (spec.centerMode) {
-    trackWidth = (spec.slideCount + 2 * (spec.slidesToShow + 1)) * spec.slideWidth
+    trackWidth = (spec.slideCount + 2 * (spec.slidesToShow + 1)) * spec.slideWidth + 'px'
   } else {
-    trackWidth = (spec.slideCount + 2 * spec.slidesToShow) * spec.slideWidth
+    trackWidth = (spec.slideCount + 2 * spec.slidesToShow) * spec.slideWidth + 'px'
   }
 
   let style = {

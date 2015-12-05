@@ -21,7 +21,8 @@
       :lazy-loaded-list="lazyLoadedList"
       :slide-width="slideWidth"
       :slides-to-show="slidesToShow"
-      :slide-count="slideCount"
+      :slide-count.sync="slideCount"
+      :track-style="trackStyle"
       :variable-width="variableWidth">
       <slot></slot>
     </v-track>
@@ -189,7 +190,7 @@ export default {
 
       const currentSlide = this.rtl ? slideCount - 1 - this.initialSlide : this.initialSlide
 
-      this.slideCount = slideCount
+      // this.slideCount = slideCount
       this.slideWidth = slideWidth
       this.listWidth = listWidth
       this.trackWidth = trackWidth
@@ -372,10 +373,10 @@ export default {
           swipeAngle = 360 - Math.abs(swipeAngle)
       }
       if ((swipeAngle <= 45) && (swipeAngle >= 0) || (swipeAngle <= 360) && (swipeAngle >= 315)) {
-          return left
+          return 'left'
       }
       if ((swipeAngle >= 135) && (swipeAngle <= 225)) {
-          return right
+          return 'right'
       }
 
       return 'vertical'
@@ -555,7 +556,7 @@ export default {
       } else {
         // Adjust the track back to it's original position.
         var currentLeft = getTrackLeft(Object.assign({
-          slideIndex: this.state.currentSlide,
+          slideIndex: this.currentSlide,
           trackRef: this.$refs.track
         }, this.$data))
 

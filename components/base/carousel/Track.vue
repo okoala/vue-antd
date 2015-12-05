@@ -1,5 +1,5 @@
 <template>
-<div class='slick-track'>
+<div class='slick-track' :style="trackStyle">
   <slot></slot>
 </div>
 </template>
@@ -9,13 +9,7 @@ import { cx, addStyle, addClass, insertBefore, insertAfter, strToObj } from '../
 
 const getSlideClasses = function (spec) {
   let slickActive, slickCenter, slickCloned
-  let centerOffset, index
-
-  if (spec.rtl) {
-    index = spec.slideCount - 1 - spec.index
-  } else {
-    index = spec.index
-  }
+  let centerOffset, index = spec.index
 
   slickCloned = (index < 0) || (index >= spec.slideCount)
   if (spec.centerMode) {
@@ -61,10 +55,23 @@ export default {
     'slideWidth', 'slidesToShow', 'slideCount', 'trackStyle', 'variableWidth'
   ],
 
+  data () {
+    return {
+      hasPreInit: false,
+      hasPostInit: false
+    }
+  },
+
   ready () {
-    this.children = this.$el.children
+    this.children = []
+
+    for (let i = 0; i < this.$el.children.length; i++) {
+      this.children.push(this.$el.children[i])
+    }
+
     this.preClone = this.children[0].cloneNode(true)
     this.postClone = this.children[this.children.length - 1].cloneNode(true)
+    this.slideCount = this.children.length
 
     this._mapPropsToChild()
 
@@ -75,11 +82,9 @@ export default {
 
   methods: {
     _mapPropsToChild () {
-      let key
-      const count = this.children.length
-
-      ;[...this.children].forEach((el, index) => {
+      this.children.forEach((el, index) => {
         let child
+        let key
 
         if (!this.lazyLoad | (this.lazyLoad && this.lazyLoadedList.indexOf(index) >= 0)) {
           child = el
@@ -100,27 +105,38 @@ export default {
         child.setAttribute('data-index', index)
         addClass(child, cssClasses)
         addStyle(child, childStyle)
-
-        if (this.infinite && this.fade === false) {
-          const infiniteCount = this.variableWidth ? this.slidesToShow + 1 : this.slidesToShow
-          if (index >= (count - infiniteCount)) {
-            key = -(count - index)
-            this.preClone.setAttribute('key', key)
-            this.preClone.setAttribute('data-index', key)
-            addClass(this.preClone, getSlideClasses(Object.assign({index: key}, this)))
-            addStyle(this.preClone, childStyle)
-            insertBefore(this.preClone, child)
-          }
-          if (index < infiniteCount) {
-            key = count + index
-            this.postClone.setAttribute('key', key)
-            this.postClone.setAttribute('data-index', key)
-            addClass(this.postClone, getSlideClasses(Object.assign({index: key}, this)))
-            addStyle(this.postClone, childStyle)
-            insertAfter(this.postClone, child)
-          }
-        }
       })
+
+      if (this.infinite && this.fade === false) {
+        const infiniteCount = this.variableWidth ? this.slidesToShow + 1 : this.slidesToShow
+        ;(function() {
+          const child = this.children[this.slideCount - 1]
+          const key = this.slideCount
+          this.preClone.setAttribute('key', key)
+          this.preClone.setAttribute('data-index', key)
+
+          const childStyle = getSlideStyle(Object.assign({}, this.$data, {index: this.slideCount - 1}))
+          addClass(this.preClone, getSlideClasses(Object.assign({index: key}, this)))
+          addStyle(this.preClone, childStyle)
+          if (!this.hasPreInit) {
+            insertAfter(this.preClone, child)
+            this.hasPreInit = true
+          }
+        }.bind(this))()
+        ;(function() {
+          const child = this.children[0]
+          const key = -1
+          this.postClone.setAttribute('key', key)
+          this.postClone.setAttribute('data-index', key)
+          const childStyle = getSlideStyle(Object.assign({}, this.$data, {index: 0}))
+          addClass(this.postClone, getSlideClasses(Object.assign({index: key}, this)))
+          addStyle(this.postClone, childStyle)
+          if (!this.hasPostInit) {
+            insertBefore(this.postClone, child)
+            this.hasPostInit = true
+          }
+        }.bind(this))()
+      }
     }
   }
 }

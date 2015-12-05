@@ -1,14 +1,14 @@
 import { isIE9 } from './env'
 import { camelize } from './lang'
 
-const setClass = isIE9
-  ? function (el, cls) {
-    /* istanbul ignore next */
+function setClass (el, cls) {
+  /* istanbul ignore if */
+  if (isIE9 && el.hasOwnProperty('className')) {
     el.className = cls
-  }
-  : function (el, cls) {
+  } else {
     el.setAttribute('class', cls)
   }
+}
 
 export function addClass (el, cls) {
   if (el.classList) {
