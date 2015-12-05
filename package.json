@@ -4,7 +4,7 @@
   "description": "Ant Design components built with Vue.js ",
   "main": "src/index.js",
   "scripts": {
-    "deploy": "rm -rf .temp && webpack --config build/webpack/production.js --progress --colors --display-chunks && gh-pages -d .temp",
+    "deploy": "rm -rf .temp && webpack --config build/webpack/development.js --progress --colors --display-chunks && gh-pages -d .temp",
     "start": "node docs/server.js",
     "dev": "node docs/server.js & webpack --config build/webpack/development.js --progress --colors --display-chunks --display-error-details --watch",
     "build": "webpack --config build/webpack/build.dev.js && webpack --config build/webpack/build.prod.js"

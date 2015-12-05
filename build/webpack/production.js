@@ -1,6 +1,15 @@
 var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var webpackConfig = require('./_base')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+webpackConfig.plugins.push(
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: '"production"'
+    }
+  }),
+  new ExtractTextPlugin('[name].[contenthash].css')
+)
 
 webpackConfig.output.filename = '[name].[hash].js'
 
@@ -9,18 +18,9 @@ var commonChunkPlugin = new webpack.optimize.CommonsChunkPlugin(
 )
 
 commonChunkPlugin.__KARMA_IGNORE__ = true
+webpackConfig.plugins.push(commonChunkPlugin)
+webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin())
 
-webpackConfig.plugins.push(
-  new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: '"production"'
-    }
-  }),
-  commonChunkPlugin,
-  new ExtractTextPlugin('[name].[contenthash].css'),
-  new webpack.optimize.UglifyJsPlugin()
-)
-
-webpackConfig.eslint.failOnError = true
+// webpackConfig.eslint.failOnError = true
 
 module.exports = webpackConfig
