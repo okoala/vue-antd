@@ -1,3 +1,4 @@
+<template lang="md">
 # Slider
 
 - category: Components
@@ -11,6 +12,16 @@
 ## 何时使用
 
 当用户需要在数值区间/自定义区间内进行选择时，输入值可为连续或离散值。
+
+## 组件演示
+
+<demo>
+  <example title="基本">
+    <v-slider :default-value="30"></v-slider>
+    <v-slider :range="true" :default-value="[20, 50]"></v-slider>
+    <v-slider :range="true" :default-value="[20, 50]" disabled></v-slider>
+  </example>
+</demo>
 
 ## API
 
@@ -26,3 +37,15 @@
 | index      | Number 			|            	| 为具备 `step` 或者 `marks` 的 slider 提供滑块操作的当前位置
 | defaultIndex      | Number 			| 0           	| 为具备 `step` 或者 `marks` 的 slider 提供滑块操作的初始位置
 | disabled   | Boolean 			| false         | 值为 `true` 时，滑块为 disable 禁用状态
+</template>
+
+<script>
+import vSlider from '../../components/slider'
+
+export default {
+
+  components: { vSlider }
+
+}
+
+</script>

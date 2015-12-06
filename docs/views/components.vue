@@ -120,10 +120,10 @@ export default {
             name: 'select',
             desc: '选择器'
           },
-          // {
-          //   name: 'slider',
-          //   desc: '滑动输入条'
-          // },
+          {
+            name: 'slider',
+            desc: '滑动输入条'
+          },
           {
             name: 'switch',
             desc: '开关'

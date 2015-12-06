@@ -104,6 +104,10 @@ export function configRouter (router) {
           component: require('../components/select.vue')
         },
 
+        'slider': {
+          component: require('../components/slider.vue')
+        },
+
         'switch': {
           component: require('../components/switch.vue')
         },
