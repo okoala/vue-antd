@@ -68,6 +68,10 @@ export function configRouter (router) {
           component: require('../components/message.vue')
         },
 
+        'menu': {
+          component: require('../components/menu.vue')
+        },
+
         'notification': {
           component: require('../components/notification.vue')
         },

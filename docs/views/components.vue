@@ -212,10 +212,10 @@ export default {
             name: 'breadcrumb',
             desc: '面包屑'
           },
-          // {
-          //   name: 'menu',
-          //   desc: '导航菜单'
-          // },
+          {
+            name: 'menu',
+            desc: '导航菜单'
+          },
           // {
           //   name: 'pagination',
           //   desc: '分页'
