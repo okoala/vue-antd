@@ -1,24 +1,23 @@
 <template>
 <tooltip v-if="!noTip"
+  placement="top"
   :prefix-cls="className.replace('slider-handle', 'tooltip')"
-  :placement="top"
   :visible="isTooltipVisible"
-  :delay="0"
   :transition-name="tipTransitionName">
   <span name="overlay">{{tipFormatter ? tipFormatter(value) : value}}</span>
   <div
     :class="className"
     :style="{left: offset + '%'}"
-    :@mouseup="_showTooltip"
-    :@mouseenter="_showTooltip"
-    :@mouseleave="_hideTooltip"></div>
+    @mouseup="_showTooltip"
+    @mouseenter="_showTooltip"
+    @mouseleave="_hideTooltip"></div>
 </tooltip>
 <div v-if="noTip"
   :class="className"
   :style="{left: offset + '%'}"
-  :@mouseup="_showTooltip"
-  :@mouseenter="_showTooltip"
-  :@mouseleave="_hideTooltip"></div>
+  @mouseup="_showTooltip"
+  @mouseenter="_showTooltip"
+  @mouseleave="_hideTooltip"></div>
 </template>
 
 <script>

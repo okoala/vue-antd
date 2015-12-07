@@ -1,5 +1,5 @@
 <template>
-<div :class="prefixCls + '-step"}>
+<div :class="prefixCls + '-step'">
   <span v-for="item in dotsArr" :class="item.pointClass" :style="item.style" :key="item.point"></span>
 </div>
 </template>

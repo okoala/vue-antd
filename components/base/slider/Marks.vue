@@ -15,9 +15,10 @@ import { cx } from '../../../utils'
 
 export default {
   props: ['className', 'marks', 'included', 'upperBound', 'lowerBound', 'max', 'min'],
+
   computed: {
     marksKeys () {
-      return Object.keys(marks)
+      return Object.keys(this.marks)
     },
     marksArr () {
       return this.marksKeys.map(parseFloat).map(point => {

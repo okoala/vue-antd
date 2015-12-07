@@ -4,7 +4,7 @@
   @touchstart="_onTouchStart"
   @mousedown="_onMouseDown">
   <handle
-    :class="prefixCls + '-handle'"
+    :class-name="prefixCls + '-handle'"
     :no-tip="isNoTip"
     :tip-transition-name="tipTransitionName"
     :tip-formatter="tipFormatter"
@@ -13,7 +13,7 @@
     :dragging="handle === 'upperBound'"></handle>
   <handle
     v-if="range"
-    :class="prefixCls + '-handle'"
+    :class-name="prefixCls + '-handle'"
     :no-tip="isNoTip"
     :tip-transition-name="tipTransitionName"
     :tip-formatter="tipFormatter"
@@ -58,15 +58,15 @@ import Marks from './Marks.vue'
 const isNotTouchEvent = function (e) {
   return e.touches.length > 1 ||
     (e.type.toLowerCase() === 'touchend' && e.touches.length > 0)
-},
+}
 
 const getTouchPosition = function (e) {
   return e.touches[0].pageX
-},
+}
 
 const getMousePosition = function (e) {
   return e.pageX
-},
+}
 
 const pauseEvent = function (e) {
   e.stopPropagation()
@@ -95,13 +95,22 @@ export default {
     onAfterChange () {}
   }),
 
+  data () {
+    return {
+      handle: null,
+      recent: null,
+      lowerBound: null,
+      upperBound: null
+    }
+  },
+
   components: { Track, Handle, Dots, Marks },
 
   compile () {
     const {range, min, max} = this.$data
     const initialValue = range ? [min, min] : min
     const defaultValue = this.defaultValue != null ? this.defaultValue : initialValue
-    const value = this.value != null ? this.value : defaultValue)
+    const value = this.value != null ? this.value : defaultValue
 
     let upperBound
     let lowerBound
@@ -124,7 +133,6 @@ export default {
       recent = 'upperBound'
     }
 
-    this.handle = null,
     this.recent = recent,
     this.upperBound = upperBound,
     this.lowerBound = (lowerBound || min)
@@ -190,7 +198,7 @@ export default {
 
       const position = getTouchPosition(e)
       this._onMove(e, position)
-    }
+    },
 
     _onMouseDown (e) {
       if (this.disabled) {
@@ -208,7 +216,7 @@ export default {
     },
 
     _onStart (position) {
-      this.onBeforeChange(this.getValue())
+      this.onBeforeChange(this._getValue())
 
       const value = this._calcValueByPos(position)
       this.startValue = value
@@ -240,12 +248,12 @@ export default {
       if (value === oldValue) return
 
       this._onChange(valueNeedChanging, value)
-    }
+    },
 
     _onMove (e, position) {
       pauseEvent(e)
       const diffPosition = position - this.startPosition
-      const diffValue = diffPosition / this.getSliderLength() * (this.max - this.min)
+      const diffValue = diffPosition / this._getSliderLength() * (this.max - this.min)
 
       const value = this._trimAlignValue(this.startValue + diffValue)
       const oldValue = this[this.handle]
@@ -254,16 +262,16 @@ export default {
       this._onChange(this.handle, value)
     },
 
-    addDocumentEvents (type) {
+    _addDocumentEvents (type) {
       if (type === 'touch') {
         // just work for chrome iOS Safari and Android Browser
-        this.onTouchMoveListener = addEventListener(document, 'touchmove', this.onTouchMove.bind(this));
-        this.onTouchUpListener = addEventListener(document, 'touchend', this.end.bind(this, 'touch'));
+        this.onTouchMoveListener = addEventListener(document, 'touchmove', this._onTouchMove.bind(this));
+        this.onTouchUpListener = addEventListener(document, 'touchend', this._end.bind(this, 'touch'));
       } else if (type === 'mouse') {
-        this.onMouseMoveListener = addEventListener(document, 'mousemove', this.onMouseMove.bind(this));
-        this.onMouseUpListener = addEventListener(document, 'mouseup', this.end.bind(this, 'mouse'));
+        this.onMouseMoveListener = addEventListener(document, 'mousemove', this._onMouseMove.bind(this));
+        this.onMouseUpListener = addEventListener(document, 'mouseup', this._end.bind(this, 'mouse'));
       }
-    }
+    },
 
     _removeEvents (type) {
       if (type === 'touch') {
@@ -273,7 +281,7 @@ export default {
         this.onMouseMoveListener.remove();
         this.onMouseUpListener.remove();
       }
-    }
+    },
 
     _end (type) {
       this._removeEvents(type);
@@ -337,7 +345,7 @@ export default {
       const diffs = points.map((point) => Math.abs(val - point))
       const closestPoint = points[diffs.indexOf(Math.min.apply(Math, diffs))]
 
-      return step !== null ? parseFloat(closestPoint.toFixed(this.getPrecision())) : closestPoint
+      return step !== null ? parseFloat(closestPoint.toFixed(this._getPrecision())) : closestPoint
     },
 
     _calcOffset (value) {
