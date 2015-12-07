@@ -1,8 +1,8 @@
-import Select from './Select.vue'
-import Option from './Option.vue'
-import OptGroup from './OptGroup.vue'
+import vSelect from './Select.vue'
+import vOption from './Option.vue'
+import vOptGroup from './OptGroup.vue'
 
-Select.Option = Option
-Select.OptGroup = OptGroup
+vSelect.vOption = vOption
+vSelect.vOptGroup = vOptGroup
 
-export default Select
+export default vSelect

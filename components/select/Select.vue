@@ -1,12 +1,32 @@
 <template>
-<select {..._props}>
+<v-select
+  :prefix-cls="prefixCls"
+  :transition-name="transitionName"
+  :option-label-prop="optionLabelProp"
+  :not-found-content="notFoundContent"
+  :show-search="showSearch"
+  :class-name="className"
+  :size="size"
+  :value="value"
+  :default-value="defaultValue"
+  :multiple="multiple"
+  :filter-option="filterOption"
+  :tags="tags"
+  :allow-clear="allowClear"
+  :placeholder="placeholder"
+  :search-placeholder="searchPlaceholder"
+  :option-filter-prop="optionFilterProp"
+  :combobox="combobox"
+  :on-select="onSelect"
+  :on-deselect="onDeselect"
+  :on-change="onChange">
   <slot></slot>
-</select>
+</v-select>
 </template>
 
 <script>
 import { defaultProps, oneOfType, camelcaseToHyphen } from '../../utils'
-import Select from '../base/select'
+import vSelect from '../base/select'
 
 export default {
   props: defaultProps({
@@ -28,12 +48,12 @@ export default {
     searchPlaceholder: String,
     optionFilterProp: 'value',
     combobox: false,
-    onSelect: () => {},
-    onDeselect: () => {},
-    onChange: () => {}
+    onSelect () {},
+    onDeselect () {},
+    onChange () {}
   }),
 
-  components: { Select },
+  components: { vSelect },
 
   computed: {
     wrapClassName () {

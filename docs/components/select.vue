@@ -9,17 +9,11 @@
 
 弹出一个下拉菜单给用户选择操作，用于代替原生的选择器，或者需要一个更优雅的多选器时。
 
-```html
-<v-select>
-  <v-option value="lucy">lucy</v-option>
-</v-select>
-```
-
 ## 组件演示
 
 <demo>
   <example title="">
-    <v-select defaultValue="lucy" :on-change="_handleChange" style="width: '200px'">
+    <v-select default-value="lucy" :on-change="_handleChange" :style="{width: '200px'}">
       <v-option value="jack">Jack</v-option>
       <v-option value="lucy">Lucy</v-option>
       <v-option value="disabled" disabled>Disabled</v-option>
