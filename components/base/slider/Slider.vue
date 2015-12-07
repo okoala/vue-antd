@@ -1,7 +1,8 @@
 <template>
-<div :class="sliderClasses"
-     @touchstart="_onTouchStart"
-     @mousedown="_onMouseDown">
+<div
+  :class="sliderClasses"
+  @touchstart="_onTouchStart"
+  @mousedown="_onMouseDown">
   <handle
     :class="prefixCls + '-handle'"
     :no-tip="isNoTip"
@@ -47,11 +48,30 @@
 </template>
 
 <script>
-import { defaultProps, cx, oneOfType } from '../../../utils'
+import { defaultProps, cx, oneOfType, addEventListener } from '../../../utils'
 import Track from './Track.vue'
 import Handle from './Handle.vue'
 import Dots from './Dots.vue'
 import Marks from './Marks.vue'
+
+
+const isNotTouchEvent = function (e) {
+  return e.touches.length > 1 ||
+    (e.type.toLowerCase() === 'touchend' && e.touches.length > 0)
+},
+
+const getTouchPosition = function (e) {
+  return e.touches[0].pageX
+},
+
+const getMousePosition = function (e) {
+  return e.pageX
+},
+
+const pauseEvent = function (e) {
+  e.stopPropagation()
+  e.preventDefault()
+}
 
 export default {
   props: defaultProps({
@@ -133,39 +153,115 @@ export default {
   },
 
   methods: {
-    _isNotTouchEvent (e) {
-      return e.touches.length > 1 ||
-        (e.type.toLowerCase() === 'touchend' && e.touches.length > 0)
-    },
+    _onChange (handle, value) {
+      const isNotControlled = this.value == null
+      if (isNotControlled) {
+        this.$set(handle, value)
+      }
 
-    _getTouchPosition (e) {
-      return e.touches[0].pageX
-    },
-
-    _getMousePosition (e) {
-      return e.pageX
+      const data = {
+        upperBound: this.upperBound,
+        lowerBound: this.lowerBound
+      }
+      data[handle] = value
+      const changedValue = this.range ? [data.lowerBound, data.upperBound] : data.upperBound
+      this.onChange(changedValue)
     },
 
     _onTouchStart (e) {
       if (this.disabled) {
         return
       }
+      if (isNotTouchEvent(e)) {
+        return
+      }
+
+      const position = getTouchPosition(e)
+      this._onStart(position)
+      this._addDocumentEvents('touch')
+      pauseEvent(e)
     },
+
+    _onTouchMove (e) {
+      if (isNotTouchEvent(e)) {
+        this._end('touch')
+        return
+      }
+
+      const position = getTouchPosition(e)
+      this._onMove(e, position)
+    }
 
     _onMouseDown (e) {
       if (this.disabled) {
         return
       }
+      const position = getMousePosition(e)
+      this._onStart(position)
+      this._addDocumentEvents('mouse')
+      pauseEvent(e)
+    },
+
+    _onMouseMove (e) {
+      const position = getMousePosition(e)
+      this._onMove(e, position)
+    },
+
+    _onStart (position) {
+      this.onBeforeChange(this.getValue())
+
+      const value = this._calcValueByPos(position)
+      this.startValue = value
+      this.startPosition = position
+
+      const {upperBound, lowerBound} = this
+
+      let valueNeedChanging = 'upperBound'
+      if (this.range) {
+        const isLowerBoundCloser = Math.abs(upperBound - value) > Math.abs(lowerBound - value)
+        if (isLowerBoundCloser) {
+          valueNeedChanging = 'lowerBound'
+        }
+
+        const isAtTheSamePoint = (upperBound === lowerBound)
+        if (isAtTheSamePoint) {
+          valueNeedChanging = state.recent
+        }
+
+        if (isAtTheSamePoint && (value !== upperBound)) {
+          valueNeedChanging = value < upperBound ? 'lowerBound' : 'upperBound'
+        }
+      }
+
+      this.handle = valueNeedChanging
+      this.recent = valueNeedChanging
+
+      const oldValue = this[valueNeedChanging]
+      if (value === oldValue) return
+
+      this._onChange(valueNeedChanging, value)
+    }
+
+    _onMove (e, position) {
+      pauseEvent(e)
+      const diffPosition = position - this.startPosition
+      const diffValue = diffPosition / this.getSliderLength() * (this.max - this.min)
+
+      const value = this._trimAlignValue(this.startValue + diffValue)
+      const oldValue = this[this.handle]
+      if (value === oldValue) return
+
+      this._onChange(this.handle, value)
     },
 
     addDocumentEvents (type) {
       if (type === 'touch') {
         // just work for chrome iOS Safari and Android Browser
-        this.onTouchMoveListener = DomUtils.addEventListener(document, 'touchmove', this.onTouchMove.bind(this));
-        this.onTouchUpListener = DomUtils.addEventListener(document, 'touchend', this.end.bind(this, 'touch'));
+        this.onTouchMoveListener = addEventListener(document, 'touchmove', this.onTouchMove.bind(this));
+        this.onTouchUpListener = addEventListener(document, 'touchend', this.end.bind(this, 'touch'));
       } else if (type === 'mouse') {
-        this.onMouseMoveListener = DomUtils.addEventListener(document, 'mousemove', this.onMouseMove.bind(this));
-        this.onMouseUpListener = DomUtils.addEventListener(document, 'mouseup', this.end.bind(this, 'mouse'));
+        this.onMouseMoveListener = addEventListener(document, 'mousemove', this.onMouseMove.bind(this));
+        this.onMouseUpListener = addEventListener(document, 'mouseup', this.end.bind(this, 'mouse'));
       }
     }
 
@@ -183,6 +279,83 @@ export default {
       this._removeEvents(type);
       this.onAfterChange(this._getValue())
       this.handle = null
+    },
+
+    _getValue () {
+      const {lowerBound, upperBound} = this
+      return this.range ? [lowerBound, upperBound] : upperBound
+    },
+
+    _getSliderLength () {
+      const slider = this.$el
+      if (!slider) {
+        return 0
+      }
+
+      return slider.clientWidth
+    },
+
+    _getSliderStart () {
+      const slider = this.$el
+      const rect = slider.getBoundingClientRect()
+
+      return rect.left
+    },
+
+    _getPrecision () {
+      const stepString = this.step.toString()
+      let precision = 0
+      if (stepString.indexOf('.') >= 0) {
+        precision = stepString.length - stepString.indexOf('.') - 1
+      }
+      return precision
+    },
+
+    _trimAlignValue (v) {
+      const {handle, lowerBound, upperBound, marks, step, min, max} = this
+
+      let val = v
+      if (val <= min) {
+        val = min
+      }
+      if (val >= max) {
+        val = max
+      }
+      if (handle === 'upperBound' && val <= lowerBound) {
+        val = lowerBound
+      }
+      if (handle === 'lowerBound' && val >= upperBound) {
+        val = upperBound
+      }
+
+      const points = Object.keys(marks).map(parseFloat)
+      if (step !== null) {
+        const closestStep = Math.round(val / step) * step
+        points.push(closestStep)
+      }
+
+      const diffs = points.map((point) => Math.abs(val - point))
+      const closestPoint = points[diffs.indexOf(Math.min.apply(Math, diffs))]
+
+      return step !== null ? parseFloat(closestPoint.toFixed(this.getPrecision())) : closestPoint
+    },
+
+    _calcOffset (value) {
+      const {min, max} = this
+      const ratio = (value - min) / (max - min)
+      return ratio * 100
+    },
+
+    _calcValue (offset) {
+      const {min, max} = this
+      const ratio = offset / this._getSliderLength()
+      return ratio * (max - min) + min
+    },
+
+    _calcValueByPos (position) {
+      const pixelOffset = position - this._getSliderStart()
+      const nextValue = this._trimAlignValue(this._calcValue(pixelOffset))
+      return nextValue
     }
   }
 }
