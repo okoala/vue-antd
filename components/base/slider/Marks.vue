@@ -27,7 +27,7 @@ export default {
             (this.included && point <= this.upperBound && point >= this.lowerBound)
         res.className = cx({
           [`${this.className} + '-text'`]: true,
-          [`${this.className} + '-text-active'`]: isActived,
+          [`${this.className} + '-text-active'`]: res.isActived,
         })
         res.style = {width: this.markWidth + '%', left: (point - this.min) / this.range * 100 - this.markWidth / 2 + '%'}
       })
