@@ -59,21 +59,21 @@ if (typeof window !== 'undefined') {
 // does not know how to remove event listeners and we really should
 // clean up. Also, these events are not triggered in older browsers
 // so we should be A-OK here.
-const addEventListener = function (target, eventName, eventListener) {
+export function addEventListener (target, eventName, eventListener) {
   if (target.addEventListener) {
     target.addEventListener(eventName, eventListener, false)
     return {
-      remove() {
-        target.removeEventListener(eventType, eventListener, false)
-      },
-    };
+      remove () {
+        target.removeEventListener(eventName, eventListener, false)
+      }
+    }
   } else if (target.attachEvent) {
     target.attachEvent('on' + eventName, eventListener)
     return {
-      remove() {
+      remove () {
         target.detachEvent('on' + eventName, eventListener)
-      },
-    };
+      }
+    }
   }
 }
 
