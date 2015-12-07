@@ -22,7 +22,7 @@
     :dragging="handle === 'lowerBound'"></handle>
   <track
     :class="prefixCls + '-track'"
-    :included="isIncluded"
+    :included="included"
     :offset="lowerOffset"
     :length="upperOffset - lowerOffset"></track>
   <dots
@@ -30,7 +30,7 @@
     :marks="marks"
     :dots="dots"
     :step="step"
-    :included="isIncluded"
+    :included="included"
     :lower-bound="lowerBound"
     :upper-bound="upperBound"
     :max="max"
@@ -38,7 +38,7 @@
   <marks
     :class="prefixCls + '-mark'"
     :marks="marks"
-    :included="isIncluded"
+    :included="included"
     :lower-bound="lowerBound"
     :upper-bound="upperBound"
     :max="max"
@@ -82,14 +82,14 @@ export default {
     max: 100,
     step: 1,
     value: oneOfType([Number, Array]),
-    defaultValue: oneOfType([Number, Array]),
+    defaultValue: oneOfType([Number, Array], 0),
     marks: {},
     included: true,
     disabled: false,
     dots: false,
     range: false,
     tipTransitionName: String,
-    tipFormatter () {},
+    tipFormatter: function (value) {return value},
     onBeforeChange () {},
     onChange () {},
     onAfterChange () {}
@@ -106,7 +106,7 @@ export default {
 
   components: { Track, Handle, Dots, Marks },
 
-  compile () {
+  compiled () {
     const {range, min, max} = this.$data
     const initialValue = range ? [min, min] : min
     const defaultValue = this.defaultValue != null ? this.defaultValue : initialValue
@@ -233,7 +233,7 @@ export default {
 
         const isAtTheSamePoint = (upperBound === lowerBound)
         if (isAtTheSamePoint) {
-          valueNeedChanging = state.recent
+          valueNeedChanging = this.recent
         }
 
         if (isAtTheSamePoint && (value !== upperBound)) {

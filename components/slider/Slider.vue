@@ -31,12 +31,12 @@ export default {
       type: Object,
       default () {return {}}
     },
-    defaultValue: oneOfType([Number, Array]),
+    defaultValue: oneOfType([Number, Array], 0),
     value: oneOfType([Number, Array]),
     included: true,
     disabled: false,
     onChange () {},
-    tipFormatter () {}
+    tipFormatter: function (value) {return value}
   }),
 
   components: { Slider }

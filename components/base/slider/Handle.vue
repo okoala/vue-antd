@@ -4,7 +4,7 @@
   :prefix-cls="className.replace('slider-handle', 'tooltip')"
   :visible="isTooltipVisible"
   :transition-name="tipTransitionName">
-  <span name="overlay">{{tipFormatter ? tipFormatter(value) : value}}</span>
+  <span slot="tooltip">{{tipValue}}</span>
   <div
     :class="className"
     :style="{left: offset + '%'}"
@@ -33,6 +33,12 @@ export default {
   data () {
     return {
       isTooltipVisible: false
+    }
+  },
+
+  computed: {
+    tipValue () {
+      return this.tipFormatter ? this.tipFormatter(this.value) : this.value
     }
   },
 
