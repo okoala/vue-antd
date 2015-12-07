@@ -3,8 +3,7 @@
 </template>
 
 <script>
-import { defaultProps, contains } from '../../../utils'
-import cx from 'classnames'
+import { defaultProps, cx, any, contains } from '../../../utils'
 import Align from '../align'
 import Animation from '../animate'
 import PopupInner from './PopupInner.vue'
@@ -20,6 +19,7 @@ const template = `
       :visible="visible"
       :disabled="!visible"
       :align="align"
+      :watch-props="watchProps"
       :on-align="_onAlign">
       <popup-inner
         :visible="visible"
@@ -47,6 +47,7 @@ export default {
     align: {
       default: function (){ return {} }
     },
+    watchProps: any,
     style: Object,
     className: '',
     transitionName: '',

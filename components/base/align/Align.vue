@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { defaultProps, getTrustSlotNode } from '../../../utils'
+import { defaultProps, any, getTrustSlotNode, throttle } from '../../../utils'
 import align from 'dom-align'
 
 function isWindow(obj) {
@@ -31,6 +31,7 @@ export default {
       type: Object,
       require: true
     },
+    watchProps: any,
     visible: true,
     target: () => window,
     onAlign: () => {},
@@ -56,6 +57,12 @@ export default {
       }
     },
 
+    watchProps (newVal, oldVal) {
+      if (newVal !== oldVal) {
+        this._doAlign()
+      }
+    },
+
     monitorWindowResize (val) {
       if (val && !this.disabled) {
         this._startMonitorWindowResize()
@@ -69,6 +76,10 @@ export default {
     this._stopMonitorWindowResize()
   },
 
+  compiled () {
+    this._doAlign = throttle(this.__doAlign.bind(this), 50)
+  },
+
   ready () {
     this._doAlign()
     this.resizeHandler = buffer(this._onWindowResize, this.monitorBufferTime)
@@ -78,10 +89,12 @@ export default {
     } else {
       this._stopMonitorWindowResize()
     }
+
+    this._doAlign
   },
 
   methods: {
-    _doAlign () {
+    __doAlign () {
       const target = this.target()
       if (!target) {
         return

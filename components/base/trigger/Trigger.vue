@@ -7,6 +7,7 @@
   :action="action"
   :wrap="_getTriggerTarget.bind($parent)"
   :align="_popupAlign"
+  :watch-props="watchProps"
   :animation="popupAnimation"
   :on-animation-leave="onAnimateLeave"
   :on-mouse-enter="_onMouseEnter"
@@ -19,14 +20,14 @@
 </template>
 
 <script>
-import { defaultProps, oneOfType, contains, slotMixin } from '../../../utils'
-import cx from 'classnames'
+import { defaultProps, cx, any, oneOfType, contains, slotMixin } from '../../../utils'
 import Popup from './Popup.vue'
 import { getAlignFromPlacement, getPopupClassNameFromAlign } from './utils'
 
 export default {
   props: defaultProps({
     prefixCls: 'ant-trigger-popup',
+    watchProps: any,
     popup: String,
     popupStyle: {
       default: function (){ return {} }

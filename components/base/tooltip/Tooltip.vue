@@ -4,6 +4,7 @@
   :prefix-cls="prefixCls"
   :popup="''"
   :action="trigger"
+  :watch-props="watchProps"
   :builtin-placements="placements"
   :popup-visible="visible"
   :popup-placement="placement"
@@ -46,6 +47,7 @@ export default {
     placement: 'right',
     animation: '',
     visible: false,
+    watchProps: any,
     defaultVisible: false,
     overlayClassName: '',
     overlayStyle: {

@@ -3,6 +3,7 @@
   placement="top"
   :prefix-cls="className.replace('slider-handle', 'tooltip')"
   :visible="isTooltipVisible"
+  :watch-props="offset"
   :transition-name="tipTransitionName">
   <span slot="tooltip">{{tipValue}}</span>
   <div
