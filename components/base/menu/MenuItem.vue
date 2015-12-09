@@ -6,6 +6,7 @@
   :class="wrapClasses"
   v-bind="{'aria-selected': selected, 'aria-disabled': disabled}"
   @click="_onClick"
+  @keydown="_onKeyDown"
   @mouseleave="_onMouseLeave"
   @mouseenter="_onMouseEnter">
   <slot></slot>
@@ -27,6 +28,7 @@ export default {
     mode: '',
     inlineIndent: Number,
     level: Number,
+    multiple: Boolean,
     onSelect () {},
     onClick () {},
     onDeselect () {},
@@ -58,22 +60,66 @@ export default {
     }
   },
 
+  beforeDestory () {
+    if (this.onDestory) {
+      this.onDestory(this.eventKey)
+    }
+  },
+
   methods: {
     _onClick (e) {
       if (!this.disabled) {
-        this.onClick(e)
+        const eventKey = this.eventKey
+        const info = {
+          key: eventKey,
+          keyPath: [eventKey],
+          item: this,
+          domEvent: e
+        }
+        this.onClick(info)
+        if (this.multiple) {
+          if (this.selected) {
+            this.onDeselect(info)
+          } else {
+            this.onSelect(info)
+          }
+        } else if (!this.selected) {
+          this.onSelect(info)
+        }
+      }
+    },
+
+    _onKeyDown (e) {
+      const keyCode = e.keyCode
+      if (keyCode === KeyCode.ENTER) {
+        this._onClick(e)
+        return true
       }
     },
 
     _onMouseLeave (e) {
       if (!this.disabled) {
-        this.onMouseLeave(e)
+        const eventKey = this.eventKey
+        const info = {
+          key: eventKey,
+          item: this,
+          hover: true,
+          trigger: 'mouseleave'
+        }
+        this.onItemHover(info)
       }
     },
 
     _onMouseEnter (e) {
       if (!this.disabled) {
-        this.onMouseEnter(e)
+        const eventKey = this.eventKey
+        const info = {
+          key: eventKey,
+          item: this,
+          hover: true,
+          trigger: 'mouseenter'
+        }
+        this.onItemHover(e)
       }
     }
   }
