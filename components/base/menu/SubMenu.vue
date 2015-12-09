@@ -73,6 +73,7 @@ export default {
         this._unbindRootCloseHandlers()
       }
     }
+    this._mapPropsToChildComponent()
   },
 
   beforeDestory () {
@@ -83,6 +84,12 @@ export default {
   },
 
   methods: {
+    _mapPropsToChildComponent () {
+      this.$children.map((child, index) => {
+        child.className += ` ${this.prefixCls}-sub`
+      })
+    },
+
     _onKeyDown (e) {
       const keyCode = e.keyCode
       const menu = this.menuInstance
