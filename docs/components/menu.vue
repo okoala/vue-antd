@@ -15,7 +15,6 @@
   <example title="顶部导航">
     <v-menu :on-click="handleClick"
       :selected-keys="[this.current]"
-      :theme="this.theme"
       :mode="horizontal">
       <v-menu-item key="mail">
         <v-menu type="mail" />导航一
