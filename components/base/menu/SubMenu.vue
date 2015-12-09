@@ -16,7 +16,8 @@
 </template>
 
 <script>
-import { defaultProps, KeyCode, guid, cx, contains } from '../../../utils'
+import { defaultProps, KeyCode, guid,
+  cx, contains, addEventListener } from '../../../utils'
 
 export default {
   props: defaultProps({
@@ -64,10 +65,21 @@ export default {
     }
   },
 
+  ready () {
+    if (this.mode !== 'inline') {
+      if (this.open) {
+        this._bindRootCloseHandlers()
+      } else {
+        this._unbindRootCloseHandlers()
+      }
+    }
+  },
+
   beforeDestory () {
     if (this.onDestory) {
       this.onDestory(this.eventKey)
     }
+    this._unbindRootCloseHandlers()
   },
 
   methods: {
@@ -216,7 +228,26 @@ export default {
         hover: false
       })
       this._triggerOpenChange(false)
-    }
+    },
+
+    _bindRootCloseHandlers () {
+      if (!this._onDocumentClickListener) {
+        this._onDocumentClickListener = addEventListener(document, 'click', this._handleDocumentClick)
+        this._onDocumentClickListener = addEventListener(document, 'keyup', this._handleDocumentClick)
+      }
+    },
+
+    _unbindRootCloseHandlers () {
+      if (this._onDocumentClickListener) {
+        this._onDocumentClickListener.remove()
+        this._onDocumentClickListener = null
+      }
+
+      if (this._onDocumentKeyupListener) {
+        this._onDocumentKeyupListener.remove()
+        this._onDocumentKeyupListener = null
+      }
+    },
   }
 }
 
