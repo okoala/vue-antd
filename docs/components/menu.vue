@@ -15,9 +15,9 @@
   <example title="顶部导航">
     <v-menu :on-click="handleClick"
       :selected-keys="[this.current]"
-      :mode="horizontal">
+      :mode="'vertical'">
       <v-menu-item key="mail">
-        <v-menu type="mail" />导航一
+        <v-icon type="mail"></v-icon>导航一
       </v-menu-item>
       <v-menu-item key="app" disabled>
         <v-icon type="appstore"></v-icon>导航二

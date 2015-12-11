@@ -12,7 +12,7 @@
   :on-close="_handleCloseKeys"
   :on-select="onSelect"
   :on-deselect="onDeselect"
-  :class-name="className + ' ' + prefixCls + '-' + theme">
+  :class-name="className + ' ' + prefixCls + '-' + theme+ ' '+ prefixCls + '-' + mode">
   <slot></slot>
 </menu>
 </template>
@@ -26,6 +26,8 @@ export default {
     theme: oneOf(['light', 'dark'], 'light'),
     mode: oneOf(['vertical', 'horizontal', 'inline'], 'vertical'),
     selectedKeys: Array,
+    prefixCls: 'ant-menu',
+    className: '',
     defaultSelectedKeys: Array,
     openKeys: Array,
     defaultOpenKeys: Array,

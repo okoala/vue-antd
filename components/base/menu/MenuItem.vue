@@ -1,6 +1,6 @@
 <template>
 <li
-  role: 'menuitem'
+  role='menuitem'
   :style="style"
   :title="title"
   :class="wrapClasses"
@@ -9,7 +9,9 @@
   @keydown="_onKeyDown"
   @mouseleave="_onMouseLeave"
   @mouseenter="_onMouseEnter">
-  <slot></slot>
+  <span>
+    <slot></slot>
+  </span>
 </li>
 </template>
 
@@ -18,7 +20,7 @@ import { defaultProps, cx, KeyCode } from '../../../utils'
 
 export default {
   props: defaultProps({
-    rootPrefixCls: '',
+    rootPrefixCls: 'ant-menu',
     className: '',
     eventKey: '',
     active: Boolean,

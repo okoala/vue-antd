@@ -1,5 +1,6 @@
 <template>
-<ul>
+<ul 
+  :class="className + ' '+ prefixCls + '-' + mode">
   <slot></slot>
 </ul>
 </template>
@@ -7,10 +8,11 @@
 <script>
 import { defaultProps, oneOf, cx, scrollIntoView } from '../../../utils'
 import { getKeyFromChildrenIndex } from './util'
+import MenuItem from './MenuItem.vue'
 
 export default {
   props: defaultProps({
-    prefixCls: 'vc-menu',
+    prefixCls: 'ant-menu',
     className: '',
     mode: 'vertical',
     level: 1,
