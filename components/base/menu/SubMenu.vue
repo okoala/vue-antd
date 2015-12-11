@@ -32,7 +32,7 @@ export default {
     openSubMenuOnMouseEnter: Boolean,
     inlineIndent: Number,
     level: Number,
-    onClick () {}
+    onClick () {},
     onOpenChange () {},
     onSelect () {},
     onDeselect () {},

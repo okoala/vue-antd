@@ -13,7 +13,6 @@ import {
   isSingleMode, toArray,
 } from './util'
 import OptGroup from './OptGroup.vue'
-import SelectTrigger from './SelectTrigger.vue'
 
 const filterFn = function (input, child) {
   return String(getPropValue(child, this.optionFilterProp)).indexOf(input) > -1

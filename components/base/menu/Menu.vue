@@ -1,5 +1,7 @@
 <template>
-<slot></slot>
+<ul>
+  <slot></slot>
+</ul>
 </template>
 
 <script>
@@ -26,7 +28,7 @@ export default {
     onSelect () {},
     onOpen () {},
     onClose () {},
-    onDeselect () {}.
+    onDeselect () {},
     defaultSelectedKeys: {
       type: Array,
       default () {return []}
@@ -35,6 +37,22 @@ export default {
       type: Array,
       default () {return []}
     }
-  })
+  }),
+
+  computed: {
+
+  },
+
+  ready () {
+    this._mapPropsToChildComponent()
+  },
+
+  methods: {
+    _mapPropsToChildComponent () {
+      this.$children.forEach((child, index) => {
+        child.className += ` ${this.prefixCls}-root`
+      })
+    }
+  }
 }
 </script>
