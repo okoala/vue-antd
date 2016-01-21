@@ -1,4 +1,6 @@
-@select-prefix-cls: ant-select;
+// @select-prefix-cls: ant-select;
+@import "../mixins/index";
+@select-prefix-cls: ~"@{css-prefix}select";
 
 @import "../mixins/iconfont";
 //mixin
@@ -341,13 +343,13 @@
     transition: background 0.3s ease;
   }
 
-  &--single &-menu-item-selected {
-    .selected_icon();
-  }
+  // &--single &-menu-item-selected {
+  //   .selected_icon();
+  // }
 
-  &--multiple &-menu-item-selected {
-    .selected_icon();
-  }
+  // &--multiple &-menu-item-selected {
+  //   .selected_icon();
+  // }
 
   &-hidden {
     display: none;
@@ -420,6 +422,13 @@
           color: #ccc;
           background-color: #fff;
           cursor: not-allowed;
+        }
+      }
+
+      &-selected {
+        background-color: tint(@primary-color, 80%);
+        &:hover {
+          background-color: tint(@primary-color, 80%);
         }
       }
 

@@ -1,5 +1,8 @@
 <template>
 <v-select
+  :open.sync="open"
+  :style="style"
+  :class="class",
   :prefix-cls="prefixCls"
   :transition-name="transitionName"
   :option-label-prop="optionLabelProp"
@@ -7,8 +10,8 @@
   :show-search="showSearch"
   :class-name="className"
   :size="size"
-  :value="value"
-  :default-value="defaultValue"
+  :value.sync="value"
+  :default-value.sync="defaultValue"
   :multiple="multiple"
   :filter-option="filterOption"
   :tags="tags"
@@ -30,6 +33,9 @@ import vSelect from '../base/select'
 
 export default {
   props: defaultProps({
+    open: false,
+    style: Object,
+    class: Object,
     prefixCls: 'ant-select',
     transitionName: 'slide-up',
     optionLabelProp: 'children',
@@ -84,6 +90,11 @@ export default {
   },
 
   compiled () {
+    this.$children.forEach((v,k) => {
+      if(v.value == this.value){
+        v.selected = true
+      }
+    })
     if (this.combobox) {
       this.notFoundContent = null
     }

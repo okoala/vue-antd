@@ -13,13 +13,19 @@
 
 <demo>
   <example title="">
-    <v-select default-value="lucy" :on-change="_handleChange" :style="{width: '200px'}">
-      <v-option value="jack">Jack</v-option>
-      <v-option value="lucy">Lucy</v-option>
-      <v-option value="disabled" disabled>Disabled</v-option>
-      <v-option value="okoala">okoala</v-option>
+    <v-select :value.sync="value" :on-change="_handleChange" :style="{width: '120px'}" :class="{'reset': true}">
+      
+        <v-option value="jack">Jack</v-option>
+        <v-option value="lucy">Lucy</v-option>
+        <v-option value="disabled" :disabled="true">Disabled</v-option>
+        <v-option value="okoala">Okoala</v-option>
+
     </v-select>
+    <br>
+    <br>
+    <p>你选中的是： <span>{{value}}</span></p>
   </example>
+  
 </demo>
 
 ## API
@@ -28,8 +34,8 @@
 
 | 参数     | 说明           | 类型     | 默认值       |
 |----------|----------------|----------|--------------|
-| value    | 指定当前选中的条目 | string/Array<String>   |  无  |
-| defaultValue    | 指定默认选中的条目 | string/Array<String>   |  无  |
+| value    | 指定当前选中的条目 | string/Array   |  无  |
+| defaultValue    | 指定默认选中的条目 | string/Array  |  无  |
 | multiple   | 支持多选 |   | false |
 | filterOption | 是否根据输入项进行筛选 |  | true     |
 | tags | 可以把随意输入的条目作为tag，输入项不需要与下拉选项匹配 | |false |
@@ -61,13 +67,20 @@
 
 <script>
 import vSelect, { vOption } from '../../components/select'
+import message from '../../components/message'
 
 export default {
+  data () {
+    return {
+      value: 'lucy'
+    }
+  },
 
   components: { vSelect, vOption },
 
   methods: {
     _handleChange (value) {
+      message.info('我是回掉函数，你选择的是'+value)
       console.log('selectd ', value)
     }
   }
