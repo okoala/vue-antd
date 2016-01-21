@@ -24,7 +24,6 @@ export default {
   		if(val){
 	  		this.$parent.value = this.value
 	  		this.$parent.defaultValue = this.$els.vtext.textContent
-	  		this.$parent.open = false
   		}
   	}
   },
@@ -35,6 +34,7 @@ export default {
 			v.selected = false
   		})
   		this.selected = true
+  		this.$parent.open = false
   		if(this.$parent.onChange){
   			this.$parent.onChange(this.value)
   		}
