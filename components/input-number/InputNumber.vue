@@ -8,7 +8,7 @@
        :class="prefixCls + '-handler ' + prefixCls + '-handler-up ' + upDisabledClass">
         <span unselectable="unselectable"
             :class="prefixCls + '-handler-up-inner'"
-            @click="preventDefault"/>
+            @click="preventDefault"></span>
     </a>
     <a unselectable="unselectable"
        ref="down"
@@ -17,7 +17,7 @@
        :class="prefixCls + '-handler ' + prefixCls + '-handler-down ' + downDisabledClass">
       <span unselectable="unselectable"
             :class="prefixCls + '-handler-down-inner'"
-            @click="preventDefault"/>
+            @click="preventDefault"></span>
     </a>
   </div>
   <div :class="prefixCls + '-input-wrap'">
