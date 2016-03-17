@@ -38,6 +38,7 @@ export function defaultProps (props) {
             return defaultValue
           }
         }
+        continue
       }
 
       props[i] = {
