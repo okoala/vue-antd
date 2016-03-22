@@ -1,12 +1,11 @@
-var vue = require('vue-loader')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var path = require('path')
 
 module.exports = {
   entry: {
-    app: './docs/index.js',
+    app: './docs/index.js'
   },
   output: {
     path: './.temp',
@@ -17,12 +16,12 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new ExtractTextPlugin('[name].css'),
     new HtmlWebpackPlugin({
-      template : './docs/index.html',
-      favicon  : './docs/favicon.ico',
-      hash     : true,
-      filename : 'index.html',
-      minify   : false,
-      inject   : 'body'
+      template: './docs/index.html',
+      favicon: './docs/favicon.ico',
+      hash: true,
+      filename: 'index.html',
+      minify: false,
+      inject: 'body'
     })
   ],
   resolve: {
@@ -69,9 +68,9 @@ module.exports = {
       // )
     }
   },
-  eslint : {
-    configFile : './.eslintrc',
-    emitWarning : true
+  eslint: {
+    configFile: './.eslintrc',
+    emitWarning: true
   },
   devtool: 'source-map'
 }

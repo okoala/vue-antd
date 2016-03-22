@@ -183,7 +183,7 @@ export function configRouter (router) {
   // 1. return a boolean
   // 2. return a Promise that resolves to a boolean
   // 3. call transition.next() or transition.abort()
-  router.beforeEach((transition) => {
+  router.beforeEach(transition => {
     if (transition.to.path === '/forbidden') {
       router.app.authenticating = true
       setTimeout(() => {

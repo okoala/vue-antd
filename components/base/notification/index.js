@@ -2,7 +2,7 @@ import Notification from './Notification.vue'
 import Vue from 'vue'
 import { camelcaseToHyphen } from '../../../utils'
 
-Notification.newInstance = (properties) => {
+Notification.newInstance = properties => {
   const data = properties || {}
 
   let props = ''
