@@ -18,7 +18,6 @@ webpackConfig.plugins.push(
   })
 )
 
-
 var commonChunkPlugin = new webpack.optimize.CommonsChunkPlugin(
   'vendor', '[name].js'
 )

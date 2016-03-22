@@ -106,7 +106,7 @@ let api = {
 };
 
 ['success', 'info', 'warn', 'error'].forEach(type => {
-  api[type] = (args) => {
+  api[type] = args => {
     let newArgs = Object.assign({}, args, {
       icon: type
     })

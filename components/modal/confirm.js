@@ -70,7 +70,8 @@ export default function (props) {
     components: { Dialog, vIcon, vButton }
   })
 
-  new _Dialog({
+  // TODO: avoid new
+  new _Dialog({ // eslint-disable-line
     el: container,
     data: props,
     methods: {
@@ -113,4 +114,3 @@ export default function (props) {
     }
   })
 }
-
