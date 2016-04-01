@@ -1,0 +1,16 @@
+{
+  "env": {
+    "jasmine": true
+  },
+  "globals": {
+    "$": true,
+    "jQuery": true,
+    "casper": true,
+    "getWarnCount": true
+  },
+  "rules": {
+    "no-new": 0,
+    "no-multi-str": 0,
+    "standard/object-curly-even-spacing": 0
+  }
+}
