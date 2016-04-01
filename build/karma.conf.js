@@ -17,9 +17,25 @@ module.exports = function (config) {
       module: {
         loaders: [
           {
+            test: /\.vue$/,
+            loader: 'vue'
+          },
+          {
             test: /\.js$/,
-            exclude: /test|node_modules|vue\/dist/,
-            loader: 'babel'
+            loader: 'babel!eslint',
+            // make sure to exclude 3rd party code in node_modules
+            exclude: /node_modules/
+          },
+          {
+            // edit this for additional asset file types
+            test: /\.(png|jpg|gif)$/,
+            loader: 'url',
+            query: {
+              // inline files smaller then 10kb as base64 dataURL
+              limit: 10000,
+              // fallback to file-loader with this naming scheme
+              name: '[name].[ext]?[hash]'
+            }
           }
         ],
         postLoaders: [
@@ -29,11 +45,22 @@ module.exports = function (config) {
             loader: 'istanbul-instrumenter'
           }
         ]
+      },
+      vue: {
+        loaders: {
+          js: 'babel!eslint'
+        }
       }
     },
     webpackMiddleware: {
-      noInfo: true
+      noInfo: true,
+      stats: {
+        colors: true
+      }
     },
+    colors: true,
+    autoWatch: true,
+    autoWatchInterval: 300,
     singleRun: true,
     coverageReporter: {
       reporters: [

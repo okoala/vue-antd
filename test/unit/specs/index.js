@@ -10,62 +10,62 @@ Vue.config.silent = true
  * utility functions.
  */
 
-import _ from 'vue/util'
-import __ from 'src/util/debug'
-var scope = typeof window === 'undefined'
+// import _ from 'vue/src/util'
+// import __ from 'vue/src/util/debug'
+const scope = typeof window === 'undefined'
   ? global
   : window
-
-scope.getWarnCount = function () {
-  return _.warn.calls.count() + __.warn.calls.count()
-}
-
-function hasWarned (msg) {
-  var count = _.warn.calls.count()
-  var args
-  while (count--) {
-    args = _.warn.calls.argsFor(count)
-    if (args.some(containsMsg)) {
-      return true
-    }
-  }
-
-  count = __.warn.calls.count()
-  while (count--) {
-    args = __.warn.calls.argsFor(count)
-    if (args.some(containsMsg)) {
-      return true
-    }
-  }
-
-  function containsMsg (arg) {
-    if (arg instanceof Error) throw arg
-    return typeof arg === 'string' && arg.indexOf(msg) > -1
-  }
-}
-
-// define custom matcher for warnings
-beforeEach(() => {
-  spyOn(_, 'warn')
-  spyOn(__, 'warn')
-  jasmine.addMatchers({
-    toHaveBeenWarned () {
-      return {
-        compare (msg) {
-          var warned = Array.isArray(msg)
-            ? msg.some(hasWarned)
-            : hasWarned(msg)
-          return {
-            pass: warned,
-            message: warned
-              ? 'Expected message "' + msg + '" not to have been warned'
-              : 'Expected message "' + msg + '" to have been warned'
-          }
-        }
-      }
-    }
-  })
-})
+//
+// scope.getWarnCount = function () {
+//   return _.warn.calls.count() + __.warn.calls.count()
+// }
+//
+// function hasWarned (msg) {
+//   var count = _.warn.calls.count()
+//   var args
+//   while (count--) {
+//     args = _.warn.calls.argsFor(count)
+//     if (args.some(containsMsg)) {
+//       return true
+//     }
+//   }
+//
+//   count = __.warn.calls.count()
+//   while (count--) {
+//     args = __.warn.calls.argsFor(count)
+//     if (args.some(containsMsg)) {
+//       return true
+//     }
+//   }
+//
+//   function containsMsg (arg) {
+//     if (arg instanceof Error) throw arg
+//     return typeof arg === 'string' && arg.indexOf(msg) > -1
+//   }
+// }
+//
+// // define custom matcher for warnings
+// beforeEach(() => {
+//   spyOn(_, 'warn')
+//   spyOn(__, 'warn')
+//   jasmine.addMatchers({
+//     toHaveBeenWarned () {
+//       return {
+//         compare (msg) {
+//           var warned = Array.isArray(msg)
+//             ? msg.some(hasWarned)
+//             : hasWarned(msg)
+//           return {
+//             pass: warned,
+//             message: warned
+//               ? 'Expected message "' + msg + '" not to have been warned'
+//               : 'Expected message "' + msg + '" to have been warned'
+//           }
+//         }
+//       }
+//     }
+//   })
+// })
 
 // shim process
 scope.process = {
