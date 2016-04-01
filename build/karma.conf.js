@@ -4,10 +4,13 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
     reporters: ['spec', 'coverage'],
     // this is the entry file for all our tests.
-    files: ['../test/unit/index.js'],
+    files: [
+      '../test/unit/lib/jquery.js',
+      '../test/unit/specs/index.js'
+    ],
     // we will pass the entry file to webpack for bundling.
     preprocessors: {
-      '../test/unit/index.js': ['webpack', 'sourcemap']
+      '../test/unit/specs/index.js': ['webpack', 'sourcemap']
     },
     webpack: {
       devtool: '#inline-source-map',
@@ -16,7 +19,7 @@ module.exports = function (config) {
           {
             test: /\.js$/,
             exclude: /test|node_modules|vue\/dist/,
-            loader: 'babel?optional[]=runtime&loose=all'
+            loader: 'babel'
           }
         ],
         postLoaders: [
