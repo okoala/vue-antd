@@ -1,6 +1,7 @@
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var autoprefixer = require('autoprefixer')
 var path = require('path')
 
 module.exports = {
@@ -53,7 +54,7 @@ module.exports = {
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract(
-          'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
+          'css?sourceMap&-minimize!' + 'postcss-loader!' + 'less?sourceMap'
         )
       },
       { test: /\.css$/,
@@ -68,9 +69,10 @@ module.exports = {
       md: 'html!vue-antd-docs',
       js: 'babel!eslint'
       // less: ExtractTextPlugin.extract(
-      //   'css?sourceMap&-minimize!' + 'autoprefixer-loader!' + 'less?sourceMap'
+      //   'css?sourceMap&-minimize!' + 'postcss-loader!' + 'less?sourceMap'
       // )
     }
   },
+  postcss: [autoprefixer],
   devtool: 'source-map'
 }
