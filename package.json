@@ -36,7 +36,7 @@
     "velocity-animate": "^1.2.3"
   },
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
+    "autoprefixer": "^6.3.6",
     "babel": "^6.5.2",
     "babel-core": "^6.7.4",
     "babel-eslint": "^6.0.2",
@@ -84,6 +84,7 @@
     "markdown-loader": "^0.1.7",
     "npm-run-all": "^1.7.0",
     "phantomjs": "^1.9.19",
+    "postcss-loader": "^0.8.2",
     "style-loader": "^0.13.1",
     "template-html-loader": "0.0.3",
     "uglify-js": "^2.6.2",
